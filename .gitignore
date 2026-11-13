@@ -12,3 +12,5 @@ results/
 data/raw/
 *.safetensors
 *.gguf
+.conda-env/
+.conda-pkgs/

@@ -1,11 +1,19 @@
-"""Check the committed acceptance fixture without running the simulator."""
+"""Check the committed fixture and replay all hand-calculated cases."""
 
+from copy import deepcopy
+from fractions import Fraction
 from itertools import product
 import json
 from pathlib import Path
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+sys.path.insert(0, str(ROOT / "src"))
+
+from restore_edge_select.simulator import Experiment
 
 
 def require(condition, message):
@@ -57,11 +65,17 @@ def main():
     require(set(map(int, cases)) == set(fixture["memory"]["prefetch_mib_cases"]),
             "budget cases do not match fixture settings")
     for budget, case in cases.items():
+        exp = Experiment(fixture, model, int(budget))
         runs = case["runs"]
         require(len(runs) == len(combos)
                 and {tuple(run["boundaries_tokens"]) for run in runs} == combos,
                 f"invalid boundary combinations at {budget} MiB")
         for run in runs:
+            actual = exp.run("fixed", boundaries=run["boundaries_tokens"])
+            for key, expected in run.items():
+                require(actual[key] == expected,
+                        f"{budget} MiB, {run['boundaries_tokens']}, {key}: "
+                        f"{actual[key]} != {expected}")
             finish = run["completion_ms"]
             require(len(finish) == len(arrival) and finish == sorted(finish)
                     and all(f >= a for f, a in zip(finish, arrival)), "invalid completion order")
@@ -69,9 +83,26 @@ def main():
                     "invalid prefetch peak")
             require(run["response_sum_ms"] == sum(f - a for f, a in zip(finish, arrival)),
                     "response sum mismatch")
+        require(exp.offline()["offline_optima"] == case["offline_optima"], "simulator optimum mismatch")
         best = min(run["response_sum_ms"] for run in runs)
         require({tuple(run["boundaries_tokens"]) for run in runs if run["response_sum_ms"] == best}
                 == set(map(tuple, case["offline_optima"])), "offline optimum mismatch")
+    exp = Experiment(fixture, model, 160)
+    require(exp.run("local-cost")["response_mean_ms"] == 31, "local-cost baseline mismatch")
+    require(exp.run("capacity")["response_mean_ms"] == Fraction(123, 4), "capacity baseline mismatch")
+    shared = deepcopy(fixture)
+    b, c = shared["requests"][1:]
+    c["input_token_runs"] = b["input_token_runs"]
+    c["candidates"] = b["candidates"]
+    shared["cost"]["device_copy"] = {
+        "startup_ms": 0, "bytes_per_ms": 2 * payload["checkpoint_bytes"],
+    }
+    actual = Experiment(shared, model, 128).run("fixed", boundaries=[0, 576, 576])
+    require(actual["completion_ms"] == [30, Fraction(139, 4), 39], "shared handoff timing")
+    require(actual["peak_prefetch_bytes"] == 70385664, "shared reservation counted twice")
+    require(actual["transferred_bytes_by_path"] == {
+        "ram_to_device": 18874368, "ssd_to_device": 51511296, "device_copy": 51511296,
+    }, "shared dependencies reloaded or checkpoint copy missing")
     print(f"Checked {len(objects)} objects and {len(cases) * len(combos)} acceptance cases.")
 
 
