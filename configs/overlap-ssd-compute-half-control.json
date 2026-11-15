@@ -1,0 +1,4 @@
+{
+  "ram_to_device": {"compute": "1.24", "transfer": "1.36"},
+  "ssd_to_device": {"compute": "1.025", "transfer": "1.09"}
+}
