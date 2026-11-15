@@ -227,7 +227,9 @@ class Experiment:
             intervention_budget_mib=None, decision_overrides=None, screen_mode=None, min_gain_ms=0,
             future_cost_cases=None, queue_horizon=None, screen_selector=None, screen_observer=None,
             screen_search="full"):
-        if screen_search not in {"full", "lean", "compute", "cutoff", "entry"} or (
+        estimate_modes = {"estimate", "estimate-cross-tier", "estimate-cross-tier-guard",
+                          "estimate-prefetch-fallback"}
+        if screen_search not in {"full", "lean", "compute", "cutoff", "entry"} | estimate_modes or (
                 screen_search != "full" and policy != "snapshot-screened"):
             raise ValueError("Search variants require a screened queue policy")
         if (screen_mode == "classified") != (screen_selector is not None):
@@ -237,6 +239,9 @@ class Experiment:
         if queue_horizon is not None and (policy != "snapshot-screened" or
                                           type(queue_horizon) is not int or queue_horizon < 0):
             raise ValueError("Queue horizon requires screening and a nonnegative integer (zero means all arrived)")
+        if screen_search in estimate_modes and (
+                screen_selector is None or screen_observer is not None or future_cost_cases):
+            raise ValueError("Estimate selection requires a classifier and no forecast observers or probes")
         if observe_candidates is not None and (policy != "remaining-wait-live" or inject_measured or profile_decisions):
             raise ValueError("Candidate observation requires uninstrumented remaining-wait-live timing")
         if future_cost_cases and ((observe_candidates is None and policy != "snapshot-screened")
@@ -608,6 +613,7 @@ class Experiment:
                 fallback = None
                 horizon = queue_horizon
                 estimated = None
+                estimated_challenger = None
                 if score_candidate is not None:
                     if screen_mode is None:
                         return min(choices, key=lambda c: (score_candidate(observable[c]), -c))
@@ -622,6 +628,36 @@ class Experiment:
                         if view != "current" and (type(view) is not int or view < 0):
                             raise ValueError("Expected None, current, or a nonnegative queue horizon")
                         horizon = None if view == "current" else view
+                        if screen_search in {"estimate", "estimate-cross-tier",
+                                             "estimate-cross-tier-guard", "estimate-prefetch-fallback"}:
+                            scores = {c: score_candidate(observable[c]) for c in choices}
+                            estimated_challenger = min(choices, key=lambda c: (scores[c], -c))
+                            if scores[estimated_challenger] >= scores[fallback]:
+                                return fallback
+                            cross_tier = False
+                            if screen_search in {"estimate-cross-tier", "estimate-cross-tier-guard",
+                                                 "estimate-prefetch-fallback"}:
+                                row = observable[estimated_challenger]
+                                cross_tier = bool(
+                                    fallback and estimated_challenger
+                                    and row["checkpoint_tier"] != observable[fallback]["checkpoint_tier"]
+                                    and row["prefetch_fits"]
+                                    and (row["incremental_ram_ms"] or row["incremental_ssd_ms"])
+                                )
+                            if screen_search in {"estimate-cross-tier", "estimate-prefetch-fallback"} and cross_tier:
+                                return fallback
+                            if screen_search == "estimate-prefetch-fallback" and (
+                                    0 < estimated_challenger < fallback
+                                    and observable[estimated_challenger]["checkpoint_tier"] ==
+                                        observable[fallback]["checkpoint_tier"]
+                                    and observable[estimated_challenger]["prefetch_fits"]
+                                    and not observable[fallback]["prefetch_fits"]
+                                    and observable[estimated_challenger]["incremental_ssd_ms"]):
+                                return fallback
+                            if not cross_tier:
+                                return estimated_challenger if (
+                                    scores[fallback] - scores[estimated_challenger] > min_gain
+                                ) else fallback
                     else:
                         if screen_search in {"compute", "cutoff", "entry"}:
                             estimated = {c: score_candidate(observable[c]) for c in choices}
@@ -696,7 +732,14 @@ class Experiment:
                         # All unfinished requests in view, including committed work ahead.
                         # Subtracting their arrival timestamps is constant across trials.
                         return sum(ends)
-                    if screen_search not in {"compute", "cutoff", "entry"} or horizon is None:
+                    if estimated_challenger is not None:
+                        # Only the estimate's cross-tier challenger reaches this path.
+                        baseline_ends = forecast((fallback, *later), visible)
+                        challenger_ends = forecast((estimated_challenger, *later), visible)
+                        if any(new > old for old, new in zip(baseline_ends, challenger_ends, strict=True)):
+                            return fallback
+                        scores = {fallback: sum(baseline_ends), estimated_challenger: sum(challenger_ends)}
+                    elif screen_search not in {"compute", "cutoff", "entry"} or horizon is None:
                         scores = {c: objective(c) for c in choices}
                     else:
                         # Keep an exact fallback score for the gain threshold.

@@ -1,0 +1,228 @@
+{
+  "window": 89,
+  "trace": "qwen_coder_blksz_16.jsonl",
+  "max_prompt": 3584,
+  "placement": "split",
+  "spacing": 0.25,
+  "budget_mib": 128,
+  "rate": 32.0,
+  "path": "ssd",
+  "ssd_estimate_factor": 1.0,
+  "intervene_policy": "mixed-reuse-estimate",
+  "reference_policy": "local-cost",
+  "request_count": 61,
+  "selected_policy": {
+    "mean_gain_ms": 1.782444728882163,
+    "p95_gain_ms": -9.027502079718193
+  },
+  "queue": {
+    "mean_gain_ms": 1.782444728882163,
+    "p95_gain_ms": -9.027502079718193
+  },
+  "pressure_policies": {
+    "mixed-projected-entry": {
+      "mean_gain_ms": 1.782444728882163,
+      "p95_gain_ms": -9.027502079718193,
+      "replays": 2,
+      "boundary_at_first_change": 1024
+    },
+    "mixed-estimate": {
+      "mean_gain_ms": 1.782444728882163,
+      "p95_gain_ms": -9.027502079718193,
+      "replays": 0,
+      "boundary_at_first_change": 1024
+    },
+    "mixed-reuse-estimate": {
+      "mean_gain_ms": 1.782444728882163,
+      "p95_gain_ms": -9.027502079718193,
+      "replays": 0,
+      "boundary_at_first_change": 1024
+    },
+    "reuse-cross-tier-fallback": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": 512
+    },
+    "reuse-cross-tier-guard": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 2,
+      "boundary_at_first_change": 512
+    },
+    "reuse-prefetch-fallback": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": 512
+    }
+  },
+  "fixed_plans_without_compute_slowdown": {
+    "ram_only": {
+      "mean_gain_ms": 1.6918579051782048,
+      "p95_gain_ms": -9.730804376803308
+    },
+    "ssd_only": {
+      "mean_gain_ms": 2.0533695825537124,
+      "p95_gain_ms": 0.7211081539059464
+    },
+    "both": {
+      "mean_gain_ms": 1.962126654936218,
+      "p95_gain_ms": 0.0
+    }
+  },
+  "changed_boundaries": 1,
+  "first_change": {
+    "request_id": "343",
+    "position": 58,
+    "decision_ms": 19681.543219968946,
+    "baseline_boundary": 512,
+    "selected_boundary": 1024,
+    "visible_requests": 61,
+    "horizon_end_exclusive": 61,
+    "only_this_change": {
+      "mean_gain_ms": 1.782444728882163,
+      "p95_gain_ms": -9.027502079718193
+    },
+    "revert_in_policy": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0
+    },
+    "affected_requests": [
+      {
+        "request_id": "341",
+        "position": 56,
+        "arrived": true,
+        "in_horizon": true,
+        "arrival_ms": 2840.75,
+        "baseline_ms": 17019.714704387872,
+        "intervention_ms": 17023.356608713682,
+        "delta_ms": 3.641904325811942
+      },
+      {
+        "request_id": "342",
+        "position": 57,
+        "arrived": true,
+        "in_horizon": true,
+        "arrival_ms": 2841.25,
+        "baseline_ms": 17234.63861454412,
+        "intervention_ms": 17243.66611662384,
+        "delta_ms": 9.027502079718193
+      },
+      {
+        "request_id": "343",
+        "position": 58,
+        "arrived": true,
+        "in_horizon": true,
+        "arrival_ms": 2892.0,
+        "baseline_ms": 17483.958893059746,
+        "intervention_ms": 17443.492714770633,
+        "delta_ms": -40.466178289114026
+      },
+      {
+        "request_id": "346",
+        "position": 59,
+        "arrived": true,
+        "in_horizon": true,
+        "arrival_ms": 3045.75,
+        "baseline_ms": 17486.970918059746,
+        "intervention_ms": 17446.504739770633,
+        "delta_ms": -40.466178289114026
+      },
+      {
+        "request_id": "350",
+        "position": 60,
+        "arrived": true,
+        "in_horizon": true,
+        "arrival_ms": 3175.75,
+        "baseline_ms": 18111.295051946465,
+        "intervention_ms": 18070.828873657352,
+        "delta_ms": -40.466178289114026
+      }
+    ],
+    "transfers": {
+      "baseline": [
+        {
+          "path": "ram_to_device",
+          "mode": "prefetch",
+          "object": "kv-781",
+          "bytes": 16777216,
+          "start_ms": 19681.543219968946,
+          "end_ms": 19683.3831585071
+        },
+        {
+          "path": "ram_to_device",
+          "mode": "prefetch",
+          "object": "state-781",
+          "bytes": 51511296,
+          "start_ms": 19683.3831585071,
+          "end_ms": 19688.948822507096
+        }
+      ],
+      "changed": [
+        {
+          "path": "ram_to_device",
+          "mode": "prefetch",
+          "object": "kv-781",
+          "bytes": 16777216,
+          "start_ms": 19681.543219968946,
+          "end_ms": 19683.3831585071
+        },
+        {
+          "path": "ram_to_device",
+          "mode": "prefetch",
+          "object": "kv-782",
+          "bytes": 16777216,
+          "start_ms": 19683.3831585071,
+          "end_ms": 19685.22309704525
+        },
+        {
+          "path": "ssd_to_device",
+          "mode": "prefetch",
+          "object": "state-782",
+          "bytes": 51511296,
+          "start_ms": 19685.22309704525,
+          "end_ms": 20210.80207297376
+        }
+      ]
+    },
+    "decision_signals": {
+      "0": {
+        "checkpoint_tier": "",
+        "prefetch_fits": true,
+        "serial_compute_ms": 472.677168359375,
+        "incremental_ram_ms": 0,
+        "incremental_ssd_ms": 0,
+        "missing_bytes": 0,
+        "ready_bytes": 0,
+        "shared_reservation_bytes": 0,
+        "active_new_kv_bytes": 0,
+        "predicted_fifo_ms": 472.677168359375
+      },
+      "512": {
+        "checkpoint_tier": "RAM",
+        "prefetch_fits": true,
+        "serial_compute_ms": 300.070278515625,
+        "incremental_ram_ms": 5.445295983935743,
+        "incremental_ssd_ms": 0,
+        "missing_bytes": 68288512,
+        "ready_bytes": 0,
+        "shared_reservation_bytes": 0,
+        "active_new_kv_bytes": 0,
+        "predicted_fifo_ms": 300.070278515625
+      },
+      "1024": {
+        "checkpoint_tier": "SSD",
+        "prefetch_fits": true,
+        "serial_compute_ms": 124.690641796875,
+        "incremental_ram_ms": 2.705791967871486,
+        "incremental_ssd_ms": 492.57680000000005,
+        "missing_bytes": 85065728,
+        "ready_bytes": 0,
+        "shared_reservation_bytes": 0,
+        "active_new_kv_bytes": 0,
+        "predicted_fifo_ms": 227.06118161630906
+      }
+    }
+  }
+}

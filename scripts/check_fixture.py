@@ -285,6 +285,20 @@ def main():
             if mode != "lean":
                 require(shorter["pruned_rollouts"] > 0 and shorter["decision_events"] < full["decision_events"],
                         f"{mode} did not stop losing branches in the hand trace")
+    for view in (None, 4):
+        estimated = exp.run("snapshot-screened", screen_mode="classified",
+                            screen_selector=lambda *_: view, screen_search="estimate",
+                            score_candidate=lambda row: -row["serial_compute_ms"])
+        expected = exp.run("local-cost")["boundaries_tokens"] if view is None else [0, 0, 0]
+        require(estimated["boundaries_tokens"] == expected and estimated["decision_replays"] == 0,
+                "Estimate selection must respect the classifier and skip candidate replay")
+    for view in (None, 4):
+        estimated = exp.run("snapshot-screened", screen_mode="classified",
+                            screen_selector=lambda *_: view, screen_search="estimate",
+                            score_candidate=lambda row: -row["serial_compute_ms"])
+        expected = exp.run("local-cost")["boundaries_tokens"] if view is None else [0, 0, 0]
+        require(estimated["boundaries_tokens"] == expected and estimated["decision_replays"] == 0,
+                "Estimate selection must respect the classifier and skip candidate replay")
     for mode, delay, reserved, done in (("start", 0, 30, 35), ("timer", 1, 31, 36),
                                          ("finish", 0, None, Fraction(157, 4))):
         cfg = dict(fixture, scheduling=dict(fixture["scheduling"], prefetch_release=mode, prefetch_hold_ms=delay))
