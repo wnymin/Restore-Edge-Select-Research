@@ -1,0 +1,788 @@
+{
+  "device": "RTX 4060 Laptop",
+  "stagger_ms": 150,
+  "warmup_trials": [
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 307474000,
+          "prompt_ms": 226.9
+        },
+        {
+          "start_ns": 307479200,
+          "finish_ns": 940773200,
+          "prompt_ms": 574.894
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 225918000,
+          "prompt_ms": 224.298
+        },
+        {
+          "start_ns": 150377800,
+          "finish_ns": 802592100,
+          "prompt_ms": 576.272
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 430338700,
+          "prompt_ms": 397.695
+        },
+        {
+          "start_ns": 430344200,
+          "finish_ns": 885834100,
+          "prompt_ms": 390.645
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 5717036400,
+          "prompt_ms": 5693.283
+        },
+        {
+          "start_ns": 150448200,
+          "finish_ns": 5944812800,
+          "prompt_ms": 5545.585
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 653633300,
+          "prompt_ms": 584.796
+        },
+        {
+          "start_ns": 653642100,
+          "finish_ns": 1321642700,
+          "prompt_ms": 576.786
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 1133841500,
+          "prompt_ms": 1130.711
+        },
+        {
+          "start_ns": 150477300,
+          "finish_ns": 1177342400,
+          "prompt_ms": 810.147
+        }
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 280029800,
+          "prompt_ms": 227.989
+        },
+        {
+          "start_ns": 280034200,
+          "finish_ns": 926025600,
+          "prompt_ms": 573.521
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 231567800,
+          "prompt_ms": 228.652
+        },
+        {
+          "start_ns": 150629400,
+          "finish_ns": 807576600,
+          "prompt_ms": 576.414
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 446807400,
+          "prompt_ms": 400.208
+        },
+        {
+          "start_ns": 446811700,
+          "finish_ns": 937285400,
+          "prompt_ms": 402.259
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 595876500,
+          "prompt_ms": 593.28
+        },
+        {
+          "start_ns": 150078900,
+          "finish_ns": 823508900,
+          "prompt_ms": 442.6
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 673435200,
+          "prompt_ms": 579.442
+        },
+        {
+          "start_ns": 673439400,
+          "finish_ns": 1357325800,
+          "prompt_ms": 576.394
+        }
+      ]
+    },
+    {
+      "rep": 0,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 1140797400,
+          "prompt_ms": 1138.58
+        },
+        {
+          "start_ns": 150460100,
+          "finish_ns": 1186465000,
+          "prompt_ms": 818.731
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 625797600,
+          "prompt_ms": 587.237
+        },
+        {
+          "start_ns": 150348700,
+          "finish_ns": 852678200,
+          "prompt_ms": 440.563
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 415247300,
+          "prompt_ms": 399.292
+        },
+        {
+          "start_ns": 415255800,
+          "finish_ns": 846551400,
+          "prompt_ms": 407.924
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 291452000,
+          "prompt_ms": 232.539
+        },
+        {
+          "start_ns": 150853500,
+          "finish_ns": 935905700,
+          "prompt_ms": 577.118
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 244739700,
+          "prompt_ms": 228.675
+        },
+        {
+          "start_ns": 244746800,
+          "finish_ns": 829224700,
+          "prompt_ms": 581.645
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 1256593800,
+          "prompt_ms": 1147.076
+        },
+        {
+          "start_ns": 150760800,
+          "finish_ns": 1304575200,
+          "prompt_ms": 828.211
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 589691900,
+          "prompt_ms": 586.725
+        },
+        {
+          "start_ns": 589709200,
+          "finish_ns": 1275307000,
+          "prompt_ms": 577.834
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 317129300,
+          "prompt_ms": 241.594
+        },
+        {
+          "start_ns": 317133700,
+          "finish_ns": 1005367000,
+          "prompt_ms": 587.09
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 234554800,
+          "prompt_ms": 232.874
+        },
+        {
+          "start_ns": 150529800,
+          "finish_ns": 818647500,
+          "prompt_ms": 583.644
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 434485100,
+          "prompt_ms": 399.112
+        },
+        {
+          "start_ns": 434489800,
+          "finish_ns": 945178700,
+          "prompt_ms": 404.909
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 594865600,
+          "prompt_ms": 592.908
+        },
+        {
+          "start_ns": 150201800,
+          "finish_ns": 830637000,
+          "prompt_ms": 452.862
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 693683700,
+          "prompt_ms": 587.761
+        },
+        {
+          "start_ns": 693687300,
+          "finish_ns": 1379514100,
+          "prompt_ms": 599.675
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 1179484200,
+          "prompt_ms": 1153.753
+        },
+        {
+          "start_ns": 151129200,
+          "finish_ns": 1222410500,
+          "prompt_ms": 822.776
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 633561900,
+          "prompt_ms": 592.263
+        },
+        {
+          "start_ns": 150356300,
+          "finish_ns": 864931400,
+          "prompt_ms": 445.989
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "shape": [
+        [
+          512,
+          1024
+        ],
+        [
+          512,
+          1024
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 417219900,
+          "prompt_ms": 400.442
+        },
+        {
+          "start_ns": 417225700,
+          "finish_ns": 817433400,
+          "prompt_ms": 398.533
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 1236940900,
+          "prompt_ms": 1171.583
+        },
+        {
+          "start_ns": 150542000,
+          "finish_ns": 1285617100,
+          "prompt_ms": 851.11
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "shape": [
+        [
+          1536,
+          1536
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 584669900,
+          "prompt_ms": 582.498
+        },
+        {
+          "start_ns": 584673700,
+          "finish_ns": 1272461000,
+          "prompt_ms": 580.017
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": true,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 301990700,
+          "prompt_ms": 233.412
+        },
+        {
+          "start_ns": 150422200,
+          "finish_ns": 952617700,
+          "prompt_ms": 587.188
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "shape": [
+        [
+          512,
+          512
+        ],
+        [
+          1536,
+          1536
+        ]
+      ],
+      "concurrent": false,
+      "slots": [
+        {
+          "start_ns": 0,
+          "finish_ns": 235507000,
+          "prompt_ms": 233.138
+        },
+        {
+          "start_ns": 235515700,
+          "finish_ns": 824060500,
+          "prompt_ms": 586.158
+        }
+      ]
+    }
+  ]
+}

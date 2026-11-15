@@ -1,0 +1,9 @@
+trace,window,placement,budget_mib,spacing,io_scale,robust_timed_mean_gain_ms,unsettled_30_timed_mean_gain_ms
+qwen_thinking_blksz_16.jsonl,20,ram,128,1.0,32,-1.5054340132598967,-1.4983687453563432
+qwen_thinking_blksz_16.jsonl,22,ram,128,0.25,32,-1.3330329936245675,-1.0965319695285467
+qwen_thinking_blksz_16.jsonl,18,split,384,0.25,32,-178.66877527438785,-211.1747776627636
+qwen_thinking_blksz_16.jsonl,19,split,384,0.25,32,-283.1591877503878,-217.7998667808811
+qwen_thinking_blksz_16.jsonl,22,split,384,1.0,32,-2.3220384905782168,-2.269959932083546
+qwen_thinking_blksz_16.jsonl,22,split,384,0.25,32,-32.50988429682342,-30.492390614348214
+qwen_thinking_blksz_16.jsonl,19,ssd,384,0.25,32,-8.588447219714046,-138.7540178511019
+qwen_thinking_blksz_16.jsonl,21,ssd,384,0.25,32,-133.21446529675063,-133.2328242924669

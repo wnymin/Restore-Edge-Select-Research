@@ -1,0 +1,475 @@
+{
+  "kind": "sampled-prefill",
+  "provenance": {
+    "source": "llama-bench",
+    "model_sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "build_commit": "8a56aedd6",
+    "build_number": 10923,
+    "cpu_info": "13th Gen Intel(R) Core(TM) i9-13980HX",
+    "gpu_info": "Intel(R) RaptorLake-S Mobile Graphics Controller, NVIDIA GeForce RTX 4060 Laptop GPU",
+    "backends": "Vulkan",
+    "model_filename": "qwen35-4b-q4km.gguf",
+    "model_type": "qwen35 4B Q4_K - Medium",
+    "model_size": 2729969664,
+    "model_n_params": 4205751296,
+    "n_batch": 2048,
+    "n_ubatch": 512,
+    "n_threads": 24,
+    "cpu_mask": "0x0",
+    "cpu_strict": false,
+    "poll": 50,
+    "type_k": "f16",
+    "type_v": "f16",
+    "n_gpu_layers": 99,
+    "n_cpu_moe": 0,
+    "split_mode": "layer",
+    "main_gpu": 0,
+    "no_kv_offload": false,
+    "flash_attn": -1,
+    "devices": "Vulkan1",
+    "tensor_split": "0.00",
+    "tensor_buft_overrides": "none",
+    "load_mode": "auto",
+    "lazy_mode": "auto",
+    "embeddings": false,
+    "no_op_offload": 0,
+    "no_host": false,
+    "fit_target": 0,
+    "fit_min_ctx": 0,
+    "n_gen": 0
+  },
+  "samples": [
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 1,
+      "ms": [
+        14.9259,
+        14.8889,
+        14.8967
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 32,
+      "ms": [
+        42.5103,
+        42.4704,
+        42.5415
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 128,
+      "ms": [
+        68.4856,
+        68.4419,
+        57.8461
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 512,
+      "ms": [
+        179.9463,
+        175.3387,
+        175.8099
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 1024,
+      "ms": [
+        349.6225,
+        348.808,
+        349.1964
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 2048,
+      "ms": [
+        699.1169,
+        697.8482,
+        699.816
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 4096,
+      "ms": [
+        1415.7372,
+        1416.0625,
+        1415.9811
+      ]
+    },
+    {
+      "cached_tokens": 0,
+      "suffix_tokens": 8192,
+      "ms": [
+        2922.1278,
+        2924.3352,
+        2929.5464
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 1,
+      "ms": [
+        16.0818,
+        14.2172,
+        14.3177
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 32,
+      "ms": [
+        36.9102,
+        35.1109,
+        34.5862
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 128,
+      "ms": [
+        54.9406,
+        53.6443,
+        53.6535
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 512,
+      "ms": [
+        181.3414,
+        179.1814,
+        178.3295
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 1024,
+      "ms": [
+        355.1684,
+        353.4193,
+        352.6439
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 2048,
+      "ms": [
+        705.9095,
+        708.0786,
+        714.6497
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 4096,
+      "ms": [
+        1436.281,
+        1437.5904,
+        1437.406
+      ]
+    },
+    {
+      "cached_tokens": 512,
+      "suffix_tokens": 8192,
+      "ms": [
+        2966.3916,
+        2970.9294,
+        2976.5933
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 1,
+      "ms": [
+        16.2864,
+        14.5691,
+        14.3946
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 32,
+      "ms": [
+        36.6761,
+        35.4659,
+        34.1162
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 128,
+      "ms": [
+        55.8659,
+        54.3883,
+        55.1839
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 512,
+      "ms": [
+        185.3759,
+        182.365,
+        182.5524
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 1024,
+      "ms": [
+        362.1,
+        361.6962,
+        360.5646
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 2048,
+      "ms": [
+        726.9176,
+        723.7014,
+        723.6718
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 4096,
+      "ms": [
+        1474.2825,
+        1480.3007,
+        1482.0206
+      ]
+    },
+    {
+      "cached_tokens": 1536,
+      "suffix_tokens": 8192,
+      "ms": [
+        3035.5227,
+        3060.1859,
+        3039.5045
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 1,
+      "ms": [
+        18.43,
+        14.6807,
+        14.7074
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 32,
+      "ms": [
+        37.8856,
+        35.4222,
+        34.6337
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 128,
+      "ms": [
+        58.6051,
+        56.4372,
+        57.5063
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 512,
+      "ms": [
+        191.3303,
+        187.6499,
+        187.6826
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 1024,
+      "ms": [
+        377.7414,
+        374.5445,
+        372.7799
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 2048,
+      "ms": [
+        752.3765,
+        747.0057,
+        747.9479
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 4096,
+      "ms": [
+        1519.1152,
+        1519.8595,
+        1522.0744
+      ]
+    },
+    {
+      "cached_tokens": 3584,
+      "suffix_tokens": 8192,
+      "ms": [
+        3138.9157,
+        3136.6622,
+        3146.2612
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 1,
+      "ms": [
+        17.0639,
+        15.2297,
+        15.0128
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 32,
+      "ms": [
+        37.9897,
+        36.162,
+        36.2079
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 128,
+      "ms": [
+        59.9742,
+        57.3963,
+        57.972
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 512,
+      "ms": [
+        194.3051,
+        195.186,
+        193.1192
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 1024,
+      "ms": [
+        386.6148,
+        384.3133,
+        383.7485
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 2048,
+      "ms": [
+        768.5243,
+        769.995,
+        769.1973
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 4096,
+      "ms": [
+        1564.7363,
+        1564.6738,
+        1563.6289
+      ]
+    },
+    {
+      "cached_tokens": 5632,
+      "suffix_tokens": 8192,
+      "ms": [
+        3217.0768,
+        3222.095,
+        3215.8107
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 1,
+      "ms": [
+        17.0865,
+        15.2677,
+        15.2703
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 32,
+      "ms": [
+        37.5187,
+        35.8847,
+        35.2867
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 128,
+      "ms": [
+        60.9009,
+        59.8009,
+        59.2355
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 512,
+      "ms": [
+        199.9448,
+        197.2622,
+        195.8482
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 1024,
+      "ms": [
+        390.9061,
+        390.4378,
+        390.6607
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 2048,
+      "ms": [
+        790.5183,
+        782.1466,
+        779.1866
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 4096,
+      "ms": [
+        1586.7166,
+        1586.2848,
+        1584.6761
+      ]
+    },
+    {
+      "cached_tokens": 6656,
+      "suffix_tokens": 8192,
+      "ms": [
+        3263.0995,
+        3263.0615,
+        3259.8641
+      ]
+    }
+  ]
+}

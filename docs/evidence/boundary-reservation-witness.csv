@@ -1,0 +1,2 @@
+﻿"trace","window","spacing","budget_mib","io_scale","same_source_witness"
+"qwen_thinking_blksz_16.jsonl","24","0.25","128","1","{""request"": 7, ""boundary"": 512, ""source"": 5, ""decision_ms"": 2048.6476040875937, ""delay_ms"": 100.0, ""bytes"": 16777216}"

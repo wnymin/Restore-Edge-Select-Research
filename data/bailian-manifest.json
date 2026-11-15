@@ -1,0 +1,27 @@
+{
+  "repository": "alibaba-edu/qwen-bailian-usagetraces-anon",
+  "revision": "5f7439c51ec248a0c585f7d90a41a6f57773b912",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "name": "qwen_coder_blksz_16.jsonl",
+      "sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "bytes": 132054902
+    },
+    {
+      "name": "qwen_thinking_blksz_16.jsonl",
+      "sha256": "41ac36d9d1b54d084eeb6b05e9d142ba9d02f8bf79cfc9fff418d8ab7cdee906",
+      "bytes": 27901454
+    },
+    {
+      "name": "qwen_traceA_blksz_16.jsonl",
+      "sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "bytes": 56354493
+    },
+    {
+      "name": "qwen_traceB_blksz_16.jsonl",
+      "sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "bytes": 96209982
+    }
+  ]
+}

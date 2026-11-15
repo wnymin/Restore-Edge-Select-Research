@@ -1,0 +1,22 @@
+{
+  "version": "production-sensitivity-v1",
+  "reference_measurements": "gpu-boundary-resident-trials.csv (RTX 4060 Laptop / Qwen3.5-4B Q4_K_M / llama.cpp Vulkan)",
+  "target_environment": "H100/H200-class single GPU / Qwen3.5-27B",
+  "state": {
+    "kv_bytes_per_token": 65536,
+    "recurrent_bytes_per_boundary": 150994944,
+    "source": "https://huggingface.co/Qwen/Qwen3.5-27B/blob/main/config.json"
+  },
+  "paths": [
+    {"name": "ram_whole", "source": "ram", "layout": "whole"},
+    {"name": "ram_missing", "source": "ram", "layout": "missing"},
+    {"name": "ssd_whole", "source": "ssd", "layout": "whole"},
+    {"name": "ssd_missing", "source": "ssd", "layout": "missing"}
+  ],
+  "scenarios": [
+    {"name": "favorable", "prefill_speedup": 2, "h2d_gbps": 50, "ssd_gbps": 7, "covered_fraction": 0.5, "extra_ms": 0},
+    {"name": "reference", "prefill_speedup": 4, "h2d_gbps": 40, "ssd_gbps": 5, "covered_fraction": 0, "extra_ms": 10},
+    {"name": "unfavorable", "prefill_speedup": 8, "h2d_gbps": 25, "ssd_gbps": 3, "covered_fraction": 0, "extra_ms": 30}
+  ],
+  "range_definition": "Ordered sensitivity cases for cold restoration, not a confidence interval or probability. Speedups are effective marginal continuation ratios versus the paired local measurements."
+}

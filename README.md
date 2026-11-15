@@ -1,16 +1,21 @@
-# Restore Edge Select Research
+﻿# Restore Edge Select Research
 
-用 CPU 事件模拟研究：多个请求共享有限显存预取额度时，如何选择混合模型前缀缓存的恢复边界。第一阶段固定 Qwen3.5-4B 文本主干，模拟器只处理缓存对象和事件，无需 GPU 或模型权重。
+研究有限显存预取额度下的混合模型缓存恢复边界。用事件模拟和百炼请求回放比较选点策略，用归档的硬件读数检验成本假设。当前证据支持在已覆盖的常规成本条件下保留逐请求选点 `local-cost`；队列剪枝作为实现优化。
 
-在仓库根目录创建环境并运行：
+从仓库根目录运行下列命令即可验收与运行手算轨迹。只需 Python 3.12 或 3.13；不需要 GPU、模型权重或下载轨迹。
 
-```sh
-conda env create -f environment.yml
-conda activate restore-edge-select
+~~~sh
 python scripts/check_fixture.py
-python scripts/simulate.py --prefetch-mib 160 --policy local-cost capacity offline
-```
+python scripts/simulate.py --prefetch-mib 160 --policy local-cost remaining-wait-fast offline
+~~~
 
-验收脚本回放四档预算下的全部 36 个手算组合，并检查共享对象和检查点交接。模拟命令输出 JSON；160 MiB 下，逐请求最低成本策略平均用时 31 ms，容量感知策略和离线穷举均为 30.75 ms。这些数字来自合成轨迹，不能视为实测 TTFT。
+验收覆盖四档预取预算的 36 个手算组合。在 160 MiB 手算轨迹上，逐请求最低成本为 31 ms，剩余等待与离线穷举均为 30.75 ms；这是模拟预填充时间。
 
-[实验环境与运行说明](docs/environment.md) · [第一阶段实验约定](docs/phase1.md) · [手算轨迹](docs/phase1-hand-trace.md) · [协作约定](CONTRIBUTING.md)
+| 证据 | 入口 |
+| --- | --- |
+| 模拟范围、状态与计费规则 | [模拟器运行、规则与手算验收](docs/phase1.md) |
+| 真实服务的归档读数与离线外推 | [驻留前缀与冷恢复](docs/gpu-boundary-restore.md) |
+| 负载规律、策略与反例 | [CPU 研究](docs/boundary-findings.md) |
+| 成本依据、保留数据和复现命令 | [实验口径与复现](docs/experiment-index.md) |
+
+[研究分工](docs/work-plan.md) · [协作约定](CONTRIBUTING.md)
