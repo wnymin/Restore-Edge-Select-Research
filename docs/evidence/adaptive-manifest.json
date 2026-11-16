@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "python": "3.12.13",
+  "runs": {
+    "adaptive-holdout-109": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          109
+        ],
+        "windows": 3,
+        "rates": [
+          "1",
+          "8",
+          "11",
+          "12",
+          "16",
+          "32"
+        ],
+        "max_prompt": 3584,
+        "path": "ssd",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-holdout-109.csv",
+        "zero_only": false,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "reuse-cross-tier-fallback",
+          "adaptive",
+          "adaptive-screened",
+          "adaptive-strict"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-observed-upper.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-observed-upper.json",
+          "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-holdout-109.csv",
+          "sha256": "829df7ff4ab4780769daf6a915efa506fa92c718f2f4ff81ba07cf8efd0aa664"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-holdout-109.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "adaptive-audit-109": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          109
+        ],
+        "windows": 3,
+        "rates": [
+          "1",
+          "8",
+          "11",
+          "12",
+          "16",
+          "32"
+        ],
+        "max_prompt": 3584,
+        "path": "ssd",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-audit-109.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "adaptive-audit",
+          "adaptive-screened-audit"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-observed-upper.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-observed-upper.json",
+          "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-audit-109.csv",
+          "sha256": "915d7a8a8c0381a2f3eaf1bdcc37734f399c093c7bd9db71e2887a33b3e03b91"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-audit-109.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "adaptive-holdout-112": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          112
+        ],
+        "windows": 3,
+        "rates": [
+          "1",
+          "8",
+          "11",
+          "12",
+          "16",
+          "32"
+        ],
+        "max_prompt": 3584,
+        "path": "all",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-holdout-112.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "adaptive",
+          "adaptive-screened",
+          "adaptive-screened-audit"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-observed-upper.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-observed-upper.json",
+          "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-holdout-112.csv",
+          "sha256": "d98a103f74a6e579cddc1eba1ac072dea227ef50efe7191977d6e3d3f117af93"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-holdout-112.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "adaptive-stale-115-1-2": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          115
+        ],
+        "windows": 2,
+        "rates": [
+          "1",
+          "11",
+          "16"
+        ],
+        "max_prompt": 3584,
+        "path": "ssd",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-stale-115-1-2.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "adaptive-screened",
+          "adaptive-screened-audit"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-disabled-control.json",
+        "ssd_estimate_factor": "1/2"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-disabled-control.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-stale-115-1-2.csv",
+          "sha256": "98ca085ca51fb705dadb3c49982073b66b38800c33542d4401c070886ce65e2b"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-stale-115-1-2.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "adaptive-stale-115-1": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          115
+        ],
+        "windows": 2,
+        "rates": [
+          "1",
+          "11",
+          "16"
+        ],
+        "max_prompt": 3584,
+        "path": "ssd",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-stale-115-1.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "adaptive-screened",
+          "adaptive-screened-audit"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-disabled-control.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-disabled-control.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-stale-115-1.csv",
+          "sha256": "9df8cc3a468356cb22a9a65083bf9c1a7c77def2233b954453dc2ecfbaeab28a"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-stale-115-1.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "adaptive-stale-115-2": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          115
+        ],
+        "windows": 2,
+        "rates": [
+          "1",
+          "11",
+          "16"
+        ],
+        "max_prompt": 3584,
+        "path": "ssd",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-stale-115-2.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "adaptive-screened",
+          "adaptive-screened-audit"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-disabled-control.json",
+        "ssd_estimate_factor": "2"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-disabled-control.json",
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-stale-115-2.csv",
+          "sha256": "9634c70f2c1f822986e622b9fd06aef887357105456f0676aa9ef3bdc49226a3"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-stale-115-2.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "adaptive-dense-117": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          117
+        ],
+        "windows": 3,
+        "rates": [
+          "1",
+          "8",
+          "11",
+          "12",
+          "16",
+          "32"
+        ],
+        "max_prompt": 6656,
+        "path": "all",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-dense-117.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "all_checkpoints": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "adaptive-fixed2",
+          "adaptive",
+          "adaptive-exhaustive",
+          "adaptive-audit"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-8k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-observed-upper.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-8k.json",
+          "sha256": "4d5d1be4c884ce5657a2b2f5104dc9cd910d3293ba20d678be25c54f4b5a85b7"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-observed-upper.json",
+          "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-dense-117.csv",
+          "sha256": "788152cce194ca667d80e72d9ffd4babbb2f4b40ba0ee410a2fcef0974f6162c"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-dense-117.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "adaptive-objectives-120": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          120
+        ],
+        "windows": 2,
+        "rates": [
+          "1",
+          "8",
+          "11",
+          "12",
+          "16",
+          "32"
+        ],
+        "max_prompt": 3584,
+        "path": "all",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\adaptive-objectives-120.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "all_checkpoints": false,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "adaptive-mean",
+          "adaptive-mean-audit",
+          "adaptive",
+          "adaptive-strict"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-observed-upper.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-observed-upper.json",
+          "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/adaptive-objectives-120.csv",
+          "sha256": "2e03a4ae992c9d43dcf4a83a1ed8ece19304dc25292b46f1aa7cf7b392c74d9e"
+        },
+        "snapshots": {
+          "path": "outputs/adaptive-objectives-120.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    }
+  },
+  "archived_sha256": {
+    "adaptive-performance.csv": "78ee86100d65a299f979e6106e607479da82d2a29da04e8ecb44732aec3cfc57",
+    "adaptive-routes.csv": "cd74bbab8e0f3d7587322b57c24007180d0e5efe1342ca706fe106884fa94ef7",
+    "adaptive-oracle.csv": "1baef789dfb6d37dae057decfadb9c0335f5174c059c27ca62e478b12c784d17"
+  }
+}

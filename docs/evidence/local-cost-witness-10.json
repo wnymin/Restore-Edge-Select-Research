@@ -1,0 +1,76 @@
+{
+  "window": 107,
+  "trace": "qwen_traceA_blksz_16.jsonl",
+  "max_prompt": 3584,
+  "placement": "ssd",
+  "spacing": 1.0,
+  "budget_mib": 128,
+  "rate": 10.0,
+  "path": "ssd",
+  "ssd_estimate_factor": 1.0,
+  "intervene_policy": "mixed-reuse-estimate",
+  "reference_policy": "local-cost",
+  "request_count": 71,
+  "selected_policy": {
+    "mean_gain_ms": 0.0,
+    "p95_gain_ms": 0.0
+  },
+  "queue": {
+    "mean_gain_ms": 0.0,
+    "p95_gain_ms": 0.0
+  },
+  "pressure_policies": {
+    "mixed-projected-entry": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": null
+    },
+    "mixed-estimate": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": null
+    },
+    "mixed-reuse-estimate": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": null
+    },
+    "reuse-cross-tier-fallback": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": null
+    },
+    "reuse-cross-tier-guard": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": null
+    },
+    "reuse-prefetch-fallback": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0,
+      "replays": 0,
+      "boundary_at_first_change": null
+    }
+  },
+  "fixed_plans_without_compute_slowdown": {
+    "ram_only": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0
+    },
+    "ssd_only": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0
+    },
+    "both": {
+      "mean_gain_ms": 0.0,
+      "p95_gain_ms": 0.0
+    }
+  },
+  "changed_boundaries": 0,
+  "first_change": null
+}

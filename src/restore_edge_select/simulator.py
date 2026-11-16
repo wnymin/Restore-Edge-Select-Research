@@ -7,6 +7,7 @@ from itertools import product
 from math import prod
 from time import perf_counter_ns
 
+from .adaptive import AdaptiveConfig, select as adaptive_select
 from .prefill_cost import build_prefill_cost
 
 
@@ -18,6 +19,10 @@ PROBE_POLICIES = {"two-request-io-floor", "two-request-backlog", "two-request-ba
                   "two-request-checkpoint-floor", "two-request-exposed-io", "two-request-exposed-floor",
                   "two-request-stable-io", "two-request-robust"}
 IO_PATHS = ("ram_to_device", "ssd_to_device")
+
+
+class OfflineBranch(Exception):
+    """A fixed replay reached a request with an unassigned boundary."""
 
 
 def prefix(runs, length):
@@ -226,7 +231,15 @@ class Experiment:
             profile_decisions=False, inject_measured=False, observe_candidates=None, score_candidate=None,
             intervention_budget_mib=None, decision_overrides=None, screen_mode=None, min_gain_ms=0,
             future_cost_cases=None, queue_horizon=None, screen_selector=None, screen_observer=None,
-            screen_search="full"):
+            screen_search="full", adaptive=None):
+        if policy == "adaptive":
+            adaptive = AdaptiveConfig() if adaptive is None else adaptive
+            if (not isinstance(adaptive, AdaptiveConfig) or self.per_tier or self.host_cache_bytes
+                    or future_cost_cases or screen_search != "full" or queue_horizon is not None
+                    or (adaptive.audit and (profile_decisions or inject_measured))):
+                raise ValueError("Adaptive routing requires the single-lane model and its own search configuration")
+        elif adaptive is not None:
+            raise ValueError("Adaptive configuration requires the adaptive policy")
         estimate_modes = {"estimate", "estimate-cross-tier", "estimate-cross-tier-guard",
                           "estimate-prefetch-fallback"}
         if screen_search not in {"full", "lean", "compute", "cutoff", "entry"} | estimate_modes or (
@@ -295,7 +308,7 @@ class Experiment:
                                      or any(len(t) != 1 or s != (1,) for t, s in self.io_epochs.values())):
             raise ValueError("Staged checkpoint retention requires stationary known costs and a supported policy")
         if self.release_at != "start" and policy not in {"fixed", "local-cost", "remaining-wait-live",
-                                                        "snapshot-screened"}:
+                                                        "snapshot-screened", "adaptive"}:
             raise ValueError("Delayed prefetch release requires a supported policy")
         if set(estimate) - {"ram_to_device", "ssd_to_device", "device_copy", "compute"} or any(
                 v <= 0 for v in estimate.values()) or min(number(guard_ms), transfer_trigger, screen, pair_cost,
@@ -309,7 +322,7 @@ class Experiment:
                          intervention_budget=intervention_budget, decision_overrides=overrides,
                          screen_mode=screen_mode, min_gain=min_gain, future_cost_cases=future_cost_cases,
                          queue_horizon=queue_horizon, screen_selector=screen_selector,
-                         screen_observer=screen_observer, screen_search=screen_search)
+                         screen_observer=screen_observer, screen_search=screen_search, adaptive=adaptive)
 
     def _run(self, policy, threshold_tokens, boundaries, max_combinations, n, *,
              snapshot=None, estimate=None, guard=0, transfer_trigger=0, screen=0, pair_cost=0, probe_cost=0,
@@ -318,12 +331,12 @@ class Experiment:
              prefetch_budget=None, active_kv_handoff=True, decision_overrides=None,
              screen_mode=None, min_gain=0, future_cost_cases=None, future_cost=None, queue_horizon=None,
              screen_selector=None, screen_observer=None, screen_search="full",
-             completion_cutoff=None, lean_rollout=False):
+             completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None):
         prefetch_budget = self.budget if prefetch_budget is None else prefetch_budget
         decision_overrides = decision_overrides or {}
         if policy not in {"recompute", "longest", "threshold", "local-cost", "fixed", "capacity",
                           "arrived-lookahead", "remaining-wait", "remaining-wait-live",
-                          "remaining-wait-fast", "snapshot-score", "snapshot-screened"} | PAIR_POLICIES:
+                          "remaining-wait-fast", "snapshot-score", "snapshot-screened", "adaptive"} | PAIR_POLICIES:
             raise ValueError(f"Unknown policy: {policy}")
         if policy == "fixed" and (boundaries is None or len(boundaries) != n):
             raise ValueError("Fixed policy requires one boundary per request")
@@ -358,6 +371,23 @@ class Experiment:
         pending = None
         decision_intervals = []
         decision_profile = []
+        adaptive_stats = {}
+        if adaptive is not None:
+            def record_route(label, gap=0, gain=0, changed=False, replays=0, missed=None):
+                d = adaptive_stats.setdefault(label, Counter())
+                d['decisions'] += 1
+                d['certified'] += gap == 0
+                d['screened'] += gap is None
+                d['changed'] += changed
+                d['replays'] += replays
+                if gap is not None:
+                    d['gap_sum_ms'] += gap
+                    d['gap_max_ms'] = max(d['gap_max_ms'], gap)
+                d['predicted_gain_sum_ms'] += gain
+                if missed is not None:
+                    d['audited_screened'] += 1
+                    d['screen_misses'] += missed > 0
+                    d['screen_missed_gain_sum_ms'] += missed
         if snapshot is not None:
             (now, head, arrived, admitted, ready, running_until, transfer, active_deps) = snapshot[:8]
             held_reservation, release_time, host_cache = snapshot[8:11]
@@ -461,10 +491,13 @@ class Experiment:
             if policy == "threshold":
                 return max((c for c in choices if c >= threshold_tokens), default=0)
             if policy in {"remaining-wait-live", "remaining-wait-fast", "snapshot-score",
-                          "snapshot-screened"} or policy in PAIR_POLICIES:
+                          "snapshot-screened", "adaptive"} or policy in PAIR_POLICIES:
                 if len(choices) == 1:
+                    if adaptive is not None:
+                        record_route('single-choice')
                     return choices[0]
-                if (policy == "remaining-wait-fast" and not guard and i == head
+                isolated_adaptive = adaptive is not None and arrived == i + 1 and not held_reservation
+                if ((isolated_adaptive or policy == "remaining-wait-fast" and not guard) and i == head
                         and running_until is None and transfer is None and not admitted
                         and ready == self.initial):
                     # The one-request rollout has no overlap or shared
@@ -476,6 +509,8 @@ class Experiment:
                                 if deps and c < self.lengths[i] and deps[-1] in self.initial else 0)
                         return (self._suffix_times[i][c] * estimate.get("compute", 1) + copy
                                 + sum(duration(obj, estimate) for obj in deps if obj not in ready), -c)
+                    if isolated_adaptive:
+                        record_route('isolated')
                     return min(choices, key=isolated)
                 # Estimate remaining work from start times and observed phase,
                 # never from the actual completion timestamp of an active phase.
@@ -556,7 +591,7 @@ class Experiment:
 
                 details = {}
                 observable = {}
-                if observe_candidates is not None or score_candidate is not None:
+                if observe_candidates is not None or score_candidate is not None or adaptive is not None:
                     reserved = occupied()
                     active_kv = set(active_deps[:-1]) if predicted_run is not None else set()
                     flights = tier_transfers.values() if self.per_tier else (
@@ -685,7 +720,8 @@ class Experiment:
                     run = self._run("fixed", 0, (*selected[:i], *plan), max_combinations, n_visible,
                                     snapshot=state, estimate=estimate, forecast_speed=speeds,
                                     prefetch_budget=budget, active_kv_handoff=handoff, future_cost=cost,
-                                    completion_cutoff=cutoff, lean_rollout=screen_search != "full")
+                                    completion_cutoff=cutoff,
+                                    lean_rollout=screen_search != "full" or adaptive is not None)
                     decision_replays += 1
                     decision_events += run["events_processed"]
                     if run.get("pruned"):
@@ -696,6 +732,42 @@ class Experiment:
                                             run["prefetch_reserved_ms"], run["active_kv_handoff_bytes"],
                                             run["active_kv_handoff_source"])
                     return run["completion_ms"]
+
+                if adaptive is not None:
+                    visible = min(arrived, i + 1 + adaptive.later)
+                    for j in range(i, visible):
+                        if j not in serial_choices:
+                            serial_choices[j] = serial_choice(j)
+                    base = serial_choices[i]
+                    later = tuple(serial_choices[j] for j in range(i + 1, visible))
+                    plan = (*selected[head:i], base, *later)
+                    factor = estimate.get('compute', 1)
+                    work = [self._suffix_times[j][c] * factor for j, c in enumerate(plan, head)]
+                    if predicted_run is not None:
+                        work[0] = (predicted_run - now) / compute_factor
+                    offsets = []
+                    time = now
+                    for left in work:
+                        time += left
+                        offsets.append(time)
+                    lower = {c: tuple(end + (self._suffix_times[i][c] - self._suffix_times[i][base]) * factor
+                                      if j >= i else end for j, end in enumerate(offsets, head))
+                             for c in choices}
+                    rank = {}
+                    for c, row in observable.items():
+                        io = row['incremental_ram_ms'] + row['incremental_ssd_ms']
+                        slack = row['head_slack_ms'] + row['committed_ahead_compute_ms']
+                        wait = max(0, io + row['inflight_ms'] + row['queue_debt_ms'] - slack)
+                        if not row['prefetch_fits']:
+                            wait = io + max(0, row['inflight_ms'] - slack)
+                        rank[c] = row['serial_compute_ms'] + row['serial_copy_ms'] + (
+                            wait if row['missing_bytes'] else 0)
+                    before = decision_replays
+                    boundary, label, gap, gain, missed = adaptive_select(
+                        observable, base, self.budget, adaptive, lower,
+                        lambda c: forecast((c, *later), visible), rank)
+                    record_route(label, gap, gain, boundary != base, decision_replays - before, missed)
+                    return boundary
 
                 if pair:
                     next_choices = self.eligible[i + 1]
@@ -901,7 +973,7 @@ class Experiment:
                     total = self.recompute(i, c) + copy + max(
                         sum(duration(obj, estimate) for obj in missing if path_for(obj) == path)
                         for path in IO_PATHS)
-                if policy == "local-cost" and estimate:
+                if policy in {"local-cost", "adaptive"} and estimate:
                     total = (self.recompute(i, c) * estimate.get("compute", 1)
                              + copy * estimate.get("device_copy", 1)
                              + sum(duration(obj, estimate) for obj in missing))
@@ -917,6 +989,12 @@ class Experiment:
 
         def begin_decision(i):
             nonlocal pending
+            if offline_probe is not None and boundaries[i] is None:
+                if len(self.eligible[i]) == 1:
+                    selected[i] = self.eligible[i][0]
+                    return
+                raise OfflineBranch(offline_probe(i, now, head, completions, ready, running_until,
+                                                  compute_factor, transfer, transfer_factor, active_deps))
             opportunities, pairs, prior_probes, checks = pair_opportunities, pair_decisions, probes, scenario_checks
             timed = profile_decisions or inject_measured
             start = perf_counter_ns() if timed else 0
@@ -1196,8 +1274,9 @@ class Experiment:
             **({"lookahead_replays": lookahead_replays} if policy == "arrived-lookahead" else {}),
             **({"decision_replays": decision_replays} if policy == "remaining-wait" else {}),
             **({"decision_replays": decision_replays, "decision_events": decision_events}
-               if policy in {"remaining-wait-live", "remaining-wait-fast", "snapshot-screened"}
+               if policy in {"remaining-wait-live", "remaining-wait-fast", "snapshot-screened", "adaptive"}
                or policy in PAIR_POLICIES else {}),
+            **({"adaptive_routes": adaptive_stats} if adaptive is not None else {}),
             **({"pruned_rollouts": pruned_rollouts} if screen_search in {"compute", "cutoff", "entry"} else {}),
             **({"pair_decisions": pair_decisions, "pair_opportunities": pair_opportunities}
                if policy in PAIR_POLICIES else {}),

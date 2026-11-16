@@ -16,7 +16,7 @@ def read(path):
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def build(rows, history, fixture, model, spacing, placement="split", max_prompt=None):
+def build(rows, history, fixture, model, spacing, placement="split", max_prompt=None, all_checkpoints=False):
     nodes, cached, objects, requests = {}, set(), {}, []
     start = F(rows[history]["timestamp"])
     kv = model["payload"]["attention_bytes_per_token"]
@@ -54,7 +54,7 @@ def build(rows, history, fixture, model, spacing, placement="split", max_prompt=
                                          end_token_inclusive=j * BLOCK,
                                          prefix_token_runs=runs[:j], bytes=kv * BLOCK))
             # Retain at most two nonzero choices to isolate boundary selection.
-            if j not in {1, count}:
+            if not all_checkpoints and j not in {1, count}:
                 continue
             state = f"state-{node}"
             objects.setdefault(state, dict(id=state, kind="recurrent_and_conv_checkpoint",

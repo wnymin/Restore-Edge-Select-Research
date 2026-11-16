@@ -14,11 +14,35 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from restore_edge_select.simulator import Experiment
+from restore_edge_select.adaptive import AdaptiveConfig, select as adaptive_select
 
 
 def require(condition, message):
     if not condition:
         raise ValueError(message)
+
+
+def check_adaptive_search():
+    # Four candidates: the cheapest prediction is merely the order in which
+    # we test; the budget may hide a better, feasible boundary.
+    base_row = dict(head_distance=0, prefetch_fits=False, extra_reserve_bytes=0,
+                    checkpoint_tier='SSD', queue_debt_ms=0, inflight_ms=0,
+                    incremental_ram_ms=0, incremental_ssd_ms=0,
+                    head_slack_ms=0, committed_ahead_compute_ms=0)
+    rows = {c: dict(base_row, serial_compute_ms=40-c) for c in range(4)}
+    floor = {0: (30, 50), 1: (31, 38), 2: (29, 30), 3: (41, 42)}
+    ends = {0: (30, 50), 1: (32, 39), 2: (30, 36), 3: (41, 42)}
+    rank = {0: 5, 1: 1, 2: 2, 3: 3}
+    bounded = adaptive_select(rows, 0, 0, AdaptiveConfig(audit=True), floor, ends.__getitem__, rank)
+    require(bounded[:4] == (1, 'light', 12, 9), 'Budgeted search must report a valid nonzero gap')
+    full = adaptive_select(rows, 0, 0, AdaptiveConfig(4, 4, 4, audit=True), floor, ends.__getitem__, rank)
+    require(full[:4] == (2, 'light', 0, 14), 'Full search must certify the best feasible boundary')
+    uncertain = adaptive_select(rows, 0, 0, AdaptiveConfig(
+        4, 4, 4, audit=True, forecast_error_ms=3), floor, ends.__getitem__, rank)
+    require(uncertain[0] == 0 and uncertain[2] == 0, 'Error margin must reject an uncertain gain')
+    screened = adaptive_select(rows, 0, 0, AdaptiveConfig(audit=True, screen=True), floor,
+                               ends.__getitem__, {c: c for c in rows})
+    require(screened == (0, 'screened-light', None, 0, 14), 'Audit must expose a screening miss')
 
 
 def check_estimate_guards(fixture, model):
@@ -92,6 +116,7 @@ def check_estimate_guards(fixture, model):
 
 
 def main():
+    check_adaptive_search()
     fixture = json.loads((ROOT / "fixtures/phase1-hand-trace.json").read_text())
     spec = json.loads((ROOT / "configs/qwen3.5-4b.json").read_text())
     model = spec["models"][0]

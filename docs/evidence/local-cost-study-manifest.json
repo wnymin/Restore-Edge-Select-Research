@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "policy_revision": "2763149",
+  "python": "3.12.13",
+  "runs": {
+    "local-cost-request-102": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          102
+        ],
+        "windows": 3,
+        "rates": [
+          "1",
+          "4",
+          "10",
+          "11",
+          "12",
+          "16"
+        ],
+        "max_prompt": 3584,
+        "path": "ssd",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\local-cost-request-102.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "reuse-cross-tier-fallback"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-ssd-compute-half-control.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-ssd-compute-half-control.json",
+          "sha256": "93f2aa96bb0f76d10a387699d6bab1cb12fd1756c85854b25b7107027a4c65ed"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/local-cost-request-102.csv",
+          "sha256": "c74517501d3aba6707e9d666e0ad2476d1e2ce9dc7ec549088377bc31b862b1c"
+        },
+        "snapshots": {
+          "path": "outputs/local-cost-request-102.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "local-cost-holdout-105": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          105
+        ],
+        "windows": 3,
+        "rates": [
+          "1",
+          "2",
+          "4",
+          "8",
+          "10",
+          "11",
+          "12",
+          "16"
+        ],
+        "max_prompt": 3584,
+        "path": "ssd",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\local-cost-holdout-105.csv",
+        "zero_only": false,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "reuse-cross-tier-fallback"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-observed-upper.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-observed-upper.json",
+          "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/local-cost-holdout-105.csv",
+          "sha256": "2026f002e262a4ae8d149667a82ec75125c1655b3522ffc6c59a35359fd4e5ad"
+        },
+        "snapshots": {
+          "path": "outputs/local-cost-holdout-105.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    },
+    "local-cost-both-105": {
+      "schema_version": 1,
+      "parameters": {
+        "cohort": [
+          105
+        ],
+        "windows": 3,
+        "rates": [
+          "1",
+          "2",
+          "4",
+          "8",
+          "10",
+          "11",
+          "12",
+          "16"
+        ],
+        "max_prompt": 3584,
+        "path": "all",
+        "trace": [
+          "qwen_coder_blksz_16.jsonl",
+          "qwen_traceA_blksz_16.jsonl",
+          "qwen_traceB_blksz_16.jsonl"
+        ],
+        "out": "outputs\\local-cost-both-105.csv",
+        "zero_only": true,
+        "no_snapshots": true,
+        "request_metrics": true,
+        "policies": [
+          "next4",
+          "entry",
+          "mixed-reuse-estimate",
+          "reuse-cross-tier-fallback"
+        ],
+        "grid": "docs/evidence/prefill-vulkan-4k.json",
+        "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+        "overlap_profile": "configs/overlap-observed-upper.json",
+        "ssd_estimate_factor": "1"
+      },
+      "inputs": {
+        "fixture": {
+          "path": "fixtures/phase1-hand-trace.json",
+          "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+        },
+        "model": {
+          "path": "configs/qwen3.5-4b.json",
+          "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+        },
+        "trace_manifest": {
+          "path": "data/bailian-manifest.json",
+          "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+        },
+        "grid": {
+          "path": "docs/evidence/prefill-vulkan-4k.json",
+          "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+        },
+        "io_profile": {
+          "path": "docs/evidence/load-staged-ssd-profile.json",
+          "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+        },
+        "overlap_profile": {
+          "path": "configs/overlap-observed-upper.json",
+          "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+        }
+      },
+      "outputs": {
+        "results": {
+          "path": "outputs/local-cost-both-105.csv",
+          "sha256": "9dea35e59cd8ba6fb4c8de5d1e9cd7e7136857eed48b4807619685e2155e0491"
+        },
+        "snapshots": {
+          "path": "outputs/local-cost-both-105.snapshots.csv",
+          "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+        }
+      }
+    }
+  },
+  "archived_sha256": {
+    "local-cost-gpu-wide.csv": "fe14ebc24bd98484ae9323975ceb33670f43f651923138ca3566d9fde30b4921",
+    "local-cost-gpu-close.csv": "b78c9d6d611fabdf741a95b69bc9da61c07d53711d295c1059dafe0af9352cda",
+    "local-cost-stages.csv": "1e3af3a242e6913957849f3945adfc1289274ff5b2826f07eeacde82d99d5894",
+    "local-cost-witness-10.json": "d972b4931d75598b27f08ea4e7abae44717d607b8e63e898c4cefdcf44361954",
+    "local-cost-witness-11.json": "37dacf6cc810cf7ee2dcd1cf5e3a7c3a53ff7d621d04b6c4623b609894c3ff98",
+    "local-cost-witness-tail.json": "3dca039c64626420864c3f85cd64ca76d29b0e32f960de7dd457f80f0bc777c4",
+    "local-cost-holdout-summary.csv": "a8aff5706df389cf7f4fdfeef304445ae2aecfcb516fc77d3185932704bdc6b8",
+    "local-cost-gpu-summary.csv": "7f899663628a242ba33e7651c724a0db154eb22ceb91169c9fc4f0ab19328398",
+    "local-cost-timing-recheck.csv": "e1f2fbcc62607d5696b00899937ef56bbc1b4d96d9c29cadbd885f4256754194"
+  },
+  "timing_recheck": {
+    "schema_version": 1,
+    "parameters": {
+      "cohort": [
+        105
+      ],
+      "windows": 3,
+      "rates": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "10",
+        "11",
+        "12",
+        "16"
+      ],
+      "max_prompt": 3584,
+      "path": "ssd",
+      "trace": [
+        "qwen_coder_blksz_16.jsonl",
+        "qwen_traceA_blksz_16.jsonl",
+        "qwen_traceB_blksz_16.jsonl"
+      ],
+      "out": "outputs\\local-cost-quiet\\local-cost-holdout-105.csv",
+      "zero_only": false,
+      "no_snapshots": true,
+      "request_metrics": true,
+      "policies": [
+        "next4",
+        "entry",
+        "mixed-reuse-estimate",
+        "reuse-cross-tier-fallback"
+      ],
+      "grid": "docs/evidence/prefill-vulkan-4k.json",
+      "io_profile": "docs/evidence/load-staged-ssd-profile.json",
+      "overlap_profile": "configs/overlap-observed-upper.json",
+      "ssd_estimate_factor": "1"
+    },
+    "inputs": {
+      "fixture": {
+        "path": "fixtures/phase1-hand-trace.json",
+        "sha256": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9"
+      },
+      "model": {
+        "path": "configs/qwen3.5-4b.json",
+        "sha256": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+      },
+      "trace_manifest": {
+        "path": "data/bailian-manifest.json",
+        "sha256": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d"
+      },
+      "grid": {
+        "path": "docs/evidence/prefill-vulkan-4k.json",
+        "sha256": "4a628f73e7060a52f233e3daad3c1d244f01424c16351da337e8a19dd33c9236"
+      },
+      "io_profile": {
+        "path": "docs/evidence/load-staged-ssd-profile.json",
+        "sha256": "738698bedf971155a4404110a58f583a670468769bc79b484efd3335da7c0902"
+      },
+      "overlap_profile": {
+        "path": "configs/overlap-observed-upper.json",
+        "sha256": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+      }
+    },
+    "outputs": {
+      "results": {
+        "path": "outputs/local-cost-quiet/local-cost-holdout-105.csv",
+        "sha256": "9f874f9123819aa057b3b84691db0a4e427b637a94841c946101c355d4df448b"
+      },
+      "snapshots": {
+        "path": "outputs/local-cost-quiet/local-cost-holdout-105.snapshots.csv",
+        "sha256": "19145749a1f4739ec010e8827028377592e9b2e800a407f0fbd88c3958f3109c"
+      }
+    }
+  },
+  "hardware": {
+    "windows_build": "10.0.22631",
+    "cpu": "Intel Core i9-13980HX",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "nvidia_driver": "595.97",
+    "runtime": "llama-server 0.4.0-dev build 10923, 8a56aedd6, Vulkan1"
+  }
+}

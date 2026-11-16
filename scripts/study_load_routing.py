@@ -1,4 +1,4 @@
-"""Paired check of decision-time load classes and policy switches on Bailian."""
+"""Run paired recovery-boundary comparisons on Bailian trace windows."""
 
 import argparse
 from collections import Counter, defaultdict
@@ -12,10 +12,13 @@ from statistics import mean
 
 from study_bailian import Experiment, ROOT, build, p95, read
 from study_boundary_factors import predict
+from restore_edge_select.adaptive import AdaptiveConfig
 
 
 CLASSES = ("idle", "light_io", "capacity", "transfer_queue", "reuse", "overlap", "uncoupled")
-EXACT_SEARCH = {"lean", "compute", "cutoff", "entry"}
+EXACT_SEARCH = {"entry"}
+ADAPTIVE = {"adaptive", "adaptive-audit", "adaptive-strict", "adaptive-screened", "adaptive-screened-audit",
+            "adaptive-fixed2", "adaptive-exhaustive", "adaptive-mean", "adaptive-mean-audit"}
 MIXED_PROJECTED = "mixed-projected-entry"
 MIXED_ESTIMATE = "mixed-estimate"
 MIXED_REUSE_ESTIMATE = "mixed-reuse-estimate"
@@ -97,7 +100,14 @@ def signals(rows, base, later, budget):
     return label, relative, ahead, work, debt
 
 
-def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None):
+REQUEST_COLUMNS = (
+    "baseline_mean_ms", "baseline_p95_ms", "boundary_changes", "requests_slower",
+    "requests_slower_gt10ms", "max_request_loss_ms", "timed_requests_slower_gt10ms",
+    "timed_max_request_loss_ms",
+)
+
+
+def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None, request_metrics=False, capture=None):
     scorer = lambda row: predict("fifo_snapshot", row)
     opts = dict(score_candidate=scorer, screen_mode="unsettled", estimate=estimate)
     klass = dict(score_candidate=scorer, screen_mode="classified", estimate=estimate)
@@ -135,32 +145,7 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None):
 
     def selector(mode, calls):
         def route(rows, base, later):
-            if mode in PRESSURE_POLICIES:
-                view = pressure_view(rows, base, allow_ready_reuse=PRESSURE_POLICIES[mode])
-            elif mode == "depth":
-                view = 4 if rows[base]["head_distance"] else None
-            else:
-                label, ratio, ahead, _, _ = signals(rows, base, later, exp.budget)
-                if mode == "depth_io":
-                    view = 4 if ahead and ratio >= F(1, 8) else None
-                elif mode in {"rank_only", "rank_near"}:
-                    view = None
-                    if label in {"capacity", "transfer_queue", "reuse", "overlap"}:
-                        score = scorer(rows[base])
-                        best_other = min(scorer(d) for c, d in rows.items() if c != base)
-                        allowed = 0
-                        if mode == "rank_near" and label != "overlap":
-                            allowed = min(30, max(d["serial_io_ms"] for d in rows.values()) / 4)
-                        if best_other < score or (allowed and best_other - score <= allowed):
-                            view = 4 if ahead or later else "current"
-                else:
-                    threshold = F(1, 4) if mode == "route_tight" else F(1, 8)
-                    if ratio < threshold or label not in {"capacity", "transfer_queue", "reuse", "overlap"}:
-                        view = None
-                    elif label == "overlap" and later == 0:
-                        view = "current"
-                    else:
-                        view = 4
+            view = pressure_view(rows, base, allow_ready_reuse=PRESSURE_POLICIES[mode])
             if calls is not None:
                 calls[str(view)] += 1
             return view
@@ -170,27 +155,58 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None):
         return p95([t - a for t, a in zip(r["completion_ms"], exp.arrivals, strict=True)])
 
     reference = None
+    route_metrics = request_metrics and any(policy in ADAPTIVE for policy in policies)
     for policy in policies:
         calls = Counter()
-        if policy in {"current", "next4"} | EXACT_SEARCH:
-            zero = timed = opts | ({"queue_horizon": 4} if policy != "current" else {})
+        engine = "snapshot-screened"
+        if policy in ADAPTIVE:
+            engine = "adaptive"
+            limit = max(2, max(map(len, exp.eligible))) if policy == "adaptive-exhaustive" else 2
+            coupled_limit = limit if policy in {"adaptive-fixed2", "adaptive-exhaustive"} else 3
+            loss = None if "-mean" in policy else F(0) if policy == "adaptive-strict" else F(10)
+            options = AdaptiveConfig(audit=policy.endswith("-audit"), screen="screened" in policy,
+                                     loss_ms=loss, light_replays=limit, coupled_replays=coupled_limit)
+            zero = timed = {"estimate": estimate, "adaptive": options}
+        elif policy in {"next4"} | EXACT_SEARCH:
+            zero = timed = opts | {"queue_horizon": 4}
             if policy in EXACT_SEARCH:
                 zero = timed = zero | {"screen_search": policy}
 
         else:
             zero = klass | {"screen_selector": selector(policy, calls)}
             timed = klass | {"screen_selector": selector(policy, None)}
-            if policy in PRESSURE_POLICIES:
-                for options in (zero, timed):
-                    options["screen_search"] = ESTIMATE_POLICIES.get(policy, "entry")
-        run = exp.run("snapshot-screened", **zero)
+            for options in (zero, timed):
+                options["screen_search"] = ESTIMATE_POLICIES.get(policy, "entry")
+        run = exp.run(engine, **zero)
         if policy == "next4":
             reference = run
         if policy in EXACT_SEARCH:
             assert reference and all(run[x] == reference[x] for x in ("boundaries_tokens", "completion_ms")), (key, policy)
         fixed = exp.run("fixed", boundaries=run["boundaries_tokens"])
         assert fixed["completion_ms"] == run["completion_ms"]
-        wall = exp.run("snapshot-screened", **timed, inject_measured=True) if wall_base is not None else None
+        if capture is not None:
+            capture.setdefault("local-cost", fixture)
+            capture[policy] = run
+        wall = exp.run(engine, **timed, inject_measured=True) if wall_base is not None else None
+        extra = {}
+        if request_metrics:
+            def losses(base, result):
+                return [after - before for before, after in
+                        zip(base["completion_ms"], result["completion_ms"], strict=True)]
+
+            delta = losses(fixture, run)
+            timed_delta = losses(wall_base, wall) if wall else []
+            extra = dict(baseline_mean_ms=float(fixture["response_mean_ms"]),
+                         baseline_p95_ms=float(tail(fixture)),
+                         boundary_changes=sum(a != b for a, b in zip(fixture["boundaries_tokens"],
+                                                                      run["boundaries_tokens"], strict=True)),
+                         requests_slower=sum(x > 0 for x in delta),
+                         requests_slower_gt10ms=sum(x > 10 for x in delta),
+                         max_request_loss_ms=float(max(0, *delta)),
+                         timed_requests_slower_gt10ms=sum(x > 10 for x in timed_delta) if wall else "",
+                         timed_max_request_loss_ms=float(max(0, *timed_delta)) if wall else "")
+        if route_metrics:
+            extra["adaptive_routes"] = json.dumps(run.get("adaptive_routes", {}), default=float, sort_keys=True)
         results.writerow(dict(**key, policy=policy, requests=len(exp.requests), replays=run["decision_replays"],
             forecast_events=run["decision_events"], pruned=run.get("pruned_rollouts", 0),
             current_calls=calls["current"], queue_calls=calls["4"],
@@ -199,7 +215,7 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None):
             timed_gain_ms=float(wall_base["response_mean_ms"] - wall["response_mean_ms"]) if wall else "",
             timed_p95_ms=float(tail(wall_base) - tail(wall)) if wall else "",
             decision_cpu_ms=sum(ns for _, ns in wall["decision_profile_ns"]) / 1e6 if wall else "",
-            baseline_cpu_ms=sum(ns for _, ns in wall_base["decision_profile_ns"]) / 1e6 if wall else ""))
+            baseline_cpu_ms=sum(ns for _, ns in wall_base["decision_profile_ns"]) / 1e6 if wall else "", **extra))
 
 
 def write_metadata(args):
@@ -233,22 +249,23 @@ def write_metadata(args):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--cohort", type=int, nargs="+", default=[18, 24])
-    p.add_argument("--windows", type=int, default=6)
-    p.add_argument("--rates", type=F, nargs="+", default=[F(1), F(8), F(16), F(32)])
-    p.add_argument("--max-prompt", type=int, default=4096,
+    p.add_argument("--cohort", type=int, nargs="+", default=[109])
+    p.add_argument("--windows", type=int, default=3)
+    p.add_argument("--rates", type=F, nargs="+", default=[F(n) for n in (1, 8, 11, 12, 16, 32)])
+    p.add_argument("--max-prompt", type=int, default=3584,
                    help="exclude evaluated prompts above this length; use a limit supported by the cost grid")
-    p.add_argument("--path", choices=("all", "ssd"), default="all")
+    p.add_argument("--path", choices=("all", "ssd"), default="ssd")
     p.add_argument("--trace", nargs="+")
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--zero-only", action="store_true")
     p.add_argument("--no-snapshots", action="store_true", help="omit the fixed-state diagnostic")
-    p.add_argument("--policies", nargs="+", choices=("current","next4","depth","depth_io","route","route_tight",
-                                                    "rank_only","rank_near", *PRESSURE_POLICIES,
-                                                    *sorted(EXACT_SEARCH)),
-                   default=("current","next4","depth","depth_io","route","route_tight"))
-    p.add_argument("--grid", type=Path, default=ROOT / "docs/evidence/prefill-vulkan-8k.json",
-                   help="Continuation cost grid; default reproduces the archived experiment")
+    p.add_argument("--request-metrics", action="store_true", help="append paired request regression metrics")
+    p.add_argument("--all-checkpoints", action="store_true", help="include every history-matched 512-token boundary")
+    p.add_argument("--policies", nargs="+", choices=("next4", *PRESSURE_POLICIES,
+                                                    *sorted(EXACT_SEARCH | ADAPTIVE)),
+                   default=("next4", "entry", "mixed-reuse-estimate", "adaptive", "adaptive-screened"))
+    p.add_argument("--grid", type=Path, default=ROOT / "docs/evidence/prefill-vulkan-4k.json",
+                   help="Continuation cost grid; use the 8K table for larger prompts")
     p.add_argument("--io-profile", type=Path, default=ROOT / "docs/evidence/load-staged-ssd-profile.json",
                    help="Transfer cost profile; default reproduces the archived experiment")
     p.add_argument("--overlap-profile", type=Path, default=ROOT / "configs/overlap-observed-upper.json",
@@ -260,6 +277,8 @@ def main():
         p.error("Window count, rates, and max prompt must be positive; cohort must be nonnegative")
     if any(x in EXACT_SEARCH for x in args.policies) and args.policies[0] != "next4":
         p.error("Run next4 first when comparing optimized variants")
+    if any(policy.endswith("-audit") for policy in args.policies) and not args.zero_only:
+        p.error("Adaptive audit enumerates pruned candidates and requires --zero-only")
     fixture = read(ROOT / "fixtures/phase1-hand-trace.json")
     model = read(ROOT / "configs/qwen3.5-4b.json")["models"][0]
     grid = read(args.grid)
@@ -276,11 +295,14 @@ def main():
     if not traces:
         p.error("Unknown trace")
     keys = ("cohort", "trace", "window", "placement", "spacing", "budget", "io_scale", "path", "max_prompt")
+    optional = REQUEST_COLUMNS if args.request_metrics else ()
+    if args.request_metrics and any(policy in ADAPTIVE for policy in args.policies):
+        optional += ("adaptive_routes",)
     with args.out.open("w", encoding="utf-8", newline="") as out, args.out.with_suffix(".snapshots.csv").open(
             "w", encoding="utf-8", newline="") as observations:
         results = csv.DictWriter(out, (*keys, "policy", "requests", "replays", "forecast_events", "pruned", "current_calls",
             "queue_calls", "mean_gain_ms", "p95_gain_ms", "timed_gain_ms", "timed_p95_ms", "decision_cpu_ms",
-            "baseline_cpu_ms"), lineterminator="\n")
+            "baseline_cpu_ms", *optional), lineterminator="\n")
         snapshots = csv.DictWriter(observations, (*keys, "label", "decisions", "gains", "gains_gt5", "sum_gain",
             "relative", "ahead", "later", "slack_ms", "debt_ms", "routing_captures_gt5", "depth_captures_gt5"),
             lineterminator="\n")
@@ -295,7 +317,8 @@ def main():
                     if len(rows) != 352:
                         raise ValueError(f"Incomplete window {trace}/{window}")
                     for placement, spacing in product(("split", "ram", "ssd"), (F(1), F(1, 4))):
-                        data = build(rows, 256, fixture, model, spacing, placement, args.max_prompt)
+                        data = build(rows, 256, fixture, model, spacing, placement, args.max_prompt,
+                                     all_checkpoints=args.all_checkpoints)
                         for rate, budget in product(args.rates, (128, 384)):
                             cost = dict(fixture["cost"], recompute=grid)
                             for path, cfg in io.items():
@@ -307,7 +330,7 @@ def main():
                             key = dict(zip(keys, (cohort, trace, window, placement, float(spacing), budget, rate,
                                                   args.path, args.max_prompt), strict=True))
                             run_case(exp, key, results, None if args.no_snapshots else snapshots, args.zero_only,
-                                     args.policies, estimate=estimate)
+                                     args.policies, estimate=estimate, request_metrics=args.request_metrics)
                     out.flush()
                     observations.flush()
     write_metadata(args)
