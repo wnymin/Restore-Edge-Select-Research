@@ -21,6 +21,76 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def check_estimate_guards(fixture, model):
+    # A computes until 30 ms. B's shallow/deep candidates need about 67/85 MiB.
+    # At 70 MiB only the shallow candidate can prefetch: it finishes at 34.25 ms,
+    # while demand-loading the deep candidate finishes at 35 ms. At 128 MiB,
+    # the deep candidate can prefetch and finishes at 30 ms instead.
+    for cross_tier in (False, True):
+        trace = deepcopy(fixture)
+        trace["requests"] = trace["requests"][:2]
+        if cross_tier:
+            next(obj for obj in trace["objects"] if obj["id"] == "B.state1")["tier"] = "RAM"
+        for budget in (70, 128):
+            exp = Experiment(trace, model, budget)
+            baseline = exp.run("local-cost")
+            require(baseline["boundaries_tokens"] == [0, 1152]
+                    and baseline["completion_ms"] == [30, 35 if budget == 70 else 30],
+                    "Guard fixture must retain the deep static boundary and expected completion")
+            def classify(rows, base, later):
+                require(base == 1152 and rows[576]["prefetch_fits"]
+                        and rows[1152]["prefetch_fits"] == (budget == 128)
+                        and rows[576]["incremental_ram_ms"] + rows[576]["incremental_ssd_ms"] > 0,
+                        "Guard fixture must exercise a prefetched challenger with new transfer work")
+                return 4
+            opts = dict(screen_mode="classified", screen_selector=classify,
+                        score_candidate=lambda row: 0 if row["serial_compute_ms"] == exp.recompute(1, 576) else 1)
+            expected = {
+                "estimate": (576, 0),
+                "estimate-cross-tier": (1152 if cross_tier else 576, 0),
+                "estimate-cross-tier-guard": (1152 if cross_tier and budget == 128 else 576,
+                                               2 if cross_tier else 0),
+                "estimate-prefetch-fallback": (1152 if cross_tier or budget == 70 else 576, 0),
+            }
+            for mode, (boundary, replays) in expected.items():
+                run = exp.run("snapshot-screened", screen_search=mode, **opts)
+                completion = [30, Fraction(137, 4)] if boundary == 576 else baseline["completion_ms"]
+                require(run["boundaries_tokens"] == [0, boundary]
+                        and run["completion_ms"] == completion
+                        and run["decision_replays"] == replays,
+                        f"{mode}: incorrect guard decision or replay count ({cross_tier=}, {budget=})")
+
+
+    # Mean improvement alone is insufficient: letting B prefetch a shallow
+    # SSD boundary admits C early and helps C/D, but makes B 2.4 ms slower.
+    trace = deepcopy(fixture)
+    trace["requests"][0]["input_token_runs"][0]["count"] = 7200
+    trace["memory"]["execution_mib"] = 512
+    trace["cost"]["recompute"]["a_ms_per_token_rational"] = [1, 240]
+    trace["cost"]["recompute"]["b_ms_per_pair_rational"] = [0, 1]
+    for obj in trace["objects"]:
+        if obj["id"] in {"B.state2", "C.state2"}:
+            obj["tier"] = "RAM"
+    trace["requests"].append(dict(id="D", arrival_ms=1,
+        input_token_runs=[dict(token_id=40, count=1152)],
+        candidates=[dict(boundary_tokens=0, load_order=[])]))
+    exp = Experiment(trace, model, 160)
+    opts = dict(screen_mode="classified",
+                screen_selector=lambda rows, *_: 4 if rows[1152]["head_distance"] == 1 else None,
+                score_candidate=lambda row: 0 if row["serial_compute_ms"] == exp.recompute(1, 576) else 1)
+    baseline = exp.run("local-cost")
+    proposed = exp.run("snapshot-screened", screen_search="estimate", **opts)
+    guarded = exp.run("snapshot-screened", screen_search="estimate-cross-tier-guard", **opts)
+    require(proposed["boundaries_tokens"] == [0, 576, 1152, 0]
+            and proposed["response_sum_ms"] < baseline["response_sum_ms"]
+            and proposed["completion_ms"][1] - baseline["completion_ms"][1] == Fraction(12, 5),
+            "Tail guard fixture must improve the sum while slowing B by 2.4 ms")
+    require(guarded["boundaries_tokens"] == baseline["boundaries_tokens"]
+            and guarded["completion_ms"] == baseline["completion_ms"]
+            and guarded["decision_replays"] == 2,
+            "Cross-tier guard must reject individual regression even when the queue sum improves")
+
+
 def main():
     fixture = json.loads((ROOT / "fixtures/phase1-hand-trace.json").read_text())
     spec = json.loads((ROOT / "configs/qwen3.5-4b.json").read_text())
@@ -292,13 +362,7 @@ def main():
         expected = exp.run("local-cost")["boundaries_tokens"] if view is None else [0, 0, 0]
         require(estimated["boundaries_tokens"] == expected and estimated["decision_replays"] == 0,
                 "Estimate selection must respect the classifier and skip candidate replay")
-    for view in (None, 4):
-        estimated = exp.run("snapshot-screened", screen_mode="classified",
-                            screen_selector=lambda *_: view, screen_search="estimate",
-                            score_candidate=lambda row: -row["serial_compute_ms"])
-        expected = exp.run("local-cost")["boundaries_tokens"] if view is None else [0, 0, 0]
-        require(estimated["boundaries_tokens"] == expected and estimated["decision_replays"] == 0,
-                "Estimate selection must respect the classifier and skip candidate replay")
+    check_estimate_guards(fixture, model)
     for mode, delay, reserved, done in (("start", 0, 30, 35), ("timer", 1, 31, 36),
                                          ("finish", 0, None, Fraction(157, 4))):
         cfg = dict(fixture, scheduling=dict(fixture["scheduling"], prefetch_release=mode, prefetch_hold_ms=delay))

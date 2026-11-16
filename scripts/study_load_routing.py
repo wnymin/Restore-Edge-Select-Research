@@ -3,6 +3,7 @@
 import argparse
 from collections import Counter, defaultdict
 import csv
+from hashlib import sha256
 from fractions import Fraction as F
 from itertools import islice, product
 import json
@@ -201,6 +202,35 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None):
             baseline_cpu_ms=sum(ns for _, ns in wall_base["decision_profile_ns"]) / 1e6 if wall else ""))
 
 
+def write_metadata(args):
+    """Keep the exact input configurations and output hashes next to each run."""
+    def descriptor(path):
+        path = path.resolve()
+        try:
+            name = path.relative_to(ROOT).as_posix()
+        except ValueError:
+            name = str(path)
+        return dict(path=name, sha256=sha256(path.read_bytes()).hexdigest())
+
+    inputs = {}
+    for label, path in {
+        "fixture": ROOT / "fixtures/phase1-hand-trace.json",
+        "model": ROOT / "configs/qwen3.5-4b.json",
+        "trace_manifest": ROOT / "data/bailian-manifest.json",
+        "grid": args.grid, "io_profile": args.io_profile, "overlap_profile": args.overlap_profile,
+    }.items():
+        inputs[label] = dict(descriptor(path), content=read(path))
+    metadata = dict(
+        schema_version=1,
+        parameters=vars(args),
+        inputs=inputs,
+        outputs={"results": descriptor(args.out),
+                 "snapshots": descriptor(args.out.with_suffix(".snapshots.csv"))},
+    )
+    args.out.with_suffix(".metadata.json").write_text(
+        json.dumps(metadata, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--cohort", type=int, nargs="+", default=[18, 24])
@@ -280,6 +310,7 @@ def main():
                                      args.policies, estimate=estimate)
                     out.flush()
                     observations.flush()
+    write_metadata(args)
 
 
 if __name__ == "__main__":

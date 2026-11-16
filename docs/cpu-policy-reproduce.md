@@ -29,6 +29,10 @@ python scripts/study_tail_witness.py --trace qwen_coder_blksz_16.jsonl --window 
 python scripts/study_tail_witness.py --trace qwen_coder_blksz_16.jsonl --window 96 --placement ssd --spacing 1 --budget 128 --rate 32 --overlap-profile configs/overlap-disabled-control.json --ssd-estimate-factor 2 --intervene-policy reuse-cross-tier-guard
 ```
 
+每次 `study_load_routing.py` 成功运行后，会在 CSV 旁写入同名 `.metadata.json`，记录全部命令参数（包括 SSD 估计倍率）、输入配置内容和 SHA-256，以及结果与快照 CSV 的 SHA-256。保存或分享结果时请同时保留该文件；输出哈希可用于发现 CSV 被覆盖或运行中断后与旧元数据不匹配。CSV 列保持兼容既有汇总脚本。
+
+本 PR 已归档的九组汇总由[配置索引](evidence/cpu-policy-metadata.json)关联各自的成本表、并发降速配置和估计倍率，并校验配置与汇总文件的 SHA-256。该索引按本文已有命令补录，不代表原运行现场记录；原本机决策计时的硬件与软件环境未记录，不能据此精确复现计时列。补录元数据不改变策略或数值，已有实验无需重跑。
+
 各输出分别用 `python scripts/summarize_load_routing.py --cases 108 <csv>` 汇总。可使用 `--zero-only` 跳过不确定的本机决策计时。归档的硬件读数和成本配置说明见[实验口径](experiment-index.md)。
 
 | 数据 | 归档 |
