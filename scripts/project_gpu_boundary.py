@@ -25,8 +25,8 @@ def block_key(row):
     return tuple(int(row[k]) for k in ("total_tokens", "peer_total_tokens", "lag_ms", "rep"))
 
 
-def read_blocks(path):
-    """Read one or multiple concatenated experiments, each block contiguous."""
+def read_blocks(path, *, allow_completed_peer=False):
+    """Read contiguous paired blocks, normally requiring an active scheduled peer."""
     groups = defaultdict(list)
     with path.open(encoding="utf-8-sig", newline="") as stream:
         for (total, peer_total, lag, rep), block in groupby(csv.DictReader(stream), block_key):
@@ -48,7 +48,7 @@ def read_blocks(path):
                         raise ValueError(f"{path.name}: invalid {m} in block {rep}")
                 if key[0]:
                     lead = float(r["actual_peer_lead_ms"])
-                    if not 0 <= lead < float(r["peer_ms"]):
+                    if not isfinite(lead) or lead < 0 or (not allow_completed_peer and lead >= float(r["peer_ms"])):
                         raise ValueError(f"{path.name}: invalid active peer in block {rep}")
             if set(trials) != {(q, s) for q in (0, 1) for s in ("none", "resident", "fresh")}:
                 raise ValueError(f"{path.name}: expected six resident comparison arms in block {rep}")
