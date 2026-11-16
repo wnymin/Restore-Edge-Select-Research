@@ -16,6 +16,7 @@ python scripts/simulate.py --prefetch-mib 160 --policy local-cost remaining-wait
 | 模拟范围、状态与计费规则 | [模拟器运行、规则与手算验收](docs/phase1.md) |
 | 真实服务的归档读数与离线外推 | [驻留前缀与冷恢复](docs/gpu-boundary-restore.md) |
 | 负载规律、策略与反例 | [CPU 研究](docs/boundary-findings.md) |
+| 共享估计策略、跨层保护与成本误差 | [CPU 协作研究](docs/cpu-policy.md) |
 | 成本依据、保留数据和复现命令 | [实验口径与复现](docs/experiment-index.md) |
 
 [研究分工](docs/work-plan.md) · [协作约定](CONTRIBUTING.md)

@@ -6,6 +6,8 @@
 
 模拟与实现：[负载分类、策略切换和队列剪枝](boundary-findings.md)。
 
+共享对象估计、跨层保护及成本误差：[成果与适用范围](cpu-policy.md) · [运行命令与精简证据](cpu-policy-reproduce.md)。
+
 - [百炼轨迹及版本校验](../data/README.md)：到达时间、输入长度和前缀哈希来自原始轨迹；放置、检查点和预算由实验构造。主要比较留出窗口 18–23、24–29；16 倍和 32 倍 I/O 为人为压力点。模拟到达至预填充完成时间不等于实测 TTFT。
 - [4K](evidence/prefill-vulkan-4k.json) 和 [8K](evidence/prefill-vulkan-8k.json) 续算网格来自 RTX 4060 Laptop、完整 Qwen3.5-4B Q4_K_M、llama.cpp b10923 Vulkan。按已恢复前缀和续算后缀做中位数二维插值，网格外不外推。
 - [分段搬运配置](evidence/load-io-profile.json)、[SSD 暂存配置](evidence/load-staged-ssd-profile.json)、[SSD 实测](evidence/load-staged-ssd.csv)、[双路径并发](evidence/boundary-physical-channels.csv)及[与 prefill 并发](evidence/boundary-joint-contention.csv)提供输入；[8K 拓扑对照](evidence/boundary-lane-objective-24.csv)检验本机结论；[无搬运降速的两槽对照](evidence/boundary-batch-recovery-no-io.csv)用于隔离排序翻转机制。[双槽服务配对](evidence/boundary-batched-prefill-warm.csv)用于估算两槽进度；它不能用于高精度预测。

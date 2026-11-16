@@ -15,6 +15,55 @@ from study_boundary_factors import predict
 
 CLASSES = ("idle", "light_io", "capacity", "transfer_queue", "reuse", "overlap", "uncoupled")
 EXACT_SEARCH = {"lean", "compute", "cutoff", "entry"}
+MIXED_PROJECTED = "mixed-projected-entry"
+MIXED_ESTIMATE = "mixed-estimate"
+MIXED_REUSE_ESTIMATE = "mixed-reuse-estimate"
+REUSE_CROSS_TIER_FALLBACK = "reuse-cross-tier-fallback"
+REUSE_CROSS_TIER_GUARD = "reuse-cross-tier-guard"
+REUSE_PREFETCH_FALLBACK = "reuse-prefetch-fallback"
+
+ESTIMATE_POLICIES = {
+    MIXED_ESTIMATE: "estimate",
+    MIXED_REUSE_ESTIMATE: "estimate",
+    REUSE_CROSS_TIER_FALLBACK: "estimate-cross-tier",
+    REUSE_CROSS_TIER_GUARD: "estimate-cross-tier-guard",
+    REUSE_PREFETCH_FALLBACK: "estimate-prefetch-fallback",
+}
+PRESSURE_POLICIES = {
+    MIXED_PROJECTED: False,
+    MIXED_ESTIMATE: False,
+    MIXED_REUSE_ESTIMATE: True,
+    REUSE_CROSS_TIER_FALLBACK: True,
+    REUSE_CROSS_TIER_GUARD: True,
+    REUSE_PREFETCH_FALLBACK: True,
+}
+
+
+def pressure_view(rows, base, *, allow_ready_reuse):
+    """Use incremental transfer work, reuse, and the current queue state."""
+    candidates = [row for boundary, row in rows.items() if boundary]
+    if not rows[base]["head_distance"] or not candidates:
+        return None
+    tiers = {row["checkpoint_tier"] for row in candidates}
+    if not tiers <= {"RAM", "SSD"}:
+        return None
+    fallback_score = predict("fifo_snapshot", rows[base])
+    if allow_ready_reuse and any(
+        row["prefetch_fits"] and row["incremental_ram_ms"] == row["incremental_ssd_ms"] == 0
+        and (row["ready_bytes"] or row["shared_reservation_bytes"] or row["active_new_kv_bytes"])
+        and predict("fifo_snapshot", row) < fallback_score for row in candidates
+    ):
+        return 4
+    recompute = rows[0]["serial_compute_ms"]
+    for row in candidates:
+        path = "incremental_ssd_ms" if row["checkpoint_tier"] == "SSD" else "incremental_ram_ms"
+        transfer = row[path]
+        if not row["prefetch_fits"] or transfer <= 0 or transfer < recompute - row["serial_compute_ms"]:
+            continue
+        if len(tiers) > 1 and predict("fifo_snapshot", row) >= fallback_score:
+            continue
+        return 4
+    return None
 
 
 def signals(rows, base, later, budget):
@@ -47,12 +96,12 @@ def signals(rows, base, later, budget):
     return label, relative, ahead, work, debt
 
 
-def run_case(exp, key, results, snapshots, zero_only, policies):
+def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None):
     scorer = lambda row: predict("fifo_snapshot", row)
-    opts = dict(score_candidate=scorer, screen_mode="unsettled")
-    klass = dict(score_candidate=scorer, screen_mode="classified")
-    fixture = exp.run("local-cost")
-    wall_base = exp.run("local-cost", inject_measured=True) if not zero_only else None
+    opts = dict(score_candidate=scorer, screen_mode="unsettled", estimate=estimate)
+    klass = dict(score_candidate=scorer, screen_mode="classified", estimate=estimate)
+    fixture = exp.run("local-cost", estimate=estimate)
+    wall_base = exp.run("local-cost", estimate=estimate, inject_measured=True) if not zero_only else None
     diag = defaultdict(Counter)
 
     def observe(rows, base, later, gain):
@@ -85,7 +134,9 @@ def run_case(exp, key, results, snapshots, zero_only, policies):
 
     def selector(mode, calls):
         def route(rows, base, later):
-            if mode == "depth":
+            if mode in PRESSURE_POLICIES:
+                view = pressure_view(rows, base, allow_ready_reuse=PRESSURE_POLICIES[mode])
+            elif mode == "depth":
                 view = 4 if rows[base]["head_distance"] else None
             else:
                 label, ratio, ahead, _, _ = signals(rows, base, later, exp.budget)
@@ -124,9 +175,13 @@ def run_case(exp, key, results, snapshots, zero_only, policies):
             zero = timed = opts | ({"queue_horizon": 4} if policy != "current" else {})
             if policy in EXACT_SEARCH:
                 zero = timed = zero | {"screen_search": policy}
+
         else:
             zero = klass | {"screen_selector": selector(policy, calls)}
             timed = klass | {"screen_selector": selector(policy, None)}
+            if policy in PRESSURE_POLICIES:
+                for options in (zero, timed):
+                    options["screen_search"] = ESTIMATE_POLICIES.get(policy, "entry")
         run = exp.run("snapshot-screened", **zero)
         if policy == "next4":
             reference = run
@@ -151,29 +206,41 @@ def main():
     p.add_argument("--cohort", type=int, nargs="+", default=[18, 24])
     p.add_argument("--windows", type=int, default=6)
     p.add_argument("--rates", type=F, nargs="+", default=[F(1), F(8), F(16), F(32)])
-    p.add_argument("--max-prompt", type=int, choices=(4096, 8192), default=4096)
+    p.add_argument("--max-prompt", type=int, default=4096,
+                   help="exclude evaluated prompts above this length; use a limit supported by the cost grid")
     p.add_argument("--path", choices=("all", "ssd"), default="all")
     p.add_argument("--trace", nargs="+")
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--zero-only", action="store_true")
     p.add_argument("--no-snapshots", action="store_true", help="omit the fixed-state diagnostic")
     p.add_argument("--policies", nargs="+", choices=("current","next4","depth","depth_io","route","route_tight",
-                                                    "rank_only","rank_near", *sorted(EXACT_SEARCH)),
+                                                    "rank_only","rank_near", *PRESSURE_POLICIES,
+                                                    *sorted(EXACT_SEARCH)),
                    default=("current","next4","depth","depth_io","route","route_tight"))
     p.add_argument("--grid", type=Path, default=ROOT / "docs/evidence/prefill-vulkan-8k.json",
                    help="Continuation cost grid; default reproduces the archived experiment")
     p.add_argument("--io-profile", type=Path, default=ROOT / "docs/evidence/load-staged-ssd-profile.json",
                    help="Transfer cost profile; default reproduces the archived experiment")
+    p.add_argument("--overlap-profile", type=Path, default=ROOT / "configs/overlap-observed-upper.json",
+                   help="Compute and transfer slowdown factors during overlap")
+    p.add_argument("--ssd-estimate-factor", type=F, default=F(1),
+                   help="multiply the SSD duration seen by every policy; requires a profile without slowdown")
     args = p.parse_args()
-    if args.windows < 1 or min(args.cohort) < 0 or min(args.rates) <= 0:
-        p.error("Invalid window or cost configuration")
+    if args.windows < 1 or min(args.cohort) < 0 or min(args.rates) <= 0 or args.max_prompt < 1:
+        p.error("Window count, rates, and max prompt must be positive; cohort must be nonnegative")
     if any(x in EXACT_SEARCH for x in args.policies) and args.policies[0] != "next4":
         p.error("Run next4 first when comparing optimized variants")
     fixture = read(ROOT / "fixtures/phase1-hand-trace.json")
     model = read(ROOT / "configs/qwen3.5-4b.json")["models"][0]
     grid = read(args.grid)
     io = read(args.io_profile)["cost"]
-    overlap = read(ROOT / "configs/overlap-observed-upper.json")
+    overlap = read(args.overlap_profile)
+    if args.ssd_estimate_factor <= 0:
+        p.error("SSD estimate factor must be positive")
+    if overlap and args.ssd_estimate_factor != 1:
+        p.error("SSD estimate errors require an empty overlap slowdown profile")
+    estimate = ({"ssd_to_device": args.ssd_estimate_factor}
+                if args.ssd_estimate_factor != 1 else None)
     traces = [r["name"] for r in read(ROOT / "data/bailian-manifest.json")["files"]
               if not args.trace or r["name"] in args.trace]
     if not traces:
@@ -210,7 +277,7 @@ def main():
                             key = dict(zip(keys, (cohort, trace, window, placement, float(spacing), budget, rate,
                                                   args.path, args.max_prompt), strict=True))
                             run_case(exp, key, results, None if args.no_snapshots else snapshots, args.zero_only,
-                                     args.policies)
+                                     args.policies, estimate=estimate)
                     out.flush()
                     observations.flush()
 
