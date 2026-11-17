@@ -387,6 +387,26 @@ def main():
         expected = exp.run("local-cost")["boundaries_tokens"] if view is None else [0, 0, 0]
         require(estimated["boundaries_tokens"] == expected and estimated["decision_replays"] == 0,
                 "Estimate selection must respect the classifier and skip candidate replay")
+    opts = dict(score_candidate=lambda r: -r["serial_compute_ms"], screen_mode="unsettled", queue_horizon=4)
+    isolated = Experiment(dict(fixture, requests=[fixture["requests"][1]]), model, 128)
+    old = isolated.run("snapshot-screened", **opts, screen_search="entry")
+    for mode in ("entry-fast", "entry-progress"):
+        new = isolated.run("snapshot-screened", **opts, screen_search=mode)
+        require(old["decision_replays"] > 0 and new["decision_replays"] == 0
+                and old["boundaries_tokens"] == new["boundaries_tokens"]
+                and old["completion_ms"] == new["completion_ms"],
+                f"{mode} must price an isolated request without a forecast")
+    for cfg, estimate in (
+        (coupled, None),
+        (dict(fixture, staged_checkpoint_cache_mib=64), None),
+        (dict(fixture, io_speed_epochs=[(0, 1), (2, "1/2")]), None),
+        (fixture, {"ssd_to_device": 2}),
+    ):
+        special = Experiment(cfg, model, 128)
+        old = special.run("snapshot-screened", **opts, estimate=estimate, screen_search="entry")
+        for mode in ("entry-fast", "entry-progress"):
+            require(special.run("snapshot-screened", **opts, estimate=estimate, screen_search=mode) == old,
+                    f"{mode} must fall back when its stationary-cost assumptions do not hold")
     check_estimate_guards(fixture, model)
     for mode, delay, reserved, done in (("start", 0, 30, 35), ("timer", 1, 31, 36),
                                          ("finish", 0, None, Fraction(157, 4))):

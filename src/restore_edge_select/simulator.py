@@ -200,6 +200,9 @@ class Experiment:
         if self.dynamic and (trace.get("actual_transfer_ms_by_object") or
                              any(len(t) != 1 for t, _ in self.io_epochs.values())):
             raise ValueError("Overlap model currently requires stationary known I/O")
+        self._stationary_costs = (not self.per_tier and not self.host_cache_bytes
+                                  and self._actual_transfer_times == self._transfer_times
+                                  and all(speeds == (1,) for _, speeds in self.io_epochs.values()))
 
     def size(self, ids):
         return sum(self.objects[obj]["bytes"] + self.alignment for obj in ids)
@@ -238,10 +241,16 @@ class Experiment:
                     or future_cost_cases or screen_search != "full" or queue_horizon is not None
                     or (adaptive.audit and (profile_decisions or inject_measured))):
                 raise ValueError("Adaptive routing requires the single-lane model and its own search configuration")
+            if adaptive.compact and (estimate or not self._stationary_costs):
+                raise ValueError("Compact adaptive routing requires stationary known costs")
         elif adaptive is not None:
             raise ValueError("Adaptive configuration requires the adaptive policy")
         estimate_modes = {"estimate", "estimate-cross-tier", "estimate-cross-tier-guard",
                           "estimate-prefetch-fallback"}
+        fast_entry = screen_search in {"entry-fast", "entry-progress"}
+        progress_bound = screen_search == "entry-progress"
+        if fast_entry:
+            screen_search = "entry"
         if screen_search not in {"full", "lean", "compute", "cutoff", "entry"} | estimate_modes or (
                 screen_search != "full" and policy != "snapshot-screened"):
             raise ValueError("Search variants require a screened queue policy")
@@ -314,6 +323,8 @@ class Experiment:
                 v <= 0 for v in estimate.values()) or min(number(guard_ms), transfer_trigger, screen, pair_cost,
                                                           probe_cost, lag, stable) < 0:
             raise ValueError("Invalid duration multiplier or negative threshold")
+        fast_entry = (fast_entry and self._stationary_costs and not estimate and not future_cost_cases
+                      and screen_mode == "unsettled" and queue_horizon is not None)
         return self._run(policy, threshold_tokens, boundaries, max_combinations, len(self.requests),
                          estimate=estimate, guard=number(guard_ms), transfer_trigger=transfer_trigger,
                          screen=screen, pair_cost=pair_cost, probe_cost=probe_cost, lag=lag, stable=stable,
@@ -322,7 +333,8 @@ class Experiment:
                          intervention_budget=intervention_budget, decision_overrides=overrides,
                          screen_mode=screen_mode, min_gain=min_gain, future_cost_cases=future_cost_cases,
                          queue_horizon=queue_horizon, screen_selector=screen_selector,
-                         screen_observer=screen_observer, screen_search=screen_search, adaptive=adaptive)
+                         screen_observer=screen_observer, screen_search=screen_search, adaptive=adaptive,
+                         cached_costs=fast_entry, progress_bound=fast_entry and progress_bound)
 
     def _run(self, policy, threshold_tokens, boundaries, max_combinations, n, *,
              snapshot=None, estimate=None, guard=0, transfer_trigger=0, screen=0, pair_cost=0, probe_cost=0,
@@ -331,7 +343,8 @@ class Experiment:
              prefetch_budget=None, active_kv_handoff=True, decision_overrides=None,
              screen_mode=None, min_gain=0, future_cost_cases=None, future_cost=None, queue_horizon=None,
              screen_selector=None, screen_observer=None, screen_search="full",
-             completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None):
+             completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None,
+             cached_costs=False, progress_bound=False):
         prefetch_budget = self.budget if prefetch_budget is None else prefetch_budget
         decision_overrides = decision_overrides or {}
         if policy not in {"recompute", "longest", "threshold", "local-cost", "fixed", "capacity",
@@ -401,6 +414,8 @@ class Experiment:
                          else self.lane_slowdown)
         estimate = estimate or {}
         execution_factors = estimate if snapshot is not None else {}
+        compact = adaptive is not None and adaptive.compact
+        direct_costs = cached_costs or compact
         def observed_epoch(path, t):
             return bisect_right(self.io_epochs[path][0], max(0, t - lag)) - 1
 
@@ -413,6 +428,8 @@ class Experiment:
             return {"RAM": "ram_to_device", "SSD": "ssd_to_device"}[self.objects[obj]["tier"]]
 
         def duration(obj, factors, at=None):
+            if direct_costs:
+                return self._transfer_times[obj]
             t = now if at is None else at
             path = path_for(obj)
             speed = forecast_speed[path] if forecasting else observed_speed(path, t)
@@ -496,6 +513,12 @@ class Experiment:
                     if adaptive is not None:
                         record_route('single-choice')
                     return choices[0]
+                if (cached_costs and i == head and arrived == i + 1 and not held_reservation
+                        and running_until is None and transfer is None and not admitted
+                        and ready == self.initial):
+                    # Without a peer or a pending transfer, isolated service
+                    # cost is the exact window objective up to a constant.
+                    return serial_choice(i)
                 isolated_adaptive = adaptive is not None and arrived == i + 1 and not held_reservation
                 if ((isolated_adaptive or policy == "remaining-wait-fast" and not guard) and i == head
                         and running_until is None and transfer is None and not admitted
@@ -603,6 +626,8 @@ class Experiment:
                     debt = sum(duration(obj, estimate) for obj in queued)
                     charged = reserved | held_reservation
                     free = self.budget - self.size(charged)
+                    age = now - self.arrivals[i]
+                    inflight = flight_end - now
                     queued_compute = sum(
                         self._suffix_times[j][selected[j]] * estimate.get("compute", 1)
                         for j in range(head + int(predicted_run is not None), i)
@@ -629,7 +654,7 @@ class Experiment:
                                             if c and c < self.lengths[i] and self.candidates[i][c][-1] in self.initial else 0),
                             serial_io_ms=(max(serial_by_path.values()) if self.per_tier
                                           else sum(serial_by_path.values())),
-                            head_distance=i - head, arrival_age_ms=now - self.arrivals[i],
+                            head_distance=i - head, arrival_age_ms=age,
                             head_slack_ms=slack, prefetch_fits=fits,
                             committed_ahead_compute_ms=queued_compute,
                             extra_reserve_bytes=extra, free_reserve_bytes=free,
@@ -641,7 +666,7 @@ class Experiment:
                             missing_bytes=self.size(missing),
                             incremental_ram_ms=by_path["ram_to_device"],
                             incremental_ssd_ms=by_path["ssd_to_device"],
-                            inflight_ms=flight_end - now, queue_debt_ms=debt,
+                            inflight_ms=inflight, queue_debt_ms=debt,
                             checkpoint_tier=("RAM" if self.candidates[i][c][-1] in host_cache else
                                              self.objects[self.candidates[i][c][-1]]["tier"]) if c else "",
                         )
@@ -721,7 +746,8 @@ class Experiment:
                                     snapshot=state, estimate=estimate, forecast_speed=speeds,
                                     prefetch_budget=budget, active_kv_handoff=handoff, future_cost=cost,
                                     completion_cutoff=cutoff,
-                                    lean_rollout=screen_search != "full" or adaptive is not None)
+                                    lean_rollout=screen_search != "full" or adaptive is not None,
+                                    cached_costs=cached_costs)
                     decision_replays += 1
                     decision_events += run["events_processed"]
                     if run.get("pruned"):
@@ -734,6 +760,19 @@ class Experiment:
                     return run["completion_ms"]
 
                 if adaptive is not None:
+                    route_label = None
+                    if adaptive.route is not None:
+                        if i not in serial_choices:
+                            serial_choices[i] = serial_choice(i)
+                        base = serial_choices[i]
+                        # Other rows share the same number of arrived followers.
+                        observable[base]["visible_after"] = min(adaptive.later, arrived - i - 1)
+                        route_label, chosen = adaptive.route(observable, base, self.budget)
+                        if chosen is not None:
+                            if chosen not in observable:
+                                raise ValueError("Adaptive route selected an ineligible boundary")
+                            record_route(route_label, gap=None, changed=chosen != base)
+                            return chosen
                     visible = min(arrived, i + 1 + adaptive.later)
                     for j in range(i, visible):
                         if j not in serial_choices:
@@ -750,9 +789,18 @@ class Experiment:
                     for left in work:
                         time += left
                         offsets.append(time)
-                    lower = {c: tuple(end + (self._suffix_times[i][c] - self._suffix_times[i][base]) * factor
-                                      if j >= i else end for j, end in enumerate(offsets, head))
-                             for c in choices}
+                    lower = lower_sums = None
+                    suffix_baseline = self._suffix_times[i][base]
+                    if compact:
+                        # Changing this boundary shifts the compute-only lower
+                        # bound of the target and every request after it.
+                        baseline_floor = sum(offsets)
+                        lower_sums = {c: baseline_floor + (visible - i) * (self._suffix_times[i][c] - suffix_baseline)
+                                      for c in choices}
+                    else:
+                        lower = {c: tuple(end + (self._suffix_times[i][c] - suffix_baseline) * factor
+                                          if j >= i else end for j, end in enumerate(offsets, head))
+                                 for c in choices}
                     rank = {}
                     for c, row in observable.items():
                         io = row['incremental_ram_ms'] + row['incremental_ssd_ms']
@@ -765,8 +813,9 @@ class Experiment:
                     before = decision_replays
                     boundary, label, gap, gain, missed = adaptive_select(
                         observable, base, self.budget, adaptive, lower,
-                        lambda c: forecast((c, *later), visible), rank)
-                    record_route(label, gap, gain, boundary != base, decision_replays - before, missed)
+                        lambda c: forecast((c, *later), visible), rank, lower_sums=lower_sums)
+                    record_route(route_label or label, gap, gain, boundary != base,
+                                 decision_replays - before, missed)
                     return boundary
 
                 if pair:
@@ -841,7 +890,7 @@ class Experiment:
                                 if (lower, -c) >= (scores[best], -best):
                                     pruned_rollouts += 1
                                     continue
-                                cutoff = None
+                                cutoff = (scores[best], c < best, floor, i, delta, True) if progress_bound else None
                             else:
                                 cutoff = (scores[best], c < best, floor, i, delta,
                                           screen_search == "cutoff")
@@ -966,6 +1015,8 @@ class Experiment:
                 copy = 0
                 if 0 < c < self.lengths[i] and checkpoint in self.initial:
                     copy = self.path_time("device_copy", self.objects[checkpoint]["bytes"])
+                if direct_costs:
+                    return self._suffix_times[i][c] + copy + sum(self._transfer_times[obj] for obj in missing), -c
                 total = self.recompute(i, c) + copy + sum(map(self.transfer_time, missing))
                 if self.host_cache_bytes:
                     total = self.recompute(i, c) + copy + sum(duration(obj, {}) for obj in missing)
