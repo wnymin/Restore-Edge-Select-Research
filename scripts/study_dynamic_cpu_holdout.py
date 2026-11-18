@@ -3,6 +3,7 @@
 import argparse
 import csv
 from fractions import Fraction as F
+from hashlib import sha256 as hash_bytes
 from itertools import product
 import json
 from pathlib import Path
@@ -64,8 +65,12 @@ def write_csv(path, rows):
 
 
 def descriptors():
-    return {path.relative_to(ROOT).as_posix(): sha256(path)
-            for path in (ARCHIVE, FIXTURE, GRID, IO, MANIFEST, MODEL, OVERLAP)}
+    hashes = {path.relative_to(ROOT).as_posix(): sha256(path)
+              for path in (FIXTURE, GRID, IO, MANIFEST, MODEL, OVERLAP)}
+    # An existing Windows checkout can retain CRLF from before the Git rule changed.
+    archive_bytes = ARCHIVE.read_bytes().replace(b"\r\n", b"\n")
+    hashes[ARCHIVE.relative_to(ROOT).as_posix()] = hash_bytes(archive_bytes).hexdigest()
+    return hashes
 
 
 def calibrate(directory, target):

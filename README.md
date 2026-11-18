@@ -16,6 +16,7 @@ python scripts/simulate.py --prefetch-mib 160 --policy local-cost adaptive offli
 | 模拟范围、状态与计费规则 | [模拟器运行、规则与手算验收](docs/phase1.md) |
 | 真实服务的归档读数与离线外推 | [驻留前缀与冷恢复](docs/gpu-boundary-restore.md) |
 | 策略、计时、离线最优表及跨硬件接近率 | [选点对照](docs/trace-oracle.md) |
+| CPU 协作者最新结果、限制与一键验收 | [最新成果入口](docs/dynamic-cpu-latest.md) |
 | 成本依据、保留数据和复现命令 | [实验口径与复现](docs/experiment-index.md) |
 
 [研究分工](docs/work-plan.md) · [协作约定](CONTRIBUTING.md)

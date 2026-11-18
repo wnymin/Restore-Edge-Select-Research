@@ -4,6 +4,8 @@ B 组在单计算槽、单传输队列、固定缓存放置的 CPU 模拟中检�
 
 后续的[选点开销迭代](dynamic-cpu-compact.md)沿用这轮的门槛，在另一批窗口验证实现开销和选点等价性。
 
+后续研究还包括[搬运下界及其代价](dynamic-cpu-transfer-bound.md)、[离线双资源下界](dynamic-cpu-oracle-resources.md)、[相同状态分支合并](dynamic-cpu-oracle-dominance.md)和[未来到达不可见时的差距下界](dynamic-cpu-unseen-arrival.md)。
+
 ## B1 · 固定历史，只改一次边界
 
 每条轨迹先按 `local-cost` 跑一遍。在请求首次选点时记录两条分支共有的快照，再从相同输入开始复现历史，只替换目标请求的边界。目标之后继续执行 `local-cost`，并逐项核对其他请求的边界都相同。差分报告目标、更早和更晚请求的完成时间。正数表示改选后更快。请求无随机生成，输入、窗口编号、系数和预算都保存在表中。
@@ -71,3 +73,5 @@ python scripts/study_dynamic_cpu_holdout.py --frozen outputs/dynamic-cpu-frozen.
 ~~~
 
 从归档冻结文件重跑时，把最后一条的 `--frozen` 改为 `docs/evidence/dynamic-cpu-frozen.json`。输入沿用 [Vulkan 4K 续算表](evidence/prefill-vulkan-4k.json)、[搬运成本](evidence/load-staged-ssd-profile.json)和[并发降速](../configs/overlap-observed-upper.json)。每个轨迹窗口取前 256 条建立缓存，后 96 条中保留不超过 3,584 token 的请求。没有随机采样。CPU 策略和取样基于第三阶段提交 `c3def50`。
+
+仓库中的 CSV、JSON 和 Python 文件统一检出为 LF 换行，以保持冻结文件中的字节哈希在 Windows 和其他系统上一致。若旧检出曾将 CSV 转为 CRLF，可在确认该文件没有本地修改后重新检出 `docs/evidence/adaptive-trace-oracle.csv`。输入校验仍比较原始字节，公开轨迹也继续按上游清单严格核对大小和 SHA-256。

@@ -50,7 +50,7 @@ class Experiment:
         self.objects = {obj["id"]: obj for obj in trace["objects"]}
         if len(self.objects) != len(trace["objects"]):
             raise ValueError("Duplicate object ID")
-        self.requests = sorted(trace["requests"], key=lambda r: r["arrival_ms"])
+        self.requests = sorted(trace["requests"], key=lambda r: number(r["arrival_ms"]))
         self.lengths = [sum(run["count"] for run in r["input_token_runs"]) for r in self.requests]
         self.arrivals = [number(r["arrival_ms"]) for r in self.requests]
         self.candidates = [
@@ -247,7 +247,13 @@ class Experiment:
             raise ValueError("Adaptive configuration requires the adaptive policy")
         estimate_modes = {"estimate", "estimate-cross-tier", "estimate-cross-tier-guard",
                           "estimate-prefetch-fallback"}
-        fast_entry = screen_search in {"entry-fast", "entry-progress"}
+        transfer_bound = screen_search in {"entry-transfer", "entry-transfer-audit"}
+        bound_audit = screen_search == "entry-transfer-audit"
+        committed_choices = screen_search in {"entry-commit", "entry-replay"}
+        scalar_replay = screen_search == "entry-replay"
+        if bound_audit and (inject_measured or profile_decisions):
+            raise ValueError("Transfer-bound audit requires zero-overhead replay")
+        fast_entry = screen_search in {"entry-fast", "entry-progress"} or transfer_bound or committed_choices
         progress_bound = screen_search == "entry-progress"
         if fast_entry:
             screen_search = "entry"
@@ -334,7 +340,9 @@ class Experiment:
                          screen_mode=screen_mode, min_gain=min_gain, future_cost_cases=future_cost_cases,
                          queue_horizon=queue_horizon, screen_selector=screen_selector,
                          screen_observer=screen_observer, screen_search=screen_search, adaptive=adaptive,
-                         cached_costs=fast_entry, progress_bound=fast_entry and progress_bound)
+                         cached_costs=fast_entry, progress_bound=fast_entry and progress_bound,
+                         transfer_bound=fast_entry and transfer_bound, bound_audit=fast_entry and bound_audit,
+                         committed_choices=fast_entry and committed_choices, scalar_replay=fast_entry and scalar_replay)
 
     def _run(self, policy, threshold_tokens, boundaries, max_combinations, n, *,
              snapshot=None, estimate=None, guard=0, transfer_trigger=0, screen=0, pair_cost=0, probe_cost=0,
@@ -344,7 +352,8 @@ class Experiment:
              screen_mode=None, min_gain=0, future_cost_cases=None, future_cost=None, queue_horizon=None,
              screen_selector=None, screen_observer=None, screen_search="full",
              completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None,
-             cached_costs=False, progress_bound=False):
+             cached_costs=False, progress_bound=False, transfer_bound=False, bound_audit=False,
+             collect_offline_state=False, committed_choices=False, scalar_replay=False):
         prefetch_budget = self.budget if prefetch_budget is None else prefetch_budget
         decision_overrides = decision_overrides or {}
         if policy not in {"recompute", "longest", "threshold", "local-cost", "fixed", "capacity",
@@ -379,6 +388,7 @@ class Experiment:
         forecasting = snapshot is not None
         lookahead_replays = 0
         decision_replays = 0
+        bound_checks = bound_prunes = bound_audits = 0
         decision_events = events_processed = pair_decisions = pair_opportunities = 0
         probes = scenario_checks = robust_accepts = pruned_rollouts = 0
         pending = None
@@ -414,6 +424,9 @@ class Experiment:
                          else self.lane_slowdown)
         estimate = estimate or {}
         execution_factors = estimate if snapshot is not None else {}
+        direct_fixed = (committed_choices and forecasting and policy == "fixed" and offline_probe is None
+                        and not (profile_decisions or inject_measured or screen or pair_cost or probe_cost))
+        simple_scalars = scalar_replay and direct_fixed and not execution_factors
         compact = adaptive is not None and adaptive.compact
         direct_costs = cached_costs or compact
         def observed_epoch(path, t):
@@ -493,6 +506,7 @@ class Experiment:
         def choose(i):
             nonlocal lookahead_replays, decision_replays, decision_events, pair_decisions, pair_opportunities, probes
             nonlocal scenario_checks, robust_accepts, pruned_rollouts
+            nonlocal bound_checks, bound_prunes, bound_audits
             choices = self.eligible[i]
             if i in decision_overrides:
                 return decision_overrides[i]
@@ -747,7 +761,8 @@ class Experiment:
                                     prefetch_budget=budget, active_kv_handoff=handoff, future_cost=cost,
                                     completion_cutoff=cutoff,
                                     lean_rollout=screen_search != "full" or adaptive is not None,
-                                    cached_costs=cached_costs)
+                                    cached_costs=cached_costs, committed_choices=committed_choices,
+                                    scalar_replay=scalar_replay)
                     decision_replays += 1
                     decision_events += run["events_processed"]
                     if run.get("pruned"):
@@ -882,6 +897,39 @@ class Experiment:
                                 initial_floor += jobs * ((predicted_run - now) / compute_factor - work)
                         scores = {fallback: objective(fallback)}
                         best = fallback
+                        if transfer_bound:
+                            data_floors = None
+
+                            def transfer_floor(c):
+                                nonlocal data_floors
+                                if data_floors is None:
+                                    # Optimistically keep ready/active KV forever,
+                                    # ignore capacity and queued unrelated work.
+                                    data_floors = {}
+                                    free_objects = ready | (
+                                        set(active_deps[:-1]) if predicted_run is not None else set())
+                                    flight_object = predicted_transfer[1] if predicted_transfer else None
+                                    flight_work = ((predicted_transfer[0] - now) / transfer_factor
+                                                   if predicted_transfer is not None else 0)
+                                    for j in range(head + int(predicted_run is not None), visible):
+                                        domain = choices if j == i else (tail[j - head],)
+                                        for candidate in domain:
+                                            missing = set(self.candidates[j][candidate]) - free_objects
+                                            data_floors[j, candidate] = now + (
+                                                flight_work + sum(self._transfer_times[obj] for obj in missing
+                                                                  if obj != flight_object) if missing else 0)
+                                end, total = now, 0
+                                start = head
+                                if predicted_run is not None:
+                                    end += (predicted_run - now) / compute_factor
+                                    total += end
+                                    start += 1
+                                for j in range(start, visible):
+                                    boundary = c if j == i else tail[j - head]
+                                    end = max(end, data_floors[j, boundary]) + self._suffix_times[j][boundary]
+                                    total += end
+                                return total
+
                         for c in order:
                             delta = (visible - i) * factor * (
                                 self._suffix_times[i][c] - self._suffix_times[i][fallback])
@@ -890,6 +938,22 @@ class Experiment:
                                 if (lower, -c) >= (scores[best], -best):
                                     pruned_rollouts += 1
                                     continue
+                                if transfer_bound:
+                                    bound_checks += 1
+                                    lower = max(lower, transfer_floor(c))
+                                    audited = objective(c) if bound_audit else None
+                                    if bound_audit:
+                                        bound_audits += 1
+                                        assert lower <= audited, (i, c, lower, audited)
+                                    if (lower, -c) >= (scores[best], -best):
+                                        bound_prunes += 1
+                                        pruned_rollouts += 1
+                                        continue
+                                    if bound_audit:
+                                        scores[c] = audited
+                                        if (audited, -c) < (scores[best], -best):
+                                            best = c
+                                        continue
                                 cutoff = (scores[best], c < best, floor, i, delta, True) if progress_bound else None
                             else:
                                 cutoff = (scores[best], c < best, floor, i, delta,
@@ -1044,8 +1108,22 @@ class Experiment:
                 if len(self.eligible[i]) == 1:
                     selected[i] = self.eligible[i][0]
                     return
+                state = {}
+                if collect_offline_state:
+                    state["state"] = (
+                        arrived, tuple(selected[head:i]),
+                        frozenset((request, frozenset(objects)) for request, objects in admitted.items()),
+                        frozenset(ready), frozenset(held_reservation), release_time,
+                        copy_until if running_until is not None and now < copy_until else None,
+                    )
                 raise OfflineBranch(offline_probe(i, now, head, completions, ready, running_until,
-                                                  compute_factor, transfer, transfer_factor, active_deps))
+                                                  compute_factor, transfer, transfer_factor, active_deps, **state))
+            if direct_fixed:
+                boundary = decision_overrides.get(i, boundaries[i])
+                if boundary not in self.eligible[i]:
+                    raise ValueError(f"Invalid fixed boundary for request {i}: {boundary}")
+                selected[i] = boundary
+                return
             opportunities, pairs, prior_probes, checks = pair_opportunities, pair_decisions, probes, scenario_checks
             timed = profile_decisions or inject_measured
             start = perf_counter_ns() if timed else 0
@@ -1095,9 +1173,20 @@ class Experiment:
                             busy_path = path
                             new_compute, new_transfer = self.overlap[path]
                 if running_until is not None and new_compute != compute_factor:
-                    running_until = now + (running_until - now) / compute_factor * new_compute
+                    if simple_scalars and compute_factor == 1:
+                        running_until = now + (running_until - now) * new_compute
+                    elif simple_scalars and new_compute == 1:
+                        running_until = now + (running_until - now) / compute_factor
+                    else:
+                        running_until = now + (running_until - now) / compute_factor * new_compute
                 if transfer is not None and new_transfer != transfer_factor:
-                    transfer = (now + (transfer[0] - now) / transfer_factor * new_transfer, transfer[1])
+                    if simple_scalars and transfer_factor == 1:
+                        end = now + (transfer[0] - now) * new_transfer
+                    elif simple_scalars and new_transfer == 1:
+                        end = now + (transfer[0] - now) / transfer_factor
+                    else:
+                        end = now + (transfer[0] - now) / transfer_factor * new_transfer
+                    transfer = (end, transfer[1])
                     if transfer_record is not None:
                         transfer_record["end_ms"] = transfer[0]
                 compute_factor, transfer_factor = new_compute, new_transfer
@@ -1203,7 +1292,9 @@ class Experiment:
                             release_time = now + self.release_delay
                     shared = bool(deps) and (deps[-1] in self.initial or deps[-1] in occupied())
                     suffix_times = future_cost[0] if future_cost is not None else self._suffix_times
-                    suffix = suffix_times[head][selected[head]] * execution_factors.get("compute", 1)
+                    suffix = suffix_times[head][selected[head]]
+                    if not simple_scalars:
+                        suffix *= execution_factors.get("compute", 1)
                     continuation = selected[head] < self.lengths[head]
                     copy = (self.path_time("device_copy", self.objects[deps[-1]]["bytes"])
                             * execution_factors.get("device_copy", 1)
@@ -1329,6 +1420,8 @@ class Experiment:
                or policy in PAIR_POLICIES else {}),
             **({"adaptive_routes": adaptive_stats} if adaptive is not None else {}),
             **({"pruned_rollouts": pruned_rollouts} if screen_search in {"compute", "cutoff", "entry"} else {}),
+            **({"transfer_bound_checks": bound_checks, "transfer_bound_prunes": bound_prunes,
+                "transfer_bound_audits": bound_audits} if transfer_bound else {}),
             **({"pair_decisions": pair_decisions, "pair_opportunities": pair_opportunities}
                if policy in PAIR_POLICIES else {}),
             **({"io_probes": probes} if policy in PROBE_POLICIES else {}),

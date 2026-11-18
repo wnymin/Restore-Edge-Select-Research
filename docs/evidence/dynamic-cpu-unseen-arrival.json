@@ -1,0 +1,23 @@
+{
+  "arrivals": [
+    2,
+    300,
+    800,
+    1200,
+    1500,
+    1800
+  ],
+  "families": 100,
+  "action_rows": 1800,
+  "objective": "mean response, zero decision overhead; future continuation is allowed to be clairvoyant",
+  "sources_sha256": {
+    "scripts/study_unseen_arrival.py": "08b61a4c352d0b873983343b502f658ae91dca42936a312fa125d313f747292a",
+    "fixtures/phase1-hand-trace.json": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9",
+    "configs/qwen3.5-4b.json": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203",
+    "scripts/dynamic_cpu_inputs.py": "43037cf9d68f9593227d7378b717b3218f998d959db8d440ad1789783db1b331",
+    "src/restore_edge_select/simulator.py": "1bef66e14755ed346f08ed502da70cf1470b958c3b638d75ca5593510965823f",
+    "docs/evidence/prefill-vulkan-4k.json": "f1a0ffa909f1cf10cbbc8befdfb28c63a4e74be9982ac2398e1ddec964977b11",
+    "docs/evidence/load-staged-ssd-profile.json": "09e2b7cc6d14b6500957c05cc0b90a364ab7d7f708a32c2eb61086fd7f4dd5ef",
+    "configs/overlap-observed-upper.json": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+  }
+}
