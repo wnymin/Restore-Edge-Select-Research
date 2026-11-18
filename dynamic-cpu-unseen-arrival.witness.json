@@ -1,0 +1,139 @@
+{
+  "path": "all",
+  "rate": 12,
+  "budget": 70,
+  "shared": 1,
+  "visible_state": {
+    "0": {
+      "serial_compute_ms": 396.30825,
+      "serial_copy_ms": 0,
+      "serial_io_ms": 0,
+      "head_distance": 1,
+      "arrival_age_ms": 0.0,
+      "head_slack_ms": 1191.5349125,
+      "prefetch_fits": true,
+      "committed_ahead_compute_ms": 0,
+      "extra_reserve_bytes": 0,
+      "free_reserve_bytes": 73400320,
+      "ready_bytes": 0,
+      "active_kv_bytes": 0,
+      "active_new_kv_bytes": 0,
+      "active_source_index": null,
+      "shared_reservation_bytes": 0,
+      "missing_bytes": 0,
+      "incremental_ram_ms": 0,
+      "incremental_ssd_ms": 0,
+      "inflight_ms": 0.0,
+      "queue_debt_ms": 0,
+      "checkpoint_tier": ""
+    },
+    "576": {
+      "serial_compute_ms": 201.56885703125,
+      "serial_copy_ms": 0,
+      "serial_io_ms": 202.93590000000003,
+      "head_distance": 1,
+      "arrival_age_ms": 0.0,
+      "head_slack_ms": 1191.5349125,
+      "prefetch_fits": true,
+      "committed_ahead_compute_ms": 0,
+      "extra_reserve_bytes": 70385664,
+      "free_reserve_bytes": 73400320,
+      "ready_bytes": 0,
+      "active_kv_bytes": 0,
+      "active_new_kv_bytes": 0,
+      "active_source_index": null,
+      "shared_reservation_bytes": 0,
+      "missing_bytes": 70385664,
+      "incremental_ram_ms": 18.2196,
+      "incremental_ssd_ms": 184.71630000000002,
+      "inflight_ms": 0.0,
+      "queue_debt_ms": 0,
+      "checkpoint_tier": "SSD"
+    },
+    "1152": {
+      "serial_compute_ms": 0.0,
+      "serial_copy_ms": 0,
+      "serial_io_ms": 221.15550000000002,
+      "head_distance": 1,
+      "arrival_age_ms": 0.0,
+      "head_slack_ms": 1191.5349125,
+      "prefetch_fits": false,
+      "committed_ahead_compute_ms": 0,
+      "extra_reserve_bytes": 89260032,
+      "free_reserve_bytes": 73400320,
+      "ready_bytes": 0,
+      "active_kv_bytes": 0,
+      "active_new_kv_bytes": 0,
+      "active_source_index": null,
+      "shared_reservation_bytes": 0,
+      "missing_bytes": 89260032,
+      "incremental_ram_ms": 36.4392,
+      "incremental_ssd_ms": 184.71630000000002,
+      "inflight_ms": 0.0,
+      "queue_debt_ms": 0,
+      "checkpoint_tier": "SSD"
+    }
+  },
+  "pair_regret_lower_ms": 3.0601353268529112,
+  "pair_regret_exact": "12450925611132783329/4068750000000000000",
+  "randomized_regret_lower_ms": 1.8826474489303255,
+  "randomized_regret_exact": "495730714539012219903805427812762672627/263315744443110867565443750000000000000",
+  "optimal_probabilities": {
+    "576": "39814767995703310163/64716619217968876821",
+    "1152": "24901851222265566658/64716619217968876821"
+  },
+  "scenarios": [
+    {
+      "c_arrival_ms": 1200,
+      "offline_optimum_ms": 1008.4643273392377,
+      "action_regrets": {
+        "0": 121.66125182742896,
+        "576": 0.0,
+        "1152": 4.892751827428978
+      },
+      "best_plans": {
+        "0": [
+          0,
+          0,
+          1152
+        ],
+        "576": [
+          0,
+          576,
+          576
+        ],
+        "1152": [
+          0,
+          1152,
+          1152
+        ]
+      }
+    },
+    {
+      "c_arrival_ms": 1500,
+      "offline_optimum_ms": 942.1269416666667,
+      "action_regrets": {
+        "0": 87.99863749999999,
+        "576": 3.0601353268529112,
+        "1152": 0.0
+      },
+      "best_plans": {
+        "0": [
+          0,
+          0,
+          1152
+        ],
+        "576": [
+          0,
+          576,
+          1152
+        ],
+        "1152": [
+          0,
+          1152,
+          1152
+        ]
+      }
+    }
+  ]
+}
