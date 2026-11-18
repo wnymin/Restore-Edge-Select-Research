@@ -1,0 +1,164 @@
+{
+  "quantity": "peer_d_ready_ms - release_ms; effective release-to-ready, not isolated transfer",
+  "calibration_source": "dynamic-gpu-joint-staging-7449.csv",
+  "frozen_minimum": "11.913951873779296",
+  "frozen_maximum": "41.74266052246094",
+  "groups": [
+    {
+      "source": "dynamic-gpu-joint-staging-7449.csv",
+      "sha256": "27ad93933d28c116c732dc57bc85acd1586bf0a22a50f98704f45a274acdda54",
+      "samples": 16,
+      "minimum": "11.913951873779296",
+      "maximum": "41.74266052246094",
+      "below": 0,
+      "above": 0,
+      "works": {
+        "7": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "30": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        }
+      }
+    },
+    {
+      "source": "dynamic-gpu-joint-staging-7450.csv",
+      "sha256": "a34b6ea9bdcf6dab6bb3fb0e5bfe7b1f11bcade616f25a576c6ae91115d6b5b5",
+      "samples": 16,
+      "minimum": "12.321502685546874",
+      "maximum": "32.83158111572266",
+      "below": 0,
+      "above": 0,
+      "works": {
+        "7": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "30": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        }
+      }
+    },
+    {
+      "source": "dynamic-gpu-joint-staging-7451.csv",
+      "sha256": "161aa8c418752bef105bf1e3cd52a6e466a77ae8beaf00bff64f183016903dcb",
+      "samples": 24,
+      "minimum": "13.048065185546876",
+      "maximum": "17.057472229003905",
+      "below": 0,
+      "above": 0,
+      "works": {
+        "7": {
+          "n": 12,
+          "below": 0,
+          "above": 0
+        },
+        "30": {
+          "n": 12,
+          "below": 0,
+          "above": 0
+        }
+      }
+    },
+    {
+      "source": "dynamic-gpu-lookahead-critical-7620.csv",
+      "sha256": "f12a32c88c69f7bb610e55a93038ae7bd37bafe98adb403e23f976a7a03094e5",
+      "samples": 60,
+      "minimum": "12.14754867553711",
+      "maximum": "35.642021179199224",
+      "below": 0,
+      "above": 0,
+      "works": {
+        "4": {
+          "n": 10,
+          "below": 0,
+          "above": 0
+        },
+        "6": {
+          "n": 10,
+          "below": 0,
+          "above": 0
+        },
+        "7": {
+          "n": 10,
+          "below": 0,
+          "above": 0
+        },
+        "8": {
+          "n": 10,
+          "below": 0,
+          "above": 0
+        },
+        "9": {
+          "n": 10,
+          "below": 0,
+          "above": 0
+        },
+        "12": {
+          "n": 10,
+          "below": 0,
+          "above": 0
+        }
+      }
+    },
+    {
+      "source": "dynamic-gpu-lookahead-critical-7621.csv",
+      "sha256": "6c5c3d5fd305a44eaf7ff49325d42d1b8e2117a0b5bc5fbd4323390b547aa853",
+      "samples": 56,
+      "minimum": "12.47971343994141",
+      "maximum": "15.913986206054686",
+      "below": 0,
+      "above": 0,
+      "works": {
+        "4": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "7": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "8": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "9": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "10": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "12": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        },
+        "30": {
+          "n": 8,
+          "below": 0,
+          "above": 0
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "No per-decision active residual snapshot or completion-notification delay.",
+    "Observed extrema are not deterministic future service bounds.",
+    "Later batches differ in timing/work settings; no iid assumption.",
+    "Two arms of a paired request are not simultaneous counterfactual observations."
+  ]
+}

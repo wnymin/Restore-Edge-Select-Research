@@ -1,0 +1,18 @@
+{
+  "audited_points": 7221,
+  "cell_crosses-or-zero": 45,
+  "cell_negative": 3509,
+  "cell_positive": 163,
+  "cell_tie": 9,
+  "cells": 3726,
+  "independent_certified": 41,
+  "paired_certified": 222,
+  "paired_only_vs_independent": 181,
+  "paired_only_vs_workload": 213,
+  "pairs": 276,
+  "singleton_cells": 2001,
+  "skipped_committed_heads": 946,
+  "strictly_tighter": 274,
+  "winner_changes": 54,
+  "workload_certified": 9
+}

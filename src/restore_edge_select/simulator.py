@@ -331,7 +331,15 @@ class Experiment:
              prefetch_budget=None, active_kv_handoff=True, decision_overrides=None,
              screen_mode=None, min_gain=0, future_cost_cases=None, future_cost=None, queue_horizon=None,
              screen_selector=None, screen_observer=None, screen_search="full",
-             completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None):
+             completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None,
+             pause_at_head=None):
+        if pause_at_head is not None and (
+                snapshot is None or policy != "fixed" or not lean_rollout or self.dynamic
+                or self.per_tier or self.host_cache_bytes or self.release_at != "start"
+                or completion_cutoff is not None or future_cost is not None
+                or not snapshot[1] < pause_at_head <= n or snapshot[2] != n
+                or self.arrivals[n-1] > snapshot[0]):
+            raise ValueError("Boundary pause requires an all-visible stationary Phase 1 fixed forecast")
         prefetch_budget = self.budget if prefetch_budget is None else prefetch_budget
         decision_overrides = decision_overrides or {}
         if policy not in {"recompute", "longest", "threshold", "local-cost", "fixed", "capacity",
@@ -1121,6 +1129,13 @@ class Experiment:
                 head_since = None
                 if head == n:
                     break
+            if pause_at_head is not None and advanced and head == pause_at_head:
+                # Preserve the same post-completion event phase expected by
+                # snapshot resumption; containers must not alias the caller.
+                state = (now, head, arrived, dict(admitted), set(ready), running_until,
+                         transfer, active_deps, set(held_reservation), release_time, dict(host_cache))
+                return {"completion_ms": completions, "events_processed": events_processed,
+                        "snapshot": state}
             if completion_cutoff is not None and (resume or advanced) and cannot_beat():
                 return {"pruned": True, "events_processed": events_processed}
             while arrived < n and self.arrivals[arrived] <= now:

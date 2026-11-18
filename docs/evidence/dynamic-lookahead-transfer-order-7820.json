@@ -1,0 +1,651 @@
+{
+  "cases": [
+    {
+      "slow_first": false,
+      "trace": {
+        "fixture_id": "aggregate-load-order-counterexample",
+        "purpose": "Synthetic critical-scenario analysis, not measured hardware costs.",
+        "model": "Qwen/Qwen3.5-4B",
+        "revision": "1eef1f4e0bc57dec8f814d1e4c714c8e0065d261",
+        "units": {
+          "bytes_per_mib": 1048576,
+          "time": "ms"
+        },
+        "memory": {
+          "device_mib": 81920,
+          "fixed_mib": 12288,
+          "execution_mib": 256,
+          "workspace_mib": 32,
+          "prefetch_mib_cases": [
+            0,
+            128,
+            160,
+            192
+          ],
+          "kv_block_tokens": 576,
+          "extra_alignment_bytes": 0
+        },
+        "scheduling": {
+          "future_window_requests": 2,
+          "initial_device_object_ids": [
+            "C.state2"
+          ],
+          "arrival_tiebreak": "trace order",
+          "transfer_queue": "single serial queue; current request demand first; non-preemptive",
+          "prefetch_reservation": "all missing dependencies at once",
+          "transfer_submission": "one per object, in candidate load_order",
+          "compute_transfer_overlap": true,
+          "checkpoint_handoff": "exclusive checkpoint taken in place",
+          "checkpoint_writeback": false
+        },
+        "cost": {
+          "ram_to_device": {
+            "startup_ms": 0,
+            "bytes_per_ms": "18874368"
+          },
+          "ssd_to_device": {
+            "startup_ms": 0,
+            "bytes_per_ms": "18874368/5"
+          },
+          "recompute": {
+            "formula": "a*(L-c)+b*(L*(L+1)-c*(c+1))/2",
+            "a_ms_per_token_rational": [
+              40315,
+              7077888
+            ],
+            "b_ms_per_pair_rational": [
+              5,
+              3538944
+            ]
+          }
+        },
+        "objects": [
+          {
+            "id": "B.kv1",
+            "kind": "attention_kv",
+            "tier": "RAM",
+            "start_token_exclusive": 0,
+            "end_token_inclusive": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 576
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "B.state1",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 576
+              }
+            ],
+            "bytes": 51511296
+          },
+          {
+            "id": "B.kv2",
+            "kind": "attention_kv",
+            "tier": "RAM",
+            "start_token_exclusive": 576,
+            "end_token_inclusive": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 1152
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "B.state2",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 1152
+              }
+            ],
+            "bytes": 51511296
+          },
+          {
+            "id": "C.kv1",
+            "kind": "attention_kv",
+            "tier": "RAM",
+            "start_token_exclusive": 0,
+            "end_token_inclusive": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 576
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "C.state1",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 576
+              }
+            ],
+            "bytes": 51511296
+          },
+          {
+            "id": "C.kv2",
+            "kind": "attention_kv",
+            "tier": "SSD",
+            "start_token_exclusive": 576,
+            "end_token_inclusive": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 1152
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "C.state2",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 1152
+              }
+            ],
+            "bytes": 51511296
+          }
+        ],
+        "requests": [
+          {
+            "id": "A",
+            "arrival_ms": 0,
+            "input_token_runs": [
+              {
+                "token_id": 10,
+                "count": 3456
+              }
+            ],
+            "candidates": [
+              {
+                "boundary_tokens": 0,
+                "load_order": []
+              }
+            ]
+          },
+          {
+            "id": "B",
+            "arrival_ms": 25.125,
+            "input_token_runs": [
+              {
+                "token_id": 20,
+                "count": 1152
+              }
+            ],
+            "candidates": [
+              {
+                "boundary_tokens": 0,
+                "load_order": []
+              },
+              {
+                "boundary_tokens": 1152,
+                "load_order": [
+                  "B.kv1",
+                  "B.kv2",
+                  "B.state2"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "C",
+            "arrival_ms": 25.125,
+            "input_token_runs": [
+              {
+                "token_id": 30,
+                "count": 1152
+              }
+            ],
+            "candidates": [
+              {
+                "boundary_tokens": 0,
+                "load_order": []
+              },
+              {
+                "boundary_tokens": 576,
+                "load_order": [
+                  "C.kv1",
+                  "C.state1"
+                ]
+              },
+              {
+                "boundary_tokens": 1152,
+                "load_order": [
+                  "C.kv1",
+                  "C.kv2",
+                  "C.state2"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "capacity_mib": 80,
+      "aggregate": {
+        "1": "227/48",
+        "2": "6"
+      },
+      "relative_completion": {
+        "0": [
+          "3",
+          "21/2",
+          "21/2"
+        ],
+        "1152": [
+          "3",
+          "515/48",
+          "515/48"
+        ]
+      },
+      "total_deep_delta": "11/24",
+      "best": 0,
+      "symbolic_rows": [
+        {
+          "target": 1,
+          "head": 0,
+          "fallback": 0,
+          "candidate": 0,
+          "cells": 1,
+          "faces": 1,
+          "edges": 0,
+          "vertices": 0,
+          "probes": 26,
+          "rlo": "5/2",
+          "rhi": "7/2",
+          "xlo": "3/4",
+          "xhi": "5/4",
+          "inflight": 0,
+          "sensitive_r": 1,
+          "sensitive_x": 1,
+          "individual_upper": "0",
+          "total_upper": "0",
+          "regret": "73/24",
+          "corner_upper": "0",
+          "safe": 1,
+          "robust": 0,
+          "protected": 0,
+          "corners_false_safe": 0,
+          "sampled_max": "0",
+          "sampled_r": "7/2",
+          "sampled_x": "5/4"
+        },
+        {
+          "target": 1,
+          "head": 0,
+          "fallback": 0,
+          "candidate": 1152,
+          "cells": 1,
+          "faces": 1,
+          "edges": 0,
+          "vertices": 0,
+          "probes": 26,
+          "rlo": "5/2",
+          "rhi": "7/2",
+          "xlo": "3/4",
+          "xhi": "5/4",
+          "inflight": 0,
+          "sensitive_r": 1,
+          "sensitive_x": 1,
+          "individual_upper": "95/48",
+          "total_upper": "95/24",
+          "regret": "95/24",
+          "corner_upper": "95/48",
+          "safe": 0,
+          "robust": 0,
+          "protected": 0,
+          "corners_false_safe": 0,
+          "sampled_max": "95/48",
+          "sampled_r": "5/2",
+          "sampled_x": "5/4"
+        }
+      ]
+    },
+    {
+      "slow_first": true,
+      "trace": {
+        "fixture_id": "aggregate-load-order-counterexample",
+        "purpose": "Synthetic critical-scenario analysis, not measured hardware costs.",
+        "model": "Qwen/Qwen3.5-4B",
+        "revision": "1eef1f4e0bc57dec8f814d1e4c714c8e0065d261",
+        "units": {
+          "bytes_per_mib": 1048576,
+          "time": "ms"
+        },
+        "memory": {
+          "device_mib": 81920,
+          "fixed_mib": 12288,
+          "execution_mib": 256,
+          "workspace_mib": 32,
+          "prefetch_mib_cases": [
+            0,
+            128,
+            160,
+            192
+          ],
+          "kv_block_tokens": 576,
+          "extra_alignment_bytes": 0
+        },
+        "scheduling": {
+          "future_window_requests": 2,
+          "initial_device_object_ids": [
+            "C.state2"
+          ],
+          "arrival_tiebreak": "trace order",
+          "transfer_queue": "single serial queue; current request demand first; non-preemptive",
+          "prefetch_reservation": "all missing dependencies at once",
+          "transfer_submission": "one per object, in candidate load_order",
+          "compute_transfer_overlap": true,
+          "checkpoint_handoff": "exclusive checkpoint taken in place",
+          "checkpoint_writeback": false
+        },
+        "cost": {
+          "ram_to_device": {
+            "startup_ms": 0,
+            "bytes_per_ms": "18874368"
+          },
+          "ssd_to_device": {
+            "startup_ms": 0,
+            "bytes_per_ms": "18874368/5"
+          },
+          "recompute": {
+            "formula": "a*(L-c)+b*(L*(L+1)-c*(c+1))/2",
+            "a_ms_per_token_rational": [
+              40315,
+              7077888
+            ],
+            "b_ms_per_pair_rational": [
+              5,
+              3538944
+            ]
+          }
+        },
+        "objects": [
+          {
+            "id": "B.kv1",
+            "kind": "attention_kv",
+            "tier": "RAM",
+            "start_token_exclusive": 0,
+            "end_token_inclusive": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 576
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "B.state1",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 576
+              }
+            ],
+            "bytes": 51511296
+          },
+          {
+            "id": "B.kv2",
+            "kind": "attention_kv",
+            "tier": "RAM",
+            "start_token_exclusive": 576,
+            "end_token_inclusive": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 1152
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "B.state2",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 20,
+                "count": 1152
+              }
+            ],
+            "bytes": 51511296
+          },
+          {
+            "id": "C.kv1",
+            "kind": "attention_kv",
+            "tier": "SSD",
+            "start_token_exclusive": 0,
+            "end_token_inclusive": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 576
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "C.state1",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 576,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 576
+              }
+            ],
+            "bytes": 51511296
+          },
+          {
+            "id": "C.kv2",
+            "kind": "attention_kv",
+            "tier": "RAM",
+            "start_token_exclusive": 576,
+            "end_token_inclusive": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 1152
+              }
+            ],
+            "bytes": 18874368
+          },
+          {
+            "id": "C.state2",
+            "kind": "recurrent_and_conv_checkpoint",
+            "tier": "RAM",
+            "boundary_tokens": 1152,
+            "prefix_token_runs": [
+              {
+                "token_id": 30,
+                "count": 1152
+              }
+            ],
+            "bytes": 51511296
+          }
+        ],
+        "requests": [
+          {
+            "id": "A",
+            "arrival_ms": 0,
+            "input_token_runs": [
+              {
+                "token_id": 10,
+                "count": 3456
+              }
+            ],
+            "candidates": [
+              {
+                "boundary_tokens": 0,
+                "load_order": []
+              }
+            ]
+          },
+          {
+            "id": "B",
+            "arrival_ms": 25.125,
+            "input_token_runs": [
+              {
+                "token_id": 20,
+                "count": 1152
+              }
+            ],
+            "candidates": [
+              {
+                "boundary_tokens": 0,
+                "load_order": []
+              },
+              {
+                "boundary_tokens": 1152,
+                "load_order": [
+                  "B.kv1",
+                  "B.kv2",
+                  "B.state2"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "C",
+            "arrival_ms": 25.125,
+            "input_token_runs": [
+              {
+                "token_id": 30,
+                "count": 1152
+              }
+            ],
+            "candidates": [
+              {
+                "boundary_tokens": 0,
+                "load_order": []
+              },
+              {
+                "boundary_tokens": 576,
+                "load_order": [
+                  "C.kv1",
+                  "C.state1"
+                ]
+              },
+              {
+                "boundary_tokens": 1152,
+                "load_order": [
+                  "C.kv1",
+                  "C.kv2",
+                  "C.state2"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "capacity_mib": 80,
+      "aggregate": {
+        "1": "227/48",
+        "2": "6"
+      },
+      "relative_completion": {
+        "0": [
+          "3",
+          "21/2",
+          "21/2"
+        ],
+        "1152": [
+          "3",
+          "467/48",
+          "515/48"
+        ]
+      },
+      "total_deep_delta": "-13/24",
+      "best": 1152,
+      "symbolic_rows": [
+        {
+          "target": 1,
+          "head": 0,
+          "fallback": 0,
+          "candidate": 0,
+          "cells": 1,
+          "faces": 1,
+          "edges": 0,
+          "vertices": 0,
+          "probes": 26,
+          "rlo": "5/2",
+          "rhi": "7/2",
+          "xlo": "3/4",
+          "xhi": "5/4",
+          "inflight": 0,
+          "sensitive_r": 1,
+          "sensitive_x": 1,
+          "individual_upper": "0",
+          "total_upper": "0",
+          "regret": "97/24",
+          "corner_upper": "0",
+          "safe": 1,
+          "robust": 1152,
+          "protected": 0,
+          "corners_false_safe": 0,
+          "sampled_max": "0",
+          "sampled_r": "7/2",
+          "sampled_x": "5/4"
+        },
+        {
+          "target": 1,
+          "head": 0,
+          "fallback": 0,
+          "candidate": 1152,
+          "cells": 1,
+          "faces": 1,
+          "edges": 0,
+          "vertices": 0,
+          "probes": 26,
+          "rlo": "5/2",
+          "rhi": "7/2",
+          "xlo": "3/4",
+          "xhi": "5/4",
+          "inflight": 0,
+          "sensitive_r": 1,
+          "sensitive_x": 1,
+          "individual_upper": "95/48",
+          "total_upper": "71/24",
+          "regret": "71/24",
+          "corner_upper": "95/48",
+          "safe": 0,
+          "robust": 1152,
+          "protected": 0,
+          "corners_false_safe": 0,
+          "sampled_max": "95/48",
+          "sampled_r": "5/2",
+          "sampled_x": "5/4"
+        }
+      ]
+    }
+  ],
+  "shared_description": "Same legal object sizes, missing bytes and aggregate RAM/SSD times; only two equal-sized KV tiers exchange positions."
+}

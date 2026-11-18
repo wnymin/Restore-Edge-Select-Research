@@ -1,0 +1,18 @@
+{
+  "candidate_actions": 432,
+  "captured_first_decisions": 144,
+  "cells": 456,
+  "configurations": 48,
+  "constrained_differs_fallback": 0,
+  "constraint_changes_action": 16,
+  "decisions": 144,
+  "future_target_decisions": 144,
+  "no_inflight_decisions": 144,
+  "parameter_sensitive_decisions": 73,
+  "probes": 826,
+  "robust_differs_nominal": 0,
+  "running_decisions": 144,
+  "three_plus_candidates": 144,
+  "unsafe_actions": 288,
+  "winner_changes": 19
+}

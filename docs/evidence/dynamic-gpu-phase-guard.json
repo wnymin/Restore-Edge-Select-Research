@@ -1,0 +1,31 @@
+{
+  "deep_cases": [
+    [
+      "512",
+      "1536",
+      "decode"
+    ],
+    [
+      "512",
+      "1536",
+      "early"
+    ],
+    [
+      "512",
+      "1536",
+      "idle"
+    ],
+    [
+      "512",
+      "1536",
+      "late"
+    ]
+  ],
+  "min_target_ms": 20,
+  "peer_cap_ms": 50,
+  "gap_cap_ms": 50,
+  "calibration_sha256": {
+    "dynamic-gpu-phase-7330-cal.csv": "a1f15580497f1207d974ed541f8d81a36103cd6ea9a1a3a5c858403c6cbf689d",
+    "dynamic-gpu-phase-7332-cal.csv": "c0927c57caeb06995ea5299e67ffbdec22a6620388237928db3c512242d81e0c"
+  }
+}

@@ -25,10 +25,12 @@
 
 ## 复算
 
+后续已完成[浅驻留延迟提交对照](dynamic-gpu-delay-control.md)，并使用服务端日志核对首次入批和同行槽释放时刻。
+
 [108 条原始实测读数](evidence/dynamic-gpu-lag-trials.csv)已归档。从仓库根目录执行下列统计命令，只用 Python 标准库，无需 GPU：
 
 ~~~text
-python scripts/summarize_dynamic_gpu.py docs/evidence/dynamic-gpu-lag-trials.csv
+python -m scripts.gpu.analysis.summarize_dynamic_gpu docs/evidence/dynamic-gpu-lag-trials.csv
 ~~~
 
 硬件采集使用本机约定的 bench_slot_restore.py；Windows 采集使用本地包装器替换无法被服务进程访问的默认临时目录。每档参数相同，只改 --lag-ms 和输出路径：

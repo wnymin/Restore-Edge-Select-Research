@@ -1,0 +1,62 @@
+{
+  "compute-over": {
+    "cases": 1000,
+    "decisions": 3000,
+    "edits": 1345,
+    "native_reference_mismatch_decisions": 1063,
+    "numeric_plan_points": 29866,
+    "positive_individual_cases": 0,
+    "positive_total_cases": 0,
+    "snapshot_error_decisions": 2289,
+    "symbolic_plans": 9000,
+    "uncorrected_ledger_violations": 24
+  },
+  "compute-under": {
+    "cases": 1000,
+    "decisions": 3000,
+    "edits": 1238,
+    "native_reference_mismatch_decisions": 321,
+    "numeric_plan_points": 66700,
+    "positive_individual_cases": 0,
+    "positive_total_cases": 0,
+    "snapshot_error_decisions": 2291,
+    "symbolic_plans": 9000,
+    "uncorrected_ledger_violations": 0
+  },
+  "exact": {
+    "cases": 1000,
+    "decisions": 3000,
+    "edits": 1272,
+    "native_reference_mismatch_decisions": 730,
+    "numeric_plan_points": 29636,
+    "positive_individual_cases": 0,
+    "positive_total_cases": 0,
+    "snapshot_error_decisions": 0,
+    "symbolic_plans": 9000,
+    "uncorrected_ledger_violations": 0
+  },
+  "transfer-over": {
+    "cases": 1000,
+    "decisions": 3000,
+    "edits": 1272,
+    "native_reference_mismatch_decisions": 481,
+    "numeric_plan_points": 29636,
+    "positive_individual_cases": 0,
+    "positive_total_cases": 0,
+    "snapshot_error_decisions": 2,
+    "symbolic_plans": 9000,
+    "uncorrected_ledger_violations": 0
+  },
+  "transfer-under": {
+    "cases": 1000,
+    "decisions": 3000,
+    "edits": 1272,
+    "native_reference_mismatch_decisions": 1253,
+    "numeric_plan_points": 29636,
+    "positive_individual_cases": 0,
+    "positive_total_cases": 0,
+    "snapshot_error_decisions": 2,
+    "symbolic_plans": 9000,
+    "uncorrected_ledger_violations": 0
+  }
+}

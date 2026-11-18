@@ -1,0 +1,145 @@
+{
+  "snapshots": 1224,
+  "cells": 12060,
+  "audited_points": 27792,
+  "singleton_cells": 5418,
+  "slopes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "affected_snapshots": 9,
+  "jump_transitions": 24,
+  "positive_jumps": 0,
+  "negative_jumps": 24,
+  "max_absolute_jump": "48",
+  "jumps": [
+    {
+      "snapshot": "311",
+      "boundary": "35/18",
+      "jump": "-37/18"
+    },
+    {
+      "snapshot": "311",
+      "boundary": "4",
+      "jump": "-37/18"
+    },
+    {
+      "snapshot": "431",
+      "boundary": "5/2",
+      "jump": "-95/9"
+    },
+    {
+      "snapshot": "432",
+      "boundary": "17/9",
+      "jump": "-95/9"
+    },
+    {
+      "snapshot": "534",
+      "boundary": "125/18",
+      "jump": "-1403/216"
+    },
+    {
+      "snapshot": "534",
+      "boundary": "8",
+      "jump": "-19/9"
+    },
+    {
+      "snapshot": "594",
+      "boundary": "41/6",
+      "jump": "-11/12"
+    },
+    {
+      "snapshot": "715",
+      "boundary": "17/9",
+      "jump": "-55/9"
+    },
+    {
+      "snapshot": "715",
+      "boundary": "8",
+      "jump": "-55/9"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "157/18",
+      "jump": "-48"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "41/4",
+      "jump": "-1643/432"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "106/9",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "479/36",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "89/6",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "589/36",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "161/9",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "233/12",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "377/18",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "809/36",
+      "jump": "-13331/864"
+    },
+    {
+      "snapshot": "929",
+      "boundary": "24",
+      "jump": "-55/12"
+    },
+    {
+      "snapshot": "930",
+      "boundary": "161/18",
+      "jump": "-48"
+    },
+    {
+      "snapshot": "930",
+      "boundary": "377/36",
+      "jump": "-1643/432"
+    },
+    {
+      "snapshot": "930",
+      "boundary": "12",
+      "jump": "-55/18"
+    },
+    {
+      "snapshot": "1102",
+      "boundary": "8",
+      "jump": "-80/9"
+    }
+  ]
+}

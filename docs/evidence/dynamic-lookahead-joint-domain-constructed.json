@@ -1,0 +1,71 @@
+{
+  "source": "dynamic-lookahead-snapshot-gap-constructed-witness.json",
+  "active_residual": [
+    "30",
+    "75/2"
+  ],
+  "future_ssd_multiplier": [
+    "3/4",
+    "5/4"
+  ],
+  "rows": [
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 0,
+      "candidate": 0,
+      "cells": 1,
+      "faces": 1,
+      "edges": 0,
+      "vertices": 0,
+      "probes": 26,
+      "rlo": "30",
+      "rhi": "75/2",
+      "xlo": "3/4",
+      "xhi": "5/4",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 0,
+      "individual_upper": "0",
+      "total_upper": "0",
+      "regret": "13/2",
+      "corner_upper": "0",
+      "safe": 1,
+      "robust": 1152,
+      "protected": 0,
+      "corners_false_safe": 0,
+      "sampled_max": "0",
+      "sampled_r": "255/8",
+      "sampled_x": "9/8"
+    },
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 0,
+      "candidate": 1152,
+      "cells": 1,
+      "faces": 1,
+      "edges": 0,
+      "vertices": 0,
+      "probes": 26,
+      "rlo": "30",
+      "rhi": "75/2",
+      "xlo": "3/4",
+      "xhi": "5/4",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 0,
+      "individual_upper": "1",
+      "total_upper": "1",
+      "regret": "1",
+      "corner_upper": "1",
+      "safe": 0,
+      "robust": 1152,
+      "protected": 0,
+      "corners_false_safe": 0,
+      "sampled_max": "1",
+      "sampled_r": "30",
+      "sampled_x": "5/4"
+    }
+  ]
+}

@@ -1,0 +1,721 @@
+{
+  "capacity_mib": 128,
+  "fixed_successor": 1152,
+  "fallback": 576,
+  "profiles": {
+    "0": {
+      "alpha": "0",
+      "beta": "0",
+      "compute": "8",
+      "missing": [],
+      "coexist": true
+    },
+    "576": {
+      "alpha": "0",
+      "beta": "2227/908",
+      "compute": "17/4",
+      "missing": [
+        "B.state1"
+      ],
+      "coexist": false
+    },
+    "1152": {
+      "alpha": "19/5",
+      "beta": "204/227",
+      "compute": "0",
+      "missing": [
+        "B.kv2",
+        "B.state2"
+      ],
+      "coexist": false
+    }
+  },
+  "successor": {
+    "alpha": "0",
+    "beta": "17/4",
+    "compute": "0"
+  },
+  "exact": {
+    "individual": {
+      "0": "6399/1816",
+      "576": "0",
+      "1152": "10197/4540"
+    },
+    "total": {
+      "0": "6399/908",
+      "576": "0",
+      "1152": "1099/4540"
+    },
+    "component": {
+      "0": [
+        "0",
+        "6399/1816",
+        "6399/1816"
+      ],
+      "576": [
+        "0",
+        "0",
+        "0"
+      ],
+      "1152": [
+        "0",
+        "-11141/9080",
+        "10197/4540"
+      ]
+    },
+    "regret": {
+      "0": "66977/9080",
+      "576": "1489/1135",
+      "1152": "1099/4540"
+    },
+    "protected": 576,
+    "max_pair_points": 6,
+    "pair_scenarios": 16
+  },
+  "reduced": {
+    "component": {
+      "0": [
+        "0",
+        "6399/1816",
+        "6399/1816"
+      ],
+      "576": [
+        "0",
+        "0",
+        "0"
+      ],
+      "1152": [
+        "0",
+        "-11141/9080",
+        "13339/9080"
+      ]
+    },
+    "individual": {
+      "0": "6399/1816",
+      "576": "0",
+      "1152": "13339/9080"
+    },
+    "total": {
+      "0": "6399/908",
+      "576": "0",
+      "1152": "-2987/9080"
+    },
+    "regret": {
+      "0": "66977/9080",
+      "576": "1489/1135",
+      "1152": "0"
+    },
+    "protected": 576
+  },
+  "corner": {
+    "component": {
+      "0": [
+        "0",
+        "6399/1816",
+        "6399/1816"
+      ],
+      "576": [
+        "0",
+        "0",
+        "0"
+      ],
+      "1152": [
+        "0",
+        "-11141/9080",
+        "13339/9080"
+      ]
+    },
+    "individual": {
+      "0": "6399/1816",
+      "576": "0",
+      "1152": "13339/9080"
+    },
+    "total": {
+      "0": "6399/908",
+      "576": "0",
+      "1152": "-2987/9080"
+    },
+    "regret": {
+      "0": "66977/9080",
+      "576": "1489/1135",
+      "1152": "0"
+    },
+    "protected": 576
+  },
+  "diagonal": {
+    "component": {
+      "0": [
+        "0",
+        "6399/1816",
+        "6399/1816"
+      ],
+      "576": [
+        "0",
+        "0",
+        "0"
+      ],
+      "1152": [
+        "0",
+        "-11141/9080",
+        "13339/9080"
+      ]
+    },
+    "individual": {
+      "0": "6399/1816",
+      "576": "0",
+      "1152": "13339/9080"
+    },
+    "total": {
+      "0": "6399/908",
+      "576": "0",
+      "1152": "-2987/9080"
+    },
+    "regret": {
+      "0": "66977/9080",
+      "576": "1489/1135",
+      "1152": "0"
+    },
+    "protected": 576
+  },
+  "target_only_points": 4,
+  "reduced_gap": true,
+  "symbolic_rows": [
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 576,
+      "candidate": 0,
+      "cells": 11,
+      "faces": 5,
+      "edges": 5,
+      "vertices": 1,
+      "probes": 165,
+      "rlo": "1/2",
+      "rhi": "1",
+      "xlo": "1/2",
+      "xhi": "3/2",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 1,
+      "individual_upper": "6399/1816",
+      "total_upper": "6399/908",
+      "regret": "66977/9080",
+      "corner_upper": "6399/1816",
+      "safe": 0,
+      "robust": 1152,
+      "protected": 576,
+      "corners_false_safe": 0,
+      "sampled_max": "6399/1816",
+      "sampled_r": "1",
+      "sampled_x": "1/2"
+    },
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 576,
+      "candidate": 576,
+      "cells": 11,
+      "faces": 5,
+      "edges": 5,
+      "vertices": 1,
+      "probes": 165,
+      "rlo": "1/2",
+      "rhi": "1",
+      "xlo": "1/2",
+      "xhi": "3/2",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 1,
+      "individual_upper": "0",
+      "total_upper": "0",
+      "regret": "1489/1135",
+      "corner_upper": "0",
+      "safe": 1,
+      "robust": 1152,
+      "protected": 576,
+      "corners_false_safe": 0,
+      "sampled_max": "0",
+      "sampled_r": "381/454",
+      "sampled_x": "2267/2040"
+    },
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 576,
+      "candidate": 1152,
+      "cells": 11,
+      "faces": 5,
+      "edges": 5,
+      "vertices": 1,
+      "probes": 165,
+      "rlo": "1/2",
+      "rhi": "1",
+      "xlo": "1/2",
+      "xhi": "3/2",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 1,
+      "individual_upper": "10197/4540",
+      "total_upper": "1099/4540",
+      "regret": "1099/4540",
+      "corner_upper": "13339/9080",
+      "safe": 0,
+      "robust": 1152,
+      "protected": 576,
+      "corners_false_safe": 0,
+      "sampled_max": "10197/4540",
+      "sampled_r": "1451/1816",
+      "sampled_x": "1"
+    }
+  ],
+  "critical_vectors": 21,
+  "trace": {
+    "fixture_id": "successor-consumption-threshold",
+    "purpose": "Synthetic critical-scenario analysis, not measured hardware costs.",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "1eef1f4e0bc57dec8f814d1e4c714c8e0065d261",
+    "units": {
+      "bytes_per_mib": 1048576,
+      "time": "ms"
+    },
+    "memory": {
+      "device_mib": 81920,
+      "fixed_mib": 12288,
+      "execution_mib": 256,
+      "workspace_mib": 32,
+      "prefetch_mib_cases": [
+        0,
+        128,
+        160,
+        192
+      ],
+      "kv_block_tokens": 576,
+      "extra_alignment_bytes": 0
+    },
+    "scheduling": {
+      "future_window_requests": 2,
+      "initial_device_object_ids": [
+        "B.kv1"
+      ],
+      "arrival_tiebreak": "trace order",
+      "transfer_queue": "single serial queue; current request demand first; non-preemptive",
+      "prefetch_reservation": "all missing dependencies at once",
+      "transfer_submission": "one per object, in candidate load_order",
+      "compute_transfer_overlap": true,
+      "checkpoint_handoff": "exclusive checkpoint taken in place",
+      "checkpoint_writeback": false
+    },
+    "cost": {
+      "ram_to_device": {
+        "startup_ms": 0,
+        "bytes_per_ms": "257556480/19"
+      },
+      "ssd_to_device": {
+        "startup_ms": 0,
+        "bytes_per_ms": "357040128/17"
+      },
+      "recompute": {
+        "formula": "a*(L-c)+b*(L*(L+1)-c*(c+1))/2",
+        "a_ms_per_token_rational": [
+          8063,
+          1327104
+        ],
+        "b_ms_per_pair_rational": [
+          1,
+          663552
+        ]
+      }
+    },
+    "objects": [
+      {
+        "id": "B.kv1",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 0,
+        "end_token_inclusive": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 576
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "B.state1",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 576
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "B.kv2",
+        "kind": "attention_kv",
+        "tier": "SSD",
+        "start_token_exclusive": 576,
+        "end_token_inclusive": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "B.state2",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "RAM",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "C.kv1",
+        "kind": "attention_kv",
+        "tier": "SSD",
+        "start_token_exclusive": 0,
+        "end_token_inclusive": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 576
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "C.state1",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 576
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "C.kv2",
+        "kind": "attention_kv",
+        "tier": "SSD",
+        "start_token_exclusive": 576,
+        "end_token_inclusive": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "C.state2",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      }
+    ],
+    "requests": [
+      {
+        "id": "A",
+        "arrival_ms": 0,
+        "input_token_runs": [
+          {
+            "token_id": 10,
+            "count": 3456
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "arrival_ms": 29.25,
+        "input_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 576,
+            "load_order": [
+              "B.kv1",
+              "B.state1"
+            ]
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "B.kv1",
+              "B.kv2",
+              "B.state2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "arrival_ms": 29.25,
+        "input_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 576,
+            "load_order": [
+              "C.kv1",
+              "C.state1"
+            ]
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "C.kv1",
+              "C.kv2",
+              "C.state2"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "critical_checks": [
+    {
+      "point": [
+        "1/2",
+        "1/2"
+      ],
+      "completion": {
+        "0": [
+          "119/4",
+          "151/4",
+          "151/4"
+        ],
+        "576": [
+          "119/4",
+          "63063/1816",
+          "63063/1816"
+        ],
+        "1152": [
+          "119/4",
+          "152087/4540",
+          "323469/9080"
+        ]
+      }
+    },
+    {
+      "point": [
+        "1/2",
+        "1"
+      ],
+      "completion": {
+        "0": [
+          "119/4",
+          "151/4",
+          "151/4"
+        ],
+        "576": [
+          "119/4",
+          "32645/908",
+          "32645/908"
+        ],
+        "1152": [
+          "119/4",
+          "154127/4540",
+          "86711/2270"
+        ]
+      }
+    },
+    {
+      "point": [
+        "1/2",
+        "3/2"
+      ],
+      "completion": {
+        "0": [
+          "119/4",
+          "151/4",
+          "151/4"
+        ],
+        "576": [
+          "119/4",
+          "67517/1816",
+          "8922/227"
+        ],
+        "1152": [
+          "119/4",
+          "156167/4540",
+          "370219/9080"
+        ]
+      }
+    },
+    {
+      "point": [
+        "3/4",
+        "1"
+      ],
+      "completion": {
+        "0": [
+          "30",
+          "38",
+          "38"
+        ],
+        "576": [
+          "30",
+          "32645/908",
+          "32645/908"
+        ],
+        "1152": [
+          "30",
+          "154127/4540",
+          "86711/2270"
+        ]
+      }
+    },
+    {
+      "point": [
+        "1",
+        "1/2"
+      ],
+      "completion": {
+        "0": [
+          "121/4",
+          "153/4",
+          "153/4"
+        ],
+        "576": [
+          "121/4",
+          "63063/1816",
+          "63063/1816"
+        ],
+        "1152": [
+          "121/4",
+          "152087/4540",
+          "323469/9080"
+        ]
+      }
+    },
+    {
+      "point": [
+        "1",
+        "1"
+      ],
+      "completion": {
+        "0": [
+          "121/4",
+          "153/4",
+          "153/4"
+        ],
+        "576": [
+          "121/4",
+          "32645/908",
+          "32645/908"
+        ],
+        "1152": [
+          "121/4",
+          "154127/4540",
+          "86711/2270"
+        ]
+      }
+    },
+    {
+      "point": [
+        "1",
+        "3/2"
+      ],
+      "completion": {
+        "0": [
+          "121/4",
+          "153/4",
+          "153/4"
+        ],
+        "576": [
+          "121/4",
+          "67517/1816",
+          "8922/227"
+        ],
+        "1152": [
+          "121/4",
+          "156167/4540",
+          "370219/9080"
+        ]
+      }
+    }
+  ],
+  "native_fallback": 1152,
+  "native_fixed_plan_completion": {
+    "0": [
+      "30",
+      "38",
+      "38"
+    ],
+    "576": [
+      "30",
+      "32645/908",
+      "32645/908"
+    ],
+    "1152": [
+      "30",
+      "154127/4540",
+      "86711/2270"
+    ]
+  },
+  "native_deep_total_delta": "1099/4540",
+  "r_domain": [
+    "1/2",
+    "1"
+  ],
+  "x_domain": [
+    "1/2",
+    "3/2"
+  ],
+  "missing_surface": "successor load equals shallow target compute: x=1",
+  "budget_example": {
+    "budget_ms": "2",
+    "reduced_choice": 1152,
+    "exact_choice": 576,
+    "actual_component_delta": [
+      "0",
+      "-4549/2270",
+      "10197/4540"
+    ]
+  }
+}

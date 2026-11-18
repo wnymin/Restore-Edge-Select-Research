@@ -1,0 +1,20 @@
+{
+  "deep_cases": [
+    [
+      "1024",
+      "1280",
+      "early"
+    ],
+    [
+      "1024",
+      "1280",
+      "idle"
+    ]
+  ],
+  "min_target_ms": 20,
+  "peer_cap_ms": 50,
+  "gap_cap_ms": 50,
+  "calibration_sha256": {
+    "dynamic-gpu-phase-7342-middle-cal.csv": "a3820c5975e26e75c7e750c99dbe03cd987a6bc0120be80082d05428ef1c2090"
+  }
+}

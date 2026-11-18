@@ -1,0 +1,13 @@
+{
+  "cases": 1000,
+  "certified_decisions": 8576,
+  "edits": 4500,
+  "locked_heads": 6424,
+  "numeric_plan_points": 77542,
+  "paths": 5000,
+  "positive_individual_paths": 0,
+  "positive_total_paths": 0,
+  "potential_links": 15000,
+  "strict_individual_improvement": 2848,
+  "symbolic_plans": 25728
+}

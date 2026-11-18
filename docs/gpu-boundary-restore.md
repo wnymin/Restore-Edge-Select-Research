@@ -63,7 +63,7 @@
 
 ## 离线外推归档配对
 
-[外推脚本](../scripts/project_gpu_boundary.py)用标准库读取已归档的 CSV，不需要运行推理或采集硬件。输入以[配对数据](evidence/gpu-boundary-resident-trials.csv)的列为接口，可来自任意设备；每个连续配对块包含全重算、浅驻留、深冷恢复与有无同行的交叉条件。脚本检查冷读和同行是否仍活跃。分析时通过 `--profile` 显式选用与输入来源匹配的配置；需要留出时用 `--from-rep` 指定起点。
+[外推脚本](../scripts/gpu/analysis/project_gpu_boundary.py)用标准库读取已归档的 CSV，不需要运行推理或采集硬件。输入以[配对数据](evidence/gpu-boundary-resident-trials.csv)的列为接口，可来自任意设备；每个连续配对块包含全重算、浅驻留、深冷恢复与有无同行的交叉条件。脚本检查冷读和同行是否仍活跃。分析时通过 `--profile` 显式选用与输入来源匹配的配置；需要留出时用 `--from-rep` 指定起点。
 
 对相同总长度和边界，从**无同行**的配对读取浅驻留与深恢复之间的服务端 prefill 时间差中位数 $D_{\mathrm{local}}$，避免把本机两槽排程直接套到生产环境。对每种目标状态布局重算传输字节数，再依场景计算：
 
@@ -86,6 +86,6 @@ $$
 从仓库根目录直接复算归档留出结果：
 
 ```text
-python scripts/summarize_gpu_boundary.py docs/evidence/gpu-boundary-resident-trials.csv --calibration 4
-python scripts/project_gpu_boundary.py docs/evidence/gpu-boundary-resident-trials.csv --profile configs/gpu-boundary-production-v1.json --from-rep 4
+python -m scripts.gpu.analysis.summarize_gpu_boundary docs/evidence/gpu-boundary-resident-trials.csv --calibration 4
+python -m scripts.gpu.analysis.project_gpu_boundary docs/evidence/gpu-boundary-resident-trials.csv --profile configs/gpu-boundary-production-v1.json --from-rep 4
 ```

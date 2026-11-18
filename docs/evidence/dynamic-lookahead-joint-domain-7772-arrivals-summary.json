@@ -1,0 +1,17 @@
+{
+  "both_sensitive": 117,
+  "candidates": 642,
+  "cells": 7508,
+  "configurations": 100,
+  "constraint_changes_action": 24,
+  "corners_false_safe": 0,
+  "decisions": 214,
+  "edges": 3654,
+  "faces": 2913,
+  "inflight": 27,
+  "probes": 95061,
+  "sensitive_r": 119,
+  "sensitive_x": 192,
+  "skipped_no_positive_compute": 86,
+  "vertices": 941
+}

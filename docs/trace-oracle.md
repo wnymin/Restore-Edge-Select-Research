@@ -128,8 +128,8 @@ $$
 
 ~~~sh
 python -m zipfile -e docs/evidence/replay-inputs.zip outputs
-python scripts/study_trace_oracle.py outputs/adaptive-holdout-109.csv outputs/adaptive-objectives-120.csv --nodes 3000 --workers 12 --out outputs/trace-oracle-check.csv
-python scripts/summarize_trace_oracle.py outputs/trace-oracle-check.csv outputs/trace-oracle-summary-check.csv
-python scripts/study_adaptive_oracle.py --out outputs/adaptive-oracle-bound-check.csv
-python scripts/summarize_adaptive.py outputs/adaptive-holdout-109.csv outputs/adaptive-objectives-120.csv
+python -m scripts.cpu.replay.study_trace_oracle outputs/adaptive-holdout-109.csv outputs/adaptive-objectives-120.csv --nodes 3000 --workers 12 --out outputs/trace-oracle-check.csv
+python -m scripts.cpu.analysis.summarize_trace_oracle outputs/trace-oracle-check.csv outputs/trace-oracle-summary-check.csv
+python -m scripts.cpu.replay.study_adaptive_oracle --out outputs/adaptive-oracle-bound-check.csv
+python -m scripts.cpu.analysis.summarize_adaptive outputs/adaptive-holdout-109.csv outputs/adaptive-objectives-120.csv
 ~~~

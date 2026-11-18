@@ -1,0 +1,10 @@
+{
+  "actions": 432,
+  "budget_changes_action_decisions": 16,
+  "budget_improves_regret_decisions": 16,
+  "decisions": 144,
+  "frontier_intervals": 432,
+  "tie_safe_dominated_actions": 269,
+  "tie_sensitive_dominance_decisions": 0,
+  "value_dominated_actions": 269
+}

@@ -1,0 +1,12 @@
+{
+  "cases": 1000,
+  "decisions": 9000,
+  "edits": 1935,
+  "future_target_decisions": 7193,
+  "numeric_plan_points": 82342,
+  "paths": 3000,
+  "positive_individual_paths": 0,
+  "positive_total_paths": 0,
+  "running_decisions": 6896,
+  "symbolic_plans": 27000
+}

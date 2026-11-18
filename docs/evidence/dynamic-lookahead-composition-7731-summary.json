@@ -1,0 +1,12 @@
+{
+  "cases": 1000,
+  "chain_edits": 1751,
+  "chained_differs_stale": 152,
+  "independent_edits": 1800,
+  "multiple_independent_edits_cases": 644,
+  "numeric_plan_points": 50856,
+  "stale_budget_violations": 12,
+  "stale_ledger_violations": 224,
+  "stale_total_worse": 4,
+  "symbolic_plans": 9902
+}

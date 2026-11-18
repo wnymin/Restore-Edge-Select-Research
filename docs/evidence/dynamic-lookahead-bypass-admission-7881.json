@@ -1,0 +1,650 @@
+{
+  "trace": {
+    "fixture_id": "later-small-request-bypasses-earlier-large-request",
+    "purpose": "Synthetic state-order counterexample; not hardware evidence.",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "1eef1f4e0bc57dec8f814d1e4c714c8e0065d261",
+    "units": {
+      "bytes_per_mib": 1048576,
+      "time": "ms"
+    },
+    "memory": {
+      "device_mib": 81920,
+      "fixed_mib": 12288,
+      "execution_mib": 256,
+      "workspace_mib": 32,
+      "prefetch_mib_cases": [
+        145
+      ],
+      "kv_block_tokens": 576,
+      "extra_alignment_bytes": 0
+    },
+    "scheduling": {
+      "future_window_requests": 3,
+      "initial_device_object_ids": [],
+      "arrival_tiebreak": "trace order",
+      "transfer_queue": "single serial queue; current request demand first; non-preemptive",
+      "prefetch_reservation": "all missing dependencies at once",
+      "transfer_submission": "one per object, in candidate load_order",
+      "compute_transfer_overlap": true,
+      "checkpoint_handoff": "exclusive checkpoint taken in place",
+      "checkpoint_writeback": false
+    },
+    "cost": {
+      "ram_to_device": {
+        "startup_ms": 0,
+        "bytes_per_ms": 18874368
+      },
+      "ssd_to_device": {
+        "startup_ms": 0,
+        "bytes_per_ms": 17170432
+      },
+      "recompute": {
+        "formula": "a*(L-c)+b*(L*(L+1)-c*(c+1))/2",
+        "a_ms_per_token_rational": [
+          8063,
+          1327104
+        ],
+        "b_ms_per_pair_rational": [
+          1,
+          663552
+        ]
+      }
+    },
+    "objects": [
+      {
+        "id": "B.kv1",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 0,
+        "end_token_inclusive": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 576
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "B.state1",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 576
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "B.kv2",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 576,
+        "end_token_inclusive": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "B.state2",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "C.kv1",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 0,
+        "end_token_inclusive": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 576
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "C.state1",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 576
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "C.kv2",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 576,
+        "end_token_inclusive": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "C.state2",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "D.kv1",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 0,
+        "end_token_inclusive": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 40,
+            "count": 576
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "D.state1",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 40,
+            "count": 576
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "D.kv2",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 576,
+        "end_token_inclusive": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 40,
+            "count": 1152
+          }
+        ],
+        "bytes": 18874368
+      },
+      {
+        "id": "D.state2",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 40,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      }
+    ],
+    "requests": [
+      {
+        "id": "A",
+        "arrival_ms": 0,
+        "input_token_runs": [
+          {
+            "token_id": 10,
+            "count": 3456
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "arrival_ms": 0,
+        "input_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 576,
+            "load_order": [
+              "B.kv1",
+              "B.state1"
+            ]
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "B.kv1",
+              "B.kv2",
+              "B.state2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "arrival_ms": 0,
+        "input_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "C.kv1",
+              "C.kv2",
+              "C.state2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D",
+        "arrival_ms": 0,
+        "input_token_runs": [
+          {
+            "token_id": 40,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 576,
+            "load_order": [
+              "D.kv1",
+              "D.state1"
+            ]
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "D.kv1",
+              "D.kv2",
+              "D.state2"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "capacity_mib": 145,
+  "outputs": {
+    "0": {
+      "completion_ms": [
+        "30",
+        "38",
+        "38",
+        "185/4"
+      ],
+      "prefetch_reserved_at_ms": [
+        null,
+        null,
+        "0",
+        null
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "C.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "1",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "C.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "1",
+          "end_ms": "2",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "C.state2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "2",
+          "end_ms": "5",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "D.kv1",
+          "request": "D",
+          "mode": "demand",
+          "start_ms": "38",
+          "end_ms": "39",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "demand",
+          "start_ms": "39",
+          "end_ms": "42",
+          "bytes": 51511296
+        }
+      ]
+    },
+    "576": {
+      "completion_ms": [
+        "30",
+        "137/4",
+        "157/4",
+        "87/2"
+      ],
+      "prefetch_reserved_at_ms": [
+        null,
+        "0",
+        null,
+        "0"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "1",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "1",
+          "end_ms": "4",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "D.kv1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "4",
+          "end_ms": "5",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "5",
+          "end_ms": "8",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "C.kv1",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "137/4",
+          "end_ms": "141/4",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "C.kv2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "141/4",
+          "end_ms": "145/4",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "C.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "145/4",
+          "end_ms": "157/4",
+          "bytes": 51511296
+        }
+      ]
+    },
+    "1152": {
+      "completion_ms": [
+        "30",
+        "30",
+        "35",
+        "173/4"
+      ],
+      "prefetch_reserved_at_ms": [
+        null,
+        "0",
+        null,
+        "30"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "1",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "1",
+          "end_ms": "2",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "2",
+          "end_ms": "5",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "C.kv1",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "30",
+          "end_ms": "31",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "C.kv2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "31",
+          "end_ms": "32",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "C.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "32",
+          "end_ms": "35",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "D.kv1",
+          "request": "D",
+          "mode": "demand",
+          "start_ms": "35",
+          "end_ms": "36",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "demand",
+          "start_ms": "36",
+          "end_ms": "39",
+          "bytes": 51511296
+        }
+      ]
+    }
+  },
+  "analysis": [
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 0,
+      "candidate": 0,
+      "cells": 7,
+      "faces": 4,
+      "edges": 3,
+      "vertices": 0,
+      "probes": 129,
+      "rlo": "5",
+      "rhi": "40",
+      "xlo": "3/4",
+      "xhi": "5/4",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 1,
+      "individual_upper": "0",
+      "total_upper": "0",
+      "regret": "31/2",
+      "corner_upper": "0",
+      "safe": 1,
+      "robust": 1152,
+      "protected": 1152,
+      "corners_false_safe": 0,
+      "sampled_max": "0",
+      "sampled_r": "121/24",
+      "sampled_x": "11/9"
+    },
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 0,
+      "candidate": 576,
+      "cells": 7,
+      "faces": 4,
+      "edges": 3,
+      "vertices": 0,
+      "probes": 129,
+      "rlo": "5",
+      "rhi": "40",
+      "xlo": "3/4",
+      "xhi": "5/4",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 1,
+      "individual_upper": "9/4",
+      "total_upper": "-4",
+      "regret": "19/2",
+      "corner_upper": "9/4",
+      "safe": 0,
+      "robust": 1152,
+      "protected": 1152,
+      "corners_false_safe": 0,
+      "sampled_max": "9/4",
+      "sampled_r": "5",
+      "sampled_x": "5/4"
+    },
+    {
+      "target": 1,
+      "head": 0,
+      "fallback": 0,
+      "candidate": 1152,
+      "cells": 7,
+      "faces": 4,
+      "edges": 3,
+      "vertices": 0,
+      "probes": 129,
+      "rlo": "5",
+      "rhi": "40",
+      "xlo": "3/4",
+      "xhi": "5/4",
+      "inflight": 0,
+      "sensitive_r": 1,
+      "sensitive_x": 1,
+      "individual_upper": "0",
+      "total_upper": "-41/4",
+      "regret": "0",
+      "corner_upper": "0",
+      "safe": 1,
+      "robust": 1152,
+      "protected": 1152,
+      "corners_false_safe": 0,
+      "sampled_max": "0",
+      "sampled_r": "121/24",
+      "sampled_x": "11/9"
+    }
+  ],
+  "sizes": {
+    "0": 0,
+    "576": 70385664
+  },
+  "c_size": 89260032,
+  "d_size": 70385664,
+  "scope": "Four arrived requests, one serial lane, fixed C deep and D shallow, B chooses zero or shallow; no shared missing objects or active transfer."
+}

@@ -1,0 +1,18 @@
+{
+  "snapshots": 1096,
+  "cells": 4056,
+  "audited_points": 11400,
+  "singleton_cells": 1480,
+  "slopes": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "affected_snapshots": 0,
+  "jump_transitions": 0,
+  "positive_jumps": 0,
+  "negative_jumps": 0,
+  "max_absolute_jump": "0",
+  "jumps": []
+}

@@ -5,8 +5,8 @@
 四份原始轨迹合计约 312 MB，存放在本地仓库的 `data/raw/bailian/`，该目录由 Git 忽略。克隆本项目后，从仓库根目录执行：
 
 ```text
-python scripts/fetch_bailian.py
-python scripts/fetch_bailian.py --verify-only
+python -m scripts.data.fetch_bailian
+python -m scripts.data.fetch_bailian --verify-only
 ```
 
 回放保留原到达间隔，在相同的检查点与放置规则下比较策略。上游哈希对应应用模板后的输入；不能从哈希反推文本，也不应再次套用聊天模板。窗口和运行命令见[实验口径与复现](../docs/experiment-index.md)。

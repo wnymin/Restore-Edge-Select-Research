@@ -1,0 +1,1570 @@
+{
+  "trace": {
+    "fixture_id": "phase1-prefetch-contention",
+    "purpose": "Synthetic event-simulator acceptance fixture; parameters are not hardware measurements.",
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "1eef1f4e0bc57dec8f814d1e4c714c8e0065d261",
+    "units": {
+      "bytes_per_mib": 1048576,
+      "time": "ms"
+    },
+    "memory": {
+      "device_mib": 81920,
+      "fixed_mib": 12288,
+      "execution_mib": 256,
+      "workspace_mib": 32,
+      "prefetch_mib_cases": [
+        0,
+        128,
+        160,
+        192
+      ],
+      "kv_block_tokens": 32,
+      "extra_alignment_bytes": 0
+    },
+    "scheduling": {
+      "future_window_requests": 6,
+      "initial_device_object_ids": [
+        "B.kv96",
+        "B.kv224",
+        "B.kv320",
+        "B.kv384",
+        "B.kv480",
+        "B.kv544",
+        "B.kv768",
+        "B.kv896",
+        "B.kv960",
+        "C.kv32",
+        "C.kv128",
+        "C.kv256",
+        "C.kv480",
+        "C.kv608",
+        "C.kv640",
+        "C.kv864",
+        "C.kv1088",
+        "C.kv1152"
+      ],
+      "arrival_tiebreak": "trace order",
+      "transfer_queue": "single serial queue; current request demand first; non-preemptive",
+      "prefetch_reservation": "all missing dependencies at once",
+      "transfer_submission": "one per object, in candidate load_order",
+      "compute_transfer_overlap": true,
+      "checkpoint_handoff": "exclusive checkpoint taken in place",
+      "checkpoint_writeback": false
+    },
+    "cost": {
+      "ram_to_device": {
+        "startup_ms": 0,
+        "bytes_per_ms": 18874368
+      },
+      "ssd_to_device": {
+        "startup_ms": 0,
+        "bytes_per_ms": "17170432/3"
+      },
+      "recompute": {
+        "formula": "a*(L-c)+b*(L*(L+1)-c*(c+1))/2",
+        "a_ms_per_token_rational": [
+          8063,
+          1327104
+        ],
+        "b_ms_per_pair_rational": [
+          1,
+          663552
+        ]
+      },
+      "device_copy": {
+        "startup_ms": "1/10",
+        "bytes_per_ms": "1048576"
+      }
+    },
+    "objects": [
+      {
+        "id": "B.kv32",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 0,
+        "end_token_inclusive": 32,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 32
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv64",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 32,
+        "end_token_inclusive": 64,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 64
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv96",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 64,
+        "end_token_inclusive": 96,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 96
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv128",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 96,
+        "end_token_inclusive": 128,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 128
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv160",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 128,
+        "end_token_inclusive": 160,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 160
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv192",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 160,
+        "end_token_inclusive": 192,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 192
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv224",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 192,
+        "end_token_inclusive": 224,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 224
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv256",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 224,
+        "end_token_inclusive": 256,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 256
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv288",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 256,
+        "end_token_inclusive": 288,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 288
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv320",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 288,
+        "end_token_inclusive": 320,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 320
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv352",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 320,
+        "end_token_inclusive": 352,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 352
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv384",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 352,
+        "end_token_inclusive": 384,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 384
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv416",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 384,
+        "end_token_inclusive": 416,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 416
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv448",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 416,
+        "end_token_inclusive": 448,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 448
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv480",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 448,
+        "end_token_inclusive": 480,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 480
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv512",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 480,
+        "end_token_inclusive": 512,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 512
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv544",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 512,
+        "end_token_inclusive": 544,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 544
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv576",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 544,
+        "end_token_inclusive": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 576
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv608",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 576,
+        "end_token_inclusive": 608,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 608
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv640",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 608,
+        "end_token_inclusive": 640,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 640
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv672",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 640,
+        "end_token_inclusive": 672,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 672
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv704",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 672,
+        "end_token_inclusive": 704,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 704
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv736",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 704,
+        "end_token_inclusive": 736,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 736
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv768",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 736,
+        "end_token_inclusive": 768,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 768
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv800",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 768,
+        "end_token_inclusive": 800,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 800
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv832",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 800,
+        "end_token_inclusive": 832,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 832
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv864",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 832,
+        "end_token_inclusive": 864,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 864
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv896",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 864,
+        "end_token_inclusive": 896,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 896
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv928",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 896,
+        "end_token_inclusive": 928,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 928
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv960",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 928,
+        "end_token_inclusive": 960,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 960
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv992",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 960,
+        "end_token_inclusive": 992,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 992
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv1024",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 992,
+        "end_token_inclusive": 1024,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1024
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv1056",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1024,
+        "end_token_inclusive": 1056,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1056
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv1088",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1056,
+        "end_token_inclusive": 1088,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1088
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv1120",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1088,
+        "end_token_inclusive": 1120,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1120
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.kv1152",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1120,
+        "end_token_inclusive": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "B.state896",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 896,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 896
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "B.state1152",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "C.kv32",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 0,
+        "end_token_inclusive": 32,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 32
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv64",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 32,
+        "end_token_inclusive": 64,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 64
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv96",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 64,
+        "end_token_inclusive": 96,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 96
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv128",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 96,
+        "end_token_inclusive": 128,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 128
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv160",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 128,
+        "end_token_inclusive": 160,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 160
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv192",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 160,
+        "end_token_inclusive": 192,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 192
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv224",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 192,
+        "end_token_inclusive": 224,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 224
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv256",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 224,
+        "end_token_inclusive": 256,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 256
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv288",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 256,
+        "end_token_inclusive": 288,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 288
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv320",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 288,
+        "end_token_inclusive": 320,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 320
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv352",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 320,
+        "end_token_inclusive": 352,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 352
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv384",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 352,
+        "end_token_inclusive": 384,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 384
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv416",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 384,
+        "end_token_inclusive": 416,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 416
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv448",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 416,
+        "end_token_inclusive": 448,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 448
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv480",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 448,
+        "end_token_inclusive": 480,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 480
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv512",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 480,
+        "end_token_inclusive": 512,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 512
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv544",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 512,
+        "end_token_inclusive": 544,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 544
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv576",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 544,
+        "end_token_inclusive": 576,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 576
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv608",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 576,
+        "end_token_inclusive": 608,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 608
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv640",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 608,
+        "end_token_inclusive": 640,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 640
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv672",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 640,
+        "end_token_inclusive": 672,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 672
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv704",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 672,
+        "end_token_inclusive": 704,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 704
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv736",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 704,
+        "end_token_inclusive": 736,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 736
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv768",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 736,
+        "end_token_inclusive": 768,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 768
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv800",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 768,
+        "end_token_inclusive": 800,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 800
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv832",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 800,
+        "end_token_inclusive": 832,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 832
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv864",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 832,
+        "end_token_inclusive": 864,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 864
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv896",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 864,
+        "end_token_inclusive": 896,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 896
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv928",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 896,
+        "end_token_inclusive": 928,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 928
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv960",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 928,
+        "end_token_inclusive": 960,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 960
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv992",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 960,
+        "end_token_inclusive": 992,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 992
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv1024",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 992,
+        "end_token_inclusive": 1024,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1024
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv1056",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1024,
+        "end_token_inclusive": 1056,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1056
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv1088",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1056,
+        "end_token_inclusive": 1088,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1088
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv1120",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1088,
+        "end_token_inclusive": 1120,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1120
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.kv1152",
+        "kind": "attention_kv",
+        "tier": "RAM",
+        "start_token_exclusive": 1120,
+        "end_token_inclusive": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "bytes": 1048576
+      },
+      {
+        "id": "C.state1120",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1120,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1120
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "C.state1152",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "D.state1120",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1120,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1120
+          }
+        ],
+        "bytes": 51511296
+      },
+      {
+        "id": "D.state1152",
+        "kind": "recurrent_and_conv_checkpoint",
+        "tier": "SSD",
+        "boundary_tokens": 1152,
+        "prefix_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "bytes": 51511296
+      }
+    ],
+    "requests": [
+      {
+        "id": "A",
+        "arrival_ms": 16,
+        "input_token_runs": [
+          {
+            "token_id": 10,
+            "count": 3456
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "arrival_ms": 32,
+        "input_token_runs": [
+          {
+            "token_id": 20,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 896,
+            "load_order": [
+              "B.kv32",
+              "B.kv64",
+              "B.kv96",
+              "B.kv128",
+              "B.kv160",
+              "B.kv192",
+              "B.kv224",
+              "B.kv256",
+              "B.kv288",
+              "B.kv320",
+              "B.kv352",
+              "B.kv384",
+              "B.kv416",
+              "B.kv448",
+              "B.kv480",
+              "B.kv512",
+              "B.kv544",
+              "B.kv576",
+              "B.kv608",
+              "B.kv640",
+              "B.kv672",
+              "B.kv704",
+              "B.kv736",
+              "B.kv768",
+              "B.kv800",
+              "B.kv832",
+              "B.kv864",
+              "B.kv896",
+              "B.state896"
+            ]
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "B.kv32",
+              "B.kv64",
+              "B.kv96",
+              "B.kv128",
+              "B.kv160",
+              "B.kv192",
+              "B.kv224",
+              "B.kv256",
+              "B.kv288",
+              "B.kv320",
+              "B.kv352",
+              "B.kv384",
+              "B.kv416",
+              "B.kv448",
+              "B.kv480",
+              "B.kv512",
+              "B.kv544",
+              "B.kv576",
+              "B.kv608",
+              "B.kv640",
+              "B.kv672",
+              "B.kv704",
+              "B.kv736",
+              "B.kv768",
+              "B.kv800",
+              "B.kv832",
+              "B.kv864",
+              "B.kv896",
+              "B.kv928",
+              "B.kv960",
+              "B.kv992",
+              "B.kv1024",
+              "B.kv1056",
+              "B.kv1088",
+              "B.kv1120",
+              "B.kv1152",
+              "B.state1152"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "arrival_ms": 32,
+        "input_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 1120,
+            "load_order": [
+              "C.kv32",
+              "C.kv64",
+              "C.kv96",
+              "C.kv128",
+              "C.kv160",
+              "C.kv192",
+              "C.kv224",
+              "C.kv256",
+              "C.kv288",
+              "C.kv320",
+              "C.kv352",
+              "C.kv384",
+              "C.kv416",
+              "C.kv448",
+              "C.kv480",
+              "C.kv512",
+              "C.kv544",
+              "C.kv576",
+              "C.kv608",
+              "C.kv640",
+              "C.kv672",
+              "C.kv704",
+              "C.kv736",
+              "C.kv768",
+              "C.kv800",
+              "C.kv832",
+              "C.kv864",
+              "C.kv896",
+              "C.kv928",
+              "C.kv960",
+              "C.kv992",
+              "C.kv1024",
+              "C.kv1056",
+              "C.kv1088",
+              "C.kv1120",
+              "C.state1120"
+            ]
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "C.kv32",
+              "C.kv64",
+              "C.kv96",
+              "C.kv128",
+              "C.kv160",
+              "C.kv192",
+              "C.kv224",
+              "C.kv256",
+              "C.kv288",
+              "C.kv320",
+              "C.kv352",
+              "C.kv384",
+              "C.kv416",
+              "C.kv448",
+              "C.kv480",
+              "C.kv512",
+              "C.kv544",
+              "C.kv576",
+              "C.kv608",
+              "C.kv640",
+              "C.kv672",
+              "C.kv704",
+              "C.kv736",
+              "C.kv768",
+              "C.kv800",
+              "C.kv832",
+              "C.kv864",
+              "C.kv896",
+              "C.kv928",
+              "C.kv960",
+              "C.kv992",
+              "C.kv1024",
+              "C.kv1056",
+              "C.kv1088",
+              "C.kv1120",
+              "C.kv1152",
+              "C.state1152"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D",
+        "arrival_ms": 36,
+        "input_token_runs": [
+          {
+            "token_id": 30,
+            "count": 1152
+          }
+        ],
+        "candidates": [
+          {
+            "boundary_tokens": 0,
+            "load_order": []
+          },
+          {
+            "boundary_tokens": 1120,
+            "load_order": [
+              "C.kv32",
+              "C.kv64",
+              "C.kv96",
+              "C.kv128",
+              "C.kv160",
+              "C.kv192",
+              "C.kv224",
+              "C.kv256",
+              "C.kv288",
+              "C.kv320",
+              "C.kv352",
+              "C.kv384",
+              "C.kv416",
+              "C.kv448",
+              "C.kv480",
+              "C.kv512",
+              "C.kv544",
+              "C.kv576",
+              "C.kv608",
+              "C.kv640",
+              "C.kv672",
+              "C.kv704",
+              "C.kv736",
+              "C.kv768",
+              "C.kv800",
+              "C.kv832",
+              "C.kv864",
+              "C.kv896",
+              "C.kv928",
+              "C.kv960",
+              "C.kv992",
+              "C.kv1024",
+              "C.kv1056",
+              "C.kv1088",
+              "C.kv1120",
+              "D.state1120"
+            ]
+          },
+          {
+            "boundary_tokens": 1152,
+            "load_order": [
+              "C.kv32",
+              "C.kv64",
+              "C.kv96",
+              "C.kv128",
+              "C.kv160",
+              "C.kv192",
+              "C.kv224",
+              "C.kv256",
+              "C.kv288",
+              "C.kv320",
+              "C.kv352",
+              "C.kv384",
+              "C.kv416",
+              "C.kv448",
+              "C.kv480",
+              "C.kv512",
+              "C.kv544",
+              "C.kv576",
+              "C.kv608",
+              "C.kv640",
+              "C.kv672",
+              "C.kv704",
+              "C.kv736",
+              "C.kv768",
+              "C.kv800",
+              "C.kv832",
+              "C.kv864",
+              "C.kv896",
+              "C.kv928",
+              "C.kv960",
+              "C.kv992",
+              "C.kv1024",
+              "C.kv1056",
+              "C.kv1088",
+              "C.kv1120",
+              "C.kv1152",
+              "D.state1152"
+            ]
+          }
+        ]
+      }
+    ],
+    "io_path_speed_epochs": {
+      "ram_to_device": [
+        [
+          0,
+          "1/2"
+        ]
+      ],
+      "ssd_to_device": [
+        [
+          0,
+          "1/2"
+        ]
+      ]
+    }
+  },
+  "capacity": 384,
+  "estimate": {
+    "compute": "3/2",
+    "device_copy": "1",
+    "ram_to_device": "1",
+    "ssd_to_device": "1"
+  },
+  "radius": "1/4",
+  "epsilon": "0",
+  "baseline": [
+    0,
+    0,
+    1152,
+    0
+  ],
+  "targets": [
+    1,
+    2,
+    3
+  ],
+  "individual_plans": [
+    [
+      0,
+      1152,
+      1152,
+      0
+    ],
+    [
+      0,
+      0,
+      1152,
+      0
+    ],
+    [
+      0,
+      0,
+      1152,
+      1152
+    ]
+  ],
+  "combined": [
+    0,
+    1152,
+    1152,
+    1152
+  ],
+  "chained": [
+    0,
+    1152,
+    1152,
+    0
+  ],
+  "stale_individual_upper": [
+    "0",
+    "-12",
+    "-6",
+    "9/2"
+  ],
+  "isolated_uppers": [
+    [
+      "0",
+      "-12",
+      "-6",
+      "-6"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-12"
+    ]
+  ],
+  "stale_total_upper": "-27/2"
+}
