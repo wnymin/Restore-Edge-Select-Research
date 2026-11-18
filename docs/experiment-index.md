@@ -6,6 +6,7 @@
 - **搬运：** [基础路径](evidence/load-io-profile.json)、[SSD 经锁页内存上传](evidence/load-staged-ssd-profile.json)；原始[分段读数](evidence/load-staged-ssd.csv)、[双路径并发](evidence/boundary-physical-channels.csv)、[与 prefill 并发](evidence/boundary-joint-contention.csv)。
 - **主对照：** [算法、离线最优、表格及复算](trace-oracle.md)。[压缩包](evidence/replay-inputs.zip)保留原始回放和参数，[真实两槽恢复与外推](gpu-boundary-restore.md)可独立核对。
 - **第三阶段 CPU 对照：** [动态状态干预、门控与留出回放](dynamic-cpu.md)。
+- **CPU 最新增量与离线验收：** [成果入口](dynamic-cpu-latest.md)。可先运行 `python scripts/check_dynamic_cpu_delivery.py`，无需网络或原始公开轨迹。
 
 ## 从公开轨迹重新运行主对照
 

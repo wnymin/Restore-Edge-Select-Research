@@ -22,6 +22,26 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def check_arrival_clock(fixture, model):
+    for arrivals in (("0", "10", "2"), (0, "10", 2),
+                     ("0", "10/3", "5/2"), ("1.00", 1, "1e0")):
+        trace = deepcopy(fixture)
+        reference = deepcopy(fixture)
+        for row, numeric, arrival in zip(trace["requests"], reference["requests"], arrivals, strict=True):
+            row["arrival_ms"] = arrival
+            numeric["arrival_ms"] = Fraction(str(arrival))
+        actual, expected = Experiment(trace, model, 128), Experiment(reference, model, 128)
+        require(actual.arrivals == sorted(actual.arrivals), "Arrival clock must be monotone")
+        require([r["id"] for r in actual.requests] == [r["id"] for r in expected.requests],
+                "Sort arrival values numerically and preserve trace order at equal times")
+        for policy in ("local-cost", "adaptive", "offline"):
+            a, b = ((actual.offline(), expected.offline()) if policy == "offline"
+                    else (actual.run(policy), expected.run(policy)))
+            require(all(a[k] == b[k] for k in ("boundaries_tokens", "completion_ms", "response_sum_ms")),
+                    "Equivalent exact arrival representations must produce identical execution")
+    print("Checked 4 exact arrival representations, including mixed types and stable ties.")
+
+
 def check_adaptive_search():
     # Four candidates: the cheapest prediction is merely the order in which
     # we test; the budget may hide a better, feasible boundary.
@@ -120,6 +140,7 @@ def main():
     fixture = json.loads((ROOT / "fixtures/phase1-hand-trace.json").read_text())
     spec = json.loads((ROOT / "configs/qwen3.5-4b.json").read_text())
     model = spec["models"][0]
+    check_arrival_clock(fixture, model)
     require(fixture["model"] == model["model_id"], "model mismatch")
     require(f"/{fixture['revision']}/" in model["config_url"], "revision mismatch")
     payload = model["payload"]
@@ -390,7 +411,8 @@ def main():
     opts = dict(score_candidate=lambda r: -r["serial_compute_ms"], screen_mode="unsettled", queue_horizon=4)
     isolated = Experiment(dict(fixture, requests=[fixture["requests"][1]]), model, 128)
     old = isolated.run("snapshot-screened", **opts, screen_search="entry")
-    for mode in ("entry-fast", "entry-progress"):
+    for mode in ("entry-fast", "entry-progress", "entry-transfer", "entry-transfer-audit",
+                 "entry-commit", "entry-replay"):
         new = isolated.run("snapshot-screened", **opts, screen_search=mode)
         require(old["decision_replays"] > 0 and new["decision_replays"] == 0
                 and old["boundaries_tokens"] == new["boundaries_tokens"]
@@ -404,7 +426,8 @@ def main():
     ):
         special = Experiment(cfg, model, 128)
         old = special.run("snapshot-screened", **opts, estimate=estimate, screen_search="entry")
-        for mode in ("entry-fast", "entry-progress"):
+        for mode in ("entry-fast", "entry-progress", "entry-transfer", "entry-transfer-audit",
+                     "entry-commit", "entry-replay"):
             require(special.run("snapshot-screened", **opts, estimate=estimate, screen_search=mode) == old,
                     f"{mode} must fall back when its stationary-cost assumptions do not hold")
     check_estimate_guards(fixture, model)

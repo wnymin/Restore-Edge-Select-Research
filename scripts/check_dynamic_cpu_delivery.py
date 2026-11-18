@@ -29,7 +29,11 @@ def main():
     args.out = args.out.resolve()
     args.out.mkdir(parents=True, exist_ok=True)
     frozen = json.loads((ROOT / "docs/evidence/dynamic-cpu-frozen.json").read_text(encoding="utf-8"))
-    require(frozen["inputs_sha256"] == descriptors(), "Frozen input byte hashes differ")
+    expected = frozen["inputs_sha256"]
+    actual_hashes = descriptors()
+    mismatches = sorted(path for path in expected.keys() | actual_hashes.keys()
+                        if expected.get(path) != actual_hashes.get(path))
+    require(not mismatches, "Frozen input byte hashes differ for " + ", ".join(mismatches))
 
     def run(script, *parameters):
         subprocess.run([sys.executable, str(ROOT / "scripts" / script), *map(str, parameters)],
@@ -67,7 +71,7 @@ def main():
             same = json.loads(actual.read_text(encoding="utf-8")) == json.loads(archived.read_text(encoding="utf-8"))
         require(same, f"Unseen-arrival evidence differs: {suffix}")
     metadata = dict(
-        python=sys.version.split()[0], frozen_inputs=len(descriptors()),
+        python=sys.version.split()[0], frozen_inputs=len(actual_hashes),
         exhaustive_configs_per_mode=300, five_request_configs_per_mode=18,
         transfer_bound_configs=len(transfer),
         exact_clock_configs=240,

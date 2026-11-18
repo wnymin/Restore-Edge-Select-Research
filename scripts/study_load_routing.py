@@ -16,7 +16,7 @@ from restore_edge_select.adaptive import AdaptiveConfig
 
 
 CLASSES = ("idle", "light_io", "capacity", "transfer_queue", "reuse", "overlap", "uncoupled")
-EXACT_SEARCH = {"entry", "entry-fast", "entry-progress"}
+EXACT_SEARCH = {"entry", "entry-fast", "entry-progress", "entry-transfer", "entry-commit", "entry-replay"}
 ADAPTIVE = {"adaptive", "adaptive-audit", "adaptive-strict", "adaptive-screened", "adaptive-screened-audit",
             "adaptive-fixed2", "adaptive-exhaustive", "adaptive-mean", "adaptive-mean-audit"}
 MIXED_PROJECTED = "mixed-projected-entry"
