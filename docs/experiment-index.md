@@ -1,10 +1,12 @@
 # 实验输入与复现
 
-运行需要 Python 3.12 或 3.13。手算验收用仓库内的[轨迹与检查点](phase1.md)，无需下载。公开轨迹回放见[数据版本与校验](../data/README.md)；轨迹提供到达、输入长度和前缀哈希，实验另构造缓存放置、候选边界和预算。
+本轮连续研究已合并为[有限暂存容量下的前缀恢复边界选择](dynamic-gpu-lookahead-report.md)。报告统一列出结论、证据、适用边界与后续方向，第 6 节索引各轮详细推导和复现命令。
 
-- **续算：** [4K](evidence/prefill-vulkan-4k.json) 与 [8K](evidence/prefill-vulkan-8k.json) 成本网格来自 RTX 4060 Laptop 上的 Qwen3.5-4B Q4_K_M、llama.cpp b10923 Vulkan。按已恢复前缀与后缀插值，网格外不外推。
-- **搬运：** [基础路径](evidence/load-io-profile.json)、[SSD 经锁页内存上传](evidence/load-staged-ssd-profile.json)；原始[分段读数](evidence/load-staged-ssd.csv)、[双路径并发](evidence/boundary-physical-channels.csv)、[与 prefill 并发](evidence/boundary-joint-contention.csv)。
-- **主对照：** [算法、离线最优、表格及复算](trace-oracle.md)。[压缩包](evidence/replay-inputs.zip)保留原始回放和参数，[真实两槽恢复与外推](gpu-boundary-restore.md)可独立核对。
+前瞻算法的分轮输入、反例和复现命令集中在[主报告第 6 节](dynamic-gpu-lookahead-report.md#6-合并与复现索引)和[证据附录](dynamic-gpu-lookahead-appendices.md)。
+
+本项目所有动态因素研究均遵循[研究约束与因素取舍协议](recovery-research-protocol.md)：先按影响程度和可量化性排序，再用消融、留出与损失预算决定是否简化。
+
+本项目动态因素研究统一遵循[恢复边界研究约束与因素取舍协议](recovery-research-protocol.md)。
 
 ## 从公开轨迹重新运行主对照
 
@@ -72,3 +74,7 @@ python scripts/summarize_lane_objective.py outputs/lane-objective-24-shared.csv 
 ~~~sh
 python scripts/validate_batch_join.py docs/evidence/batch-warm.json docs/evidence/batch-stagger-150.json docs/evidence/batch-stagger-300.json
 ~~~
+
+## GPU 归档区间审计
+
+主报告第 3.23 节的区间审计使用已有 CSV。运行 `python scripts/audit_gpu_interval_coverage.py --check docs/evidence/dynamic-gpu-interval-audit-7870.json` 可复核冻结区间、来源哈希与逐批计数。
