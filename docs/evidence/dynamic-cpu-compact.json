@@ -1,0 +1,52 @@
+{
+  "prior_holdout_equivalent": 480,
+  "windows": [
+    68,
+    70,
+    72
+  ],
+  "rates": [
+    1,
+    12,
+    20,
+    32
+  ],
+  "budgets": [
+    128,
+    384
+  ],
+  "policies": [
+    "local-cost",
+    "entry",
+    "dynamic",
+    "compact"
+  ],
+  "layouts": [
+    [
+      "ssd",
+      "1"
+    ],
+    [
+      "split",
+      "1/4"
+    ]
+  ],
+  "traces": [
+    "qwen_coder_blksz_16.jsonl",
+    "qwen_traceA_blksz_16.jsonl",
+    "qwen_traceB_blksz_16.jsonl"
+  ],
+  "seed": 20261117,
+  "repeats": 3,
+  "oracle_max_nodes": 32,
+  "gate_margin_ms": "1/4",
+  "prior_inputs_sha256": {
+    "docs/evidence/adaptive-trace-oracle.csv": "37f5423e0400e2a36d0abf94fcb2747b4509747c678804f737a1a3b153a69499",
+    "fixtures/phase1-hand-trace.json": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9",
+    "docs/evidence/prefill-vulkan-4k.json": "f1a0ffa909f1cf10cbbc8befdfb28c63a4e74be9982ac2398e1ddec964977b11",
+    "docs/evidence/load-staged-ssd-profile.json": "09e2b7cc6d14b6500957c05cc0b90a364ab7d7f708a32c2eb61086fd7f4dd5ef",
+    "data/bailian-manifest.json": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d",
+    "configs/qwen3.5-4b.json": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203",
+    "configs/overlap-observed-upper.json": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf"
+  }
+}

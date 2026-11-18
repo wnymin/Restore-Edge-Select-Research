@@ -1,0 +1,13 @@
+{
+  "parameters": {
+    "seed": 20261120,
+    "repeats": 6,
+    "holdout": false
+  },
+  "cases": 144,
+  "synthetic_cases": 400,
+  "source_sha256": {
+    "scripts/study_transfer_bounds.py": "8098772196f2672a2c2aa52d653ead1e14a8bf4f5e2c40ef3b822bb5a5f43594",
+    "src/restore_edge_select/simulator.py": "9ea3925887c77e069078b6ce117663a321e9c3ecd85523a454b777a84556cf99"
+  }
+}

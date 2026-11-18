@@ -1,0 +1,176 @@
+{
+  "top": 12,
+  "node_budgets": [
+    32,
+    256,
+    2048
+  ],
+  "ranking": "largest absolute offline interval first",
+  "selection": [
+    {
+      "source": "dynamic-cpu-io-margin.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "65",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "128"
+      },
+      "width_ms": 2284.4537078447493
+    },
+    {
+      "source": "dynamic-cpu-io-margin.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "65",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "384"
+      },
+      "width_ms": 2126.514533448758
+    },
+    {
+      "source": "dynamic-cpu-entry-dense.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "82",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "128"
+      },
+      "width_ms": 2121.679378524401
+    },
+    {
+      "source": "dynamic-cpu-io-margin.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "65",
+        "path": "ssd",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "128"
+      },
+      "width_ms": 2006.0681187976534
+    },
+    {
+      "source": "dynamic-cpu-compact.csv",
+      "key": {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": "70",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "384"
+      },
+      "width_ms": 1938.4146199945026
+    },
+    {
+      "source": "dynamic-cpu-entry-dense.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "82",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "384"
+      },
+      "width_ms": 1910.776425949398
+    },
+    {
+      "source": "dynamic-cpu-io-margin.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "65",
+        "path": "ssd",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "384"
+      },
+      "width_ms": 1870.6796280165509
+    },
+    {
+      "source": "dynamic-cpu-compact.csv",
+      "key": {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": "70",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "128"
+      },
+      "width_ms": 1812.6713353115883
+    },
+    {
+      "source": "dynamic-cpu-blocked.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "69",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "128"
+      },
+      "width_ms": 1715.841826287412
+    },
+    {
+      "source": "dynamic-cpu-blocked.csv",
+      "key": {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": "71",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "128"
+      },
+      "width_ms": 1630.447648918348
+    },
+    {
+      "source": "dynamic-cpu-blocked.csv",
+      "key": {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": "69",
+        "path": "all",
+        "rate": "32",
+        "placement": "split",
+        "spacing": "1/4",
+        "budget": "128"
+      },
+      "width_ms": 1581.347478657699
+    },
+    {
+      "source": "dynamic-cpu-io-margin.csv",
+      "key": {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": "67",
+        "path": "all",
+        "rate": "32",
+        "placement": "ssd",
+        "spacing": "1",
+        "budget": "384"
+      },
+      "width_ms": 1513.6387859296337
+    }
+  ],
+  "source_sha256": {
+    "scripts/refine_dynamic_cpu_oracle.py": "0ed69a13d429411cf24f95ebd1369792281c9808fa35fe90e2094c9574c1d279",
+    "src/restore_edge_select/offline_bounds.py": "7c8f39795ae56c815c9785b2dd892be2b82a302744f0717e789a4ed0e988c34d",
+    "docs/evidence/dynamic-cpu-compact.csv": "b2a24b7603d110830ded585fdb959ca36bafda994dcf15ceffb9fdcd1e686291",
+    "docs/evidence/dynamic-cpu-blocked.csv": "d9cbf22293707ac95892388184ca3fc3ff7c6d654f978447d1e20c72bbc2290f",
+    "docs/evidence/dynamic-cpu-io-margin.csv": "7c3445099e4eb37e729f3b9ddeb3355066c5c7fa45b35b9c4f0da2a796dbb2fc",
+    "docs/evidence/dynamic-cpu-entry.csv": "18e80de0802acfb903d05d036e042e151e12647d9074e5602d86ef77828fbe41",
+    "docs/evidence/dynamic-cpu-entry-dense.csv": "f551f35b355fc3edfd083a5fca46a05066a769bbdf032678e2502701cea5d4b8"
+  }
+}

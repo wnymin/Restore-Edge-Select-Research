@@ -25,7 +25,7 @@ P0 必须保留，但不要求每次全量推演。证明候选后续状态等�
 
 ## CPU 固定动作配对复算
 
-基于 [864 条干预记录](evidence/dynamic-cpu-interventions.csv)。每次只变一个实验项；固定其他三个实验项、目标请求、比较边界和原基线边界，并排除不改选。一组内若 `mean_gain_ms` 同时严格为正和负（容差 $10^{-9}$ ms），记作异号。计数是**固定边界改选相对同一边界基线的收益符号变化**，不是全候选最优边界翻转率或生产发生率。
+基于 [864 条干预记录](evidence/dynamic-cpu-interventions-synthetic-864.csv)。每次只变一个实验项；固定其他三个实验项、目标请求、比较边界和原基线边界，并排除不改选。一组内若 `mean_gain_ms` 同时严格为正和负（容差 $10^{-9}$ ms），记作异号。计数是**固定边界改选相对同一边界基线的收益符号变化**，不是全候选最优边界翻转率或生产发生率。
 
 | 变化项 | 异号组 / 合格组 | 解释 |
 | --- | ---: | --- |
@@ -37,7 +37,7 @@ P0 必须保留，但不要求每次全量推演。证明候选后续状态等�
 从实验仓库根目录复算：
 
 ~~~powershell
-$rows = Import-Csv docs/evidence/dynamic-cpu-interventions.csv
+$rows = Import-Csv docs/evidence/dynamic-cpu-interventions-synthetic-864.csv
 $factors = 'budget_mib','sharing','c_arrival_ms','ssd_scale'
 foreach ($factor in $factors) {
     $keys = ($factors | Where-Object { $_ -ne $factor }) + @('target','boundary')

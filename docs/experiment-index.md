@@ -2,6 +2,12 @@
 
 脚本按任务分类，见[脚本索引](../scripts/README.md)。下列命令均从实验仓库根目录运行。
 
+- **续算：** [4K](evidence/prefill-vulkan-4k.json) 与 [8K](evidence/prefill-vulkan-8k.json) 成本网格来自 RTX 4060 Laptop 上的 Qwen3.5-4B Q4_K_M、llama.cpp b10923 Vulkan。按已恢复前缀与后缀插值，网格外不外推。
+- **搬运：** [基础路径](evidence/load-io-profile.json)、[SSD 经锁页内存上传](evidence/load-staged-ssd-profile.json)；原始[分段读数](evidence/load-staged-ssd.csv)、[双路径并发](evidence/boundary-physical-channels.csv)、[与 prefill 并发](evidence/boundary-joint-contention.csv)。
+- **主对照：** [算法、离线最优、表格及复算](trace-oracle.md)。[压缩包](evidence/replay-inputs.zip)保留原始回放和参数，[真实两槽恢复与外推](gpu-boundary-restore.md)可独立核对。
+- **第三阶段 CPU 对照：** [动态状态干预、门控与留出回放](dynamic-cpu.md)。
+- **CPU 最新增量与离线验收：** [成果入口](dynamic-cpu-latest.md)。可先运行 `python -m scripts.validation.check_dynamic_cpu_delivery`，无需网络或原始公开轨迹。
+
 本轮连续研究已合并为[有限暂存容量下的前缀恢复边界选择](dynamic-gpu-lookahead-report.md)。报告统一列出结论、证据、适用边界与后续方向，第 6 节索引各轮详细推导和复现命令。
 
 前瞻算法的分轮输入、反例和复现命令集中在[主报告第 6 节](dynamic-gpu-lookahead-report.md#6-合并与复现索引)和[证据附录](dynamic-gpu-lookahead-appendices.md)。

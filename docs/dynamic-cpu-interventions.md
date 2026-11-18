@@ -15,7 +15,7 @@ python -m scripts.cpu.replay.study_dynamic_cpu --out outputs/dynamic-cpu-interve
 python scripts/check_fixture.py
 ~~~
 
-脚本同时生成同名 CSV。[逐次记录](evidence/dynamic-cpu-interventions.csv)保存收益、目标和后续完成时刻变化、基线与最优均值，以及选点前的容量、缺失量、计算余量、在途和积压信号。JSON 保存完整候选快照。
+脚本同时生成同名 CSV。[逐次记录](evidence/dynamic-cpu-interventions-synthetic-864.csv)保存收益、目标和后续完成时刻变化、基线与最优均值，以及选点前的容量、缺失量、计算余量、在途和积压信号。JSON 保存完整候选快照。
 
 ## 结果
 

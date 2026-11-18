@@ -19,6 +19,7 @@ python scripts/simulate.py --prefetch-mib 160 --policy local-cost adaptive offli
 | 12 轮前瞻及早期 GPU 汇总的合并证据 | [证据附录](docs/dynamic-gpu-lookahead-appendices.md) |
 | 算法设计覆盖与逐项验收 | [报告第 7 节](docs/dynamic-gpu-lookahead-report.md#algorithm-design) |
 | 策略、计时、离线最优表及跨硬件接近率 | [选点对照](docs/trace-oracle.md) |
+| CPU 协作者最新结果、限制与一键验收 | [最新成果入口](docs/dynamic-cpu-latest.md) |
 | 成本依据、保留数据和复现命令 | [实验口径与复现](docs/experiment-index.md) |
 
 [研究分工](docs/work-plan.md) · [协作约定](CONTRIBUTING.md)

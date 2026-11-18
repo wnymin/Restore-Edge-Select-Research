@@ -35,6 +35,6 @@
 
 - 区分模型内证明、CPU 模拟、GPU 实测和外推。模拟压力倍率不是硬件阈值；CPU 决策计时不是 TTFT、TPOT、吞吐或 SLO 实测；减少模拟事件不等于净在线加速。
 - 公开轨迹的校准／留出按窗口、种子和成本工况冻结；构造例只证明可能性，不估计生产频率；同一轨迹的多组干预不是独立生产样本。报告必须保留失败案例和适用边界。
-- 从仓库根目录验证：`python scripts/check_fixture.py`；CPU 交付可运行 `python scripts/check_dynamic_cpu_delivery.py`（若当前提交包含该入口）。代码、配置、脚本和精简证据分别放 `src/`、`configs/`、`scripts/`、`docs/evidence/`，原始轨迹、模型权重和机器专用文件不提交。
+- 从仓库根目录验证：`python scripts/check_fixture.py`；CPU 交付可运行 `python -m scripts.validation.check_dynamic_cpu_delivery`（若当前提交包含该入口）。代码、配置、脚本和精简证据分别放 `src/`、`configs/`、`scripts/`、`docs/evidence/`，原始轨迹、模型权重和机器专用文件不提交。
 
 B1–B3 CPU 分工已验收，不要当作未完成任务。当前未决重点是一般多请求的必要状态、真实状态误差覆盖、多步可组合保证、证书构造的净开销，以及与 A 组 GPU 机制证据的交叉验证。CPU 结项不代表 A 组或整个项目结项。

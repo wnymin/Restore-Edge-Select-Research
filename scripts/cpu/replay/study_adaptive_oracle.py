@@ -14,12 +14,37 @@ from restore_edge_select.adaptive import AdaptiveConfig
 from restore_edge_select.offline_bounds import search
 
 
+def check_dominance(fixture, model):
+    cases = pruned = 0
+    for spacing, budget, shared in product((1, 12, 40), (0, 128, 192), (False, True)):
+        trace = deepcopy(fixture)
+        trace["cost"]["device_copy"] = {"startup_ms": "0", "bytes_per_ms": 100_000_000}
+        originals = trace["requests"][1:]
+        trace["requests"] = [trace["requests"][0]]
+        for k in range(4):
+            request = deepcopy(originals[0 if shared else k % 2])
+            trace["requests"].append(dict(request, id=f"R{k}", arrival_ms=1 + k * spacing))
+        exp = Experiment(trace, model, budget)
+        exact = exp.offline()
+        stats = {}
+        lo, hi, plan, _ = search(exp, [exp.run("local-cost")], 10000, dominance=True, diagnostics=stats)
+        assert lo == hi == exact["response_sum_ms"]
+        assert exp.run("fixed", boundaries=plan)["response_sum_ms"] == hi
+        cases += 1
+        pruned += stats["dominated"]
+    assert pruned > 0
+    print(f"Checked {cases} five-request exhaustive cases; merged {pruned} dominated states.")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, required=True)
+    parser.add_argument('--resource-floor', action='store_true')
+    parser.add_argument('--dominance', action='store_true')
     args = parser.parse_args()
     fixture = read(ROOT / 'fixtures/phase1-hand-trace.json')
     model = read(ROOT / 'configs/qwen3.5-4b.json')['models'][0]
+    args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open('w', encoding='utf-8', newline='') as stream:
         out = csv.writer(stream, lineterminator='\n')
         out.writerow(('sharing', 'overlap', 'budget', 'ssd_scale', 'c_arrival_ms', 'policy',
@@ -43,9 +68,11 @@ def main():
                 assert {plan[1] for plan in oracle['offline_optima']} == {expected_b}
                 assert exp.arrivals[1] == 1 < arrival and exp.window >= 1
             local = exp.run('local-cost')
-            lo, hi, _, _ = search(exp, [local], max_nodes=1)
+            lo, hi, _, _ = search(exp, [local], max_nodes=1, resource_floor=args.resource_floor,
+                                  dominance=args.dominance)
             assert lo <= oracle['response_sum_ms'] <= hi
-            lo, hi, plan, _ = search(exp, [local], max_nodes=100)
+            lo, hi, plan, _ = search(exp, [local], max_nodes=100, resource_floor=args.resource_floor,
+                                     dominance=args.dominance)
             assert lo == hi == oracle['response_sum_ms']
             assert exp.run('fixed', boundaries=plan)['response_sum_ms'] == hi
             opts = dict(screen_mode='unsettled', queue_horizon=4,
@@ -68,6 +95,8 @@ def main():
                               sum(r['certified'] for r in routes.values()),
                               float(max((r['gap_max_ms'] for r in routes.values()), default=0)),
                               json.dumps(run['boundaries_tokens'], separators=(',', ':'))))
+    if args.dominance:
+        check_dominance(fixture, model)
 
 
 if __name__ == '__main__':

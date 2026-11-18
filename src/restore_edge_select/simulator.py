@@ -50,7 +50,7 @@ class Experiment:
         self.objects = {obj["id"]: obj for obj in trace["objects"]}
         if len(self.objects) != len(trace["objects"]):
             raise ValueError("Duplicate object ID")
-        self.requests = sorted(trace["requests"], key=lambda r: r["arrival_ms"])
+        self.requests = sorted(trace["requests"], key=lambda r: number(r["arrival_ms"]))
         self.lengths = [sum(run["count"] for run in r["input_token_runs"]) for r in self.requests]
         self.arrivals = [number(r["arrival_ms"]) for r in self.requests]
         self.candidates = [
@@ -200,6 +200,9 @@ class Experiment:
         if self.dynamic and (trace.get("actual_transfer_ms_by_object") or
                              any(len(t) != 1 for t, _ in self.io_epochs.values())):
             raise ValueError("Overlap model currently requires stationary known I/O")
+        self._stationary_costs = (not self.per_tier and not self.host_cache_bytes
+                                  and self._actual_transfer_times == self._transfer_times
+                                  and all(speeds == (1,) for _, speeds in self.io_epochs.values()))
 
     def size(self, ids):
         return sum(self.objects[obj]["bytes"] + self.alignment for obj in ids)
@@ -238,10 +241,22 @@ class Experiment:
                     or future_cost_cases or screen_search != "full" or queue_horizon is not None
                     or (adaptive.audit and (profile_decisions or inject_measured))):
                 raise ValueError("Adaptive routing requires the single-lane model and its own search configuration")
+            if adaptive.compact and (estimate or not self._stationary_costs):
+                raise ValueError("Compact adaptive routing requires stationary known costs")
         elif adaptive is not None:
             raise ValueError("Adaptive configuration requires the adaptive policy")
         estimate_modes = {"estimate", "estimate-cross-tier", "estimate-cross-tier-guard",
                           "estimate-prefetch-fallback"}
+        transfer_bound = screen_search in {"entry-transfer", "entry-transfer-audit"}
+        bound_audit = screen_search == "entry-transfer-audit"
+        committed_choices = screen_search in {"entry-commit", "entry-replay"}
+        scalar_replay = screen_search == "entry-replay"
+        if bound_audit and (inject_measured or profile_decisions):
+            raise ValueError("Transfer-bound audit requires zero-overhead replay")
+        fast_entry = screen_search in {"entry-fast", "entry-progress"} or transfer_bound or committed_choices
+        progress_bound = screen_search == "entry-progress"
+        if fast_entry:
+            screen_search = "entry"
         if screen_search not in {"full", "lean", "compute", "cutoff", "entry"} | estimate_modes or (
                 screen_search != "full" and policy != "snapshot-screened"):
             raise ValueError("Search variants require a screened queue policy")
@@ -314,6 +329,8 @@ class Experiment:
                 v <= 0 for v in estimate.values()) or min(number(guard_ms), transfer_trigger, screen, pair_cost,
                                                           probe_cost, lag, stable) < 0:
             raise ValueError("Invalid duration multiplier or negative threshold")
+        fast_entry = (fast_entry and self._stationary_costs and not estimate and not future_cost_cases
+                      and screen_mode == "unsettled" and queue_horizon is not None)
         return self._run(policy, threshold_tokens, boundaries, max_combinations, len(self.requests),
                          estimate=estimate, guard=number(guard_ms), transfer_trigger=transfer_trigger,
                          screen=screen, pair_cost=pair_cost, probe_cost=probe_cost, lag=lag, stable=stable,
@@ -322,7 +339,10 @@ class Experiment:
                          intervention_budget=intervention_budget, decision_overrides=overrides,
                          screen_mode=screen_mode, min_gain=min_gain, future_cost_cases=future_cost_cases,
                          queue_horizon=queue_horizon, screen_selector=screen_selector,
-                         screen_observer=screen_observer, screen_search=screen_search, adaptive=adaptive)
+                         screen_observer=screen_observer, screen_search=screen_search, adaptive=adaptive,
+                         cached_costs=fast_entry, progress_bound=fast_entry and progress_bound,
+                         transfer_bound=fast_entry and transfer_bound, bound_audit=fast_entry and bound_audit,
+                         committed_choices=fast_entry and committed_choices, scalar_replay=fast_entry and scalar_replay)
 
     def _run(self, policy, threshold_tokens, boundaries, max_combinations, n, *,
              snapshot=None, estimate=None, guard=0, transfer_trigger=0, screen=0, pair_cost=0, probe_cost=0,
@@ -332,6 +352,8 @@ class Experiment:
              screen_mode=None, min_gain=0, future_cost_cases=None, future_cost=None, queue_horizon=None,
              screen_selector=None, screen_observer=None, screen_search="full",
              completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None,
+             cached_costs=False, progress_bound=False, transfer_bound=False, bound_audit=False,
+             collect_offline_state=False, committed_choices=False, scalar_replay=False,
              pause_at_head=None):
         if pause_at_head is not None and (
                 snapshot is None or policy != "fixed" or not lean_rollout or self.dynamic
@@ -374,6 +396,7 @@ class Experiment:
         forecasting = snapshot is not None
         lookahead_replays = 0
         decision_replays = 0
+        bound_checks = bound_prunes = bound_audits = 0
         decision_events = events_processed = pair_decisions = pair_opportunities = 0
         probes = scenario_checks = robust_accepts = pruned_rollouts = 0
         pending = None
@@ -409,6 +432,11 @@ class Experiment:
                          else self.lane_slowdown)
         estimate = estimate or {}
         execution_factors = estimate if snapshot is not None else {}
+        direct_fixed = (committed_choices and forecasting and policy == "fixed" and offline_probe is None
+                        and not (profile_decisions or inject_measured or screen or pair_cost or probe_cost))
+        simple_scalars = scalar_replay and direct_fixed and not execution_factors
+        compact = adaptive is not None and adaptive.compact
+        direct_costs = cached_costs or compact
         def observed_epoch(path, t):
             return bisect_right(self.io_epochs[path][0], max(0, t - lag)) - 1
 
@@ -421,6 +449,8 @@ class Experiment:
             return {"RAM": "ram_to_device", "SSD": "ssd_to_device"}[self.objects[obj]["tier"]]
 
         def duration(obj, factors, at=None):
+            if direct_costs:
+                return self._transfer_times[obj]
             t = now if at is None else at
             path = path_for(obj)
             speed = forecast_speed[path] if forecasting else observed_speed(path, t)
@@ -484,6 +514,7 @@ class Experiment:
         def choose(i):
             nonlocal lookahead_replays, decision_replays, decision_events, pair_decisions, pair_opportunities, probes
             nonlocal scenario_checks, robust_accepts, pruned_rollouts
+            nonlocal bound_checks, bound_prunes, bound_audits
             choices = self.eligible[i]
             if i in decision_overrides:
                 return decision_overrides[i]
@@ -504,6 +535,12 @@ class Experiment:
                     if adaptive is not None:
                         record_route('single-choice')
                     return choices[0]
+                if (cached_costs and i == head and arrived == i + 1 and not held_reservation
+                        and running_until is None and transfer is None and not admitted
+                        and ready == self.initial):
+                    # Without a peer or a pending transfer, isolated service
+                    # cost is the exact window objective up to a constant.
+                    return serial_choice(i)
                 isolated_adaptive = adaptive is not None and arrived == i + 1 and not held_reservation
                 if ((isolated_adaptive or policy == "remaining-wait-fast" and not guard) and i == head
                         and running_until is None and transfer is None and not admitted
@@ -611,6 +648,8 @@ class Experiment:
                     debt = sum(duration(obj, estimate) for obj in queued)
                     charged = reserved | held_reservation
                     free = self.budget - self.size(charged)
+                    age = now - self.arrivals[i]
+                    inflight = flight_end - now
                     queued_compute = sum(
                         self._suffix_times[j][selected[j]] * estimate.get("compute", 1)
                         for j in range(head + int(predicted_run is not None), i)
@@ -637,7 +676,7 @@ class Experiment:
                                             if c and c < self.lengths[i] and self.candidates[i][c][-1] in self.initial else 0),
                             serial_io_ms=(max(serial_by_path.values()) if self.per_tier
                                           else sum(serial_by_path.values())),
-                            head_distance=i - head, arrival_age_ms=now - self.arrivals[i],
+                            head_distance=i - head, arrival_age_ms=age,
                             head_slack_ms=slack, prefetch_fits=fits,
                             committed_ahead_compute_ms=queued_compute,
                             extra_reserve_bytes=extra, free_reserve_bytes=free,
@@ -649,7 +688,7 @@ class Experiment:
                             missing_bytes=self.size(missing),
                             incremental_ram_ms=by_path["ram_to_device"],
                             incremental_ssd_ms=by_path["ssd_to_device"],
-                            inflight_ms=flight_end - now, queue_debt_ms=debt,
+                            inflight_ms=inflight, queue_debt_ms=debt,
                             checkpoint_tier=("RAM" if self.candidates[i][c][-1] in host_cache else
                                              self.objects[self.candidates[i][c][-1]]["tier"]) if c else "",
                         )
@@ -729,7 +768,9 @@ class Experiment:
                                     snapshot=state, estimate=estimate, forecast_speed=speeds,
                                     prefetch_budget=budget, active_kv_handoff=handoff, future_cost=cost,
                                     completion_cutoff=cutoff,
-                                    lean_rollout=screen_search != "full" or adaptive is not None)
+                                    lean_rollout=screen_search != "full" or adaptive is not None,
+                                    cached_costs=cached_costs, committed_choices=committed_choices,
+                                    scalar_replay=scalar_replay)
                     decision_replays += 1
                     decision_events += run["events_processed"]
                     if run.get("pruned"):
@@ -742,6 +783,19 @@ class Experiment:
                     return run["completion_ms"]
 
                 if adaptive is not None:
+                    route_label = None
+                    if adaptive.route is not None:
+                        if i not in serial_choices:
+                            serial_choices[i] = serial_choice(i)
+                        base = serial_choices[i]
+                        # Other rows share the same number of arrived followers.
+                        observable[base]["visible_after"] = min(adaptive.later, arrived - i - 1)
+                        route_label, chosen = adaptive.route(observable, base, self.budget)
+                        if chosen is not None:
+                            if chosen not in observable:
+                                raise ValueError("Adaptive route selected an ineligible boundary")
+                            record_route(route_label, gap=None, changed=chosen != base)
+                            return chosen
                     visible = min(arrived, i + 1 + adaptive.later)
                     for j in range(i, visible):
                         if j not in serial_choices:
@@ -758,9 +812,18 @@ class Experiment:
                     for left in work:
                         time += left
                         offsets.append(time)
-                    lower = {c: tuple(end + (self._suffix_times[i][c] - self._suffix_times[i][base]) * factor
-                                      if j >= i else end for j, end in enumerate(offsets, head))
-                             for c in choices}
+                    lower = lower_sums = None
+                    suffix_baseline = self._suffix_times[i][base]
+                    if compact:
+                        # Changing this boundary shifts the compute-only lower
+                        # bound of the target and every request after it.
+                        baseline_floor = sum(offsets)
+                        lower_sums = {c: baseline_floor + (visible - i) * (self._suffix_times[i][c] - suffix_baseline)
+                                      for c in choices}
+                    else:
+                        lower = {c: tuple(end + (self._suffix_times[i][c] - suffix_baseline) * factor
+                                          if j >= i else end for j, end in enumerate(offsets, head))
+                                 for c in choices}
                     rank = {}
                     for c, row in observable.items():
                         io = row['incremental_ram_ms'] + row['incremental_ssd_ms']
@@ -773,8 +836,9 @@ class Experiment:
                     before = decision_replays
                     boundary, label, gap, gain, missed = adaptive_select(
                         observable, base, self.budget, adaptive, lower,
-                        lambda c: forecast((c, *later), visible), rank)
-                    record_route(label, gap, gain, boundary != base, decision_replays - before, missed)
+                        lambda c: forecast((c, *later), visible), rank, lower_sums=lower_sums)
+                    record_route(route_label or label, gap, gain, boundary != base,
+                                 decision_replays - before, missed)
                     return boundary
 
                 if pair:
@@ -841,6 +905,39 @@ class Experiment:
                                 initial_floor += jobs * ((predicted_run - now) / compute_factor - work)
                         scores = {fallback: objective(fallback)}
                         best = fallback
+                        if transfer_bound:
+                            data_floors = None
+
+                            def transfer_floor(c):
+                                nonlocal data_floors
+                                if data_floors is None:
+                                    # Optimistically keep ready/active KV forever,
+                                    # ignore capacity and queued unrelated work.
+                                    data_floors = {}
+                                    free_objects = ready | (
+                                        set(active_deps[:-1]) if predicted_run is not None else set())
+                                    flight_object = predicted_transfer[1] if predicted_transfer else None
+                                    flight_work = ((predicted_transfer[0] - now) / transfer_factor
+                                                   if predicted_transfer is not None else 0)
+                                    for j in range(head + int(predicted_run is not None), visible):
+                                        domain = choices if j == i else (tail[j - head],)
+                                        for candidate in domain:
+                                            missing = set(self.candidates[j][candidate]) - free_objects
+                                            data_floors[j, candidate] = now + (
+                                                flight_work + sum(self._transfer_times[obj] for obj in missing
+                                                                  if obj != flight_object) if missing else 0)
+                                end, total = now, 0
+                                start = head
+                                if predicted_run is not None:
+                                    end += (predicted_run - now) / compute_factor
+                                    total += end
+                                    start += 1
+                                for j in range(start, visible):
+                                    boundary = c if j == i else tail[j - head]
+                                    end = max(end, data_floors[j, boundary]) + self._suffix_times[j][boundary]
+                                    total += end
+                                return total
+
                         for c in order:
                             delta = (visible - i) * factor * (
                                 self._suffix_times[i][c] - self._suffix_times[i][fallback])
@@ -849,7 +946,23 @@ class Experiment:
                                 if (lower, -c) >= (scores[best], -best):
                                     pruned_rollouts += 1
                                     continue
-                                cutoff = None
+                                if transfer_bound:
+                                    bound_checks += 1
+                                    lower = max(lower, transfer_floor(c))
+                                    audited = objective(c) if bound_audit else None
+                                    if bound_audit:
+                                        bound_audits += 1
+                                        assert lower <= audited, (i, c, lower, audited)
+                                    if (lower, -c) >= (scores[best], -best):
+                                        bound_prunes += 1
+                                        pruned_rollouts += 1
+                                        continue
+                                    if bound_audit:
+                                        scores[c] = audited
+                                        if (audited, -c) < (scores[best], -best):
+                                            best = c
+                                        continue
+                                cutoff = (scores[best], c < best, floor, i, delta, True) if progress_bound else None
                             else:
                                 cutoff = (scores[best], c < best, floor, i, delta,
                                           screen_search == "cutoff")
@@ -974,6 +1087,8 @@ class Experiment:
                 copy = 0
                 if 0 < c < self.lengths[i] and checkpoint in self.initial:
                     copy = self.path_time("device_copy", self.objects[checkpoint]["bytes"])
+                if direct_costs:
+                    return self._suffix_times[i][c] + copy + sum(self._transfer_times[obj] for obj in missing), -c
                 total = self.recompute(i, c) + copy + sum(map(self.transfer_time, missing))
                 if self.host_cache_bytes:
                     total = self.recompute(i, c) + copy + sum(duration(obj, {}) for obj in missing)
@@ -1001,8 +1116,22 @@ class Experiment:
                 if len(self.eligible[i]) == 1:
                     selected[i] = self.eligible[i][0]
                     return
+                state = {}
+                if collect_offline_state:
+                    state["state"] = (
+                        arrived, tuple(selected[head:i]),
+                        frozenset((request, frozenset(objects)) for request, objects in admitted.items()),
+                        frozenset(ready), frozenset(held_reservation), release_time,
+                        copy_until if running_until is not None and now < copy_until else None,
+                    )
                 raise OfflineBranch(offline_probe(i, now, head, completions, ready, running_until,
-                                                  compute_factor, transfer, transfer_factor, active_deps))
+                                                  compute_factor, transfer, transfer_factor, active_deps, **state))
+            if direct_fixed:
+                boundary = decision_overrides.get(i, boundaries[i])
+                if boundary not in self.eligible[i]:
+                    raise ValueError(f"Invalid fixed boundary for request {i}: {boundary}")
+                selected[i] = boundary
+                return
             opportunities, pairs, prior_probes, checks = pair_opportunities, pair_decisions, probes, scenario_checks
             timed = profile_decisions or inject_measured
             start = perf_counter_ns() if timed else 0
@@ -1052,9 +1181,20 @@ class Experiment:
                             busy_path = path
                             new_compute, new_transfer = self.overlap[path]
                 if running_until is not None and new_compute != compute_factor:
-                    running_until = now + (running_until - now) / compute_factor * new_compute
+                    if simple_scalars and compute_factor == 1:
+                        running_until = now + (running_until - now) * new_compute
+                    elif simple_scalars and new_compute == 1:
+                        running_until = now + (running_until - now) / compute_factor
+                    else:
+                        running_until = now + (running_until - now) / compute_factor * new_compute
                 if transfer is not None and new_transfer != transfer_factor:
-                    transfer = (now + (transfer[0] - now) / transfer_factor * new_transfer, transfer[1])
+                    if simple_scalars and transfer_factor == 1:
+                        end = now + (transfer[0] - now) * new_transfer
+                    elif simple_scalars and new_transfer == 1:
+                        end = now + (transfer[0] - now) / transfer_factor
+                    else:
+                        end = now + (transfer[0] - now) / transfer_factor * new_transfer
+                    transfer = (end, transfer[1])
                     if transfer_record is not None:
                         transfer_record["end_ms"] = transfer[0]
                 compute_factor, transfer_factor = new_compute, new_transfer
@@ -1167,7 +1307,9 @@ class Experiment:
                             release_time = now + self.release_delay
                     shared = bool(deps) and (deps[-1] in self.initial or deps[-1] in occupied())
                     suffix_times = future_cost[0] if future_cost is not None else self._suffix_times
-                    suffix = suffix_times[head][selected[head]] * execution_factors.get("compute", 1)
+                    suffix = suffix_times[head][selected[head]]
+                    if not simple_scalars:
+                        suffix *= execution_factors.get("compute", 1)
                     continuation = selected[head] < self.lengths[head]
                     copy = (self.path_time("device_copy", self.objects[deps[-1]]["bytes"])
                             * execution_factors.get("device_copy", 1)
@@ -1293,6 +1435,8 @@ class Experiment:
                or policy in PAIR_POLICIES else {}),
             **({"adaptive_routes": adaptive_stats} if adaptive is not None else {}),
             **({"pruned_rollouts": pruned_rollouts} if screen_search in {"compute", "cutoff", "entry"} else {}),
+            **({"transfer_bound_checks": bound_checks, "transfer_bound_prunes": bound_prunes,
+                "transfer_bound_audits": bound_audits} if transfer_bound else {}),
             **({"pair_decisions": pair_decisions, "pair_opportunities": pair_opportunities}
                if policy in PAIR_POLICIES else {}),
             **({"io_probes": probes} if policy in PROBE_POLICIES else {}),

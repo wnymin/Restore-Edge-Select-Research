@@ -1,5 +1,6 @@
 """Budgeted boundary search with a certificate for the visible FIFO window."""
 
+from collections.abc import Callable
 from dataclasses import dataclass
 from fractions import Fraction
 
@@ -14,13 +15,17 @@ class AdaptiveConfig:
     audit: bool = False
     screen: bool = False
     forecast_error_ms: Fraction = Fraction(0)
+    route: Callable | None = None
+    compact: bool = False
 
     def __post_init__(self):
         if (type(self.later) is not int or self.later < 0
                 or type(self.light_replays) is not int or self.light_replays < 1
                 or type(self.coupled_replays) is not int or self.coupled_replays < self.light_replays
                 or (self.loss_ms is not None and self.loss_ms < 0)
-                or min(self.gain_per_request_ms, self.forecast_error_ms) < 0):
+                or min(self.gain_per_request_ms, self.forecast_error_ms) < 0
+                or (self.route is not None and (not callable(self.route) or self.audit or self.screen))
+                or (self.compact and (self.route is None or self.loss_ms is not None))):
             raise ValueError("Invalid adaptive window, replay budget, or tolerance")
 
 
@@ -47,16 +52,16 @@ def classify(rows, base, budget):
     return 'light'
 
 
-def select(rows, base, budget, config, lower, forecast, rank):
+def select(rows, base, budget, config, lower, forecast, rank, *, lower_sums=None):
     """Return a feasible boundary and an upper bound on its nominal regret.
 
     Floors and forecasts are alive-request completion vectors, in FIFO order.
+    Mean-only compact routing can supply the sum of each floor instead.
     The gain threshold is against the same fixed continuation as the baseline.
     """
     scenario = classify(rows, base, budget)
-    signal = (scenario in {'capacity', 'shared', 'overlap', 'backlog'}
-              or any(rank[c] < rank[base] for c in rows))
-    if config.screen and not signal:
+    if config.screen and not (scenario in {'capacity', 'shared', 'overlap', 'backlog'}
+                              or any(rank[c] < rank[base] for c in rows)):
         missed = None
         if config.audit:
             _, _, gap, gain, _ = select(rows, base, budget, AdaptiveConfig(
@@ -83,12 +88,14 @@ def select(rows, base, budget, config, lower, forecast, rank):
     def feasible(ends):
         return sum(ends) < base_sum - gain_floor and not exceeds_loss(ends)
 
-    order = sorted((c for c in rows if c != base), key=lambda c: (rank[c], sum(lower[c]), -c))
+    def total_floor(c):
+        return lower_sums[c] if lower_sums is not None else sum(lower[c])
+
+    order = sorted((c for c in rows if c != base), key=lambda c: (rank[c], total_floor(c), -c))
     for c in order:
-        floor = lower[c]
-        optimistic = sum(floor)
+        optimistic = total_floor(c)
         if (optimistic >= base_sum - gain_floor or optimistic >= best_sum
-                or exceeds_loss(floor)):
+                or (ceilings is not None and exceeds_loss(lower[c]))):
             continue
         if len(seen) >= limit:
             unknown.append(optimistic)

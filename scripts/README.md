@@ -6,6 +6,7 @@
 | --- | --- |
 | [`data/`](data/) | 下载／检查公开轨迹，导入硬件成本数据 |
 | [`cpu/replay/`](cpu/replay/) | CPU 轨迹回放、基线对照与离线最优审计 |
+| [`cpu/dynamic/`](cpu/dynamic/) | R01 动态状态干预、留出和入口回放复算 |
 | [`cpu/analysis/`](cpu/analysis/) | 汇总 CPU 回放结果 |
 | [`cpu/lookahead/screening/`](cpu/lookahead/screening/) | 前瞻触发、复杂度削减与共同后续抵消 |
 | [`cpu/lookahead/robustness/`](cpu/lookahead/robustness/) | 不确定域、候选差值、预算和多步组合 |

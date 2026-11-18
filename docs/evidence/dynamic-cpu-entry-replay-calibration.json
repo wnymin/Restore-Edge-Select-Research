@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14",
+  "seed": 20261124,
+  "repeats": 6,
+  "holdout": false,
+  "synthetic_cases": 240,
+  "compatibility_cases": 840,
+  "cases": 144,
+  "source_sha256": {
+    "scripts/study_entry_replay.py": "c471d2766391354a22e6c4616ee585aca141939faa6a3192ff28d4d53433f84e",
+    "src/restore_edge_select/simulator.py": "a4fde9791aaf30fd2fa60835f2d5adb8f106fc35be93a5f1a5d066d8c93166fb",
+    "scripts/study_entry_repeatability.py": "4df484016254679432674f5bcbf80d18d60edf8e46cbc9af7734c3cd24070e77",
+    "scripts/study_offline_invariants.py": "650bbab45fa4dfc80300b12e9e70ce618b09a4ac44ba5c6c668397b4946143cc",
+    "scripts/dynamic_cpu_inputs.py": "43037cf9d68f9593227d7378b717b3218f998d959db8d440ad1789783db1b331",
+    "fixtures/phase1-hand-trace.json": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9",
+    "configs/qwen3.5-4b.json": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203"
+  }
+}
