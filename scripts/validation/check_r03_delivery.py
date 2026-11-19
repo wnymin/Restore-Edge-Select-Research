@@ -3,7 +3,7 @@ import json,re
 
 def main():
  root=Path(__file__).resolve().parents[2]
- required=['docs/r03-met-01.md','docs/r03-inv-01.md','docs/r03-app-01.md','docs/r03-app-02.md','docs/r03-int-01.md','docs/r03-completion.md','docs/evidence/r03-app01-summary.json','docs/evidence/r03-app01-interactions.json','docs/evidence/r03-task-costs.json','docs/evidence/r03-task-costs-holdout.json','docs/evidence/r03-factor-ablations.json','docs/evidence/r03-factor-ablations-summary.json']
+ required=['docs/r03-met-01.md','docs/r03-inv-01.md','docs/r03-app-01.md','docs/r03-app-02.md','docs/r03-int-01.md','docs/r03-completion.md','docs/r03-factor-closure.md','docs/evidence/r03-app01-summary.json','docs/evidence/r03-app01-interactions.json','docs/evidence/r03-task-costs.json','docs/evidence/r03-task-costs-holdout.json','docs/evidence/r03-factor-ablations.json','docs/evidence/r03-factor-ablations-summary.json']
  missing=[p for p in required if not (root/p).exists()]
  if missing: raise SystemExit('missing: '+', '.join(missing))
  inv=(root/'docs/r03-inv-01.md').read_text(encoding='utf-8-sig')
