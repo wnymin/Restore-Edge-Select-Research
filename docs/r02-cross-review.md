@@ -24,6 +24,7 @@ CPU 可从[完整求值开发参照](r02-cpu-reference.md)直接开工；开发�
 python -m scripts.gpu.experiments.study_r02_gpu_observation --check docs/evidence/r02-gpu-observation-7941-audit.json
 python -m scripts.cpu.lookahead.staging.study_lookahead_dynamic_release --check docs/evidence/dynamic-lookahead-dynamic-release-7884.json
 python -m scripts.cpu.lookahead.staging.study_lookahead_transfer_order --check docs/evidence/dynamic-lookahead-transfer-order-7820.json
+python -m scripts.gpu.analysis.r02_probe_ablation docs/evidence/r02-gpu-probe-ablation-7942.csv
 python scripts/check_fixture.py
 ```
 
