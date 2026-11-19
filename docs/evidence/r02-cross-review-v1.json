@@ -1,0 +1,709 @@
+{
+  "interface": "R02-case/v1",
+  "observations": [
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "arm": "shallow",
+      "source": "docs/evidence/r02-gpu-observation-7941.json",
+      "version": "R02-GPU-01/v1",
+      "split": "gpu-holdout",
+      "seed": 7941,
+      "capacity_bytes": 83886080,
+      "boundary_tokens": null,
+      "proxy_bytes": 16777216,
+      "shared_object_ids": [],
+      "queue_head": "B",
+      "known_fifo": [
+        "B",
+        "C",
+        "D"
+      ],
+      "decision_tick": 46300,
+      "timebase": "host monotonic ns from origin-submit bracket start",
+      "observed": {
+        "origin_bracket_ns": [
+          0,
+          10700
+        ],
+        "query_bracket_ns": [
+          45100,
+          46300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      },
+      "remaining_ms": [
+        32.96982854003906,
+        33.01841611328125
+      ],
+      "remaining_kind": "window marker, not physical activity",
+      "missing": {
+        "boundary_tokens": "synthetic boundary proxy",
+        "active_compute": "not observable",
+        "active_peer_transfer": "not observable"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "arm": "deep",
+      "source": "docs/evidence/r02-gpu-observation-7941.json",
+      "version": "R02-GPU-01/v1",
+      "split": "gpu-holdout",
+      "seed": 7941,
+      "capacity_bytes": 83886080,
+      "boundary_tokens": null,
+      "proxy_bytes": 50331648,
+      "shared_object_ids": [],
+      "queue_head": "B",
+      "known_fifo": [
+        "B",
+        "C",
+        "D"
+      ],
+      "decision_tick": 46300,
+      "timebase": "host monotonic ns from origin-submit bracket start",
+      "observed": {
+        "origin_bracket_ns": [
+          0,
+          10700
+        ],
+        "query_bracket_ns": [
+          45100,
+          46300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      },
+      "remaining_ms": [
+        32.96982854003906,
+        33.01841611328125
+      ],
+      "remaining_kind": "window marker, not physical activity",
+      "missing": {
+        "boundary_tokens": "synthetic boundary proxy",
+        "active_compute": "not observable",
+        "active_peer_transfer": "not observable"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "arm": "shallow",
+      "source": "docs/evidence/r02-gpu-observation-7941.json",
+      "version": "R02-GPU-01/v1",
+      "split": "gpu-holdout",
+      "seed": 7941,
+      "capacity_bytes": 117440512,
+      "boundary_tokens": null,
+      "proxy_bytes": 16777216,
+      "shared_object_ids": [],
+      "queue_head": "B",
+      "known_fifo": [
+        "B",
+        "C",
+        "D"
+      ],
+      "decision_tick": 56400,
+      "timebase": "host monotonic ns from origin-submit bracket start",
+      "observed": {
+        "origin_bracket_ns": [
+          0,
+          13400
+        ],
+        "query_bracket_ns": [
+          55400,
+          56400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      },
+      "remaining_ms": [
+        32.959728540039066,
+        33.01101611328125
+      ],
+      "remaining_kind": "window marker, not physical activity",
+      "missing": {
+        "boundary_tokens": "synthetic boundary proxy",
+        "active_compute": "not observable",
+        "active_peer_transfer": "not observable"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "arm": "deep",
+      "source": "docs/evidence/r02-gpu-observation-7941.json",
+      "version": "R02-GPU-01/v1",
+      "split": "gpu-holdout",
+      "seed": 7941,
+      "capacity_bytes": 117440512,
+      "boundary_tokens": null,
+      "proxy_bytes": 50331648,
+      "shared_object_ids": [],
+      "queue_head": "B",
+      "known_fifo": [
+        "B",
+        "C",
+        "D"
+      ],
+      "decision_tick": 56400,
+      "timebase": "host monotonic ns from origin-submit bracket start",
+      "observed": {
+        "origin_bracket_ns": [
+          0,
+          13400
+        ],
+        "query_bracket_ns": [
+          55400,
+          56400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      },
+      "remaining_ms": [
+        32.959728540039066,
+        33.01101611328125
+      ],
+      "remaining_kind": "window marker, not physical activity",
+      "missing": {
+        "boundary_tokens": "synthetic boundary proxy",
+        "active_compute": "not observable",
+        "active_peer_transfer": "not observable"
+      }
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-distinct-120",
+      "arm": "0",
+      "source": "docs/evidence/r02-cpu-dev-release-sharing-v1.json",
+      "version": "R02-CPU-01/dev-release-sharing-v1",
+      "split": "cpu-development-only",
+      "model": "configs/qwen3.5-4b.json",
+      "capacity_bytes": 125829120,
+      "boundary_tokens": 0,
+      "proxy_bytes": null,
+      "shared_object_ids": [],
+      "queue_head": "A",
+      "known_fifo": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "fixed_plan": [
+        0,
+        0,
+        576,
+        576
+      ],
+      "decision_tick": "0",
+      "timebase": "exact simulator ms",
+      "observed": {
+        "now_ms": "0",
+        "head_index": 0,
+        "visible_count": 4,
+        "admitted": {},
+        "ready": [],
+        "compute_end_ms": "30",
+        "transfer": null,
+        "active_dependencies": [],
+        "held_reservation": [],
+        "release_ms": null,
+        "host_cache": {}
+      },
+      "remaining_ms": [
+        "30",
+        "30"
+      ],
+      "remaining_kind": "simulated active compute",
+      "missing": {}
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-distinct-120",
+      "arm": "576",
+      "source": "docs/evidence/r02-cpu-dev-release-sharing-v1.json",
+      "version": "R02-CPU-01/dev-release-sharing-v1",
+      "split": "cpu-development-only",
+      "model": "configs/qwen3.5-4b.json",
+      "capacity_bytes": 125829120,
+      "boundary_tokens": 576,
+      "proxy_bytes": null,
+      "shared_object_ids": [],
+      "queue_head": "A",
+      "known_fifo": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "fixed_plan": [
+        0,
+        576,
+        576,
+        576
+      ],
+      "decision_tick": "0",
+      "timebase": "exact simulator ms",
+      "observed": {
+        "now_ms": "0",
+        "head_index": 0,
+        "visible_count": 4,
+        "admitted": {},
+        "ready": [],
+        "compute_end_ms": "30",
+        "transfer": null,
+        "active_dependencies": [],
+        "held_reservation": [],
+        "release_ms": null,
+        "host_cache": {}
+      },
+      "remaining_ms": [
+        "30",
+        "30"
+      ],
+      "remaining_kind": "simulated active compute",
+      "missing": {}
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-shared-kv-120",
+      "arm": "0",
+      "source": "docs/evidence/r02-cpu-dev-release-sharing-v1.json",
+      "version": "R02-CPU-01/dev-release-sharing-v1",
+      "split": "cpu-development-only",
+      "model": "configs/qwen3.5-4b.json",
+      "capacity_bytes": 125829120,
+      "boundary_tokens": 0,
+      "proxy_bytes": null,
+      "shared_object_ids": [
+        "C.kv1"
+      ],
+      "queue_head": "A",
+      "known_fifo": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "fixed_plan": [
+        0,
+        0,
+        576,
+        576
+      ],
+      "decision_tick": "0",
+      "timebase": "exact simulator ms",
+      "observed": {
+        "now_ms": "0",
+        "head_index": 0,
+        "visible_count": 4,
+        "admitted": {},
+        "ready": [],
+        "compute_end_ms": "30",
+        "transfer": null,
+        "active_dependencies": [],
+        "held_reservation": [],
+        "release_ms": null,
+        "host_cache": {}
+      },
+      "remaining_ms": [
+        "30",
+        "30"
+      ],
+      "remaining_kind": "simulated active compute",
+      "missing": {}
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-shared-kv-120",
+      "arm": "576",
+      "source": "docs/evidence/r02-cpu-dev-release-sharing-v1.json",
+      "version": "R02-CPU-01/dev-release-sharing-v1",
+      "split": "cpu-development-only",
+      "model": "configs/qwen3.5-4b.json",
+      "capacity_bytes": 125829120,
+      "boundary_tokens": 576,
+      "proxy_bytes": null,
+      "shared_object_ids": [
+        "C.kv1"
+      ],
+      "queue_head": "A",
+      "known_fifo": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "fixed_plan": [
+        0,
+        576,
+        576,
+        576
+      ],
+      "decision_tick": "0",
+      "timebase": "exact simulator ms",
+      "observed": {
+        "now_ms": "0",
+        "head_index": 0,
+        "visible_count": 4,
+        "admitted": {},
+        "ready": [],
+        "compute_end_ms": "30",
+        "transfer": null,
+        "active_dependencies": [],
+        "held_reservation": [],
+        "release_ms": null,
+        "host_cache": {}
+      },
+      "remaining_ms": [
+        "30",
+        "30"
+      ],
+      "remaining_kind": "simulated active compute",
+      "missing": {}
+    }
+  ],
+  "outcomes": [
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "arm": "shallow",
+      "timebase": "CUDA elapsed ms from that arm's origin event",
+      "release_ms": 33.12947082519531,
+      "peer_ready_ms": {
+        "D": 13.55504035949707
+      },
+      "completion_ms": {
+        "B": 40.132606506347656,
+        "C": 42.13657760620117,
+        "D": 43.14009475708008
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "arm": "deep",
+      "timebase": "CUDA elapsed ms from that arm's origin event",
+      "release_ms": 33.03833770751953,
+      "peer_ready_ms": {
+        "D": 47.758270263671875
+      },
+      "completion_ms": {
+        "B": 38.04159927368164,
+        "C": 40.04556655883789,
+        "D": 48.79359817504883
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "arm": "shallow",
+      "timebase": "CUDA elapsed ms from that arm's origin event",
+      "release_ms": 33.04345703125,
+      "peer_ready_ms": {
+        "D": 12.484992027282715
+      },
+      "completion_ms": {
+        "B": 40.046592712402344,
+        "C": 42.049537658691406,
+        "D": 43.05305480957031
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "arm": "deep",
+      "timebase": "CUDA elapsed ms from that arm's origin event",
+      "release_ms": 33.03923034667969,
+      "peer_ready_ms": {
+        "D": 12.325663566589355
+      },
+      "completion_ms": {
+        "B": 38.04249572753906,
+        "C": 40.04646301269531,
+        "D": 41.049983978271484
+      }
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-distinct-120",
+      "arm": "0",
+      "timebase": "exact simulator ms",
+      "release_ms": "30",
+      "prefetch_reserved_ms": {
+        "A": null,
+        "B": null,
+        "C": "0",
+        "D": "38"
+      },
+      "completion_ms": {
+        "A": "30",
+        "B": "38",
+        "C": "169/4",
+        "D": "93/2"
+      },
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "C.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "1",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "C.state1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "1",
+          "end_ms": "4",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "D.kv1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "38",
+          "end_ms": "39",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "39",
+          "end_ms": "42",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-distinct-120",
+      "arm": "576",
+      "timebase": "exact simulator ms",
+      "release_ms": "30",
+      "prefetch_reserved_ms": {
+        "A": null,
+        "B": "0",
+        "C": "30",
+        "D": "137/4"
+      },
+      "completion_ms": {
+        "A": "30",
+        "B": "137/4",
+        "C": "77/2",
+        "D": "171/4"
+      },
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "1",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "1",
+          "end_ms": "4",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "C.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "30",
+          "end_ms": "31",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "C.state1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "31",
+          "end_ms": "34",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "D.kv1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "137/4",
+          "end_ms": "141/4",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "141/4",
+          "end_ms": "153/4",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-shared-kv-120",
+      "arm": "0",
+      "timebase": "exact simulator ms",
+      "release_ms": "30",
+      "prefetch_reserved_ms": {
+        "A": null,
+        "B": null,
+        "C": "0",
+        "D": "0"
+      },
+      "completion_ms": {
+        "A": "30",
+        "B": "38",
+        "C": "169/4",
+        "D": "93/2"
+      },
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "C.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "1",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "C.state1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "1",
+          "end_ms": "4",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "4",
+          "end_ms": "7",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-shared-kv-120",
+      "arm": "576",
+      "timebase": "exact simulator ms",
+      "release_ms": "30",
+      "prefetch_reserved_ms": {
+        "A": null,
+        "B": "0",
+        "C": "30",
+        "D": "30"
+      },
+      "completion_ms": {
+        "A": "30",
+        "B": "137/4",
+        "C": "77/2",
+        "D": "171/4"
+      },
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "1",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "1",
+          "end_ms": "4",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "C.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "30",
+          "end_ms": "31",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "C.state1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "31",
+          "end_ms": "34",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "34",
+          "end_ms": "37",
+          "bytes": 51511296
+        }
+      ]
+    }
+  ],
+  "evaluations": [
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "truth": "shallow",
+      "tie_ms": 0.25,
+      "deep_minus_shallow_ms": 1.4714851379394531,
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "truth": "deep",
+      "tie_ms": 0.25,
+      "deep_minus_shallow_ms": -6.010242462158203,
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-distinct-120",
+      "exact_minima": [
+        576
+      ],
+      "score_order_pick": 576,
+      "original_fallback": 1152
+    },
+    {
+      "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-shared-kv-120",
+      "exact_minima": [
+        576
+      ],
+      "score_order_pick": 576,
+      "original_fallback": 1152
+    }
+  ]
+}

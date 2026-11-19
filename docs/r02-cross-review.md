@@ -16,6 +16,8 @@
 
 交接例：`R02-GPU-01/v1:tight-short:13`（紧额窗尾未覆盖、拒判）和 `R02-GPU-01/v1:wide-short:13`（宽额、无准入阻塞的对照）。[GPU 报告](r02-gpu-observation.md)附数据与方法。GPU 只能补充敏感性工况，CPU 事件、目标和精确平局不照搬。
 
+[可机器读取的交接样例](evidence/r02-cross-review-v1.json)包含上述两组 GPU 案例，以及 120 MiB 下不共享／仅共享 KV 的两组 CPU 开发案例。`observations` 和 `outcomes` 以 `(case_id, arm)` 一对一连接，`evaluations` 单列。GPU 两个候选使用同一条选点前查询，窗尾区间从该观测和 7449 校准重新计算，不读事后真值；CPU 用模拟时钟上的精确状态。两者的 `remaining_kind` 不同，不能直接换用。CPU 样例不是协作者回件或独立留出。
+
 ## 复算和待回件
 
 CPU 可从[完整求值开发参照](r02-cpu-reference.md)直接开工；开发用，不算独立留出。
@@ -26,6 +28,7 @@ python -m scripts.cpu.lookahead.staging.study_lookahead_dynamic_release --check 
 python -m scripts.cpu.lookahead.staging.study_lookahead_transfer_order --check docs/evidence/dynamic-lookahead-transfer-order-7820.json
 python -m scripts.gpu.analysis.r02_probe_ablation docs/evidence/r02-gpu-probe-ablation-7942.csv
 python -m scripts.gpu.analysis.r02_marker_visibility docs/evidence/r02-gpu-marker-visibility-7943.csv
+python -m scripts.validation.export_r02_handoff --check docs/evidence/r02-cross-review-v1.json
 python scripts/check_fixture.py
 ```
 
