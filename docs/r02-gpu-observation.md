@@ -54,6 +54,20 @@ python -m scripts.gpu.analysis.r02_probe_ablation docs/evidence/r02-gpu-probe-ab
 python -m scripts.gpu.analysis.r02_marker_visibility docs/evidence/r02-gpu-marker-visibility-7943.csv
 ```
 
+## 7941 同方案重采
+
+2026-11-19，于同一 RTX 4060 Laptop 与驱动 595.97 重采。使用相同冻结配置、随机顺序、夹具哈希和 7449 校准，再采 48 对。不修改原留出，不合并计分，也不视为新种子或跨设备验证。
+
+| 工况 | 深胜／浅胜／近似平局 | 深减浅完成和中位数 | 区间法拒判 | 完成和差覆盖 |
+| --- | ---: | ---: | ---: | ---: |
+| 紧额短窗 | 2 / 12 / 2 | +1.155 ms | 16/16 | 16/16 |
+| 紧额长窗 | 16 / 0 / 0 | −5.999 ms | 16/16 | 8/16 |
+| 宽额短窗 | 16 / 0 / 0 | −5.996 ms | 0/16 | 0/16 |
+
+96 条保留臂均返回 `pending`，两个活动字段均未知。查询耗时的组内中位数为 1.4–1.5 µs，最大 6.0 µs。宽额区间与独占基线在 16 对上给出相同方向。紧额短窗两次采集的胜负数不同，但完成和差的中位数同号；两次采集中，紧额长窗的完成和差中位数均为负。区间经验覆盖仍不足以给出误差保证。
+
+[重采选点前与事后记录](evidence/r02-gpu-observation-7941-recapture.json)按原案例键组织；比较时要同时标注采集批次。阶段复算入口为 `python -m scripts.validation.check_r02_stage`。
+
 ## 复现与决定
 
 [选点前与事后表](evidence/r02-gpu-observation-7941.json)按 `(case_id, arm)` 连接；[审计表](evidence/r02-gpu-observation-7941-audit.json)包含全部 48 对及逐臂的释放、就绪和暴露差。跨线映射见[交接与复算](r02-cross-review.md)。
