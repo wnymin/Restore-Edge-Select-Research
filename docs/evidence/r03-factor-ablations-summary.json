@@ -1,0 +1,61 @@
+{
+  "schema": "R03-factor-ablation-summary-v1",
+  "source": "r03-factor-ablations.json",
+  "summary": [
+    {
+      "mode": "omit_overlap",
+      "cases": 144,
+      "decision_changes": 53,
+      "decision_change_rate": 0.3680555555555556,
+      "mean_loss_ms": 1.3011547925925926,
+      "max_loss_ms": 8.0,
+      "max_request_loss_ms": 16.0,
+      "positive_loss_cases": 53,
+      "negative_loss_cases": 0
+    },
+    {
+      "mode": "omit_inflight",
+      "cases": 144,
+      "decision_changes": 0,
+      "decision_change_rate": 0.0,
+      "mean_loss_ms": 0.0,
+      "max_loss_ms": 0.0,
+      "max_request_loss_ms": 0,
+      "positive_loss_cases": 0,
+      "negative_loss_cases": 0
+    },
+    {
+      "mode": "omit_window",
+      "cases": 144,
+      "decision_changes": 53,
+      "decision_change_rate": 0.3680555555555556,
+      "mean_loss_ms": 1.3011547925925926,
+      "max_loss_ms": 8.0,
+      "max_request_loss_ms": 16.0,
+      "positive_loss_cases": 53,
+      "negative_loss_cases": 0
+    },
+    {
+      "mode": "omit_cost",
+      "cases": 144,
+      "decision_changes": 100,
+      "decision_change_rate": 0.6944444444444444,
+      "mean_loss_ms": 9.076617755555555,
+      "max_loss_ms": 42.0,
+      "max_request_loss_ms": 84.0,
+      "positive_loss_cases": 100,
+      "negative_loss_cases": 0
+    },
+    {
+      "mode": "omit_competition",
+      "cases": 144,
+      "decision_changes": 51,
+      "decision_change_rate": 0.3541666666666667,
+      "mean_loss_ms": 1.2502288666666665,
+      "max_loss_ms": 8.0,
+      "max_request_loss_ms": 16.0,
+      "positive_loss_cases": 51,
+      "negative_loss_cases": 0
+    }
+  ]
+}
