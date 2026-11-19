@@ -16,7 +16,7 @@
 
 交接例：`R02-GPU-01/v1:tight-short:13`（紧额窗尾未覆盖、拒判）和 `R02-GPU-01/v1:wide-short:13`（宽额、无准入阻塞的对照）。[GPU 报告](r02-gpu-observation.md)附数据与方法。GPU 只能补充敏感性工况，CPU 事件、目标和精确平局不照搬。
 
-[可机器读取的交接样例](evidence/r02-cross-review-v1.json)包含上述两组 GPU 案例，以及 120 MiB 下不共享／仅共享 KV 的两组 CPU 开发案例。`observations` 和 `outcomes` 以 `(case_id, arm)` 一对一连接，`evaluations` 单列。GPU 两个候选使用同一条选点前查询，窗尾区间从该观测和 7449 校准重新计算，不读事后真值；CPU 用模拟时钟上的精确状态。两者的 `remaining_kind` 不同，不能直接换用。CPU 样例不是协作者回件或独立留出。
+[可机器读取的交接样例](evidence/r02-cross-review-v1.json)包含上述两组 GPU 案例，以及 120 MiB 下不共享／仅共享 KV 的两组 CPU 开发案例。`observations` 和 `outcomes` 以 `(case_id, arm)` 一对一连接，`evaluations` 单列。GPU 两个候选使用同一条选点前查询，窗尾区间从该观测和 7449 校准重新计算，不读事后真值；CPU 用模拟时钟上的精确状态。两者的 `remaining_kind` 不同，不能直接换用。CPU 的 `queue_head` 是 A，`decision_target` 是 B；两臂 B 均在 30 ms 开始计算，但只有 B=576 臂释放已预留容量，B=0 的 `release_ms` 为 `null`（不适用）。GPU `release_kind` 则标明原夹具的暂存准入标记，不能与 CPU 的预留释放混用。CPU 样例不是协作者回件或独立留出。
 
 ## 复算和待回件
 

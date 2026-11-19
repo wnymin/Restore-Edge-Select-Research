@@ -13,6 +13,7 @@
       "proxy_bytes": 16777216,
       "shared_object_ids": [],
       "queue_head": "B",
+      "decision_target": "B",
       "known_fifo": [
         "B",
         "C",
@@ -57,6 +58,7 @@
       "proxy_bytes": 50331648,
       "shared_object_ids": [],
       "queue_head": "B",
+      "decision_target": "B",
       "known_fifo": [
         "B",
         "C",
@@ -101,6 +103,7 @@
       "proxy_bytes": 16777216,
       "shared_object_ids": [],
       "queue_head": "B",
+      "decision_target": "B",
       "known_fifo": [
         "B",
         "C",
@@ -145,6 +148,7 @@
       "proxy_bytes": 50331648,
       "shared_object_ids": [],
       "queue_head": "B",
+      "decision_target": "B",
       "known_fifo": [
         "B",
         "C",
@@ -189,6 +193,7 @@
       "proxy_bytes": null,
       "shared_object_ids": [],
       "queue_head": "A",
+      "decision_target": "B",
       "known_fifo": [
         "A",
         "B",
@@ -235,6 +240,7 @@
       "proxy_bytes": null,
       "shared_object_ids": [],
       "queue_head": "A",
+      "decision_target": "B",
       "known_fifo": [
         "A",
         "B",
@@ -283,6 +289,7 @@
         "C.kv1"
       ],
       "queue_head": "A",
+      "decision_target": "B",
       "known_fifo": [
         "A",
         "B",
@@ -331,6 +338,7 @@
         "C.kv1"
       ],
       "queue_head": "A",
+      "decision_target": "B",
       "known_fifo": [
         "A",
         "B",
@@ -372,6 +380,7 @@
       "arm": "shallow",
       "timebase": "CUDA elapsed ms from that arm's origin event",
       "release_ms": 33.12947082519531,
+      "release_kind": "fixture staging grant marker",
       "peer_ready_ms": {
         "D": 13.55504035949707
       },
@@ -386,6 +395,7 @@
       "arm": "deep",
       "timebase": "CUDA elapsed ms from that arm's origin event",
       "release_ms": 33.03833770751953,
+      "release_kind": "fixture staging grant marker",
       "peer_ready_ms": {
         "D": 47.758270263671875
       },
@@ -400,6 +410,7 @@
       "arm": "shallow",
       "timebase": "CUDA elapsed ms from that arm's origin event",
       "release_ms": 33.04345703125,
+      "release_kind": "fixture staging grant marker",
       "peer_ready_ms": {
         "D": 12.484992027282715
       },
@@ -414,6 +425,7 @@
       "arm": "deep",
       "timebase": "CUDA elapsed ms from that arm's origin event",
       "release_ms": 33.03923034667969,
+      "release_kind": "fixture staging grant marker",
       "peer_ready_ms": {
         "D": 12.325663566589355
       },
@@ -427,7 +439,9 @@
       "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-distinct-120",
       "arm": "0",
       "timebase": "exact simulator ms",
-      "release_ms": "30",
+      "release_ms": null,
+      "release_kind": "not applicable: no reservation",
+      "target_compute_start_ms": "30",
       "prefetch_reserved_ms": {
         "A": null,
         "B": null,
@@ -484,6 +498,8 @@
       "arm": "576",
       "timebase": "exact simulator ms",
       "release_ms": "30",
+      "release_kind": "prefetch reservation",
+      "target_compute_start_ms": "30",
       "prefetch_reserved_ms": {
         "A": null,
         "B": "0",
@@ -557,7 +573,9 @@
       "case_id": "R02-CPU-01/dev-release-sharing-v1:release-sharing-shared-kv-120",
       "arm": "0",
       "timebase": "exact simulator ms",
-      "release_ms": "30",
+      "release_ms": null,
+      "release_kind": "not applicable: no reservation",
+      "target_compute_start_ms": "30",
       "prefetch_reserved_ms": {
         "A": null,
         "B": null,
@@ -605,6 +623,8 @@
       "arm": "576",
       "timebase": "exact simulator ms",
       "release_ms": "30",
+      "release_kind": "prefetch reservation",
+      "target_compute_start_ms": "30",
       "prefetch_reserved_ms": {
         "A": null,
         "B": "0",

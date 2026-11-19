@@ -40,7 +40,7 @@ def cases():
             key = dict(case_id=cid, arm=arm)
             observations.append(dict(**key, source=GPU_RAW.as_posix(), version=cfg["protocol"],
                 split="gpu-holdout", seed=cfg["seed"], capacity_bytes=cell["quota_mib"] << 20,
-                boundary_tokens=None, proxy_bytes=size << 20, shared_object_ids=[], queue_head="B",
+                boundary_tokens=None, proxy_bytes=size << 20, shared_object_ids=[], queue_head="B", decision_target="B",
                 known_fifo=["B", "C", "D"], decision_tick=clock["query_bracket_ns"][1],
                 timebase="host monotonic ns from origin-submit bracket start", observed=clock,
                 remaining_ms=remaining, remaining_kind="window marker, not physical activity",
@@ -48,7 +48,7 @@ def cases():
                          "active_peer_transfer": "not observable"}))
             r = device[cid, arm]
             outcomes.append(dict(**key, timebase="CUDA elapsed ms from that arm's origin event",
-                release_ms=r["release_ms"], peer_ready_ms={"D": r["peer_d_ready_ms"]},
+                release_ms=r["release_ms"], release_kind="fixture staging grant marker", peer_ready_ms={"D": r["peer_d_ready_ms"]},
                 completion_ms=dict(B=r["target_done_ms"], C=r["peer_c_done_ms"], D=r["peer_d_done_ms"])))
         p = audit[cid]
         evaluations.append(dict(case_id=cid, truth=p["truth"], tie_ms=cfg["tie_ms"],
@@ -67,15 +67,24 @@ def cases():
         for arm in arms:
             key = dict(case_id=cid, arm=arm)
             r = row["arms"][arm]
+            target = row["target_index"]
             active_end = state["compute_end_ms"]
             residual = str(Fraction(active_end) - Fraction(state["now_ms"])) if active_end is not None else "0"
             observations.append(dict(**key, source=CPU_DEV.as_posix(), version=cpu["protocol"],
                 split="cpu-development-only", model=cpu["model_config"], capacity_bytes=row["capacity_bytes"],
                 boundary_tokens=int(arm), proxy_bytes=None, shared_object_ids=sorted(set.intersection(*deps)),
-                queue_head=ids[state["head_index"]], known_fifo=ids, fixed_plan=r["plan"],
+                queue_head=ids[state["head_index"]], decision_target=ids[target], known_fifo=ids, fixed_plan=r["plan"],
                 decision_tick=state["now_ms"], timebase="exact simulator ms", observed=state,
                 remaining_ms=[residual, residual], remaining_kind="simulated active compute", missing={}))
-            outcomes.append(dict(**key, timebase="exact simulator ms", release_ms=r["compute_start_ms"][1],
+            compute_start = r["compute_start_ms"][target]
+            # Only a charged reservation has a release event. The recompute
+            # arm can start computing at the same point without freeing bytes.
+            if row["trace"]["scheduling"].get("prefetch_release", "start") != "start":
+                raise ValueError("CPU exchange only handles start release")
+            held = r["prefetch_reserved_ms"][target] is not None
+            outcomes.append(dict(**key, timebase="exact simulator ms", release_ms=compute_start if held else None,
+                release_kind="prefetch reservation" if held else "not applicable: no reservation",
+                target_compute_start_ms=compute_start,
                 prefetch_reserved_ms=dict(zip(ids, r["prefetch_reserved_ms"], strict=True)),
                 completion_ms=dict(zip(ids, r["completion_ms"], strict=True)), transfers=r["events"]))
         evaluations.append(dict(case_id=cid, exact_minima=row["exact_minima"],
