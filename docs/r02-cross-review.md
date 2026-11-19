@@ -1,12 +1,22 @@
 # R02-INT-01：最终复算与汇总
 
-2026-11-19：GPU 新留出本机复算通过；CPU 开发参照和两线复算入口已备。阶段末由本方根据两线最终成果一次汇总。
+2026-11-19 完成阶段末复算，R02 按限定子域验收。现有恢复边界选择策略继续使用完整求值。
 
-## 交换接口 `R02-case/v1`
+## 验收结论
+
+- **CPU 保真。** 单计算槽、串行传输、固定容量与后继计划下，在同一空闲计算边界比较状态。保留按请求预留的对象集合、后继依赖中的就绪对象、在途剩余时间及与后继有关的在途对象身份。时间平移限于无未来到达且执行规则随时间平移不变的子域，已完成前缀单独计分。设计和合成留出各 81 条候选，精简键与完整键各命中 14 和 3 次，拼回后的完成向量一致。共享检查点用例仅差 1 字节即改变胜者，深减浅的响应和从 +9/4 ms 变为 −17/4 ms。 [CPU 交付与证据](r02-cpu-results.md)
+- **CPU 净成本。** 保留原到达时间并触发回退时，54 个用例的无计时注入闭环动作和完成向量与完整参照一致。留出 216 次预测含 135 次回退、54 次命中，事件数从 1371 降到 1344。整合复测中，留出集的选点耗时配对中位差为全可见增加约 226 µs、原到达增加约 123 µs，两组计时注入后的平均响应改善中位数均小于零。原提交保留逐轮记录，整合复测用于核对方向。 [CPU 计时复现](r02-cpu-results.md)
+- **GPU 可观测性。** 7941 紧额短窗和长窗合计 32 对全部拒判，宽额 16 对的判断方向与原基线一致。7941 查询均为 `pending`，7943 的无核对照也先 `pending` 后 `done`。活动计算和活动同行搬运的实际剩余时间仍未知。CPU 精确状态键的线上可获得性、多步保证和真实服务性能留作开放问题。 [GPU 留出与探针诊断](r02-gpu-observation.md)
+
+## 分工核对
+
+CPU 交付使用 `3458577` 中已存在的执行器、CPU 入口、配置和旧 GPU 归档。与 GPU 线选用的 `9c20261` 对照，CPU 执行器、对应配置和旧回归的输入一致。GPU 新留出在 CPU 交付合入前已完成。双方均可单独生成并自验最终成果。CPU 报告中的旧 GPU 复算属于可自行完成的前置复用。跨线对照和台账更新由汇总人一次完成。
+
+## 最终交付接口 `R02-case/v1`
 
 选点前表、事后表以 `(case_id, arm)` 连接。配对差与标签用 `case_id`。缺失记 `null` 加原因，无适用量注明不适用，不能从真值反填选点字段。
 
-| 字段 | GPU 表映射 | CPU 回件 |
+| 字段 | GPU 表映射 | CPU 交付 |
 | --- | --- | --- |
 | 案例／配置 | `case_id`、`config.protocol`、`fixture_sha256` | 配对 ID、冻结输入／种子及成本、执行器版本 |
 | 边界／额度／身份 | `arm`（16/48 MiB 代理，无 token 位置）、`quota_mib * 1048576`；B/C/D 独立 | 原边界、B 为单位的容量、对象身份与共享、在途和已预留 |
@@ -20,9 +30,10 @@
 
 ## 自验入口与阶段末汇总
 
-CPU 可从[完整求值开发参照](r02-cpu-reference.md)直接开工；开发用，不算独立留出。
+CPU 最终交付可用下方首条命令完整复算。另保留[完整求值开发参照](r02-cpu-reference.md)供回归。
 
 ```powershell
+python -m scripts.validation.check_r02_cpu
 python -m scripts.gpu.experiments.study_r02_gpu_observation --check docs/evidence/r02-gpu-observation-7941-audit.json
 python -m scripts.cpu.lookahead.staging.study_lookahead_dynamic_release --check docs/evidence/dynamic-lookahead-dynamic-release-7884.json
 python -m scripts.cpu.lookahead.staging.study_lookahead_transfer_order --check docs/evidence/dynamic-lookahead-transfer-order-7820.json
@@ -33,5 +44,5 @@ python scripts/check_fixture.py
 ```
 
 - 两项 CPU 回归通过，不当作 R02 新留出。7884 共 64 个切面，145 MiB 见证的完成向量为 `[30,137/4,35,157/4]` ms，C 在 30 ms 重试预留；7820 同汇总不同顺序，代价差为 `11/24` 和 `-13/24` ms，获胜边界分别为 0 和 1152。
-- 两线各自复算相关参照，分别提交报告、证据和复算入口。CPU 提交充分判据或可复现反例及冻结留出。GPU 提交观测结论及证据边界。
-- 两线最终交付后，由本方独立复算两套归档。按案例 ID 对照一致的机制和各自的证据边界，并回填[阶段台账](work-plan.md)。工作流详见[独立分工](r02-independent-work-protocol.md)。
+- CPU 最终案例与 GPU 对照按各自的案例 ID 检索。CPU 的容量临界表和 GPU 的窗口对照支持机制层面的比较，分别使用模拟响应和夹具设备完成时间。
+- 阶段状态及交付索引见[阶段台账](work-plan.md)。

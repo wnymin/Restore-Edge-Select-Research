@@ -31,6 +31,7 @@ def main():
         subprocess.run([sys.executable, '-m', STAGING + module, '--check', str(EVIDENCE / file)],
                        cwd=ROOT, check=True)
     inputs = reference.read(EVIDENCE / 'r02-cpu-inputs.json')
+    require_match('frozen input cases', reference.freeze()['cases'], inputs['cases'])
     for split in ('design', 'holdout'):
         require_match(f'{split} fixed plans', reference.evaluate(inputs, split),
                       reference.read(EVIDENCE / f'r02-cpu-{split}-reference.json'))

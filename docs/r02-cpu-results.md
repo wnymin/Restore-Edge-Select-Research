@@ -1,12 +1,12 @@
-# R02-CPU-01 完整求值参照
+# R02-CPU-01 后缀等价、留出与净成本
 
-基线为 main 的 3458577。R01 已验收，本目录另起 R02。旧释放见证 7884（含 64 组审计）与顺序见证 7820 均在此基线上复算通过。7820 的两组汇总量相同，最优边界分别为 0 和 1152，故汇总字节与成本不能作为一般等价键。
+协作者交付见 `46d6b7a`，实验以 `3458577` 的原执行器为基线。旧释放见证 7884（含 64 组审计）和顺序见证 7820 均已复算。7820 的两组汇总量相同，完整求值得到的获胜边界分别为 0 和 1152，给出了粗汇总键失效的反例。
 
 冻结清单含两组各 27 个四请求工况。设计种子 72841，留出种子 72842，搬运时间倍率分别取 1、2、3 和 4、5、7。交叉独立对象、共享 KV、共享 KV 和检查点，容量围绕 B 浅边界与 C 深边界对象并集上下各一字节，C 到达围绕原见证的 30 ms 上下各 1/8 ms。由于修改搬运时长后实际事件时刻可能变化，30 ms 是参考锚点，不能用来宣称已命中真实的就绪或释放同刻。各候选均使用同一容量与成本。
 
 [冻结清单](evidence/r02-cpu-inputs.json) · [设计集逐方案结果](evidence/r02-cpu-design-reference.json)
 
-完整固定计划执行为参照，B 扫 0、576、1152，其他请求边界保持固定。逐方案给出精确完成向量、响应和、预留时间及按响应和再按较深边界选择的胜者。这是整段固定计划参照，后续仍须从相同决策快照比较状态键，并显式记录未到达请求、在途残余及释放后的重试。留出暂未执行，以便先冻结判据。
+完整固定计划执行为参照，B 扫 0、576、1152，其他请求边界保持固定。逐方案给出精确完成向量、响应和、预留时间及按响应和再按较深边界选择的胜者。这是整段固定计划参照，后续仍须从相同决策快照比较状态键，并显式记录未到达请求、在途残余及释放后的重试。设计和留出结果均已归档。
 
 ~~~sh
 python -m scripts.cpu.lookahead.staging.study_lookahead_dynamic_release --check docs/evidence/dynamic-lookahead-dynamic-release-7884.json
@@ -17,15 +17,15 @@ python scripts/check_fixture.py
 
 ## B 完成后的后缀等价
 
-另做全可见变体，将冻结清单中的四个请求都置于 0 ms。三条候选从同一快照开始，使用原执行器的 pause_at_head 在 B 完成后暂停。此时没有运行中的计算，之后的 C、D 边界固定，释放规则为开始时释放，搬运成本固定，没有未来到达。以相同案例内的后缀时间差复用结果，B 及此前已完成请求的时间原样保留。
+另做全可见变体，将冻结清单中的四个请求都置于 0 ms。三条候选从同一快照开始，使用原执行器的 pause_at_head 在 B 完成后暂停。此时没有运行中的计算、待释放的额度、仍被计算持有的对象或主机侧缓存状态。之后的 C、D 边界固定，释放规则为开始时释放，搬运成本固定，没有未来到达。以相同案例内的后缀时间差复用结果，B 及此前已完成请求的时间原样保留。
 
 充分条件是预留的请求与对象集合相同、后继依赖中的就绪对象集合相同、在途剩余时间相同且在途对象的后继身份相同。无关在途对象可去掉身份，但仍须保留其占道时间，并区分无在途的状态。按事件归纳：准入与重试比较相同的预留并集和容量；加载顺序由固定后继边界的依赖列表给出；无关对象不会被后继需求读取，且相同剩余时间保证下一次占道释放同步。两个状态只差起始时刻时，由此得到相同的相对完成向量。
 
 [设计集快照结果](evidence/r02-cpu-design-suffix.json)与[留出集快照结果](evidence/r02-cpu-holdout-suffix.json)各核对 81 条候选。完整和精简键都在设计集命中 14 次、留出集命中 3 次，拼接后的完整向量逐项一致。精简键在该批没有增加命中。汇总键在该批也没发生错误，旧顺序见证仍限制其适用范围。审计运行会执行完整参照，所得命中数不能用来推断净耗时或闭环收益。
 
 ~~~sh
-python -m scripts.cpu.lookahead.staging.study_r02_suffix_keys --out r02-design-suffix.json
-python -m scripts.cpu.lookahead.staging.study_r02_suffix_keys --split holdout --out r02-holdout-suffix.json
+python -m scripts.cpu.lookahead.staging.study_r02_suffix_keys --out outputs/r02-design-suffix.json
+python -m scripts.cpu.lookahead.staging.study_r02_suffix_keys --split holdout --out outputs/r02-holdout-suffix.json
 ~~~
 
 ## 后缀复用的实际成本
@@ -37,20 +37,20 @@ python -m scripts.cpu.lookahead.staging.study_r02_suffix_keys --split holdout --
 | 设计 | 224.05 / 358.80 µs | 271.75 / 478.20 µs | 273.95 / 485.70 µs |
 | 留出 | 218.90 / 336.00 µs | 272.75 / 438.10 µs | 274.35 / 429.30 µs |
 
-留出仅有 3/81 条候选命中。其余 78 条候选暂停后续跑，续跑会多进入一次事件循环，低命中率未能抵消该成本。该测量针对单次快照，用固定后续计划求值，尚无闭环计时证据。当前保留直接完整求值。
+留出仅有 3/81 条候选命中。其余 78 条候选暂停后续跑，续跑会多进入一次事件循环，低命中率未能抵消该成本。该测量针对单次快照和固定后续计划。两种闭环计时见下文。
 
 [设计计时逐轮记录](evidence/r02-cpu-design-timing.json) · [留出计时逐轮记录](evidence/r02-cpu-holdout-timing.json)
 
 ~~~sh
-python -m scripts.cpu.lookahead.staging.study_r02_suffix_timing --split design --out r02-design-timing.json
-python -m scripts.cpu.lookahead.staging.study_r02_suffix_timing --split holdout --out r02-holdout-timing.json
+python -m scripts.cpu.lookahead.staging.study_r02_suffix_timing --split design --out outputs/r02-design-timing.json
+python -m scripts.cpu.lookahead.staging.study_r02_suffix_timing --split holdout --out outputs/r02-holdout-timing.json
 ~~~
 
-## 真实释放与就绪同刻
+## 模拟释放与就绪同刻
 
 从 7884 固定计划派生九组单通道回放。调整每次回放内固定的 SSD 带宽，使 D 的检查点搬运分别在 B 开始计算、释放预留的 30 ms 之前 1/8 ms、同刻、之后 1/8 ms 完成。容量分别为 C 深边界与 D 尚需对象的并集大小减一字节、恰等于并集、加一字节。B 和 D 的初始预留在九组中均成功，C 初始均未准入。
 
-容量够用时，C 在 30 ms 重试成功；若 D 仍在途，C 虽已预留却须等到占道释放才能搬运。容量少一字节时，三种时序下均无法预取，C 在 B 完成后进入队首并按需加载。这直接区分重试准入与实际就绪后的搬运进度。此项使用独立对象的固定计划，是原执行器的事件顺序对照；共享与重试同时存在的配对尚需补充。
+容量够用时，C 在 30 ms 重试成功；若 D 仍在途，C 虽已预留却须等到占道释放才能搬运。容量少一字节时，三种时序下均无法预取，C 在 B 完成后进入队首并按需加载。这直接区分重试准入与实际就绪后的搬运进度。此项使用独立对象的固定计划，是原执行器的事件顺序对照；涉及共享 KV 和共享检查点的配对见下文。
 
 [精确完成向量与搬运时间](evidence/r02-cpu-release-tie.json)
 
@@ -79,7 +79,7 @@ python -m scripts.cpu.lookahead.staging.study_r02_shared_retry --check docs/evid
 [逐轮闭环结果](evidence/r02-cpu-closed-loop.json)
 
 ~~~sh
-python -m scripts.cpu.lookahead.staging.study_r02_closed_loop --out r02-closed-loop.json
+python -m scripts.cpu.lookahead.staging.study_r02_closed_loop --out outputs/r02-closed-loop.json
 ~~~
 
 ## 共享检查点的释放重试
@@ -103,13 +103,13 @@ python -m scripts.cpu.lookahead.staging.study_r02_checkpoint_retry --check docs/
 | 完整预留对象集合、在途对象及其剩余时间 | 三份 CSV 均无逐决策快照与残余字段 | 无法判断 GPU 端是否满足 CPU 后缀等价键 |
 | 活动状态缺失、通知误差与采集开销 | 三份 CSV 没有采集前后配对或通知误差标记 | 尚无覆盖，不能把未见通知记为活动中 |
 
-CPU 与 GPU 的共同证据限于机制：额度释放后可以准入，何时受益取决于搬运和消费顺序。CPU 的逐请求向量和 GPU 的夹具完成时刻分别保留，未将 GPU 数据代入 CPU 的精确事件规则。新 GPU 配对及另一位协作者独立复算仍需对方验证。
+CPU 与 GPU 的共同证据限于机制：额度释放后可以准入，何时受益取决于搬运和消费顺序。CPU 的逐请求向量和 GPU 的夹具完成时刻分别保留，未将 GPU 数据代入 CPU 的精确事件规则。新 GPU 配对由 GPU 线独立交付，阶段末统一复算。
 
 [GPU 夹具、归档与复算入口](dynamic-gpu-joint-staging.md)
 
-## 两组交接表
+## 容量临界案例表
 
-[版本化案例表](evidence/r02-cpu-exchange.json)以案例 ID 连接决策前观测与事后真值。固定 C、D 为 1152，在同一初始状态对比 B 的 576 与 1152。共享依赖少一字节时，深减浅的响应和为 +9/4 ms；达到门槛及高一字节时均为 −17/4 ms。这给出一个排序翻转和一个相邻容量下排序不变的对照。活动余量 30 ms 来自合成模型，GPU 缺失字段见上节。
+[版本化案例表](evidence/r02-cpu-exchange.json)以案例 ID 连接决策前观测与事后真值。固定 C、D 为 1152，在同一初始状态对比 B 的 576 与 1152。共享依赖少一字节时，深减浅的响应和为 +9/4 ms；达到门槛及高一字节时均为 −17/4 ms。这给出一个排序翻转和一个相邻容量下排序不变的对照。30 ms 是合成模型给定的队首计算时长。
 
 ~~~sh
 python -m scripts.cpu.lookahead.staging.study_r02_exchange --check docs/evidence/r02-cpu-exchange.json
@@ -117,7 +117,7 @@ python -m scripts.cpu.lookahead.staging.study_r02_exchange --check docs/evidence
 
 ## 一次复算确定性证据
 
-在基线 3458577 的仓库根目录合入增量文件后执行：
+从当前仓库根目录执行下列命令。重生成计时或证据前先创建 `outputs/`。
 
 ~~~sh
 python -m scripts.validation.check_r02_cpu
@@ -130,7 +130,7 @@ python -m scripts.validation.check_r02_cpu
 [留出逐方案结果](evidence/r02-cpu-holdout-reference.json)保留清单中 C 的到达时刻，27 个配置共 81 条计划。深边界、浅边界及重算分别胜出 7、13、7 次。同一案例的全可见变体中，有 19/27 个配置的胜者不同。置零到达同时改变了可见性和部分请求的 FIFO 顺序，这个数字不能单独归因于某一种因素。它说明全可见后缀结果不能代替原到达轨迹的比较。一键复算同时核对两类证据。
 
 ~~~sh
-python -m scripts.cpu.lookahead.staging.study_r02_reference --split holdout --inputs docs/evidence/r02-cpu-inputs.json --out r02-holdout-reference.json
+python -m scripts.cpu.lookahead.staging.study_r02_reference --split holdout --inputs docs/evidence/r02-cpu-inputs.json --out outputs/r02-holdout-reference.json
 ~~~
 
 ## 分开比较到达时刻与 FIFO
@@ -162,5 +162,5 @@ python -m scripts.cpu.lookahead.staging.study_r02_guarded --check docs/evidence/
 [原到达闭环计时](evidence/r02-cpu-guarded-timing.json)
 
 ~~~sh
-python -m scripts.cpu.lookahead.staging.study_r02_closed_loop --original-arrivals --out r02-guarded-timing.json
+python -m scripts.cpu.lookahead.staging.study_r02_closed_loop --original-arrivals --out outputs/r02-guarded-timing.json
 ~~~

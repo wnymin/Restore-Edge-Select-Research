@@ -14,6 +14,8 @@
 
 本项目所有动态因素研究均遵循[研究约束与因素取舍协议](recovery-research-protocol.md)：先按影响程度和可量化性排序，再用消融、留出与损失预算决定是否简化。
 
+R02 的 CPU 判据、反例、GPU 观测与复算命令见[阶段验收](r02-cross-review.md)。
+
 ## CPU 前瞻审计数据归档
 
 主报告与附录中以文件名标注的 `dynamic-lookahead-*.csv` 收在[审计数据 ZIP](evidence/lookahead-audit-csv.zip)，[SHA-256 清单](evidence/lookahead-audit-csv.sha256)列出归档成员。CSV 内容不变；JSON 摘要、反例输入和 GPU 实测仍单独保留。`scripts/validation/` 中的归档检查会按需读取，缓存写入 Git 忽略的 `outputs/lookahead-evidence/`，无需先手动解包。

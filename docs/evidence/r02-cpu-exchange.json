@@ -30,10 +30,7 @@
       ],
       "reservations": {},
       "inflight": null,
-      "active_head_remaining_ms": [
-        "30",
-        "30"
-      ],
+      "modeled_head_compute_ms": "30",
       "observation_status": "known synthetic state",
       "alias_objects": [
         "C.kv1",
@@ -68,10 +65,7 @@
       ],
       "reservations": {},
       "inflight": null,
-      "active_head_remaining_ms": [
-        "30",
-        "30"
-      ],
+      "modeled_head_compute_ms": "30",
       "observation_status": "known synthetic state",
       "alias_objects": [
         "C.kv1",
@@ -106,10 +100,7 @@
       ],
       "reservations": {},
       "inflight": null,
-      "active_head_remaining_ms": [
-        "30",
-        "30"
-      ],
+      "modeled_head_compute_ms": "30",
       "observation_status": "known synthetic state",
       "alias_objects": [
         "C.kv1",

@@ -5,7 +5,7 @@
 | 阶段 | 主题 | 状态 | 计划与验收入口 |
 | --- | --- | --- | --- |
 | `R01` | 动态因素辨别与在线选点对照 | 历史计划；CPU B1–B3 已验收，GPU 按分线证据记录，不标整轮已验收 | [R01 双人分工](#r01) · [CPU 验收](dynamic-cpu-completion.md) · [GPU 证据汇总](dynamic-gpu-lookahead-appendices.md#round-gpu-findings) |
-| `R02` | 固定容量下的后续状态判据 | 分线独立推进，GPU 已交付，CPU 开发参照已备 | [R02 计划](next-round-plan.md) · [独立分工](r02-independent-work-protocol.md) · [最终复算](r02-cross-review.md) |
+| `R02` | 固定容量下的后续状态判据 | 2026-11-19 已按限定子域验收，保留完整求值 | [R02 计划](next-round-plan.md) · [独立分工](r02-independent-work-protocol.md) · [CPU 交付](r02-cpu-results.md) · [GPU 交付](r02-gpu-observation.md) · [验收结论](r02-cross-review.md) |
 
 <a id="r01"></a>
 

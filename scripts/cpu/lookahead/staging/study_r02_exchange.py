@@ -24,7 +24,7 @@ def export():
             visible=['A', 'B', 'C', 'D'], decision_ms='0',
             clock='Exact simulator milliseconds since common arrival',
             initial_ready=sorted(exp.initial), reservations={}, inflight=None,
-            active_head_remaining_ms=['30', '30'], observation_status='known synthetic state',
+            modeled_head_compute_ms='30', observation_status='known synthetic state',
             alias_objects=sorted(set(exp.candidates[2][1152]) & set(exp.candidates[3][1152])),
         ))
         shallow, deep = runs

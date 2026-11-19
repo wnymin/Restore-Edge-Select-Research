@@ -67,4 +67,4 @@ python -m scripts.gpu.experiments.study_r02_gpu_observation --check docs/evidenc
 
 本机采集入口按协作约定留在 `.local/hardware/`。重做探针时，用 10 个事件的原 `Rig`，对前两个事件包装 `record`／`wait`：记录起点事件前打主机时间戳，等其同步返回后打第二个；提交窗尾事件后立刻在 CUDA driver 的 `cuEventQuery` 前后取时（0 为 `done`、600 为 `pending`、其他返回码记 `unknown` 并保留原码）。四个戳减起点提交前的戳。仍调用原 `run` 的 distinct 模式，不改变提交、释放或读取顺序；按配置顺序生成 `(cell, shallow/deep)`，使用同一个 RNG 从 `rep=-1` 开始每轮对同一列表原位打乱。输出分成选点前和事后两表。原夹具 SHA-256 在证据中，采集复测是验证方法，并不要求硬件时序逐位重现。
 
-保留现有策略：宽额没有新增方向覆盖，紧额拒判。7941 选点前没有 `done` 样本，7943 只补充单流诊断；没有真实服务或跨设备验证，不用夹具完成时刻估计 TTFT，不改 CPU 事件语义。留出已本机复算，阶段末由 `R02-INT-01` 汇总。
+保留现有策略：宽额没有新增方向覆盖，紧额拒判。7941 选点前没有 `done` 样本，7943 只补充单流诊断；没有真实服务或跨设备验证，不用夹具完成时刻估计 TTFT，不改 CPU 事件语义。阶段末复算与验收见 [R02-INT-01](r02-cross-review.md)。
