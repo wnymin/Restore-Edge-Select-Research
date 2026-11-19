@@ -25,6 +25,7 @@ python -m scripts.gpu.experiments.study_r02_gpu_observation --check docs/evidenc
 python -m scripts.cpu.lookahead.staging.study_lookahead_dynamic_release --check docs/evidence/dynamic-lookahead-dynamic-release-7884.json
 python -m scripts.cpu.lookahead.staging.study_lookahead_transfer_order --check docs/evidence/dynamic-lookahead-transfer-order-7820.json
 python -m scripts.gpu.analysis.r02_probe_ablation docs/evidence/r02-gpu-probe-ablation-7942.csv
+python -m scripts.gpu.analysis.r02_marker_visibility docs/evidence/r02-gpu-marker-visibility-7943.csv
 python scripts/check_fixture.py
 ```
 

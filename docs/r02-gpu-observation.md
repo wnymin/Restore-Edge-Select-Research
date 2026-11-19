@@ -35,6 +35,25 @@
 python -m scripts.gpu.analysis.r02_probe_ablation docs/evidence/r02-gpu-probe-ablation-7942.csv
 ```
 
+## 7943 诊断：事件何时变为 `done`
+
+另测单 CUDA 流上的两个计时事件。主机先记录并同步起点；随后在同一流提交 0 ms（无核）或 33 ms 合成核，并提交窗尾事件。主机立即查询窗尾，用 50 或 250 µs 名义周期忙等轮询，直到第一次返回 `done`。种子 7943 随机交错四组，每组 16 次，首轮暖机不计。不提交候选搬运、不改 7941 决策或留出。
+
+| 窗口／轮询周期 | 每次查询次数中位数 | 末次 `pending` 调用至首次 `done` 返回宽度中位数 | 首次 `done` 返回相对设备窗尾的投影区间端点中位数 |
+| --- | ---: | ---: | ---: |
+| 无核／50 µs | 2 | 50.6 µs | [47.6, 61.5] µs |
+| 无核／250 µs | 2 | 250.5 µs | [247.5, 260.9] µs |
+| 33 ms／50 µs | 659 | 50.9 µs | [28.3, 40.4] µs |
+| 33 ms／250 µs | 133 | 250.9 µs | [19.1, 35.6] µs |
+
+64 次都先 `pending` 后 `done`，**无核对照也如此**。因此单次 `pending` 不能区分“有计算进行”和“无核但事件未报告完成”。右列以主机起点括号投影设备窗尾，再与首次成功返回比较；是各样本区间端点的中位数，不是驱动通知延迟界。它混入轮询间隔、窗口与轮询相位及两钟投影误差；例如 33 ms／50 µs 组有一个下端小于零。忙等不作为在线方案，诊断也没有检验多流争用或测量实际活动残余。
+
+[诊断精简数据](evidence/r02-gpu-marker-visibility-7943.csv)保留首查、末次 `pending`、首次 `done`、设备窗尾和零点括号；无需 CUDA 即可复算。硬件复采使用本地 `collect_r02_marker_visibility.py`，按共享脚本的 `schedule()` 排序，每个样本沿用原夹具的 `Rig`，两事件、单控制流。
+
+```powershell
+python -m scripts.gpu.analysis.r02_marker_visibility docs/evidence/r02-gpu-marker-visibility-7943.csv
+```
+
 ## 复现与决定
 
 [选点前与事后表](evidence/r02-gpu-observation-7941.json)按 `(case_id, arm)` 连接；[审计表](evidence/r02-gpu-observation-7941-audit.json)包含全部 48 对及逐臂的释放、就绪和暴露差。跨线映射见[交接与复算](r02-cross-review.md)。
@@ -48,4 +67,4 @@ python -m scripts.gpu.experiments.study_r02_gpu_observation --check docs/evidenc
 
 本机采集入口按协作约定留在 `.local/hardware/`。重做探针时，用 10 个事件的原 `Rig`，对前两个事件包装 `record`／`wait`：记录起点事件前打主机时间戳，等其同步返回后打第二个；提交窗尾事件后立刻在 CUDA driver 的 `cuEventQuery` 前后取时（0 为 `done`、600 为 `pending`、其他返回码记 `unknown` 并保留原码）。四个戳减起点提交前的戳。仍调用原 `run` 的 distinct 模式，不改变提交、释放或读取顺序；按配置顺序生成 `(cell, shallow/deep)`，使用同一个 RNG 从 `rep=-1` 开始每轮对同一列表原位打乱。输出分成选点前和事后两表。原夹具 SHA-256 在证据中，采集复测是验证方法，并不要求硬件时序逐位重现。
 
-保留现有策略：宽额没有新增方向覆盖，紧额拒判。本次没有 `done` 样本、真实服务或跨设备验证，不用夹具完成时刻估计 TTFT，不改 CPU 事件语义。留出已本机复算，待协作者独立复核。
+保留现有策略：宽额没有新增方向覆盖，紧额拒判。7941 选点前没有 `done` 样本，7943 只补充单流诊断；没有真实服务或跨设备验证，不用夹具完成时刻估计 TTFT，不改 CPU 事件语义。留出已本机复算，待协作者独立复核。
