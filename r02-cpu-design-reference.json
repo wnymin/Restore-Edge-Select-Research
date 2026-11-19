@@ -1,0 +1,2108 @@
+[
+  {
+    "id": "design-none--1--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "343/8"
+        ],
+        "response_sum_ms": "493/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "239/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "43"
+        ],
+        "response_sum_ms": "927/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "43"
+        ],
+        "response_sum_ms": "859/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none--1-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "43"
+        ],
+        "response_sum_ms": "493/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "43"
+        ],
+        "response_sum_ms": "463/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "43"
+        ],
+        "response_sum_ms": "429/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none--1-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "979/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "329/8"
+        ],
+        "response_sum_ms": "455/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "329/8"
+        ],
+        "response_sum_ms": "421/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none-+0--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "981/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "239/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "40"
+        ],
+        "response_sum_ms": "903/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "40"
+        ],
+        "response_sum_ms": "835/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none-+0-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "245/2",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "40"
+        ],
+        "response_sum_ms": "451/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "40"
+        ],
+        "response_sum_ms": "417/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none-+0-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "979/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "889/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "297/8"
+        ],
+        "response_sum_ms": "405/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none-+1--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "343/8"
+        ],
+        "response_sum_ms": "493/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "239/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "43"
+        ],
+        "response_sum_ms": "927/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "43"
+        ],
+        "response_sum_ms": "859/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none-+1-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "245/2",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "445/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "35"
+        ],
+        "response_sum_ms": "397/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-none-+1-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "979/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "889/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "305/8"
+        ],
+        "response_sum_ms": "409/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv--1--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "43"
+        ],
+        "response_sum_ms": "987/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "38"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "157/4"
+        ],
+        "response_sum_ms": "897/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "137/4"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "149/4",
+          "38"
+        ],
+        "response_sum_ms": "843/8",
+        "reservation_ms": [
+          null,
+          "0",
+          null,
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv--1-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "47"
+        ],
+        "response_sum_ms": "509/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "38"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "173/4"
+        ],
+        "response_sum_ms": "116",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "137/4"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "149/4",
+          "42"
+        ],
+        "response_sum_ms": "437/4",
+        "reservation_ms": [
+          null,
+          "0",
+          null,
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv--1-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "45"
+        ],
+        "response_sum_ms": "1001/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "38"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "165/4"
+        ],
+        "response_sum_ms": "911/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "137/4"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "149/4",
+          "40"
+        ],
+        "response_sum_ms": "857/8",
+        "reservation_ms": [
+          null,
+          "0",
+          null,
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv-+0--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "981/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "239/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "891/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "40"
+        ],
+        "response_sum_ms": "835/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv-+0-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "45"
+        ],
+        "response_sum_ms": "501/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "42"
+        ],
+        "response_sum_ms": "459/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "45"
+        ],
+        "response_sum_ms": "437/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv-+0-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "979/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "321/8"
+        ],
+        "response_sum_ms": "451/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "329/8"
+        ],
+        "response_sum_ms": "421/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv-+1--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "981/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "239/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "40"
+        ],
+        "response_sum_ms": "903/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "41"
+        ],
+        "response_sum_ms": "843/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv-+1-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "45"
+        ],
+        "response_sum_ms": "501/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "42"
+        ],
+        "response_sum_ms": "459/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "45"
+        ],
+        "response_sum_ms": "437/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-kv-+1-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "979/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "889/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "281/8"
+        ],
+        "response_sum_ms": "397/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint--1--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "45"
+        ],
+        "response_sum_ms": "1003/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "38"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "165/4"
+        ],
+        "response_sum_ms": "913/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "137/4"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "149/4",
+          "149/4"
+        ],
+        "response_sum_ms": "837/8",
+        "reservation_ms": [
+          null,
+          "0",
+          null,
+          "239/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint--1-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "45"
+        ],
+        "response_sum_ms": "501/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "38"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "165/4"
+        ],
+        "response_sum_ms": "114",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "137/4"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "149/4",
+          "40"
+        ],
+        "response_sum_ms": "429/4",
+        "reservation_ms": [
+          null,
+          "0",
+          null,
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint--1-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "48"
+        ],
+        "response_sum_ms": "1025/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "38"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "177/4"
+        ],
+        "response_sum_ms": "935/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "137/4"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "161/4",
+          "46"
+        ],
+        "response_sum_ms": "929/8",
+        "reservation_ms": [
+          null,
+          "0",
+          null,
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint-+0--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "981/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "239/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "39"
+        ],
+        "response_sum_ms": "895/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "137/4"
+        ],
+        "response_sum_ms": "789/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "239/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint-+0-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "245/2",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "445/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "39"
+        ],
+        "response_sum_ms": "413/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint-+0-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "979/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "889/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "305/8"
+        ],
+        "response_sum_ms": "409/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint-+1--1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "359/8"
+        ],
+        "response_sum_ms": "501/4",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "239/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "42"
+        ],
+        "response_sum_ms": "919/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "137/4"
+        ],
+        "response_sum_ms": "789/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "239/8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint-+1-+0",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "245/2",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "40"
+        ],
+        "response_sum_ms": "451/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "41"
+        ],
+        "response_sum_ms": "421/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-checkpoint-+1-+1",
+    "order": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "winner": 1152,
+    "plans": [
+      {
+        "boundary": 0,
+        "plan": [
+          0,
+          0,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "38",
+          "169/4",
+          "169/4"
+        ],
+        "response_sum_ms": "979/8",
+        "reservation_ms": [
+          null,
+          null,
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 576,
+        "plan": [
+          0,
+          576,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "137/4",
+          "77/2",
+          "77/2"
+        ],
+        "response_sum_ms": "889/8",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      },
+      {
+        "boundary": 1152,
+        "plan": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "completion_ms": [
+          "30",
+          "30",
+          "137/4",
+          "281/8"
+        ],
+        "response_sum_ms": "397/4",
+        "reservation_ms": [
+          null,
+          "0",
+          "0",
+          "241/8"
+        ]
+      }
+    ]
+  }
+]

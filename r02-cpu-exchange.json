@@ -1,0 +1,594 @@
+{
+  "schema": 1,
+  "base": "3458577b8f43a9286b1763eac5c56025ea866197",
+  "scope": "Synthetic CPU fixed plans from identical first-entry state",
+  "observations": [
+    {
+      "id": "r02-checkpoint-retry--1",
+      "source": "docs/evidence/r02-cpu-checkpoint-retry.json",
+      "candidates": [
+        576,
+        1152
+      ],
+      "fixed_successors": [
+        1152,
+        1152
+      ],
+      "capacity_bytes": 89260031,
+      "head": "A",
+      "target": "B",
+      "visible": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "decision_ms": "0",
+      "clock": "Exact simulator milliseconds since common arrival",
+      "initial_ready": [
+        "D.kv1"
+      ],
+      "reservations": {},
+      "inflight": null,
+      "active_head_remaining_ms": [
+        "30",
+        "30"
+      ],
+      "observation_status": "known synthetic state",
+      "alias_objects": [
+        "C.kv1",
+        "C.kv2",
+        "C.state2"
+      ]
+    },
+    {
+      "id": "r02-checkpoint-retry-+0",
+      "source": "docs/evidence/r02-cpu-checkpoint-retry.json",
+      "candidates": [
+        576,
+        1152
+      ],
+      "fixed_successors": [
+        1152,
+        1152
+      ],
+      "capacity_bytes": 89260032,
+      "head": "A",
+      "target": "B",
+      "visible": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "decision_ms": "0",
+      "clock": "Exact simulator milliseconds since common arrival",
+      "initial_ready": [
+        "D.kv1"
+      ],
+      "reservations": {},
+      "inflight": null,
+      "active_head_remaining_ms": [
+        "30",
+        "30"
+      ],
+      "observation_status": "known synthetic state",
+      "alias_objects": [
+        "C.kv1",
+        "C.kv2",
+        "C.state2"
+      ]
+    },
+    {
+      "id": "r02-checkpoint-retry-+1",
+      "source": "docs/evidence/r02-cpu-checkpoint-retry.json",
+      "candidates": [
+        576,
+        1152
+      ],
+      "fixed_successors": [
+        1152,
+        1152
+      ],
+      "capacity_bytes": 89260033,
+      "head": "A",
+      "target": "B",
+      "visible": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "decision_ms": "0",
+      "clock": "Exact simulator milliseconds since common arrival",
+      "initial_ready": [
+        "D.kv1"
+      ],
+      "reservations": {},
+      "inflight": null,
+      "active_head_remaining_ms": [
+        "30",
+        "30"
+      ],
+      "observation_status": "known synthetic state",
+      "alias_objects": [
+        "C.kv1",
+        "C.kv2",
+        "C.state2"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "r02-checkpoint-retry--1",
+      "completion_ms": [
+        [
+          "30",
+          "137/4",
+          "157/4",
+          "177/4"
+        ],
+        [
+          "30",
+          "35",
+          "40",
+          "45"
+        ]
+      ],
+      "reservation_ms": [
+        [
+          null,
+          "0",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "transfers": [
+        [
+          {
+            "path": "ram_to_device",
+            "object": "B.kv1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "0",
+            "end_ms": "1",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "B.state1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "1",
+            "end_ms": "4",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "137/4",
+            "end_ms": "141/4",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "141/4",
+            "end_ms": "145/4",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "145/4",
+            "end_ms": "157/4",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "D",
+            "mode": "demand",
+            "start_ms": "157/4",
+            "end_ms": "161/4",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "D",
+            "mode": "demand",
+            "start_ms": "161/4",
+            "end_ms": "165/4",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "D",
+            "mode": "demand",
+            "start_ms": "165/4",
+            "end_ms": "177/4",
+            "bytes": 51511296
+          }
+        ],
+        [
+          {
+            "path": "ram_to_device",
+            "object": "B.kv1",
+            "request": "B",
+            "mode": "demand",
+            "start_ms": "30",
+            "end_ms": "31",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "B.kv2",
+            "request": "B",
+            "mode": "demand",
+            "start_ms": "31",
+            "end_ms": "32",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "B.state2",
+            "request": "B",
+            "mode": "demand",
+            "start_ms": "32",
+            "end_ms": "35",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "35",
+            "end_ms": "36",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "36",
+            "end_ms": "37",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "37",
+            "end_ms": "40",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "D",
+            "mode": "demand",
+            "start_ms": "40",
+            "end_ms": "41",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "D",
+            "mode": "demand",
+            "start_ms": "41",
+            "end_ms": "42",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "D",
+            "mode": "demand",
+            "start_ms": "42",
+            "end_ms": "45",
+            "bytes": 51511296
+          }
+        ]
+      ],
+      "deep_minus_shallow_sum_ms": "9/4",
+      "best": 576,
+      "tied": false
+    },
+    {
+      "id": "r02-checkpoint-retry-+0",
+      "completion_ms": [
+        [
+          "30",
+          "137/4",
+          "35",
+          "35"
+        ],
+        [
+          "30",
+          "30",
+          "35",
+          "35"
+        ]
+      ],
+      "reservation_ms": [
+        [
+          null,
+          "0",
+          "30",
+          "30"
+        ],
+        [
+          null,
+          "0",
+          null,
+          "30"
+        ]
+      ],
+      "transfers": [
+        [
+          {
+            "path": "ram_to_device",
+            "object": "B.kv1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "0",
+            "end_ms": "1",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "B.state1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "1",
+            "end_ms": "4",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "C",
+            "mode": "prefetch",
+            "start_ms": "30",
+            "end_ms": "31",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "C",
+            "mode": "prefetch",
+            "start_ms": "31",
+            "end_ms": "32",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "C",
+            "mode": "prefetch",
+            "start_ms": "32",
+            "end_ms": "35",
+            "bytes": 51511296
+          }
+        ],
+        [
+          {
+            "path": "ram_to_device",
+            "object": "B.kv1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "0",
+            "end_ms": "1",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "B.kv2",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "1",
+            "end_ms": "2",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "B.state2",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "2",
+            "end_ms": "5",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "30",
+            "end_ms": "31",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "31",
+            "end_ms": "32",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "32",
+            "end_ms": "35",
+            "bytes": 51511296
+          }
+        ]
+      ],
+      "deep_minus_shallow_sum_ms": "-17/4",
+      "best": 1152,
+      "tied": false
+    },
+    {
+      "id": "r02-checkpoint-retry-+1",
+      "completion_ms": [
+        [
+          "30",
+          "137/4",
+          "35",
+          "35"
+        ],
+        [
+          "30",
+          "30",
+          "35",
+          "35"
+        ]
+      ],
+      "reservation_ms": [
+        [
+          null,
+          "0",
+          "30",
+          "30"
+        ],
+        [
+          null,
+          "0",
+          null,
+          "30"
+        ]
+      ],
+      "transfers": [
+        [
+          {
+            "path": "ram_to_device",
+            "object": "B.kv1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "0",
+            "end_ms": "1",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "B.state1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "1",
+            "end_ms": "4",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "C",
+            "mode": "prefetch",
+            "start_ms": "30",
+            "end_ms": "31",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "C",
+            "mode": "prefetch",
+            "start_ms": "31",
+            "end_ms": "32",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "C",
+            "mode": "prefetch",
+            "start_ms": "32",
+            "end_ms": "35",
+            "bytes": 51511296
+          }
+        ],
+        [
+          {
+            "path": "ram_to_device",
+            "object": "B.kv1",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "0",
+            "end_ms": "1",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "B.kv2",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "1",
+            "end_ms": "2",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "B.state2",
+            "request": "B",
+            "mode": "prefetch",
+            "start_ms": "2",
+            "end_ms": "5",
+            "bytes": 51511296
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv1",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "30",
+            "end_ms": "31",
+            "bytes": 18874368
+          },
+          {
+            "path": "ram_to_device",
+            "object": "C.kv2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "31",
+            "end_ms": "32",
+            "bytes": 18874368
+          },
+          {
+            "path": "ssd_to_device",
+            "object": "C.state2",
+            "request": "C",
+            "mode": "demand",
+            "start_ms": "32",
+            "end_ms": "35",
+            "bytes": 51511296
+          }
+        ]
+      ],
+      "deep_minus_shallow_sum_ms": "-17/4",
+      "best": 1152,
+      "tied": false
+    }
+  ]
+}

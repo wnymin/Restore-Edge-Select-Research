@@ -1,0 +1,329 @@
+{
+  "source": "dynamic-lookahead-dynamic-release-7884",
+  "cases": [
+    {
+      "id": "r02-release--1--1/8",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771327,
+      "threshold_bytes": 140771328,
+      "byte_delta": -1,
+      "ready_minus_release_ms": "-1/8",
+      "release_ms": "30",
+      "d_ready_ms": "239/8",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "demand",
+        "start_ms": "137/4",
+        "end_ms": "141/4",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        null,
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "811/16",
+        "879/16"
+      ]
+    },
+    {
+      "id": "r02-release--1-0",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771327,
+      "threshold_bytes": 140771328,
+      "byte_delta": -1,
+      "ready_minus_release_ms": "0",
+      "release_ms": "30",
+      "d_ready_ms": "30",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "demand",
+        "start_ms": "137/4",
+        "end_ms": "141/4",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        null,
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "203/4",
+        "55"
+      ]
+    },
+    {
+      "id": "r02-release--1-1/8",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771327,
+      "threshold_bytes": 140771328,
+      "byte_delta": -1,
+      "ready_minus_release_ms": "1/8",
+      "release_ms": "30",
+      "d_ready_ms": "241/8",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "demand",
+        "start_ms": "137/4",
+        "end_ms": "141/4",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        null,
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "813/16",
+        "881/16"
+      ]
+    },
+    {
+      "id": "r02-release-+0--1/8",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771328,
+      "threshold_bytes": 140771328,
+      "byte_delta": 0,
+      "ready_minus_release_ms": "-1/8",
+      "release_ms": "30",
+      "d_ready_ms": "239/8",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "prefetch",
+        "start_ms": "30",
+        "end_ms": "31",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        "30",
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "743/16",
+        "811/16"
+      ]
+    },
+    {
+      "id": "r02-release-+0-0",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771328,
+      "threshold_bytes": 140771328,
+      "byte_delta": 0,
+      "ready_minus_release_ms": "0",
+      "release_ms": "30",
+      "d_ready_ms": "30",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "prefetch",
+        "start_ms": "30",
+        "end_ms": "31",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        "30",
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "93/2",
+        "203/4"
+      ]
+    },
+    {
+      "id": "r02-release-+0-1/8",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771328,
+      "threshold_bytes": 140771328,
+      "byte_delta": 0,
+      "ready_minus_release_ms": "1/8",
+      "release_ms": "30",
+      "d_ready_ms": "241/8",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "prefetch",
+        "start_ms": "241/8",
+        "end_ms": "249/8",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        "30",
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "747/16",
+        "815/16"
+      ]
+    },
+    {
+      "id": "r02-release-+1--1/8",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771329,
+      "threshold_bytes": 140771328,
+      "byte_delta": 1,
+      "ready_minus_release_ms": "-1/8",
+      "release_ms": "30",
+      "d_ready_ms": "239/8",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "prefetch",
+        "start_ms": "30",
+        "end_ms": "31",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        "30",
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "743/16",
+        "811/16"
+      ]
+    },
+    {
+      "id": "r02-release-+1-0",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771329,
+      "threshold_bytes": 140771328,
+      "byte_delta": 1,
+      "ready_minus_release_ms": "0",
+      "release_ms": "30",
+      "d_ready_ms": "30",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "prefetch",
+        "start_ms": "30",
+        "end_ms": "31",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        "30",
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "93/2",
+        "203/4"
+      ]
+    },
+    {
+      "id": "r02-release-+1-1/8",
+      "plan": [
+        0,
+        576,
+        1152,
+        576
+      ],
+      "bytes": 140771329,
+      "threshold_bytes": 140771328,
+      "byte_delta": 1,
+      "ready_minus_release_ms": "1/8",
+      "release_ms": "30",
+      "d_ready_ms": "241/8",
+      "c_first_transfer": {
+        "path": "ram_to_device",
+        "object": "C.kv1",
+        "request": "C",
+        "mode": "prefetch",
+        "start_ms": "241/8",
+        "end_ms": "249/8",
+        "bytes": 18874368
+      },
+      "reservation_ms": [
+        null,
+        "0",
+        "30",
+        "0"
+      ],
+      "completion_ms": [
+        "30",
+        "137/4",
+        "747/16",
+        "815/16"
+      ]
+    }
+  ]
+}
