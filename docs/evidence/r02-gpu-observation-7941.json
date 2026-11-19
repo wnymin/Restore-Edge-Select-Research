@@ -1,0 +1,4931 @@
+{
+  "config": {
+    "protocol": "R02-GPU-01/v1",
+    "calibration": "docs/evidence/dynamic-gpu-joint-staging-7449.csv",
+    "seed": 7941,
+    "repeats": 16,
+    "window_ms": 33,
+    "tie_ms": 0.25,
+    "cells": [
+      {
+        "id": "tight-short",
+        "quota_mib": 80,
+        "shallow_work_ms": 7
+      },
+      {
+        "id": "tight-long",
+        "quota_mib": 80,
+        "shallow_work_ms": 30
+      },
+      {
+        "id": "wide-short",
+        "quota_mib": 112,
+        "shallow_work_ms": 7
+      }
+    ]
+  },
+  "fixture_sha256": {
+    "bench_gpu_joint_staging.py": "03c743619e5b2dc73d0fcb73e7671fc1226f37643ef66181996063b2f229c58a",
+    "bench_gpu_staging.py": "581c4f9a167da4487703ae9fc6661a203e16a19bd1fbd8a0cdd9bcbf12135cd0"
+  },
+  "observations": [
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:-1",
+      "ordinal": 0,
+      "arm": "deep",
+      "rep": -1,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          80000
+        ],
+        "query_bracket_ns": [
+          163300,
+          164900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:-1",
+      "ordinal": 1,
+      "arm": "shallow",
+      "rep": -1,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11600
+        ],
+        "query_bracket_ns": [
+          33700,
+          35300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:-1",
+      "ordinal": 2,
+      "arm": "deep",
+      "rep": -1,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          14400
+        ],
+        "query_bracket_ns": [
+          41100,
+          42600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:-1",
+      "ordinal": 3,
+      "arm": "deep",
+      "rep": -1,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12700
+        ],
+        "query_bracket_ns": [
+          39400,
+          40800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:-1",
+      "ordinal": 4,
+      "arm": "shallow",
+      "rep": -1,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10500
+        ],
+        "query_bracket_ns": [
+          22800,
+          24000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:-1",
+      "ordinal": 5,
+      "arm": "shallow",
+      "rep": -1,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11700
+        ],
+        "query_bracket_ns": [
+          54400,
+          55900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:0",
+      "ordinal": 6,
+      "arm": "deep",
+      "rep": 0,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          14900
+        ],
+        "query_bracket_ns": [
+          43500,
+          45100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:0",
+      "ordinal": 7,
+      "arm": "deep",
+      "rep": 0,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12400
+        ],
+        "query_bracket_ns": [
+          30800,
+          32200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:0",
+      "ordinal": 8,
+      "arm": "shallow",
+      "rep": 0,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11200
+        ],
+        "query_bracket_ns": [
+          46800,
+          47900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:0",
+      "ordinal": 9,
+      "arm": "deep",
+      "rep": 0,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12300
+        ],
+        "query_bracket_ns": [
+          42600,
+          43900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:0",
+      "ordinal": 10,
+      "arm": "shallow",
+      "rep": 0,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12100
+        ],
+        "query_bracket_ns": [
+          49600,
+          51000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:0",
+      "ordinal": 11,
+      "arm": "shallow",
+      "rep": 0,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          28400
+        ],
+        "query_bracket_ns": [
+          55900,
+          57200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:1",
+      "ordinal": 12,
+      "arm": "deep",
+      "rep": 1,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12900
+        ],
+        "query_bracket_ns": [
+          43200,
+          44900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:1",
+      "ordinal": 13,
+      "arm": "deep",
+      "rep": 1,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11300
+        ],
+        "query_bracket_ns": [
+          32900,
+          34100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:1",
+      "ordinal": 14,
+      "arm": "shallow",
+      "rep": 1,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11700
+        ],
+        "query_bracket_ns": [
+          29500,
+          30700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:1",
+      "ordinal": 15,
+      "arm": "shallow",
+      "rep": 1,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12200
+        ],
+        "query_bracket_ns": [
+          51100,
+          52400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:1",
+      "ordinal": 16,
+      "arm": "deep",
+      "rep": 1,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10900
+        ],
+        "query_bracket_ns": [
+          49200,
+          50700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:1",
+      "ordinal": 17,
+      "arm": "shallow",
+      "rep": 1,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13400
+        ],
+        "query_bracket_ns": [
+          33500,
+          34600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:2",
+      "ordinal": 18,
+      "arm": "shallow",
+      "rep": 2,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12400
+        ],
+        "query_bracket_ns": [
+          52600,
+          54000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:2",
+      "ordinal": 19,
+      "arm": "shallow",
+      "rep": 2,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12300
+        ],
+        "query_bracket_ns": [
+          46200,
+          47500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:2",
+      "ordinal": 20,
+      "arm": "deep",
+      "rep": 2,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11300
+        ],
+        "query_bracket_ns": [
+          46300,
+          47500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:2",
+      "ordinal": 21,
+      "arm": "deep",
+      "rep": 2,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12500
+        ],
+        "query_bracket_ns": [
+          37200,
+          38500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:2",
+      "ordinal": 22,
+      "arm": "shallow",
+      "rep": 2,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          8100
+        ],
+        "query_bracket_ns": [
+          37700,
+          38800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:2",
+      "ordinal": 23,
+      "arm": "deep",
+      "rep": 2,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13900
+        ],
+        "query_bracket_ns": [
+          34800,
+          35900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:3",
+      "ordinal": 24,
+      "arm": "shallow",
+      "rep": 3,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9700
+        ],
+        "query_bracket_ns": [
+          46800,
+          48200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:3",
+      "ordinal": 25,
+      "arm": "shallow",
+      "rep": 3,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13900
+        ],
+        "query_bracket_ns": [
+          63900,
+          65900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:3",
+      "ordinal": 26,
+      "arm": "shallow",
+      "rep": 3,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          29900
+        ],
+        "query_bracket_ns": [
+          73500,
+          75100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:3",
+      "ordinal": 27,
+      "arm": "deep",
+      "rep": 3,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11200
+        ],
+        "query_bracket_ns": [
+          30000,
+          31200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:3",
+      "ordinal": 28,
+      "arm": "deep",
+      "rep": 3,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10800
+        ],
+        "query_bracket_ns": [
+          47900,
+          49300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:3",
+      "ordinal": 29,
+      "arm": "deep",
+      "rep": 3,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9500
+        ],
+        "query_bracket_ns": [
+          38900,
+          40500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:4",
+      "ordinal": 30,
+      "arm": "deep",
+      "rep": 4,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12100
+        ],
+        "query_bracket_ns": [
+          35400,
+          36500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:4",
+      "ordinal": 31,
+      "arm": "shallow",
+      "rep": 4,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9100
+        ],
+        "query_bracket_ns": [
+          25600,
+          26900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:4",
+      "ordinal": 32,
+      "arm": "deep",
+      "rep": 4,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          51500
+        ],
+        "query_bracket_ns": [
+          86500,
+          88000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:4",
+      "ordinal": 33,
+      "arm": "deep",
+      "rep": 4,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          16100
+        ],
+        "query_bracket_ns": [
+          36100,
+          37400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:4",
+      "ordinal": 34,
+      "arm": "shallow",
+      "rep": 4,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          15300
+        ],
+        "query_bracket_ns": [
+          36100,
+          37100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:4",
+      "ordinal": 35,
+      "arm": "shallow",
+      "rep": 4,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          30700
+        ],
+        "query_bracket_ns": [
+          55600,
+          56800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:5",
+      "ordinal": 36,
+      "arm": "deep",
+      "rep": 5,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13000
+        ],
+        "query_bracket_ns": [
+          37400,
+          38700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:5",
+      "ordinal": 37,
+      "arm": "deep",
+      "rep": 5,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10900
+        ],
+        "query_bracket_ns": [
+          48000,
+          49100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:5",
+      "ordinal": 38,
+      "arm": "shallow",
+      "rep": 5,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12400
+        ],
+        "query_bracket_ns": [
+          33500,
+          34600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:5",
+      "ordinal": 39,
+      "arm": "shallow",
+      "rep": 5,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12500
+        ],
+        "query_bracket_ns": [
+          34900,
+          36300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:5",
+      "ordinal": 40,
+      "arm": "shallow",
+      "rep": 5,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          15200
+        ],
+        "query_bracket_ns": [
+          35700,
+          36700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:5",
+      "ordinal": 41,
+      "arm": "deep",
+      "rep": 5,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12300
+        ],
+        "query_bracket_ns": [
+          34500,
+          35600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:6",
+      "ordinal": 42,
+      "arm": "deep",
+      "rep": 6,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9300
+        ],
+        "query_bracket_ns": [
+          20400,
+          21600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:6",
+      "ordinal": 43,
+      "arm": "shallow",
+      "rep": 6,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10000
+        ],
+        "query_bracket_ns": [
+          44300,
+          45500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:6",
+      "ordinal": 44,
+      "arm": "shallow",
+      "rep": 6,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          14200
+        ],
+        "query_bracket_ns": [
+          43000,
+          44500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:6",
+      "ordinal": 45,
+      "arm": "deep",
+      "rep": 6,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11400
+        ],
+        "query_bracket_ns": [
+          31800,
+          33000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:6",
+      "ordinal": 46,
+      "arm": "shallow",
+      "rep": 6,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9600
+        ],
+        "query_bracket_ns": [
+          26800,
+          28200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:6",
+      "ordinal": 47,
+      "arm": "deep",
+      "rep": 6,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12200
+        ],
+        "query_bracket_ns": [
+          44800,
+          46000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:7",
+      "ordinal": 48,
+      "arm": "deep",
+      "rep": 7,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9400
+        ],
+        "query_bracket_ns": [
+          26000,
+          27100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:7",
+      "ordinal": 49,
+      "arm": "shallow",
+      "rep": 7,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12000
+        ],
+        "query_bracket_ns": [
+          31100,
+          32300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:7",
+      "ordinal": 50,
+      "arm": "shallow",
+      "rep": 7,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13400
+        ],
+        "query_bracket_ns": [
+          38100,
+          39500
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:7",
+      "ordinal": 51,
+      "arm": "shallow",
+      "rep": 7,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          14100
+        ],
+        "query_bracket_ns": [
+          97400,
+          99700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:7",
+      "ordinal": 52,
+      "arm": "deep",
+      "rep": 7,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10800
+        ],
+        "query_bracket_ns": [
+          48500,
+          50000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:7",
+      "ordinal": 53,
+      "arm": "deep",
+      "rep": 7,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9100
+        ],
+        "query_bracket_ns": [
+          31700,
+          32800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:8",
+      "ordinal": 54,
+      "arm": "deep",
+      "rep": 8,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12700
+        ],
+        "query_bracket_ns": [
+          37600,
+          38700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:8",
+      "ordinal": 55,
+      "arm": "deep",
+      "rep": 8,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10500
+        ],
+        "query_bracket_ns": [
+          29800,
+          30900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:8",
+      "ordinal": 56,
+      "arm": "shallow",
+      "rep": 8,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10000
+        ],
+        "query_bracket_ns": [
+          40000,
+          41400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:8",
+      "ordinal": 57,
+      "arm": "shallow",
+      "rep": 8,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11300
+        ],
+        "query_bracket_ns": [
+          49200,
+          50400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:8",
+      "ordinal": 58,
+      "arm": "deep",
+      "rep": 8,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13600
+        ],
+        "query_bracket_ns": [
+          41700,
+          43200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:8",
+      "ordinal": 59,
+      "arm": "shallow",
+      "rep": 8,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13000
+        ],
+        "query_bracket_ns": [
+          40000,
+          41000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:9",
+      "ordinal": 60,
+      "arm": "deep",
+      "rep": 9,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11300
+        ],
+        "query_bracket_ns": [
+          50400,
+          51700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:9",
+      "ordinal": 61,
+      "arm": "shallow",
+      "rep": 9,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11400
+        ],
+        "query_bracket_ns": [
+          60200,
+          61400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:9",
+      "ordinal": 62,
+      "arm": "shallow",
+      "rep": 9,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11400
+        ],
+        "query_bracket_ns": [
+          47600,
+          48800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:9",
+      "ordinal": 63,
+      "arm": "deep",
+      "rep": 9,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13700
+        ],
+        "query_bracket_ns": [
+          39000,
+          40100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:9",
+      "ordinal": 64,
+      "arm": "deep",
+      "rep": 9,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          7600
+        ],
+        "query_bracket_ns": [
+          20300,
+          21300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:9",
+      "ordinal": 65,
+      "arm": "shallow",
+      "rep": 9,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11400
+        ],
+        "query_bracket_ns": [
+          48700,
+          49900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:10",
+      "ordinal": 66,
+      "arm": "deep",
+      "rep": 10,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12600
+        ],
+        "query_bracket_ns": [
+          33200,
+          34300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:10",
+      "ordinal": 67,
+      "arm": "shallow",
+      "rep": 10,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          8200
+        ],
+        "query_bracket_ns": [
+          19600,
+          20800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:10",
+      "ordinal": 68,
+      "arm": "shallow",
+      "rep": 10,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11700
+        ],
+        "query_bracket_ns": [
+          32000,
+          33300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:10",
+      "ordinal": 69,
+      "arm": "deep",
+      "rep": 10,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          14800
+        ],
+        "query_bracket_ns": [
+          44400,
+          45700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:10",
+      "ordinal": 70,
+      "arm": "shallow",
+      "rep": 10,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12400
+        ],
+        "query_bracket_ns": [
+          52000,
+          53200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:10",
+      "ordinal": 71,
+      "arm": "deep",
+      "rep": 10,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11200
+        ],
+        "query_bracket_ns": [
+          51900,
+          53200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:11",
+      "ordinal": 72,
+      "arm": "shallow",
+      "rep": 11,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12900
+        ],
+        "query_bracket_ns": [
+          32300,
+          33600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:11",
+      "ordinal": 73,
+      "arm": "deep",
+      "rep": 11,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11300
+        ],
+        "query_bracket_ns": [
+          39100,
+          40600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:11",
+      "ordinal": 74,
+      "arm": "deep",
+      "rep": 11,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11400
+        ],
+        "query_bracket_ns": [
+          30500,
+          31700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:11",
+      "ordinal": 75,
+      "arm": "shallow",
+      "rep": 11,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11000
+        ],
+        "query_bracket_ns": [
+          35700,
+          37000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:11",
+      "ordinal": 76,
+      "arm": "deep",
+      "rep": 11,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          15700
+        ],
+        "query_bracket_ns": [
+          47000,
+          48100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:11",
+      "ordinal": 77,
+      "arm": "shallow",
+      "rep": 11,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9700
+        ],
+        "query_bracket_ns": [
+          50800,
+          51900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:12",
+      "ordinal": 78,
+      "arm": "deep",
+      "rep": 12,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10900
+        ],
+        "query_bracket_ns": [
+          46700,
+          47800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:12",
+      "ordinal": 79,
+      "arm": "deep",
+      "rep": 12,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13400
+        ],
+        "query_bracket_ns": [
+          65900,
+          67900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:12",
+      "ordinal": 80,
+      "arm": "shallow",
+      "rep": 12,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10200
+        ],
+        "query_bracket_ns": [
+          30500,
+          31700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:12",
+      "ordinal": 81,
+      "arm": "shallow",
+      "rep": 12,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11900
+        ],
+        "query_bracket_ns": [
+          35600,
+          36600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:12",
+      "ordinal": 82,
+      "arm": "shallow",
+      "rep": 12,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10500
+        ],
+        "query_bracket_ns": [
+          36800,
+          37900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:12",
+      "ordinal": 83,
+      "arm": "deep",
+      "rep": 12,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9700
+        ],
+        "query_bracket_ns": [
+          30600,
+          31700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "ordinal": 84,
+      "arm": "shallow",
+      "rep": 13,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10700
+        ],
+        "query_bracket_ns": [
+          45100,
+          46300
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "ordinal": 85,
+      "arm": "shallow",
+      "rep": 13,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13400
+        ],
+        "query_bracket_ns": [
+          55400,
+          56400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "ordinal": 86,
+      "arm": "deep",
+      "rep": 13,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          10300
+        ],
+        "query_bracket_ns": [
+          48200,
+          49600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:13",
+      "ordinal": 87,
+      "arm": "shallow",
+      "rep": 13,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11900
+        ],
+        "query_bracket_ns": [
+          29100,
+          30000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:13",
+      "ordinal": 88,
+      "arm": "deep",
+      "rep": 13,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13400
+        ],
+        "query_bracket_ns": [
+          39800,
+          41100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "ordinal": 89,
+      "arm": "deep",
+      "rep": 13,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          11700
+        ],
+        "query_bracket_ns": [
+          49700,
+          51200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:14",
+      "ordinal": 90,
+      "arm": "deep",
+      "rep": 14,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          17300
+        ],
+        "query_bracket_ns": [
+          39700,
+          41000
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:14",
+      "ordinal": 91,
+      "arm": "shallow",
+      "rep": 14,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          8100
+        ],
+        "query_bracket_ns": [
+          42300,
+          43600
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:14",
+      "ordinal": 92,
+      "arm": "deep",
+      "rep": 14,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          15000
+        ],
+        "query_bracket_ns": [
+          44700,
+          46100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:14",
+      "ordinal": 93,
+      "arm": "shallow",
+      "rep": 14,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          15500
+        ],
+        "query_bracket_ns": [
+          34200,
+          35400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:14",
+      "ordinal": 94,
+      "arm": "deep",
+      "rep": 14,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          9700
+        ],
+        "query_bracket_ns": [
+          26500,
+          27700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:14",
+      "ordinal": 95,
+      "arm": "shallow",
+      "rep": 14,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12100
+        ],
+        "query_bracket_ns": [
+          56500,
+          57900
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:15",
+      "ordinal": 96,
+      "arm": "shallow",
+      "rep": 15,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12400
+        ],
+        "query_bracket_ns": [
+          36100,
+          37200
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:15",
+      "ordinal": 97,
+      "arm": "shallow",
+      "rep": 15,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          12100
+        ],
+        "query_bracket_ns": [
+          36500,
+          37800
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:15",
+      "ordinal": 98,
+      "arm": "deep",
+      "rep": 15,
+      "cell": "tight-long",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          14200
+        ],
+        "query_bracket_ns": [
+          41600,
+          42700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:15",
+      "ordinal": 99,
+      "arm": "deep",
+      "rep": 15,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13200
+        ],
+        "query_bracket_ns": [
+          42800,
+          44100
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:15",
+      "ordinal": 100,
+      "arm": "deep",
+      "rep": 15,
+      "cell": "tight-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          13700
+        ],
+        "query_bracket_ns": [
+          33400,
+          47400
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:15",
+      "ordinal": 101,
+      "arm": "shallow",
+      "rep": 15,
+      "cell": "wide-short",
+      "before": {
+        "origin_bracket_ns": [
+          0,
+          7900
+        ],
+        "query_bracket_ns": [
+          20600,
+          21700
+        ],
+        "marker_status": "pending",
+        "query_code": 600,
+        "active_compute": null,
+        "active_peer_transfer": null
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:-1",
+      "arm": "deep",
+      "after": {
+        "rep": -1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.1784,
+        "wait_ms": 32.9451,
+        "window_end_ms": 33.141761779785156,
+        "release_ms": 33.14380645751953,
+        "target_done_ms": 61.14713668823242,
+        "peer_c_done_ms": 63.15110397338867,
+        "peer_d_done_ms": 64.15462493896484,
+        "peer_d_ready_ms": 48.13510513305664,
+        "ssd_read_ms": 12.2137,
+        "ssd_upload_ms": 2.6684799194335938
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:-1",
+      "arm": "shallow",
+      "after": {
+        "rep": -1,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0733,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02297592163086,
+        "release_ms": 33.0250244140625,
+        "target_done_ms": 40.028160095214844,
+        "peer_c_done_ms": 42.032127380371094,
+        "peer_d_done_ms": 43.035648345947266,
+        "peer_d_ready_ms": 14.515551567077637,
+        "ssd_read_ms": 11.7328,
+        "ssd_upload_ms": 2.675391912460327
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:-1",
+      "arm": "deep",
+      "after": {
+        "rep": -1,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0818,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02707290649414,
+        "release_ms": 33.02912139892578,
+        "target_done_ms": 38.0313606262207,
+        "peer_c_done_ms": 40.03532791137695,
+        "peer_d_done_ms": 41.038848876953125,
+        "peer_d_ready_ms": 12.93120002746582,
+        "ssd_read_ms": 10.1429,
+        "ssd_upload_ms": 2.6701440811157227
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:-1",
+      "arm": "deep",
+      "after": {
+        "rep": -1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.08,
+        "wait_ms": 32.9629,
+        "window_end_ms": 33.02604675292969,
+        "release_ms": 33.02809524536133,
+        "target_done_ms": 38.0313606262207,
+        "peer_c_done_ms": 40.03532791137695,
+        "peer_d_done_ms": 49.85958480834961,
+        "peer_d_ready_ms": 48.80271911621094,
+        "ssd_read_ms": 13.0644,
+        "ssd_upload_ms": 2.637471914291382
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:-1",
+      "arm": "shallow",
+      "after": {
+        "rep": -1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0667,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.01375961303711,
+        "release_ms": 33.01580810546875,
+        "target_done_ms": 63.01900863647461,
+        "peer_c_done_ms": 65.02297973632812,
+        "peer_d_done_ms": 66.02649688720703,
+        "peer_d_ready_ms": 12.89305591583252,
+        "ssd_read_ms": 10.083,
+        "ssd_upload_ms": 2.673151969909668
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:-1",
+      "arm": "shallow",
+      "after": {
+        "rep": -1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.1683,
+        "wait_ms": 0.0002,
+        "window_end_ms": 33.04243087768555,
+        "release_ms": 33.04447937011719,
+        "target_done_ms": 40.04761505126953,
+        "peer_c_done_ms": 42.05158233642578,
+        "peer_d_done_ms": 43.05510330200195,
+        "peer_d_ready_ms": 12.798944473266602,
+        "ssd_read_ms": 9.9448,
+        "ssd_upload_ms": 2.6547200679779053
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:0",
+      "arm": "deep",
+      "after": {
+        "rep": 0,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0798,
+        "wait_ms": 32.9654,
+        "window_end_ms": 33.02912139892578,
+        "release_ms": 33.03014373779297,
+        "target_done_ms": 38.033409118652344,
+        "peer_c_done_ms": 40.037376403808594,
+        "peer_d_done_ms": 48.28569412231445,
+        "peer_d_ready_ms": 47.22163009643555,
+        "ssd_read_ms": 11.4257,
+        "ssd_upload_ms": 2.672640085220337
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:0",
+      "arm": "deep",
+      "after": {
+        "rep": 0,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0647,
+        "wait_ms": 32.9608,
+        "window_end_ms": 33.01887893676758,
+        "release_ms": 33.01990509033203,
+        "target_done_ms": 61.023231506347656,
+        "peer_c_done_ms": 63.027198791503906,
+        "peer_d_done_ms": 64.03072357177734,
+        "peer_d_ready_ms": 45.26047897338867,
+        "ssd_read_ms": 9.5286,
+        "ssd_upload_ms": 2.62825608253479
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:0",
+      "arm": "shallow",
+      "after": {
+        "rep": 0,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0662,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03526306152344,
+        "release_ms": 33.03628921508789,
+        "target_done_ms": 40.039424896240234,
+        "peer_c_done_ms": 42.043392181396484,
+        "peer_d_done_ms": 43.0458869934082,
+        "peer_d_ready_ms": 12.269696235656738,
+        "ssd_read_ms": 9.4922,
+        "ssd_upload_ms": 2.6718080043792725
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:0",
+      "arm": "deep",
+      "after": {
+        "rep": 0,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0778,
+        "wait_ms": 0.0002,
+        "window_end_ms": 33.02912139892578,
+        "release_ms": 33.03014373779297,
+        "target_done_ms": 38.033409118652344,
+        "peer_c_done_ms": 40.037376403808594,
+        "peer_d_done_ms": 41.040897369384766,
+        "peer_d_ready_ms": 12.677408218383789,
+        "ssd_read_ms": 9.9,
+        "ssd_upload_ms": 2.6686720848083496
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:0",
+      "arm": "shallow",
+      "after": {
+        "rep": 0,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0687,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03731155395508,
+        "release_ms": 33.03833770751953,
+        "target_done_ms": 63.041534423828125,
+        "peer_c_done_ms": 65.04550170898438,
+        "peer_d_done_ms": 66.0479965209961,
+        "peer_d_ready_ms": 12.61894416809082,
+        "ssd_read_ms": 9.8552,
+        "ssd_upload_ms": 2.6539199352264404
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:0",
+      "arm": "shallow",
+      "after": {
+        "rep": 0,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0769,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.04243087768555,
+        "release_ms": 33.04345703125,
+        "target_done_ms": 40.046592712402344,
+        "peer_c_done_ms": 42.049537658691406,
+        "peer_d_done_ms": 43.05305480957031,
+        "peer_d_ready_ms": 13.527680397033691,
+        "ssd_read_ms": 10.6674,
+        "ssd_upload_ms": 2.737247943878174
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:1",
+      "arm": "deep",
+      "after": {
+        "rep": 1,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0879,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02873611450195,
+        "release_ms": 33.02975845336914,
+        "target_done_ms": 38.033023834228516,
+        "peer_c_done_ms": 40.036991119384766,
+        "peer_d_done_ms": 41.04051208496094,
+        "peer_d_ready_ms": 13.634783744812012,
+        "ssd_read_ms": 10.7971,
+        "ssd_upload_ms": 2.7031679153442383
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:1",
+      "arm": "deep",
+      "after": {
+        "rep": 1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0741,
+        "wait_ms": 32.9603,
+        "window_end_ms": 33.02195358276367,
+        "release_ms": 33.02297592163086,
+        "target_done_ms": 38.026241302490234,
+        "peer_c_done_ms": 40.030208587646484,
+        "peer_d_done_ms": 48.899070739746094,
+        "peer_d_ready_ms": 47.85833740234375,
+        "ssd_read_ms": 12.0768,
+        "ssd_upload_ms": 2.6263680458068848
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:1",
+      "arm": "shallow",
+      "after": {
+        "rep": 1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0629,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.01887893676758,
+        "release_ms": 33.01990509033203,
+        "target_done_ms": 63.02310562133789,
+        "peer_c_done_ms": 65.02706909179688,
+        "peer_d_done_ms": 66.02957153320312,
+        "peer_d_ready_ms": 12.067744255065918,
+        "ssd_read_ms": 9.3252,
+        "ssd_upload_ms": 2.651616096496582
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:1",
+      "arm": "shallow",
+      "after": {
+        "rep": 1,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0705,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03833770751953,
+        "release_ms": 33.03936004638672,
+        "target_done_ms": 40.04249572753906,
+        "peer_c_done_ms": 42.045440673828125,
+        "peer_d_done_ms": 43.0489616394043,
+        "peer_d_ready_ms": 12.202431678771973,
+        "ssd_read_ms": 9.359,
+        "ssd_upload_ms": 2.6530239582061768
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:1",
+      "arm": "deep",
+      "after": {
+        "rep": 1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0978,
+        "wait_ms": 32.9791,
+        "window_end_ms": 33.03731155395508,
+        "release_ms": 33.03833770751953,
+        "target_done_ms": 61.041664123535156,
+        "peer_c_done_ms": 63.045631408691406,
+        "peer_d_done_ms": 64.04914855957031,
+        "peer_d_ready_ms": 47.875423431396484,
+        "ssd_read_ms": 12.0936,
+        "ssd_upload_ms": 2.6291840076446533
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:1",
+      "arm": "shallow",
+      "after": {
+        "rep": 1,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0655,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.020606994628906,
+        "release_ms": 33.02163314819336,
+        "target_done_ms": 40.0247688293457,
+        "peer_c_done_ms": 42.02873611450195,
+        "peer_d_done_ms": 43.032257080078125,
+        "peer_d_ready_ms": 12.409184455871582,
+        "ssd_read_ms": 9.6081,
+        "ssd_upload_ms": 2.6464319229125977
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:2",
+      "arm": "shallow",
+      "after": {
+        "rep": 2,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0718,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.0423698425293,
+        "release_ms": 33.043392181396484,
+        "target_done_ms": 40.04652786254883,
+        "peer_c_done_ms": 42.05049514770508,
+        "peer_d_done_ms": 43.05401611328125,
+        "peer_d_ready_ms": 13.573216438293457,
+        "ssd_read_ms": 10.7816,
+        "ssd_upload_ms": 2.6586239337921143
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:2",
+      "arm": "shallow",
+      "after": {
+        "rep": 2,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0812,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.0332145690918,
+        "release_ms": 33.03424072265625,
+        "target_done_ms": 40.037376403808594,
+        "peer_c_done_ms": 42.041343688964844,
+        "peer_d_done_ms": 43.044864654541016,
+        "peer_d_ready_ms": 12.987104415893555,
+        "ssd_read_ms": 10.1986,
+        "ssd_upload_ms": 2.6844160556793213
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:2",
+      "arm": "deep",
+      "after": {
+        "rep": 2,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0665,
+        "wait_ms": 0.0002,
+        "window_end_ms": 33.03526306152344,
+        "release_ms": 33.03628921508789,
+        "target_done_ms": 38.03955078125,
+        "peer_c_done_ms": 40.043521881103516,
+        "peer_d_done_ms": 41.04703903198242,
+        "peer_d_ready_ms": 12.940032005310059,
+        "ssd_read_ms": 10.1816,
+        "ssd_upload_ms": 2.6519999504089355
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:2",
+      "arm": "deep",
+      "after": {
+        "rep": 2,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0718,
+        "wait_ms": 32.962,
+        "window_end_ms": 33.02399826049805,
+        "release_ms": 33.0250244140625,
+        "target_done_ms": 38.028289794921875,
+        "peer_c_done_ms": 40.032257080078125,
+        "peer_d_done_ms": 46.67289733886719,
+        "peer_d_ready_ms": 45.644927978515625,
+        "ssd_read_ms": 9.8853,
+        "ssd_upload_ms": 2.6849279403686523
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:2",
+      "arm": "shallow",
+      "after": {
+        "rep": 2,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0704,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03014373779297,
+        "release_ms": 33.03116989135742,
+        "target_done_ms": 63.034366607666016,
+        "peer_c_done_ms": 65.03731536865234,
+        "peer_d_done_ms": 66.04083251953125,
+        "peer_d_ready_ms": 12.595295906066895,
+        "ssd_read_ms": 9.7772,
+        "ssd_upload_ms": 2.7232959270477295
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:2",
+      "arm": "deep",
+      "after": {
+        "rep": 2,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0646,
+        "wait_ms": 33.0041,
+        "window_end_ms": 33.02297592163086,
+        "release_ms": 33.02399826049805,
+        "target_done_ms": 61.02732849121094,
+        "peer_c_done_ms": 63.03129577636719,
+        "peer_d_done_ms": 64.0348129272461,
+        "peer_d_ready_ms": 47.366912841796875,
+        "ssd_read_ms": 11.6104,
+        "ssd_upload_ms": 2.63702392578125
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:3",
+      "arm": "shallow",
+      "after": {
+        "rep": 3,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0943,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03628921508789,
+        "release_ms": 33.03731155395508,
+        "target_done_ms": 40.04044723510742,
+        "peer_c_done_ms": 42.04441452026367,
+        "peer_d_done_ms": 43.047935485839844,
+        "peer_d_ready_ms": 14.459712028503418,
+        "ssd_read_ms": 11.678,
+        "ssd_upload_ms": 2.6559040546417236
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:3",
+      "arm": "shallow",
+      "after": {
+        "rep": 3,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.1104,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.0250244140625,
+        "release_ms": 33.02604675292969,
+        "target_done_ms": 40.02918243408203,
+        "peer_c_done_ms": 42.03315353393555,
+        "peer_d_done_ms": 43.03667068481445,
+        "peer_d_ready_ms": 12.844351768493652,
+        "ssd_read_ms": 9.9951,
+        "ssd_upload_ms": 2.7030720710754395
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:3",
+      "arm": "shallow",
+      "after": {
+        "rep": 3,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0924,
+        "wait_ms": 0.0002,
+        "window_end_ms": 33.04447937011719,
+        "release_ms": 33.04550552368164,
+        "target_done_ms": 63.048702239990234,
+        "peer_c_done_ms": 65.05267333984375,
+        "peer_d_done_ms": 66.05516815185547,
+        "peer_d_ready_ms": 12.896384239196777,
+        "ssd_read_ms": 10.0772,
+        "ssd_upload_ms": 2.700767993927002
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:3",
+      "arm": "deep",
+      "after": {
+        "rep": 3,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.119,
+        "wait_ms": 32.9118,
+        "window_end_ms": 33.019649505615234,
+        "release_ms": 33.02067184448242,
+        "target_done_ms": 61.02399826049805,
+        "peer_c_done_ms": 63.02796936035156,
+        "peer_d_done_ms": 64.03148651123047,
+        "peer_d_ready_ms": 47.709632873535156,
+        "ssd_read_ms": 11.922,
+        "ssd_upload_ms": 2.6061439514160156
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:3",
+      "arm": "deep",
+      "after": {
+        "rep": 3,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0845,
+        "wait_ms": 32.9577,
+        "window_end_ms": 33.03728103637695,
+        "release_ms": 33.03830337524414,
+        "target_done_ms": 38.041568756103516,
+        "peer_c_done_ms": 40.045536041259766,
+        "peer_d_done_ms": 46.712799072265625,
+        "peer_d_ready_ms": 45.6890869140625,
+        "ssd_read_ms": 9.8667,
+        "ssd_upload_ms": 2.6302080154418945
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:3",
+      "arm": "deep",
+      "after": {
+        "rep": 3,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0681,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03424072265625,
+        "release_ms": 33.03628921508789,
+        "target_done_ms": 38.03955078125,
+        "peer_c_done_ms": 40.043521881103516,
+        "peer_d_done_ms": 41.04703903198242,
+        "peer_d_ready_ms": 12.400416374206543,
+        "ssd_read_ms": 9.6093,
+        "ssd_upload_ms": 2.690432071685791
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:4",
+      "arm": "deep",
+      "after": {
+        "rep": 4,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0849,
+        "wait_ms": 32.9524,
+        "window_end_ms": 33.023681640625,
+        "release_ms": 33.02470397949219,
+        "target_done_ms": 38.02796936035156,
+        "peer_c_done_ms": 40.03193664550781,
+        "peer_d_done_ms": 48.436927795410156,
+        "peer_d_ready_ms": 47.33385467529297,
+        "ssd_read_ms": 11.5338,
+        "ssd_upload_ms": 2.622015953063965
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:4",
+      "arm": "shallow",
+      "after": {
+        "rep": 4,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0607,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.01750564575195,
+        "release_ms": 33.01852798461914,
+        "target_done_ms": 40.021663665771484,
+        "peer_c_done_ms": 42.025630950927734,
+        "peer_d_done_ms": 43.02812957763672,
+        "peer_d_ready_ms": 12.29145622253418,
+        "ssd_read_ms": 9.5118,
+        "ssd_upload_ms": 2.6945600509643555
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:4",
+      "arm": "deep",
+      "after": {
+        "rep": 4,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0935,
+        "wait_ms": 32.9498,
+        "window_end_ms": 33.05984115600586,
+        "release_ms": 33.06086349487305,
+        "target_done_ms": 61.06419372558594,
+        "peer_c_done_ms": 63.06816101074219,
+        "peer_d_done_ms": 64.0716781616211,
+        "peer_d_ready_ms": 47.546974182128906,
+        "ssd_read_ms": 11.7232,
+        "ssd_upload_ms": 2.6209919452667236
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:4",
+      "arm": "deep",
+      "after": {
+        "rep": 4,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0772,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02092742919922,
+        "release_ms": 33.02195358276367,
+        "target_done_ms": 38.02521514892578,
+        "peer_c_done_ms": 40.02918243408203,
+        "peer_d_done_ms": 41.0327033996582,
+        "peer_d_ready_ms": 12.375776290893555,
+        "ssd_read_ms": 9.6128,
+        "ssd_upload_ms": 2.6615359783172607
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:4",
+      "arm": "shallow",
+      "after": {
+        "rep": 4,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0781,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02195358276367,
+        "release_ms": 33.02297592163086,
+        "target_done_ms": 40.0261116027832,
+        "peer_c_done_ms": 42.03007888793945,
+        "peer_d_done_ms": 43.033599853515625,
+        "peer_d_ready_ms": 12.568256378173828,
+        "ssd_read_ms": 9.7617,
+        "ssd_upload_ms": 2.604480028152466
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:4",
+      "arm": "shallow",
+      "after": {
+        "rep": 4,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0887,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.040382385253906,
+        "release_ms": 33.04140853881836,
+        "target_done_ms": 63.04460906982422,
+        "peer_c_done_ms": 65.04857635498047,
+        "peer_d_done_ms": 66.05209350585938,
+        "peer_d_ready_ms": 12.638239860534668,
+        "ssd_read_ms": 9.8322,
+        "ssd_upload_ms": 2.662208080291748
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:5",
+      "arm": "deep",
+      "after": {
+        "rep": 5,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0841,
+        "wait_ms": 32.9734,
+        "window_end_ms": 33.0250244140625,
+        "release_ms": 33.02604675292969,
+        "target_done_ms": 61.02937698364258,
+        "peer_c_done_ms": 63.03334426879883,
+        "peer_d_done_ms": 64.036865234375,
+        "peer_d_ready_ms": 47.34489440917969,
+        "ssd_read_ms": 11.6227,
+        "ssd_upload_ms": 2.61628794670105
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:5",
+      "arm": "deep",
+      "after": {
+        "rep": 5,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0781,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.03731155395508,
+        "release_ms": 33.03833770751953,
+        "target_done_ms": 38.04159927368164,
+        "peer_c_done_ms": 40.04556655883789,
+        "peer_d_done_ms": 41.04908752441406,
+        "peer_d_ready_ms": 12.39577579498291,
+        "ssd_read_ms": 9.6223,
+        "ssd_upload_ms": 2.655776023864746
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:5",
+      "arm": "shallow",
+      "after": {
+        "rep": 5,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0657,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02195358276367,
+        "release_ms": 33.02297592163086,
+        "target_done_ms": 40.0261116027832,
+        "peer_c_done_ms": 42.03007888793945,
+        "peer_d_done_ms": 43.033599853515625,
+        "peer_d_ready_ms": 12.469856262207031,
+        "ssd_read_ms": 9.6119,
+        "ssd_upload_ms": 2.6578240394592285
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:5",
+      "arm": "shallow",
+      "after": {
+        "rep": 5,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0729,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02297592163086,
+        "release_ms": 33.02399826049805,
+        "target_done_ms": 63.027198791503906,
+        "peer_c_done_ms": 65.03116607666016,
+        "peer_d_done_ms": 66.0346908569336,
+        "peer_d_ready_ms": 12.429759979248047,
+        "ssd_read_ms": 9.6172,
+        "ssd_upload_ms": 2.648672103881836
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:5",
+      "arm": "shallow",
+      "after": {
+        "rep": 5,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0754,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02092742919922,
+        "release_ms": 33.02195358276367,
+        "target_done_ms": 40.025089263916016,
+        "peer_c_done_ms": 42.029056549072266,
+        "peer_d_done_ms": 43.03257751464844,
+        "peer_d_ready_ms": 12.255583763122559,
+        "ssd_read_ms": 9.4199,
+        "ssd_upload_ms": 2.7358078956604004
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:5",
+      "arm": "deep",
+      "after": {
+        "rep": 5,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.081,
+        "wait_ms": 32.9559,
+        "window_end_ms": 33.02297592163086,
+        "release_ms": 33.02399826049805,
+        "target_done_ms": 38.02726364135742,
+        "peer_c_done_ms": 40.03123092651367,
+        "peer_d_done_ms": 47.87916946411133,
+        "peer_d_ready_ms": 46.81235122680664,
+        "ssd_read_ms": 11.0908,
+        "ssd_upload_ms": 2.638592004776001
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:6",
+      "arm": "deep",
+      "after": {
+        "rep": 6,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0485,
+        "wait_ms": 33.0084,
+        "window_end_ms": 33.01273727416992,
+        "release_ms": 33.01375961303711,
+        "target_done_ms": 61.01708984375,
+        "peer_c_done_ms": 63.02105712890625,
+        "peer_d_done_ms": 64.02457427978516,
+        "peer_d_ready_ms": 46.5497932434082,
+        "ssd_read_ms": 10.755,
+        "ssd_upload_ms": 2.6579840183258057
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:6",
+      "arm": "shallow",
+      "after": {
+        "rep": 6,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0647,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.034942626953125,
+        "release_ms": 33.03596878051758,
+        "target_done_ms": 63.03916931152344,
+        "peer_c_done_ms": 65.0421142578125,
+        "peer_d_done_ms": 66.0456314086914,
+        "peer_d_ready_ms": 12.457695960998535,
+        "ssd_read_ms": 9.6771,
+        "ssd_upload_ms": 2.6801280975341797
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:6",
+      "arm": "shallow",
+      "after": {
+        "rep": 6,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.084,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.028961181640625,
+        "release_ms": 33.02998352050781,
+        "target_done_ms": 40.033119201660156,
+        "peer_c_done_ms": 42.037086486816406,
+        "peer_d_done_ms": 43.03958511352539,
+        "peer_d_ready_ms": 12.545920372009277,
+        "ssd_read_ms": 9.694,
+        "ssd_upload_ms": 2.718400001525879
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:6",
+      "arm": "deep",
+      "after": {
+        "rep": 6,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.067,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02092742919922,
+        "release_ms": 33.02297592163086,
+        "target_done_ms": 38.02521514892578,
+        "peer_c_done_ms": 40.02918243408203,
+        "peer_d_done_ms": 41.0327033996582,
+        "peer_d_ready_ms": 12.863007545471191,
+        "ssd_read_ms": 10.0313,
+        "ssd_upload_ms": 2.7314560413360596
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:6",
+      "arm": "shallow",
+      "after": {
+        "rep": 6,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0755,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.01785659790039,
+        "release_ms": 33.01887893676758,
+        "target_done_ms": 40.02201461791992,
+        "peer_c_done_ms": 42.02598571777344,
+        "peer_d_done_ms": 43.029502868652344,
+        "peer_d_ready_ms": 12.770527839660645,
+        "ssd_read_ms": 10.0059,
+        "ssd_upload_ms": 2.6666879653930664
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:6",
+      "arm": "deep",
+      "after": {
+        "rep": 6,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.078,
+        "wait_ms": 32.9661,
+        "window_end_ms": 33.0332145690918,
+        "release_ms": 33.03424072265625,
+        "target_done_ms": 38.03750228881836,
+        "peer_c_done_ms": 40.041473388671875,
+        "peer_d_done_ms": 47.00467300415039,
+        "peer_d_ready_ms": 45.89955139160156,
+        "ssd_read_ms": 10.1278,
+        "ssd_upload_ms": 2.683072090148926
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:7",
+      "arm": "deep",
+      "after": {
+        "rep": 7,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.061,
+        "wait_ms": 33.012,
+        "window_end_ms": 33.01785659790039,
+        "release_ms": 33.01990509033203,
+        "target_done_ms": 61.02220916748047,
+        "peer_c_done_ms": 63.02617645263672,
+        "peer_d_done_ms": 64.02969360351562,
+        "peer_d_ready_ms": 47.7949104309082,
+        "ssd_read_ms": 12.0195,
+        "ssd_upload_ms": 2.646048069000244
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:7",
+      "arm": "shallow",
+      "after": {
+        "rep": 7,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0612,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.02080154418945,
+        "release_ms": 33.02182388305664,
+        "target_done_ms": 40.024959564208984,
+        "peer_c_done_ms": 42.028926849365234,
+        "peer_d_done_ms": 43.032447814941406,
+        "peer_d_ready_ms": 12.406944274902344,
+        "ssd_read_ms": 9.6273,
+        "ssd_upload_ms": 2.681823968887329
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:7",
+      "arm": "shallow",
+      "after": {
+        "rep": 7,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0913,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.0250244140625,
+        "release_ms": 33.02604675292969,
+        "target_done_ms": 63.02924728393555,
+        "peer_c_done_ms": 65.03321838378906,
+        "peer_d_done_ms": 66.03673553466797,
+        "peer_d_ready_ms": 12.804896354675293,
+        "ssd_read_ms": 10.0208,
+        "ssd_upload_ms": 2.6594879627227783
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:7",
+      "arm": "shallow",
+      "after": {
+        "rep": 7,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.1311,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.04447937011719,
+        "release_ms": 33.04550552368164,
+        "target_done_ms": 40.048641204833984,
+        "peer_c_done_ms": 42.052608489990234,
+        "peer_d_done_ms": 43.056129455566406,
+        "peer_d_ready_ms": 12.922623634338379,
+        "ssd_read_ms": 9.9187,
+        "ssd_upload_ms": 2.8138558864593506
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:7",
+      "arm": "deep",
+      "after": {
+        "rep": 7,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0843,
+        "wait_ms": 32.9703,
+        "window_end_ms": 33.03731155395508,
+        "release_ms": 33.03833770751953,
+        "target_done_ms": 38.04159927368164,
+        "peer_c_done_ms": 40.04556655883789,
+        "peer_d_done_ms": 46.77734375,
+        "peer_d_ready_ms": 45.67020797729492,
+        "ssd_read_ms": 9.8189,
+        "ssd_upload_ms": 2.737920045852661
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:7",
+      "arm": "deep",
+      "after": {
+        "rep": 7,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0672,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.023681640625,
+        "release_ms": 33.02470397949219,
+        "target_done_ms": 38.02796936035156,
+        "peer_c_done_ms": 40.03193664550781,
+        "peer_d_done_ms": 41.035457611083984,
+        "peer_d_ready_ms": 12.339360237121582,
+        "ssd_read_ms": 9.516,
+        "ssd_upload_ms": 2.734272003173828
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:8",
+      "arm": "deep",
+      "after": {
+        "rep": 8,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0809,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02399826049805,
+        "release_ms": 33.0250244140625,
+        "target_done_ms": 38.028289794921875,
+        "peer_c_done_ms": 40.032257080078125,
+        "peer_d_done_ms": 41.034751892089844,
+        "peer_d_ready_ms": 13.321344375610352,
+        "ssd_read_ms": 10.557,
+        "ssd_upload_ms": 2.6574718952178955
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:8",
+      "arm": "deep",
+      "after": {
+        "rep": 8,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.064,
+        "wait_ms": 32.9716,
+        "window_end_ms": 33.01990509033203,
+        "release_ms": 33.02092742919922,
+        "target_done_ms": 38.024192810058594,
+        "peer_c_done_ms": 40.028160095214844,
+        "peer_d_done_ms": 48.165889739990234,
+        "peer_d_ready_ms": 47.13862228393555,
+        "ssd_read_ms": 11.3374,
+        "ssd_upload_ms": 2.600895881652832
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:8",
+      "arm": "shallow",
+      "after": {
+        "rep": 8,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0573,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03014373779297,
+        "release_ms": 33.03116989135742,
+        "target_done_ms": 40.034305572509766,
+        "peer_c_done_ms": 42.038272857666016,
+        "peer_d_done_ms": 43.04179382324219,
+        "peer_d_ready_ms": 12.460831642150879,
+        "ssd_read_ms": 9.6761,
+        "ssd_upload_ms": 2.685312032699585
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:8",
+      "arm": "shallow",
+      "after": {
+        "rep": 8,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0678,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03731155395508,
+        "release_ms": 33.03833770751953,
+        "target_done_ms": 63.041534423828125,
+        "peer_c_done_ms": 65.04447937011719,
+        "peer_d_done_ms": 66.0479965209961,
+        "peer_d_ready_ms": 12.280608177185059,
+        "ssd_read_ms": 9.489,
+        "ssd_upload_ms": 2.682624101638794
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:8",
+      "arm": "deep",
+      "after": {
+        "rep": 8,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0928,
+        "wait_ms": 32.9447,
+        "window_end_ms": 33.02809524536133,
+        "release_ms": 33.02912139892578,
+        "target_done_ms": 61.032447814941406,
+        "peer_c_done_ms": 63.036415100097656,
+        "peer_d_done_ms": 64.03993225097656,
+        "peer_d_ready_ms": 47.357662200927734,
+        "ssd_read_ms": 11.5914,
+        "ssd_upload_ms": 2.6906239986419678
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:8",
+      "arm": "shallow",
+      "after": {
+        "rep": 8,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0728,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02809524536133,
+        "release_ms": 33.02912139892578,
+        "target_done_ms": 40.032257080078125,
+        "peer_c_done_ms": 42.036224365234375,
+        "peer_d_done_ms": 43.03974533081055,
+        "peer_d_ready_ms": 12.535648345947266,
+        "ssd_read_ms": 9.6749,
+        "ssd_upload_ms": 2.7521920204162598
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:9",
+      "arm": "deep",
+      "after": {
+        "rep": 9,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0707,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03833770751953,
+        "release_ms": 33.03936004638672,
+        "target_done_ms": 38.042625427246094,
+        "peer_c_done_ms": 40.046592712402344,
+        "peer_d_done_ms": 41.050113677978516,
+        "peer_d_ready_ms": 12.394111633300781,
+        "ssd_read_ms": 9.6304,
+        "ssd_upload_ms": 2.6500160694122314
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:9",
+      "arm": "shallow",
+      "after": {
+        "rep": 9,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0957,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.04857635498047,
+        "release_ms": 33.049598693847656,
+        "target_done_ms": 40.052734375,
+        "peer_c_done_ms": 42.056705474853516,
+        "peer_d_done_ms": 43.06022262573242,
+        "peer_d_ready_ms": 12.508255958557129,
+        "ssd_read_ms": 9.7229,
+        "ssd_upload_ms": 2.6497280597686768
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:9",
+      "arm": "shallow",
+      "after": {
+        "rep": 9,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0674,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03628921508789,
+        "release_ms": 33.03833770751953,
+        "target_done_ms": 63.04051208496094,
+        "peer_c_done_ms": 65.04447937011719,
+        "peer_d_done_ms": 66.0479965209961,
+        "peer_d_ready_ms": 12.47555160522461,
+        "ssd_read_ms": 9.7194,
+        "ssd_upload_ms": 2.644160032272339
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:9",
+      "arm": "deep",
+      "after": {
+        "rep": 9,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0741,
+        "wait_ms": 32.9587,
+        "window_end_ms": 33.025856018066406,
+        "release_ms": 33.026878356933594,
+        "target_done_ms": 38.03014373779297,
+        "peer_c_done_ms": 40.03411102294922,
+        "peer_d_done_ms": 48.5968017578125,
+        "peer_d_ready_ms": 47.4804801940918,
+        "ssd_read_ms": 11.7278,
+        "ssd_upload_ms": 2.65775990486145
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:9",
+      "arm": "deep",
+      "after": {
+        "rep": 9,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0574,
+        "wait_ms": 32.9709,
+        "window_end_ms": 33.014686584472656,
+        "release_ms": 33.01571273803711,
+        "target_done_ms": 61.019039154052734,
+        "peer_c_done_ms": 63.023006439208984,
+        "peer_d_done_ms": 64.02550506591797,
+        "peer_d_ready_ms": 45.347774505615234,
+        "ssd_read_ms": 9.5941,
+        "ssd_upload_ms": 2.678015947341919
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:9",
+      "arm": "shallow",
+      "after": {
+        "rep": 9,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0742,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03807830810547,
+        "release_ms": 33.03910446166992,
+        "target_done_ms": 40.042240142822266,
+        "peer_c_done_ms": 42.046207427978516,
+        "peer_d_done_ms": 43.048702239990234,
+        "peer_d_ready_ms": 12.403360366821289,
+        "ssd_read_ms": 9.5464,
+        "ssd_upload_ms": 2.6730880737304688
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:10",
+      "arm": "deep",
+      "after": {
+        "rep": 10,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0637,
+        "wait_ms": 32.9701,
+        "window_end_ms": 33.02195358276367,
+        "release_ms": 33.02297592163086,
+        "target_done_ms": 38.026241302490234,
+        "peer_c_done_ms": 40.030208587646484,
+        "peer_d_done_ms": 47.289344787597656,
+        "peer_d_ready_ms": 46.212799072265625,
+        "ssd_read_ms": 10.464,
+        "ssd_upload_ms": 2.6454720497131348
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:10",
+      "arm": "shallow",
+      "after": {
+        "rep": 10,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0574,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.01375961303711,
+        "release_ms": 33.01478576660156,
+        "target_done_ms": 40.017921447753906,
+        "peer_c_done_ms": 42.0208625793457,
+        "peer_d_done_ms": 43.024383544921875,
+        "peer_d_ready_ms": 12.740863800048828,
+        "ssd_read_ms": 9.8767,
+        "ssd_upload_ms": 2.6749119758605957
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:10",
+      "arm": "shallow",
+      "after": {
+        "rep": 10,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0635,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.02191925048828,
+        "release_ms": 33.022945404052734,
+        "target_done_ms": 63.02614212036133,
+        "peer_c_done_ms": 65.02909088134766,
+        "peer_d_done_ms": 66.03260803222656,
+        "peer_d_ready_ms": 12.828607559204102,
+        "ssd_read_ms": 10.02,
+        "ssd_upload_ms": 2.712671995162964
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:10",
+      "arm": "deep",
+      "after": {
+        "rep": 10,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.077,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.031105041503906,
+        "release_ms": 33.032127380371094,
+        "target_done_ms": 38.03539276123047,
+        "peer_c_done_ms": 40.03936004638672,
+        "peer_d_done_ms": 41.04288101196289,
+        "peer_d_ready_ms": 12.923744201660156,
+        "ssd_read_ms": 10.1045,
+        "ssd_upload_ms": 2.7027199268341064
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:10",
+      "arm": "shallow",
+      "after": {
+        "rep": 10,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0812,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.040382385253906,
+        "release_ms": 33.04140853881836,
+        "target_done_ms": 40.0445442199707,
+        "peer_c_done_ms": 42.04851150512695,
+        "peer_d_done_ms": 43.052032470703125,
+        "peer_d_ready_ms": 12.56380844116211,
+        "ssd_read_ms": 9.6722,
+        "ssd_upload_ms": 2.771712064743042
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:10",
+      "arm": "deep",
+      "after": {
+        "rep": 10,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0724,
+        "wait_ms": 32.9663,
+        "window_end_ms": 33.03936004638672,
+        "release_ms": 33.040382385253906,
+        "target_done_ms": 61.0437126159668,
+        "peer_c_done_ms": 63.04767990112305,
+        "peer_d_done_ms": 64.05120086669922,
+        "peer_d_ready_ms": 47.38016128540039,
+        "ssd_read_ms": 11.5509,
+        "ssd_upload_ms": 2.6400320529937744
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:11",
+      "arm": "shallow",
+      "after": {
+        "rep": 11,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0645,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.01990509033203,
+        "release_ms": 33.02092742919922,
+        "target_done_ms": 63.02412796020508,
+        "peer_c_done_ms": 65.0280990600586,
+        "peer_d_done_ms": 66.0316162109375,
+        "peer_d_ready_ms": 13.204928398132324,
+        "ssd_read_ms": 10.4319,
+        "ssd_upload_ms": 2.6853439807891846
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:11",
+      "arm": "deep",
+      "after": {
+        "rep": 11,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0769,
+        "wait_ms": 33.0017,
+        "window_end_ms": 33.02707290649414,
+        "release_ms": 33.02809524536133,
+        "target_done_ms": 61.03142547607422,
+        "peer_c_done_ms": 63.03539276123047,
+        "peer_d_done_ms": 64.03890991210938,
+        "peer_d_ready_ms": 46.881919860839844,
+        "ssd_read_ms": 11.1091,
+        "ssd_upload_ms": 2.638400077819824
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:11",
+      "arm": "deep",
+      "after": {
+        "rep": 11,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0726,
+        "wait_ms": 0.0002,
+        "window_end_ms": 33.01990509033203,
+        "release_ms": 33.02092742919922,
+        "target_done_ms": 38.024192810058594,
+        "peer_c_done_ms": 40.028160095214844,
+        "peer_d_done_ms": 41.031681060791016,
+        "peer_d_ready_ms": 12.668416023254395,
+        "ssd_read_ms": 9.8739,
+        "ssd_upload_ms": 2.698240041732788
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:11",
+      "arm": "shallow",
+      "after": {
+        "rep": 11,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0719,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02399826049805,
+        "release_ms": 33.0250244140625,
+        "target_done_ms": 40.028160095214844,
+        "peer_c_done_ms": 42.032127380371094,
+        "peer_d_done_ms": 43.035648345947266,
+        "peer_d_ready_ms": 12.8788480758667,
+        "ssd_read_ms": 10.0644,
+        "ssd_upload_ms": 2.6975998878479004
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:11",
+      "arm": "deep",
+      "after": {
+        "rep": 11,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0843,
+        "wait_ms": 32.9617,
+        "window_end_ms": 33.03116989135742,
+        "release_ms": 33.03219223022461,
+        "target_done_ms": 38.035457611083984,
+        "peer_c_done_ms": 40.039424896240234,
+        "peer_d_done_ms": 47.70713424682617,
+        "peer_d_ready_ms": 46.66515350341797,
+        "ssd_read_ms": 10.8386,
+        "ssd_upload_ms": 2.6422080993652344
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:11",
+      "arm": "shallow",
+      "after": {
+        "rep": 11,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0867,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.04140853881836,
+        "release_ms": 33.04243087768555,
+        "target_done_ms": 40.04556655883789,
+        "peer_c_done_ms": 42.049537658691406,
+        "peer_d_done_ms": 43.05305480957031,
+        "peer_d_ready_ms": 12.498080253601074,
+        "ssd_read_ms": 9.6828,
+        "ssd_upload_ms": 2.705280065536499
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:12",
+      "arm": "deep",
+      "after": {
+        "rep": 12,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.074,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.03619384765625,
+        "release_ms": 33.03721618652344,
+        "target_done_ms": 38.04048156738281,
+        "peer_c_done_ms": 40.04444885253906,
+        "peer_d_done_ms": 41.047969818115234,
+        "peer_d_ready_ms": 13.342495918273926,
+        "ssd_read_ms": 10.519,
+        "ssd_upload_ms": 2.6865921020507812
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:12",
+      "arm": "deep",
+      "after": {
+        "rep": 12,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.1126,
+        "wait_ms": 32.9593,
+        "window_end_ms": 33.0250244140625,
+        "release_ms": 33.02604675292969,
+        "target_done_ms": 61.02937698364258,
+        "peer_c_done_ms": 63.03334426879883,
+        "peer_d_done_ms": 64.036865234375,
+        "peer_d_ready_ms": 47.49155044555664,
+        "ssd_read_ms": 11.7068,
+        "ssd_upload_ms": 2.6447041034698486
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:12",
+      "arm": "shallow",
+      "after": {
+        "rep": 12,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0677,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.02092742919922,
+        "release_ms": 33.02195358276367,
+        "target_done_ms": 40.025089263916016,
+        "peer_c_done_ms": 42.02803039550781,
+        "peer_d_done_ms": 43.031551361083984,
+        "peer_d_ready_ms": 12.421183586120605,
+        "ssd_read_ms": 9.6712,
+        "ssd_upload_ms": 2.656224012374878
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:12",
+      "arm": "shallow",
+      "after": {
+        "rep": 12,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0953,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.0247688293457,
+        "release_ms": 33.02579116821289,
+        "target_done_ms": 63.02899169921875,
+        "peer_c_done_ms": 65.03193664550781,
+        "peer_d_done_ms": 66.03545379638672,
+        "peer_d_ready_ms": 12.28934383392334,
+        "ssd_read_ms": 9.5232,
+        "ssd_upload_ms": 2.6457600593566895
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:12",
+      "arm": "shallow",
+      "after": {
+        "rep": 12,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0723,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.026912689208984,
+        "release_ms": 33.02793502807617,
+        "target_done_ms": 40.031070709228516,
+        "peer_c_done_ms": 42.03504180908203,
+        "peer_d_done_ms": 43.03855895996094,
+        "peer_d_ready_ms": 12.661375999450684,
+        "ssd_read_ms": 9.8823,
+        "ssd_upload_ms": 2.6788480281829834
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:12",
+      "arm": "deep",
+      "after": {
+        "rep": 12,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0658,
+        "wait_ms": 32.9694,
+        "window_end_ms": 33.02195358276367,
+        "release_ms": 33.02297592163086,
+        "target_done_ms": 38.026241302490234,
+        "peer_c_done_ms": 40.02918243408203,
+        "peer_d_done_ms": 48.47206497192383,
+        "peer_d_ready_ms": 47.43312072753906,
+        "ssd_read_ms": 11.6,
+        "ssd_upload_ms": 2.6592319011688232
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "arm": "shallow",
+      "after": {
+        "rep": 13,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0945,
+        "wait_ms": 0.0,
+        "window_end_ms": 33.128448486328125,
+        "release_ms": 33.12947082519531,
+        "target_done_ms": 40.132606506347656,
+        "peer_c_done_ms": 42.13657760620117,
+        "peer_d_done_ms": 43.14009475708008,
+        "peer_d_ready_ms": 13.55504035949707,
+        "ssd_read_ms": 10.7035,
+        "ssd_upload_ms": 2.7345919609069824
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "arm": "shallow",
+      "after": {
+        "rep": 13,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0751,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.04243087768555,
+        "release_ms": 33.04345703125,
+        "target_done_ms": 40.046592712402344,
+        "peer_c_done_ms": 42.049537658691406,
+        "peer_d_done_ms": 43.05305480957031,
+        "peer_d_ready_ms": 12.484992027282715,
+        "ssd_read_ms": 9.6737,
+        "ssd_upload_ms": 2.692768096923828
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "arm": "deep",
+      "after": {
+        "rep": 13,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0856,
+        "wait_ms": 32.9918,
+        "window_end_ms": 33.03731155395508,
+        "release_ms": 33.03833770751953,
+        "target_done_ms": 38.04159927368164,
+        "peer_c_done_ms": 40.04556655883789,
+        "peer_d_done_ms": 48.79359817504883,
+        "peer_d_ready_ms": 47.758270263671875,
+        "ssd_read_ms": 11.9289,
+        "ssd_upload_ms": 2.6931838989257812
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:13",
+      "arm": "shallow",
+      "after": {
+        "rep": 13,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0579,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.01785659790039,
+        "release_ms": 33.01887893676758,
+        "target_done_ms": 63.02207946777344,
+        "peer_c_done_ms": 65.02604675292969,
+        "peer_d_done_ms": 66.02957153320312,
+        "peer_d_ready_ms": 12.077376365661621,
+        "ssd_read_ms": 9.2934,
+        "ssd_upload_ms": 2.706655979156494
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:13",
+      "arm": "deep",
+      "after": {
+        "rep": 13,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0729,
+        "wait_ms": 32.9645,
+        "window_end_ms": 33.0250244140625,
+        "release_ms": 33.02604675292969,
+        "target_done_ms": 61.02937698364258,
+        "peer_c_done_ms": 63.032318115234375,
+        "peer_d_done_ms": 64.03584289550781,
+        "peer_d_ready_ms": 48.15846252441406,
+        "ssd_read_ms": 12.3114,
+        "ssd_upload_ms": 2.670207977294922
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "arm": "deep",
+      "after": {
+        "rep": 13,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0852,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.0382080078125,
+        "release_ms": 33.03923034667969,
+        "target_done_ms": 38.04249572753906,
+        "peer_c_done_ms": 40.04646301269531,
+        "peer_d_done_ms": 41.049983978271484,
+        "peer_d_ready_ms": 12.325663566589355,
+        "ssd_read_ms": 9.5149,
+        "ssd_upload_ms": 2.677855968475342
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:14",
+      "arm": "deep",
+      "after": {
+        "rep": 14,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0812,
+        "wait_ms": 32.9837,
+        "window_end_ms": 33.02278518676758,
+        "release_ms": 33.023807525634766,
+        "target_done_ms": 38.0332145690918,
+        "peer_c_done_ms": 40.03615951538086,
+        "peer_d_done_ms": 48.85996627807617,
+        "peer_d_ready_ms": 47.83536148071289,
+        "ssd_read_ms": 12.0331,
+        "ssd_upload_ms": 2.602560043334961
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:14",
+      "arm": "shallow",
+      "after": {
+        "rep": 14,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0789,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03526306152344,
+        "release_ms": 33.03628921508789,
+        "target_done_ms": 40.039424896240234,
+        "peer_c_done_ms": 42.043392181396484,
+        "peer_d_done_ms": 43.049983978271484,
+        "peer_d_ready_ms": 12.43500804901123,
+        "ssd_read_ms": 9.6028,
+        "ssd_upload_ms": 2.6335361003875732
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:14",
+      "arm": "deep",
+      "after": {
+        "rep": 14,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.0809,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02912139892578,
+        "release_ms": 33.03014373779297,
+        "target_done_ms": 38.033409118652344,
+        "peer_c_done_ms": 40.037376403808594,
+        "peer_d_done_ms": 41.040897369384766,
+        "peer_d_ready_ms": 12.791168212890625,
+        "ssd_read_ms": 9.9632,
+        "ssd_upload_ms": 2.709696054458618
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:14",
+      "arm": "shallow",
+      "after": {
+        "rep": 14,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.074,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.019649505615234,
+        "release_ms": 33.02067184448242,
+        "target_done_ms": 40.023807525634766,
+        "peer_c_done_ms": 42.027774810791016,
+        "peer_d_done_ms": 43.03129577636719,
+        "peer_d_ready_ms": 12.889727592468262,
+        "ssd_read_ms": 10.0548,
+        "ssd_upload_ms": 2.636960029602051
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:14",
+      "arm": "deep",
+      "after": {
+        "rep": 14,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0595,
+        "wait_ms": 32.9719,
+        "window_end_ms": 33.01785659790039,
+        "release_ms": 33.01887893676758,
+        "target_done_ms": 61.02220916748047,
+        "peer_c_done_ms": 63.02617645263672,
+        "peer_d_done_ms": 64.02969360351562,
+        "peer_d_ready_ms": 47.24649429321289,
+        "ssd_read_ms": 11.4817,
+        "ssd_upload_ms": 2.6064000129699707
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:14",
+      "arm": "shallow",
+      "after": {
+        "rep": 14,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.069,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.04422378540039,
+        "release_ms": 33.04627227783203,
+        "target_done_ms": 63.04947280883789,
+        "peer_c_done_ms": 65.05343627929688,
+        "peer_d_done_ms": 66.05696105957031,
+        "peer_d_ready_ms": 12.63212776184082,
+        "ssd_read_ms": 9.7839,
+        "ssd_upload_ms": 2.6366078853607178
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:15",
+      "arm": "shallow",
+      "after": {
+        "rep": 15,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0723,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02492904663086,
+        "release_ms": 33.02595138549805,
+        "target_done_ms": 40.02908706665039,
+        "peer_c_done_ms": 42.03305435180664,
+        "peer_d_done_ms": 43.03657531738281,
+        "peer_d_ready_ms": 12.713983535766602,
+        "ssd_read_ms": 9.9283,
+        "ssd_upload_ms": 2.6810879707336426
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:15",
+      "arm": "shallow",
+      "after": {
+        "rep": 15,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0713,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.02399826049805,
+        "release_ms": 33.0250244140625,
+        "target_done_ms": 63.02822494506836,
+        "peer_c_done_ms": 65.03218841552734,
+        "peer_d_done_ms": 66.03571319580078,
+        "peer_d_ready_ms": 12.892416000366211,
+        "ssd_read_ms": 10.0445,
+        "ssd_upload_ms": 2.637120008468628
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:15",
+      "arm": "deep",
+      "after": {
+        "rep": 15,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 30,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.0733,
+        "wait_ms": 32.9685,
+        "window_end_ms": 33.02809524536133,
+        "release_ms": 33.03014373779297,
+        "target_done_ms": 61.032447814941406,
+        "peer_c_done_ms": 63.036415100097656,
+        "peer_d_done_ms": 64.03993225097656,
+        "peer_d_ready_ms": 46.87696075439453,
+        "ssd_read_ms": 11.0795,
+        "ssd_upload_ms": 2.620255947113037
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:15",
+      "arm": "deep",
+      "after": {
+        "rep": 15,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 112,
+        "copied_mib": 112,
+        "blocked": 0,
+        "requested_ms": 0.2125,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.03084945678711,
+        "release_ms": 33.032894134521484,
+        "target_done_ms": 38.03513717651367,
+        "peer_c_done_ms": 40.03910446166992,
+        "peer_d_done_ms": 41.04159927368164,
+        "peer_d_ready_ms": 12.59443187713623,
+        "ssd_read_ms": 9.701,
+        "ssd_upload_ms": 2.6592960357666016
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:15",
+      "arm": "deep",
+      "after": {
+        "rep": 15,
+        "mode": "distinct",
+        "quota_mib": 80,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "deep",
+        "target_mib": 48,
+        "union_mib": 112,
+        "peak_mib": 80,
+        "copied_mib": 112,
+        "blocked": 1,
+        "requested_ms": 0.082,
+        "wait_ms": 32.9468,
+        "window_end_ms": 33.01990509033203,
+        "release_ms": 33.02092742919922,
+        "target_done_ms": 38.024192810058594,
+        "peer_c_done_ms": 40.028160095214844,
+        "peer_d_done_ms": 46.62886428833008,
+        "peer_d_ready_ms": 45.49420928955078,
+        "ssd_read_ms": 9.7906,
+        "ssd_upload_ms": 2.615135908126831
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:15",
+      "arm": "shallow",
+      "after": {
+        "rep": 15,
+        "mode": "distinct",
+        "quota_mib": 112,
+        "shallow_work_ms": 7,
+        "nominal_window_ms": 33,
+        "arm": "shallow",
+        "target_mib": 16,
+        "union_mib": 80,
+        "peak_mib": 80,
+        "copied_mib": 80,
+        "blocked": 0,
+        "requested_ms": 0.0575,
+        "wait_ms": 0.0001,
+        "window_end_ms": 33.01375961303711,
+        "release_ms": 33.01478576660156,
+        "target_done_ms": 40.017921447753906,
+        "peer_c_done_ms": 42.021888732910156,
+        "peer_d_done_ms": 43.02540969848633,
+        "peer_d_ready_ms": 12.363231658935547,
+        "ssd_read_ms": 9.5491,
+        "ssd_upload_ms": 2.637376070022583
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "protocol": "R02-GPU-01/v1",
+  "calibration": "docs/evidence/dynamic-gpu-joint-staging-7449.csv",
+  "seed": 7941,
+  "repeats": 16,
+  "window_ms": 33,
+  "tie_ms": 0.25,
+  "cells": [
+    {"id": "tight-short", "quota_mib": 80, "shallow_work_ms": 7},
+    {"id": "tight-long", "quota_mib": 80, "shallow_work_ms": 30},
+    {"id": "wide-short", "quota_mib": 112, "shallow_work_ms": 7}
+  ]
+}

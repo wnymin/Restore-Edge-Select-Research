@@ -1,0 +1,2799 @@
+{
+  "protocol": "R02-GPU-01/v1",
+  "calibration": {
+    "isolated": 12.573582063293458,
+    "isolated_range": [
+      11.839668091583253,
+      16.18668398551941
+    ],
+    "blocked_range": [
+      11.913951873779297,
+      41.74266052246094
+    ],
+    "jitter_range": [
+      0.0161285400390625,
+      0.05401611328125
+    ]
+  },
+  "cells": {
+    "tight-short": {
+      "n": 16,
+      "truth": {
+        "deep": 4,
+        "shallow": 11,
+        "tie": 1
+      },
+      "flags": {
+        "pending": 32
+      },
+      "missing": {
+        "active_compute": 32,
+        "active_peer_transfer": 32
+      },
+      "remaining_intersections": 15,
+      "remaining_missing": 0,
+      "overhead_us": {
+        "query": {
+          "median": 1.2,
+          "maximum": 14.0
+        },
+        "origin_sync_bracket": {
+          "median": 11.75,
+          "maximum": 17.3
+        }
+      },
+      "methods": {
+        "isolated": {
+          "called": 16,
+          "right": 4,
+          "wrong": 11,
+          "actual_tie": 1,
+          "abstain": 0,
+          "missing": 0,
+          "delta_covered": 0
+        },
+        "coarse_marker": {
+          "called": 16,
+          "right": 4,
+          "wrong": 11,
+          "actual_tie": 1,
+          "abstain": 0,
+          "missing": 0,
+          "delta_covered": 0
+        },
+        "observable_interval": {
+          "called": 0,
+          "right": 0,
+          "wrong": 0,
+          "actual_tie": 0,
+          "abstain": 16,
+          "missing": 0,
+          "delta_covered": 16
+        }
+      },
+      "observed_delta_ms": {
+        "range": [
+          -0.41759490966796875,
+          1.8697586059570312
+        ],
+        "median": 0.9774055480957031
+      }
+    },
+    "tight-long": {
+      "n": 16,
+      "truth": {
+        "deep": 16
+      },
+      "flags": {
+        "pending": 32
+      },
+      "missing": {
+        "active_compute": 32,
+        "active_peer_transfer": 32
+      },
+      "remaining_intersections": 16,
+      "remaining_missing": 0,
+      "overhead_us": {
+        "query": {
+          "median": 1.3,
+          "maximum": 2.0
+        },
+        "origin_sync_bracket": {
+          "median": 12.0,
+          "maximum": 51.5
+        }
+      },
+      "methods": {
+        "isolated": {
+          "called": 16,
+          "right": 16,
+          "wrong": 0,
+          "actual_tie": 0,
+          "abstain": 0,
+          "missing": 0,
+          "delta_covered": 0
+        },
+        "coarse_marker": {
+          "called": 16,
+          "right": 16,
+          "wrong": 0,
+          "actual_tie": 0,
+          "abstain": 0,
+          "missing": 0,
+          "delta_covered": 0
+        },
+        "observable_interval": {
+          "called": 0,
+          "right": 0,
+          "wrong": 0,
+          "actual_tie": 0,
+          "abstain": 16,
+          "missing": 0,
+          "delta_covered": 8
+        }
+      },
+      "observed_delta_ms": {
+        "range": [
+          -6.081790924072266,
+          -5.941246032714844
+        ],
+        "median": -6.007936477661133
+      }
+    },
+    "wide-short": {
+      "n": 16,
+      "truth": {
+        "deep": 16
+      },
+      "flags": {
+        "pending": 32
+      },
+      "missing": {
+        "active_compute": 32,
+        "active_peer_transfer": 32
+      },
+      "remaining_intersections": 16,
+      "remaining_missing": 0,
+      "overhead_us": {
+        "query": {
+          "median": 1.25,
+          "maximum": 2.0
+        },
+        "origin_sync_bracket": {
+          "median": 12.25,
+          "maximum": 28.4
+        }
+      },
+      "methods": {
+        "isolated": {
+          "called": 16,
+          "right": 16,
+          "wrong": 0,
+          "actual_tie": 0,
+          "abstain": 0,
+          "missing": 0,
+          "delta_covered": 0
+        },
+        "coarse_marker": {
+          "called": 16,
+          "right": 16,
+          "wrong": 0,
+          "actual_tie": 0,
+          "abstain": 0,
+          "missing": 0,
+          "delta_covered": 0
+        },
+        "observable_interval": {
+          "called": 16,
+          "right": 16,
+          "wrong": 0,
+          "actual_tie": 0,
+          "abstain": 0,
+          "missing": 0,
+          "delta_covered": 0
+        }
+      },
+      "observed_delta_ms": {
+        "range": [
+          -6.037502288818359,
+          -5.949378967285156
+        ],
+        "median": -6.001857757568359
+      }
+    }
+  },
+  "pairs": [
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:0",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.0538787841796875,
+      "differences_ms": {
+        "window_end_ms": -0.0184326171875,
+        "release_ms": -0.0184326171875,
+        "peer_d_ready_ms": 32.64153480529785,
+        "target_done_ms": -2.0183029174804688,
+        "peer_c_done_ms": -2.0183029174804688,
+        "peer_d_done_ms": -2.01727294921875
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 30.007293701171875,
+          "ready_after_release_ms": 12.24057388305664,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 32.007164001464844,
+          "ready_after_release_ms": -20.41939353942871,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.96512854003906,
+        33.01511611328125
+      ],
+      "marker_reference_ms": [
+        32.986311553955076,
+        32.99841155395508
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:1",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.943302154541016,
+      "differences_ms": {
+        "window_end_ms": 0.0184326171875,
+        "release_ms": 0.0184326171875,
+        "peer_d_ready_ms": 35.807679176330566,
+        "target_done_ms": -1.9814414978027344,
+        "peer_c_done_ms": -1.9814376831054688,
+        "peer_d_done_ms": -1.9804229736328125
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.007164001464844,
+          "ready_after_release_ms": -20.952160835266113,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.007293701171875,
+          "ready_after_release_ms": 14.837085723876953,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.98542854003906,
+        33.03501611328125
+      ],
+      "marker_reference_ms": [
+        32.988178936767575,
+        32.99987893676758
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:2",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.019077301025391,
+      "differences_ms": {
+        "window_end_ms": -0.007167816162109375,
+        "release_ms": -0.007171630859375,
+        "peer_d_ready_ms": 34.77161693572998,
+        "target_done_ms": -2.007038116455078,
+        "peer_c_done_ms": -2.0060195922851562,
+        "peer_d_done_ms": -2.0060195922851562
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.00614547729492,
+          "ready_after_release_ms": -20.435873985290527,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 14.342914581298828,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.97732854003906,
+        33.02331611328125
+      ],
+      "marker_reference_ms": [
+        32.99134373779297,
+        32.999443737792966
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:3",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.073089599609375,
+      "differences_ms": {
+        "window_end_ms": -0.024829864501953125,
+        "release_ms": -0.02483367919921875,
+        "peer_d_ready_ms": 34.81324863433838,
+        "target_done_ms": -2.0247039794921875,
+        "peer_c_done_ms": -2.0247039794921875,
+        "peer_d_done_ms": -2.023681640625
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.00716781616211,
+          "ready_after_release_ms": -20.149121284484863,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 14.688961029052734,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.94102854003906,
+        33.00881611328125
+      ],
+      "marker_reference_ms": [
+        32.96937937011719,
+        32.999279370117186
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:4",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.941246032714844,
+      "differences_ms": {
+        "window_end_ms": 0.019458770751953125,
+        "release_ms": 0.0194549560546875,
+        "peer_d_ready_ms": 34.90873432159424,
+        "target_done_ms": -1.9804153442382812,
+        "peer_c_done_ms": -1.9804153442382812,
+        "peer_d_done_ms": -1.9804153442382812
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 14.48611068725586,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 32.00716781616211,
+          "ready_after_release_ms": -20.40316867828369,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.95932854003906,
+        33.02791611328125
+      ],
+      "marker_reference_ms": [
+        32.983582385253904,
+        33.01428238525391
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:5",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.99346923828125,
+      "differences_ms": {
+        "window_end_ms": 0.002048492431640625,
+        "release_ms": 0.002048492431640625,
+        "peer_d_ready_ms": 34.91513442993164,
+        "target_done_ms": -1.9978218078613281,
+        "peer_c_done_ms": -1.9978218078613281,
+        "peer_d_done_ms": -1.9978256225585938
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 14.31884765625,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 32.00716781616211,
+          "ready_after_release_ms": -20.59423828125,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.979828540039065,
+        33.03021611328125
+      ],
+      "marker_reference_ms": [
+        32.98667592163086,
+        32.99917592163086
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:6",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.0641937255859375,
+      "differences_ms": {
+        "window_end_ms": -0.022205352783203125,
+        "release_ms": -0.02220916748046875,
+        "peer_d_ready_ms": 34.09209728240967,
+        "target_done_ms": -2.0220794677734375,
+        "peer_c_done_ms": -2.02105712890625,
+        "peer_d_done_ms": -2.02105712890625
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 13.536033630371094,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 32.00614547729492,
+          "ready_after_release_ms": -20.578272819519043,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.970628540039066,
+        33.01851611328125
+      ],
+      "marker_reference_ms": [
+        32.98944262695313,
+        32.999442626953126
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:7",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.021121978759766,
+      "differences_ms": {
+        "window_end_ms": -0.007167816162109375,
+        "release_ms": -0.00614166259765625,
+        "peer_d_ready_ms": 34.99001407623291,
+        "target_done_ms": -2.007038116455078,
+        "peer_c_done_ms": -2.0070419311523438,
+        "peer_d_done_ms": -2.0070419311523438
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 30.006271362304688,
+          "ready_after_release_ms": 14.775005340576172,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 32.007171630859375,
+          "ready_after_release_ms": -20.221150398254395,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.976628540039066,
+        33.02791611328125
+      ],
+      "marker_reference_ms": [
+        32.9855244140625,
+        32.9989244140625
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:8",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.025215148925781,
+      "differences_ms": {
+        "window_end_ms": -0.00921630859375,
+        "release_ms": -0.00921630859375,
+        "peer_d_ready_ms": 35.077054023742676,
+        "target_done_ms": -2.0090866088867188,
+        "peer_c_done_ms": -2.0080642700195312,
+        "peer_d_done_ms": -2.0080642700195312
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.006141662597656,
+          "ready_after_release_ms": -20.757729530334473,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.007293701171875,
+          "ready_after_release_ms": 14.328540802001953,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.96572854003906,
+        33.01491611328125
+      ],
+      "marker_reference_ms": [
+        32.986911553955075,
+        32.99821155395508
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:9",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.065437316894531,
+      "differences_ms": {
+        "window_end_ms": -0.021602630615234375,
+        "release_ms": -0.022624969482421875,
+        "peer_d_ready_ms": 32.872222900390625,
+        "target_done_ms": -2.021472930908203,
+        "peer_c_done_ms": -2.021472930908203,
+        "peer_d_done_ms": -2.022491455078125
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.006141662597656,
+          "ready_after_release_ms": -20.562786102294922,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.007293701171875,
+          "ready_after_release_ms": 12.332061767578125,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.96732854003906,
+        33.01661611328125
+      ],
+      "marker_reference_ms": [
+        32.98748921508789,
+        32.99888921508789
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:10",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.945247650146484,
+      "differences_ms": {
+        "window_end_ms": 0.0174407958984375,
+        "release_ms": 0.017436981201171875,
+        "peer_d_ready_ms": 34.55155372619629,
+        "target_done_ms": -1.9824295043945312,
+        "peer_c_done_ms": -1.9814109802246094,
+        "peer_d_done_ms": -1.9814071655273438
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.00614547729492,
+          "ready_after_release_ms": -20.194337844848633,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 14.339778900146484,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.982828540039066,
+        33.03241611328125
+      ],
+      "marker_reference_ms": [
+        32.988619250488284,
+        33.00031925048828
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:11",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.978115081787109,
+      "differences_ms": {
+        "window_end_ms": 0.007167816162109375,
+        "release_ms": 0.007167816162109375,
+        "peer_d_ready_ms": 33.67699146270752,
+        "target_done_ms": -1.9927024841308594,
+        "peer_c_done_ms": -1.992706298828125,
+        "peer_d_done_ms": -1.992706298828125
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.007171630859375,
+          "ready_after_release_ms": -19.815999031066895,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 13.853824615478516,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.98252854003906,
+        33.03331611328125
+      ],
+      "marker_reference_ms": [
+        32.98630509033203,
+        32.99920509033203
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:12",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.996795654296875,
+      "differences_ms": {
+        "window_end_ms": 0.000255584716796875,
+        "release_ms": 0.000255584716796875,
+        "peer_d_ready_ms": 35.2022066116333,
+        "target_done_ms": -1.9996147155761719,
+        "peer_c_done_ms": -1.9985923767089844,
+        "peer_d_done_ms": -1.9985885620117188
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 14.465503692626953,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 32.00614547729492,
+          "ready_after_release_ms": -20.73644733428955,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.97952854003906,
+        33.02931611328125
+      ],
+      "marker_reference_ms": [
+        32.9881688293457,
+        33.0000688293457
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:13",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.980159759521484,
+      "differences_ms": {
+        "window_end_ms": 0.007167816162109375,
+        "release_ms": 0.007167816162109375,
+        "peer_d_ready_ms": 36.08108615875244,
+        "target_done_ms": -1.9927024841308594,
+        "peer_c_done_ms": -1.9937286376953125,
+        "peer_d_done_ms": -1.9937286376953125
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.00716781616211,
+          "ready_after_release_ms": -20.941502571105957,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.006271362304688,
+          "ready_after_release_ms": 15.132415771484375,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.98612854003906,
+        33.03591611328125
+      ],
+      "marker_reference_ms": [
+        32.98785659790039,
+        32.999756597900394
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:14",
+      "cell": "tight-long",
+      "observed_delta_ms": -6.081790924072266,
+      "differences_ms": {
+        "window_end_ms": -0.0263671875,
+        "release_ms": -0.027393341064453125,
+        "peer_d_ready_ms": 34.61436653137207,
+        "target_done_ms": -2.027263641357422,
+        "peer_c_done_ms": -2.0272598266601562,
+        "peer_d_done_ms": -2.0272674560546875
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 30.00729751586914,
+          "ready_after_release_ms": 14.227615356445312,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 32.007164001464844,
+          "ready_after_release_ms": -20.41414451599121,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.958228540039066,
+        33.00821611328125
+      ],
+      "marker_reference_ms": [
+        32.986323785400394,
+        32.99842378540039
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-long:15",
+      "cell": "tight-long",
+      "observed_delta_ms": -5.987331390380859,
+      "differences_ms": {
+        "window_end_ms": 0.00409698486328125,
+        "release_ms": 0.00511932373046875,
+        "peer_d_ready_ms": 33.98454475402832,
+        "target_done_ms": -1.9957771301269531,
+        "peer_c_done_ms": -1.9957733154296875,
+        "peer_d_done_ms": -1.9957809448242188
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 32.007164001464844,
+          "ready_after_release_ms": -20.13260841369629,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 30.006271362304688,
+          "ready_after_release_ms": 13.846817016601562,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.978328540039065,
+        33.02831611328125
+      ],
+      "marker_reference_ms": [
+        32.98619826049805,
+        32.998298260498046
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          5.7426605224609375
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:0",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.2277755737304688,
+      "differences_ms": {
+        "window_end_ms": -0.00614166259765625,
+        "release_ms": -0.006145477294921875,
+        "peer_d_ready_ms": 34.95193386077881,
+        "target_done_ms": -2.0060157775878906,
+        "peer_c_done_ms": -2.0060157775878906,
+        "peer_d_done_ms": 5.23980712890625
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 14.191486358642578,
+          "exposed_ready_wait_ms": 7.184253692626953
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.766592979431152,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.968228540039064,
+        33.01731611328125
+      ],
+      "marker_reference_ms": [
+        32.98736306152344,
+        32.998563061523434
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:1",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.8697586059570312,
+      "differences_ms": {
+        "window_end_ms": 0.001346588134765625,
+        "release_ms": 0.0013427734375,
+        "peer_d_ready_ms": 35.44915294647217,
+        "target_done_ms": -1.9985275268554688,
+        "peer_c_done_ms": -1.9985275268554688,
+        "peer_d_done_ms": 5.866813659667969
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 14.83536148071289,
+          "exposed_ready_wait_ms": 7.828128814697266
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.612448692321777,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.981528540039065,
+        33.03281611328125
+      ],
+      "marker_reference_ms": [
+        32.98600699462891,
+        32.999406994628906
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:2",
+      "cell": "tight-short",
+      "observed_delta_ms": -0.41759490966796875,
+      "differences_ms": {
+        "window_end_ms": -0.01837158203125,
+        "release_ms": -0.018367767333984375,
+        "peer_d_ready_ms": 32.07171154022217,
+        "target_done_ms": -2.018238067626953,
+        "peer_c_done_ms": -2.018238067626953,
+        "peer_d_done_ms": 3.6188812255859375
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -19.470175743103027,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 12.619903564453125,
+          "exposed_ready_wait_ms": 5.6126708984375
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.96212854003906,
+        33.01241611328125
+      ],
+      "marker_reference_ms": [
+        32.988369842529295,
+        33.000769842529294
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:3",
+      "cell": "tight-short",
+      "observed_delta_ms": -0.33289337158203125,
+      "differences_ms": {
+        "window_end_ms": 0.0009918212890625,
+        "release_ms": 0.0009918212890625,
+        "peer_d_ready_ms": 31.229374885559082,
+        "target_done_ms": -1.9988784790039062,
+        "peer_c_done_ms": -1.9988784790039062,
+        "peer_d_done_ms": 3.6648635864257812
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -18.57759952545166,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 12.65078353881836,
+          "exposed_ready_wait_ms": 5.643550872802734
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.96792854003906,
+        33.01551611328125
+      ],
+      "marker_reference_ms": [
+        32.98808921508789,
+        32.99778921508789
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:4",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.40704345703125,
+      "differences_ms": {
+        "window_end_ms": 0.001728057861328125,
+        "release_ms": 0.001728057861328125,
+        "peer_d_ready_ms": 34.76559829711914,
+        "target_done_ms": -1.9981422424316406,
+        "peer_c_done_ms": -1.9981422424316406,
+        "peer_d_done_ms": 5.403327941894531
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 14.309150695800781,
+          "exposed_ready_wait_ms": 7.301918029785156
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.45471954345703,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.97902854003906,
+        33.03221611328125
+      ],
+      "marker_reference_ms": [
+        32.98485358276367,
+        33.00015358276367
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:5",
+      "cell": "tight-short",
+      "observed_delta_ms": 0.8509407043457031,
+      "differences_ms": {
+        "window_end_ms": 0.002048492431640625,
+        "release_ms": 0.002044677734375,
+        "peer_d_ready_ms": 34.55676746368408,
+        "target_done_ms": -1.9978256225585938,
+        "peer_c_done_ms": -1.9978256225585938,
+        "peer_d_done_ms": 4.846591949462891
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.766369819641113,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 13.788352966308594,
+          "exposed_ready_wait_ms": 6.781120300292969
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.97942854003906,
+        33.03251611328125
+      ],
+      "marker_reference_ms": [
+        32.984227429199215,
+        32.999427429199216
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:6",
+      "cell": "tight-short",
+      "observed_delta_ms": 0.006145477294921875,
+      "differences_ms": {
+        "window_end_ms": 0.01535797119140625,
+        "release_ms": 0.015361785888671875,
+        "peer_d_ready_ms": 33.12902355194092,
+        "target_done_ms": -1.9845123291015625,
+        "peer_c_done_ms": -1.9845123291015625,
+        "peer_d_done_ms": 3.975170135498047
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.00710678100586,
+          "ready_after_release_ms": -20.248351097106934,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 12.865310668945312,
+          "exposed_ready_wait_ms": 5.8580780029296875
+        }
+      },
+      "truth": null,
+      "remaining_ms": [
+        32.987928540039064,
+        33.03541611328125
+      ],
+      "marker_reference_ms": [
+        32.98965659790039,
+        32.99925659790039
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:7",
+      "cell": "tight-short",
+      "observed_delta_ms": -0.29286956787109375,
+      "differences_ms": {
+        "window_end_ms": -0.007167816162109375,
+        "release_ms": -0.007167816162109375,
+        "peer_d_ready_ms": 32.74758434295654,
+        "target_done_ms": -2.0070419311523438,
+        "peer_c_done_ms": -2.0070419311523438,
+        "peer_d_done_ms": 3.7212142944335938
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.12288188934326,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007228851318359,
+          "ready_after_release_ms": 12.63187026977539,
+          "exposed_ready_wait_ms": 5.624641418457031
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.916428540039064,
+        32.96841611328125
+      ],
+      "marker_reference_ms": [
+        32.94477937011719,
+        32.95887937011719
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:8",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.1038703918457031,
+      "differences_ms": {
+        "window_end_ms": -0.0102386474609375,
+        "release_ms": -0.010242462158203125,
+        "peer_d_ready_ms": 34.67779064178467,
+        "target_done_ms": -2.010112762451172,
+        "peer_c_done_ms": -2.010112762451172,
+        "peer_d_done_ms": 5.124095916748047
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 14.117694854736328,
+          "exposed_ready_wait_ms": 7.110462188720703
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.570338249206543,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.97472854003906,
+        33.02261611328125
+      ],
+      "marker_reference_ms": [
+        32.988743737792966,
+        32.99874373779297
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:9",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.5239067077636719,
+      "differences_ms": {
+        "window_end_ms": -0.0122222900390625,
+        "release_ms": -0.012226104736328125,
+        "peer_d_ready_ms": 35.07711982727051,
+        "target_done_ms": -2.012096405029297,
+        "peer_c_done_ms": -2.012096405029297,
+        "peer_d_done_ms": 5.548099517822266
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 14.453601837158203,
+          "exposed_ready_wait_ms": 7.446369171142578
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.635744094848633,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.96622854003906,
+        33.01551611328125
+      ],
+      "marker_reference_ms": [
+        32.98817830810547,
+        32.99957830810547
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:10",
+      "cell": "tight-short",
+      "observed_delta_ms": 0.2826271057128906,
+      "differences_ms": {
+        "window_end_ms": 0.0081939697265625,
+        "release_ms": 0.008190155029296875,
+        "peer_d_ready_ms": 33.4719352722168,
+        "target_done_ms": -1.9916801452636719,
+        "peer_c_done_ms": -1.9906539916992188,
+        "peer_d_done_ms": 4.264961242675781
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 13.189823150634766,
+          "exposed_ready_wait_ms": 6.182590484619141
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.00607681274414,
+          "ready_after_release_ms": -20.273921966552734,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.99532854003906,
+        33.04141611328125
+      ],
+      "marker_reference_ms": [
+        32.99295961303711,
+        33.00115961303711
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:11",
+      "cell": "tight-short",
+      "observed_delta_ms": 0.6338577270507812,
+      "differences_ms": {
+        "window_end_ms": -0.0102386474609375,
+        "release_ms": -0.0102386474609375,
+        "peer_d_ready_ms": 34.167073249816895,
+        "target_done_ms": -2.0101089477539062,
+        "peer_c_done_ms": -2.010112762451172,
+        "peer_d_done_ms": 4.654079437255859
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 13.63296127319336,
+          "exposed_ready_wait_ms": 6.625728607177734
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.00710678100586,
+          "ready_after_release_ms": -20.544350624084473,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.96422854003906,
+        33.01181611328125
+      ],
+      "marker_reference_ms": [
+        32.989508538818356,
+        32.99920853881836
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:12",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.4228172302246094,
+      "differences_ms": {
+        "window_end_ms": -0.0049591064453125,
+        "release_ms": -0.0049591064453125,
+        "peer_d_ready_ms": 34.77174472808838,
+        "target_done_ms": -2.0048294067382812,
+        "peer_c_done_ms": -2.005859375,
+        "peer_d_done_ms": 5.433506011962891
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.00710678100586,
+          "ready_after_release_ms": -20.36655902862549,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.006206512451172,
+          "ready_after_release_ms": 14.410144805908203,
+          "exposed_ready_wait_ms": 7.403938293457031
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.97822854003906,
+        33.02661611328125
+      ],
+      "marker_reference_ms": [
+        32.989012689208984,
+        32.999512689208984
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:13",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.4714851379394531,
+      "differences_ms": {
+        "window_end_ms": -0.09113693237304688,
+        "release_ms": -0.09113311767578125,
+        "peer_d_ready_ms": 34.203229904174805,
+        "target_done_ms": -2.0910072326660156,
+        "peer_c_done_ms": -2.0910110473632812,
+        "peer_d_done_ms": 5.65350341796875
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.00710678100586,
+          "ready_after_release_ms": -19.574430465698242,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007228851318359,
+          "ready_after_release_ms": 14.719932556152344,
+          "exposed_ready_wait_ms": 7.712703704833984
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.96982854003906,
+        33.01841611328125
+      ],
+      "marker_reference_ms": [
+        33.08214848632812,
+        33.09284848632812
+      ],
+      "marker_reference_intersects": false,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:14",
+      "cell": "tight-short",
+      "observed_delta_ms": 1.796539306640625,
+      "differences_ms": {
+        "window_end_ms": -0.012477874755859375,
+        "release_ms": -0.012481689453125,
+        "peer_d_ready_ms": 35.40035343170166,
+        "target_done_ms": -2.0062103271484375,
+        "peer_c_done_ms": -2.007232666015625,
+        "peer_d_done_ms": 5.8099822998046875
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.012351989746094,
+          "ready_after_release_ms": 14.811553955078125,
+          "exposed_ready_wait_ms": 7.799201965332031
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.60128116607666,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "shallow",
+      "remaining_ms": [
+        32.972528540039065,
+        33.01851611328125
+      ],
+      "marker_reference_ms": [
+        32.99166306152344,
+        32.99976306152344
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:tight-short:15",
+      "cell": "tight-short",
+      "observed_delta_ms": -0.4174995422363281,
+      "differences_ms": {
+        "window_end_ms": -0.005023956298828125,
+        "release_ms": -0.005023956298828125,
+        "peer_d_ready_ms": 32.78022575378418,
+        "target_done_ms": -2.004894256591797,
+        "peer_c_done_ms": -2.004894256591797,
+        "peer_d_done_ms": 3.5922889709472656
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.311967849731445,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": 12.473281860351562,
+          "exposed_ready_wait_ms": 5.4660491943359375
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.978928540039064,
+        33.02921611328125
+      ],
+      "marker_reference_ms": [
+        32.98772904663086,
+        33.00012904663086
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "coarse_marker": [
+          -0.4264179367065424,
+          -0.4264179367065424
+        ],
+        "observable_interval": [
+          -1.0860481262207031,
+          28.742660522460938
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": null
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:0",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.037502288818359,
+      "differences_ms": {
+        "window_end_ms": -0.013309478759765625,
+        "release_ms": -0.01331329345703125,
+        "peer_d_ready_ms": -0.8502721786499023,
+        "target_done_ms": -2.01318359375,
+        "peer_c_done_ms": -2.0121612548828125,
+        "peer_d_done_ms": -2.012157440185547
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.35273551940918,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.006080627441406,
+          "ready_after_release_ms": -19.51577663421631,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.95892854003906,
+        33.02521611328125
+      ],
+      "marker_reference_ms": [
+        32.985230877685545,
+        33.01363087768555
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:1",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.026371002197266,
+      "differences_ms": {
+        "window_end_ms": -0.009601593017578125,
+        "release_ms": -0.009601593017578125,
+        "peer_d_ready_ms": 1.432352066040039,
+        "target_done_ms": -2.009471893310547,
+        "peer_c_done_ms": -2.0084495544433594,
+        "peer_d_done_ms": -2.0084495544433594
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -19.39497470855713,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.006080627441406,
+          "ready_after_release_ms": -20.836928367614746,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.963728540039064,
+        33.01381611328125
+      ],
+      "marker_reference_ms": [
+        32.98593770751953,
+        32.99813770751953
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:2",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.993473052978516,
+      "differences_ms": {
+        "window_end_ms": 0.002048492431640625,
+        "release_ms": 0.002048492431640625,
+        "peer_d_ready_ms": -0.047072410583496094,
+        "target_done_ms": -1.9978256225585938,
+        "peer_c_done_ms": -1.9978218078613281,
+        "peer_d_done_ms": -1.9978256225585938
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.047136306762695,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.096257209777832,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.96862854003906,
+        33.01881611328125
+      ],
+      "marker_reference_ms": [
+        32.9857145690918,
+        32.998014569091794
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:3",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.968894958496094,
+      "differences_ms": {
+        "window_end_ms": 0.00921630859375,
+        "release_ms": 0.010242462158203125,
+        "peer_d_ready_ms": -0.4439353942871094,
+        "target_done_ms": -1.9896316528320312,
+        "peer_c_done_ms": -1.9896316528320312,
+        "peer_d_done_ms": -1.9896316528320312
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.00710678100586,
+          "ready_after_release_ms": -20.181694984436035,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.635872840881348,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.95022854003906,
+        33.00201611328125
+      ],
+      "marker_reference_ms": [
+        32.9591244140625,
+        32.9730244140625
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:4",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.988323211669922,
+      "differences_ms": {
+        "window_end_ms": 0.003421783447265625,
+        "release_ms": 0.00342559814453125,
+        "peer_d_ready_ms": 0.084320068359375,
+        "target_done_ms": -1.9964485168457031,
+        "peer_c_done_ms": -1.9964485168457031,
+        "peer_d_done_ms": -1.9954261779785156
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.72707176208496,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007228851318359,
+          "ready_after_release_ms": -20.646177291870117,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.989228540039065,
+        33.03621611328125
+      ],
+      "marker_reference_ms": [
+        32.990605645751955,
+        32.99970564575195
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:5",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.9535369873046875,
+      "differences_ms": {
+        "window_end_ms": 0.01535797119140625,
+        "release_ms": 0.015361785888671875,
+        "peer_d_ready_ms": -0.0740804672241211,
+        "target_done_ms": -1.9845123291015625,
+        "peer_c_done_ms": -1.9845123291015625,
+        "peer_d_done_ms": -1.9845123291015625
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007228851318359,
+          "ready_after_release_ms": -20.64256191253662,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.553119659423828,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.981528540039065,
+        33.03181611328125
+      ],
+      "marker_reference_ms": [
+        32.987353582763674,
+        32.999753582763674
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:6",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.0226898193359375,
+      "differences_ms": {
+        "window_end_ms": -0.00803375244140625,
+        "release_ms": -0.007007598876953125,
+        "peer_d_ready_ms": 0.31708717346191406,
+        "target_done_ms": -2.007904052734375,
+        "peer_c_done_ms": -2.007904052734375,
+        "peer_d_done_ms": -2.0068817138671875
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.484063148498535,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.006206512451172,
+          "ready_after_release_ms": -20.159968376159668,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.97162854003906,
+        33.02371611328125
+      ],
+      "marker_reference_ms": [
+        32.984461181640626,
+        32.99866118164063
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:7",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.990970611572266,
+      "differences_ms": {
+        "window_end_ms": 0.002880096435546875,
+        "release_ms": 0.002880096435546875,
+        "peer_d_ready_ms": -0.06758403778076172,
+        "target_done_ms": -1.9969902038574219,
+        "peer_c_done_ms": -1.9969902038574219,
+        "peer_d_done_ms": -1.9969902038574219
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.614879608154297,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.685343742370605,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.98382854003906,
+        33.03371611328125
+      ],
+      "marker_reference_ms": [
+        32.988501544189454,
+        33.000501544189454
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:8",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.012928009033203,
+      "differences_ms": {
+        "window_end_ms": -0.00409698486328125,
+        "release_ms": -0.00409698486328125,
+        "peer_d_ready_ms": 0.7856960296630859,
+        "target_done_ms": -2.00396728515625,
+        "peer_c_done_ms": -2.00396728515625,
+        "peer_d_done_ms": -2.004993438720703
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -19.70368003845215,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.493473052978516,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.975128540039066,
+        33.02601611328125
+      ],
+      "marker_reference_ms": [
+        32.98709524536133,
+        33.00009524536133
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:9",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.030330657958984,
+      "differences_ms": {
+        "window_end_ms": -0.0102386474609375,
+        "release_ms": -0.0102386474609375,
+        "peer_d_ready_ms": -0.11414432525634766,
+        "target_done_ms": -2.0101089477539062,
+        "peer_c_done_ms": -2.010112762451172,
+        "peer_d_done_ms": -2.0101089477539062
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.645248413085938,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.00710678100586,
+          "ready_after_release_ms": -20.541342735290527,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.95472854003906,
+        33.00401611328125
+      ],
+      "marker_reference_ms": [
+        32.98717635498047,
+        32.99857635498047
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:10",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.027454376220703,
+      "differences_ms": {
+        "window_end_ms": -0.00927734375,
+        "release_ms": -0.009281158447265625,
+        "peer_d_ready_ms": 0.3599357604980469,
+        "target_done_ms": -2.0091514587402344,
+        "peer_c_done_ms": -2.0091514587402344,
+        "peer_d_done_ms": -2.0091514587402344
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.108383178710938,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.47760009765625,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.962928540039066,
+        33.01321611328125
+      ],
+      "marker_reference_ms": [
+        32.98718238525391,
+        32.99958238525391
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:11",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.01190185546875,
+      "differences_ms": {
+        "window_end_ms": -0.004093170166015625,
+        "release_ms": -0.00409698486328125,
+        "peer_d_ready_ms": -0.2104320526123047,
+        "target_done_ms": -2.00396728515625,
+        "peer_c_done_ms": -2.00396728515625,
+        "peer_d_done_ms": -2.00396728515625
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.352511405944824,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.1461763381958,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.97912854003906,
+        33.02801611328125
+      ],
+      "marker_reference_ms": [
+        32.98699826049805,
+        32.99799826049804
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:12",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.951770782470703,
+      "differences_ms": {
+        "window_end_ms": 0.01526641845703125,
+        "release_ms": 0.015262603759765625,
+        "peer_d_ready_ms": 0.9213123321533203,
+        "target_done_ms": -1.9846076965332031,
+        "peer_c_done_ms": -1.98358154296875,
+        "peer_d_done_ms": -1.98358154296875
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -19.69472026824951,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.00607681274414,
+          "ready_after_release_ms": -20.600769996643066,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.98442854003906,
+        33.03251611328125
+      ],
+      "marker_reference_ms": [
+        32.98922742919922,
+        32.999427429199216
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:13",
+      "cell": "wide-short",
+      "observed_delta_ms": -6.010242462158203,
+      "differences_ms": {
+        "window_end_ms": -0.004222869873046875,
+        "release_ms": -0.0042266845703125,
+        "peer_d_ready_ms": -0.15932846069335938,
+        "target_done_ms": -2.0040969848632812,
+        "peer_c_done_ms": -2.0030746459960938,
+        "peer_d_done_ms": -2.003070831298828
+      },
+      "timing": {
+        "shallow": {
+          "consume_after_release_ms": 9.006080627441406,
+          "ready_after_release_ms": -20.558465003967285,
+          "exposed_ready_wait_ms": 0
+        },
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.713566780090332,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.959728540039066,
+        33.01101611328125
+      ],
+      "marker_reference_ms": [
+        32.98603087768555,
+        32.99943087768555
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:14",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.971195220947266,
+      "differences_ms": {
+        "window_end_ms": 0.009471893310546875,
+        "release_ms": 0.009471893310546875,
+        "peer_d_ready_ms": -0.09855937957763672,
+        "target_done_ms": -1.9903984069824219,
+        "peer_c_done_ms": -1.9903984069824219,
+        "peer_d_done_ms": -1.9903984069824219
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.007232666015625,
+          "ready_after_release_ms": -20.238975524902344,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.13094425201416,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.98072854003906,
+        33.03411611328125
+      ],
+      "marker_reference_ms": [
+        32.98424950561523,
+        32.999749505615235
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    },
+    {
+      "case_id": "R02-GPU-01/v1:wide-short:15",
+      "cell": "wide-short",
+      "observed_delta_ms": -5.949378967285156,
+      "differences_ms": {
+        "window_end_ms": 0.01708984375,
+        "release_ms": 0.018108367919921875,
+        "peer_d_ready_ms": 0.2312002182006836,
+        "target_done_ms": -1.9827842712402344,
+        "peer_c_done_ms": -1.9827842712402344,
+        "peer_d_done_ms": -1.9838104248046875
+      },
+      "timing": {
+        "deep": {
+          "consume_after_release_ms": 7.0062103271484375,
+          "ready_after_release_ms": -20.438462257385254,
+          "exposed_ready_wait_ms": 0
+        },
+        "shallow": {
+          "consume_after_release_ms": 9.007102966308594,
+          "ready_after_release_ms": -20.651554107666016,
+          "exposed_ready_wait_ms": 0
+        }
+      },
+      "truth": "deep",
+      "remaining_ms": [
+        32.99442854003906,
+        33.04021611328125
+      ],
+      "marker_reference_ms": [
+        32.99205961303711,
+        32.999959613037106
+      ],
+      "marker_reference_intersects": true,
+      "predictions_ms": {
+        "isolated": [
+          -6,
+          -6
+        ],
+        "coarse_marker": [
+          -6,
+          -6
+        ],
+        "observable_interval": [
+          -6,
+          -6
+        ]
+      },
+      "picks": {
+        "isolated": "deep",
+        "coarse_marker": "deep",
+        "observable_interval": "deep"
+      }
+    }
+  ]
+}

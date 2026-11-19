@@ -5,7 +5,7 @@
 | 阶段 | 主题 | 状态 | 计划与验收入口 |
 | --- | --- | --- | --- |
 | `R01` | 动态因素辨别与在线选点对照 | 历史计划；CPU B1–B3 已验收，GPU 按分线证据记录，不标整轮已验收 | [R01 双人分工](#r01) · [CPU 验收](dynamic-cpu-completion.md) · [GPU 证据汇总](dynamic-gpu-lookahead-appendices.md#round-gpu-findings) |
-| `R02` | 固定容量下的后续状态判据 | 已制定，待启动 | [R02 双人分工与验收条件](next-round-plan.md) |
+| `R02` | 固定容量下的后续状态判据 | 进行中：GPU 已交付待复核，待 CPU 回件及交叉复算 | [R02 计划](next-round-plan.md) · [交接与复算](r02-cross-review.md) |
 
 <a id="r01"></a>
 
