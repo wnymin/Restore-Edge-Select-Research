@@ -1,0 +1,22 @@
+﻿[
+    {
+        "name":  "fixture",
+        "command":  "python scripts/check_fixture.py",
+        "elapsed_ms":  320.894
+    },
+    {
+        "name":  "b1_synthetic",
+        "command":  "python -m scripts.cpu.replay.study_dynamic_cpu --out outputs/r03-cost-b1.json",
+        "elapsed_ms":  795.329
+    },
+    {
+        "name":  "summary",
+        "command":  "python scripts/validation/summarize_r03_app01.py --out outputs/r03-cost-summary.json",
+        "elapsed_ms":  59.495
+    },
+    {
+        "name":  "r02_stage",
+        "command":  "python -m scripts.validation.check_r02_stage",
+        "elapsed_ms":  1821.868
+    }
+]

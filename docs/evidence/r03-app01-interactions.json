@@ -1,0 +1,61 @@
+{
+  "schema": "R03-APP-01-interactions-v1",
+  "source": "dynamic-cpu-interventions-synthetic-864.csv",
+  "scope": "synthetic fixed-boundary paired mechanism evidence; not production frequency",
+  "pairs": [
+    {
+      "factor_a": "budget_mib",
+      "factor_b": "sharing",
+      "eligible_groups": 72,
+      "groups_with_mixed_sign": 28,
+      "mixed_sign_rate": 0.3888888888888889,
+      "cell_internal_mixed_sign_groups": 0,
+      "max_gain_range_ms": 19.333333333333336
+    },
+    {
+      "factor_a": "budget_mib",
+      "factor_b": "c_arrival_ms",
+      "eligible_groups": 24,
+      "groups_with_mixed_sign": 12,
+      "mixed_sign_rate": 0.5,
+      "cell_internal_mixed_sign_groups": 0,
+      "max_gain_range_ms": 24.75
+    },
+    {
+      "factor_a": "budget_mib",
+      "factor_b": "ssd_scale",
+      "eligible_groups": 0,
+      "groups_with_mixed_sign": 0,
+      "mixed_sign_rate": null,
+      "cell_internal_mixed_sign_groups": 0,
+      "max_gain_range_ms": 0
+    },
+    {
+      "factor_a": "sharing",
+      "factor_b": "c_arrival_ms",
+      "eligible_groups": 48,
+      "groups_with_mixed_sign": 7,
+      "mixed_sign_rate": 0.14583333333333334,
+      "cell_internal_mixed_sign_groups": 0,
+      "max_gain_range_ms": 12.333333333333334
+    },
+    {
+      "factor_a": "sharing",
+      "factor_b": "ssd_scale",
+      "eligible_groups": 0,
+      "groups_with_mixed_sign": 0,
+      "mixed_sign_rate": null,
+      "cell_internal_mixed_sign_groups": 0,
+      "max_gain_range_ms": 0
+    },
+    {
+      "factor_a": "c_arrival_ms",
+      "factor_b": "ssd_scale",
+      "eligible_groups": 0,
+      "groups_with_mixed_sign": 0,
+      "mixed_sign_rate": null,
+      "cell_internal_mixed_sign_groups": 0,
+      "max_gain_range_ms": 0
+    }
+  ]
+}

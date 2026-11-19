@@ -1,0 +1,5 @@
+﻿{
+    "name":  "holdout_480_configs",
+    "command":  "python -m scripts.cpu.dynamic.study_dynamic_cpu_holdout --trace-dir data/raw/bailian --frozen docs/evidence/dynamic-cpu-frozen.json --out outputs/r03-cost-holdout.csv",
+    "elapsed_ms":  76659.195
+}
