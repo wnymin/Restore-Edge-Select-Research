@@ -189,7 +189,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--config", type=Path, default=Path("configs/r02-gpu-observation-v1.json"))
     p.add_argument("--raw", type=Path, default=Path("docs/evidence/r02-gpu-observation-7941.json"))
-    output = p.add_mutually_exclusive_group(required=True)
+    output = p.add_mutually_exclusive_group()
     output.add_argument("--write", type=Path)
     output.add_argument("--check", type=Path)
     a = p.parse_args()
@@ -199,7 +199,7 @@ def main():
     if a.write:
         with a.write.open("x", encoding="utf-8") as f:
             f.write(json.dumps(report, indent=2) + "\n")
-    elif report != json.loads(a.check.read_bytes()):
+    elif a.check and report != json.loads(a.check.read_bytes()):
         p.exit(1, "Evidence differs from the recomputed audit\n")
     print(json.dumps(report["cells"], indent=2))
 

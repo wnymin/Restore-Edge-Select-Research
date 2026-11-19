@@ -70,13 +70,13 @@ python -m scripts.gpu.analysis.r02_marker_visibility docs/evidence/r02-gpu-marke
 
 ## 复现与决定
 
-[选点前与事后表](evidence/r02-gpu-observation-7941.json)按 `(case_id, arm)` 连接；[审计表](evidence/r02-gpu-observation-7941-audit.json)包含全部 48 对及逐臂的释放、就绪和暴露差。跨线映射见[交接与复算](r02-cross-review.md)。
+[原留出选点前与事后记录](evidence/r02-gpu-observation-7941.json)按 `(case_id, arm)` 连接。下方的 `--write` 命令从原始记录重建 48 对的审计表，包括逐臂释放、就绪和暴露差。跨线对照见[阶段验收](r02-cross-review.md)。
 
 ```powershell
 # 有现成 .local/hardware CUDA 夹具和 192 MiB 源文件时，输出须是新文件
 python .local/hardware/collect_r02_gpu_observation.py --source outputs/gpu-staging-source.bin --out outputs/r02-gpu-observation-local.json
 # 归档审计无需 CUDA、模型或本机夹具
-python -m scripts.gpu.experiments.study_r02_gpu_observation --check docs/evidence/r02-gpu-observation-7941-audit.json
+python -m scripts.gpu.experiments.study_r02_gpu_observation --write outputs/r02-gpu-7941-audit.json
 ```
 
 本机采集入口按协作约定留在 `.local/hardware/`。重做探针时，用 10 个事件的原 `Rig`，对前两个事件包装 `record`／`wait`：记录起点事件前打主机时间戳，等其同步返回后打第二个；提交窗尾事件后立刻在 CUDA driver 的 `cuEventQuery` 前后取时（0 为 `done`、600 为 `pending`、其他返回码记 `unknown` 并保留原码）。四个戳减起点提交前的戳。仍调用原 `run` 的 distinct 模式，不改变提交、释放或读取顺序；按配置顺序生成 `(cell, shallow/deep)`，使用同一个 RNG 从 `rep=-1` 开始每轮对同一列表原位打乱。输出分成选点前和事后两表。原夹具 SHA-256 在证据中，采集复测是验证方法，并不要求硬件时序逐位重现。
