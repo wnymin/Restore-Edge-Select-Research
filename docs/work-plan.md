@@ -1,4 +1,4 @@
-# 研究阶段台账与 R01 分工记录
+﻿# 研究阶段台账与 R01 分工记录
 
 ## 阶段台账
 
@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | `R01` | 动态因素辨别与在线选点对照 | 历史计划；CPU B1–B3 已验收，GPU 按分线证据记录，不标整轮已验收 | [R01 双人分工](#r01) · [CPU 验收](dynamic-cpu-completion.md) · [GPU 证据汇总](dynamic-gpu-lookahead-appendices.md#round-gpu-findings) |
 | `R02` | 固定容量下的后续状态判据 | 2026-11-19 已按限定子域验收，保留完整求值 | [R02 计划](next-round-plan.md) · [独立分工](r02-independent-work-protocol.md) · [CPU 交付](r02-cpu-results.md) · [GPU 交付](r02-gpu-observation.md) · [验收结论](r02-cross-review.md) |
-| `R03` | 动态因素量化、在线可用性与影响评估 | 2026-11-19 已登记，计划中，尚未启动 | [R03 分工计划](r03-factor-assessment-plan.md) |
+| `R03` | 动态因素量化、在线可用性与影响评估 | 2026-11-19 已登记；本方 MET/APP-02/INT-01 已完成，APP-01 待协作者交付，阶段未最终验收 | [R03 分工计划](r03-factor-assessment-plan.md) |
 
 <a id="r01"></a>
 
@@ -63,3 +63,4 @@ A 组新增通用分析、报告和精简证据优先使用 dynamic-gpu 或 dyna
 两组立即并行：A 从归档双槽配对和本机开始，B 从归档 CPU 配置和合成反例开始。B 不等待新校准，A 不等待新算法；任一组的成果都可独立验收。两组只在汇合时交换机制案例及证据：至少注明成本配置来源、目标函数、边界、决策前状态、基线与改选效果、计时语义及可复现入口。由 B 将有意义的实测范围作为补充敏感性配置，由 A 选择可在双槽环境表达的模拟反例复测，均为已有交付后的交叉验证。
 
 [模拟验收](phase1.md) · [CPU 策略与离线证据](trace-oracle.md) · [真实服务](gpu-boundary-restore.md) · [复现](experiment-index.md)
+
