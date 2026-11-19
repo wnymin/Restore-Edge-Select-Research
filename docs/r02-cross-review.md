@@ -18,6 +18,8 @@
 
 ## 复算和待回件
 
+CPU 可从[完整求值开发参照](r02-cpu-reference.md)直接开工；开发用，不算独立留出。
+
 ```powershell
 python -m scripts.gpu.experiments.study_r02_gpu_observation --check docs/evidence/r02-gpu-observation-7941-audit.json
 python -m scripts.cpu.lookahead.staging.study_lookahead_dynamic_release --check docs/evidence/dynamic-lookahead-dynamic-release-7884.json
