@@ -1,4 +1,4 @@
-﻿# 研究阶段台账与 R01 分工记录
+# 研究阶段台账与 R01 分工记录
 
 ## 阶段台账
 
@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | `R01` | 动态因素辨别与在线选点对照 | 历史计划；CPU B1–B3 已验收，GPU 按分线证据记录，不标整轮已验收 | [R01 双人分工](#r01) · [CPU 验收](dynamic-cpu-completion.md) · [GPU 证据汇总](dynamic-gpu-lookahead-appendices.md#round-gpu-findings) |
 | `R02` | 固定容量下的后续状态判据 | 2026-11-19 已按限定子域验收，保留完整求值 | [R02 计划](next-round-plan.md) · [独立分工](r02-independent-work-protocol.md) · [CPU 交付](r02-cpu-results.md) · [GPU 交付](r02-gpu-observation.md) · [验收结论](r02-cross-review.md) |
-| `R03` | 动态因素量化、在线可用性与影响评估 | 2026-11-19 已结项（R03/v1.0）；本方接替完成 MET/INV/APP-01/APP-02/INT-01，因素级不可识别 L、组合证据和成本边界已作为结论登记 | [R03 分工计划](r03-factor-assessment-plan.md) |
+| `R03` | 动态因素量化、在线可用性与影响评估 | 2026-11-19 已结项（R03/v1.0）；本方接替完成 MET/INV/APP-01/APP-02/INT-01，因素级不可识别 L、组合证据和成本边界已作为结论登记 | [因素结果与后续顺序](r03-factor-sequence.md) · [结项记录](r03-completion.md) · [分工计划归档](archive/r03-process/r03-factor-assessment-plan.md) |
 
 <a id="r01"></a>
 
