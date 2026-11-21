@@ -1,0 +1,242 @@
+{
+  "schema": "R03-APP-01-evidence-v1",
+  "method": "R03-MET-01/v1.0",
+  "factor_version": "R03-INV-01/v1.0",
+  "synthetic_interventions": {
+    "records": 864,
+    "outcomes": {
+      "negative": 461,
+      "zero": 288,
+      "positive": 115
+    },
+    "factor_groups": {
+      "budget_mib": {
+        "eligible_groups": 144,
+        "flip_groups": 56,
+        "flip_rate": 0.3888888888888889
+      },
+      "sharing": {
+        "eligible_groups": 288,
+        "flip_groups": 3,
+        "flip_rate": 0.010416666666666666
+      },
+      "c_arrival_ms": {
+        "eligible_groups": 96,
+        "flip_groups": 13,
+        "flip_rate": 0.13541666666666666
+      },
+      "ssd_scale": {
+        "eligible_groups": 0,
+        "flip_groups": 0,
+        "flip_rate": null
+      }
+    },
+    "source": "dynamic-cpu-interventions-synthetic-864.csv"
+  },
+  "unseen_arrival": {
+    "rows": 100,
+    "max_deterministic_worst_regret_ms": 3.0601353268529112,
+    "max_pair_randomized_regret_ms": 1.8826474489303255,
+    "positive_configurations": 1,
+    "source": "dynamic-cpu-unseen-arrival.csv"
+  },
+  "holdout_policy_level": [
+    {
+      "path": "ssd",
+      "scale": "1",
+      "policy": "local-cost",
+      "cases": "72",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "13887.551559266274",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "72"
+    },
+    {
+      "path": "ssd",
+      "scale": "1",
+      "policy": "dynamic",
+      "cases": "72",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.005975526384627924",
+      "p95_ms": "13887.551559266274",
+      "timed_p95_gain_ms": "0.003170290322580645",
+      "worst_timed_loss_ms": "0.06936696774193549",
+      "exact_cases": "72"
+    },
+    {
+      "path": "ssd",
+      "scale": "11",
+      "policy": "local-cost",
+      "cases": "72",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "14222.377774054454",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "72"
+    },
+    {
+      "path": "ssd",
+      "scale": "11",
+      "policy": "dynamic",
+      "cases": "72",
+      "mean_gain_ms": "105.38668667449747",
+      "net_gain_ms": "105.29139568908158",
+      "p95_ms": "14045.29431535597",
+      "timed_p95_gain_ms": "176.9269375701141",
+      "worst_timed_loss_ms": "10.043619208391297",
+      "exact_cases": "72"
+    },
+    {
+      "path": "ssd",
+      "scale": "12",
+      "policy": "local-cost",
+      "cases": "72",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "15305.812009093634",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "72"
+    },
+    {
+      "path": "ssd",
+      "scale": "12",
+      "policy": "dynamic",
+      "cases": "72",
+      "mean_gain_ms": "636.6373766788305",
+      "net_gain_ms": "636.3526094581176",
+      "p95_ms": "14079.778704738826",
+      "timed_p95_gain_ms": "1225.50887477473",
+      "worst_timed_loss_ms": "9.942572707845207",
+      "exact_cases": "72"
+    },
+    {
+      "path": "ssd",
+      "scale": "16",
+      "policy": "local-cost",
+      "cases": "72",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "15340.971764117405",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "68"
+    },
+    {
+      "path": "ssd",
+      "scale": "16",
+      "policy": "dynamic",
+      "cases": "72",
+      "mean_gain_ms": "558.1678822450721",
+      "net_gain_ms": "557.7539828364934",
+      "p95_ms": "14266.472596997586",
+      "timed_p95_gain_ms": "1073.6580292834922",
+      "worst_timed_loss_ms": "13.142057898321397",
+      "exact_cases": "68"
+    },
+    {
+      "path": "all",
+      "scale": "1",
+      "policy": "local-cost",
+      "cases": "48",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "12839.88475624856",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "48"
+    },
+    {
+      "path": "all",
+      "scale": "1",
+      "policy": "dynamic",
+      "cases": "48",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0031738463024194377",
+      "p95_ms": "12839.88475624856",
+      "timed_p95_gain_ms": "0.002647185483870968",
+      "worst_timed_loss_ms": "0.10121212903225807",
+      "exact_cases": "48"
+    },
+    {
+      "path": "all",
+      "scale": "11",
+      "policy": "local-cost",
+      "cases": "48",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "14435.826011279767",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "46"
+    },
+    {
+      "path": "all",
+      "scale": "11",
+      "policy": "dynamic",
+      "cases": "48",
+      "mean_gain_ms": "732.1378489336546",
+      "net_gain_ms": "731.9604874502447",
+      "p95_ms": "13178.099442540948",
+      "timed_p95_gain_ms": "1257.4012361554826",
+      "worst_timed_loss_ms": "12.705972774392501",
+      "exact_cases": "46"
+    },
+    {
+      "path": "all",
+      "scale": "12",
+      "policy": "local-cost",
+      "cases": "48",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "14463.527191180285",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "46"
+    },
+    {
+      "path": "all",
+      "scale": "12",
+      "policy": "dynamic",
+      "cases": "48",
+      "mean_gain_ms": "717.654258186152",
+      "net_gain_ms": "717.4700310826358",
+      "p95_ms": "13232.077062779936",
+      "timed_p95_gain_ms": "1231.0833337096851",
+      "worst_timed_loss_ms": "13.856861208428183",
+      "exact_cases": "46"
+    },
+    {
+      "path": "all",
+      "scale": "16",
+      "policy": "local-cost",
+      "cases": "48",
+      "mean_gain_ms": "0.0",
+      "net_gain_ms": "0.0",
+      "p95_ms": "14718.200859846147",
+      "timed_p95_gain_ms": "0.0",
+      "worst_timed_loss_ms": "0.0",
+      "exact_cases": "42"
+    },
+    {
+      "path": "all",
+      "scale": "16",
+      "policy": "dynamic",
+      "cases": "48",
+      "mean_gain_ms": "710.4486331235555",
+      "net_gain_ms": "710.0932288244198",
+      "p95_ms": "13501.757813193093",
+      "timed_p95_gain_ms": "1215.7073905193515",
+      "worst_timed_loss_ms": "18.47841494457091",
+      "exact_cases": "42"
+    }
+  ],
+  "attribution_limits": [
+    "Synthetic intervention flip rates are fixed-boundary mechanism sensitivity, not production frequencies or closed-loop policy loss.",
+    "Holdout policy results are not attributable to one factor without factor-specific ablation.",
+    "No per-factor L is inferred where no same-input omission/closed-loop ablation exists."
+  ]
+}

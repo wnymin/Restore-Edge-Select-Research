@@ -22,4 +22,4 @@ python scripts/simulate.py --prefetch-mib 160 --policy local-cost adaptive offli
 | CPU 协作者最新结果、限制与一键验收 | [最新成果入口](docs/dynamic-cpu-latest.md) |
 | 成本依据、保留数据和复现命令 | [实验口径与复现](docs/experiment-index.md) |
 
-[研究分工](docs/work-plan.md) · [协作约定](CONTRIBUTING.md)
+[??????](docs/README.md) ? [研究分工](docs/work-plan.md) · [协作约定](CONTRIBUTING.md)

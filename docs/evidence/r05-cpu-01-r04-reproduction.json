@@ -1,0 +1,239 @@
+{
+  "schema": "r05-cpu01-r04-paired-summary-v1",
+  "source": "docs\\evidence\\r04-cpu-02-decision-overhead-injected.csv.gz",
+  "source_sha256": "1620ad379fdd241d19f62ff20fa302e870dd22fc04f21b9dd20c29edaa5e723f",
+  "interpretation": "timed_gain_ms is gain over local-cost with decision-cost injection; not pairwise gain over entry",
+  "scales": [
+    {
+      "io_scale": 8.0,
+      "configurations": 36,
+      "policies": [
+        {
+          "policy": "adaptive",
+          "configurations": 36,
+          "mean_gain_ms_per_config": -0.22872462609008012,
+          "positive_gain_configurations_vs_local_cost": 12
+        },
+        {
+          "policy": "adaptive-no-window",
+          "configurations": 36,
+          "mean_gain_ms_per_config": -0.1740606231342231,
+          "positive_gain_configurations_vs_local_cost": 11
+        },
+        {
+          "policy": "entry",
+          "configurations": 36,
+          "mean_gain_ms_per_config": -0.08758075931284898,
+          "positive_gain_configurations_vs_local_cost": 7
+        },
+        {
+          "policy": "mixed-reuse-estimate",
+          "configurations": 36,
+          "mean_gain_ms_per_config": -0.038613874342473396,
+          "positive_gain_configurations_vs_local_cost": 9
+        },
+        {
+          "policy": "next4",
+          "configurations": 36,
+          "mean_gain_ms_per_config": -0.10848294284691229,
+          "positive_gain_configurations_vs_local_cost": 6
+        }
+      ],
+      "pairwise": [
+        {
+          "challenger": "adaptive",
+          "comparator": "entry",
+          "challenger_wins": 15,
+          "ties": 0,
+          "comparator_wins": 21,
+          "mean_paired_gain_ms": -0.14114386677723118
+        }
+      ]
+    },
+    {
+      "io_scale": 11.0,
+      "configurations": 36,
+      "policies": [
+        {
+          "policy": "adaptive",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 38.657023569182904,
+          "positive_gain_configurations_vs_local_cost": 18
+        },
+        {
+          "policy": "adaptive-no-window",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 38.62521337016649,
+          "positive_gain_configurations_vs_local_cost": 16
+        },
+        {
+          "policy": "entry",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 38.92764646586787,
+          "positive_gain_configurations_vs_local_cost": 13
+        },
+        {
+          "policy": "mixed-reuse-estimate",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 24.51388462735524,
+          "positive_gain_configurations_vs_local_cost": 10
+        },
+        {
+          "policy": "next4",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 38.93962876532243,
+          "positive_gain_configurations_vs_local_cost": 13
+        }
+      ],
+      "pairwise": [
+        {
+          "challenger": "adaptive",
+          "comparator": "entry",
+          "challenger_wins": 13,
+          "ties": 0,
+          "comparator_wins": 23,
+          "mean_paired_gain_ms": -0.27062289668496825
+        }
+      ]
+    },
+    {
+      "io_scale": 12.0,
+      "configurations": 36,
+      "policies": [
+        {
+          "policy": "adaptive",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 892.3805829989684,
+          "positive_gain_configurations_vs_local_cost": 30
+        },
+        {
+          "policy": "adaptive-no-window",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 892.4682216164188,
+          "positive_gain_configurations_vs_local_cost": 32
+        },
+        {
+          "policy": "entry",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 892.5433589773288,
+          "positive_gain_configurations_vs_local_cost": 28
+        },
+        {
+          "policy": "mixed-reuse-estimate",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 737.4458079419883,
+          "positive_gain_configurations_vs_local_cost": 21
+        },
+        {
+          "policy": "next4",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 892.4032980044717,
+          "positive_gain_configurations_vs_local_cost": 28
+        }
+      ],
+      "pairwise": [
+        {
+          "challenger": "adaptive",
+          "comparator": "entry",
+          "challenger_wins": 17,
+          "ties": 0,
+          "comparator_wins": 19,
+          "mean_paired_gain_ms": -0.16277597836031266
+        }
+      ]
+    },
+    {
+      "io_scale": 16.0,
+      "configurations": 36,
+      "policies": [
+        {
+          "policy": "adaptive",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 111.7901067344239,
+          "positive_gain_configurations_vs_local_cost": 26
+        },
+        {
+          "policy": "adaptive-no-window",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 111.88950604758435,
+          "positive_gain_configurations_vs_local_cost": 27
+        },
+        {
+          "policy": "entry",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 766.9649180828536,
+          "positive_gain_configurations_vs_local_cost": 28
+        },
+        {
+          "policy": "mixed-reuse-estimate",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 640.1325540826641,
+          "positive_gain_configurations_vs_local_cost": 18
+        },
+        {
+          "policy": "next4",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 766.7087084390589,
+          "positive_gain_configurations_vs_local_cost": 28
+        }
+      ],
+      "pairwise": [
+        {
+          "challenger": "adaptive",
+          "comparator": "entry",
+          "challenger_wins": 8,
+          "ties": 0,
+          "comparator_wins": 28,
+          "mean_paired_gain_ms": -655.1748113484297
+        }
+      ]
+    },
+    {
+      "io_scale": 32.0,
+      "configurations": 36,
+      "policies": [
+        {
+          "policy": "adaptive",
+          "configurations": 36,
+          "mean_gain_ms_per_config": -0.02670216824344162,
+          "positive_gain_configurations_vs_local_cost": 18
+        },
+        {
+          "policy": "adaptive-no-window",
+          "configurations": 36,
+          "mean_gain_ms_per_config": -0.024002092601594825,
+          "positive_gain_configurations_vs_local_cost": 19
+        },
+        {
+          "policy": "entry",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 539.2737357772019,
+          "positive_gain_configurations_vs_local_cost": 27
+        },
+        {
+          "policy": "mixed-reuse-estimate",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 527.5571484108882,
+          "positive_gain_configurations_vs_local_cost": 26
+        },
+        {
+          "policy": "next4",
+          "configurations": 36,
+          "mean_gain_ms_per_config": 539.0313329846356,
+          "positive_gain_configurations_vs_local_cost": 28
+        }
+      ],
+      "pairwise": [
+        {
+          "challenger": "adaptive",
+          "comparator": "entry",
+          "challenger_wins": 7,
+          "ties": 0,
+          "comparator_wins": 29,
+          "mean_paired_gain_ms": -539.3004379454453
+        }
+      ]
+    }
+  ],
+  "paired_configurations": 180
+}

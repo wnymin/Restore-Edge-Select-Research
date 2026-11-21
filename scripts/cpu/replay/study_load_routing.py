@@ -17,8 +17,8 @@ from restore_edge_select.adaptive import AdaptiveConfig
 
 CLASSES = ("idle", "light_io", "capacity", "transfer_queue", "reuse", "overlap", "uncoupled")
 EXACT_SEARCH = {"entry", "entry-fast", "entry-progress", "entry-transfer", "entry-commit", "entry-replay"}
-ADAPTIVE = {"adaptive", "adaptive-audit", "adaptive-strict", "adaptive-screened", "adaptive-screened-audit",
-            "adaptive-fixed2", "adaptive-exhaustive", "adaptive-mean", "adaptive-mean-audit"}
+ADAPTIVE = {"adaptive", "adaptive-cost-blind", "adaptive-no-transfer", "adaptive-no-window", "adaptive-audit", "adaptive-strict", "adaptive-screened",
+            "adaptive-screened-audit", "adaptive-fixed2", "adaptive-exhaustive", "adaptive-mean", "adaptive-mean-audit", "adaptive-mean-screened"}
 MIXED_PROJECTED = "mixed-projected-entry"
 MIXED_ESTIMATE = "mixed-estimate"
 MIXED_REUSE_ESTIMATE = "mixed-reuse-estimate"
@@ -107,7 +107,7 @@ REQUEST_COLUMNS = (
 )
 
 
-def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None, request_metrics=False, capture=None):
+def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None, request_metrics=False, capture=None, fingerprints=False, request_output=None):
     scorer = lambda row: predict("fifo_snapshot", row)
     opts = dict(score_candidate=scorer, screen_mode="unsettled", estimate=estimate)
     klass = dict(score_candidate=scorer, screen_mode="classified", estimate=estimate)
@@ -151,6 +151,18 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None, r
             return view
         return route
 
+    def write_requests(name, zero, timed):
+        if request_output is None:
+            return
+        for i, arrival in enumerate(exp.arrivals):
+            request_output.writerow(dict(**key, policy=name, request=i,
+                zero_ms=float(zero["completion_ms"][i] - arrival),
+                timed_ms=float(timed["completion_ms"][i] - arrival) if timed else "",
+                zero_boundary=zero["boundaries_tokens"][i],
+                timed_boundary=timed["boundaries_tokens"][i] if timed else ""))
+
+    write_requests("local-cost", fixture, wall_base)
+
     def tail(r):
         return p95([t - a for t, a in zip(r["completion_ms"], exp.arrivals, strict=True)])
 
@@ -159,12 +171,59 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None, r
     for policy in policies:
         calls = Counter()
         engine = "snapshot-screened"
-        if policy in ADAPTIVE:
+        if policy == "portfolio":
+            # Use the calibrated static regime while retaining adaptive live-state screening below.
+            if key["io_scale"] >= 16:
+                engine = "snapshot-screened"
+                zero = timed = opts | {"queue_horizon": 4, "screen_search": "entry"}
+            else:
+                engine = "adaptive"
+                options = AdaptiveConfig(screen=True, loss_ms=None, light_replays=2, coupled_replays=3)
+                zero = timed = {"estimate": estimate, "adaptive": options}
+        elif policy in {"portfolio-v2", "portfolio-v3", "portfolio-v3-static-only", "portfolio-v3-dynamic-only", "portfolio-v4", "portfolio-v5"}:
+            def state_gate(counts):
+                def choose(rows, base, later):
+                    fallback = rows[base]
+                    # Retain exact replay when an eligible alternative can
+                    # change overlap, reservation pressure, or object reuse.
+                    search = any(
+                        boundary != base and (
+                            row["prefetch_fits"] or row["shared_reservation_bytes"]
+                            or row["ready_bytes"] or row["active_new_kv_bytes"]
+                            or row["queue_debt_ms"] or row["inflight_ms"])
+                        for boundary, row in rows.items() if boundary
+                    ) or bool(fallback["ready_bytes"] or fallback["shared_reservation_bytes"])
+                    if counts is not None:
+                        counts["4" if search else "None"] += 1
+                    return 4 if search else None
+                return choose
+
+            zero = timed = opts | {"queue_horizon": 4, "screen_search": "entry-replay"}
+            light = key["path"] == "ssd" and (key["placement"] == "ram" or key["io_scale"] <= 11)
+            if policy == "portfolio-v4" and light:
+                zero = timed = opts | {"queue_horizon": 4, "screen_search": "entry-portfolio-early"}
+            if policy == "portfolio-v5" and key["io_scale"] == 16:
+                engine = "adaptive"
+                options = AdaptiveConfig(screen=True, loss_ms=None, light_replays=2, coupled_replays=3)
+                zero = timed = {"estimate": estimate, "adaptive": options}
+            elif policy == "portfolio-v5":
+                zero = timed = opts | {"queue_horizon": 4, "screen_search": "entry-replay"}
+            if policy == "portfolio-v3-static-only" and light:
+                engine = "local-cost"
+                zero = timed = {"estimate": estimate}
+            if policy in {"portfolio-v2", "portfolio-v3-dynamic-only"} or (policy == "portfolio-v3" and light):
+                zero = zero | {"screen_search": "entry-portfolio", "screen_selector": state_gate(calls)}
+                timed = timed | {"screen_search": "entry-portfolio", "screen_selector": state_gate(None)}
+        elif policy in ADAPTIVE:
             engine = "adaptive"
             limit = max(2, max(map(len, exp.eligible))) if policy == "adaptive-exhaustive" else 2
             coupled_limit = limit if policy in {"adaptive-fixed2", "adaptive-exhaustive"} else 3
             loss = None if "-mean" in policy else F(0) if policy == "adaptive-strict" else F(10)
             options = AdaptiveConfig(audit=policy.endswith("-audit"), screen="screened" in policy,
+                                     transfer_aware_order=policy != "adaptive-cost-blind",
+                                     coverage_aware_order=policy != "adaptive-no-window",
+                                     decision_transfer_scale=(F(1, 1_000_000)
+                                                              if policy == "adaptive-no-transfer" else F(1)),
                                      loss_ms=loss, light_replays=limit, coupled_replays=coupled_limit)
             zero = timed = {"estimate": estimate, "adaptive": options}
         elif policy in {"next4"} | EXACT_SEARCH:
@@ -188,6 +247,7 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None, r
             capture.setdefault("local-cost", fixture)
             capture[policy] = run
         wall = exp.run(engine, **timed, inject_measured=True) if wall_base is not None else None
+        write_requests(policy, run, wall)
         extra = {}
         if request_metrics:
             def losses(base, result):
@@ -205,10 +265,13 @@ def run_case(exp, key, results, snapshots, zero_only, policies, estimate=None, r
                          max_request_loss_ms=float(max(0, *delta)),
                          timed_requests_slower_gt10ms=sum(x > 10 for x in timed_delta) if wall else "",
                          timed_max_request_loss_ms=float(max(0, *timed_delta)) if wall else "")
+        if fingerprints:
+            extra["boundary_sha256"] = sha256(json.dumps(run["boundaries_tokens"]).encode()).hexdigest()
+            extra["completion_sha256"] = sha256(json.dumps([str(x) for x in run["completion_ms"]]).encode()).hexdigest()
         if route_metrics:
             extra["adaptive_routes"] = json.dumps(run.get("adaptive_routes", {}), default=float, sort_keys=True)
-        results.writerow(dict(**key, policy=policy, requests=len(exp.requests), replays=run["decision_replays"],
-            forecast_events=run["decision_events"], pruned=run.get("pruned_rollouts", 0),
+        results.writerow(dict(**key, policy=policy, requests=len(exp.requests), replays=run.get("decision_replays", 0),
+            forecast_events=run.get("decision_events", 0), pruned=run.get("pruned_rollouts", 0),
             current_calls=calls["current"], queue_calls=calls["4"],
             mean_gain_ms=float(fixture["response_mean_ms"] - run["response_mean_ms"]),
             p95_gain_ms=float(tail(fixture) - tail(run)),
@@ -260,8 +323,10 @@ def main():
     p.add_argument("--zero-only", action="store_true")
     p.add_argument("--no-snapshots", action="store_true", help="omit the fixed-state diagnostic")
     p.add_argument("--request-metrics", action="store_true", help="append paired request regression metrics")
+    p.add_argument("--request-output", type=Path, help="write paired per-request response times and boundaries")
+    p.add_argument("--fingerprints", action="store_true", help="record exact boundary and completion sequence hashes")
     p.add_argument("--all-checkpoints", action="store_true", help="include every history-matched 512-token boundary")
-    p.add_argument("--policies", nargs="+", choices=("next4", *PRESSURE_POLICIES,
+    p.add_argument("--policies", nargs="+", choices=("next4", "portfolio", "portfolio-v2", "portfolio-v3", "portfolio-v3-static-only", "portfolio-v3-dynamic-only", "portfolio-v4", "portfolio-v5", *PRESSURE_POLICIES,
                                                     *sorted(EXACT_SEARCH | ADAPTIVE)),
                    default=("next4", "entry", "mixed-reuse-estimate", "adaptive", "adaptive-screened"))
     p.add_argument("--grid", type=Path, default=ROOT / "docs/evidence/prefill-vulkan-4k.json",
@@ -298,7 +363,10 @@ def main():
     optional = REQUEST_COLUMNS if args.request_metrics else ()
     if args.request_metrics and any(policy in ADAPTIVE for policy in args.policies):
         optional += ("adaptive_routes",)
-    with args.out.open("w", encoding="utf-8", newline="") as out, args.out.with_suffix(".snapshots.csv").open(
+    if args.fingerprints:
+        optional += ("boundary_sha256", "completion_sha256")
+    from contextlib import ExitStack
+    with ExitStack() as stack, args.out.open("w", encoding="utf-8", newline="") as out, args.out.with_suffix(".snapshots.csv").open(
             "w", encoding="utf-8", newline="") as observations:
         results = csv.DictWriter(out, (*keys, "policy", "requests", "replays", "forecast_events", "pruned", "current_calls",
             "queue_calls", "mean_gain_ms", "p95_gain_ms", "timed_gain_ms", "timed_p95_ms", "decision_cpu_ms",
@@ -306,6 +374,12 @@ def main():
         snapshots = csv.DictWriter(observations, (*keys, "label", "decisions", "gains", "gains_gt5", "sum_gain",
             "relative", "ahead", "later", "slack_ms", "debt_ms", "routing_captures_gt5", "depth_captures_gt5"),
             lineterminator="\n")
+        request_output = None
+        if args.request_output is not None:
+            stream = stack.enter_context(args.request_output.open("w", encoding="utf-8", newline=""))
+            request_output = csv.DictWriter(stream, (*keys, "policy", "request", "zero_ms", "timed_ms",
+                "zero_boundary", "timed_boundary"), lineterminator="\n")
+            request_output.writeheader()
         results.writeheader()
         snapshots.writeheader()
         for cohort, trace in product(args.cohort, traces):
@@ -330,7 +404,8 @@ def main():
                             key = dict(zip(keys, (cohort, trace, window, placement, float(spacing), budget, rate,
                                                   args.path, args.max_prompt), strict=True))
                             run_case(exp, key, results, None if args.no_snapshots else snapshots, args.zero_only,
-                                     args.policies, estimate=estimate, request_metrics=args.request_metrics)
+                                     args.policies, estimate=estimate, request_metrics=args.request_metrics,
+                                     fingerprints=args.fingerprints, request_output=request_output)
                     out.flush()
                     observations.flush()
     write_metadata(args)

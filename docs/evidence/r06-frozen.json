@@ -1,0 +1,27 @@
+{
+  "config_sha256": "b973a73eb2cc9adf8c09521ff6b2d359e80d6f984d7aa2feb85f6597643bdaa4",
+  "calibration_sha256": "d6ba12b2a7cbe2b6a4edad7f334d647e9cb36d9ca653d8dd190e79b8d0233801",
+  "thresholds": {
+    "4b": {
+      "ram": 32,
+      "split": 32,
+      "ssd": 32
+    },
+    "synthetic": {
+      "ram": 32,
+      "split": 32,
+      "ssd": 32
+    }
+  },
+  "margin": "1/100",
+  "skips": {
+    "0": 4080,
+    "1/100": 4080,
+    "1/20": 4076
+  },
+  "stable": {
+    "0": true,
+    "1/100": true,
+    "1/20": true
+  }
+}

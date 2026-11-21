@@ -1,0 +1,31 @@
+{
+  "schema": "r05-cpu04-negative-summary-v1",
+  "holdout": "traceB windows 350-361",
+  "configs": 864,
+  "window_clusters": 12,
+  "baseline": "entry",
+  "portfolio": "portfolio-v4",
+  "mean_timed_gain_ms": {
+    "entry": 274.5221958543901,
+    "next4": 274.4615809855869,
+    "entry-replay": 274.5864301879693,
+    "mixed-reuse-estimate": 232.8539235449694,
+    "adaptive": 120.88743440720697,
+    "portfolio-v4": 274.58087078062215
+  },
+  "paired_window_diff_portfolio_minus_baseline": {
+    "mean_ms_per_config": 0.058674926232078185,
+    "bootstrap95": [
+      0.035969173312081416,
+      0.0805667293475641
+    ],
+    "positive_windows": 11,
+    "negative_windows": 1
+  },
+  "request_guard": {
+    "regressions_gt10ms": 0,
+    "requests": 81072,
+    "max_loss_ms": 8.512187264108434,
+    "mean_config_p95_delta_ms": -0.1094430578599633
+  }
+}

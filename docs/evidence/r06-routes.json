@@ -1,0 +1,188 @@
+[
+  {
+    "model": "4b",
+    "cost": "heavy",
+    "policy": "portfolio-v4",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 317
+    },
+    "baseline_path_rate": 0.8672529313232831
+  },
+  {
+    "model": "4b",
+    "cost": "heavy",
+    "policy": "recalibrated",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 620
+    },
+    "baseline_path_rate": 0.7403685092127303
+  },
+  {
+    "model": "4b",
+    "cost": "heavy",
+    "policy": "unified",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 889,
+      "callback_fallback": 1469
+    },
+    "baseline_path_rate": 0.6277219430485762
+  },
+  {
+    "model": "4b",
+    "cost": "light",
+    "policy": "portfolio-v4",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 951
+    },
+    "baseline_path_rate": 0.6017587939698492
+  },
+  {
+    "model": "4b",
+    "cost": "light",
+    "policy": "recalibrated",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 951
+    },
+    "baseline_path_rate": 0.6017587939698492
+  },
+  {
+    "model": "4b",
+    "cost": "light",
+    "policy": "unified",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 1345,
+      "callback_fallback": 1013
+    },
+    "baseline_path_rate": 0.43676716917922953
+  },
+  {
+    "model": "4b",
+    "cost": "transition",
+    "policy": "portfolio-v4",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 317
+    },
+    "baseline_path_rate": 0.8672529313232831
+  },
+  {
+    "model": "4b",
+    "cost": "transition",
+    "policy": "recalibrated",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 622
+    },
+    "baseline_path_rate": 0.7395309882747069
+  },
+  {
+    "model": "4b",
+    "cost": "transition",
+    "policy": "unified",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 898,
+      "callback_fallback": 1460
+    },
+    "baseline_path_rate": 0.6239530988274706
+  },
+  {
+    "model": "synthetic",
+    "cost": "heavy",
+    "policy": "portfolio-v4",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 317
+    },
+    "baseline_path_rate": 0.8672529313232831
+  },
+  {
+    "model": "synthetic",
+    "cost": "heavy",
+    "policy": "recalibrated",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 941
+    },
+    "baseline_path_rate": 0.6059463986599665
+  },
+  {
+    "model": "synthetic",
+    "cost": "heavy",
+    "policy": "unified",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 1353,
+      "callback_fallback": 1005
+    },
+    "baseline_path_rate": 0.43341708542713564
+  },
+  {
+    "model": "synthetic",
+    "cost": "light",
+    "policy": "portfolio-v4",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 951
+    },
+    "baseline_path_rate": 0.6017587939698492
+  },
+  {
+    "model": "synthetic",
+    "cost": "light",
+    "policy": "recalibrated",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 951
+    },
+    "baseline_path_rate": 0.6017587939698492
+  },
+  {
+    "model": "synthetic",
+    "cost": "light",
+    "policy": "unified",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 1428,
+      "callback_fallback": 930
+    },
+    "baseline_path_rate": 0.40201005025125625
+  },
+  {
+    "model": "synthetic",
+    "cost": "transition",
+    "policy": "portfolio-v4",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 317
+    },
+    "baseline_path_rate": 0.8672529313232831
+  },
+  {
+    "model": "synthetic",
+    "cost": "transition",
+    "policy": "recalibrated",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 945
+    },
+    "baseline_path_rate": 0.6042713567839195
+  },
+  {
+    "model": "synthetic",
+    "cost": "transition",
+    "policy": "unified",
+    "counts": {
+      "multi_choice": 2388,
+      "gate_fast": 1368,
+      "callback_fallback": 990
+    },
+    "baseline_path_rate": 0.42713567839195976
+  }
+]

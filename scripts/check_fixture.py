@@ -1,4 +1,4 @@
-"""Check the committed fixture and replay all hand-calculated cases."""
+﻿"""Check the committed fixture and replay all hand-calculated cases."""
 
 from copy import deepcopy
 from fractions import Fraction
@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from restore_edge_select.simulator import Experiment
-from restore_edge_select.adaptive import AdaptiveConfig, select as adaptive_select
+from restore_edge_select.adaptive import AdaptiveConfig, projected_priority, select as adaptive_select
 
 
 def require(condition, message):
@@ -63,6 +63,77 @@ def check_adaptive_search():
     screened = adaptive_select(rows, 0, 0, AdaptiveConfig(audit=True, screen=True), floor,
                                ends.__getitem__, {c: c for c in rows})
     require(screened == (0, 'screened-light', None, 0, 14), 'Audit must expose a screening miss')
+
+
+def check_cost_priority():
+    row = dict(serial_compute_ms=10, serial_copy_ms=2,
+               incremental_ram_ms=0, incremental_ssd_ms=8,
+               head_slack_ms=5, committed_ahead_compute_ms=0,
+               inflight_ms=1, queue_debt_ms=2,
+               prefetch_fits=True, missing_bytes=1)
+    require(projected_priority(row) == 18,
+            "Transfer-aware search priority must include uncovered transfer work")
+    require(projected_priority(row, include_transfer=False) == 12,
+            "Cost-blind control must remove only incremental transfer priority")
+    row["missing_bytes"] = 0
+    require(projected_priority(row) == 12,
+            "Already-ready dependencies must not pay a transfer priority")
+    row["missing_bytes"] = 1
+    row["prefetch_fits"] = False
+    require(projected_priority(row) == 20,
+            "Blocked prefetch priority must retain unavoidable serial transfer")
+
+    shared = dict(head_distance=0, prefetch_fits=True, extra_reserve_bytes=0,
+                  checkpoint_tier="RAM", queue_debt_ms=0, inflight_ms=0,
+                  incremental_ram_ms=0, incremental_ssd_ms=0,
+                  head_slack_ms=0, committed_ahead_compute_ms=0,
+                  serial_copy_ms=0, missing_bytes=1, ready_bytes=0,
+                  shared_reservation_bytes=0, active_new_kv_bytes=0)
+    rows = {0: dict(shared, serial_compute_ms=25),
+            1: dict(shared, serial_compute_ms=20, checkpoint_tier="RAM"),
+            2: dict(shared, serial_compute_ms=10, incremental_ssd_ms=15, checkpoint_tier="RAM"),
+            3: dict(shared, serial_compute_ms=5, incremental_ssd_ms=30, checkpoint_tier="SSD")}
+    floors = {c: ((100, 100) if c == 0 else (30, 30)) for c in rows}
+    exact = {0: (100, 100), 1: (70, 90), 2: (85, 85), 3: (90, 90)}
+    full_rank = {c: projected_priority(row) for c, row in rows.items()}
+    blind_rank = {c: projected_priority(row, include_transfer=False) for c, row in rows.items()}
+    from restore_edge_select.adaptive import select as adaptive_select
+    bounded = AdaptiveConfig(light_replays=2, coupled_replays=3)
+    full = adaptive_select(rows, 0, 128, bounded, floors, exact.__getitem__, full_rank)
+    blind = adaptive_select(rows, 0, 128, bounded, floors, exact.__getitem__, blind_rank)
+    require(full[0] == 1 and blind[0] == 2 and blind[2] >= 10,
+            "Transfer-aware priority must surface the cost-sensitive winner; the blind route must retain a valid regret bound")
+
+    # Coverage crossover: ten ms of committed/head compute hides candidate 1's
+    # ten ms incremental transfer. With a one-challenger budget, the window-
+    # aware order reaches the true winner; the no-window ablation does not,
+    # but its certificate reports the missed opportunity as regret.
+    common = dict(serial_copy_ms=0, incremental_ram_ms=0, incremental_ssd_ms=0,
+                  head_slack_ms=0, committed_ahead_compute_ms=0, inflight_ms=0,
+                  queue_debt_ms=0, prefetch_fits=True, missing_bytes=1,
+                  head_distance=0, extra_reserve_bytes=0, checkpoint_tier="RAM",
+                  ready_bytes=0, shared_reservation_bytes=0, active_new_kv_bytes=0)
+    coverage_rows = {
+        0: dict(common, serial_compute_ms=20, incremental_ssd_ms=0),
+        1: dict(common, serial_compute_ms=10, incremental_ssd_ms=10,
+                head_slack_ms=10),
+        2: dict(common, serial_compute_ms=15, incremental_ssd_ms=0),
+    }
+    coverage_rank = {c: projected_priority(row, include_coverage=True)
+                     for c, row in coverage_rows.items()}
+    no_window_rank = {c: projected_priority(row, include_coverage=False)
+                      for c, row in coverage_rows.items()}
+    coverage_cfg = AdaptiveConfig(light_replays=2, coupled_replays=2)
+    floors = {c: (1,) for c in coverage_rows}
+    ends = {0: (100,), 1: (40,), 2: (50,)}
+    aware = adaptive_select(coverage_rows, 0, 128, coverage_cfg, floors,
+                            ends.__getitem__, coverage_rank)
+    unaware = adaptive_select(coverage_rows, 0, 128, coverage_cfg, floors,
+                              ends.__getitem__, no_window_rank)
+    require(coverage_rank[1] < coverage_rank[2] and no_window_rank[2] < no_window_rank[1]
+            and aware[0] == 1 and unaware[0] == 2 and unaware[2] >= 10,
+            "Coverage crossover must alter limited-budget exploration, with missed loss certified")
+    print("Checked transfer and coverage crossovers, and bounded-regret validity.")
 
 
 def check_estimate_guards(fixture, model):
@@ -137,6 +208,7 @@ def check_estimate_guards(fixture, model):
 
 def main():
     check_adaptive_search()
+    check_cost_priority()
     fixture = json.loads((ROOT / "fixtures/phase1-hand-trace.json").read_text())
     spec = json.loads((ROOT / "configs/qwen3.5-4b.json").read_text())
     model = spec["models"][0]
