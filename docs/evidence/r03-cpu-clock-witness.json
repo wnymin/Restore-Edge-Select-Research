@@ -1,0 +1,893 @@
+{
+  "case": "holdout-checkpoint-+0-+0",
+  "order": [
+    "A",
+    "B",
+    "D",
+    "C"
+  ],
+  "rows": [
+    {
+      "delay_ns": 0,
+      "estimate": "1",
+      "actions": [
+        0,
+        1152,
+        0,
+        0
+      ],
+      "completions_ms": [
+        "30",
+        "30",
+        "38",
+        "46"
+      ],
+      "reservation_ms": [
+        null,
+        "0",
+        null,
+        null
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "4",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "4",
+          "end_ms": "8",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "8",
+          "end_ms": "29",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 0,
+      "estimate": "1/2",
+      "actions": [
+        0,
+        1152,
+        576,
+        0
+      ],
+      "completions_ms": [
+        "30",
+        "30",
+        "217/4",
+        "249/4"
+      ],
+      "reservation_ms": [
+        null,
+        "0",
+        "0",
+        null
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "0",
+          "end_ms": "4",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "4",
+          "end_ms": "8",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "8",
+          "end_ms": "29",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "29",
+          "end_ms": "50",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 1,
+      "estimate": "1",
+      "actions": [
+        0,
+        1152,
+        0,
+        1152
+      ],
+      "completions_ms": [
+        "30000001/1000000",
+        "30000001/1000000",
+        "38000001/1000000",
+        "59000001/1000000"
+      ],
+      "reservation_ms": [
+        null,
+        "1/500000",
+        null,
+        "30000001/1000000"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/1000000",
+          "end_ms": "4000003/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "4000003/1000000",
+          "end_ms": "8000003/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "8000003/1000000",
+          "end_ms": "29000003/1000000",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "30000001/1000000",
+          "end_ms": "34000001/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "34000001/1000000",
+          "end_ms": "38000001/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "38000001/1000000",
+          "end_ms": "59000001/1000000",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 1,
+      "estimate": "1/2",
+      "actions": [
+        0,
+        1152,
+        576,
+        1152
+      ],
+      "completions_ms": [
+        "30000001/1000000",
+        "30000001/1000000",
+        "54250003/1000000",
+        "79000003/1000000"
+      ],
+      "reservation_ms": [
+        null,
+        "1/500000",
+        "3/1000000",
+        "30000001/1000000"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/1000000",
+          "end_ms": "4000003/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "4000003/1000000",
+          "end_ms": "8000003/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "8000003/1000000",
+          "end_ms": "29000003/1000000",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "29000003/1000000",
+          "end_ms": "50000003/1000000",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "50000003/1000000",
+          "end_ms": "54000003/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "54000003/1000000",
+          "end_ms": "58000003/1000000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "58000003/1000000",
+          "end_ms": "79000003/1000000",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 1000,
+      "estimate": "1",
+      "actions": [
+        0,
+        1152,
+        0,
+        1152
+      ],
+      "completions_ms": [
+        "30001/1000",
+        "30001/1000",
+        "38001/1000",
+        "59001/1000"
+      ],
+      "reservation_ms": [
+        null,
+        "1/500",
+        null,
+        "30001/1000"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/1000",
+          "end_ms": "4003/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "4003/1000",
+          "end_ms": "8003/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "8003/1000",
+          "end_ms": "29003/1000",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "30001/1000",
+          "end_ms": "34001/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "34001/1000",
+          "end_ms": "38001/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "38001/1000",
+          "end_ms": "59001/1000",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 1000,
+      "estimate": "1/2",
+      "actions": [
+        0,
+        1152,
+        576,
+        1152
+      ],
+      "completions_ms": [
+        "30001/1000",
+        "30001/1000",
+        "54253/1000",
+        "79003/1000"
+      ],
+      "reservation_ms": [
+        null,
+        "1/500",
+        "3/1000",
+        "30001/1000"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/1000",
+          "end_ms": "4003/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "4003/1000",
+          "end_ms": "8003/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "8003/1000",
+          "end_ms": "29003/1000",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "29003/1000",
+          "end_ms": "50003/1000",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "50003/1000",
+          "end_ms": "54003/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "54003/1000",
+          "end_ms": "58003/1000",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "58003/1000",
+          "end_ms": "79003/1000",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 10000,
+      "estimate": "1",
+      "actions": [
+        0,
+        1152,
+        0,
+        1152
+      ],
+      "completions_ms": [
+        "3001/100",
+        "3001/100",
+        "3801/100",
+        "5901/100"
+      ],
+      "reservation_ms": [
+        null,
+        "1/50",
+        null,
+        "3001/100"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/100",
+          "end_ms": "403/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "403/100",
+          "end_ms": "803/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "803/100",
+          "end_ms": "2903/100",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "3001/100",
+          "end_ms": "3401/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "3401/100",
+          "end_ms": "3801/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "3801/100",
+          "end_ms": "5901/100",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 10000,
+      "estimate": "1/2",
+      "actions": [
+        0,
+        1152,
+        576,
+        1152
+      ],
+      "completions_ms": [
+        "3001/100",
+        "3001/100",
+        "1357/25",
+        "7903/100"
+      ],
+      "reservation_ms": [
+        null,
+        "1/50",
+        "3/100",
+        "3001/100"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/100",
+          "end_ms": "403/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "403/100",
+          "end_ms": "803/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "803/100",
+          "end_ms": "2903/100",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "2903/100",
+          "end_ms": "5003/100",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "5003/100",
+          "end_ms": "5403/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "5403/100",
+          "end_ms": "5803/100",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "5803/100",
+          "end_ms": "7903/100",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 100000,
+      "estimate": "1",
+      "actions": [
+        0,
+        1152,
+        0,
+        1152
+      ],
+      "completions_ms": [
+        "301/10",
+        "301/10",
+        "381/10",
+        "591/10"
+      ],
+      "reservation_ms": [
+        null,
+        "1/5",
+        null,
+        "301/10"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/10",
+          "end_ms": "43/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "43/10",
+          "end_ms": "83/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "83/10",
+          "end_ms": "293/10",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "301/10",
+          "end_ms": "341/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "341/10",
+          "end_ms": "381/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "381/10",
+          "end_ms": "591/10",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 100000,
+      "estimate": "1/2",
+      "actions": [
+        0,
+        1152,
+        576,
+        1152
+      ],
+      "completions_ms": [
+        "301/10",
+        "301/10",
+        "1091/20",
+        "793/10"
+      ],
+      "reservation_ms": [
+        null,
+        "1/5",
+        "3/10",
+        "301/10"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3/10",
+          "end_ms": "43/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "43/10",
+          "end_ms": "83/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "83/10",
+          "end_ms": "293/10",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "prefetch",
+          "start_ms": "293/10",
+          "end_ms": "503/10",
+          "bytes": 51511296
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "503/10",
+          "end_ms": "543/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "C",
+          "mode": "prefetch",
+          "start_ms": "543/10",
+          "end_ms": "583/10",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "C",
+          "mode": "demand",
+          "start_ms": "583/10",
+          "end_ms": "793/10",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 1000000,
+      "estimate": "1",
+      "actions": [
+        0,
+        1152,
+        0,
+        1152
+      ],
+      "completions_ms": [
+        "31",
+        "32",
+        "40",
+        "40"
+      ],
+      "reservation_ms": [
+        null,
+        "2",
+        null,
+        "31"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3",
+          "end_ms": "7",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "7",
+          "end_ms": "11",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "11",
+          "end_ms": "32",
+          "bytes": 51511296
+        }
+      ]
+    },
+    {
+      "delay_ns": 1000000,
+      "estimate": "1/2",
+      "actions": [
+        0,
+        1152,
+        576,
+        1152
+      ],
+      "completions_ms": [
+        "31",
+        "32",
+        "229/4",
+        "229/4"
+      ],
+      "reservation_ms": [
+        null,
+        "2",
+        "3",
+        "31"
+      ],
+      "transfers": [
+        {
+          "path": "ram_to_device",
+          "object": "B.kv1",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "3",
+          "end_ms": "7",
+          "bytes": 18874368
+        },
+        {
+          "path": "ram_to_device",
+          "object": "B.kv2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "7",
+          "end_ms": "11",
+          "bytes": 18874368
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "B.state2",
+          "request": "B",
+          "mode": "prefetch",
+          "start_ms": "11",
+          "end_ms": "32",
+          "bytes": 51511296
+        },
+        {
+          "path": "ssd_to_device",
+          "object": "D.state1",
+          "request": "D",
+          "mode": "demand",
+          "start_ms": "32",
+          "end_ms": "53",
+          "bytes": 51511296
+        }
+      ]
+    }
+  ]
+}
