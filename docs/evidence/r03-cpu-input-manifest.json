@@ -1,0 +1,8 @@
+{
+  "base": "1a907e676a5b92cfcd218aa638b20b33be4ced02",
+  "hash_scheme": "SHA256 after CRLF to LF",
+  "inputs": {
+    "r02-cpu-inputs.json": "5e54650911cb0e404cf9cb1fae61fb02ff7d278c1fae18c12e597bdf5daa284b",
+    "r02-cpu-visibility.json": "ebd547edb28647701ed542e0a7772a7d750cee908f14748fd36d2156ccdd0b0b"
+  }
+}

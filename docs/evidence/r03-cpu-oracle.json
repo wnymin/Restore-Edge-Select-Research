@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "design-none-+0--1",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "785/32",
+    "optimal_plan": [
+      0,
+      1152,
+      1152,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "785/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "801/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "1/2"
+      },
+      "ssd_double": {
+        "mean": "785/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "compute_half": {
+        "mean": "785/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "compute_double": {
+        "mean": "801/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "1/2"
+      }
+    }
+  },
+  {
+    "id": "design-none-+0-+0",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "49/2",
+    "optimal_plan": [
+      0,
+      1152,
+      1152,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "49/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "25",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "1/2"
+      },
+      "ssd_double": {
+        "mean": "49/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "compute_half": {
+        "mean": "49/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "compute_double": {
+        "mean": "25",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "1/2"
+      }
+    }
+  },
+  {
+    "id": "design-none-+0-+1",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "97/4",
+    "optimal_plan": [
+      0,
+      1152,
+      1152,
+      1152
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "97/4",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "97/4",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_double": {
+        "mean": "49/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "1/4"
+      },
+      "compute_half": {
+        "mean": "49/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "1/4"
+      },
+      "compute_double": {
+        "mean": "97/4",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      }
+    }
+  },
+  {
+    "id": "design-kv-+0--1",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "835/32",
+    "optimal_plan": [
+      0,
+      1152,
+      576,
+      1152
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "835/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "835/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_double": {
+        "mean": "887/32",
+        "actions": [
+          0,
+          576,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "13/8"
+      },
+      "compute_half": {
+        "mean": "887/32",
+        "actions": [
+          0,
+          576,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "13/8"
+      },
+      "compute_double": {
+        "mean": "943/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "27/8"
+      }
+    }
+  },
+  {
+    "id": "design-kv-+0-+0",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "213/8",
+    "optimal_plan": [
+      0,
+      1152,
+      576,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "213/8",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "437/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "11/16"
+      },
+      "ssd_double": {
+        "mean": "57/2",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "15/8"
+      },
+      "compute_half": {
+        "mean": "57/2",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "15/8"
+      },
+      "compute_double": {
+        "mean": "437/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "11/16"
+      }
+    }
+  },
+  {
+    "id": "design-kv-+0-+1",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "421/16",
+    "optimal_plan": [
+      0,
+      1152,
+      576,
+      1152
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "421/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "421/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_double": {
+        "mean": "911/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "69/32"
+      },
+      "compute_half": {
+        "mean": "911/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "69/32"
+      },
+      "compute_double": {
+        "mean": "421/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      }
+    }
+  },
+  {
+    "id": "design-checkpoint-+0--1",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "789/32",
+    "optimal_plan": [
+      0,
+      1152,
+      576,
+      1152
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "789/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "789/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_double": {
+        "mean": "789/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "compute_half": {
+        "mean": "849/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          1152
+        ],
+        "gap_to_optimum": "15/8"
+      },
+      "compute_double": {
+        "mean": "789/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      }
+    }
+  },
+  {
+    "id": "design-checkpoint-+0-+0",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "413/16",
+    "optimal_plan": [
+      0,
+      1152,
+      576,
+      1152
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "413/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "413/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_double": {
+        "mean": "443/16",
+        "actions": [
+          0,
+          576,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "15/8"
+      },
+      "compute_half": {
+        "mean": "443/16",
+        "actions": [
+          0,
+          576,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "15/8"
+      },
+      "compute_double": {
+        "mean": "111/4",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "31/16"
+      }
+    }
+  },
+  {
+    "id": "design-checkpoint-+0-+1",
+    "split": "design",
+    "search_space": 18,
+    "optimum": "409/16",
+    "optimal_plan": [
+      0,
+      1152,
+      576,
+      1152
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "409/16",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "895/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "77/32"
+      },
+      "ssd_double": {
+        "mean": "885/32",
+        "actions": [
+          0,
+          576,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "67/32"
+      },
+      "compute_half": {
+        "mean": "885/32",
+        "actions": [
+          0,
+          576,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "67/32"
+      },
+      "compute_double": {
+        "mean": "895/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          1152
+        ],
+        "gap_to_optimum": "77/32"
+      }
+    }
+  },
+  {
+    "id": "holdout-none-+0--1",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "913/32",
+    "optimal_plan": [
+      0,
+      1152,
+      0,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "913/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "1025/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "7/2"
+      },
+      "ssd_double": {
+        "mean": "977/32",
+        "actions": [
+          0,
+          0,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "2"
+      },
+      "compute_half": {
+        "mean": "977/32",
+        "actions": [
+          0,
+          0,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "2"
+      },
+      "compute_double": {
+        "mean": "1025/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "7/2"
+      }
+    }
+  },
+  {
+    "id": "holdout-none-+0-+0",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "55/2",
+    "optimal_plan": [
+      0,
+      1152,
+      1152,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "55/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "55/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_double": {
+        "mean": "57/2",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "1"
+      },
+      "compute_half": {
+        "mean": "507/16",
+        "actions": [
+          0,
+          576,
+          0,
+          0
+        ],
+        "gap_to_optimum": "67/16"
+      },
+      "compute_double": {
+        "mean": "55/2",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "0"
+      }
+    }
+  },
+  {
+    "id": "holdout-none-+0-+1",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "885/32",
+    "optimal_plan": [
+      0,
+      576,
+      1152,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "911/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "13/16"
+      },
+      "ssd_half": {
+        "mean": "927/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "21/16"
+      },
+      "ssd_double": {
+        "mean": "911/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "13/16"
+      },
+      "compute_half": {
+        "mean": "975/32",
+        "actions": [
+          0,
+          0,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "45/16"
+      },
+      "compute_double": {
+        "mean": "927/32",
+        "actions": [
+          0,
+          1152,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "21/16"
+      }
+    }
+  },
+  {
+    "id": "holdout-kv-+0--1",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "977/32",
+    "optimal_plan": [
+      0,
+      0,
+      1152,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "1015/32",
+        "actions": [
+          0,
+          576,
+          0,
+          0
+        ],
+        "gap_to_optimum": "19/16"
+      },
+      "ssd_half": {
+        "mean": "1073/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          1152
+        ],
+        "gap_to_optimum": "3"
+      },
+      "ssd_double": {
+        "mean": "1105/32",
+        "actions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "gap_to_optimum": "4"
+      },
+      "compute_half": {
+        "mean": "1105/32",
+        "actions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "gap_to_optimum": "4"
+      },
+      "compute_double": {
+        "mean": "1309/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "83/8"
+      }
+    }
+  },
+  {
+    "id": "holdout-kv-+0-+0",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "57/2",
+    "optimal_plan": [
+      0,
+      1152,
+      0,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "57/2",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "269/8",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "41/8"
+      },
+      "ssd_double": {
+        "mean": "61/2",
+        "actions": [
+          0,
+          0,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "2"
+      },
+      "compute_half": {
+        "mean": "261/8",
+        "actions": [
+          0,
+          0,
+          576,
+          0
+        ],
+        "gap_to_optimum": "33/8"
+      },
+      "compute_double": {
+        "mean": "269/8",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "41/8"
+      }
+    }
+  },
+  {
+    "id": "holdout-kv-+0-+1",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "911/32",
+    "optimal_plan": [
+      0,
+      1152,
+      0,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "911/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "979/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "17/8"
+      },
+      "ssd_double": {
+        "mean": "975/32",
+        "actions": [
+          0,
+          0,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "2"
+      },
+      "compute_half": {
+        "mean": "975/32",
+        "actions": [
+          0,
+          0,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "2"
+      },
+      "compute_double": {
+        "mean": "1065/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "77/16"
+      }
+    }
+  },
+  {
+    "id": "holdout-checkpoint-+0--1",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "849/32",
+    "optimal_plan": [
+      0,
+      1152,
+      0,
+      1152
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "849/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          1152
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "917/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "17/8"
+      },
+      "ssd_double": {
+        "mean": "1015/32",
+        "actions": [
+          0,
+          576,
+          0,
+          0
+        ],
+        "gap_to_optimum": "83/16"
+      },
+      "compute_half": {
+        "mean": "977/32",
+        "actions": [
+          0,
+          0,
+          1152,
+          0
+        ],
+        "gap_to_optimum": "4"
+      },
+      "compute_double": {
+        "mean": "917/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "17/8"
+      }
+    }
+  },
+  {
+    "id": "holdout-checkpoint-+0-+0",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "57/2",
+    "optimal_plan": [
+      0,
+      1152,
+      0,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "57/2",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "293/8",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "65/8"
+      },
+      "ssd_double": {
+        "mean": "69/2",
+        "actions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "gap_to_optimum": "6"
+      },
+      "compute_half": {
+        "mean": "69/2",
+        "actions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "gap_to_optimum": "6"
+      },
+      "compute_double": {
+        "mean": "293/8",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "65/8"
+      }
+    }
+  },
+  {
+    "id": "holdout-checkpoint-+0-+1",
+    "split": "holdout",
+    "search_space": 18,
+    "optimum": "883/32",
+    "optimal_plan": [
+      0,
+      1152,
+      576,
+      0
+    ],
+    "scores": {
+      "nominal": {
+        "mean": "883/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_half": {
+        "mean": "883/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          0
+        ],
+        "gap_to_optimum": "0"
+      },
+      "ssd_double": {
+        "mean": "911/32",
+        "actions": [
+          0,
+          1152,
+          0,
+          0
+        ],
+        "gap_to_optimum": "7/8"
+      },
+      "compute_half": {
+        "mean": "1013/32",
+        "actions": [
+          0,
+          576,
+          0,
+          0
+        ],
+        "gap_to_optimum": "65/16"
+      },
+      "compute_double": {
+        "mean": "945/32",
+        "actions": [
+          0,
+          1152,
+          576,
+          1152
+        ],
+        "gap_to_optimum": "31/16"
+      }
+    }
+  }
+]

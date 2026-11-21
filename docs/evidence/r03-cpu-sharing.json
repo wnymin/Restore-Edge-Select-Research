@@ -1,0 +1,2064 @@
+{
+  "design": [
+    {
+      "id": "design-kv-+0--1",
+      "layout": "kv",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2"
+      },
+      "before": {
+        "id": "design-kv-+0--1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "981/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "77/2"
+            ],
+            "response_sum_ms": "891/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "40"
+            ],
+            "response_sum_ms": "835/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "design-kv-+0--1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "981/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "40"
+            ],
+            "response_sum_ms": "903/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "40"
+            ],
+            "response_sum_ms": "835/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "design-kv-+0-+0",
+      "layout": "kv",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2"
+      },
+      "before": {
+        "id": "design-kv-+0-+0",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "45"
+            ],
+            "response_sum_ms": "501/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "42"
+            ],
+            "response_sum_ms": "459/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "45"
+            ],
+            "response_sum_ms": "437/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "design-kv-+0-+0/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "45"
+            ],
+            "response_sum_ms": "501/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "45"
+            ],
+            "response_sum_ms": "471/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "45"
+            ],
+            "response_sum_ms": "437/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "design-kv-+0-+1",
+      "layout": "kv",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2"
+      },
+      "before": {
+        "id": "design-kv-+0-+1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "979/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "321/8"
+            ],
+            "response_sum_ms": "451/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "329/8"
+            ],
+            "response_sum_ms": "421/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "design-kv-+0-+1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "979/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "329/8"
+            ],
+            "response_sum_ms": "455/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "329/8"
+            ],
+            "response_sum_ms": "421/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "design-checkpoint-+0--1",
+      "layout": "checkpoint",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2",
+        "B.state2": "r03.independent.B.state2"
+      },
+      "before": {
+        "id": "design-checkpoint-+0--1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "981/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "39"
+            ],
+            "response_sum_ms": "895/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "137/4"
+            ],
+            "response_sum_ms": "789/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "239/8"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "design-checkpoint-+0--1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "981/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "42"
+            ],
+            "response_sum_ms": "919/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "42"
+            ],
+            "response_sum_ms": "851/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "design-checkpoint-+0-+0",
+      "layout": "checkpoint",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2",
+        "B.state2": "r03.independent.B.state2"
+      },
+      "before": {
+        "id": "design-checkpoint-+0-+0",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "245/2",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "77/2"
+            ],
+            "response_sum_ms": "445/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "39"
+            ],
+            "response_sum_ms": "413/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "design-checkpoint-+0-+0/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "245/2",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "39"
+            ],
+            "response_sum_ms": "447/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "39"
+            ],
+            "response_sum_ms": "413/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "design-checkpoint-+0-+1",
+      "layout": "checkpoint",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2",
+        "B.state2": "r03.independent.B.state2"
+      },
+      "before": {
+        "id": "design-checkpoint-+0-+1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "979/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "77/2"
+            ],
+            "response_sum_ms": "889/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "305/8"
+            ],
+            "response_sum_ms": "409/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "design-checkpoint-+0-+1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "979/8",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "77/2"
+            ],
+            "response_sum_ms": "889/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "137/4",
+              "305/8"
+            ],
+            "response_sum_ms": "409/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    }
+  ],
+  "holdout": [
+    {
+      "id": "holdout-kv-+0--1",
+      "layout": "kv",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2"
+      },
+      "before": {
+        "id": "holdout-kv-+0--1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 0,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "519/8"
+            ],
+            "response_sum_ms": "581/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "213/4",
+              "77"
+            ],
+            "response_sum_ms": "1317/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "35",
+              "241/4",
+              "91"
+            ],
+            "response_sum_ms": "1491/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "35"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "holdout-kv-+0--1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 0,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "519/8"
+            ],
+            "response_sum_ms": "581/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "213/4",
+              "84"
+            ],
+            "response_sum_ms": "1373/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "35",
+              "241/4",
+              "91"
+            ],
+            "response_sum_ms": "1491/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "35"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "holdout-kv-+0-+0",
+      "layout": "kv",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2"
+      },
+      "before": {
+        "id": "holdout-kv-+0-+0",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 576,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "59"
+            ],
+            "response_sum_ms": "557/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "165/4",
+              "59"
+            ],
+            "response_sum_ms": "269/2",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "193/4",
+              "73"
+            ],
+            "response_sum_ms": "605/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "holdout-kv-+0-+0/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 0,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "59"
+            ],
+            "response_sum_ms": "557/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "165/4",
+              "66"
+            ],
+            "response_sum_ms": "283/2",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "193/4",
+              "73"
+            ],
+            "response_sum_ms": "605/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "changed": true,
+      "rank_changed": true,
+      "tie_set_changed": true,
+      "mean_loss_ms": "9/16",
+      "mean_loss_fraction": "9/557",
+      "p95_loss_ms": "-1",
+      "max_request_loss_ms": "7"
+    },
+    {
+      "id": "holdout-kv-+0-+1",
+      "layout": "kv",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2"
+      },
+      "before": {
+        "id": "holdout-kv-+0-+1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 576,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "425/8"
+            ],
+            "response_sum_ms": "533/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "53"
+            ],
+            "response_sum_ms": "1005/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "169/4",
+              "61"
+            ],
+            "response_sum_ms": "1065/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "holdout-kv-+0-+1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 576,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "425/8"
+            ],
+            "response_sum_ms": "533/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "57"
+            ],
+            "response_sum_ms": "1037/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "169/4",
+              "61"
+            ],
+            "response_sum_ms": "1065/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "holdout-checkpoint-+0--1",
+      "layout": "checkpoint",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2",
+        "B.state2": "r03.independent.B.state2"
+      },
+      "before": {
+        "id": "holdout-checkpoint-+0--1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "447/8"
+            ],
+            "response_sum_ms": "545/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "50"
+            ],
+            "response_sum_ms": "983/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "169/4",
+              "169/4"
+            ],
+            "response_sum_ms": "917/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "239/8"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "holdout-checkpoint-+0--1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 576,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "447/8"
+            ],
+            "response_sum_ms": "545/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "239/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "57"
+            ],
+            "response_sum_ms": "1039/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "169/4",
+              "64"
+            ],
+            "response_sum_ms": "1091/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "changed": true,
+      "rank_changed": true,
+      "tie_set_changed": true,
+      "mean_loss_ms": "13/8",
+      "mean_loss_fraction": "52/1039",
+      "p95_loss_ms": "15/4",
+      "max_request_loss_ms": "7"
+    },
+    {
+      "id": "holdout-checkpoint-+0-+0",
+      "layout": "checkpoint",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2",
+        "B.state2": "r03.independent.B.state2"
+      },
+      "before": {
+        "id": "holdout-checkpoint-+0-+0",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 0,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "59"
+            ],
+            "response_sum_ms": "557/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "201/4",
+              "71"
+            ],
+            "response_sum_ms": "311/2",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "217/4",
+              "79"
+            ],
+            "response_sum_ms": "653/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "holdout-checkpoint-+0-+0/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 0,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "59"
+            ],
+            "response_sum_ms": "557/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "201/4",
+              "75"
+            ],
+            "response_sum_ms": "319/2",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "217/4",
+              "79"
+            ],
+            "response_sum_ms": "653/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "30"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    },
+    {
+      "id": "holdout-checkpoint-+0-+1",
+      "layout": "checkpoint",
+      "aliases": {
+        "B.kv1": "r03.independent.B.kv1",
+        "B.kv2": "r03.independent.B.kv2",
+        "B.state2": "r03.independent.B.state2"
+      },
+      "before": {
+        "id": "holdout-checkpoint-+0-+1",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "401/8"
+            ],
+            "response_sum_ms": "521/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "369/8"
+            ],
+            "response_sum_ms": "475/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "145/4",
+              "52"
+            ],
+            "response_sum_ms": "945/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "id": "holdout-checkpoint-+0-+1/independent",
+        "order": [
+          "A",
+          "B",
+          "D",
+          "C"
+        ],
+        "winner": 1152,
+        "plans": [
+          {
+            "boundary": 0,
+            "plan": [
+              0,
+              0,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "38",
+              "169/4",
+              "401/8"
+            ],
+            "response_sum_ms": "521/4",
+            "reservation_ms": [
+              null,
+              null,
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 576,
+            "plan": [
+              0,
+              576,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "137/4",
+              "77/2",
+              "401/8"
+            ],
+            "response_sum_ms": "491/4",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          },
+          {
+            "boundary": 1152,
+            "plan": [
+              0,
+              1152,
+              576,
+              1152
+            ],
+            "completion_ms": [
+              "30",
+              "30",
+              "145/4",
+              "52"
+            ],
+            "response_sum_ms": "945/8",
+            "reservation_ms": [
+              null,
+              "0",
+              "0",
+              "241/8"
+            ]
+          }
+        ]
+      },
+      "changed": false,
+      "rank_changed": false,
+      "tie_set_changed": false,
+      "mean_loss_ms": "0",
+      "mean_loss_fraction": "0",
+      "p95_loss_ms": "0",
+      "max_request_loss_ms": "0"
+    }
+  ]
+}
