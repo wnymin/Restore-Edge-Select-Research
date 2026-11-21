@@ -7,6 +7,9 @@
 | `R01` | 动态因素辨别与在线选点对照 | 历史计划；CPU B1–B3 已验收，GPU 按分线证据记录，不标整轮已验收 | [R01 双人分工](#r01) · [CPU 验收](dynamic-cpu-completion.md) · [GPU 证据汇总](dynamic-gpu-lookahead-appendices.md#round-gpu-findings) |
 | `R02` | 固定容量下的后续状态判据 | 2026-11-19 已按限定子域验收，保留完整求值 | [R02 计划](next-round-plan.md) · [独立分工](r02-independent-work-protocol.md) · [CPU 交付](r02-cpu-results.md) · [GPU 交付](r02-gpu-observation.md) · [验收结论](r02-cross-review.md) |
 | `R03` | 动态因素量化、在线可用性与影响评估 | 2026-11-19 已结项（R03/v1.0）；本方接替完成 MET/INV/APP-01/APP-02/INT-01，因素级不可识别 L、组合证据和成本边界已作为结论登记 | [因素结果与后续顺序](r03-factor-sequence.md) · [结项记录](r03-completion.md) · [分工计划归档](archive/r03-process/r03-factor-assessment-plan.md) |
+| `R04` | Online dynamic boundary-selection strategy and validation | 2026-11-20 CPU scope accepted: CPU-01 delivered; CPU-02 completed by user takeover; CPU-03 triggered and tested with no observed standalone gain; no independent collaborator artifact/replication. Broader GPU/service validation remains separate. | [R04 plan](r04-trace-validation-plan.md) / [final acceptance](r04-final-acceptance.md) |
+| `R05` | Static/dynamic strategy regimes and online portfolio switching | Completed (2026-11-20); CPU scope accepted with positive net holdout result; single-owner execution by user side; acceptance requires net improvement over strongest fixed baseline on frozen holdout, otherwise report failure without claiming success. | [R05 plan](r05-strategy-portfolio-plan.md) / [CPU report](r05-strategy-portfolio-report.md) |
+| `R06` | 模型与成本适用域验证 | 2026-11-20 CPU 交付验收，重校准只在合成高成本组达到性能判据 | [R06 计划](r06-model-cost-transfer-plan.md) · [R06 结项](r06-completion.md) |
 
 <a id="r01"></a>
 

@@ -1,0 +1,3566 @@
+{
+  "coverage": [
+    {
+      "budget_mib": 70,
+      "arrival_ms": "26",
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "107/4",
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "35"
+        ],
+        "1152": [
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "13/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "5",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "27",
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "141/4"
+        ],
+        "1152": [
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "3",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "21/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "30",
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": 0,
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": false,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "26",
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "31"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "1"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "107/4",
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "35"
+        ],
+        "1152": [
+          "30",
+          "127/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "13/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "5",
+          "1152": "7/4"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "27",
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "141/4"
+        ],
+        "1152": [
+          "30",
+          "32"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "3",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "21/4",
+          "1152": "2"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "30",
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": 0,
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": false,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 2,
+      "factor": "include_coverage",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": 0
+      }
+    }
+  ],
+  "queue_debt": [
+    {
+      "budget_mib": 70,
+      "arrival_ms": "1",
+      "preceding_boundary": 576,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "157/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "133/4",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 576,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "157/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "131/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "1/2",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "2",
+      "preceding_boundary": 576,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "157/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "129/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "3",
+      "preceding_boundary": 576,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "157/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "125/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "2",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "4",
+      "preceding_boundary": 576,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "157/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "121/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "1",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "5",
+      "preceding_boundary": 576,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "157/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "117/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "3/4",
+        "gap_ms": "35"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "1",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "35",
+          "43"
+        ],
+        "576": [
+          "30",
+          "35",
+          "157/4"
+        ],
+        "1152": [
+          "30",
+          "35",
+          "40"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "29",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "35",
+          "43"
+        ],
+        "576": [
+          "30",
+          "35",
+          "157/4"
+        ],
+        "1152": [
+          "30",
+          "35",
+          "40"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "57/2",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "2",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "35",
+          "43"
+        ],
+        "576": [
+          "30",
+          "35",
+          "157/4"
+        ],
+        "1152": [
+          "30",
+          "35",
+          "40"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "28",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "3",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "35",
+          "43"
+        ],
+        "576": [
+          "30",
+          "35",
+          "157/4"
+        ],
+        "1152": [
+          "30",
+          "35",
+          "40"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "27",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "4",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "35",
+          "43"
+        ],
+        "576": [
+          "30",
+          "35",
+          "157/4"
+        ],
+        "1152": [
+          "30",
+          "35",
+          "40"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "26",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      }
+    },
+    {
+      "budget_mib": 70,
+      "arrival_ms": "5",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "35",
+          "43"
+        ],
+        "576": [
+          "30",
+          "35",
+          "157/4"
+        ],
+        "1152": [
+          "30",
+          "35",
+          "40"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "25",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "145/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "1",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "133/4",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "131/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "1/2",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "2",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "129/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "3",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "125/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "2",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "4",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "121/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "1",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "5",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "117/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "1",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "29",
+      "queue_debt_ms": "5",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "57/2",
+      "queue_debt_ms": "4",
+      "inflight_ms": "1/2",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "2",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "28",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "3",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "27",
+      "queue_debt_ms": "3",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "4",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "26",
+      "queue_debt_ms": 0,
+      "inflight_ms": "2",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "5",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "25",
+      "queue_debt_ms": 0,
+      "inflight_ms": "1",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "123/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "1",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "133/4",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "131/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "1/2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "2",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "129/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "3",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "125/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "4",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "121/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "1",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "5",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "117/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "1",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "29",
+      "queue_debt_ms": "5",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "57/2",
+      "queue_debt_ms": "4",
+      "inflight_ms": "1/2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "2",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "28",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "3",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "27",
+      "queue_debt_ms": "3",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "4",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "26",
+      "queue_debt_ms": 0,
+      "inflight_ms": "2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 160,
+      "arrival_ms": "5",
+      "preceding_boundary": 1152,
+      "oracle": 576,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "35"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "25",
+      "queue_debt_ms": 0,
+      "inflight_ms": "1",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "5"
+        },
+        "priority_winner": 576,
+        "action": 576,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "1",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "133/4",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "131/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "1/2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "2",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "129/4",
+      "queue_debt_ms": "3",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "3",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "125/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "4",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "121/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "1",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "5",
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "137/4",
+          "169/4"
+        ],
+        "576": [
+          "30",
+          "137/4",
+          "77/2"
+        ],
+        "1152": [
+          "30",
+          "137/4",
+          "137/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "117/4",
+      "queue_debt_ms": 0,
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "105/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "1",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "30"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "29",
+      "queue_debt_ms": "5",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "3/2",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "30"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "57/2",
+      "queue_debt_ms": "4",
+      "inflight_ms": "1/2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "2",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "30"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "28",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "3",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "30"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "27",
+      "queue_debt_ms": "3",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "4",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "30"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "26",
+      "queue_debt_ms": 0,
+      "inflight_ms": "2",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "5",
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "30",
+          "30",
+          "38"
+        ],
+        "576": [
+          "30",
+          "30",
+          "137/4"
+        ],
+        "1152": [
+          "30",
+          "30",
+          "30"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "25",
+      "queue_debt_ms": 0,
+      "inflight_ms": "1",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "22"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "1",
+      "head_tokens": 576,
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "15/4",
+          "37/4",
+          "69/4"
+        ],
+        "576": [
+          "15/4",
+          "37/4",
+          "27/2"
+        ],
+        "1152": [
+          "15/4",
+          "37/4",
+          "10"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "7",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "7"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "7"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "1",
+      "head_tokens": 576,
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "15/4",
+          "6",
+          "14"
+        ],
+        "576": [
+          "15/4",
+          "6",
+          "57/4"
+        ],
+        "1152": [
+          "15/4",
+          "6",
+          "11"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "11/4",
+      "queue_debt_ms": "5",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "9"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "9"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "1",
+      "head_tokens": 576,
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "15/4",
+          "37/4",
+          "69/4"
+        ],
+        "576": [
+          "15/4",
+          "37/4",
+          "27/2"
+        ],
+        "1152": [
+          "15/4",
+          "37/4",
+          "10"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "7",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "21/4",
+          "1152": "2"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "13/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "13/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "1",
+      "head_tokens": 576,
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "15/4",
+          "6",
+          "14"
+        ],
+        "576": [
+          "15/4",
+          "6",
+          "57/4"
+        ],
+        "1152": [
+          "15/4",
+          "6",
+          "11"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "11/4",
+      "queue_debt_ms": "5",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "21/2",
+          "1152": "29/4"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "9"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "11/2",
+          "1152": "9/4"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "21/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "1",
+      "head_tokens": 1152,
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "8",
+          "49/4",
+          "81/4"
+        ],
+        "576": [
+          "8",
+          "49/4",
+          "33/2"
+        ],
+        "1152": [
+          "8",
+          "49/4",
+          "13"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "45/4",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "35/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "35/4"
+      }
+    },
+    {
+      "budget_mib": 128,
+      "arrival_ms": "1",
+      "head_tokens": 1152,
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "8",
+          "8",
+          "16"
+        ],
+        "576": [
+          "8",
+          "8",
+          "65/4"
+        ],
+        "1152": [
+          "8",
+          "8",
+          "13"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "7",
+      "queue_debt_ms": "5",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": false,
+        "1152": false
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "35/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "33/4",
+          "1152": "5"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "35/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "1",
+      "head_tokens": 1152,
+      "preceding_boundary": 576,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "8",
+          "49/4",
+          "81/4"
+        ],
+        "576": [
+          "8",
+          "49/4",
+          "33/2"
+        ],
+        "1152": [
+          "8",
+          "49/4",
+          "49/4"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "45/4",
+      "queue_debt_ms": "4",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "17/4"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "17/4"
+      }
+    },
+    {
+      "budget_mib": 192,
+      "arrival_ms": "1",
+      "head_tokens": 1152,
+      "preceding_boundary": 1152,
+      "oracle": 1152,
+      "completion_ms": {
+        "0": [
+          "8",
+          "8",
+          "16"
+        ],
+        "576": [
+          "8",
+          "8",
+          "57/4"
+        ],
+        "1152": [
+          "8",
+          "8",
+          "11"
+        ]
+      },
+      "base": 1152,
+      "coverage_ms": "7",
+      "queue_debt_ms": "5",
+      "inflight_ms": "0",
+      "current_admission": {
+        "0": true,
+        "576": true,
+        "1152": true
+      },
+      "visible_requests": 3,
+      "factor": "include_queue_debt",
+      "full": {
+        "scores": {
+          "0": "8",
+          "576": "25/4",
+          "1152": "3"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "3"
+      },
+      "ablated": {
+        "scores": {
+          "0": "8",
+          "576": "17/4",
+          "1152": "0"
+        },
+        "priority_winner": 1152,
+        "action": 1152,
+        "regret_ms": "0",
+        "gap_ms": "3"
+      }
+    }
+  ]
+}

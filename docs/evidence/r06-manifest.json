@@ -1,0 +1,24 @@
+{
+  "schema": "r06-evidence-v1",
+  "date": "2026-11-20",
+  "timing_environment": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "timer": "perf_counter_ns"
+  },
+  "files": {
+    "docs/evidence/r06-calibration.jsonl.gz": "d6ba12b2a7cbe2b6a4edad7f334d647e9cb36d9ca653d8dd190e79b8d0233801",
+    "docs/evidence/r06-frozen.json": "3c098993834f457276210fdfdf8fc539c52e3aeac29ac160a5941b3a8ca54e95",
+    "docs/evidence/r06-holdout.jsonl.gz": "f5add9593385d7a75a78bb485c4de1dda2bde1abdac7a5f6fa95707e99eabde5",
+    "docs/evidence/r06-routes.json": "38ea67f7eeec6ec11758fb4240a585e03e59128e14d1ef5a772334ffd31f2453",
+    "docs/evidence/r06-snapshots.json": "d034fe277f00cd4ad9a10140a3694851fb176e7f7f009a1fe4d4a510440d9488",
+    "docs/evidence/r06-summary.json": "5d4bb607838d88bba0bf1304dd051ca4f37be46fa868cd1406817308f80edb47",
+    "configs/r06-matrix.json": "65354aa88a4ec37c56c58fe935e6c47a7fe743e519042c78195f07ee04d4f45d",
+    "configs/r06-synthetic-gqa-gdn.json": "89972cbcf3519a6f8973459ded39487152096d5e4e07fe0dcb4e87ddf3db1c83",
+    "docs/r06-preregistration.md": "d3bff39eac885291cbb19dc3f0e0094cb6db27edeb1d32771236e038f01fa43e",
+    "scripts/cpu/replay/study_r06_transfer.py": "67cfc6ee75a549e6a7b017a8f78768d0510c92b845c0ce064a8a5dc80b5ecb64",
+    "scripts/validation/study_r06_snapshots.py": "9f05ca8ceeba277bc08a930de48e0a50284769bca5bcd436c6587334d6452675",
+    "scripts/validation/audit_r06_routes.py": "9fbfe8bd829c8075680f3f9252208d6323bd55722eae6a28def97e1bb0c2b0de",
+    "src/restore_edge_select/cost_transfer.py": "4ac3f2bca8ae1021017ad54608ca94ddf75ed9486f77f26595983e0352eee4c6"
+  }
+}

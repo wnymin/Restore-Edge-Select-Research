@@ -1,0 +1,50 @@
+{
+  "schema": "r05-evidence-manifest-v1",
+  "created": "2026-11-20",
+  "files": {
+    "docs/evidence/r05-cpu-01-r04-reproduction.json": {
+      "bytes": 7471,
+      "sha256": "0867db8ee71930c4905c1b7278bd9448a14a1fb31acb9a83b31b33feb42af853"
+    },
+    "docs/evidence/r05-cpu03-ablation-summary.json": {
+      "bytes": 450,
+      "sha256": "4a92c96e55ab1ec93a8ba7f27c583433484c4a141adedf9983315b1c8d4d9bb8"
+    },
+    "docs/evidence/r05-cpu04-ablation-holdout.csv.gz": {
+      "bytes": 125901,
+      "sha256": "d3a3457aa8438c905cd1be22ebca819e175d8ec6f8d654090686fe969205f08d"
+    },
+    "docs/evidence/r05-cpu04-holdout-final.csv.gz": {
+      "bytes": 218903,
+      "sha256": "3b73039aa0915103c8bdaed515983bffc89d10ee19ee4cba375c8413c518f71c"
+    },
+    "docs/evidence/r05-cpu04-holdout-requests.csv.gz": {
+      "bytes": 6434405,
+      "sha256": "f3411f1e031ee8e9a931d9f0f3080ed2da834c0e82c093b5bf1ade5f244354c0"
+    },
+    "docs/evidence/r05-cpu04-summary.json": {
+      "bytes": 876,
+      "sha256": "0a8d8ca3538dfc01e00a2dd31213c06be8cc76e794267e4d0f8702b496523a3f"
+    },
+    "docs/r05-preregistration.md": {
+      "bytes": 4995,
+      "sha256": "b310df2c295a9950ddfe6be651491ca2acbd22f06fd14b1133b1f4e0eadea1f6"
+    },
+    "docs/r05-strategy-portfolio-plan.md": {
+      "bytes": 9145,
+      "sha256": "1cada6b5b51d7becaf193489b47d7abbfdde325d06ecb9cb0f381f5bf5feb328"
+    },
+    "docs/r05-strategy-portfolio-report.md": {
+      "bytes": 3465,
+      "sha256": "a62b8b5514ee528243e07262838d0d83785b05f9ae14877eacfac6d4defecc5b"
+    },
+    "scripts/cpu/replay/study_load_routing.py": {
+      "bytes": 23843,
+      "sha256": "98af0a37a6de95bfe8d9d08e5ec2203b8e56061559c9da6877326a68e4a0f5eb"
+    },
+    "src/restore_edge_select/simulator.py": {
+      "bytes": 93837,
+      "sha256": "7a7a3b53510823fd6f4db62a633454e255591cc9b79ac23b716617492f1ce696"
+    }
+  }
+}

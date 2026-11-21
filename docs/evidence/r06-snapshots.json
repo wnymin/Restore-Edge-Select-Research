@@ -1,0 +1,4290 @@
+[
+  {
+    "case": "coverage/ram-1/arrival-26",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 576,
+    "chosen": {
+      "entry-replay": 576,
+      "portfolio-v4": 576,
+      "unified": 576
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "15/4",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "137/4"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "17/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "3/4",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "7",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "137/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "17/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "31"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "1",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26749/1000",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3251/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26749/1000",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 576,
+    "chosen": {
+      "entry-replay": 576,
+      "portfolio-v4": 576,
+      "unified": 576
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3251/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3001/1000",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "34999/1000"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "4999/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "1/1000",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26749/1000",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3251/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "6251/1000",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "34999/1000"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "4999/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "31749/1000"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "1749/1000",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-107/4",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "13/4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-107/4",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "13/4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-107/4",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "13/4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "25/4",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "127/4"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7/4",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26751/1000",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3249/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26751/1000",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3249/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "35001/1000"
+        ],
+        "loss_ms": "1/1000",
+        "projected_ms": "5001/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-26751/1000",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3249/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "6249/1000",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "35001/1000"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "5001/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "31751/1000"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "1751/1000",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-30",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-30",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-1/arrival-30",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "157/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "37/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 576,
+    "chosen": {
+      "entry-replay": 576,
+      "portfolio-v4": 576,
+      "unified": 576
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "11/4",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "141/4"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "21/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "7/4",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "5",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "141/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "21/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "33"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "3",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26749/1000",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3251/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "157/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "37/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26749/1000",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 576,
+    "chosen": {
+      "entry-replay": 576,
+      "portfolio-v4": 576,
+      "unified": 576
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3251/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "2001/1000",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "35999/1000"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5999/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "1001/1000",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26749/1000",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3251/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "4251/1000",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "35999/1000"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "5999/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "33749/1000"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "3749/1000",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3251/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-107/4",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "13/4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "157/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "37/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-107/4",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 576,
+    "chosen": {
+      "entry-replay": 576,
+      "portfolio-v4": 576,
+      "unified": 576
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "13/4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "2",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "36"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "6",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-107/4",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "13/4",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "17/4",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "36"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "6",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "135/4"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "15/4",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "13/4",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26751/1000",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3249/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "157/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "37/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26751/1000",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 576,
+    "chosen": {
+      "entry-replay": 576,
+      "portfolio-v4": 576,
+      "unified": 576
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3249/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1999/1000",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "36001/1000"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "6001/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "999/1000",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-26751/1000",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "3249/1000",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "4249/1000",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "36001/1000"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "6001/1000",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "33751/1000"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "3751/1000",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 1,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "3249/1000",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-30",
+    "budget_mib": "70385663/1048576",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "157/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "37/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385663",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-30",
+    "budget_mib": "537/8",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "157/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "37/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "70385664",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "coverage/ram-2/arrival-30",
+    "budget_mib": "128",
+    "previous": [
+      0
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "38"
+        ],
+        "loss_ms": "1",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "157/4"
+        ],
+        "loss_ms": "9/4",
+        "projected_ms": "37/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "37"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "7",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "7",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": "134217728",
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "4",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-False/arrival-1",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "29",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "29",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": "5",
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "29",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": "5",
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "29",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": "5",
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-False/arrival-3/2",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "57/2",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "57/2",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "1/2",
+          "queue_debt_ms": "4",
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "57/2",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "1/2",
+          "queue_debt_ms": "4",
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "57/2",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "1/2",
+          "queue_debt_ms": "4",
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-False/arrival-25",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "5",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "5",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "5",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "5",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-False/arrival-30",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 134217728,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": 134217728,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": 134217728,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-True/arrival-1",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "29",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "8",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "29",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": "5",
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "33/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "29",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 51511296,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 18874368,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": "5",
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "30"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "0",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "29",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 89260032,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": "5",
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-True/arrival-3/2",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "57/2",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "8",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "57/2",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "1/2",
+          "queue_debt_ms": "4",
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "33/4",
+        "projected_ms": "29/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "57/2",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 51511296,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 18874368,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "1/2",
+          "queue_debt_ms": "4",
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "30"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "0",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "57/2",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 89260032,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "1/2",
+          "queue_debt_ms": "4",
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-True/arrival-25",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": false,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": "5",
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "8",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "5",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "33/4",
+        "projected_ms": "29/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "5",
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 51511296,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 18874368,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 18874368,
+          "missing_bytes": 51511296,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "30"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "0",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 2,
+          "arrival_age_ms": "0",
+          "head_slack_ms": "5",
+          "prefetch_fits": true,
+          "committed_ahead_compute_ms": "0",
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 44957696,
+          "ready_bytes": 89260032,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 89260032,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  },
+  {
+    "case": "shared-True/arrival-30",
+    "budget_mib": "128",
+    "previous": [
+      0,
+      1152
+    ],
+    "serial": 1152,
+    "exact": 1152,
+    "chosen": {
+      "entry-replay": 1152,
+      "portfolio-v4": 1152,
+      "unified": 1152
+    },
+    "unified_fast": true,
+    "no_coverage_score_winner": 1152,
+    "coverage_ms": 0,
+    "outcomes": {
+      "0": {
+        "ends": [
+          "30",
+          "30",
+          "38"
+        ],
+        "loss_ms": "3",
+        "projected_ms": "8",
+        "snapshot": {
+          "serial_compute_ms": "8",
+          "serial_copy_ms": 0,
+          "serial_io_ms": 0,
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 0,
+          "free_reserve_bytes": 134217728,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 0,
+          "incremental_ram_ms": 0,
+          "incremental_ssd_ms": 0,
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": ""
+        }
+      },
+      "576": {
+        "ends": [
+          "30",
+          "30",
+          "153/4"
+        ],
+        "loss_ms": "13/4",
+        "projected_ms": "33/4",
+        "snapshot": {
+          "serial_compute_ms": "17/4",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "4",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 70385664,
+          "free_reserve_bytes": 134217728,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 70385664,
+          "incremental_ram_ms": "1",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      },
+      "1152": {
+        "ends": [
+          "30",
+          "30",
+          "35"
+        ],
+        "loss_ms": "0",
+        "projected_ms": "5",
+        "snapshot": {
+          "serial_compute_ms": "0",
+          "serial_copy_ms": 0,
+          "serial_io_ms": "5",
+          "head_distance": 0,
+          "arrival_age_ms": "0",
+          "head_slack_ms": 0,
+          "prefetch_fits": false,
+          "committed_ahead_compute_ms": 0,
+          "extra_reserve_bytes": 89260032,
+          "free_reserve_bytes": 134217728,
+          "ready_bytes": 0,
+          "active_kv_bytes": 0,
+          "active_new_kv_bytes": 0,
+          "active_source_index": null,
+          "shared_reservation_bytes": 0,
+          "missing_bytes": 89260032,
+          "incremental_ram_ms": "2",
+          "incremental_ssd_ms": "3",
+          "inflight_ms": "0",
+          "queue_debt_ms": 0,
+          "checkpoint_tier": "SSD"
+        }
+      }
+    }
+  }
+]

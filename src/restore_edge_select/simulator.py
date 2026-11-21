@@ -7,7 +7,7 @@ from itertools import product
 from math import prod
 from time import perf_counter_ns
 
-from .adaptive import AdaptiveConfig, select as adaptive_select
+from .adaptive import AdaptiveConfig, projected_priority, select as adaptive_select
 from .prefill_cost import build_prefill_cost
 
 
@@ -249,8 +249,10 @@ class Experiment:
                           "estimate-prefetch-fallback"}
         transfer_bound = screen_search in {"entry-transfer", "entry-transfer-audit"}
         bound_audit = screen_search == "entry-transfer-audit"
-        committed_choices = screen_search in {"entry-commit", "entry-replay"}
-        scalar_replay = screen_search == "entry-replay"
+        early_portfolio = screen_search == "entry-portfolio-early"
+        portfolio_entry = screen_search == "entry-portfolio"
+        committed_choices = screen_search in {"entry-commit", "entry-replay"} or portfolio_entry or early_portfolio
+        scalar_replay = screen_search == "entry-replay" or portfolio_entry or early_portfolio
         if bound_audit and (inject_measured or profile_decisions):
             raise ValueError("Transfer-bound audit requires zero-overhead replay")
         fast_entry = screen_search in {"entry-fast", "entry-progress"} or transfer_bound or committed_choices
@@ -260,7 +262,11 @@ class Experiment:
         if screen_search not in {"full", "lean", "compute", "cutoff", "entry"} | estimate_modes or (
                 screen_search != "full" and policy != "snapshot-screened"):
             raise ValueError("Search variants require a screened queue policy")
-        if (screen_mode == "classified") != (screen_selector is not None):
+        if early_portfolio and (screen_mode != "unsettled" or queue_horizon != 4):
+            raise ValueError("Early portfolio requires an unsettled four-request search")
+        if portfolio_entry and (screen_mode != "unsettled" or screen_selector is None or queue_horizon != 4):
+            raise ValueError("Entry portfolio requires an unsettled four-request search and a state selector")
+        if (screen_mode == "classified" or portfolio_entry) != (screen_selector is not None):
             raise ValueError("Classified screening requires a pre-decision selector")
         if screen_observer is not None and (screen_selector is None or inject_measured or profile_decisions):
             raise ValueError("Screen observation requires uninstrumented classified screening")
@@ -342,7 +348,8 @@ class Experiment:
                          screen_observer=screen_observer, screen_search=screen_search, adaptive=adaptive,
                          cached_costs=fast_entry, progress_bound=fast_entry and progress_bound,
                          transfer_bound=fast_entry and transfer_bound, bound_audit=fast_entry and bound_audit,
-                         committed_choices=fast_entry and committed_choices, scalar_replay=fast_entry and scalar_replay)
+                         committed_choices=fast_entry and committed_choices, scalar_replay=fast_entry and scalar_replay,
+                         early_portfolio=fast_entry and early_portfolio)
 
     def _run(self, policy, threshold_tokens, boundaries, max_combinations, n, *,
              snapshot=None, estimate=None, guard=0, transfer_trigger=0, screen=0, pair_cost=0, probe_cost=0,
@@ -354,7 +361,7 @@ class Experiment:
              completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None,
              cached_costs=False, progress_bound=False, transfer_bound=False, bound_audit=False,
              collect_offline_state=False, committed_choices=False, scalar_replay=False,
-             pause_at_head=None):
+             pause_at_head=None, early_portfolio=False):
         if pause_at_head is not None and (
                 snapshot is None or policy != "fixed" or not lean_rollout or self.dynamic
                 or self.per_tier or self.host_cache_bytes or self.release_at != "start"
@@ -557,6 +564,18 @@ class Experiment:
                     if isolated_adaptive:
                         record_route('isolated')
                     return min(choices, key=isolated)
+                if early_portfolio and not admitted and not held_reservation and transfer is None:
+                    # In the calibrated light-cost regime this is the fast
+                    # subset of the snapshot gate. Unsettled reservations or
+                    # reusable active blocks always defer to the exact path.
+                    base = serial_choice(i)
+                    reuse = ready | (set(active_deps[:-1]) if running_until is not None else set())
+                    if not reuse.intersection(self.candidates[i][base]) and all(
+                        not reuse.intersection(self.candidates[i][candidate])
+                        and (i == head or self.size(set(self.candidates[i][candidate]) - self.initial) > self.budget)
+                        for candidate in choices if candidate and candidate != base
+                    ):
+                        return base
                 # Estimate remaining work from start times and observed phase,
                 # never from the actual completion timestamp of an active phase.
                 def remaining(start, predicted):
@@ -740,7 +759,7 @@ class Experiment:
                                 return estimated_challenger if (
                                     scores[fallback] - scores[estimated_challenger] > min_gain
                                 ) else fallback
-                    else:
+                    if screen_mode != "classified":
                         if screen_search in {"compute", "cutoff", "entry"}:
                             estimated = {c: score_candidate(observable[c]) for c in choices}
                             approximate = min(choices, key=lambda c: (estimated[c], -c))
@@ -824,19 +843,19 @@ class Experiment:
                         lower = {c: tuple(end + (self._suffix_times[i][c] - suffix_baseline) * factor
                                           if j >= i else end for j, end in enumerate(offsets, head))
                                  for c in choices}
-                    rank = {}
-                    for c, row in observable.items():
-                        io = row['incremental_ram_ms'] + row['incremental_ssd_ms']
-                        slack = row['head_slack_ms'] + row['committed_ahead_compute_ms']
-                        wait = max(0, io + row['inflight_ms'] + row['queue_debt_ms'] - slack)
-                        if not row['prefetch_fits']:
-                            wait = io + max(0, row['inflight_ms'] - slack)
-                        rank[c] = row['serial_compute_ms'] + row['serial_copy_ms'] + (
-                            wait if row['missing_bytes'] else 0)
+                    rank = {c: projected_priority(
+                        row, include_transfer=adaptive.transfer_aware_order,
+                        transfer_scale=adaptive.decision_transfer_scale,
+                        include_coverage=adaptive.coverage_aware_order)
+                        for c, row in observable.items()}
+                    decision_cost = (None if adaptive.decision_transfer_scale == 1 else
+                                     (self._suffix_times, {path: adaptive.decision_transfer_scale
+                                                           for path in IO_PATHS}))
                     before = decision_replays
                     boundary, label, gap, gain, missed = adaptive_select(
                         observable, base, self.budget, adaptive, lower,
-                        lambda c: forecast((c, *later), visible), rank, lower_sums=lower_sums)
+                        lambda c: forecast((c, *later), visible, cost=decision_cost),
+                        rank, lower_sums=lower_sums)
                     record_route(route_label or label, gap, gain, boundary != base,
                                  decision_replays - before, missed)
                     return boundary

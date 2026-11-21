@@ -1,0 +1,33 @@
+{
+  "schema": "r04-cpu-01-manifest-v1",
+  "outputs": {
+    "docs/evidence/r04-cpu-01-summary.json": {
+      "sha256": "15194fde8ac511d8540b8751895615e9c05441b70f9a2c17635ee08fd1420a05",
+      "bytes": 27981
+    },
+    "docs/evidence/r04-cpu-01-zero-overhead.csv.gz": {
+      "sha256": "831007933841f74ee7031896a76ba63e14bd8a22efb90b1e9ec8fcc4a4718921",
+      "bytes": 31273
+    },
+    "docs/evidence/r04-cpu-01-decision-overhead-injected.csv.gz": {
+      "sha256": "118bbf05c943480d0267e29c96562bbc396e16f45e3b0a7b7c38750171f2ed67",
+      "bytes": 41758
+    },
+    "docs/evidence/r04-cpu-01-certificate-audit.csv.gz": {
+      "sha256": "dce4286f08fc5fe90010ecfa1e7746f1f4141572c6bb0a73e60aee7432c58fcd",
+      "bytes": 7663
+    }
+  },
+  "sources": {
+    "docs/r04-cpu-01-cost-aware.md": "161a407e8a42e5cd788b883e65d3a0ebe44fb2bff4e975157b4a4d9fe6d12c11",
+    "docs/r04-trace-validation-plan.md": "4736d7d098b9841c358ea2a84e4a53e2f44af69db4ab8159e2aa82af26915bc2",
+    "docs/r03-factor-sequence.md": "3353475bbee4d4f3b428fc0c0b30521c79b276ab3fc2100d4e104ec6524a6641",
+    "docs/evidence/prefill-vulkan-4k.json": "f1a0ffa909f1cf10cbbc8befdfb28c63a4e74be9982ac2398e1ddec964977b11",
+    "src/restore_edge_select/adaptive.py": "f75c94bc9b3e6e8c91c094614da4777d96716d24de0416e06b61246246500778",
+    "src/restore_edge_select/simulator.py": "7a7a3b53510823fd6f4db62a633454e255591cc9b79ac23b716617492f1ce696",
+    "scripts/cpu/replay/study_load_routing.py": "98af0a37a6de95bfe8d9d08e5ec2203b8e56061559c9da6877326a68e4a0f5eb",
+    "scripts/check_fixture.py": "77f76bc4d2159197ebd9544ef9fe8cafab3cc262cb7159eda94b4e07cc255f8e",
+    "scripts/validation/summarize_r04_cpu01.py": "0d0027b188c19e2b3343a3a0f62f8783703222438e487c8195bef18da87999a2",
+    "docs/r04-final-acceptance.md": "abae959e9d42db3d7224caea8d5e15407a8ce4c8546d0fd49eb123632b955e0c"
+  }
+}

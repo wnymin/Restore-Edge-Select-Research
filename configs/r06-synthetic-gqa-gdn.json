@@ -1,0 +1,48 @@
+{
+  "accounting": {
+    "scope": "Synthetic GQA/GDN decoder variant of the archived 4B specification. Unpadded payload, no weights or GPU measurements.",
+    "kv_dtype": "bfloat16",
+    "conv_dtype": "bfloat16",
+    "recurrent_dtype": "float32",
+    "conv_history_slots": 3,
+    "speculative_decoding": false
+  },
+  "models": [
+    {
+      "model_id": "r06-synthetic-gqa8-gdn16",
+      "hidden_size": 2560,
+      "context_tokens": 262144,
+      "num_layers": 32,
+      "full_attention_layers_1based": [
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ],
+      "full_attention": {
+        "type": "gqa",
+        "query_heads": 16,
+        "kv_heads": 8,
+        "head_dim": 256
+      },
+      "linear_attention": {
+        "type": "gdn",
+        "qk_heads": 16,
+        "v_heads": 16,
+        "key_head_dim": 128,
+        "value_head_dim": 128,
+        "conv_kernel": 4
+      },
+      "payload": {
+        "attention_bytes_per_token": 65536,
+        "recurrent_bytes_per_checkpoint": 25165824,
+        "conv_bytes_per_checkpoint": 884736,
+        "checkpoint_bytes": 26050560
+      }
+    }
+  ]
+}

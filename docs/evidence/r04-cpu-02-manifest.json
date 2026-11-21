@@ -1,0 +1,47 @@
+{
+  "schema": "r04-cpu-02-manifest-v1",
+  "outputs": {
+    "docs/evidence/r04-cpu-02-summary.json": {
+      "sha256": "6e2b12c39e437637f4a9353e6e82f9da9288a39350e5d1dcebd10215ee45ac18",
+      "bytes": 14780
+    },
+    "docs/evidence/r04-cpu-02-zero-overhead.csv.gz": {
+      "sha256": "615f70495c116d06372dd5be3ec2e14b8f09cc4edb7b7e2096ed18f4f01fef33",
+      "bytes": 34694
+    },
+    "docs/evidence/r04-cpu-02-decision-overhead-injected.csv.gz": {
+      "sha256": "1620ad379fdd241d19f62ff20fa302e870dd22fc04f21b9dd20c29edaa5e723f",
+      "bytes": 48708
+    },
+    "docs/evidence/r04-fixed-snapshots.json": {
+      "sha256": "3fae8ff739e22bce4bc2a817042d646419df72e21971860939cefa9977bff709",
+      "bytes": 74489
+    },
+    "docs/evidence/r04-regression-109.csv.gz": {
+      "sha256": "17acfa18366abfce380a8df60c25ca453521bf116db07874dc549b9ed9f375c8",
+      "bytes": 76863
+    }
+  },
+  "sources": {
+    "docs/r04-cpu-02-coverage-window.md": "3ac0c95727805167db951587185e3a79ca12fe7df377e2a692e47b81424ef6ee",
+    "docs/r04-final-acceptance.md": "abae959e9d42db3d7224caea8d5e15407a8ce4c8546d0fd49eb123632b955e0c",
+    "docs/r04-trace-validation-plan.md": "4736d7d098b9841c358ea2a84e4a53e2f44af69db4ab8159e2aa82af26915bc2",
+    "docs/work-plan.md": "0257354525f6730df7bbe875612e6df3da053e0a3fdd1cb8e912589d8c986154",
+    "docs/r04-cpu-01-cost-aware.md": "161a407e8a42e5cd788b883e65d3a0ebe44fb2bff4e975157b4a4d9fe6d12c11",
+    "docs/r03-factor-sequence.md": "3353475bbee4d4f3b428fc0c0b30521c79b276ab3fc2100d4e104ec6524a6641",
+    "docs/evidence/prefill-vulkan-4k.json": "f1a0ffa909f1cf10cbbc8befdfb28c63a4e74be9982ac2398e1ddec964977b11",
+    "src/restore_edge_select/adaptive.py": "f75c94bc9b3e6e8c91c094614da4777d96716d24de0416e06b61246246500778",
+    "src/restore_edge_select/simulator.py": "7a7a3b53510823fd6f4db62a633454e255591cc9b79ac23b716617492f1ce696",
+    "scripts/cpu/replay/study_load_routing.py": "98af0a37a6de95bfe8d9d08e5ec2203b8e56061559c9da6877326a68e4a0f5eb",
+    "scripts/check_fixture.py": "77f76bc4d2159197ebd9544ef9fe8cafab3cc262cb7159eda94b4e07cc255f8e",
+    "scripts/validation/summarize_r04_cpu02.py": "3694fe9a27bb280ca8354cac338f60726589b19e8ed6fa4076b85e6a80344c9b",
+    "data/raw/bailian/qwen_traceB_blksz_16.jsonl": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+    "scripts/validation/check_r04_snapshots.py": "073334fccf84f7df515f5643944a1c4405cc5fe0e0df4c59572d8efe32bba335",
+    "scripts/validation/check_r04_delivery.py": "264bb5bb0f93c2d1c4be121eb4fd0f6944933e6f9c3bc084acaf038fe75336c7",
+    "data/bailian-manifest.json": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d",
+    "fixtures/phase1-hand-trace.json": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9",
+    "docs/evidence/load-staged-ssd-profile.json": "09e2b7cc6d14b6500957c05cc0b90a364ab7d7f708a32c2eb61086fd7f4dd5ef",
+    "configs/overlap-observed-upper.json": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf",
+    "docs/evidence/adaptive-trace-oracle.csv": "37f5423e0400e2a36d0abf94fcb2747b4509747c678804f737a1a3b153a69499"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "r05-cpu03-ablation-v1",
+  "holdout": "traceB windows 350-361",
+  "mean_timed_gain_ms": {
+    "entry": 274.51103016278535,
+    "next4": 274.45626711588824,
+    "portfolio-v3-dynamic-only": 270.7859204939456,
+    "portfolio-v3-static-only": 265.75082090512427,
+    "portfolio-v4": 274.57149515713127
+  },
+  "interpretation": "higher gain vs local-cost is better; both gate-removal ablations are below entry and portfolio-v4"
+}
