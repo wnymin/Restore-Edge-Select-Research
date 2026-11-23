@@ -11,5 +11,7 @@
 | R04 在线动态选点 | [计划与分线报告](r04-process/) · [验收](../r04-final-acceptance.md) |
 | R05 静态与动态策略切换 | [过程记录](r05-process/) · [计划](../r05-strategy-portfolio-plan.md) · [预登记](../r05-preregistration.md) · [CPU 报告](../r05-strategy-portfolio-report.md) |
 | R06 模型与成本适用域 | [计划与预登记](r06-process/) · [结项](../r06-completion.md) |
+| R07 到达、模型与负载泛化性 | [留出前预登记](r07-process/r07-preregistration.md) · [到达分线结果](../r07-arrival-results.md) · [反常点登记](r07-process/r07-anomaly-register.md) · [扩展预登记](r07-process/r07-extension-preregistration.md) · [扩展结果](../r07-extension-results.md) · [本机真实调度登记](r07-process/r07-live-preregistration.md) |
+| R08 模型 × 暂存容量 | [预登记与勘误](r08-process/r08-preregistration.md) · [反例与调优靶点](r08-process/r08-anomaly-register.md) · [真实调度实验讨论](r08-process/r08-live-scheduling-discussion.md) · [结果](../r08-model-capacity-results.md) · [后续反例优化计划](../r08-counterexample-optimization-plan.md) |
 
 R05 的计划、预登记和报告保留原路径与内容，因为 R06 冻结配置按哈希引用 R05 的验收清单。整理过程中，R04 和 R06 的验收清单只更新了受影响的文档条目；实验数据未变。

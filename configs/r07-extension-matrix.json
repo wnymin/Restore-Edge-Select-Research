@@ -1,0 +1,37 @@
+{
+  "scope": "R07 extension; frozen algorithms; no model-native timing for non-4B inputs",
+  "model_27b": {
+    "model_id": "Qwen/Qwen3.5-27B",
+    "source_revision": "ce8874550896eaf2dc728c25270a6f2c6c85de54",
+    "context_tokens": 262144,
+    "layers": 64,
+    "full_every": 4,
+    "gqa": {"kv_heads": 4, "head_dim": 256},
+    "gdn": {"qk_heads": 16, "v_heads": 48, "key_dim": 128, "value_dim": 128, "kernel": 4},
+    "compute_proxy": "2"
+  },
+  "synthetic_layer_mix": {
+    "model_id": "synthetic-alternating-full-gdn",
+    "context_tokens": 262144,
+    "layers": 32,
+    "full_every": 2,
+    "gqa": {"kv_heads": 4, "head_dim": 256},
+    "gdn": {"qk_heads": 16, "v_heads": 32, "key_dim": 128, "value_dim": 128, "kernel": 4},
+    "compute_proxy": "5/4"
+  },
+  "design": {
+    "qwen_traceB_blksz_16.jsonl": [440, 441]
+  },
+  "holdout": {
+    "qwen_traceB_blksz_16.jsonl": [470, 471, 472, 473, 474, 475],
+    "qwen_traceA_blksz_16.jsonl": [113, 114, 115, 116, 117, 118],
+    "qwen_coder_blksz_16.jsonl": [113, 114, 115, 116, 117, 118]
+  },
+  "main_budget_mib": 128,
+  "secondary_budget_mib": 256,
+  "rates": [1, 12, 16],
+  "timing_repeats": 6,
+  "node_budget": 2048,
+  "thresholds": {"mean_gap_ms": 1, "gap_fraction": 0.05, "persistent_request_ms": 10, "persistent_repeats": 4, "independent_windows": 2, "timed_mean_loss_ms": 1, "timed_p95_loss_ms": 10},
+  "design_note": "Original R07 design anchors only. Holdout source windows are fixed before evaluating any extension holdout. Keep sharing, arrivals, models, and optional capacity probes separately labeled."
+}

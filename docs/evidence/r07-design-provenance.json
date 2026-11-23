@@ -1,0 +1,21 @@
+{
+  "python": "3.13.9",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "split": "design",
+  "files": {
+    "scripts/cpu/replay/study_r07_arrivals.py": "3b59879b226c59e49393add0ccca1c10237f226289fbf8295b08e185d1b4b3a4",
+    "configs/r07-arrival-matrix.json": "1016d272b831fb4254a9fec817336a5696b0888a575c617d4c3c6de1b8c41900",
+    "fixtures/phase1-hand-trace.json": "163278caaec486c0f22c71dff6970ebb5f4fd05298f4115df325fddd1bb477e9",
+    "configs/qwen3.5-4b.json": "0338c72549e2494dd53cc31152734947ff5a43cc892ef4970a7c957d6312c203",
+    "docs/evidence/prefill-vulkan-4k.json": "f1a0ffa909f1cf10cbbc8befdfb28c63a4e74be9982ac2398e1ddec964977b11",
+    "docs/evidence/load-staged-ssd-profile.json": "09e2b7cc6d14b6500957c05cc0b90a364ab7d7f708a32c2eb61086fd7f4dd5ef",
+    "configs/overlap-observed-upper.json": "464afe505a6986d94bb88ddb50f15e27e93dd50a4345c02de7ab6d77e0b3efaf",
+    "data/bailian-manifest.json": "89d78ac32600f6c30c1866c9b4a476dbf81beb3c7faa863d8134a76a023c705d",
+    "src/restore_edge_select/simulator.py": "f6ac1f1c0d3fdc530fbb6fc15e3c734e23174c8c7f7d837eb6aad6aa57ee1347",
+    "src/restore_edge_select/offline_bounds.py": "d29d2e45aa14fb78cba2ee3f54cf2f77138961959a62895d2b06d9412a2c5c2d",
+    "scripts/cpu/replay/study_boundary_factors.py": "8b3e128a6b75662ba780ccb93c6ead98685842067b783ee2920ca9bd7f521a4f",
+    "scripts/cpu/replay/study_bailian.py": "ed1f5b0910ac2f3bd457c2834e4c7dc1ee164f9f4fa2ac12066c2fe987a54c65",
+    "scripts/cpu/dynamic/dynamic_cpu_inputs.py": "435fd714e04f9ba9a6b5668f955d13da86e28694c0751e8e95944e0bae485fcd"
+  },
+  "output_sha256": "a27f65652b0ff2718f5b02e7509579221b75805a5a3f60fa53382d75e6ca5e9c"
+}

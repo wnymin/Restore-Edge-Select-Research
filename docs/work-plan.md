@@ -10,7 +10,8 @@
 | `R04` | Online dynamic boundary-selection strategy and validation | 2026-11-20 CPU scope accepted: CPU-01 delivered; CPU-02 completed by user takeover; CPU-03 triggered and tested with no observed standalone gain; no independent collaborator artifact/replication. Broader GPU/service validation remains separate. | [R04 plan](archive/r04-process/r04-trace-validation-plan.md) / [final acceptance](r04-final-acceptance.md) |
 | `R05` | Static/dynamic strategy regimes and online portfolio switching | Completed (2026-11-20); CPU scope accepted with positive net holdout result; single-owner execution by user side; acceptance requires net improvement over strongest fixed baseline on frozen holdout, otherwise report failure without claiming success. | [R05 plan](r05-strategy-portfolio-plan.md) / [CPU report](r05-strategy-portfolio-report.md) |
 | `R06` | 模型与成本适用域验证 | 2026-11-20 CPU 交付验收，重校准只在合成高成本组达到性能判据 | [R06 计划](archive/r06-process/r06-model-cost-transfer-plan.md) · [R06 结项](r06-completion.md) |
-| `R07` | `entry-replay` 泛化性研究 | 2026-11-23 已登记、进入设计；代码与规则为冻结对照，尚未启动实验 | [研究设计](r07-entry-replay-generalization.md) |
+| `R07` | `entry-replay` 泛化性研究 | 2026-11-23 预登记的 CPU 扩展验证完成；原 4B 选点接近离线最优，模型资源配比改变后发现跨窗缺口；2026-11-24 补充本机真实调度机制和接口资格验证，非完整策略闭环 | [扩展结果](r07-extension-results.md) · [设计](r07-entry-replay-generalization.md) · [到达分线结果](r07-arrival-results.md) · [反常点](archive/r07-process/r07-anomaly-register.md) · [扩展预登记](archive/r07-process/r07-extension-preregistration.md) · [本机真实调度](r07-live-scheduling-results.md) |
+| `R08` | 模型 × 暂存容量：验证近最优结论的适用域 | 2026-11-24 已复核 R08 实验交付；近最优仅在部分模型／容量组合成立，原生 27B 未覆盖 | [结果与验收](r08-model-capacity-results.md) · [预登记与勘误](archive/r08-process/r08-preregistration.md) · [后续设计与双人分工](r08-counterexample-optimization-plan.md)（待确认，未启动） |
 
 <a id="r01"></a>
 

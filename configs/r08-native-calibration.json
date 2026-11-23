@@ -1,0 +1,14 @@
+{
+  "note": "Native profile uses unmodified local 4B GGUF and a 16-layer derivative of the same GGUF; derivative is not a released or quality-validated model.",
+  "heldout": {"qwen_traceB_blksz_16.jsonl": [484, 485, 486, 487], "qwen_traceA_blksz_16.jsonl": [100], "qwen_coder_blksz_16.jsonl": [100]},
+  "depth": [0, 512, 1536, 2560, 3584],
+  "suffix": [1, 32, 128, 256, 512, 1024, 2048, 4096],
+  "observational_depth": [1024, 2048],
+  "observational_suffix": [256, 1024],
+  "prefill_repeats": 5,
+  "io_repeats": 11,
+  "fixed_mib": [64, 128, 256],
+  "rates": [1, 16],
+  "node_budget": 1024,
+  "timing_repeats": 6
+}

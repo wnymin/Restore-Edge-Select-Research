@@ -1,0 +1,1251 @@
+[
+  {
+    "key": {
+      "window": "alternating",
+      "rate": 12,
+      "budget": 160,
+      "variant": "original"
+    },
+    "target": 1,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "1",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 4.25,
+      "1152": 1.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 4.25,
+      "1152": 1.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 4.25,
+      "1152": 1.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 36.0,
+      "576": 37.94152539428571,
+      "1152": 32.285714285714285
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "1/100",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "1",
+        "101/100",
+        "901/100",
+        "1701/100",
+        "2501/100",
+        "3301/100"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "alternating",
+      "rate": 12,
+      "budget": 160,
+      "variant": "sparse"
+    },
+    "target": 1,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "2",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 2.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 2.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 2.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 20.285714285714285,
+      "576": 22.508635977142855,
+      "1152": 19.428571428571427
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "1/100",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "2",
+        "201/100",
+        "1801/100",
+        "3401/100",
+        "5001/100",
+        "6601/100"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "alternating",
+      "rate": 12,
+      "budget": 160,
+      "variant": "even"
+    },
+    "target": 2,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "9",
+      "head": 0,
+      "arrived": 3,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0,
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 4.25,
+      "1152": 1.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 4.25,
+      "1152": 1.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 4.25,
+      "1152": 1.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 35.5,
+      "576": 37.29650925714286,
+      "1152": 32.785714285714285
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "9/2",
+        "9",
+        "49",
+        "57",
+        "65",
+        "73"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "alternating",
+      "rate": 12,
+      "budget": 160,
+      "variant": "burst"
+    },
+    "target": 1,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "9/8",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 4.375,
+      "1152": 1.125
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 4.375,
+      "1152": 1.125
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 4.375,
+      "1152": 1.125
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 37.69642857142857,
+      "576": 39.74509682285714,
+      "1152": 34.089285714285715
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "1/100",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "9/8",
+        "227/200",
+        "627/200",
+        "3427/200",
+        "3827/200",
+        "6627/200"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 1,
+      "budget": 70,
+      "variant": "original"
+    },
+    "target": 1,
+    "current": 576,
+    "fallback": 1152,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": true,
+    "coarse_return": false,
+    "observed": {
+      "now": "1",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 576,
+    "window4_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "all_seen_choice": 576,
+    "all_seen_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_choice": 576,
+    "joint_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 34.98371666285714,
+      "576": 31.22292169142857,
+      "1152": 31.555145234285714
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        576
+      ],
+      "replacement_arrivals": [
+        "0",
+        "1",
+        "41",
+        "46",
+        "51",
+        "56",
+        "61"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 1,
+      "budget": 70,
+      "variant": "dense"
+    },
+    "target": 1,
+    "current": 576,
+    "fallback": 1152,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": true,
+    "coarse_return": false,
+    "observed": {
+      "now": "1/2",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 576,
+    "window4_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "all_seen_choice": 576,
+    "all_seen_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_choice": 576,
+    "joint_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 40.769430948571426,
+      "576": 37.00863597714286,
+      "1152": 37.34085952
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        576
+      ],
+      "replacement_arrivals": [
+        "0",
+        "1/2",
+        "81/2",
+        "43",
+        "91/2",
+        "48",
+        "101/2"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 1,
+      "budget": 70,
+      "variant": "sparse"
+    },
+    "target": 1,
+    "current": 576,
+    "fallback": 1152,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": true,
+    "coarse_return": false,
+    "observed": {
+      "now": "2",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 576,
+    "window4_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "all_seen_choice": 576,
+    "all_seen_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_choice": 576,
+    "joint_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 23.0,
+      "576": 20.071428571428573,
+      "1152": 19.642857142857142
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        576
+      ],
+      "replacement_arrivals": [
+        "0",
+        "2",
+        "42",
+        "52",
+        "62",
+        "72",
+        "82"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 1,
+      "budget": 70,
+      "variant": "even"
+    },
+    "target": 1,
+    "current": 576,
+    "fallback": 1152,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": true,
+    "coarse_return": false,
+    "observed": {
+      "now": "3",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 576,
+    "window4_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "all_seen_choice": 576,
+    "all_seen_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_choice": 576,
+    "joint_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 34.698002377142856,
+      "576": 30.937207405714286,
+      "1152": 31.26943094857143
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        576
+      ],
+      "replacement_arrivals": [
+        "0",
+        "3",
+        "43",
+        "48",
+        "53",
+        "58",
+        "63"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 1,
+      "budget": 70,
+      "variant": "burst"
+    },
+    "target": 1,
+    "current": 576,
+    "fallback": 1152,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": true,
+    "coarse_return": false,
+    "observed": {
+      "now": "3/4",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 576,
+    "window4_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "all_seen_choice": 576,
+    "all_seen_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_choice": 576,
+    "joint_relative_ms": {
+      "0": 3.75,
+      "576": 0.0,
+      "1152": 0.75
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 36.09085952,
+      "576": 32.33006454857143,
+      "1152": 32.66228809142857
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        576
+      ],
+      "replacement_arrivals": [
+        "0",
+        "3/4",
+        "163/4",
+        "42",
+        "203/4",
+        "52",
+        "243/4"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 12,
+      "budget": 70,
+      "variant": "original"
+    },
+    "target": 2,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 576,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "6",
+      "head": 0,
+      "arrived": 3,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0,
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 42.42857142857143,
+      "576": 38.994511634285715,
+      "1152": 63.857142857142854
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        576
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "1",
+        "6",
+        "46",
+        "51",
+        "56",
+        "61"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 12,
+      "budget": 70,
+      "variant": "sparse"
+    },
+    "target": 1,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 576,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "2",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 30.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 30.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 30.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 30.857142857142858,
+      "576": 28.793179885714284,
+      "1152": 56.57142857142857
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "1/100",
+      "original_first": [
+        576
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "2",
+        "201/100",
+        "1201/100",
+        "2201/100",
+        "3201/100",
+        "4201/100"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 12,
+      "budget": 70,
+      "variant": "even"
+    },
+    "target": 2,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 576,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "6",
+      "head": 0,
+      "arrived": 3,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0,
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 42.142857142857146,
+      "576": 38.70879734857143,
+      "1152": 63.57142857142857
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        576
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "3",
+        "6",
+        "46",
+        "51",
+        "56",
+        "61"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 12,
+      "budget": 70,
+      "variant": "burst"
+    },
+    "target": 2,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 576,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "6",
+      "head": 0,
+      "arrived": 3,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0,
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 1.25,
+      "1152": 30.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 43.535714285714285,
+      "576": 40.10165449142857,
+      "1152": 64.96428571428571
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "40",
+      "original_first": [
+        576
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "3/4",
+        "6",
+        "46",
+        "219/4",
+        "56",
+        "259/4"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 12,
+      "budget": 160,
+      "variant": "sparse"
+    },
+    "target": 1,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "2",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 2.0
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 2.0
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 5.25,
+      "1152": 2.0
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 30.857142857142858,
+      "576": 28.793179885714284,
+      "1152": 22.285714285714285
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "1/100",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "2",
+        "201/100",
+        "1201/100",
+        "2201/100",
+        "3201/100",
+        "4201/100"
+      ],
+      "same_snapshot": true
+    }
+  },
+  {
+    "key": {
+      "window": "shared",
+      "rate": 12,
+      "budget": 160,
+      "variant": "burst"
+    },
+    "target": 1,
+    "current": 0,
+    "fallback": 0,
+    "oracle_action": 1152,
+    "pruned_matches_exhaustive": false,
+    "coarse_return": true,
+    "observed": {
+      "now": "3/4",
+      "head": 0,
+      "arrived": 2,
+      "running": "30",
+      "transfer": "None",
+      "active": [],
+      "ready": [],
+      "admitted": {},
+      "held": [],
+      "release": "None",
+      "selected": [
+        0
+      ],
+      "fixed_followers": [],
+      "candidates": [
+        0,
+        576,
+        1152
+      ]
+    },
+    "window4_choice": 0,
+    "window4_relative_ms": {
+      "0": 0.0,
+      "576": 4.0,
+      "1152": 0.75
+    },
+    "all_seen_choice": 0,
+    "all_seen_relative_ms": {
+      "0": 0.0,
+      "576": 4.0,
+      "1152": 0.75
+    },
+    "joint_choice": 0,
+    "joint_relative_ms": {
+      "0": 0.0,
+      "576": 4.0,
+      "1152": 0.75
+    },
+    "joint_indices": [],
+    "joint_tails": {
+      "0": [],
+      "576": [],
+      "1152": []
+    },
+    "closed_loop_forced_mean_ms": {
+      "0": 34.107142857142854,
+      "576": 40.40032274285714,
+      "1152": 33.892857142857146
+    },
+    "future_pair": {
+      "delay_after_snapshot_ms": "1/100",
+      "original_first": [
+        1152
+      ],
+      "replacement_first": [
+        0
+      ],
+      "replacement_arrivals": [
+        "0",
+        "3/4",
+        "19/25",
+        "201/100",
+        "269/25",
+        "1201/100",
+        "519/25"
+      ],
+      "same_snapshot": true
+    }
+  }
+]

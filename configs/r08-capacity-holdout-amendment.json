@@ -1,0 +1,6 @@
+{
+  "trace": "qwen_coder_blksz_16.jsonl",
+  "exclude_window": 96,
+  "replacement_window": 101,
+  "reason": "A prior structured JSON witness used Coder window 96. Use the nearest unused Coder window after the frozen Coder native window 100; no result-dependent criteria."
+}

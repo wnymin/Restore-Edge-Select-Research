@@ -16,6 +16,10 @@
 
 R02 的 CPU 判据、反例、GPU 观测与复算命令见[阶段验收](r02-cross-review.md)。
 
+R07 的到达、跨模型与跨负载验证见[扩展结果及复现命令](r07-extension-results.md#复核与复现)。可先运行 `python -m scripts.validation.check_r07_extension`，无需原始轨迹。
+
+R08 的跨模型、跨容量和原生成本留出见[结果及复核命令](r08-model-capacity-results.md#复核与出处)。归档可以用 `python -m scripts.validation.check_r08_capacity` 离线复核，无需下载权重或请求轨迹。
+
 ## CPU 前瞻审计数据归档
 
 主报告与附录中以文件名标注的 `dynamic-lookahead-*.csv` 收在[审计数据 ZIP](evidence/lookahead-audit-csv.zip)，[SHA-256 清单](evidence/lookahead-audit-csv.sha256)列出归档成员。CSV 内容不变；JSON 摘要、反例输入和 GPU 实测仍单独保留。`scripts/validation/` 中的归档检查会按需读取，缓存写入 Git 忽略的 `outputs/lookahead-evidence/`，无需先手动解包。

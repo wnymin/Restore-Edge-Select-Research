@@ -1,0 +1,30 @@
+{
+  "key": {
+    "window": 457,
+    "rate": 16,
+    "budget": 128,
+    "variant": "dense"
+  },
+  "request": 23,
+  "request_id": "282",
+  "boundary": 0,
+  "zero_extra_ms": 12.062432607998817,
+  "queue_extra_ms": 6.800953768420456,
+  "rounds_gt10": 6,
+  "checks": [
+    {
+      "j": 24,
+      "token_entry": 1024,
+      "token_baseline": 512,
+      "request_loss_ms": 0.0,
+      "mean_extra_vs_entry_ms": 119.61689125541751
+    },
+    {
+      "j": 59,
+      "token_entry": 1024,
+      "token_baseline": 512,
+      "request_loss_ms": 12.062432607998817,
+      "mean_extra_vs_entry_ms": 54.43038506845833
+    }
+  ]
+}

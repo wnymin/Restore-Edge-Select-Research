@@ -1,0 +1,35 @@
+{
+  "backend": "Vulkan1, NVIDIA GeForce RTX 4060 Laptop GPU",
+  "build": "b10923-8a56aedd6",
+  "binary_sha256": {
+    "llama-server.exe": "6e25e125699a115bbe234049fadc3e526e7d03cebbade248ca9f42eb4e288aeb",
+    "llama-server-impl.dll": "506722688963c1c24a9e7441de34138d9248738d6675f1d83eb16ab288745c59",
+    "llama.dll": "f644529b58ff1b05dbe5748b5bae2fe83f0a39182ec7e8058e02f37d12eecd76",
+    "ggml-vulkan.dll": "2a5ffa65bac874913049a1a964f14e16e7801dec8bb97b4b6ea8e10c8c4efcce"
+  },
+  "model_sha256": {
+    "qwen35-4b-q4km.gguf": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "r08-16-layer-calibration.gguf": "86a68b217dbb315109e2b58f519dd48a818924f903c7269d69968c6011a60843"
+  },
+  "first_interrupted_warmup": {
+    "raw_jsonl_sha256": "3ca6129e12ca2f262d8ac68b5bf73dd1580180acecd3e0f11538cd71a3968957",
+    "stderr_sha256": "bac4dfecc817cb5995bfd5ed5331bcdace63900d541502b88beb0776aa053416",
+    "completed_action_rows": 0,
+    "schedule": {
+      "block": -1,
+      "mode": "queue",
+      "first_depth": 512
+    },
+    "last_client_chunks": 58,
+    "server_log_markers": [
+      {
+        "time": "0.29.455.782",
+        "event": "unparsed Content-only output"
+      },
+      {
+        "time": "0.29.457.580",
+        "event": "cancel task, id_task = 19"
+      }
+    ]
+  }
+}

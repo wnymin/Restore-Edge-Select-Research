@@ -1,0 +1,15 @@
+{
+  "locked": true,
+  "layout": "split",
+  "design_windows": [440, 441],
+  "holdout_windows": [450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461],
+  "strata": [[1, 128], [12, 128], [16, 128]],
+  "short_strata": [[1, 70], [1, 160], [12, 70], [12, 160]],
+  "short_patterns": {
+    "alternating": [0, 1, 9, 17, 25, 33, 41],
+    "shared": [0, 1, 6, 11, 16, 21, 26],
+    "backlog": [0, 1, 1, 1, 1, 1, 1]
+  },
+  "node_budget": 1024,
+  "timing_repeats": 6
+}

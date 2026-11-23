@@ -1,0 +1,18 @@
+{
+  "main_models": ["4b", "layer-mix", "27b"],
+  "design": {"qwen_traceB_blksz_16.jsonl": [440, 441]},
+  "holdout": {"qwen_traceB_blksz_16.jsonl": [480, 481, 482, 483], "qwen_traceA_blksz_16.jsonl": [96, 97, 98, 99], "qwen_coder_blksz_16.jsonl": [96, 97, 98, 99]},
+  "rates": [12, 16],
+  "fixed_mib": [64, 128, 176, 180, 256, 384, 512],
+  "reference_tokens": 512,
+  "matched_padding_mib": 1,
+  "micro_offsets_bytes": [-1, 0, 1],
+  "negative_control_mib": [128, 256],
+  "node_budget": 1024,
+  "timing_repeats": 6,
+  "gap_ms": 1,
+  "gap_fraction": 0.05,
+  "request_loss_ms": 10,
+  "request_loss_repeats": 4,
+  "replication_windows": 2
+}

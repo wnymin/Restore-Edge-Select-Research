@@ -1,0 +1,212 @@
+{
+  "compatible": {
+    "4b": {
+      "oracle_exact": "93",
+      "plan": [
+        0,
+        1152,
+        1152
+      ],
+      "eligible": [
+        [
+          0
+        ],
+        [
+          0,
+          576,
+          1152
+        ],
+        [
+          0,
+          576,
+          1152
+        ]
+      ],
+      "payload": {
+        "attention_bytes_per_token": 32768,
+        "recurrent_bytes_per_checkpoint": 50331648,
+        "conv_bytes_per_checkpoint": 1179648,
+        "checkpoint_bytes": 51511296
+      }
+    },
+    "kv-only": {
+      "oracle_exact": "95",
+      "plan": [
+        0,
+        1152,
+        1152
+      ],
+      "eligible": [
+        [
+          0
+        ],
+        [
+          0,
+          576,
+          1152
+        ],
+        [
+          0,
+          576,
+          1152
+        ]
+      ],
+      "payload": {
+        "attention_bytes_per_token": 65536,
+        "recurrent_bytes_per_checkpoint": 50331648,
+        "conv_bytes_per_checkpoint": 1179648,
+        "checkpoint_bytes": 51511296
+      }
+    },
+    "state-only": {
+      "oracle_exact": "88",
+      "plan": [
+        0,
+        1152,
+        1152
+      ],
+      "eligible": [
+        [
+          0
+        ],
+        [
+          0,
+          576,
+          1152
+        ],
+        [
+          0,
+          576,
+          1152
+        ]
+      ],
+      "payload": {
+        "attention_bytes_per_token": 32768,
+        "recurrent_bytes_per_checkpoint": 25165824,
+        "conv_bytes_per_checkpoint": 884736,
+        "checkpoint_bytes": 26050560
+      }
+    },
+    "compute-only": {
+      "oracle_exact": "93",
+      "plan": [
+        0,
+        1152,
+        1152
+      ],
+      "eligible": [
+        [
+          0
+        ],
+        [
+          0,
+          576,
+          1152
+        ],
+        [
+          0,
+          576,
+          1152
+        ]
+      ],
+      "payload": {
+        "attention_bytes_per_token": 32768,
+        "recurrent_bytes_per_checkpoint": 50331648,
+        "conv_bytes_per_checkpoint": 1179648,
+        "checkpoint_bytes": 51511296
+      }
+    },
+    "r06-synth": {
+      "oracle_exact": "49003/524",
+      "plan": [
+        0,
+        1152,
+        1152
+      ],
+      "eligible": [
+        [
+          0
+        ],
+        [
+          0,
+          576,
+          1152
+        ],
+        [
+          0,
+          576,
+          1152
+        ]
+      ],
+      "payload": {
+        "attention_bytes_per_token": 65536,
+        "recurrent_bytes_per_checkpoint": 25165824,
+        "conv_bytes_per_checkpoint": 884736,
+        "checkpoint_bytes": 26050560
+      }
+    },
+    "layer-mix": {
+      "oracle_exact": "94",
+      "plan": [
+        0,
+        1152,
+        1152
+      ],
+      "eligible": [
+        [
+          0
+        ],
+        [
+          0,
+          576,
+          1152
+        ],
+        [
+          0,
+          576,
+          1152
+        ]
+      ],
+      "payload": {
+        "attention_bytes_per_token": 65536,
+        "recurrent_bytes_per_checkpoint": 33554432,
+        "conv_bytes_per_checkpoint": 786432,
+        "checkpoint_bytes": 34340864
+      }
+    },
+    "27b": {
+      "oracle_exact": "112",
+      "plan": [
+        0,
+        0,
+        0
+      ],
+      "eligible": [
+        [
+          0
+        ],
+        [
+          0,
+          576,
+          1152
+        ],
+        [
+          0,
+          576,
+          1152
+        ]
+      ],
+      "payload": {
+        "attention_bytes_per_token": 65536,
+        "recurrent_bytes_per_checkpoint": 150994944,
+        "conv_bytes_per_checkpoint": 2949120,
+        "checkpoint_bytes": 153944064
+      }
+    }
+  },
+  "unsupported": {
+    "rolling-kv-only": "Wrong dependency count at boundary 1152",
+    "state-missing": "Wrong dependency count at boundary 1152",
+    "checkpoint-misaligned": "Invalid boundary"
+  }
+}
