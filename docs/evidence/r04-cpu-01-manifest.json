@@ -19,8 +19,8 @@
     }
   },
   "sources": {
-    "docs/r04-cpu-01-cost-aware.md": "a8de6e42f292ce9799b8f431c1d280ebc94905541f511b8e7f44087296cf80d7",
-    "docs/r04-trace-validation-plan.md": "a54716727baa806fad1fff34fc5b2779e3e697629672a21e30575a28919b7479",
+    "docs/archive/r04-process/r04-cpu-01-cost-aware.md": "d2ef7fcb94cddd4d16206c79cb7b96fca0b436ecf10deb9f0ececc315af864f8",
+    "docs/archive/r04-process/r04-trace-validation-plan.md": "7bf9170e009a6c239ed44f576e86b6b0f1aad5d9aab0082083d51653ec2ec9c4",
     "docs/r03-factor-sequence.md": "3353475bbee4d4f3b428fc0c0b30521c79b276ab3fc2100d4e104ec6524a6641",
     "docs/evidence/prefill-vulkan-4k.json": "f1a0ffa909f1cf10cbbc8befdfb28c63a4e74be9982ac2398e1ddec964977b11",
     "src/restore_edge_select/adaptive.py": "9d42f7c2cd32fb5bd1ed5644156738147cb06bc6d15b102450e71fc15edd05de",
@@ -28,6 +28,6 @@
     "scripts/cpu/replay/study_load_routing.py": "66b87f5d10629d9822087bb6f0786d1db8a02a59085980e545e4c780b997fd1e",
     "scripts/check_fixture.py": "77f76bc4d2159197ebd9544ef9fe8cafab3cc262cb7159eda94b4e07cc255f8e",
     "scripts/validation/summarize_r04_cpu01.py": "874a5f242718fe6bd11b1f882b0a8abceca2a8f23207250f14d6c37c18b00d31",
-    "docs/r04-final-acceptance.md": "ed288cad7ffb136b64d58d57a076fd14b99be0669a05d2f68cc9f8205c0daa3b"
+    "docs/r04-final-acceptance.md": "107b0c8af108199497fe3ba7c94e8a5a06462cea57e7df74f33c5aeb8dcaa92a"
   }
 }

@@ -1,6 +1,6 @@
 ﻿# R06 模型与成本适用域验证结项
 
-2026-11-20 完成 R06-CPU-01 至 R06-CPU-03，负责人为我方。三种门控在全部 432 个留出配置上的零开销边界和完成序列均与 `entry-replay` 一致。计入本机选点开销后，只有按域重校准在合成模型的高成本组达到预登记性能判据。该单组收益限于本批 CPU 模拟。 [计划](r06-model-cost-transfer-plan.md) · [预登记](r06-preregistration.md)
+2026-11-20 完成 R06-CPU-01 至 R06-CPU-03，负责人为我方。三种门控在全部 432 个留出配置上的零开销边界和完成序列均与 `entry-replay` 一致。计入本机选点开销后，只有按域重校准在合成模型的高成本组达到预登记性能判据。该单组收益限于本批 CPU 模拟。 [计划](archive/r06-process/r06-model-cost-transfer-plan.md) · [预登记](archive/r06-process/r06-preregistration.md)
 
 ## R06-CPU-01 模型与单因素对照
 

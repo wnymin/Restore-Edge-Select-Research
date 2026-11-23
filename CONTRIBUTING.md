@@ -7,9 +7,9 @@
 - 所有比较策略使用同一份输入、缓存快照和成本配置。修改恢复语义、计费或事件顺序时，同步更新实验约定和受影响的验收结果。
 - 提交前运行 `python scripts/check_fixture.py`。模型权重、原始轨迹和运行输出留在 Git 忽略的本地目录；报告所需的精简数据放在 `docs/evidence/`，并记录实验配置。
 - CPU 模拟、轨迹回放和归档分析可独立开展。验收只运行 CPU 检查；硬件测量可由有相应资源的协作者补充。机器专用的命令、工具和配置放在 Git 忽略的 `.local/`；共享仓库记录可解释结果的测量条件、精简证据和通用数据接口。
-- 报告区分模拟、硬件实测与外推。使用[离线外推](docs/gpu-boundary-restore.md#离线外推归档配对)时，列出证据来源、所选配置版本、估计范围和是否翻转；外推是可选分析。
+- 报告区分模拟、硬件实测与外推。使用[离线外推](docs/archive/gpu-studies/gpu-boundary-restore.md#离线外推归档配对)时，列出证据来源、所选配置版本、估计范围和是否翻转；外推是可选分析。
 
-按资源认领任务见[研究分工](docs/work-plan.md)；对照条件见[实验约定](docs/phase1.md)和[复现记录](docs/experiment-index.md)。
+按资源认领任务见[研究分工](docs/work-plan.md)；对照条件见[实验约定](docs/simulator-baseline.md)和[复现记录](docs/experiment-index.md)。
 
 ## Markdown 公式
 

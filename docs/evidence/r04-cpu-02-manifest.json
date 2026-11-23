@@ -23,10 +23,10 @@
     }
   },
   "sources": {
-    "docs/r04-cpu-02-coverage-window.md": "017ef6e986fa0a25cda539f22467ed07618958abefdbf0ab3a20cb7fe3ad5f19",
-    "docs/r04-final-acceptance.md": "ed288cad7ffb136b64d58d57a076fd14b99be0669a05d2f68cc9f8205c0daa3b",
-    "docs/r04-trace-validation-plan.md": "a54716727baa806fad1fff34fc5b2779e3e697629672a21e30575a28919b7479",
-    "docs/r04-cpu-01-cost-aware.md": "a8de6e42f292ce9799b8f431c1d280ebc94905541f511b8e7f44087296cf80d7",
+    "docs/archive/r04-process/r04-cpu-02-coverage-window.md": "feaf3addc8c7db1217b661eb4a5f924530eeeaeb692c0541f4e3e8e2b9cd36be",
+    "docs/r04-final-acceptance.md": "107b0c8af108199497fe3ba7c94e8a5a06462cea57e7df74f33c5aeb8dcaa92a",
+    "docs/archive/r04-process/r04-trace-validation-plan.md": "7bf9170e009a6c239ed44f576e86b6b0f1aad5d9aab0082083d51653ec2ec9c4",
+    "docs/archive/r04-process/r04-cpu-01-cost-aware.md": "d2ef7fcb94cddd4d16206c79cb7b96fca0b436ecf10deb9f0ececc315af864f8",
     "docs/r03-factor-sequence.md": "3353475bbee4d4f3b428fc0c0b30521c79b276ab3fc2100d4e104ec6524a6641",
     "docs/evidence/prefill-vulkan-4k.json": "f1a0ffa909f1cf10cbbc8befdfb28c63a4e74be9982ac2398e1ddec964977b11",
     "src/restore_edge_select/adaptive.py": "9d42f7c2cd32fb5bd1ed5644156738147cb06bc6d15b102450e71fc15edd05de",
@@ -46,6 +46,6 @@
     "data/raw/bailian/qwen_traceB_blksz_16.jsonl": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59"
   },
   "historical_document_hashes": {
-    "docs/work-plan.md": "0257354525f6730df7bbe875612e6df3da053e0a3fdd1cb8e912589d8c986154"
+    "docs/work-plan.md": "1f4219c0e314c1c5377b4171b9f5f5cd813610d9541cd007ef38a269c8adfabd"
   }
 }

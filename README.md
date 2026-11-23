@@ -11,15 +11,4 @@ python scripts/simulate.py --prefetch-mib 160 --policy local-cost adaptive offli
 
 验收覆盖四档预取预算的 36 个手算组合。在 160 MiB 手算轨迹上，离线最优的平均响应为 30.75 ms，逐请求基线为 31 ms。默认自适应策略也选 31 ms，因为该例的均值改善达不到它的改选门槛。
 
-| 证据 | 入口 |
-| --- | --- |
-| 模拟范围、状态与计费规则 | [模拟器运行、规则与手算验收](docs/phase1.md) |
-| 真实服务的归档读数与离线外推 | [驻留前缀与冷恢复](docs/gpu-boundary-restore.md) |
-| 统一报告：GPU 机制、算法结论、证据边界与后续方向 | [研究报告](docs/dynamic-gpu-lookahead-report.md) |
-| 12 轮前瞻及早期 GPU 汇总的合并证据 | [证据附录](docs/dynamic-gpu-lookahead-appendices.md) |
-| 算法设计覆盖与逐项验收 | [报告第 7 节](docs/dynamic-gpu-lookahead-report.md#algorithm-design) |
-| 策略、计时、离线最优表及跨硬件接近率 | [选点对照](docs/trace-oracle.md) |
-| CPU 协作者最新结果、限制与一键验收 | [最新成果入口](docs/dynamic-cpu-latest.md) |
-| 成本依据、保留数据和复现命令 | [实验口径与复现](docs/experiment-index.md) |
-
-[??????](docs/README.md) ? [研究分工](docs/work-plan.md) · [协作约定](CONTRIBUTING.md)
+[研究文档导航](docs/README.md) · [统一研究报告](docs/dynamic-gpu-lookahead-report.md) · [研究阶段台账](docs/work-plan.md) · [实验复现](docs/experiment-index.md) · [协作约定](CONTRIBUTING.md)

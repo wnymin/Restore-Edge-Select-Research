@@ -21,9 +21,9 @@
 
 轨迹 109–111 是归档回归集，覆盖 Coder、Trace A 和 Trace B。`entry` 的 648 个配置与归档目标值逐项吻合。归档离线参照有 630 个精确最优值，其余 18 个配置保留最优区间。Trace B 的 200–202 块用于新增检验，沿用分线既有 R04 配置。现有材料能复算这些结果，无法确认新增集判据在首次查阅分线结果前已有独立登记。这个限制随报告保留。
 
-- [R04 分工与接替记录](r04-trace-validation-plan.md)
-- [F11 分线报告](r04-cpu-01-cost-aware.md)
-- [F08/F10 与 F13 分线报告](r04-cpu-02-coverage-window.md)
+- [R04 分工与接替记录](archive/r04-process/r04-trace-validation-plan.md)
+- [F11 分线报告](archive/r04-process/r04-cpu-01-cost-aware.md)
+- [F08/F10 与 F13 分线报告](archive/r04-process/r04-cpu-02-coverage-window.md)
 - [固定快照数据](evidence/r04-fixed-snapshots.json)
 - [归档 109 回归与候选审计](evidence/r04-regression-109.csv.gz)
 - [阶段台账](work-plan.md)

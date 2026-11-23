@@ -7,7 +7,7 @@ metadata:
 
 # Recovery-boundary research
 
-Before acting, read `docs/recovery-research-protocol.md` in the repository. It is the source for the project's scope, fixed semantics, factor-priority method, omission-loss acceptance, evidence/reporting rules, and handoff status. Then read only the task-relevant primary report (`docs/trace-oracle.md`, `docs/dynamic-gpu-lookahead-report.md`, `docs/dynamic-cpu-completion.md`, or `docs/phase1.md`).
+Before acting, read `docs/recovery-research-protocol.md` in the repository. It is the source for the project's scope, fixed semantics, factor-priority method, omission-loss acceptance, evidence/reporting rules, and handoff status. Then read only the task-relevant primary report (`docs/trace-oracle.md`, `docs/dynamic-gpu-lookahead-report.md`, `docs/dynamic-cpu-completion.md`, or `docs/simulator-baseline.md`).
 
 ## Non-negotiable method
 

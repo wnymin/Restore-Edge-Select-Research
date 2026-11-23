@@ -15,7 +15,7 @@
     "docs/evidence/r06-summary.json": "346d05a63fea766d0ae1eb9f777a0d9f3a83ad70e738d8bd1e8cd2dcb8e60b26",
     "configs/r06-matrix.json": "b973a73eb2cc9adf8c09521ff6b2d359e80d6f984d7aa2feb85f6597643bdaa4",
     "configs/r06-synthetic-gqa-gdn.json": "2e492086bda573bb2bb6748237025772e6263e34e5b7fcf5f2ad17194c5ee2d6",
-    "docs/r06-preregistration.md": "68dc27301cfee8af766e18fe61d5d2ac400188151dd130b98348fa1fcadfb6f9",
+    "docs/archive/r06-process/r06-preregistration.md": "86a571294508bfded78b3999cfe87321ef3b72ce24ea31ca13ee6cd5af42b7a2",
     "scripts/cpu/replay/study_r06_transfer.py": "bd82e5ae5a6e7d6418e9f65033333dacb5f2bde667797f63a63bb19051607ee8",
     "scripts/validation/study_r06_snapshots.py": "b9fe9e2193f943e2e1e175008692de99eec27e983fb9a5a64334225b798845f7",
     "scripts/validation/audit_r06_routes.py": "706665d6f579aeecafdd1e8038e56ae45ef4123748cfd16921f9857b88821503",

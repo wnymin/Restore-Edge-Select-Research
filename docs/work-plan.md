@@ -4,12 +4,13 @@
 
 | 阶段 | 主题 | 状态 | 计划与验收入口 |
 | --- | --- | --- | --- |
-| `R01` | 动态因素辨别与在线选点对照 | 历史计划；CPU B1–B3 已验收，GPU 按分线证据记录，不标整轮已验收 | [R01 双人分工](#r01) · [CPU 验收](dynamic-cpu-completion.md) · [GPU 证据汇总](dynamic-gpu-lookahead-appendices.md#round-gpu-findings) |
-| `R02` | 固定容量下的后续状态判据 | 2026-11-19 已按限定子域验收，保留完整求值 | [R02 计划](next-round-plan.md) · [独立分工](r02-independent-work-protocol.md) · [CPU 交付](r02-cpu-results.md) · [GPU 交付](r02-gpu-observation.md) · [验收结论](r02-cross-review.md) |
+| `R01` | 动态因素辨别与在线选点对照 | 历史计划；CPU B1–B3 已验收，GPU 按分线证据记录，不标整轮已验收 | [R01 双人分工](#r01) · [CPU 验收](dynamic-cpu-completion.md) · [GPU 证据汇总](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-gpu-findings) |
+| `R02` | 固定容量下的后续状态判据 | 2026-11-19 已按限定子域验收，保留完整求值 | [R02 计划](archive/r02-process/next-round-plan.md) · [独立分工](archive/r02-process/r02-independent-work-protocol.md) · [CPU 交付](archive/r02-process/r02-cpu-results.md) · [GPU 交付](archive/r02-process/r02-gpu-observation.md) · [验收结论](r02-cross-review.md) |
 | `R03` | 动态因素量化、在线可用性与影响评估 | 2026-11-19 已结项（R03/v1.0）；本方接替完成 MET/INV/APP-01/APP-02/INT-01，因素级不可识别 L、组合证据和成本边界已作为结论登记 | [因素结果与后续顺序](r03-factor-sequence.md) · [结项记录](r03-completion.md) · [分工计划归档](archive/r03-process/r03-factor-assessment-plan.md) |
-| `R04` | Online dynamic boundary-selection strategy and validation | 2026-11-20 CPU scope accepted: CPU-01 delivered; CPU-02 completed by user takeover; CPU-03 triggered and tested with no observed standalone gain; no independent collaborator artifact/replication. Broader GPU/service validation remains separate. | [R04 plan](r04-trace-validation-plan.md) / [final acceptance](r04-final-acceptance.md) |
+| `R04` | Online dynamic boundary-selection strategy and validation | 2026-11-20 CPU scope accepted: CPU-01 delivered; CPU-02 completed by user takeover; CPU-03 triggered and tested with no observed standalone gain; no independent collaborator artifact/replication. Broader GPU/service validation remains separate. | [R04 plan](archive/r04-process/r04-trace-validation-plan.md) / [final acceptance](r04-final-acceptance.md) |
 | `R05` | Static/dynamic strategy regimes and online portfolio switching | Completed (2026-11-20); CPU scope accepted with positive net holdout result; single-owner execution by user side; acceptance requires net improvement over strongest fixed baseline on frozen holdout, otherwise report failure without claiming success. | [R05 plan](r05-strategy-portfolio-plan.md) / [CPU report](r05-strategy-portfolio-report.md) |
-| `R06` | 模型与成本适用域验证 | 2026-11-20 CPU 交付验收，重校准只在合成高成本组达到性能判据 | [R06 计划](r06-model-cost-transfer-plan.md) · [R06 结项](r06-completion.md) |
+| `R06` | 模型与成本适用域验证 | 2026-11-20 CPU 交付验收，重校准只在合成高成本组达到性能判据 | [R06 计划](archive/r06-process/r06-model-cost-transfer-plan.md) · [R06 结项](r06-completion.md) |
+| `R07` | `entry-replay` 泛化性研究 | 2026-11-23 已登记、进入设计；代码与规则为冻结对照，尚未启动实验 | [研究设计](r07-entry-replay-generalization.md) |
 
 <a id="r01"></a>
 
@@ -26,9 +27,9 @@
 
 ## B 组：只需 CPU 验证的工作说明
 
-首轮 B1 合成干预已完成：[动态 CPU 配对结果与复现](dynamic-cpu-interventions.md)。144 个配置、864 条单点干预。B 组 B1–B3 已于 2026-11-18 完成验收，详见 [CPU 结项记录](dynamic-cpu-completion.md)；后续仅保留一般化保证、真实误差覆盖和跨组交叉验证。
+首轮 B1 合成干预已完成：[动态 CPU 配对结果与复现](archive/cpu-studies/dynamic-cpu-interventions.md)。144 个配置、864 条单点干预。B 组 B1–B3 已于 2026-11-18 完成验收，详见 [CPU 结项记录](dynamic-cpu-completion.md)；后续仅保留一般化保证、真实误差覆盖和跨组交叉验证。
 
-本节可独立作为协作者的工作依据。使用现有模拟器、归档的 Vulkan 续算及传输成本、合成轨迹与公开轨迹；无需 GPU、模型权重、真实推理服务或 A 组新数据。先读 [主对照](trace-oracle.md)、[模拟规则](phase1.md)和[复现入口](experiment-index.md)。
+本节可独立作为协作者的工作依据。使用现有模拟器、归档的 Vulkan 续算及传输成本、合成轨迹与公开轨迹；无需 GPU、模型权重、真实推理服务或 A 组新数据。先读 [主对照](trace-oracle.md)、[模拟规则](simulator-baseline.md)和[复现入口](experiment-index.md)。
 
 1. **B1：定位效果来自哪里。** 从已归档的 SSD 11/12 倍、16 倍及 RAM/SSD 同时受压配置中，挑选确有策略差距的配置；另取基线已最优的低成本配置作阴性对照。固定成本、初始对象放置、候选和服务规则，只改变到达间隔、共享关系或初始占用；每类先做最小合成轨迹，再从归档回放筛选匹配案例。记录可见队列、剩余额度、对象就绪／在途、可重叠时间、单请求成本差。对同一决策快照改选一次，后续沿固定基线决策，分别报告目标和后续请求完成时间变化。保存有翻转和无翻转的案例、参数与种子。
 2. **B2：建立状态模型并实现决策。** 用选点时可见的特征，估计沿用 local-cost、直接改选或启动现有窗口推演的收益。先做可解释的门控，比较仅用静态成本的版本及移除动态特征后的版本。离线/全轨迹标签仅用于训练、分析或评价，不进入在线特征；模型参数只在校准集选择。新增策略用独立模块或脚本实现，复用现有事件语义，并保留原有策略用于对照。
@@ -57,12 +58,12 @@ B1、B2、B3 均已完成并验收：
 
 A 组新增通用分析、报告和精简证据优先使用 dynamic-gpu 或 dynamic_gpu 前缀；机器专用测量脚本按[协作约定](../CONTRIBUTING.md)留在本机。发现本机无法形成稳定翻转时，保留反例；远程 GPU 只复核最能区分机制的用例，不作为 B 组前置条件。
 
-首轮实测见[同行进度配对](dynamic-gpu-peer-progress.md)，机制复测见[浅驻留延迟提交对照](dynamic-gpu-delay-control.md)，选点前信号的跨工作量留出见 [A2 规则与结果](dynamic-gpu-a2-signals.md)，实时分派见 [A3](dynamic-gpu-a3-live.md)。系统候选见[同槽提前恢复](dynamic-gpu-early-restore-plan.md)；汇总证据见[GPU 机制附录](dynamic-gpu-lookahead-appendices.md#round-gpu-findings)。
+首轮实测见[同行进度配对](archive/gpu-studies/dynamic-gpu-peer-progress.md)，机制复测见[浅驻留延迟提交对照](archive/gpu-studies/dynamic-gpu-delay-control.md)，选点前信号的跨工作量留出见 [A2 规则与结果](archive/gpu-studies/dynamic-gpu-a2-signals.md)，实时分派见 [A3](archive/gpu-studies/dynamic-gpu-a3-live.md)。系统候选见[同槽提前恢复](archive/gpu-studies/dynamic-gpu-early-restore-plan.md)；汇总证据见[GPU 机制附录](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-gpu-findings)。
 
-补充 GPU 干预见[固定边界的阶段变化与实时留出](dynamic-gpu-phase-study.md)、[独立设备暂存池的容量翻转](dynamic-gpu-staging-study.md)、[执行器隔离](dynamic-gpu-executor-study.md)和[真实状态暂存](dynamic-gpu-model-stage-study.md)。供模拟用的区分是：逻辑准入等待只在延后可消费时刻、实际压到关键路径时，才转化为目标延迟；真实的合批仍要单独建模。
+补充 GPU 干预见[固定边界的阶段变化与实时留出](archive/gpu-studies/dynamic-gpu-phase-study.md)、[独立设备暂存池的容量翻转](archive/gpu-studies/dynamic-gpu-staging-study.md)、[执行器隔离](archive/gpu-studies/dynamic-gpu-executor-study.md)和[真实状态暂存](archive/gpu-studies/dynamic-gpu-model-stage-study.md)。供模拟用的区分是：逻辑准入等待只在延后可消费时刻、实际压到关键路径时，才转化为目标延迟；真实的合批仍要单独建模。
 
 ## 并行边界与汇合
 
 两组立即并行：A 从归档双槽配对和本机开始，B 从归档 CPU 配置和合成反例开始。B 不等待新校准，A 不等待新算法；任一组的成果都可独立验收。两组只在汇合时交换机制案例及证据：至少注明成本配置来源、目标函数、边界、决策前状态、基线与改选效果、计时语义及可复现入口。由 B 将有意义的实测范围作为补充敏感性配置，由 A 选择可在双槽环境表达的模拟反例复测，均为已有交付后的交叉验证。
 
-[模拟验收](phase1.md) · [CPU 策略与离线证据](trace-oracle.md) · [真实服务](gpu-boundary-restore.md) · [复现](experiment-index.md)
+[模拟验收](simulator-baseline.md) · [CPU 策略与离线证据](trace-oracle.md) · [真实服务](archive/gpu-studies/gpu-boundary-restore.md) · [复现](experiment-index.md)

@@ -1,6 +1,6 @@
 # 恢复边界策略、离线最优与可降空间
 
-**常规成本保留逐请求基线。** 受压时，若只优化均值，入口剪枝策略通常以更低的选点开销接近离线最优；若需要限制单请求退化，改用带约束的自适应搜索，并报告该约束的代价。压力倍率是模拟输入，不是硬件部署阈值。真实服务证据单独见[实测与外推](gpu-boundary-restore.md)。
+**常规成本保留逐请求基线。** 受压时，若只优化均值，入口剪枝策略通常以更低的选点开销接近离线最优；若需要限制单请求退化，改用带约束的自适应搜索，并报告该约束的代价。压力倍率是模拟输入，不是硬件部署阈值。真实服务证据单独见[实测与外推](archive/gpu-studies/gpu-boundary-restore.md)。
 
 ## 策略
 
@@ -118,7 +118,7 @@ $$
 
 ## 机制对照
 
-- **共享和容量会改变候选排序。** [160 MiB 手算](phase1.md#手算验收两个请求争用预取额度)中，一长一短能同时预取，两长不能。共享估计的[跨层反例](evidence/cpu-reuse-tail-witness-89.json)中，仅改一点使均值快 1.78 ms、P95 慢 9.03 ms；关闭 SSD 对计算的减速后，P95 改为快 0.72 ms。
+- **共享和容量会改变候选排序。** [160 MiB 手算](simulator-baseline.md#手算验收两个请求争用预取额度)中，一长一短能同时预取，两长不能。共享估计的[跨层反例](evidence/cpu-reuse-tail-witness-89.json)中，仅改一点使均值快 1.78 ms、P95 慢 9.03 ms；关闭 SSD 对计算的减速后，P95 改为快 0.72 ms。
 - **估计错误会选错边界。** [同层反例](evidence/cpu-reuse-stale-witness-96.json)中，估高 SSD 耗时导致将可按需恢复的深边界改成浅边界，单步干预使窗口均值慢 361.03 ms。[共享反例](evidence/cpu-estimate-witness-77.json)显示，忽略已预留的 65.125 MiB 会漏掉无需新增搬运的候选。
 - **缓存拓扑和调度可能改变结论。** [容量释放对照](evidence/boundary-reservation-placement.csv)、[双槽归因](evidence/boundary-batch-attribution.json)和[传输通道对照](evidence/boundary-lane-objective-24.csv)属于不同模型，不能把单槽窗口证书套过去。
 

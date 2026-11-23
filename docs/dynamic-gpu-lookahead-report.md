@@ -1,6 +1,6 @@
 # 有限暂存容量下的前缀恢复边界选择
 
-本文统一维护研究结论与后续方向。先读第 1–2 节了解结论和模型，第 4–5 节判断结论强度和下一步；第 3、6、7 节及[证据附录](dynamic-gpu-lookahead-appendices.md)供追查推导与复现。[实验索引](experiment-index.md)记录公共输入、实验条件和命令，两处均不另行维护研究计划。
+本文统一维护研究结论与后续方向。先读第 1–2 节了解结论和模型，第 4–5 节判断结论强度和下一步；第 3、6、7 节及[证据附录](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md)供追查推导与复现。[实验索引](experiment-index.md)记录公共输入、实验条件和命令，两处均不另行维护研究计划。
 
 ## 1. 核心结论
 
@@ -26,7 +26,7 @@
 
 ## 2. 问题与适用模型
 
-课程原题关注 KV Cache 分级存储与替换。本项目研究其中的恢复决策：已有缓存放置给定时，如何选检查点以缩短响应？没有比较 FIFO、LRU 等淘汰算法；本文的 FIFO 是请求计算顺序。Qwen3.5-4B 的模拟配置中，注意力 KV 为 32 KiB/token，非零恢复边界还需要约 49.125 MiB 的循环及卷积状态。较晚检查点不能直接截成较早检查点，因此省下的 KV 并不必然意味着省下一次完整检查点读取。详见[模型规格与口径](phase1.md)。
+课程原题关注 KV Cache 分级存储与替换。本项目研究其中的恢复决策：已有缓存放置给定时，如何选检查点以缩短响应？没有比较 FIFO、LRU 等淘汰算法；本文的 FIFO 是请求计算顺序。Qwen3.5-4B 的模拟配置中，注意力 KV 为 32 KiB/token，非零恢复边界还需要约 49.125 MiB 的循环及卷积状态。较晚检查点不能直接截成较早检查点，因此省下的 KV 并不必然意味着省下一次完整检查点读取。详见[模型规格与口径](simulator-baseline.md)。
 
 给定缓存放置与可精确恢复的检查点，算法选择当前请求的恢复边界。边界同时决定所需对象、暂存占用、加载和后缀续算。比较同一快照下的候选，固定后继边界及执行规则，目标为已见请求响应时间之和。由于到达时刻不因候选而变，比较完成时间之和等价。
 
@@ -44,11 +44,11 @@
 
 | 已有结果 | 对算法的含义 | 结论边界与依据 |
 | --- | --- | --- |
-| 同机单跑，512→1,536 token 深恢复使目标快 283.55 ms；1,024→1,152 却慢 84.72 ms | 前缀更长不保证恢复更快，应比较暴露的加载成本与省下的续算 | 两个边界配对证明两种方向存在，不能推出通用 token 阈值。[真实恢复](gpu-boundary-restore.md) |
-| 真实双槽窄边界对，同行预填充早期与末段的深减浅中位差分别为 −13.03、+62.47 ms | 静态候选成本可能不足，同一候选对的排序依赖运行状态 | 阶段标签尚未证明足以稳定改善在线决策或保护同行。[阶段留出](dynamic-gpu-phase-study.md) |
-| CUDA 多对象留出中，紧额度独立对象组目标快约 2 ms，完成时刻和却慢 1.82 ms；共享或放宽额度后翻转消失 | 联合对象并集与其他请求的净代价都必须考虑 | 每工况 12 对，指标为设备完成时刻和；缓冲别名不是新模型语义验证。[联合暂存](dynamic-gpu-joint-staging.md) |
-| 同一紧额度下，短、长续算窗口的准入等待均约 34 ms，只有短窗口翻转 | 容量受阻只有越过消费窗口才影响目标；等待总量不能直接用作收益损失 | 固定设备协议的机制证据；真实模型暂存对照未出现稳定排序翻转。[联合暂存](dynamic-gpu-joint-staging.md) · [真实模型](dynamic-gpu-model-stage-study.md) |
-| 约 49.1 MiB 的独立 SSD 读盘、同步上传中位数分别为 11.19、4.13 ms；整次冷恢复调用可显著更长 | 成本估计应拆开服务等待、有效搬运与计算，避免重复计费 | 整次接口耗时不能作为带宽参数，归档读数也不是未来耗时保证。[分段测量](gpu-boundary-restore.md) · [排队对照](dynamic-gpu-restore-queue.md) |
+| 同机单跑，512→1,536 token 深恢复使目标快 283.55 ms；1,024→1,152 却慢 84.72 ms | 前缀更长不保证恢复更快，应比较暴露的加载成本与省下的续算 | 两个边界配对证明两种方向存在，不能推出通用 token 阈值。[真实恢复](archive/gpu-studies/gpu-boundary-restore.md) |
+| 真实双槽窄边界对，同行预填充早期与末段的深减浅中位差分别为 −13.03、+62.47 ms | 静态候选成本可能不足，同一候选对的排序依赖运行状态 | 阶段标签尚未证明足以稳定改善在线决策或保护同行。[阶段留出](archive/gpu-studies/dynamic-gpu-phase-study.md) |
+| CUDA 多对象留出中，紧额度独立对象组目标快约 2 ms，完成时刻和却慢 1.82 ms；共享或放宽额度后翻转消失 | 联合对象并集与其他请求的净代价都必须考虑 | 每工况 12 对，指标为设备完成时刻和；缓冲别名不是新模型语义验证。[联合暂存](archive/gpu-studies/dynamic-gpu-joint-staging.md) |
+| 同一紧额度下，短、长续算窗口的准入等待均约 34 ms，只有短窗口翻转 | 容量受阻只有越过消费窗口才影响目标；等待总量不能直接用作收益损失 | 固定设备协议的机制证据；真实模型暂存对照未出现稳定排序翻转。[联合暂存](archive/gpu-studies/dynamic-gpu-joint-staging.md) · [真实模型](archive/gpu-studies/dynamic-gpu-model-stage-study.md) |
+| 约 49.1 MiB 的独立 SSD 读盘、同步上传中位数分别为 11.19、4.13 ms；整次冷恢复调用可显著更长 | 成本估计应拆开服务等待、有效搬运与计算，避免重复计费 | 整次接口耗时不能作为带宽参数，归档读数也不是未来耗时保证。[分段测量](archive/gpu-studies/gpu-boundary-restore.md) · [排队对照](archive/gpu-studies/dynamic-gpu-restore-queue.md) |
 
 这些结果支持把算法问题收敛为：候选改变哪些未来状态，这些变化通过什么关键路径影响各请求，以及在信息或成本不确定时能认证到什么程度。它们尚不支持“动态策略在真实连续服务中普遍更快”。本组承担 GPU 验证；CPU 推导用于解释实测机制和构造可复核的算法命题，分工仍以[研究计划](work-plan.md)为准。
 
@@ -58,7 +58,7 @@
 
 进一步，令目标改选节省的响应时间为 $G$，其他请求增加的响应时间之和为 $D$。整体改善当且仅当 $G>D$。容量、共享与重叠通过改变 $D$ 或 $R_b$ 影响排序。两两对象能够共存，不保证整个依赖并集能够共存；完全不搬运的后继也会继承前序时差。
 
-已有无耦合条件给出了逐请求关键路径贪心最优的情形；相同在线快照、不同未来到达可要求相反动作的构造，则说明未知未来造成的信息缺失不能靠推演已见队列消除。[前期条件与在线下界](dynamic-gpu-selection-bounds.md) · [联合占用与传递反例](dynamic-gpu-lookahead-appendices.md#round-joint-error)
+已有无耦合条件给出了逐请求关键路径贪心最优的情形；相同在线快照、不同未来到达可要求相反动作的构造，则说明未知未来造成的信息缺失不能靠推演已见队列消除。[前期条件与在线下界](archive/gpu-studies/dynamic-gpu-selection-bounds.md) · [联合占用与传递反例](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-joint-error)
 
 ### 3.2 看哪些请求，比固定看几个请求更关键
 
@@ -70,7 +70,7 @@ $$
 
 该区间不跨零即可停止；其充分条件不能省去。在受控留出中，名义停止平均从查看 21.03 项降至 3.12 项，并保持完整名义推演动作。后续 Phase 1 精确截点在 160 组配置、2,898 次截点候选推演中核对了被省常数，保持完整前瞻的选点与完成时刻。
 
-公开新留出的 64 组配置中，只看目标与完整前瞻本身没有改选差异。多看在构造竞争例中有价值，现有公开窗口没有证明这种收益经常出现。加入计时后，短请求中增加前瞻仍可能得不偿失。[停止界](dynamic-gpu-lookahead-appendices.md#round-bounds) · [截点与公开留出](dynamic-gpu-lookahead-appendices.md#round-phase1-score)
+公开新留出的 64 组配置中，只看目标与完整前瞻本身没有改选差异。多看在构造竞争例中有价值，现有公开窗口没有证明这种收益经常出现。加入计时后，短请求中增加前瞻仍可能得不偿失。[停止界](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-bounds) · [截点与公开留出](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-phase1-score)
 
 ### 3.3 工作量界可以安全排除一部分完整推演
 
@@ -78,7 +78,7 @@ $$
 
 **搬运影响的权重必须按最早可能阻塞的位置计算，不能只按对象所属请求计算。** 后继的小对象可提前预取，在不可抢占通道上挡住前序的大对象按需加载。合成反例中，按归属位置计算的朴素上界低于真值约 841.94 ms；考虑最早阻塞位置的窗口上界仍有效。
 
-1,304 组配置、38,768 次候选区间审计没有越界或误选。公开校准／留出减少事件 92.3%／69.3%，随机压力集仅 11.6%／13.0%；全部困难翻转见证仍未决。说明绝对工作量界适合排除明显劣势候选，临界竞争需要更紧的候选差值分析。两种上界的审计计数包含配对核对，不能视为独立样本。[证明、反例与数据](dynamic-gpu-lookahead-appendices.md#round-workload-bounds)
+1,304 组配置、38,768 次候选区间审计没有越界或误选。公开校准／留出减少事件 92.3%／69.3%，随机压力集仅 11.6%／13.0%；全部困难翻转见证仍未决。说明绝对工作量界适合排除明显劣势候选，临界竞争需要更紧的候选差值分析。两种上界的审计计数包含配对核对，不能视为独立样本。[证明、反例与数据](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-workload-bounds)
 
 ### 3.4 共同工作可抵消的对象，是未来状态相同的轨迹
 
@@ -92,7 +92,7 @@ $$
 
 这把剩余问题精确压缩为一个时间差，并允许交接时仍有预留。它是充分条件，尚未证明是必要条件或最小状态表示。
 
-不检查状态、直接传播目标完成时差的错误规则，在见证集 144 次决策中选错 16 次；公开校准与留出却没有暴露该错误。精确状态合并在 1,304 组配置、38,768 次候选推演中保持完整结果，公开留出事件减少 26.7%，两批随机集仅约 2.8%。主回放没有出现带在途搬运的实际后缀复用；该部分目前由证明和状态级对照支撑。[等价命题与审计](dynamic-gpu-lookahead-appendices.md#round-coalescence)
+不检查状态、直接传播目标完成时差的错误规则，在见证集 144 次决策中选错 16 次；公开校准与留出却没有暴露该错误。精确状态合并在 1,304 组配置、38,768 次候选推演中保持完整结果，公开留出事件减少 26.7%，两批随机集仅约 2.8%。主回放没有出现带在途搬运的实际后缀复用；该部分目前由证明和状态级对照支撑。[等价命题与审计](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-coalescence)
 
 ### 3.5 时间扰动只能在事件分支内连续分析
 
@@ -110,13 +110,13 @@ $$
 
 当 $r$ 从左趋近 10，$S(r)$ 趋近 50；恰好等于 10 时，需求优先改变搬运顺序，$S(10)=42$。较慢的预取因此可能改善整体响应。全局单调性及按 $J|\Delta r|$ 控制变化的全局 Lipschitz 假设均不成立，只检查整个参数区间的两端也不安全。
 
-扩展合成集得到 2,571 个快照、24,407 个分段和 56,527 个核对点，发现 25 个受影响快照、122 个相邻分段边界跳变，均为负跳变，最大绝对值 48；这只是观测，不能推出所有跳变必然向下。边界两侧可能分别计数，122 不是不同阈值数。[分段推导与见证](dynamic-gpu-lookahead-appendices.md#round-residual)
+扩展合成集得到 2,571 个快照、24,407 个分段和 56,527 个核对点，发现 25 个受影响快照、122 个相邻分段边界跳变，均为负跳变，最大绝对值 48；这只是观测，不能推出所有跳变必然向下。边界两侧可能分别计数，122 不是不同阈值数。[分段推导与见证](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-residual)
 
 ### 3.6 请求关系缺失与成本误差，是两种不同的信息不足
 
 漏掉相关后继时，提高搬运精度无法普遍纠正选点；相关请求已看全时，继续展开队列也无法消除耗时不确定性。共用同一个成本倍率的两条反事实应成对分析，分别取独立最坏值会丢失相关性。固定依赖／服务顺序的模型中，共同误差精确界在 ±50% 留出切片认证 266/600 个用例，独立区间为 215/600，但精确界的本机计算更贵，并未取得最高净收益。
 
-GPU 临界留出 56 对中，点估计判对 49 对；经验范围排除零的 16 对均正确。它验证临界耗时值得区分，不把经验范围提升为未来保证。最新跳变反例还说明，早期固定顺序误差分析不能直接推广到顺序会变化的事件模型。[信息价值](dynamic-gpu-lookahead-appendices.md#round-value) · [共同误差与 GPU 留出](dynamic-gpu-lookahead-appendices.md#round-joint-error)
+GPU 临界留出 56 对中，点估计判对 49 对；经验范围排除零的 16 对均正确。它验证临界耗时值得区分，不把经验范围提升为未来保证。最新跳变反例还说明，早期固定顺序误差分析不能直接推广到顺序会变化的事件模型。[信息价值](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-value) · [共同误差与 GPU 留出](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-joint-error)
 
 ### 3.7 同一不确定情景下直接比较候选，能得到更紧的判断
 
@@ -136,7 +136,7 @@ R_a=\sup_{x\in X}\left[J_a(x)-\min_bJ_b(x)\right]
 =\max_b D_{ab}.
 $$
 
-首次决策扩展保留了运行中计算及活动依赖，每个候选的符号轨迹只构建一次，再复用到多动作比较。在途残余和未来 SSD 倍率分别是一维子域；前者改变已有搬运的剩余时间，后者只改变快照后新发起的 SSD 服务。两项实验不能合称为独立多参数联合认证。[候选差推导](dynamic-gpu-lookahead-appendices.md#round-candidate-difference) · [首次决策审计](dynamic-gpu-lookahead-appendices.md#round-first-decision)
+首次决策扩展保留了运行中计算及活动依赖，每个候选的符号轨迹只构建一次，再复用到多动作比较。在途残余和未来 SSD 倍率分别是一维子域；前者改变已有搬运的剩余时间，后者只改变快照后新发起的 SSD 服务。两项实验不能合称为独立多参数联合认证。[候选差推导](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-candidate-difference) · [首次决策审计](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-first-decision)
 
 ### 3.8 总分稳健、个体安全和平局保真是不同要求
 
@@ -154,7 +154,7 @@ $$
 h_b\le h_a,\qquad (R_b,\tau_b)<_{\mathrm{lex}}(R_a,\tau_a).
 $$
 
-仅有 $h_b\le h_a$、$R_b\le R_a$ 的指标支配只保最优值，可能改变平局动作。三动作解析反例已区分这两种保证。预算前沿在本轮 5,832 个已求值候选上核对通过；删除的是指标上的冗余候选，未节省先前的符号求值成本。[完整前沿与平局反例](dynamic-gpu-lookahead-appendices.md#round-ssd-frontier)
+仅有 $h_b\le h_a$、$R_b\le R_a$ 的指标支配只保最优值，可能改变平局动作。三动作解析反例已区分这两种保证。预算前沿在本轮 5,832 个已求值候选上核对通过；删除的是指标上的冗余候选，未节省先前的符号求值成本。[完整前沿与平局反例](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-ssd-frontier)
 
 ### 3.9 单次安全如何组合：参照必须随方案更新
 
@@ -1032,24 +1032,24 @@ R02 已按固定容量子域验收。在无未来到达、固定后继的模拟�
 
 ## 6. 合并与复现索引
 
-算法设计覆盖表、状态差分解和逐项验收清单已合并到[本文第 7 节](#algorithm-design)，不再维护独立正文。早期关键路径与 GPU 汇总已归入[证据附录](dynamic-gpu-lookahead-appendices.md#round-gpu-findings)。GPU 各种独立测量协议继续保留原始记录；它们不是另一套当前结论或后续计划。
+算法设计覆盖表、状态差分解和逐项验收清单已合并到[本文第 7 节](#algorithm-design)，不再维护独立正文。早期关键路径与 GPU 汇总已归入[证据附录](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-gpu-findings)。GPU 各种独立测量协议继续保留原始记录；它们不是另一套当前结论或后续计划。
 
 原先 12 份分轮报告现已合为一份证据附录；下表链接到相应轮次，原始数据和复现脚本保持独立。附录只保留推导、数据、限制和复现。
 
 | 主题 | 推导与实验附录 |
 | --- | --- |
-| 收益停止界 | [bounds](dynamic-gpu-lookahead-appendices.md#round-bounds) |
-| 前瞻信息与真实临界耗时 | [value](dynamic-gpu-lookahead-appendices.md#round-value) |
-| 联合占用、后缀计算与共同误差 | [joint-error](dynamic-gpu-lookahead-appendices.md#round-joint-error) |
-| Phase 1 精确截点 | [phase1-score](dynamic-gpu-lookahead-appendices.md#round-phase1-score) |
-| 无后继预取触发条件 | [trigger](dynamic-gpu-lookahead-appendices.md#round-trigger) |
-| 抽象外部性证书 | [externality](dynamic-gpu-lookahead-appendices.md#round-externality) |
-| 可观察工作量界 | [workload-bounds](dynamic-gpu-lookahead-appendices.md#round-workload-bounds) |
-| 状态时间平移等价 | [coalescence](dynamic-gpu-lookahead-appendices.md#round-coalescence) |
-| 在途时间分段与跳变 | [residual](dynamic-gpu-lookahead-appendices.md#round-residual) |
-| 共同参数差值域与最坏遗憾 | [candidate-difference](dynamic-gpu-lookahead-appendices.md#round-candidate-difference) |
-| 原首次决策、多候选与个体约束 | [first-decision](dynamic-gpu-lookahead-appendices.md#round-first-decision) |
-| 无在途入口、未来 SSD 成本与预算前沿 | [ssd-frontier](dynamic-gpu-lookahead-appendices.md#round-ssd-frontier) |
+| 收益停止界 | [bounds](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-bounds) |
+| 前瞻信息与真实临界耗时 | [value](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-value) |
+| 联合占用、后缀计算与共同误差 | [joint-error](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-joint-error) |
+| Phase 1 精确截点 | [phase1-score](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-phase1-score) |
+| 无后继预取触发条件 | [trigger](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-trigger) |
+| 抽象外部性证书 | [externality](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-externality) |
+| 可观察工作量界 | [workload-bounds](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-workload-bounds) |
+| 状态时间平移等价 | [coalescence](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-coalescence) |
+| 在途时间分段与跳变 | [residual](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-residual) |
+| 共同参数差值域与最坏遗憾 | [candidate-difference](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-candidate-difference) |
+| 原首次决策、多候选与个体约束 | [first-decision](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-first-decision) |
+| 无在途入口、未来 SSD 成本与预算前沿 | [ssd-frontier](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-ssd-frontier) |
 | 多步组合条件、旧参照反例与批次审计 | 本文第 3.9 节，直接合并，不另建同轮报告 |
 | 固定基线因果 rollout 与参照漂移 | 本文第 3.10 节，实际快照证据 7740/7741 |
 | 原首次入窗的受保护 rollout 与 KV 参照项 | 本文第 3.11 节，证据 7750/7751/7752 |
@@ -1149,11 +1149,11 @@ $$
 
 若 $q_a=q_b$，已有状态等价定理给出 $J_a-J_b=g+m(t_a-t_b)$。若仅一个在途剩余时间 $r$ 不同，已有分段分析说明 $W(q)$ 在固定事件分支内是仿射，但跨分支可跳变。因此，未来工作应对状态项建立分支化区间，而不是寻找一个全局连续距离。若存在未到达请求或绝对时间变化的速度，须把这些相对时间表加入状态，不能直接套用上述时间平移分解。
 
-比较器 [study_lookahead_candidate_difference.py](../scripts/cpu/lookahead/robustness/study_lookahead_candidate_difference.py) 对同一快照的两条固定计划分别分支，再合并事件阈值；开区间与单点分开表示。它已扩展到 RAM/SSD、预测成本和通道速度，并以原模拟器的逐请求完成时刻核对。审计和适用边界见[候选差共同分段](dynamic-gpu-lookahead-appendices.md#round-candidate-difference)。
+比较器 [study_lookahead_candidate_difference.py](../scripts/cpu/lookahead/robustness/study_lookahead_candidate_difference.py) 对同一快照的两条固定计划分别分支，再合并事件阈值；开区间与单点分开表示。它已扩展到 RAM/SSD、预测成本和通道速度，并以原模拟器的逐请求完成时刻核对。审计和适用边界见[候选差共同分段](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-candidate-difference)。
 
-进一步的[首次决策研究](dynamic-gpu-lookahead-appendices.md#round-first-decision)已保留运行中计算与活动依赖，复用所有候选的单臂轨迹计算多动作最坏遗憾，并用逐请求退化上确界定义安全集合。两批 608 次首次决策通过向量核对；零退化保护会改变部分纯稳健动作。无在途入口由后续未来 SSD 倍率研究补齐。
+进一步的[首次决策研究](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-first-decision)已保留运行中计算与活动依赖，复用所有候选的单臂轨迹计算多动作最坏遗憾，并用逐请求退化上确界定义安全集合。两批 608 次首次决策通过向量核对；零退化保护会改变部分纯稳健动作。无在途入口由后续未来 SSD 倍率研究补齐。
 
-[未来 SSD 倍率研究](dynamic-gpu-lookahead-appendices.md#round-ssd-frontier)已补上无在途入口并构建预算前沿；指标支配只能保最优值，计入平局优先级才能保动作。统一报告第 3.9–3.12 节合并了计划级组合、基线延续价值、首次入窗及活动状态误差：固定同一基线已放宽到已知非单位恒定速率；参照漂移与成对状态模型缺项必须分别计费。已有两请求反例证明预测状态安全可能实际退化，未来 SSD 成本域不能覆盖漏掉的活动状态维度。联合状态与成本域已有第 3.13 节子域证据；第 3.21–3.22 节进一步覆盖给定正残余域及观测条件集合。真实误差域覆盖、一般多参数域和低成本复杂度仍未完成。
+[未来 SSD 倍率研究](archive/gpu-studies/dynamic-gpu-lookahead-appendices.md#round-ssd-frontier)已补上无在途入口并构建预算前沿；指标支配只能保最优值，计入平局优先级才能保动作。统一报告第 3.9–3.12 节合并了计划级组合、基线延续价值、首次入窗及活动状态误差：固定同一基线已放宽到已知非单位恒定速率；参照漂移与成对状态模型缺项必须分别计费。已有两请求反例证明预测状态安全可能实际退化，未来 SSD 成本域不能覆盖漏掉的活动状态维度。联合状态与成本域已有第 3.13 节子域证据；第 3.21–3.22 节进一步覆盖给定正残余域及观测条件集合。真实误差域覆盖、一般多参数域和低成本复杂度仍未完成。
 
 ### 7.4 剪枝与停止规则的层次
 
