@@ -176,7 +176,10 @@ def get_raw(name,archive,prov):
 def queue_evidence(archive,prov):
     name='r07-live-queue-interface.json'; dst=E/name
     if archive:dst.write_bytes((OUT/name).read_bytes())
-    raw=dst.read_bytes(); prov['queue_interface']=dict(raw_sha256=sha256(raw).hexdigest())
+    raw=dst.read_bytes()
+    # Git normalizes JSON to LF. The original Windows capture used CRLF.
+    captured=raw.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
+    prov['queue_interface']=dict(raw_sha256=sha256(captured).hexdigest())
     e=json.loads(raw); p=e['probes']; req=e['requests']
     assert [x['expected_pending'] for x in p]==[0,1,2] and [r['length'] for r in req]==[160,160,2,2]
     assert all(processing(q['snapshot'],i) for i in (0,1) for q in p)
