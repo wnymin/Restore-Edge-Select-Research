@@ -8,7 +8,7 @@
 | 研究结论、证据与适用边界 | [统一研究报告](dynamic-gpu-lookahead-report.md) |
 | R01 至今的分工、状态与验收 | [研究阶段台账](work-plan.md) |
 | R07：冻结主干后的泛化检验 | [扩展验证结果](r07-extension-results.md) · [研究设计](r07-entry-replay-generalization.md) · [到达分线结果](r07-arrival-results.md) · [反常点](archive/r07-process/r07-anomaly-register.md) · [本机真实调度结果](r07-live-scheduling-results.md) |
-| R08 模型与暂存容量 | [结果与适用域](r08-model-capacity-results.md) · [反例验证与结项](r08-takeover-results.md) |
+| R08 模型与暂存容量 | [结果与适用域](r08-model-capacity-results.md) · [反例验证与结项](r08-takeover-results.md) · [协作者复核与证据](r08-collaborator-submission.md) |
 | R09 选点时间、质量与预算 | [预算曲线与验收](r09-decision-time-budget-results.md) |
 | R10 真实恢复与服务 | [本地验收](r10-local-acceptance.md) · [自然负载与最近点对照](r10-natural-workload.md) |
 | R11 代码 Agent 与恢复成本边界 | [轨迹、回放、真机对照与复算](r11-coding-agent-recovery.md) |

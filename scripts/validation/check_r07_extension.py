@@ -311,9 +311,16 @@ def verify(*, run_tail=False, replay=False, routes=False):
     raw={}
     for n,m in met.items():
         p=EVIDENCE/m['archive']
-        assert file_hash(p)==m['archive_sha256']
-        raw[n]=p.read_bytes() if n=='preflight' else gzip.decompress(p.read_bytes())
-        assert sha256(raw[n]).hexdigest()==m['output_sha256']
+        if n=='preflight':
+            # The uncompressed JSON has a single pin and Git may normalize its newlines.
+            assert m['archive_sha256']==m['output_sha256']
+            assert source_matches(p,m['archive_sha256']),p
+            raw[n]=p.read_bytes()
+        else:
+            archive_bytes=p.read_bytes()
+            assert sha256(archive_bytes).hexdigest()==m['archive_sha256'],p
+            raw[n]=gzip.decompress(archive_bytes)
+            assert sha256(raw[n]).hexdigest()==m['output_sha256'],p
         for j,d in m['files'].items(): assert source_matches(ROOT/j,d,historical=True),j
     assert met['timed']['input_sha256']==sha256(raw['holdout']).hexdigest()
     cfg=read(CONFIG)
