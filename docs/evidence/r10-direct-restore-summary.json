@@ -1,0 +1,299 @@
+{
+  "final_state_byte_equal": true,
+  "formal_matching_greedy_positions": 864,
+  "formal_uploads": 108,
+  "gpu_budget_snapshots": [
+    [
+      "before-model",
+      0,
+      7537164288,
+      8342470656
+    ],
+    [
+      "contexts-ready",
+      0,
+      3523104768,
+      8342470656
+    ],
+    [
+      "pinned-and-contexts",
+      512,
+      3474345984,
+      8342470656
+    ],
+    [
+      "pinned-and-contexts",
+      1024,
+      3474345984,
+      8342470656
+    ],
+    [
+      "pinned-and-contexts",
+      1536,
+      3474345984,
+      8342470656
+    ],
+    [
+      "end",
+      0,
+      3474345984,
+      8342470656
+    ]
+  ],
+  "max_abs_logit_error": 0.0,
+  "repeats": 12,
+  "results": {
+    "512": {
+      "arms": {
+        "ram-isolated": {
+          "arm_start_to_signal_ms": {
+            "max": 16.3744,
+            "median": 15.485800000000001,
+            "min": 14.5046,
+            "p90_nearest_rank": 15.9091
+          },
+          "eight_tokens_ms": {
+            "max": 116.4514,
+            "median": 115.75905,
+            "min": 115.20989999999999,
+            "p90_nearest_rank": 116.25500000000001
+          },
+          "submit_to_signal_ms": {
+            "max": 5.878399999999999,
+            "median": 5.668850000000001,
+            "min": 5.520399999999999,
+            "p90_nearest_rank": 5.7928
+          }
+        },
+        "ram-overlap": {
+          "eight_tokens_ms": {
+            "max": 117.0387,
+            "median": 116.55499999999998,
+            "min": 116.10140000000001,
+            "p90_nearest_rank": 117.03320000000002
+          },
+          "pred_submit_to_observed_fence_upper_bound_ms": {
+            "max": 181.8998,
+            "median": 175.16700000000003,
+            "min": 172.4058,
+            "p90_nearest_rank": 179.2298
+          },
+          "predecessor_device_fence_pending_when_upload_signaled": 12,
+          "submit_to_signal_ms": {
+            "max": 5.865699999999997,
+            "median": 5.5855,
+            "min": 5.488500000000002,
+            "p90_nearest_rank": 5.712199999999999
+          }
+        },
+        "split-ssd-overlap": {
+          "eight_tokens_ms": {
+            "max": 116.80269999999999,
+            "median": 116.39429999999999,
+            "min": 115.70329999999998,
+            "p90_nearest_rank": 116.77439999999999
+          },
+          "post_submit_to_read_complete_ms": {
+            "max": 34.3254,
+            "median": 28.0011,
+            "min": 19.7429,
+            "p90_nearest_rank": 31.941199999999995
+          },
+          "pred_submit_to_observed_fence_upper_bound_ms": {
+            "max": 180.5688,
+            "median": 175.9928,
+            "min": 171.6217,
+            "p90_nearest_rank": 178.55030000000002
+          },
+          "predecessor_device_fence_pending_when_upload_signaled": 12,
+          "read_file_bytes": [
+            52695040
+          ],
+          "read_from_process_bytes": [
+            52695040
+          ],
+          "submit_to_signal_ms": {
+            "max": 5.7509000000000015,
+            "median": 5.584200000000003,
+            "min": 5.4786,
+            "p90_nearest_rank": 5.715699999999998
+          }
+        }
+      },
+      "attention_encoded_bytes": 16789720,
+      "checkpoint_bytes": 69481260,
+      "dma_bytes": 69468160,
+      "span_count": 64
+    },
+    "1024": {
+      "arms": {
+        "ram-isolated": {
+          "arm_start_to_signal_ms": {
+            "max": 20.0684,
+            "median": 19.17895,
+            "min": 18.3663,
+            "p90_nearest_rank": 19.5239
+          },
+          "eight_tokens_ms": {
+            "max": 117.11759999999998,
+            "median": 116.4228,
+            "min": 115.94139999999999,
+            "p90_nearest_rank": 116.96610000000001
+          },
+          "submit_to_signal_ms": {
+            "max": 7.0718,
+            "median": 6.96295,
+            "min": 6.829199999999998,
+            "p90_nearest_rank": 7.0519
+          }
+        },
+        "ram-overlap": {
+          "eight_tokens_ms": {
+            "max": 126.06589999999997,
+            "median": 117.04955000000001,
+            "min": 116.29800000000003,
+            "p90_nearest_rank": 117.98719999999997
+          },
+          "pred_submit_to_observed_fence_upper_bound_ms": {
+            "max": 178.9468,
+            "median": 172.70595,
+            "min": 171.4997,
+            "p90_nearest_rank": 177.75369999999998
+          },
+          "predecessor_device_fence_pending_when_upload_signaled": 12,
+          "submit_to_signal_ms": {
+            "max": 7.3642,
+            "median": 6.95715,
+            "min": 6.8779,
+            "p90_nearest_rank": 7.158899999999999
+          }
+        },
+        "split-ssd-overlap": {
+          "eight_tokens_ms": {
+            "max": 118.99200000000002,
+            "median": 117.07775000000001,
+            "min": 116.52079999999998,
+            "p90_nearest_rank": 117.83980000000003
+          },
+          "post_submit_to_read_complete_ms": {
+            "max": 36.9931,
+            "median": 25.741600000000002,
+            "min": 19.907,
+            "p90_nearest_rank": 27.600900000000003
+          },
+          "pred_submit_to_observed_fence_upper_bound_ms": {
+            "max": 180.0861,
+            "median": 173.1413,
+            "min": 172.1361,
+            "p90_nearest_rank": 177.4278
+          },
+          "predecessor_device_fence_pending_when_upload_signaled": 12,
+          "read_file_bytes": [
+            52695040
+          ],
+          "read_from_process_bytes": [
+            52695040
+          ],
+          "submit_to_signal_ms": {
+            "max": 7.0687,
+            "median": 6.9481,
+            "min": 6.802500000000002,
+            "p90_nearest_rank": 7.059599999999996
+          }
+        }
+      },
+      "attention_encoded_bytes": 33579224,
+      "checkpoint_bytes": 86270764,
+      "dma_bytes": 86245376,
+      "span_count": 64
+    },
+    "1536": {
+      "arms": {
+        "ram-isolated": {
+          "arm_start_to_signal_ms": {
+            "max": 23.7054,
+            "median": 22.912399999999998,
+            "min": 21.7098,
+            "p90_nearest_rank": 23.4043
+          },
+          "eight_tokens_ms": {
+            "max": 126.9703,
+            "median": 116.9685,
+            "min": 116.40050000000001,
+            "p90_nearest_rank": 118.6977
+          },
+          "submit_to_signal_ms": {
+            "max": 8.4361,
+            "median": 8.2126,
+            "min": 8.1316,
+            "p90_nearest_rank": 8.306600000000001
+          }
+        },
+        "ram-overlap": {
+          "eight_tokens_ms": {
+            "max": 119.62140000000002,
+            "median": 117.53985000000002,
+            "min": 117.14790000000002,
+            "p90_nearest_rank": 119.17360000000002
+          },
+          "pred_submit_to_observed_fence_upper_bound_ms": {
+            "max": 186.6938,
+            "median": 173.80545,
+            "min": 171.9032,
+            "p90_nearest_rank": 184.0012
+          },
+          "predecessor_device_fence_pending_when_upload_signaled": 12,
+          "submit_to_signal_ms": {
+            "max": 8.398599999999998,
+            "median": 8.29865,
+            "min": 8.164399999999997,
+            "p90_nearest_rank": 8.3767
+          }
+        },
+        "split-ssd-overlap": {
+          "eight_tokens_ms": {
+            "max": 124.84,
+            "median": 117.77074999999999,
+            "min": 117.2295,
+            "p90_nearest_rank": 119.38499999999999
+          },
+          "post_submit_to_read_complete_ms": {
+            "max": 27.8575,
+            "median": 25.94635,
+            "min": 19.7974,
+            "p90_nearest_rank": 27.2211
+          },
+          "pred_submit_to_observed_fence_upper_bound_ms": {
+            "max": 184.5289,
+            "median": 173.90699999999998,
+            "min": 171.7686,
+            "p90_nearest_rank": 182.3343
+          },
+          "predecessor_device_fence_pending_when_upload_signaled": 12,
+          "read_file_bytes": [
+            52695040
+          ],
+          "read_from_process_bytes": [
+            52695040
+          ],
+          "submit_to_signal_ms": {
+            "max": 8.453600000000002,
+            "median": 8.265049999999999,
+            "min": 8.122099999999996,
+            "p90_nearest_rank": 8.4313
+          }
+        }
+      },
+      "attention_encoded_bytes": 50368728,
+      "checkpoint_bytes": 103060268,
+      "dma_bytes": 103022592,
+      "span_count": 64
+    }
+  },
+  "same_source_baseline_arms": 12,
+  "sha256": {
+    "baseline": "7344f938c57e09d643759c3927c331abfedd998e03fb83debb75fed7a9edd972",
+    "log": "a5595541d82cbc80ef96415b68355776fe6624d0b8ca6c51b6e980caa45070fb",
+    "raw": "5197873fe98147e3befc1cba5238b0c3ed9002078b802f3b1530ad086b396fb6"
+  }
+}

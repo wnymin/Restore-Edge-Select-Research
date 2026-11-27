@@ -1,0 +1,52 @@
+{
+  "aa_summary_sha256": "0c7afbf3ca17daf616b9fd7aa0e73084de5691b264dae78bbedd6beff6713a99",
+  "archive_sha256": "b575e682d3060caa3f465af601d35f991e30dfda08bbb35dacb04853761924f0",
+  "max_pair_abs_mean_change_ms": 1.160845312499987,
+  "mean_change_reaches_reference": false,
+  "observed_logging_mean_change_ms": -1.1544109374999891,
+  "records": [
+    {
+      "different_choices": 0,
+      "first": "off",
+      "off": {
+        "drain_utc": "2026-11-25T13:48:23.050704+00:00",
+        "mean_ms": 184.033515625,
+        "p95_ms": 322.3323,
+        "receipt_sha256": "29d71fb16b5429d594df5a61456cd351372ace639f34ac8af7f6e42934e8454d",
+        "start_utc": "2026-11-25T13:48:06.413596+00:00"
+      },
+      "on": {
+        "drain_utc": "2026-11-25T13:49:16.832893+00:00",
+        "mean_ms": 182.88553906250002,
+        "p95_ms": 324.5634,
+        "receipt_sha256": "63656556794dadfe8ad5f7dbf993ed5223c50b79c172f86ababf1fa994e22a9e",
+        "start_utc": "2026-11-25T13:49:00.191817+00:00"
+      },
+      "on_only_ms": -1.1479765624999914,
+      "p95_change_ms": 2.2311000000000263
+    },
+    {
+      "different_choices": 0,
+      "first": "on",
+      "off": {
+        "drain_utc": "2026-11-25T13:51:12.939336+00:00",
+        "mean_ms": 186.480159375,
+        "p95_ms": 337.9534,
+        "receipt_sha256": "e2b5154550e1285074d33c9f0570b42e59ca9aad5e7a0c1f91a1cbe53b594c2b",
+        "start_utc": "2026-11-25T13:50:56.262332+00:00"
+      },
+      "on": {
+        "drain_utc": "2026-11-25T13:50:11.800514+00:00",
+        "mean_ms": 185.3193140625,
+        "p95_ms": 327.0182,
+        "receipt_sha256": "d714a165b53b0d045b70f70df4bfb9c03a4c60544be54ad81c500eded0ad192a",
+        "start_utc": "2026-11-25T13:49:55.157203+00:00"
+      },
+      "on_only_ms": -1.160845312499987,
+      "p95_change_ms": -10.935200000000009
+    }
+  ],
+  "reference_effect_ms": 40.93773437499999,
+  "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+  "scope": "two counterbalanced controls on one calibration block; no equivalence inference"
+}

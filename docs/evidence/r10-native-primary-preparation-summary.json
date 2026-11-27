@@ -1,0 +1,169 @@
+{
+  "archive_sha256": "95a549079e6a3f5a5e3192d231c82d14c7370270921b1a9764d4e2270edd4d8d",
+  "blocks": [
+    {
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "checkpoints_by_depth": {
+        "512": 8,
+        "1024": 8,
+        "1536": 8
+      },
+      "exact_checkpoints": 24,
+      "exact_logits_positions": 192,
+      "family": "bailian",
+      "seal_sha256": "68751c8ef67e2f742cf9b602bba3b251982d024fb3088ad39d8a274e838ed1de",
+      "shared_identity_checks": 24,
+      "source": "qwen_coder_blksz_16.jsonl"
+    },
+    {
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "checkpoints_by_depth": {
+        "512": 9,
+        "1024": 8,
+        "1536": 8
+      },
+      "exact_checkpoints": 25,
+      "exact_logits_positions": 200,
+      "family": "bailian",
+      "seal_sha256": "53b4b4b6e6aa1d47ac6f9af27ef70f10498b1d7867c22c3f67388655fa158f37",
+      "shared_identity_checks": 24,
+      "source": "qwen_coder_blksz_16.jsonl"
+    },
+    {
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "checkpoints_by_depth": {
+        "512": 9,
+        "1024": 8,
+        "1536": 6
+      },
+      "exact_checkpoints": 23,
+      "exact_logits_positions": 184,
+      "family": "bailian",
+      "seal_sha256": "9521d8b96bbfa76c00b6cc0e51ded93d12e1af85c3afa6d80c5954b74da60598",
+      "shared_identity_checks": 20,
+      "source": "qwen_thinking_blksz_16.jsonl"
+    },
+    {
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "checkpoints_by_depth": {
+        "512": 12,
+        "1024": 10,
+        "1536": 6
+      },
+      "exact_checkpoints": 28,
+      "exact_logits_positions": 224,
+      "family": "bailian",
+      "seal_sha256": "4b5cef71d6a9beeaca99d8af46e072b4ed588d568e41da3018de2bd8ff601b29",
+      "shared_identity_checks": 22,
+      "source": "qwen_traceA_blksz_16.jsonl"
+    },
+    {
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "checkpoints_by_depth": {
+        "512": 4,
+        "1024": 3,
+        "1536": 2
+      },
+      "exact_checkpoints": 9,
+      "exact_logits_positions": 72,
+      "family": "bailian",
+      "seal_sha256": "4e5b90b8bc2791c7349974c7f15b5a543c1f08ec2efa4652e178d09e48897da5",
+      "shared_identity_checks": 7,
+      "source": "qwen_traceA_blksz_16.jsonl"
+    },
+    {
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "checkpoints_by_depth": {
+        "512": 10,
+        "1024": 3,
+        "1536": 2
+      },
+      "exact_checkpoints": 15,
+      "exact_logits_positions": 120,
+      "family": "bailian",
+      "seal_sha256": "5cf88d4e8237b4be0e25c7f31ae9e3a1df12274693b6736787684823f0e2c0fd",
+      "shared_identity_checks": 7,
+      "source": "qwen_traceB_blksz_16.jsonl"
+    },
+    {
+      "block": "oasst-hold-01",
+      "checkpoints_by_depth": {
+        "512": 8,
+        "1024": 1
+      },
+      "exact_checkpoints": 9,
+      "exact_logits_positions": 72,
+      "family": "oasst",
+      "seal_sha256": "dd98000965d95d39caea9da0c82cd542c586a082104387af942404082abd27aa",
+      "shared_identity_checks": 1,
+      "source": "oasst1"
+    },
+    {
+      "block": "oasst-hold-02",
+      "checkpoints_by_depth": {
+        "512": 8,
+        "1024": 1
+      },
+      "exact_checkpoints": 9,
+      "exact_logits_positions": 72,
+      "family": "oasst",
+      "seal_sha256": "a63b55f2e2e2d243a0ee46f5acdbda2443eee457038a35377474194e90ca4671",
+      "shared_identity_checks": 1,
+      "source": "oasst1"
+    },
+    {
+      "block": "oasst-hold-03",
+      "checkpoints_by_depth": {
+        "512": 8
+      },
+      "exact_checkpoints": 8,
+      "exact_logits_positions": 64,
+      "family": "oasst",
+      "seal_sha256": "36a71bef8c2c61978cfd6eb143688a64e9f3575d13d86fb5d9a97ada7419223e",
+      "shared_identity_checks": 0,
+      "source": "oasst1"
+    },
+    {
+      "block": "oasst-hold-04",
+      "checkpoints_by_depth": {
+        "512": 8
+      },
+      "exact_checkpoints": 8,
+      "exact_logits_positions": 64,
+      "family": "oasst",
+      "seal_sha256": "05dc78501678bafbf2b44eac05404cf8ed09bb6d273ea725a8d1e8635a8ece23",
+      "shared_identity_checks": 0,
+      "source": "oasst1"
+    },
+    {
+      "block": "oasst-hold-05",
+      "checkpoints_by_depth": {
+        "512": 8
+      },
+      "exact_checkpoints": 8,
+      "exact_logits_positions": 64,
+      "family": "oasst",
+      "seal_sha256": "4d31daff4846a4c8d6267da2a1385c505c3dde49cfdcaa590bf18f733de21e32",
+      "shared_identity_checks": 0,
+      "source": "oasst1"
+    },
+    {
+      "block": "oasst-hold-06",
+      "checkpoints_by_depth": {
+        "512": 8,
+        "1024": 1
+      },
+      "exact_checkpoints": 9,
+      "exact_logits_positions": 72,
+      "family": "oasst",
+      "seal_sha256": "34ca1f8f02fc8a4fbfc286ce7ef1b9c7b48cbfd25e8ddf46908bae133159b2bf",
+      "shared_identity_checks": 1,
+      "source": "oasst1"
+    }
+  ],
+  "exact_checkpoints": 175,
+  "exact_logits_positions": 1400,
+  "lock_sha256": "f02fede933e294a1cf377d1ad1080821ce0118f89113dc48483c1af19cb9fd4d",
+  "scope": "untimed primary preparation sidecars; no AB outcomes or repeated hashing of raw object bytes",
+  "shared_identity_checks": 107
+}

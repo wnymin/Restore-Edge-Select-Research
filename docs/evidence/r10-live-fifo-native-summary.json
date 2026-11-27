@@ -1,0 +1,143 @@
+{
+  "data": {
+    "fifo-entry-replay-cold": {
+      "controlled_ssd_hold_ms": 0,
+      "csv_sha256": "7d97ac35d246937f26a064ef64b5fb29ada6270bf8e02a67e5ea278515c59d69",
+      "formal_blocks": 8,
+      "policy": "entry-replay",
+      "selected": [
+        [
+          0,
+          512,
+          1024
+        ]
+      ],
+      "snapshots_sha256": "8c6f2c78038692a2f5b4135dcda9eb717f8f81ee35d17be29a7847187618307a",
+      "totals": {
+        "active_kv_handoffs": 0,
+        "cold_reads": 40,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 0,
+        "verified_logits": 128
+      }
+    },
+    "fifo-entry-replay-late": {
+      "controlled_ssd_hold_ms": 0,
+      "csv_sha256": "f8331343486be67feda94cd1795caf04509e5a09098c88c7e82cdb5cc6e99dc0",
+      "formal_blocks": 8,
+      "policy": "entry-replay",
+      "selected": [
+        [
+          0,
+          512,
+          1024
+        ]
+      ],
+      "snapshots_sha256": "58db9bc0e726f2965c59846376e7728427d67fc2585195190efd78df798824cb",
+      "totals": {
+        "active_kv_handoffs": 8,
+        "cold_reads": 0,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 32,
+        "verified_logits": 128
+      }
+    },
+    "fifo-entry-replay-wide": {
+      "controlled_ssd_hold_ms": 0,
+      "csv_sha256": "aca9864e2b1a6a450395f29e525019a54d2827784c5c3d5bd08c591e2d393384",
+      "formal_blocks": 8,
+      "policy": "entry-replay",
+      "selected": [
+        [
+          0,
+          512,
+          1024
+        ]
+      ],
+      "snapshots_sha256": "5ac4b9971901a0d62b06d1749c14cd55ce21f7901ad5b31df2d2e51cae0e7839",
+      "totals": {
+        "active_kv_handoffs": 0,
+        "cold_reads": 0,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 32,
+        "verified_logits": 128
+      }
+    },
+    "fifo-local-cost-cold": {
+      "controlled_ssd_hold_ms": 0,
+      "csv_sha256": "6c822f9991f781eebae0f95afc77ef3d3b1a88f2965526d1628fcdc38f4e1665",
+      "formal_blocks": 8,
+      "policy": "local-cost",
+      "selected": [
+        [
+          0,
+          512,
+          1024
+        ]
+      ],
+      "snapshots_sha256": "6594758ba1b1a0de1661b22adc1cf88549f5d95396504f44fcbb16ed0c8aefa4",
+      "totals": {
+        "active_kv_handoffs": 0,
+        "cold_reads": 40,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 0,
+        "verified_logits": 128
+      }
+    },
+    "fifo-local-cost-late": {
+      "controlled_ssd_hold_ms": 0,
+      "csv_sha256": "116991210d8c13bba0ca219b7be3fd8c6142fdb20c06dab47bf8259d2d0cb8b7",
+      "formal_blocks": 8,
+      "policy": "local-cost",
+      "selected": [
+        [
+          0,
+          512,
+          1024
+        ]
+      ],
+      "snapshots_sha256": "f734f64e918f1e3efad9ba32f9a38ee70a2b30820fd1050c5feb35d40cc8922e",
+      "totals": {
+        "active_kv_handoffs": 8,
+        "cold_reads": 0,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 32,
+        "verified_logits": 128
+      }
+    },
+    "fifo-local-cost-wide": {
+      "controlled_ssd_hold_ms": 0,
+      "csv_sha256": "fd9268e5de3c324097c55c4a1e3f65b36cb260a53534644ecb0a92e401d7578d",
+      "formal_blocks": 8,
+      "policy": "local-cost",
+      "selected": [
+        [
+          0,
+          512,
+          1024
+        ]
+      ],
+      "snapshots_sha256": "5af4477737f2a53e931cc0e78a4f8f9e34dae29350fa29fa63dbec7b6ec0ca36",
+      "totals": {
+        "active_kv_handoffs": 0,
+        "cold_reads": 0,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 32,
+        "verified_logits": 128
+      }
+    }
+  },
+  "scope": "three-request catalogue, diagnostic timings include IPC, polling and exact readback"
+}

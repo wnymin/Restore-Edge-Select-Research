@@ -1,0 +1,105 @@
+{
+  "qualification": {
+    "existing_switch_is_policy_compatible": false,
+    "native_single_slot_confirmed": true,
+    "reason": "stock scheduling/prompt-cache path has no R10 object-lease and choice handoff in checked units",
+    "stock_continuous_batch_path_found": true
+  },
+  "r10_snapshot": {
+    "basename": "live_snapshot.py",
+    "matches": {
+      "active_dependencies": {
+        "line": 18,
+        "text": "active_deps: tuple[str, ...] = ()"
+      },
+      "serial_projection": {
+        "line": 84,
+        "text": "raise ValueError(\"Invalid active head or active dependency identity\")"
+      },
+      "transfer_object": {
+        "line": 21,
+        "text": "transfer_object: str | None = None"
+      }
+    },
+    "sha256": "e2b7dcfa70e814dfc3118b4e2e7b7cd4b701ddac6c773060f557fdd9a7bc8628"
+  },
+  "r10_worker": {
+    "basename": "r10_catalog_worker.cpp",
+    "matches": {
+      "active_decode": {
+        "line": 440,
+        "text": "need(llama_decode(ctx_, llama_batch_get_one(&token, 1)) == 0, \"generation token failed\");"
+      },
+      "context_slots": {
+        "line": 529,
+        "text": "cp.n_seq_max = 1;"
+      },
+      "current_target": {
+        "line": 459,
+        "text": "Target current_;"
+      },
+      "native_restore": {
+        "line": 302,
+        "text": "if (ledger_.recurrent_must_preserve(release, has_suffix)) materialize(req, c.deps.back(), \"preserve-recurrent\");"
+      },
+      "prefill": {
+        "line": 168,
+        "text": "need(n && llama_decode(ctx_, llama_batch_get_one(tokens.data() + pos_, int(n))) == 0, \"native prompt chunk failed\");"
+      }
+    },
+    "sha256": "ba94ad68a88f01b296db8adbad5dbeccb56406130c8419ffc4b8bc8768e2be65"
+  },
+  "scope": "source inspection only; no runtime throughput evidence",
+  "stock_server": {
+    "basename": "server-context.cpp",
+    "matches": {
+      "batching": {
+        "line": 3682,
+        "text": "ret = llama_decode(ctx_tgt, batch_view);"
+      },
+      "compatibility": {
+        "line": 3124,
+        "text": "if (slot_batched && !slot_batched->can_batch_with(slot)) {"
+      },
+      "mixing_gate": {
+        "line": 3111,
+        "text": "if (params_base.cont_batching || batch.size() == 0) {"
+      },
+      "prefix": {
+        "line": 3219,
+        "text": "n_past = slot.prompt.tokens.get_common_prefix(input_tokens);"
+      },
+      "slot_selection": {
+        "line": 1547,
+        "text": "server_slot * get_available_slot(const server_task & task) {"
+      }
+    },
+    "sha256": "2f5d65ce6ef0504b5c8cf55a74c68d3959c49784ba380ef836566b7a7d5fa12b"
+  },
+  "upstream_checked_unit_sha256": {
+    "server-chat.cpp": "a7b148e59d1104adf2d3a04f9e23602511ca88bb01a1788c830360d792677c94",
+    "server-chat.h": "cf75156087e4abe3e6879617abfccbe84561daa00de300396606c9bc99801d41",
+    "server-common.cpp": "8e48dd897d85af9769819b54e589b318aec5912aa2131c1c59174d6bb6250b3d",
+    "server-common.h": "635a7e37085dee6a1a3767bed21793bf1879828372e359350cae2c75fb167b17",
+    "server-context.cpp": "2f5d65ce6ef0504b5c8cf55a74c68d3959c49784ba380ef836566b7a7d5fa12b",
+    "server-context.h": "8885184dc08bd35f7b96cdbec92efa440b0b4d4e2bd5fc81ab8cf0c408430b73",
+    "server-cors-proxy.h": "e8ccea63c108de65a8cdf2f8f42577fda0b70ac2a3521585f610609afe693814",
+    "server-http.cpp": "fc9d307525d7db13fcee3d32e0d4587cbd2f3d93bcc70a86b2cedc16b336ce11",
+    "server-http.h": "822a22ab2e8072b3447aadda5c941e9968b7d21bf01277f817b5ab0fce8c5e41",
+    "server-mcp.cpp": "d328e3c9384ba3827c0d2aabbaf61ce26475aefda1771e4183b37d1836133ab9",
+    "server-mcp.h": "a324510c266fa20cab849d4c2be88ee36e546870b157f3c4215293c3c5cf5dcf",
+    "server-models.cpp": "8870357abbb94bdbde689043acfc65f2ab952f6855970b916b6da163d7e375a8",
+    "server-models.h": "62707595e45bc3b4c267add5bf669a53e5d984b6acda7a01fd3e612732f66de4",
+    "server-queue.cpp": "0e196113d16f130230d2cc0b232915e1f5b4f1dda184790afbfdc4986dd1fd58",
+    "server-queue.h": "03589a5d4feaec7910f2d11a87cf86edb932cf04ff97b1bb26a2c6b8593156b3",
+    "server-schema.cpp": "c3d2899d2a078adae6c4971b3da825bad1aab9cda6b2af652e41e6aef1665274",
+    "server-schema.h": "0b8656932a3d19c2980554913a4d7e215d6dbfb49b2db2c1b82a30d563bd3b30",
+    "server-stream.cpp": "96cea95271afcb6e359fd5666c3de93e1dc9c94b35b7d961ca3e9d9854575b1a",
+    "server-stream.h": "01986f4c46882f94f5c08c5d481cb47e30150c312c927219d3eefc34f5a67fed",
+    "server-task.cpp": "0fd5c8df2525e61214986e8abe3fc4edbb92f5dd652c9c2bfd1bc2712218a585",
+    "server-task.h": "413733f2c47897e9a531dbc382a72e7676d46164d92996da1f008185f059bcf2",
+    "server-tools.cpp": "9213d2c45718bd3703a3d788b0cb7aad4d9722397f102962838fa23a123b3f4d",
+    "server-tools.h": "497713579fbf6436dd0ceb927e6b541bc22ed88a65d4d04d929bbbc6914e91e9"
+  },
+  "upstream_units_exposing_r10_hooks": []
+}

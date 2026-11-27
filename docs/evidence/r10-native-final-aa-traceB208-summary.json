@@ -1,0 +1,52 @@
+{
+  "a": {
+    "actual_scatter_observations": {
+      "native-scatter": 52,
+      "preserve-old-active": 1
+    },
+    "charged_peak_bytes": 86245376,
+    "choices": {
+      "0": 64,
+      "512": 31,
+      "1024": 1
+    },
+    "max_arrival_slip_ms": 15.8069,
+    "min_arrival_slip_ms": 0.2498,
+    "p95_chooser_ms": 0.704,
+    "p95_observation_delay_ms": 1506.6318,
+    "resources": {},
+    "response_mean_ms": 1376.7274322916667,
+    "response_median_ms": 1135.08205,
+    "response_p95_ms": 4493.9575
+  },
+  "abs_mean_difference_ms": 115.37751666666668,
+  "abs_p95_difference_ms": 1857.9693000000007,
+  "archive_sha256": "c968c21d26aa2478af66289af68e98680d6b7a36159957c4d98c7defbf2d1f13",
+  "b": {
+    "actual_scatter_observations": {
+      "native-scatter": 53,
+      "preserve-old-active": 1,
+      "preserve-recurrent": 1
+    },
+    "charged_peak_bytes": 86245376,
+    "choices": {
+      "0": 64,
+      "512": 31,
+      "1024": 1
+    },
+    "max_arrival_slip_ms": 16.3345,
+    "min_arrival_slip_ms": 0.336,
+    "p95_chooser_ms": 0.6068,
+    "p95_observation_delay_ms": 465.8496,
+    "resources": {},
+    "response_mean_ms": 1261.349915625,
+    "response_median_ms": 1274.8701,
+    "response_p95_ms": 2635.9882
+  },
+  "block": "qwen_traceB_blksz_16-208-pilot",
+  "capacity_bytes": 86245376,
+  "choice_mismatches": 0,
+  "cost_profile_sha256": "036e0e27fd4c8879555eb5bfb36257274e4d19a78740a59c5f31ae28e9e028c1",
+  "policy": "local-cost",
+  "scope": "same-policy full-block A/A under provisional costs; not an A/B effect estimate"
+}

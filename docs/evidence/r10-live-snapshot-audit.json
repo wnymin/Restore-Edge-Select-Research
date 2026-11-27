@@ -1,0 +1,36 @@
+{
+  "chooser_ast_sha256": "e50b837a3a94fd346bf688ff26517984c10955425f533fecce5057a700d6a80a",
+  "counts": {
+    "changed_unseen_future": 404,
+    "entry-replay": 420,
+    "local-cost": 420,
+    "same_snapshot_policy_disagreement": 122,
+    "workloads": 60
+  },
+  "examples": {
+    "disagreement": {
+      "arrived": 2,
+      "case": {
+        "budget": 70,
+        "rate": 1,
+        "variant": "original",
+        "window": "alternating"
+      },
+      "entry": 576,
+      "head": 0,
+      "local": 1152,
+      "request": 1,
+      "snapshot_ms": "1"
+    },
+    "malformed_clock": "rejected"
+  },
+  "frozen_source_sha256": "5cd7ba7fc3e13526dd7cb259ab02ff409a9966232f50bf278f6315ac21544794",
+  "scope": "R07 deterministic stationary simulator -> R10 live snapshot adapter; no GPU action claim",
+  "state_coverage": {
+    "active_compute": 525,
+    "active_copy": 6,
+    "reservations": 190,
+    "same_time_as_latest_arrival": 408,
+    "transfer": 58
+  }
+}

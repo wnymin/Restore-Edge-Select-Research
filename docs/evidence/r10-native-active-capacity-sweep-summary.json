@@ -1,0 +1,345 @@
+{
+  "archive_sha256": "fd264523b73681026bc3e411de2cfabfcda6025603a975d219cecd8a58739451",
+  "arms": [
+    {
+      "active_gpu_samples": 9,
+      "active_system_sampled_range_bytes": {
+        "available_bytes": [
+          15892893696,
+          15938318336
+        ],
+        "cache_bytes": [
+          533979136,
+          538161152
+        ],
+        "committed_bytes": [
+          25767493632,
+          25791442944
+        ]
+      },
+      "active_system_samples": 9,
+      "active_wddm_sampled_max_bytes": {
+        "dedicated_usage": 3258793984,
+        "shared_usage": 83165184,
+        "total_committed": 3342024704
+      },
+      "block": "oasst-cal-03",
+      "capacity_bytes": 67108864,
+      "event_audit": {
+        "block": "oasst-cal-03",
+        "boundary_counts": {
+          "0": 56,
+          "512": 7,
+          "1024": 1
+        },
+        "capacity_bytes": 67108864,
+        "device_event_counts": {
+          "compute-done": 64,
+          "disk-complete": 8,
+          "native-target": 64,
+          "read-direct": 17,
+          "suffix-submitted": 64,
+          "upload-ready": 17,
+          "upload-submit": 17
+        },
+        "direct_plus_scatter_requests": [],
+        "peak_prefetch_bytes": 0,
+        "policy": "local-cost",
+        "requests": 64,
+        "runtime_worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6",
+        "scope": "native event audit and optional correctness checks; no performance estimate"
+      },
+      "gpu_samples": 28,
+      "host_samples": 28,
+      "native_resources": {
+        "after-context": {
+          "peak_working_set_bytes": 3090759680,
+          "private_commit_bytes": 3601305600,
+          "vulkan_free_bytes": 4390604800,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3090759680
+        },
+        "after-drain": {
+          "peak_working_set_bytes": 3407646720,
+          "private_commit_bytes": 4032290816,
+          "vulkan_free_bytes": 4287909888,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3229523968
+        },
+        "after-lane-warmup": {
+          "peak_working_set_bytes": 3407646720,
+          "private_commit_bytes": 4029214720,
+          "vulkan_free_bytes": 4287909888,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3174629376
+        },
+        "after-model": {
+          "peak_working_set_bytes": 2892783616,
+          "private_commit_bytes": 2873421824,
+          "vulkan_free_bytes": 4805120000,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 2872283136
+        },
+        "before-model": {
+          "peak_working_set_bytes": 67080192,
+          "private_commit_bytes": 57704448,
+          "vulkan_free_bytes": 7535153152,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 67080192
+        }
+      },
+      "pinned_bytes": 52690976,
+      "resident_ram_bytes": 150994944,
+      "run": "resource-64.run.json",
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77",
+      "system_sampled_range_bytes": {
+        "available_bytes": [
+          15885676544,
+          16964636672
+        ],
+        "cache_bytes": [
+          533979136,
+          548261888
+        ],
+        "committed_bytes": [
+          25698287616,
+          25924542464
+        ]
+      },
+      "wddm_sampled_max_bytes": {
+        "dedicated_usage": 3258793984,
+        "shared_usage": 83165184,
+        "total_committed": 3342024704
+      },
+      "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+    },
+    {
+      "active_gpu_samples": 9,
+      "active_system_sampled_range_bytes": {
+        "available_bytes": [
+          15803809792,
+          15987482624
+        ],
+        "cache_bytes": [
+          539504640,
+          541540352
+        ],
+        "committed_bytes": [
+          25832738816,
+          25979981824
+        ]
+      },
+      "active_system_samples": 9,
+      "active_wddm_sampled_max_bytes": {
+        "dedicated_usage": 3277959168,
+        "shared_usage": 83165184,
+        "total_committed": 3361189888
+      },
+      "block": "oasst-cal-03",
+      "capacity_bytes": 86245376,
+      "event_audit": {
+        "block": "oasst-cal-03",
+        "boundary_counts": {
+          "0": 56,
+          "512": 7,
+          "1024": 1
+        },
+        "capacity_bytes": 86245376,
+        "device_event_counts": {
+          "compute-done": 64,
+          "disk-complete": 8,
+          "native-target": 64,
+          "read-direct": 17,
+          "suffix-submitted": 64,
+          "upload-ready": 17,
+          "upload-submit": 17
+        },
+        "direct_plus_scatter_requests": [],
+        "peak_prefetch_bytes": 0,
+        "policy": "local-cost",
+        "requests": 64,
+        "runtime_worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6",
+        "scope": "native event audit and optional correctness checks; no performance estimate"
+      },
+      "gpu_samples": 29,
+      "host_samples": 29,
+      "native_resources": {
+        "after-context": {
+          "peak_working_set_bytes": 3149684736,
+          "private_commit_bytes": 3601350656,
+          "vulkan_free_bytes": 4390604800,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3062112256
+        },
+        "after-drain": {
+          "peak_working_set_bytes": 3407273984,
+          "private_commit_bytes": 4048936960,
+          "vulkan_free_bytes": 4268773376,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3228999680
+        },
+        "after-lane-warmup": {
+          "peak_working_set_bytes": 3407273984,
+          "private_commit_bytes": 4047478784,
+          "vulkan_free_bytes": 4268773376,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3173986304
+        },
+        "after-model": {
+          "peak_working_set_bytes": 2892849152,
+          "private_commit_bytes": 2873475072,
+          "vulkan_free_bytes": 4805120000,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 2872352768
+        },
+        "before-model": {
+          "peak_working_set_bytes": 67129344,
+          "private_commit_bytes": 57724928,
+          "vulkan_free_bytes": 7535153152,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 67129344
+        }
+      },
+      "pinned_bytes": 52690976,
+      "resident_ram_bytes": 150994944,
+      "run": "resource-8225.run.json",
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77",
+      "system_sampled_range_bytes": {
+        "available_bytes": [
+          15803809792,
+          17567830016
+        ],
+        "cache_bytes": [
+          537870336,
+          548306944
+        ],
+        "committed_bytes": [
+          25710931968,
+          26001059840
+        ]
+      },
+      "wddm_sampled_max_bytes": {
+        "dedicated_usage": 3277959168,
+        "shared_usage": 83165184,
+        "total_committed": 3361189888
+      },
+      "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+    },
+    {
+      "active_gpu_samples": 9,
+      "active_system_sampled_range_bytes": {
+        "available_bytes": [
+          15867015168,
+          15920435200
+        ],
+        "cache_bytes": [
+          536821760,
+          537563136
+        ],
+        "committed_bytes": [
+          25863675904,
+          25892319232
+        ]
+      },
+      "active_system_samples": 9,
+      "active_wddm_sampled_max_bytes": {
+        "dedicated_usage": 3342843904,
+        "shared_usage": 83165184,
+        "total_committed": 3426074624
+      },
+      "block": "oasst-cal-03",
+      "capacity_bytes": 150994944,
+      "event_audit": {
+        "block": "oasst-cal-03",
+        "boundary_counts": {
+          "0": 56,
+          "512": 7,
+          "1024": 1
+        },
+        "capacity_bytes": 150994944,
+        "device_event_counts": {
+          "compute-done": 64,
+          "disk-complete": 8,
+          "native-target": 64,
+          "read-direct": 17,
+          "suffix-submitted": 64,
+          "upload-ready": 17,
+          "upload-submit": 17
+        },
+        "direct_plus_scatter_requests": [],
+        "peak_prefetch_bytes": 0,
+        "policy": "local-cost",
+        "requests": 64,
+        "runtime_worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6",
+        "scope": "native event audit and optional correctness checks; no performance estimate"
+      },
+      "gpu_samples": 29,
+      "host_samples": 29,
+      "native_resources": {
+        "after-context": {
+          "peak_working_set_bytes": 3081961472,
+          "private_commit_bytes": 3601752064,
+          "vulkan_free_bytes": 4390604800,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3081961472
+        },
+        "after-drain": {
+          "peak_working_set_bytes": 3408523264,
+          "private_commit_bytes": 4116520960,
+          "vulkan_free_bytes": 4204023808,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3230273536
+        },
+        "after-lane-warmup": {
+          "peak_working_set_bytes": 3408523264,
+          "private_commit_bytes": 4114599936,
+          "vulkan_free_bytes": 4204023808,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3175260160
+        },
+        "after-model": {
+          "peak_working_set_bytes": 2892607488,
+          "private_commit_bytes": 2873991168,
+          "vulkan_free_bytes": 4805120000,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 2872107008
+        },
+        "before-model": {
+          "peak_working_set_bytes": 67014656,
+          "private_commit_bytes": 57597952,
+          "vulkan_free_bytes": 7535153152,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 67014656
+        }
+      },
+      "pinned_bytes": 52690976,
+      "resident_ram_bytes": 150994944,
+      "run": "resource-144.run.json",
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77",
+      "system_sampled_range_bytes": {
+        "available_bytes": [
+          15790944256,
+          16732180480
+        ],
+        "cache_bytes": [
+          533180416,
+          538533888
+        ],
+        "committed_bytes": [
+          25707126784,
+          26029481984
+        ]
+      },
+      "wddm_sampled_max_bytes": {
+        "dedicated_usage": 3342843904,
+        "shared_usage": 83165184,
+        "total_committed": 3426074624
+      },
+      "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+    }
+  ],
+  "scope": "three monitored tiers of one calibration block; sampled WDDM/host peaks are lower bounds on continuous peaks"
+}

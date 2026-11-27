@@ -1,0 +1,16 @@
+{
+  "protocol_date": "2026-11-25",
+  "scope": "GPU-03 mechanism only; not a GPU-04 latency or representative-workload result",
+  "prompt_catalogue": "three requests, private synthetic prompt seed 29690; exact shared 512-token KV, two separate native SSD checkpoints",
+  "arrivals_ms": [0, 35, 70],
+  "prefetch_bytes": 138936320,
+  "primary_controlled_exposure": {"software_hold_ms_before_each_unbuffered_ssd_read": 250},
+  "negative_control": {"software_hold_ms_before_each_unbuffered_ssd_read": 0},
+  "policies": ["entry-replay", "local-cost"],
+  "diagnostic_repeats_per_policy": 8,
+  "design_evidence": "Before any controlled GPU run, the stationary model predicts identical paths at 180/210 ms added holds, entry-replay 0/512/1024 versus local-cost 0/0/1024 at 225 ms, and 0/512/512 versus 0/0/1024 at 240/250/275 ms. Choose 250 ms to test a stable action separation under deliberately large added cost.",
+  "primary_readout": "native actions and exact state, with per-request response and hold queues retained for mechanism diagnosis; no speedup claim from fixed order or Python pipe timings",
+  "clock": "absolute open-loop submit offsets, observed host batches, actual transfer fences and compute markers; controlled holds do not block compute progress or change the real file bytes",
+  "policy_costs": "same approximate stationary fixture table for each arm; SSD startup term increased by the declared hold in both policies",
+  "guard": "No part of this fixture tunes, measures, or replaces the predeclared native holdout."
+}

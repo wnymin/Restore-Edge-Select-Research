@@ -1,0 +1,137 @@
+{
+  "arms": [
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 2.32575,
+      "p95_observation_delay_ms": 12.9104,
+      "receipt_sha256": "cdc626ace680651f60f7d62c3ac5f0158c037f427e26f2e16e1beeda43b83835",
+      "response_mean_ms": 3324.3468203125,
+      "response_p95_ms": 5446.2181,
+      "run": "oasst03-180",
+      "source_schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "window": {
+        "average_outstanding": 12.411071622576276,
+        "completions_per_s_in_entire_window": 3.7333865247578446,
+        "drain_after_last_arrival_ms": 5792.416,
+        "drain_elapsed_ms": 17142.6129,
+        "fraction_time_any_request_outstanding": 0.9966437438484071,
+        "max_outstanding": 24,
+        "offered_arrivals_per_s": 5.55056450166076,
+        "outstanding_at_last_arrival": 24,
+        "submission_span_ms": 11350.1969
+      }
+    },
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 1.239040625,
+      "p95_observation_delay_ms": 4.7128,
+      "receipt_sha256": "912613bfc9ee9b8a964ce4847e407b1dec528789c0a05e13cbf435172f2c0d30",
+      "response_mean_ms": 401.08725625,
+      "response_p95_ms": 667.2905,
+      "run": "oasst03-a1",
+      "source_schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "window": {
+        "average_outstanding": 1.5182991008223352,
+        "completions_per_s_in_entire_window": 3.7854583439469107,
+        "drain_after_last_arrival_ms": 521.4296,
+        "drain_elapsed_ms": 16906.8034,
+        "fraction_time_any_request_outstanding": 0.936923723854268,
+        "max_outstanding": 4,
+        "offered_arrivals_per_s": 3.8448924491426615,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16385.3738
+      }
+    },
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 1.4351921875,
+      "p95_observation_delay_ms": 1.765,
+      "receipt_sha256": "88862d32c8f9337b8147d5c5d944ce41f4f5a0de5b06bb7a05432ef970f82782",
+      "response_mean_ms": 360.149521875,
+      "response_p95_ms": 592.0275,
+      "run": "oasst03-a2",
+      "source_schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "window": {
+        "average_outstanding": 1.3726739018116294,
+        "completions_per_s_in_entire_window": 3.811400039253847,
+        "drain_after_last_arrival_ms": 411.1708,
+        "drain_elapsed_ms": 16791.7299,
+        "fraction_time_any_request_outstanding": 0.9331201605380753,
+        "max_outstanding": 4,
+        "offered_arrivals_per_s": 3.8460225695226726,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16380.5591
+      }
+    },
+    {
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 29.39790625,
+      "p95_observation_delay_ms": 68.6142,
+      "receipt_sha256": "a971358d00937f6d65f5a7a3df6c70173fb2bb2c81d643bab8fdc539dc0adc5b",
+      "response_mean_ms": 5980.239696875,
+      "response_p95_ms": 9196.4648,
+      "run": "traceA09-a1",
+      "source_schedule_sha256": "203565ad05d8f9a9b5da04a188d0606dc0b5e9c4eaf8d35a9877ffd188a9be60",
+      "window": {
+        "average_outstanding": 10.731180562758887,
+        "completions_per_s_in_entire_window": 1.7944398730984832,
+        "drain_after_last_arrival_ms": 8430.5093,
+        "drain_elapsed_ms": 53498.5883,
+        "fraction_time_any_request_outstanding": 0.9787164776458223,
+        "max_outstanding": 25,
+        "offered_arrivals_per_s": 2.107922106020982,
+        "outstanding_at_last_arrival": 14,
+        "submission_span_ms": 45068.079
+      }
+    },
+    {
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 11.8755,
+      "p95_observation_delay_ms": 33.1462,
+      "receipt_sha256": "70513c37ff90f984c05d204e9827977d148a531052d8e3a7d0e5cd8ad736bd6d",
+      "response_mean_ms": 5733.615119791667,
+      "response_p95_ms": 8572.7727,
+      "run": "traceA09-a2",
+      "source_schedule_sha256": "203565ad05d8f9a9b5da04a188d0606dc0b5e9c4eaf8d35a9877ffd188a9be60",
+      "window": {
+        "average_outstanding": 10.42637847423565,
+        "completions_per_s_in_entire_window": 1.8184650096664485,
+        "drain_after_last_arrival_ms": 7724.024,
+        "drain_elapsed_ms": 52791.7774,
+        "fraction_time_any_request_outstanding": 0.9805961562491359,
+        "max_outstanding": 24,
+        "offered_arrivals_per_s": 2.1079373350791433,
+        "outstanding_at_last_arrival": 14,
+        "submission_span_ms": 45067.7534
+      }
+    },
+    {
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 9.458783333333333,
+      "p95_observation_delay_ms": 13.8346,
+      "receipt_sha256": "c7560380eead14fea73cf3b37efbbb9b0905a97fc54949ad7809dd401d62c06c",
+      "response_mean_ms": 1562.34618125,
+      "response_p95_ms": 3763.3141,
+      "run": "traceA09-400",
+      "source_schedule_sha256": "203565ad05d8f9a9b5da04a188d0606dc0b5e9c4eaf8d35a9877ffd188a9be60",
+      "window": {
+        "average_outstanding": 2.0644927338509813,
+        "completions_per_s_in_entire_window": 1.3214054341011827,
+        "drain_after_last_arrival_ms": 557.2348,
+        "drain_elapsed_ms": 72649.9207,
+        "fraction_time_any_request_outstanding": 0.758490292474607,
+        "max_outstanding": 8,
+        "offered_arrivals_per_s": 1.3177481018223514,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 72092.6859
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

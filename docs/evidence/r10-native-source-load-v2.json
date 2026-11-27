@@ -1,0 +1,50 @@
+{
+  "archive_sha256": "a171340813c79916da9657af0fb5905c9f83c0ac731b1932a40f973581f3d369",
+  "arms": [
+    {
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 126.718725,
+      "p95_observation_delay_ms": 695.6475,
+      "receipt_sha256": "30d9e8a03cdf338bf624dbaeb6e516704962b60fe77c380c7fac3baec6d7c875",
+      "response_mean_ms": 2016.0417166666666,
+      "response_p95_ms": 5098.7981,
+      "run": "thinking29-085-first",
+      "source_schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc",
+      "window": {
+        "average_outstanding": 2.4431537449207914,
+        "completions_per_s_in_entire_window": 1.2118567412187848,
+        "drain_after_last_arrival_ms": 328.6353,
+        "drain_elapsed_ms": 79217.2843,
+        "fraction_time_any_request_outstanding": 0.6925763737649361,
+        "max_outstanding": 9,
+        "offered_arrivals_per_s": 1.2042290139865368,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 78888.649
+      }
+    },
+    {
+      "block": "qwen_traceB_blksz_16-208-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 58.09968020833333,
+      "p95_observation_delay_ms": 465.8496,
+      "receipt_sha256": "3fadf71077ddbcc2cd255211beb023022859dde4ed05901959376ead5fa900d9",
+      "response_mean_ms": 1261.349915625,
+      "response_p95_ms": 2635.9882,
+      "run": "traceB208-1200-second",
+      "source_schedule_sha256": "10b678ba64c540b874efb879f7f873dbf137668c55259396e6e157c26a902e98",
+      "window": {
+        "average_outstanding": 2.5601815288781586,
+        "completions_per_s_in_entire_window": 2.029715542978085,
+        "drain_after_last_arrival_ms": 2498.2954,
+        "drain_elapsed_ms": 47297.268,
+        "fraction_time_any_request_outstanding": 0.8051636470842248,
+        "max_outstanding": 9,
+        "offered_arrivals_per_s": 2.12058434572225,
+        "outstanding_at_last_arrival": 9,
+        "submission_span_ms": 44798.9726
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

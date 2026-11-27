@@ -1,0 +1,41 @@
+{
+  "arms": [
+    {
+      "audited_requests": 64,
+      "block": "oasst-cal-03",
+      "changes": [],
+      "receipt_sha256": "912613bfc9ee9b8a964ce4847e407b1dec528789c0a05e13cbf435172f2c0d30",
+      "run": "oasst03-a1",
+      "with_alternative": 8,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 64,
+      "block": "oasst-cal-03",
+      "changes": [],
+      "receipt_sha256": "88862d32c8f9337b8147d5c5d944ce41f4f5a0de5b06bb7a05432ef970f82782",
+      "run": "oasst03-a2",
+      "with_alternative": 8,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "changes": [],
+      "receipt_sha256": "a971358d00937f6d65f5a7a3df6c70173fb2bb2c81d643bab8fdc539dc0adc5b",
+      "run": "traceA09-a1",
+      "with_alternative": 36,
+      "with_two_nonzero_alternatives": 4
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "changes": [],
+      "receipt_sha256": "70513c37ff90f984c05d204e9827977d148a531052d8e3a7d0e5cd8ad736bd6d",
+      "run": "traceA09-a2",
+      "with_alternative": 36,
+      "with_two_nonzero_alternatives": 4
+    }
+  ],
+  "scope": "counterfactual chooser only, on recorded local-cost states; no runtime effect"
+}

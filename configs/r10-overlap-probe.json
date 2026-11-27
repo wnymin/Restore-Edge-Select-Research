@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-25",
+  "host": {
+    "os": "Windows 11",
+    "gpu": "RTX 4060 Laptop GPU",
+    "driver": "595.97",
+    "memory_api": "ggml_backend_dev_memory driver budget snapshots; K32GetProcessMemoryInfo process counters"
+  },
+  "runtime": {
+    "llama_cpp_build": 10923,
+    "source_revision": "8a56aedd6",
+    "backend": "Vulkan0 (NVIDIA; only the physical device at Vulkan enumeration index 1 is exposed)",
+    "env": {
+      "GGML_VK_VISIBLE_DEVICES": "1",
+      "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1"
+    },
+    "sha256": {
+      "llama.dll": "f644529b58ff1b05dbe5748b5bae2fe83f0a39182ec7e8058e02f37d12eecd76",
+      "ggml.dll": "89a8aa11abc4a093e98625e3af0f36c3661b8ad6b83ddb9c1189aa9671d78300",
+      "ggml-base.dll": "1cc0def3065932bee3743ce90dc0d3906d6f63626ba05b7ec1c175965ecb7880",
+      "ggml-vulkan.dll": "2a5ffa65bac874913049a1a964f14e16e7801dec8bb97b4b6ea8e10c8c4efcce",
+      "ggml-cpu-alderlake.dll": "73ec1596030a1dc0b810e8027ea2c6ba89ea9873606ba26856315bfd89f7ddca"
+    }
+  },
+  "model": {
+    "file": "qwen35-4b-q4km.gguf",
+    "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "n_ctx": 2048,
+    "n_batch": 512,
+    "n_ubatch": 512,
+    "gpu_layers": 99
+  },
+  "run": {
+    "seed": 10343,
+    "warmup_repeats": 1,
+    "formal_repeats": 12,
+    "prompt_tokens": [
+      128,
+      512
+    ],
+    "state_prefix_tokens": 512,
+    "comparison_clock": "host monotonic",
+    "min_early_ready_ms": 1
+  },
+  "resources": {
+    "columns": [
+      "phase",
+      "gpu_free_bytes",
+      "gpu_total_bytes",
+      "rss_bytes",
+      "peak_rss_bytes",
+      "private_bytes"
+    ],
+    "rows": [
+      [
+        "before-model",
+        7535153152,
+        8342470656,
+        65318912,
+        65318912,
+        56897536
+      ],
+      [
+        "after-warmup-and-allocation",
+        4072624128,
+        8342470656,
+        3131375616,
+        3424694272,
+        4295421952
+      ],
+      [
+        "after-all-arms",
+        4069478400,
+        8342470656,
+        3188088832,
+        3424694272,
+        4355420160
+      ]
+    ]
+  }
+}

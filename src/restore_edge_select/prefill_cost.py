@@ -43,6 +43,18 @@ def build_prefill_cost(config, spec):
     kind = config.get("kind", "polynomial")
     if kind == "sampled-prefill":
         return sampled_cost(config)
+    if kind == "chunk-sampled-prefill":
+        chunk = config["chunk_tokens"]
+        if type(chunk) is not int or chunk <= 0:
+            raise ValueError("chunk_tokens must be a positive integer")
+        per_chunk = sampled_cost(config)
+
+        def predict(cached, suffix):
+            # Follow exactly the same physical splits as the FIFO worker.
+            return sum((per_chunk(cached + at, min(chunk, suffix - at))
+                        for at in range(0, suffix, chunk)), Fraction(0))
+
+        return predict
     if kind == "polynomial":
         a = Fraction(*config["a_ms_per_token_rational"])
         b = Fraction(*config["b_ms_per_pair_rational"])

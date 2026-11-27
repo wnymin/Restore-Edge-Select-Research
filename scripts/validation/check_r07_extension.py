@@ -14,6 +14,7 @@ from scripts.cpu.replay.study_r07_arrivals import POLICIES, response, run, seque
 from scripts.cpu.replay.study_r07_extension import (
     CONFIG, FIXTURE, ROOT, Experiment, cases, change_payload, evaluate, experiment, file_hash, models, read, specs,
 )
+from scripts.validation.archive_source import source_matches
 
 NAMES = ('preflight','design','holdout','timed')
 MAIN = 'entry-replay'
@@ -313,7 +314,7 @@ def verify(*, run_tail=False, replay=False, routes=False):
         assert file_hash(p)==m['archive_sha256']
         raw[n]=p.read_bytes() if n=='preflight' else gzip.decompress(p.read_bytes())
         assert sha256(raw[n]).hexdigest()==m['output_sha256']
-        for j,d in m['files'].items(): assert file_hash(ROOT/j)==d,j
+        for j,d in m['files'].items(): assert source_matches(ROOT/j,d,historical=True),j
     assert met['timed']['input_sha256']==sha256(raw['holdout']).hexdigest()
     cfg=read(CONFIG)
     preflight=json.loads(raw['preflight']); design=rows(raw['design']); holdout=rows(raw['holdout']); timed=rows(raw['timed'])

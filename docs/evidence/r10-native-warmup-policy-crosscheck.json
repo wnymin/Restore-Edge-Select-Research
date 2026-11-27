@@ -1,0 +1,23 @@
+{
+  "arms": [
+    {
+      "audited_requests": 64,
+      "block": "oasst-cal-03",
+      "changes": [],
+      "receipt_sha256": "60063b768cf64e8e9aea93a2d5440e44c8e526af0226a3aaea78440bf9139eb6",
+      "run": "oasst-03-grid",
+      "with_alternative": 8,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "changes": [],
+      "receipt_sha256": "943f7d2f6ee51425acdf3e5b109791ca9f870db97df1fba7fe2607c84bd3780d",
+      "run": "bailian-coder-28-grid",
+      "with_alternative": 39,
+      "with_two_nonzero_alternatives": 35
+    }
+  ],
+  "scope": "counterfactual chooser only, on recorded local-cost states; no runtime effect"
+}

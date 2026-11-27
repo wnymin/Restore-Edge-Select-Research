@@ -1,0 +1,157 @@
+{
+  "providers": {
+    "claude": {
+      "counts": {
+        "adjacent_rows": 137646,
+        "linked_previous_output_le128": 24993,
+        "linked_tool_returns": 120713,
+        "rounds": 140338,
+        "sessions": 2676,
+        "sessions_with_tool_input": 2268,
+        "tool_input": 120760,
+        "tool_only_input": 118860,
+        "tool_output": 121145,
+        "tool_records": 142388
+      },
+      "distributions": {
+        "input_tokens": {
+          "n": 140338,
+          "p10": 35893,
+          "p50": 133062,
+          "p90": 483289,
+          "p95": 677479,
+          "p99": 922508
+        },
+        "linked_input_token_delta": {
+          "n": 120713,
+          "p10": 202,
+          "p50": 801,
+          "p90": 3879,
+          "p95": 6078,
+          "p99": 15226
+        },
+        "linked_previous_output_tokens": {
+          "n": 120713,
+          "p10": 89,
+          "p50": 254,
+          "p90": 1505,
+          "p95": 2627,
+          "p99": 6444
+        },
+        "tool_wall_ms": {
+          "n": 141824,
+          "p10": 17,
+          "p50": 125,
+          "p90": 14555,
+          "p95": 59171,
+          "p99": 309519
+        }
+      },
+      "fields": [
+        "claude_cache_creation_input_tokens",
+        "claude_cache_read_input_tokens",
+        "claude_uncached_input_tokens",
+        "current_input_chars",
+        "current_input_event_count",
+        "current_tool_result_chars",
+        "current_tool_result_count",
+        "current_user_message_chars",
+        "current_user_message_count",
+        "first_input_event_type",
+        "input_tokens_total",
+        "model",
+        "newly_append_tokens",
+        "output_tokens",
+        "prefix_tokens",
+        "project",
+        "provider",
+        "reasoning_output_tokens",
+        "round_id",
+        "round_index",
+        "session_id",
+        "store",
+        "timing_events",
+        "tools",
+        "trace_key",
+        "user"
+      ]
+    },
+    "codex": {
+      "counts": {
+        "adjacent_rows": 215234,
+        "linked_previous_output_le128": 69208,
+        "linked_tool_returns": 157626,
+        "rounds": 216823,
+        "sessions": 1589,
+        "sessions_with_tool_input": 1452,
+        "tool_input": 195268,
+        "tool_only_input": 191769,
+        "tool_output": 198650,
+        "tool_records": 290122
+      },
+      "distributions": {
+        "input_tokens": {
+          "n": 216811,
+          "p10": 41405,
+          "p50": 120492,
+          "p90": 204317,
+          "p95": 217542,
+          "p99": 233060
+        },
+        "linked_input_token_delta": {
+          "n": 157626,
+          "p10": 107,
+          "p50": 537,
+          "p90": 4535,
+          "p95": 8210,
+          "p99": 16947
+        },
+        "linked_previous_output_tokens": {
+          "n": 157626,
+          "p10": 37,
+          "p50": 163,
+          "p90": 808,
+          "p95": 1250,
+          "p99": 3091
+        },
+        "tool_wall_ms": {
+          "n": 290081,
+          "p10": 36,
+          "p50": 237,
+          "p90": 5175,
+          "p95": 30001,
+          "p99": 120002
+        }
+      },
+      "fields": [
+        "claude_cache_creation_input_tokens",
+        "claude_cache_read_input_tokens",
+        "claude_uncached_input_tokens",
+        "current_input_chars",
+        "current_input_event_count",
+        "current_tool_result_chars",
+        "current_tool_result_count",
+        "current_user_message_chars",
+        "current_user_message_count",
+        "first_input_event_type",
+        "input_tokens_total",
+        "model",
+        "newly_append_tokens",
+        "output_tokens",
+        "prefix_tokens",
+        "provider",
+        "reasoning_output_tokens",
+        "round_id",
+        "round_index",
+        "session_id",
+        "store",
+        "timing_events",
+        "tools",
+        "trace_key",
+        "turn_id",
+        "user"
+      ]
+    }
+  },
+  "sha256": "9d265eae69a31cae203848bea936f018148eed7ca8bf56050c5abe96da0b4e6b"
+}

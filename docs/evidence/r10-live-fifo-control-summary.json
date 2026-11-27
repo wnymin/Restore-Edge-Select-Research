@@ -1,0 +1,59 @@
+{
+  "data": {
+    "fifo-entry-replay-hold250": {
+      "client_minus_planned_ms_range": [
+        -0.0067,
+        14.1256
+      ],
+      "controlled_ssd_hold_ms": 250,
+      "csv_sha256": "fa0498983f8cea41ac898861611ccf9efad6adbc828e4451cbbe0a9d5c2b671f",
+      "formal_blocks": 8,
+      "policy": "entry-replay",
+      "selected": [
+        [
+          0,
+          512,
+          512
+        ]
+      ],
+      "snapshots_sha256": "9be6c84304aefb3b12f0f4e93636f8cc52362e962ce11dbbbf5ebb8bdb01a048",
+      "totals": {
+        "active_kv_handoffs": 0,
+        "cold_reads": 0,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 16,
+        "verified_logits": 128
+      }
+    },
+    "fifo-local-cost-hold250": {
+      "client_minus_planned_ms_range": [
+        0.2678,
+        14.4343
+      ],
+      "controlled_ssd_hold_ms": 250,
+      "csv_sha256": "65ab123ef06b83c97eba96d5632ede00b745d7bdbe0062149866214fa7d4c8dd",
+      "formal_blocks": 8,
+      "policy": "local-cost",
+      "selected": [
+        [
+          0,
+          0,
+          1024
+        ]
+      ],
+      "snapshots_sha256": "a9159926770d7640f3125182796e138048b3fa0873c31eb007df43a350afdf72",
+      "totals": {
+        "active_kv_handoffs": 0,
+        "cold_reads": 0,
+        "commits": 24,
+        "model_computes": 24,
+        "read_done_compute_done_ticks": 0,
+        "staged_reads": 24,
+        "verified_logits": 128
+      }
+    }
+  },
+  "scope": "three-request catalogue, diagnostic timings include IPC, polling and exact readback"
+}

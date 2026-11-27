@@ -1,0 +1,54 @@
+{
+  "scope": "R10 single-slot HTTP/SSE service calibration; no held-out execution",
+  "capacity_mib": "82.25",
+  "timeout_s": 360,
+  "policy": "local-cost",
+  "output_profiles": {
+    "short": {"short_tokens": 16, "long_tokens": 0},
+    "mixed": {"short_tokens": 16, "long_tokens": 64, "long_request_index_modulo": 4}
+  },
+  "block_order": ["oasst-cal-03", "qwen_coder_blksz_16-28-pilot"],
+  "profile_order": ["short", "mixed"],
+  "rates_order": ["middle", "low", "high"],
+  "holdout_rate_transfer": {
+    "oasst": "same synthetic tick scale as the selected calibration anchor",
+    "bailian_reference_prefill_scale": "21/4",
+    "bailian": "selected coding service scale divided by the frozen coding prefill scale, then multiplied by each destination source's frozen prefill scale"
+  },
+  "service_pair_order_seed": "r10-service-pair-order-01",
+  "extension_rule": {
+    "clock_multiplier_if_low_missing": "3/2",
+    "clock_multiplier_if_overload_missing": "2/3",
+    "max_added_rates_per_stratum": 4,
+    "hard_timeout_s": 900,
+    "shoulder_if_both_ends_exist": "arithmetic midpoint of the widest untested interval between the selected low and overload clocks; prefer longer clock on a tie",
+    "scope": "choose only from baseline queue and drain windows; retain the original SLO, output caps, model, capacity, and three original rates"
+  },
+  "blocks": {
+    "oasst-cal-03": {
+      "family": "oasst",
+      "catalogue": "oasst-cal-03-overlapped-v1",
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "arrival_scale": {"low": "780", "middle": "403", "high": "195"}
+    },
+    "qwen_coder_blksz_16-28-pilot": {
+      "family": "bailian",
+      "catalogue": "bailian-coder-28-overlapped-v1",
+      "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574",
+      "arrival_scale": {"low": "63/4", "middle": "651/80", "high": "63/16"}
+    }
+  },
+  "experimental_slo": {
+    "visible_ttft_ms": 2500,
+    "client_request_tpot_ms": 150,
+    "zero_visible_output": "failure",
+    "one_token_tpot": "not applicable; visible text and terminal success required",
+    "failed_and_unfinished_in_denominator": true
+  },
+  "anchor_rules": {
+    "low": {"max_busy_fraction": 0.55, "max_drain_fraction_of_arrival_span": 0.12},
+    "shoulder": {"min_busy_fraction": 0.65, "min_peak_outstanding": 2, "max_drain_fraction_of_arrival_span": 0.12},
+    "overload": {"min_busy_fraction": 0.85, "min_drain_fraction_of_arrival_span_exclusive": 0.12},
+    "selection": "apply per family and output profile on baseline only; choose the first observed eligible low, closest shoulder to 0.8 busy with drain as tie break, and smallest observed overload by drain fraction; report missing anchors or extend calibration before opening service holdout"
+  }
+}

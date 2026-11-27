@@ -1,0 +1,11 @@
+{
+  "file_format_version": "1.2.0",
+  "layer": {
+    "name": "VK_LAYER_R10_timeline_observe",
+    "type": "GLOBAL",
+    "library_path": "./r10_vk_trace_layer.dll",
+    "api_version": "1.4.321",
+    "implementation_version": "1",
+    "description": "R10 local test: observe pre-existing upload completion signals"
+  }
+}

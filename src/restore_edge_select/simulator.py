@@ -234,7 +234,13 @@ class Experiment:
             profile_decisions=False, inject_measured=False, observe_candidates=None, score_candidate=None,
             intervention_budget_mib=None, decision_overrides=None, screen_mode=None, min_gain_ms=0,
             future_cost_cases=None, queue_horizon=None, screen_selector=None, screen_observer=None,
-            screen_search="full", adaptive=None):
+            screen_search="full", adaptive=None, entry_refiner=None, decision_timing=None):
+        if decision_timing is not None and (
+                not callable(decision_timing) or policy not in {"fixed", "snapshot-screened", "local-cost"}
+                or self.per_tier or self.host_cache_bytes or not self._stationary_costs
+                or self.release_at != "start" or future_cost_cases or decision_overrides
+                or any(number(t) for t in (screen_ms, pair_ms, probe_ms, telemetry_lag_ms))):
+            raise ValueError("Decision timing is an opt-in stationary serial execution experiment")
         if policy == "adaptive":
             adaptive = AdaptiveConfig() if adaptive is None else adaptive
             if (not isinstance(adaptive, AdaptiveConfig) or self.per_tier or self.host_cache_bytes
@@ -245,6 +251,13 @@ class Experiment:
                 raise ValueError("Compact adaptive routing requires stationary known costs")
         elif adaptive is not None:
             raise ValueError("Adaptive configuration requires the adaptive policy")
+        if entry_refiner is not None and (
+                not callable(entry_refiner) or policy != "snapshot-screened" or screen_search != "entry-replay"
+                or screen_mode != "unsettled" or queue_horizon != 4 or estimate or telemetry_lag_ms
+                or self.per_tier or self.host_cache_bytes or not self._stationary_costs or future_cost_cases
+                or self.release_at != "start" or decision_overrides or any(
+                    number(x) for x in (guard_ms, screen_ms, pair_ms, probe_ms, min_gain_ms))):
+            raise ValueError("Entry refinement requires frozen stationary single-lane entry-replay")
         estimate_modes = {"estimate", "estimate-cross-tier", "estimate-cross-tier-guard",
                           "estimate-prefetch-fallback"}
         transfer_bound = screen_search in {"entry-transfer", "entry-transfer-audit"}
@@ -349,7 +362,8 @@ class Experiment:
                          cached_costs=fast_entry, progress_bound=fast_entry and progress_bound,
                          transfer_bound=fast_entry and transfer_bound, bound_audit=fast_entry and bound_audit,
                          committed_choices=fast_entry and committed_choices, scalar_replay=fast_entry and scalar_replay,
-                         early_portfolio=fast_entry and early_portfolio)
+                         early_portfolio=fast_entry and early_portfolio, entry_refiner=entry_refiner,
+                         decision_timing=decision_timing)
 
     def _run(self, policy, threshold_tokens, boundaries, max_combinations, n, *,
              snapshot=None, estimate=None, guard=0, transfer_trigger=0, screen=0, pair_cost=0, probe_cost=0,
@@ -361,7 +375,8 @@ class Experiment:
              completion_cutoff=None, lean_rollout=False, adaptive=None, offline_probe=None,
              cached_costs=False, progress_bound=False, transfer_bound=False, bound_audit=False,
              collect_offline_state=False, committed_choices=False, scalar_replay=False,
-             pause_at_head=None, early_portfolio=False):
+             pause_at_head=None, early_portfolio=False, entry_refiner=None, decision_timing=None,
+             decision_cursor=None, decision_observer=None):
         if pause_at_head is not None and (
                 snapshot is None or policy != "fixed" or not lean_rollout or self.dynamic
                 or self.per_tier or self.host_cache_bytes or self.release_at != "start"
@@ -409,6 +424,7 @@ class Experiment:
         pending = None
         decision_intervals = []
         decision_profile = []
+        timing_audit = []
         adaptive_stats = {}
         if adaptive is not None:
             def record_route(label, gap=0, gain=0, changed=False, replays=0, missed=None):
@@ -518,7 +534,10 @@ class Experiment:
                 transfer_signal |= bool(spill) and max(spill) - min(spill) > transfer_trigger
             return capacity_signal, transfer_signal
 
+        entry_coarse = False
+
         def choose(i):
+            nonlocal entry_coarse
             nonlocal lookahead_replays, decision_replays, decision_events, pair_decisions, pair_opportunities, probes
             nonlocal scenario_checks, robust_accepts, pruned_rollouts
             nonlocal bound_checks, bound_prunes, bound_audits
@@ -772,6 +791,7 @@ class Experiment:
                                               d["extra_reserve_bytes"] <= prefetch_budget))))
                                     for c, d in observable.items())
                         if approximate == fallback and not (screen_mode == "unsettled" and unsettled):
+                            entry_coarse = entry_refiner is not None
                             return fallback
 
                 def forecast(plan, n_visible, speeds=current_speeds, *, budget=None, handoff=True, cost=None,
@@ -1130,7 +1150,7 @@ class Experiment:
         serial_choices = {}
 
         def begin_decision(i):
-            nonlocal pending
+            nonlocal pending, entry_coarse
             if offline_probe is not None and boundaries[i] is None:
                 if len(self.eligible[i]) == 1:
                     selected[i] = self.eligible[i][0]
@@ -1154,7 +1174,35 @@ class Experiment:
             opportunities, pairs, prior_probes, checks = pair_opportunities, pair_decisions, probes, scenario_checks
             timed = profile_decisions or inject_measured
             start = perf_counter_ns() if timed else 0
+            if entry_refiner is not None:
+                entry_coarse = False
             boundary = choose(i)
+            if decision_observer is not None:
+                decision_observer(i, boundary, now, head, arrived, tuple(selected[:i]),
+                                  dict(admitted), frozenset(ready), running_until is not None, active_deps,
+                                  compute_started, copy_until, transfer[1] if transfer else None, transfer_started)
+            if entry_refiner is not None and len(self.eligible[i]) > 1:
+                # Stationary known simulator rates: these are projections of
+                # active work, not observations of eventual completions.
+                def replay(tail):
+                    visible = i + len(tail)
+                    if not tail or visible > arrived or any(
+                            c not in self.eligible[j] for j,c in enumerate(tail,i)):
+                        raise ValueError("Refinement forecast must use arrived legal choices")
+                    state = (now, head, visible, dict(admitted), set(ready), running_until,
+                             transfer, active_deps, set(held_reservation), release_time, dict(host_cache))
+                    if self.dynamic:
+                        state += (copy_until, compute_factor, transfer_factor)
+                    speeds = {path: observed_speed(path, now) for path in IO_PATHS}
+                    return self._run("fixed", 0, (*selected[:i], *tail), 0, visible,
+                                     snapshot=state, forecast_speed=speeds, lean_rollout=True,
+                                     cached_costs=True, committed_choices=True,
+                                     scalar_replay=True)["completion_ms"]
+
+                boundary = entry_refiner(i, head, arrived, boundary, entry_coarse, running_until is not None,
+                                         occupied() | held_reservation, frozenset(ready), serial_choice, replay)
+                if boundary not in self.eligible[i]:
+                    raise ValueError("Entry refiner selected an ineligible boundary")
             elapsed = perf_counter_ns() - start if timed else 0
             if timed:
                 kind = ("pair" if pair_decisions > pairs else
@@ -1166,7 +1214,21 @@ class Experiment:
                      + probe_cost * (probes - prior_probes))
             if policy == "two-request-robust":
                 delay += pair_cost * Fraction(pair_decisions - pairs, 3)
-            if inject_measured:
+            if decision_timing is not None:
+                deps = set(self.candidates[i][boundary])
+                charged = occupied() | held_reservation
+                state = dict(index=i, begin_ms=now, head=head, arrived=arrived,
+                             running_until_ms=running_until, transfer_until_ms=transfer[0] if transfer else None,
+                             transfer_object=transfer[1] if transfer else None,
+                             free_bytes=prefetch_budget-self.size(charged),
+                             added_bytes=self.size(deps-self.initial-charged),
+                             missing_objects=tuple(sorted(deps-ready)), action=boundary,
+                             eligible_count=len(self.eligible[i]), measured_ns=elapsed)
+                delay = number(decision_timing(state))
+                if delay < 0:
+                    raise ValueError("Decision timing cannot publish before eligibility")
+                timing_audit.append(dict(state, publish_ms=now+delay))
+            elif inject_measured:
                 delay += Fraction(elapsed, 1_000_000)
             if delay:
                 pending = (now + delay, i, boundary)
@@ -1255,6 +1317,13 @@ class Experiment:
                         missing.discard(transfer[1])
                     lower += jobs * sum(duration(obj, execution_factors) for obj in missing)
             return lower > target or (tie_loses and lower == target)
+
+        if decision_cursor is not None:
+            # R10: run only the existing chooser on an already observed event.
+            # Do not advance the loop, consume a completion, or expose arrivals.
+            index, committed, compute_started, copy_until, transfer_started = decision_cursor
+            selected[:index] = committed
+            return choose(index)
 
         while head < n:
             events_processed += 1
@@ -1462,7 +1531,8 @@ class Experiment:
             **({"scenario_checks": scenario_checks, "robust_accepts": robust_accepts}
                if policy == "two-request-robust" else {}),
             "events_processed": events_processed,
-            **({"decision_intervals_ms": decision_intervals} if screen or pair_cost or probe_cost or inject_measured else {}),
+            **({"decision_timing": timing_audit} if decision_timing is not None else {}),
+            **({"decision_intervals_ms": decision_intervals} if screen or pair_cost or probe_cost or inject_measured or decision_timing is not None else {}),
             **({"decision_profile_ns": decision_profile} if profile_decisions or inject_measured else {}),
         }
 

@@ -1,0 +1,184 @@
+{
+  "archive_sha256": "0047142a421b5407abfee5c9cf2ee20000005a16b1243b9b63f7bd948d6beda2",
+  "findings": {
+    "comparisons": [
+      {
+        "b_prefill_first": false,
+        "comparison": "restore_vs_identical_mixed",
+        "exact_positions": 9,
+        "final_state_exact": true,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.0,
+        "sequence": "A"
+      },
+      {
+        "b_prefill_first": false,
+        "comparison": "restore_vs_identical_mixed",
+        "exact_positions": 9,
+        "final_state_exact": true,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.0,
+        "sequence": "B"
+      },
+      {
+        "b_prefill_first": false,
+        "comparison": "mixed_vs_serial",
+        "exact_positions": 0,
+        "final_state_exact": null,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.0936217,
+        "sequence": "A"
+      },
+      {
+        "b_prefill_first": false,
+        "comparison": "mixed_vs_serial",
+        "exact_positions": 0,
+        "final_state_exact": null,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.0997963,
+        "sequence": "B"
+      },
+      {
+        "b_prefill_first": true,
+        "comparison": "restore_vs_identical_mixed",
+        "exact_positions": 9,
+        "final_state_exact": true,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.0,
+        "sequence": "A"
+      },
+      {
+        "b_prefill_first": true,
+        "comparison": "restore_vs_identical_mixed",
+        "exact_positions": 9,
+        "final_state_exact": true,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.0,
+        "sequence": "B"
+      },
+      {
+        "b_prefill_first": true,
+        "comparison": "mixed_vs_serial",
+        "exact_positions": 1,
+        "final_state_exact": null,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.0909303,
+        "sequence": "A"
+      },
+      {
+        "b_prefill_first": true,
+        "comparison": "mixed_vs_serial",
+        "exact_positions": 1,
+        "final_state_exact": null,
+        "greedy_positions": 9,
+        "logit_positions": 9,
+        "max_abs_logit_diff": 0.111036,
+        "sequence": "B"
+      }
+    ],
+    "mixed_submissions": [
+      {
+        "any_microbatch_contains_both_sequences": true,
+        "b_prefill_first": false,
+        "microbatches": [
+          {
+            "n_seqs_unq": 2,
+            "n_tokens": 2
+          },
+          {
+            "n_seqs_unq": 1,
+            "n_tokens": 63
+          }
+        ],
+        "restored_b": false
+      },
+      {
+        "any_microbatch_contains_both_sequences": false,
+        "b_prefill_first": true,
+        "microbatches": [
+          {
+            "n_seqs_unq": 1,
+            "n_tokens": 64
+          },
+          {
+            "n_seqs_unq": 1,
+            "n_tokens": 1
+          }
+        ],
+        "restored_b": false
+      },
+      {
+        "any_microbatch_contains_both_sequences": true,
+        "b_prefill_first": false,
+        "microbatches": [
+          {
+            "n_seqs_unq": 2,
+            "n_tokens": 2
+          },
+          {
+            "n_seqs_unq": 1,
+            "n_tokens": 63
+          }
+        ],
+        "restored_b": true
+      },
+      {
+        "any_microbatch_contains_both_sequences": false,
+        "b_prefill_first": true,
+        "microbatches": [
+          {
+            "n_seqs_unq": 1,
+            "n_tokens": 64
+          },
+          {
+            "n_seqs_unq": 1,
+            "n_tokens": 1
+          }
+        ],
+        "restored_b": true
+      }
+    ]
+  },
+  "passed": true,
+  "run": {
+    "command": [
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\outputs\\r10\\r10_two_sequence_probe.exe",
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\data\\raw\\prefill\\qwen35-4b-q4km.gguf",
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\outputs\\r10\\llama-native-vulkan-build\\bin",
+      "Vulkan0"
+    ],
+    "environment": {
+      "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1",
+      "GGML_VK_R10_CONCURRENT_BUFFERS": "1",
+      "GGML_VK_VISIBLE_DEVICES": "1",
+      "LLAMA_BATCH_DEBUG": "1"
+    },
+    "finish_utc": "2026-11-26T11:39:35.407214+00:00",
+    "model_sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "primary_archive_sha256": "045e5d2afdfc492abc7b28599cd613206acc098e1c6d786dec67f659a684ad4e",
+    "primary_lock_sha256": "f02fede933e294a1cf377d1ad1080821ce0118f89113dc48483c1af19cb9fd4d",
+    "primary_summary_sha256": "10aa7504099e70bca95bc3802086d6845a3af8d3f42fa95368ef2aa3ca90d3de",
+    "return_code": 0,
+    "runtime_sha256": {
+      "ggml-base.dll": "b5642e93d9ccfa2bc4241db2e0afb3263b2f667f446d1de47e3e3571d95701fa",
+      "ggml-cpu.dll": "7456d9111c6c4029cb0e4b7cf1e740a49266689dad70dfa7f6ac9fa10b2d5ffe",
+      "ggml-vulkan.dll": "bc9e7cf788d3090d65bbeb404dc3856b66bc07dfbd25fa9f84334be1c2c0d796",
+      "ggml.dll": "f022242b4a3fe2cad5f83f7ac3a3b84add498717589f8bad3dc358fe312ff9df",
+      "libllama.dll": "b64db0f20492b5f0b09117add122a8b0548e628bede4d345c11f1a73b8febec7"
+    },
+    "scope": "synchronous whole-checkpoint two-sequence qualification; no performance timing",
+    "start_utc": "2026-11-26T11:39:12.433009+00:00",
+    "stderr_sha256": "2397a896ecf6b9a23e775a99d76291046ecb90925ea28a5da052c84cad388954",
+    "stdout_sha256": "3db57c14deef50bd58056b421c550e8a3ace3bb6d64430d664b79a687193d56c",
+    "timeout_s": 180,
+    "worker_sha256": "d8d3670dffd9cedaa58a6e330a392c0d25135049c8dd927528378f64044dcf95"
+  },
+  "scope": "synchronous whole-checkpoint two-sequence qualification; no performance timing"
+}

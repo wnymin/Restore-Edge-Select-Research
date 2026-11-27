@@ -1,0 +1,133 @@
+{
+  "archive_sha256": "03884b21036e7ed241127c01bd7da6dfefdc77544e3278f489f3479f689978d8",
+  "at_least_1000ms": [
+    {
+      "boundary": 0,
+      "chunk": 2,
+      "end_tokens": 512,
+      "host_llama_decode_ms": 6246.669,
+      "input_tokens": 520,
+      "marker_to_ready_ms": 102.897,
+      "pipeline_calls_overlapping": 2,
+      "pipeline_threads": 1,
+      "pipeline_union_wall_ms": 6230.0288,
+      "previous_ready_to_submit_ms": 0.004,
+      "request": 1,
+      "since_last_unsuccessful_query_ms": 1.44,
+      "submit_to_marker_ms": 6246.732
+    },
+    {
+      "boundary": 0,
+      "chunk": 3,
+      "end_tokens": 520,
+      "host_llama_decode_ms": 6768.549,
+      "input_tokens": 520,
+      "marker_to_ready_ms": 55.418,
+      "pipeline_calls_overlapping": 7,
+      "pipeline_threads": 1,
+      "pipeline_union_wall_ms": 6748.8403,
+      "previous_ready_to_submit_ms": 0.005,
+      "request": 1,
+      "since_last_unsuccessful_query_ms": 1.533,
+      "submit_to_marker_ms": 6768.607
+    },
+    {
+      "boundary": 0,
+      "chunk": 3,
+      "end_tokens": 608,
+      "host_llama_decode_ms": 12239.587,
+      "input_tokens": 608,
+      "marker_to_ready_ms": 106.989,
+      "pipeline_calls_overlapping": 3,
+      "pipeline_threads": 1,
+      "pipeline_union_wall_ms": 12223.0464,
+      "previous_ready_to_submit_ms": 0.006,
+      "request": 2,
+      "since_last_unsuccessful_query_ms": 1.508,
+      "submit_to_marker_ms": 12239.671
+    },
+    {
+      "boundary": 0,
+      "chunk": 2,
+      "end_tokens": 304,
+      "host_llama_decode_ms": 1485.159,
+      "input_tokens": 304,
+      "marker_to_ready_ms": 35.846,
+      "pipeline_calls_overlapping": 4,
+      "pipeline_threads": 1,
+      "pipeline_union_wall_ms": 1467.7586,
+      "previous_ready_to_submit_ms": 0.005,
+      "request": 3,
+      "since_last_unsuccessful_query_ms": 1.409,
+      "submit_to_marker_ms": 1485.224
+    }
+  ],
+  "chunks": 127,
+  "native_audit": {
+    "block": "oasst-cal-03",
+    "boundary_counts": {
+      "0": 56,
+      "512": 7,
+      "1024": 1
+    },
+    "capacity_bytes": 86245376,
+    "device_event_counts": {
+      "chunk-marker": 127,
+      "chunk-ready": 127,
+      "chunk-submit-begin": 127,
+      "compute-done": 64,
+      "disk-complete": 8,
+      "native-scatter": 17,
+      "native-target": 64,
+      "read-staged": 17,
+      "reserved": 8,
+      "suffix-submitted": 64,
+      "upload-ready": 17,
+      "upload-submit": 17
+    },
+    "direct_plus_scatter_requests": [],
+    "peak_prefetch_bytes": 86245376,
+    "policy": "local-cost",
+    "requests": 64,
+    "runtime_worker_sha256": "9c605163df86f9c98dc35298dc4e8fa2dc7638e0b8e419385f41fad0d68e1a46",
+    "scope": "native event audit and optional correctness checks; no performance estimate"
+  },
+  "observer_sha256": "e07ba1c7c2bb2874cee6a4f55961d80a3b746f337855215213a91b612ec7ae6e",
+  "pipeline_calls_total": 43,
+  "qpc_frequency_hz": 10000000,
+  "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+  "scope": "host intervals around submit and device timeline polling, not hardware compute durations",
+  "stats": {
+    "host_llama_decode_ms": {
+      "max": 12239.587,
+      "median": 15.168,
+      "n": 127
+    },
+    "marker_to_ready_ms": {
+      "max": 171.899,
+      "median": 114.292,
+      "n": 127
+    },
+    "pipeline_union_wall_ms": {
+      "max": 12223.0464,
+      "median": 0.0,
+      "n": 127
+    },
+    "previous_ready_to_submit_ms": {
+      "max": 0.008,
+      "median": 0.004,
+      "n": 63
+    },
+    "since_last_unsuccessful_query_ms": {
+      "max": 1.874,
+      "median": 1.496,
+      "n": 127
+    },
+    "submit_to_marker_ms": {
+      "max": 12239.671,
+      "median": 15.212,
+      "n": 127
+    }
+  },
+  "worker_sha256": "9c605163df86f9c98dc35298dc4e8fa2dc7638e0b8e419385f41fad0d68e1a46"
+}

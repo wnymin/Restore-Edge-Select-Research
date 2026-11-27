@@ -1,0 +1,103 @@
+{
+  "files_sha256": {
+    "r10-local-holdout-execution-lock.json": "f02fede933e294a1cf377d1ad1080821ce0118f89113dc48483c1af19cb9fd4d",
+    "r10-local-service-holdout-execution-lock.json": "9765edd49f1f4d3c658509c358df1417589cf8e4807a6bdab12cd4c132e2eca8",
+    "r10-native-active-capacity-sweep-summary.json": "cfe2f7e62b87562128947ced72d464b1ebbf627f06a4809c228b7d99bd80c4b4",
+    "r10-native-active-capacity-sweep.zip": "fd264523b73681026bc3e411de2cfabfcda6025603a975d219cecd8a58739451",
+    "r10-native-joint-grid-summary.json": "980731775fb10131ac8ab2671d793a839fc608bd0a27649a152a58e64467d342",
+    "r10-native-joint-grid.zip": "7fdc20762cf39bdf62c0f74cace71a86d0cf8a49d56aa4032053aa27cd7ff554",
+    "r10-native-mechanism-replications-summary.json": "50180e41d72e7e6ffbaa704c9ccc3e192d0422968a9471e332f482a8a1114a08",
+    "r10-native-mechanism-replications.zip": "c79f071f90e856bb885818a889cb999bf86159cf421e71e49edbc8214dd1e776",
+    "r10-native-mixed-qualification-summary.json": "1465d5c37467abb949ccd5da1863a12b520f81e8631f6849ebb5d1178188caaf",
+    "r10-native-mixed-qualification.zip": "c23d2611222413b099ecd184a64e75b89a7617b8c14d8c9d644187e1ec49a24f",
+    "r10-native-prefill-diagnostics-v1-summary.json": "1f9df6bc2ac76f3643855025f9aa423474fdbfda0b588d479a290d0a0f85dd7c",
+    "r10-native-prefill-diagnostics-v1.zip": "63444e94ad7c31f6b833e85bf0508d7a0aa28c51c5c6339b185887e60fc5121e",
+    "r10-native-primary-action-explanation.json": "d48ec0b7e3a5c784191587af141c7d805ca3672b16ba20be735091cddac51090",
+    "r10-native-primary-holdout-summary.json": "10aa7504099e70bca95bc3802086d6845a3af8d3f42fa95368ef2aa3ca90d3de",
+    "r10-native-primary-holdout.zip": "045e5d2afdfc492abc7b28599cd613206acc098e1c6d786dec67f659a684ad4e",
+    "r10-native-primary-preparation-summary.json": "9ed715a8c053c7688d6acfedd015a4065677225b3cdcd9de631e05ba8f3f1000",
+    "r10-native-primary-preparation.zip": "95a549079e6a3f5a5e3192d231c82d14c7370270921b1a9764d4e2270edd4d8d",
+    "r10-native-primary-reproduction-receipt.json": "3b5a2a2747ecdc1c341a0fa8f05a4a2268eee64f41af48c2ec15c79cb2c79b43",
+    "r10-native-service-batch-contract-summary.json": "d0c440e5e2b9a37d12115538b9b23b71081264f92335fb8c398b344bcd0c62d7",
+    "r10-native-service-calibration-extended-01-summary.json": "48e83be393e3ac87b220f66bab353b35bf8cd15dcd6be46d088c438085f83914",
+    "r10-native-service-calibration-extended-01.zip": "c9eb2ce672a3e34a7c6ca71b4820d7b85f69bae82b017c8cc1408e1b23d4f308",
+    "r10-native-service-holdout-curves.svg": "7cf4d451922f503271400041075fcd045e77716013d70cd97f408f0eaaeaae4b",
+    "r10-native-service-holdout-delivery-audit.json": "2a00ecf535aa23d36c5d1201ded051f38a3b6491f67aea48483fe94992c09397",
+    "r10-native-service-holdout-summary.json": "d1b6e4f0ec7eabb0f304fcbcc2a1f24de2b430632183293f44954880a7e0ac05",
+    "r10-native-service-holdout.zip": "4873f979ea9fb88254b17a15d3b6fef719e52588649a352e2c9c5b9678b482ac",
+    "r10-native-service-reproduction-receipt.json": "721963d2f1c191ab027ec7ba0a0012d33d739be6e9d3f4ba795f15509d8e6931",
+    "r10-native-service-requests-audit.json": "57e52f27fde691eaf40c26957f5114dc7eb08940d06cba3eae84ef4f003fb459",
+    "r10-native-service-requests.csv": "d3875d1b1c57fe10a17934b623e3da49e25ccb831a5ea9f570e2b0a43c0e3788",
+    "r10-native-service-result-explanation.json": "5f976abe5c36b1f5ee56c5b2a0ebabfb536a1bb792b271a8904dabf6c0d7e826",
+    "r10-native-two-sequence-staged-v1-summary.json": "e44ecbac1e10dfdd64dfc1c977721f26440ad77ad2635d5fd3dddf7c3b870e2a",
+    "r10-native-two-sequence-staged-v1.zip": "c095066e5097e32f645b7af8788cdcfb1f281f5e59c63f4bf4025d718defb855",
+    "r10-native-two-sequence-v1-summary.json": "a2469ce52dc29dcb3dbf1d2ab5affa1968a12df8d494c8138848bd193b38bf11",
+    "r10-native-two-sequence-v1.zip": "0047142a421b5407abfee5c9cf2ee20000005a16b1243b9b63f7bd948d6beda2",
+    "r10-prefill-grid-summary.json": "cf29e953243a7e8016f7773cf451073dbe63bfee32eb848a641f5d39dd0f2946",
+    "r10-prefill-grid.zip": "f072f02d7fbc59a47b8504235dde4cdd4a65d25bbb170dd345e7393501435976",
+    "r10-stage-pool-summary.json": "b6657759a89a7681b91fbbb1ed30ed6ba23b09f346debd96efab6ba1167463cf",
+    "r10-stage-pool.zip": "b4c5b66d485b3bd3f3d8a65fa0b0e7f6beaef9db45596de30149ba32bb10ee0f",
+    "r10-transfer-grid-summary.json": "d60056a2f07f23cf9be41816cdf4e52f0c8181df6e6795394203e8e54bea6c9e",
+    "r10-transfer-grid.zip": "fdba4e92f683b26d507e36e13b6cbd829135fe58fb34a7f4b5fbba168af8845e"
+  },
+  "limits": {
+    "cross_platform": "A100 or V100 has not been tested here",
+    "service_continuous_batching": "no compatible existing switch; policy A/B requires separate rule migration"
+  },
+  "missing": {},
+  "phases": {
+    "R10-DATA-01": {
+      "primary_blocks": 12,
+      "primary_prepared_checkpoints": 175,
+      "service_blocks": 4
+    },
+    "R10-GPU-01": {
+      "online_mixed_fixtures": 3,
+      "tested_exact_logit_positions": 480
+    },
+    "R10-GPU-02": {
+      "aa_sources": 5,
+      "capacity_tiers": 3,
+      "joint_cases": 8,
+      "prefill_samples": 432,
+      "transfer_samples": 48
+    },
+    "R10-GPU-03": {
+      "forced_pairs": 7,
+      "injected_handoff_deep_gain_ms": -326.33590000000004,
+      "native_deep_gain_ms": 301.63640000000004,
+      "scope": "forced actions and a software-injected wait; not policy gains or physical SSD throttling"
+    },
+    "R10-GPU-04": {
+      "comparable_pairs": 60,
+      "mean_gain_margin_ms": 144.64945208333324,
+      "mean_gain_ms": 10.090498689236114,
+      "point_gates": {
+        "availability": true,
+        "both_families_positive": true,
+        "point_gain": false,
+        "request_regression_rate": true,
+        "tail": true
+      },
+      "registered_pairs": 60
+    },
+    "R10-GPU-04-supplementary": {
+      "failed_arms": 0,
+      "pairs": 5
+    },
+    "R10-GPU-05-calibration": {
+      "all_anchors_found": true,
+      "baseline_arms": 13
+    },
+    "R10-GPU-05-single-slot": {
+      "failed_arms": 1,
+      "pairs": 24,
+      "requests": 3840
+    },
+    "R10-GPU-05-staged-probe": {
+      "passed": false,
+      "scope": "correctness only"
+    }
+  },
+  "scope": "R10 local evidence index; not a claim that policies are superior"
+}

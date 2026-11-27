@@ -1,0 +1,37 @@
+{
+  "scope": "R10 GPU-04 native prefill diagnostics on calibration sources only",
+  "cost_profile_sha256": "036e0e27fd4c8879555eb5bfb36257274e4d19a78740a59c5f31ae28e9e028c1",
+  "mixed_worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6",
+  "timeout_s": 280,
+  "burst": {"requests_per_group": 4, "within_group_ms": 4, "last_arrival_ms": 16380},
+  "sources": {
+    "thinking": {
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "catalogue": "bailian-thinking-29-target-v1",
+      "wire_sha256": "4839ff692fd094dcdd888fd0d4d5238c4f937eaa54f3c651a0b499340f242144",
+      "schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc",
+      "seal_sha256": "6cc70eba6933d4a7077de10a1cd2af90edbf952d38ff6eab5b5c3ff8aa90bde3"
+    },
+    "oasst": {
+      "block": "oasst-cal-03",
+      "catalogue": "oasst-cal-03-overlapped-v1",
+      "wire_sha256": "a77e168bc5a6b692746d517bdcc8c4974b2dc07e461d4d2d0c5c3820f9ca8d2f",
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77"
+    }
+  },
+  "pairs": [
+    {"id": "thinking-light-wide", "source": "thinking", "arrivals": "original", "placement": "mixed", "capacity_mib": "144", "arrival_scale": "1.4", "arm_order": ["local-cost", "entry-replay"]},
+    {"id": "oasst-spaced-mixed", "source": "oasst", "arrivals": "original", "placement": "mixed", "capacity_mib": "82.25", "arrival_scale": "260", "arm_order": ["entry-replay", "local-cost"]},
+    {"id": "oasst-burst-ram", "source": "oasst", "arrivals": "burst", "placement": "ram", "capacity_mib": "82.25", "arrival_scale": "1", "arm_order": ["local-cost", "entry-replay"]},
+    {"id": "thinking-contention-wide", "source": "thinking", "arrivals": "original", "placement": "mixed", "capacity_mib": "144", "arrival_scale": "0.62", "arm_order": ["entry-replay", "local-cost"]},
+    {"id": "oasst-burst-mixed", "source": "oasst", "arrivals": "burst", "placement": "mixed", "capacity_mib": "82.25", "arrival_scale": "1", "arm_order": ["local-cost", "entry-replay"]}
+  ],
+  "interpretation": {
+    "independent_blocks": 2,
+    "repeat_pairs_per_cell": 1,
+    "tight_reference_mib": "82.25",
+    "report": ["actual arrival rate and 100 ms peak", "outstanding depth and drain", "mean and P95 responses", "paired actions and same-snapshot choices", "prefetch peak", "RAM and SSD transfer evidence", "failure coverage"],
+    "limits": "Diagnostic only. Show actual burst and prefetch exposure; a wide allocation alone does not prove a wider budget mattered. Never pool with the primary or service holdout."
+  }
+}

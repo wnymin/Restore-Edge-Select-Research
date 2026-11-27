@@ -1,0 +1,9 @@
+{
+  "logit_positions": 384,
+  "pairs": 12,
+  "per_pair_device_copy_avoided_bytes": 16777216,
+  "per_pair_ram_upload_avoided_bytes": 16777216,
+  "prior_first_suffix_fence_pending": 24,
+  "raw_sha256": "99a79eb5de46ce0fc181af6af8334aea7432afb068697ad52be9eb42e91e171c",
+  "scope": "same active tensor addresses, immediate successor, forced boundary, no extra device materialization"
+}

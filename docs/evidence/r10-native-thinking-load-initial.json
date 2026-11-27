@@ -1,0 +1,28 @@
+{
+  "archive_sha256": "7c363bb290480cb34a115e89f18ae684543104ba98442e8def83e94c8083ef34",
+  "arms": [
+    {
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 112.22135104166667,
+      "p95_observation_delay_ms": 18.4207,
+      "receipt_sha256": "9a03603a70e045ce976e921465967c2dc498480b598b1758e7b28d8bb64650f3",
+      "response_mean_ms": 1223.7308104166666,
+      "response_p95_ms": 4912.722,
+      "run": "thinking29-140-first",
+      "source_schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc",
+      "window": {
+        "average_outstanding": 0.9028731067858379,
+        "completions_per_s_in_entire_window": 0.7378036894228558,
+        "drain_after_last_arrival_ms": 184.1161,
+        "drain_elapsed_ms": 130115.9121,
+        "fraction_time_any_request_outstanding": 0.4366874003567777,
+        "max_outstanding": 5,
+        "offered_arrivals_per_s": 0.7311528272879412,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 129931.796
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

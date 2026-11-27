@@ -1,0 +1,33 @@
+{
+  "archive_members": 270,
+  "archive_sha256": "4873f979ea9fb88254b17a15d3b6fef719e52588649a352e2c9c5b9678b482ac",
+  "catalogues": {
+    "oasst-service-hold-01": {
+      "checkpoints": 9,
+      "objects": 18,
+      "seal_sha256": "fc8844b760ea6e5e370a7373e38a6e326cbff0d862840a52364ff0534dd4ca3d"
+    },
+    "oasst-service-hold-02": {
+      "checkpoints": 8,
+      "objects": 16,
+      "seal_sha256": "76b61343672c32b7187cfe079b2cf25a8cdbb8c75e0d3847bb852d20eb84ac6e"
+    },
+    "qwen_thinking_blksz_16-2-reserved": {
+      "checkpoints": 51,
+      "objects": 102,
+      "seal_sha256": "74c51432618b43ea0cf4570979182e9ddf6356ab5841ed9f015d1d5a82735cd3"
+    },
+    "qwen_traceB_blksz_16-90-reserved": {
+      "checkpoints": 19,
+      "objects": 38,
+      "seal_sha256": "87c11d2b427ce3a4897b0fb63524fc570c14497d804063bd437be57853834282"
+    }
+  },
+  "completed_pairs": 24,
+  "failed_arms": 1,
+  "first_gate_sha256": "53a59e6a5f9efba8bfb494644e1143f122276d993068b00219f30803d6ab13fa",
+  "lock_sha256": "9765edd49f1f4d3c658509c358df1417589cf8e4807a6bdab12cd4c132e2eca8",
+  "scope": "service evidence identity and archive integrity; excludes performance calculations",
+  "successful_arms": 47,
+  "summary_sha256": "d1b6e4f0ec7eabb0f304fcbcc2a1f24de2b430632183293f44954880a7e0ac05"
+}

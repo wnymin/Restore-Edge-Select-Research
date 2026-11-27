@@ -1,0 +1,140 @@
+{
+  "archive_sha256": "fdba4e92f683b26d507e36e13b6cbd829135fe58fb34a7f4b5fbba168af8845e",
+  "phase_costs": [
+    {
+      "bytes": 8388608,
+      "phases": {
+        "device_scatter_16_spans": {
+          "max_ms": 3.326,
+          "median_ms": 0.306,
+          "min_ms": 0.22
+        },
+        "disk": {
+          "max_ms": 0.0,
+          "median_ms": 0.0,
+          "min_ms": 0.0
+        },
+        "end_to_end": {
+          "max_ms": 2.843,
+          "median_ms": 2.21,
+          "min_ms": 1.828
+        },
+        "host_call_excluding_disk": {
+          "max_ms": 1.918,
+          "median_ms": 1.3495,
+          "min_ms": 0.988
+        },
+        "upload_signal": {
+          "max_ms": 0.925,
+          "median_ms": 0.841,
+          "min_ms": 0.795
+        }
+      },
+      "repetitions": 12,
+      "tier": "RAM"
+    },
+    {
+      "bytes": 16777216,
+      "phases": {
+        "device_scatter_16_spans": {
+          "max_ms": 3.054,
+          "median_ms": 0.403,
+          "min_ms": 0.298
+        },
+        "disk": {
+          "max_ms": 0.0,
+          "median_ms": 0.0,
+          "min_ms": 0.0
+        },
+        "end_to_end": {
+          "max_ms": 5.382,
+          "median_ms": 3.975,
+          "min_ms": 3.389
+        },
+        "host_call_excluding_disk": {
+          "max_ms": 2.848,
+          "median_ms": 2.2525,
+          "min_ms": 1.799
+        },
+        "upload_signal": {
+          "max_ms": 2.534,
+          "median_ms": 1.706,
+          "min_ms": 1.454
+        }
+      },
+      "repetitions": 12,
+      "tier": "RAM"
+    },
+    {
+      "bytes": 33554432,
+      "phases": {
+        "device_scatter_16_spans": {
+          "max_ms": 2.754,
+          "median_ms": 0.5165,
+          "min_ms": 0.446
+        },
+        "disk": {
+          "max_ms": 0.0,
+          "median_ms": 0.0,
+          "min_ms": 0.0
+        },
+        "end_to_end": {
+          "max_ms": 9.079,
+          "median_ms": 7.682499999999999,
+          "min_ms": 6.137
+        },
+        "host_call_excluding_disk": {
+          "max_ms": 5.488,
+          "median_ms": 4.6,
+          "min_ms": 3.153
+        },
+        "upload_signal": {
+          "max_ms": 4.3,
+          "median_ms": 3.0015,
+          "min_ms": 2.88
+        }
+      },
+      "repetitions": 12,
+      "tier": "RAM"
+    },
+    {
+      "bytes": 52690944,
+      "phases": {
+        "device_scatter_16_spans": {
+          "max_ms": 4.412,
+          "median_ms": 0.8694999999999999,
+          "min_ms": 0.651
+        },
+        "disk": {
+          "max_ms": 18.546,
+          "median_ms": 13.780999999999999,
+          "min_ms": 12.185
+        },
+        "end_to_end": {
+          "max_ms": 31.753,
+          "median_ms": 24.7215,
+          "min_ms": 22.768
+        },
+        "host_call_excluding_disk": {
+          "max_ms": 7.679,
+          "median_ms": 6.4115,
+          "min_ms": 5.7
+        },
+        "upload_signal": {
+          "max_ms": 6.336,
+          "median_ms": 4.798500000000001,
+          "min_ms": 4.543
+        }
+      },
+      "repetitions": 12,
+      "tier": "SSD"
+    }
+  ],
+  "provisional_ram_fit": {
+    "bytes_per_ms": 4598597.350388305,
+    "startup_ms": 0.38583333333333325
+  },
+  "records": 48,
+  "repeated_unbuffered_read_bytes": 632291328,
+  "scope": "isolated native transfer lane; scatter into 16 contiguous spans of a device-only target; provisional"
+}

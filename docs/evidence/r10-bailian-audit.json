@@ -1,0 +1,176 @@
+{
+  "complete_block_trie_nodes": 66013,
+  "independent_text_workload_verified": false,
+  "input_manifest_sha256": "bf1e20921f26b242d04f163b1cf1a209333107695e7c31f24f708b1b5ea5abb2",
+  "verified_cases": [
+    {
+      "checkpoint_references": 108,
+      "complete_block_trie_nodes": 7809,
+      "reconstructed_partial_tails": 29,
+      "requests": 96,
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_types": {
+        "coder": 96
+      },
+      "split": "pilot",
+      "truncated": 64,
+      "window": 28
+    },
+    {
+      "checkpoint_references": 76,
+      "complete_block_trie_nodes": 8622,
+      "reconstructed_partial_tails": 37,
+      "requests": 96,
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_types": {
+        "coder": 96
+      },
+      "split": "reserved",
+      "truncated": 57,
+      "window": 46
+    },
+    {
+      "checkpoint_references": 90,
+      "complete_block_trie_nodes": 9390,
+      "reconstructed_partial_tails": 17,
+      "requests": 96,
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_types": {
+        "coder": 96
+      },
+      "split": "reserved",
+      "truncated": 79,
+      "window": 51
+    },
+    {
+      "checkpoint_references": 99,
+      "complete_block_trie_nodes": 5303,
+      "reconstructed_partial_tails": 54,
+      "requests": 96,
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_types": {
+        "thinking": 96
+      },
+      "split": "reserved",
+      "truncated": 39,
+      "window": 2
+    },
+    {
+      "checkpoint_references": 186,
+      "complete_block_trie_nodes": 3863,
+      "reconstructed_partial_tails": 26,
+      "requests": 96,
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_types": {
+        "thinking": 96
+      },
+      "split": "reserved",
+      "truncated": 69,
+      "window": 11
+    },
+    {
+      "checkpoint_references": 101,
+      "complete_block_trie_nodes": 5295,
+      "reconstructed_partial_tails": 63,
+      "requests": 96,
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_types": {
+        "thinking": 96
+      },
+      "split": "pilot",
+      "truncated": 24,
+      "window": 29
+    },
+    {
+      "checkpoint_references": 60,
+      "complete_block_trie_nodes": 4938,
+      "reconstructed_partial_tails": 72,
+      "requests": 96,
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_types": {
+        "file": 7,
+        "image": 11,
+        "search": 20,
+        "text": 58
+      },
+      "split": "reserved",
+      "truncated": 21,
+      "window": 0
+    },
+    {
+      "checkpoint_references": 43,
+      "complete_block_trie_nodes": 4804,
+      "reconstructed_partial_tails": 69,
+      "requests": 96,
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_types": {
+        "file": 2,
+        "image": 3,
+        "search": 15,
+        "text": 76
+      },
+      "split": "pilot",
+      "truncated": 20,
+      "window": 9
+    },
+    {
+      "checkpoint_references": 44,
+      "complete_block_trie_nodes": 5451,
+      "reconstructed_partial_tails": 72,
+      "requests": 96,
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_types": {
+        "file": 10,
+        "image": 3,
+        "search": 14,
+        "text": 69
+      },
+      "split": "reserved",
+      "truncated": 17,
+      "window": 89
+    },
+    {
+      "checkpoint_references": 56,
+      "complete_block_trie_nodes": 3776,
+      "reconstructed_partial_tails": 89,
+      "requests": 96,
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_types": {
+        "api": 88,
+        "text": 8
+      },
+      "split": "reserved",
+      "truncated": 4,
+      "window": 90
+    },
+    {
+      "checkpoint_references": 33,
+      "complete_block_trie_nodes": 3255,
+      "reconstructed_partial_tails": 85,
+      "requests": 96,
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_types": {
+        "api": 86,
+        "text": 10
+      },
+      "split": "pilot",
+      "truncated": 6,
+      "window": 208
+    },
+    {
+      "checkpoint_references": 46,
+      "complete_block_trie_nodes": 3507,
+      "reconstructed_partial_tails": 86,
+      "requests": 96,
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_types": {
+        "api": 89,
+        "text": 7
+      },
+      "split": "reserved",
+      "truncated": 3,
+      "window": 346
+    }
+  ],
+  "verified_requests": 1152
+}

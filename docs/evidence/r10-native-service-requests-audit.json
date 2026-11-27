@@ -1,0 +1,56 @@
+{
+  "archive_sha256": "4873f979ea9fb88254b17a15d3b6fef719e52588649a352e2c9c5b9678b482ac",
+  "by_policy": {
+    "entry-replay": {
+      "requests": 1920,
+      "slo_pass": 867,
+      "statuses": {
+        "terminal": 1920
+      }
+    },
+    "local-cost": {
+      "requests": 1920,
+      "slo_pass": 808,
+      "statuses": {
+        "terminal": 1824,
+        "unobserved": 96
+      }
+    }
+  },
+  "completed_pairs_with_paired_tail_audit": [
+    "oasst-service-hold-02-mixed-shoulder",
+    "qwen_traceB_blksz_16-90-reserved-mixed-low",
+    "qwen_traceB_blksz_16-90-reserved-short-shoulder",
+    "qwen_thinking_blksz_16-2-reserved-short-overload",
+    "oasst-service-hold-02-short-low",
+    "oasst-service-hold-01-mixed-shoulder",
+    "oasst-service-hold-02-short-overload",
+    "qwen_thinking_blksz_16-2-reserved-mixed-low",
+    "oasst-service-hold-02-short-shoulder",
+    "oasst-service-hold-01-short-overload",
+    "qwen_traceB_blksz_16-90-reserved-short-overload",
+    "oasst-service-hold-02-mixed-overload",
+    "qwen_thinking_blksz_16-2-reserved-short-shoulder",
+    "qwen_traceB_blksz_16-90-reserved-short-low",
+    "qwen_thinking_blksz_16-2-reserved-short-low",
+    "qwen_thinking_blksz_16-2-reserved-mixed-shoulder",
+    "oasst-service-hold-01-mixed-low",
+    "oasst-service-hold-02-mixed-low",
+    "qwen_thinking_blksz_16-2-reserved-mixed-overload",
+    "oasst-service-hold-01-mixed-overload",
+    "oasst-service-hold-01-short-shoulder",
+    "oasst-service-hold-01-short-low",
+    "qwen_traceB_blksz_16-90-reserved-mixed-overload"
+  ],
+  "delivery_sha256": "2a00ecf535aa23d36c5d1201ded051f38a3b6491f67aea48483fe94992c09397",
+  "lock_sha256": "9765edd49f1f4d3c658509c358df1417589cf8e4807a6bdab12cd4c132e2eca8",
+  "request_csv_sha256": "d3875d1b1c57fe10a17934b623e3da49e25ccb831a5ea9f570e2b0a43c0e3788",
+  "requests": 3840,
+  "scope": "request-level HTTP/SSE evidence; no prompt or output content; failed arms retain the full registered population",
+  "slo_pass_count": 1675,
+  "summary_sha256": "d1b6e4f0ec7eabb0f304fcbcc2a1f24de2b430632183293f44954880a7e0ac05",
+  "terminal_statuses": {
+    "terminal": 3744,
+    "unobserved": 96
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "schema": 1,
+  "locked_at": "2026-11-25T14:29:58+09:00",
+  "inputs_sha256": "1aa8911d928a663d7e1f5ae1f21b730a916c5a0f4fdc02c250ad72a6bf13a669",
+  "calibration_sha256": "0acc173f313701c8b3a66cca6a6a6ebe09631ef1efdf6da63b8ad2fbb4a6ea79",
+  "pins": {
+    "src/restore_edge_select/simulator.py": "bdfbbeb90761e580576b939d93238175677010cb433018943a7489b3551474e5",
+    "src/restore_edge_select/entry_refinement.py": "7f491149147a97839d541e60ea7a6f9b199177e7e0b2096e578bba532904ee3d",
+    "scripts/cpu/replay/study_r09_slack.py": "8f5f23a1c48a77f342f23ea215c7df8875f301807befc985d282e0fd160eb50a",
+    "scripts/cpu/replay/study_r09_quality.py": "95b40374906780763800c58641eab82e395929510111e33a9d9388bb8001807e",
+    "scripts/cpu/replay/study_r09_budget.py": "ffa35258b02adf1c4de0ee6f53298fa045fd7e204737e7e535aada0d67ad74d6",
+    "configs/r08-entry-refinement.json": "852326b45b2b41106b5f63576e681a5c8ec7c06da9425035fce0241ada5e0349"
+  },
+  "primary_model": "4b-native",
+  "rule": "eligible multi-choice prefetch decision with an active computation at actual decision start; otherwise zero",
+  "selection": "Largest cap in consecutively passing tested grid prefix with zero worse-performance calibration source windows and positive usage. If none, zero.",
+  "release_budget_ms": "0",
+  "calibration_source_checks": {
+    "0": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": false,
+        "events_failed": false,
+        "enabled": 0
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": false,
+        "events_failed": false,
+        "enabled": 0
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": false,
+        "events_failed": false,
+        "enabled": 0
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": false,
+        "events_failed": false,
+        "enabled": 0
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": false,
+        "events_failed": false,
+        "enabled": 0
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": false,
+        "events_failed": false,
+        "enabled": 0
+      }
+    ],
+    "1/20": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "1/10": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "1/4": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "1/2": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "1": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "2": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "4": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "8": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "16": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ],
+    "32": [
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 5,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 20
+      },
+      {
+        "trace": "qwen_coder_blksz_16.jsonl",
+        "window": 7,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 12
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 20,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 84
+      },
+      {
+        "trace": "qwen_traceA_blksz_16.jsonl",
+        "window": 35,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 126
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 12,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 48
+      },
+      {
+        "trace": "qwen_traceB_blksz_16.jsonl",
+        "window": 168,
+        "failed": true,
+        "events_failed": true,
+        "enabled": 40
+      }
+    ]
+  },
+  "experimental_caps_ms": [
+    "0.25",
+    "2",
+    "8"
+  ],
+  "step_guard_ns": 50000,
+  "oracle_nodes": 1024,
+  "confidence": 0.95,
+  "max_failed_window_rate": 0.05,
+  "inferential_status": "descriptive shared public traces; no independent-source probability certification"
+}

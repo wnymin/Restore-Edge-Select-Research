@@ -1,0 +1,138 @@
+{
+  "blocks": [
+    {
+      "block": "cal-01",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1100,
+      "min_prompt_tokens": 128,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 8
+      }
+    },
+    {
+      "block": "cal-02",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 950,
+      "min_prompt_tokens": 131,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 8
+      }
+    },
+    {
+      "block": "cal-03",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1627,
+      "min_prompt_tokens": 145,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 7,
+        "1024": 1
+      }
+    },
+    {
+      "block": "cal-04",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1437,
+      "min_prompt_tokens": 145,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 7,
+        "1024": 1
+      }
+    },
+    {
+      "block": "hold-01",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1483,
+      "min_prompt_tokens": 141,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 7,
+        "1024": 1
+      }
+    },
+    {
+      "block": "hold-02",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1575,
+      "min_prompt_tokens": 129,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 7,
+        "1024": 1
+      }
+    },
+    {
+      "block": "hold-03",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1281,
+      "min_prompt_tokens": 128,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 8
+      }
+    },
+    {
+      "block": "hold-04",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1732,
+      "min_prompt_tokens": 133,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 8
+      }
+    },
+    {
+      "block": "hold-05",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1428,
+      "min_prompt_tokens": 128,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 8
+      }
+    },
+    {
+      "block": "hold-06",
+      "coding_tagged_trees": 4,
+      "first_prompts_without_cache": 32,
+      "max_prompt_tokens": 1640,
+      "min_prompt_tokens": 134,
+      "ordinary_and_coding_trees": 32,
+      "paired_prefix_depths": {
+        "0": 24,
+        "512": 7,
+        "1024": 1
+      }
+    }
+  ],
+  "exact_duplicates_across_blocks": 0,
+  "manifest_sha256": "b97dcba615f4db147e7dcc64535311082b66b28c6697fad9edffc152f0f09fac",
+  "private_tokens_sha256": "2dc3f566398bd414d68b2ac646bb860d0e7ef482f20cb051cb533b98316d2386",
+  "request_counts": {
+    "calibration": 256,
+    "holdout": 384
+  },
+  "scope": "actual native model tokens and exact common prefixes, generated arrival ticks; no served latency",
+  "unique_session_trees": 320
+}

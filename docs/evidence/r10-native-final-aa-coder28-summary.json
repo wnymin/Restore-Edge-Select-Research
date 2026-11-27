@@ -1,0 +1,51 @@
+{
+  "a": {
+    "actual_scatter_observations": {
+      "native-scatter": 9
+    },
+    "charged_peak_bytes": 86245376,
+    "choices": {
+      "0": 57,
+      "512": 4,
+      "1024": 1,
+      "1536": 34
+    },
+    "max_arrival_slip_ms": 16.0589,
+    "min_arrival_slip_ms": 0.2505,
+    "p95_chooser_ms": 0.7548,
+    "p95_observation_delay_ms": 8.7802,
+    "resources": {},
+    "response_mean_ms": 2483.1315833333333,
+    "response_median_ms": 2489.5394,
+    "response_p95_ms": 4878.1004
+  },
+  "abs_mean_difference_ms": 1367.9750281249999,
+  "abs_p95_difference_ms": 2661.2265,
+  "archive_sha256": "e080b2a872649db9ab705f5af173bf663a936bde5389c711e8d1382d8c7b1d4e",
+  "b": {
+    "actual_scatter_observations": {
+      "native-scatter": 7
+    },
+    "charged_peak_bytes": 86245376,
+    "choices": {
+      "0": 57,
+      "512": 4,
+      "1024": 1,
+      "1536": 34
+    },
+    "max_arrival_slip_ms": 15.462,
+    "min_arrival_slip_ms": 0.3496,
+    "p95_chooser_ms": 0.7876,
+    "p95_observation_delay_ms": 7.2316,
+    "resources": {},
+    "response_mean_ms": 1115.1565552083334,
+    "response_median_ms": 1009.9675,
+    "response_p95_ms": 2216.8739
+  },
+  "block": "qwen_coder_blksz_16-28-pilot",
+  "capacity_bytes": 86245376,
+  "choice_mismatches": 0,
+  "cost_profile_sha256": "036e0e27fd4c8879555eb5bfb36257274e4d19a78740a59c5f31ae28e9e028c1",
+  "policy": "local-cost",
+  "scope": "same-policy full-block A/A under provisional costs; not an A/B effect estimate"
+}

@@ -1,0 +1,68 @@
+{
+  "active_kv": {
+    "avoided_d2d_bytes_per_successor": 16777216,
+    "median_copy_wall_us_paired_delta": 126.0,
+    "observed_copy_wall_us_paired_deltas": [
+      149,
+      160,
+      160,
+      228,
+      125,
+      -87,
+      170,
+      39,
+      121,
+      91,
+      127,
+      125
+    ]
+  },
+  "arms": {
+    "exact-union": {
+      "actual_device_arena_bytes": 138936320,
+      "device_copy_bytes": {
+        "0": 69468160,
+        "1": 86245376
+      },
+      "disk_bytes": 105381888,
+      "exact_logit_positions": 192,
+      "formal_blocks": 12,
+      "median_device_copy_wall_us": {
+        "0": 721.0,
+        "1": 868.0
+      },
+      "peak_charged_bytes": 138936320,
+      "pending_before_handoff_count": 12,
+      "shared_block_uploads": 1,
+      "upload_bytes": 138936320
+    },
+    "exact-union-active-kv": {
+      "actual_device_arena_bytes": 138936320,
+      "device_copy_bytes": {
+        "0": 69468160,
+        "1": 69468160
+      },
+      "disk_bytes": 105381888,
+      "exact_logit_positions": 192,
+      "formal_blocks": 12,
+      "median_device_copy_wall_us": {
+        "0": 748.0,
+        "1": 742.5
+      },
+      "peak_charged_bytes": 138936320,
+      "pending_before_handoff_count": 12,
+      "shared_block_uploads": 1,
+      "upload_bytes": 138936320
+    }
+  },
+  "formal_blocks": 24,
+  "formal_exact_logit_positions": 384,
+  "object_bytes": {
+    "0": 16777216,
+    "1": 52690944,
+    "2": 16777216,
+    "3": 52690944
+  },
+  "page_bytes": 65536,
+  "raw_sha256": "3250adcba59ae40c943c48a778f9c1afb6c23c61bdfd24bc70a2121c7fbeca5d"
+}

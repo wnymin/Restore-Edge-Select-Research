@@ -1,0 +1,232 @@
+{
+  "window_rows": 352,
+  "history_rows": 256,
+  "prompt_max": 2560,
+  "candidate_depths": [
+    512,
+    1024,
+    1536
+  ],
+  "selection_salt": "r10-reconstructed-load-v1",
+  "previous_ids_checked": 218,
+  "workload": "Bailian arrivals and prefix hashes reconstructed as token IDs",
+  "selection": "SHA-256 ordering of unused windows separated by >=4 window indices",
+  "cases": [
+    {
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "window": 28,
+      "split": "pilot",
+      "raw_rows": [
+        9856,
+        10208
+      ],
+      "raw_window_sha256": "01bdc11f3a68f38752ef66b7e1d98a97500c17690367feda9ab80f4d33842818",
+      "generated_filename": "qwen_coder_blksz_16-28-pilot.jsonl",
+      "generated_sha256": "78ae599f3051a0d69760195828de861f18fbb159aa294effae7b12648fb22598",
+      "requests": 96,
+      "unique_checkpoints": 28,
+      "truncated": 64,
+      "with_checkpoints": 39,
+      "with_multiple_checkpoints": 35
+    },
+    {
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "window": 46,
+      "split": "reserved",
+      "raw_rows": [
+        16192,
+        16544
+      ],
+      "raw_window_sha256": "5f2e6cd2eaa8a8d535e909f6dab814d91420dfb8473b7380bada1b9f4086d65d",
+      "generated_filename": "qwen_coder_blksz_16-46-reserved.jsonl",
+      "generated_sha256": "df3c506c0852375cff038ebd321414c10268fbcd92730fcf363c23cfae8fa96c",
+      "requests": 96,
+      "unique_checkpoints": 24,
+      "truncated": 57,
+      "with_checkpoints": 26,
+      "with_multiple_checkpoints": 25
+    },
+    {
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "window": 51,
+      "split": "reserved",
+      "raw_rows": [
+        17952,
+        18304
+      ],
+      "raw_window_sha256": "1531964f203280d6db92f440680c4d794e77d3bbfba6beadbbc913f743259cfa",
+      "generated_filename": "qwen_coder_blksz_16-51-reserved.jsonl",
+      "generated_sha256": "7956aef0bf0e2fb9cc47d9148fd3985cdf06769cebc83626652c7575f58827cb",
+      "requests": 96,
+      "unique_checkpoints": 25,
+      "truncated": 79,
+      "with_checkpoints": 34,
+      "with_multiple_checkpoints": 28
+    },
+    {
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_sha256": "41ac36d9d1b54d084eeb6b05e9d142ba9d02f8bf79cfc9fff418d8ab7cdee906",
+      "window": 2,
+      "split": "reserved",
+      "raw_rows": [
+        704,
+        1056
+      ],
+      "raw_window_sha256": "ccd75c3391eb71460aeca70c0bd8564ce60abc89c7c8c21a4daf8927680b032e",
+      "generated_filename": "qwen_thinking_blksz_16-2-reserved.jsonl",
+      "generated_sha256": "8809614bc2889a70b82e68e8b0e42e3aeb5091753846ef1091a6de8ba04c2379",
+      "requests": 96,
+      "unique_checkpoints": 51,
+      "truncated": 39,
+      "with_checkpoints": 43,
+      "with_multiple_checkpoints": 29
+    },
+    {
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_sha256": "41ac36d9d1b54d084eeb6b05e9d142ba9d02f8bf79cfc9fff418d8ab7cdee906",
+      "window": 11,
+      "split": "reserved",
+      "raw_rows": [
+        3872,
+        4224
+      ],
+      "raw_window_sha256": "7ad550d6b4ed189dc0ead02b78f218ad16f66fe648d7d9ce314f7e6dff500867",
+      "generated_filename": "qwen_thinking_blksz_16-11-reserved.jsonl",
+      "generated_sha256": "303a8397e787cd523eac7d2f2c46549a733325da675cb63011414766fdfcec0a",
+      "requests": 96,
+      "unique_checkpoints": 23,
+      "truncated": 69,
+      "with_checkpoints": 67,
+      "with_multiple_checkpoints": 64
+    },
+    {
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_sha256": "41ac36d9d1b54d084eeb6b05e9d142ba9d02f8bf79cfc9fff418d8ab7cdee906",
+      "window": 29,
+      "split": "pilot",
+      "raw_rows": [
+        10208,
+        10560
+      ],
+      "raw_window_sha256": "c2031b78b22c864c272a656e090560990f71c31f601548934475997529854b3f",
+      "generated_filename": "qwen_thinking_blksz_16-29-pilot.jsonl",
+      "generated_sha256": "650e9e84320d54d6a707504fd6989110817643d94d1e6ed9c55ed668989f767d",
+      "requests": 96,
+      "unique_checkpoints": 25,
+      "truncated": 24,
+      "with_checkpoints": 40,
+      "with_multiple_checkpoints": 36
+    },
+    {
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "window": 0,
+      "split": "reserved",
+      "raw_rows": [
+        0,
+        352
+      ],
+      "raw_window_sha256": "6f997493615b42492847b61db5f3b892df32645c893515be26f395fdf4c44f2c",
+      "generated_filename": "qwen_traceA_blksz_16-0-reserved.jsonl",
+      "generated_sha256": "aeae3431f3821cc92c51e77c967106f035eeeedd4d8c7a84dfa33224faa3b988",
+      "requests": 96,
+      "unique_checkpoints": 28,
+      "truncated": 21,
+      "with_checkpoints": 42,
+      "with_multiple_checkpoints": 12
+    },
+    {
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "window": 9,
+      "split": "pilot",
+      "raw_rows": [
+        3168,
+        3520
+      ],
+      "raw_window_sha256": "ca44973c53c78759c6e9093d7124bb366409f3a2f18348f51607a5c73b727631",
+      "generated_filename": "qwen_traceA_blksz_16-9-pilot.jsonl",
+      "generated_sha256": "38c2fc0eb61114bfc7520858027f6cf5b92b894074631370c255d60508cbb54c",
+      "requests": 96,
+      "unique_checkpoints": 14,
+      "truncated": 20,
+      "with_checkpoints": 36,
+      "with_multiple_checkpoints": 4
+    },
+    {
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "window": 89,
+      "split": "reserved",
+      "raw_rows": [
+        31328,
+        31680
+      ],
+      "raw_window_sha256": "f7f56053c63aed739ee96f0930a0cbc8cb5efe4e61bb0e635949321ca82483f0",
+      "generated_filename": "qwen_traceA_blksz_16-89-reserved.jsonl",
+      "generated_sha256": "86ad0619d67b58ce9acf81fc947bd92ef24f32de2ea85026b4433f3b82c43bb9",
+      "requests": 96,
+      "unique_checkpoints": 9,
+      "truncated": 17,
+      "with_checkpoints": 36,
+      "with_multiple_checkpoints": 5
+    },
+    {
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "window": 90,
+      "split": "reserved",
+      "raw_rows": [
+        31680,
+        32032
+      ],
+      "raw_window_sha256": "20d5cbe824ab5bd6013d8e159152733ef7b48ec36e32870ba0af18d3a9ff1a53",
+      "generated_filename": "qwen_traceB_blksz_16-90-reserved.jsonl",
+      "generated_sha256": "b572a041f7ac0ed2b47ec03b57f2b08573cfc45c407e55cc0cc37124812a6a57",
+      "requests": 96,
+      "unique_checkpoints": 19,
+      "truncated": 4,
+      "with_checkpoints": 46,
+      "with_multiple_checkpoints": 7
+    },
+    {
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "window": 208,
+      "split": "pilot",
+      "raw_rows": [
+        73216,
+        73568
+      ],
+      "raw_window_sha256": "d57d7081b1e73d79cf5e02ec54e114083b400c91c9837836f6a029e767090897",
+      "generated_filename": "qwen_traceB_blksz_16-208-pilot.jsonl",
+      "generated_sha256": "d4fbfc0b89d6926b7452ae06020de38a4dfc4b7267413e9a6b58065ec9342905",
+      "requests": 96,
+      "unique_checkpoints": 5,
+      "truncated": 6,
+      "with_checkpoints": 32,
+      "with_multiple_checkpoints": 1
+    },
+    {
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "window": 346,
+      "split": "reserved",
+      "raw_rows": [
+        121792,
+        122144
+      ],
+      "raw_window_sha256": "016ac114bcd10d4ddcff2e4222ccb095e27eea637a69a4338d7d14b98540ab88",
+      "generated_filename": "qwen_traceB_blksz_16-346-reserved.jsonl",
+      "generated_sha256": "66cc276379ab2035191644b248728d41fb1ec9fb294d9297760ef94e2a50b5c2",
+      "requests": 96,
+      "unique_checkpoints": 15,
+      "truncated": 3,
+      "with_checkpoints": 38,
+      "with_multiple_checkpoints": 5
+    }
+  ]
+}

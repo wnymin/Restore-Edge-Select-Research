@@ -3,8 +3,9 @@ import argparse
 from hashlib import sha256
 import gzip
 
-from scripts.cpu.replay.study_r07_arrivals import CONFIG, POLICIES, ROOT, cases, file_hash, read, run, search, sequence
+from scripts.cpu.replay.study_r07_arrivals import CONFIG, POLICIES, ROOT, cases, read, run, search, sequence
 from scripts.validation.summarize_r07 import load, summary
+from scripts.validation.archive_source import source_matches
 
 EVIDENCE = ROOT/'docs/evidence'
 
@@ -34,7 +35,7 @@ def main():
         f=EVIDENCE/f'r07-{split}.jsonl.gz'; prov=read(EVIDENCE/f'r07-{split}-provenance.json')
         assert sha256(gzip.decompress(f.read_bytes())).hexdigest()==prov['output_sha256']
         if split!='design': # historical design used the pre-freeze matrix and driver
-            assert all(file_hash(ROOT/p)==h for p,h in prov['files'].items()), split
+            assert all(source_matches(ROOT/p,h,historical=True) for p,h in prov['files'].items()), split
         splits[split]=load(f)
         assert len(splits[split])==count
         if split=='design':

@@ -1,0 +1,5846 @@
+{
+  "archive_sha256": "c79f071f90e856bb885818a889cb999bf86159cf421e71e49edbc8214dd1e776",
+  "design_sha256": "6bb908f853089ced2474e1854dce04bace643517d7f2eadee733308c7736a82d",
+  "new_seed_handoff": {
+    "delayed_gain_ms": -326.33590000000004,
+    "earlier_direction_reproduced": true,
+    "raw_gain_ms": 301.63640000000004
+  },
+  "pairs": {
+    "cached-head-compute": {
+      "capacity_bytes": 86245376,
+      "controller_anchor_elapsed_difference_ms": 1.0414999999999992,
+      "deep": {
+        "actions": [
+          512,
+          1024,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "512": 2,
+            "1024": 1
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "carry-active-kv": 1,
+            "chunk-marker": 3,
+            "chunk-ready": 3,
+            "chunk-submit-begin": 3,
+            "compute-done": 3,
+            "disk-complete": 3,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-direct": 2,
+            "read-staged": 4,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 6,
+            "upload-submit": 6
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 86245376,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 12.8114,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": -46.663,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -46.659,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -45.053,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -43.637,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": -43.494,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 22044,
+            "relative_head_marker_ms": -18.103,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": -18.1,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.839,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "reserved",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.35,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.474,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.605,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.087,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.259,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.448,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 6.051,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 6.152,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-complete",
+            "identity": 5,
+            "interval_us": 15663,
+            "relative_head_marker_ms": 25.335,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 25.342,
+            "request": 1,
+            "ticket": 5
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 29.619,
+            "request": 1,
+            "ticket": 5
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 83.199,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "native-target",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 103.617,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 322,
+            "relative_head_marker_ms": 103.946,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 4,
+            "interval_us": 194,
+            "relative_head_marker_ms": 104.142,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 5,
+            "interval_us": 578,
+            "relative_head_marker_ms": 104.722,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 113.124,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 113.46,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 113.56,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 18026,
+            "relative_head_marker_ms": 139.211,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 139.218,
+            "request": 2,
+            "ticket": 6
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 143.902,
+            "request": 2,
+            "ticket": 6
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 148.668,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "carry-active-kv",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 162.861,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 162.868,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 811,
+            "relative_head_marker_ms": 163.683,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 172.222,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 206.693,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          83.199,
+          148.668,
+          206.693
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 83.199,
+            "reads": {
+              "read-direct": 2
+            },
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -46.663,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 83.199,
+            "target_to_suffix_ms": 46.663
+          },
+          {
+            "bytes_uploaded": 86245376,
+            "device_copy_ms": {
+              "native-scatter": 1.094
+            },
+            "finished_uploads_before_head_done": 3,
+            "native_finish_ms": 148.668,
+            "reads": {
+              "read-staged": 3
+            },
+            "relative_head_marker_suffix_ms": 113.124,
+            "relative_head_marker_target_ms": 103.617,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.54400000000001,
+            "target_to_suffix_ms": 9.50699999999999
+          },
+          {
+            "bytes_uploaded": 52690944,
+            "device_copy_ms": {
+              "native-scatter": 0.811
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 206.693,
+            "reads": {
+              "read-staged": 1
+            },
+            "relative_head_marker_suffix_ms": 172.222,
+            "relative_head_marker_target_ms": 162.868,
+            "request": 2,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 34.471000000000004,
+            "target_to_suffix_ms": 9.354000000000013
+          }
+        ],
+        "prefill_warmup_us": [
+          34197515
+        ],
+        "response_ms": [
+          143.7116,
+          148.6718,
+          206.6369
+        ],
+        "snapshot_shape": {
+          "active_deps": [
+            "0",
+            "1"
+          ],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            512
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "input": "cached-head",
+      "publication_anchor": "first-compute",
+      "registered_order": [
+        "shallow",
+        "deep"
+      ],
+      "schedule_sha256": "0a318567dd07c9774ec7847ad13860a67ec60a05c1628a748097402eb060067d",
+      "scope": "one same-input anchored pair; positive favors deeper, reporting only observed actions",
+      "seed": 81397,
+      "shallow": {
+        "actions": [
+          512,
+          512,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "512": 3
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "chunk-marker": 5,
+            "chunk-ready": 5,
+            "chunk-submit-begin": 5,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-direct": 2,
+            "read-staged": 2,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 4,
+            "upload-submit": 4
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 69468160,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 13.8529,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": -47.415,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -47.411,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -46.21,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -44.701,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": -44.593,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 22828,
+            "relative_head_marker_ms": -18.344,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": -18.341,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": -13.911,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.326,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.519,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.585,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.638,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.233,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.485,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 15664,
+            "relative_head_marker_ms": 23.506,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 23.509,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 28.356,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 80.717,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 116.82,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 371,
+            "relative_head_marker_ms": 117.197,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 599,
+            "relative_head_marker_ms": 117.798,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 123.328,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 356.985,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 370.754,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 361,
+            "relative_head_marker_ms": 371.121,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 675,
+            "relative_head_marker_ms": 371.798,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 380.638,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 414.915,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          80.717,
+          356.985,
+          414.915
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 80.717,
+            "reads": {
+              "read-direct": 2
+            },
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -47.415,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 80.717,
+            "target_to_suffix_ms": 47.415
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 0.97
+            },
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 356.985,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 123.328,
+            "relative_head_marker_target_ms": 116.82,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 233.657,
+            "target_to_suffix_ms": 6.50800000000001
+          },
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {
+              "native-scatter": 1.036
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 414.915,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 380.638,
+            "relative_head_marker_target_ms": 370.754,
+            "request": 2,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 34.277000000000044,
+            "target_to_suffix_ms": 9.883999999999958
+          }
+        ],
+        "prefill_warmup_us": [
+          33728278
+        ],
+        "response_ms": [
+          141.5955,
+          356.918,
+          414.99
+        ],
+        "snapshot_shape": {
+          "active_deps": [
+            "0",
+            "1"
+          ],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            512
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "shallow_minus_deep_response_ms": [
+        -2.116100000000017,
+        208.24620000000002,
+        208.3531
+      ],
+      "shallow_minus_deep_total_response_ms": 414.4832,
+      "soft_ssd_hold_ms": 0
+    },
+    "cached-head-inflight": {
+      "capacity_bytes": 86245376,
+      "controller_anchor_elapsed_difference_ms": 0.5828999999999986,
+      "deep": {
+        "actions": [
+          512,
+          1024,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "512": 2,
+            "1024": 1
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "carry-active-kv": 1,
+            "chunk-marker": 3,
+            "chunk-ready": 3,
+            "chunk-submit-begin": 3,
+            "compute-done": 3,
+            "disk-complete": 3,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-direct": 2,
+            "read-staged": 4,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 6,
+            "upload-submit": 6
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 86245376,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 9.9607,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": -3.054,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -3.049,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -1.736,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -0.219,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "reserved",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 10.07,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 21968,
+            "relative_head_marker_ms": 25.807,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 25.811,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 30.86,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 44.653,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 45.004,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 46.451,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 47.979,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 48.22,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 49.412,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 52.416,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 52.516,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-complete",
+            "identity": 5,
+            "interval_us": 17182,
+            "relative_head_marker_ms": 73.574,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 73.579,
+            "request": 1,
+            "ticket": 5
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 78.475,
+            "request": 1,
+            "ticket": 5
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 127.336,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "native-target",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 145.779,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 289,
+            "relative_head_marker_ms": 146.076,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 4,
+            "interval_us": 198,
+            "relative_head_marker_ms": 146.276,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 5,
+            "interval_us": 542,
+            "relative_head_marker_ms": 146.82,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 156.893,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 157.375,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 157.527,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 19104,
+            "relative_head_marker_ms": 180.22,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 180.224,
+            "request": 2,
+            "ticket": 6
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 186.299,
+            "request": 2,
+            "ticket": 6
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 192.258,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "carry-active-kv",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 206.126,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 206.136,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 592,
+            "relative_head_marker_ms": 206.731,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 215.764,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 250.778,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          127.336,
+          192.258,
+          250.778
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 127.336,
+            "reads": {
+              "read-direct": 2
+            },
+            "relative_head_marker_suffix_ms": 44.653,
+            "relative_head_marker_target_ms": -3.054,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 82.68299999999999,
+            "target_to_suffix_ms": 47.707
+          },
+          {
+            "bytes_uploaded": 86245376,
+            "device_copy_ms": {
+              "native-scatter": 1.029
+            },
+            "finished_uploads_before_head_done": 3,
+            "native_finish_ms": 192.258,
+            "reads": {
+              "read-staged": 3
+            },
+            "relative_head_marker_suffix_ms": 156.893,
+            "relative_head_marker_target_ms": 145.779,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.36500000000001,
+            "target_to_suffix_ms": 11.114000000000004
+          },
+          {
+            "bytes_uploaded": 52690944,
+            "device_copy_ms": {
+              "native-scatter": 0.592
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 250.778,
+            "reads": {
+              "read-staged": 1
+            },
+            "relative_head_marker_suffix_ms": 215.764,
+            "relative_head_marker_target_ms": 206.136,
+            "request": 2,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.01399999999998,
+            "target_to_suffix_ms": 9.628000000000014
+          }
+        ],
+        "prefill_warmup_us": [
+          34759850
+        ],
+        "response_ms": [
+          144.0918,
+          182.6829,
+          241.134
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            512
+          ],
+          "head": 0,
+          "ready": [
+            "0"
+          ],
+          "request": 1,
+          "transfer_object": "1"
+        }
+      },
+      "input": "cached-head",
+      "publication_anchor": "first-ssd",
+      "registered_order": [
+        "deep",
+        "shallow"
+      ],
+      "schedule_sha256": "0a318567dd07c9774ec7847ad13860a67ec60a05c1628a748097402eb060067d",
+      "scope": "one same-input anchored pair; positive favors deeper, reporting only observed actions",
+      "seed": 81397,
+      "shallow": {
+        "actions": [
+          512,
+          512,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "512": 3
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "chunk-marker": 5,
+            "chunk-ready": 5,
+            "chunk-submit-begin": 5,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-direct": 2,
+            "read-staged": 2,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 4,
+            "upload-submit": 4
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 69468160,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 9.3778,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": -3.412,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -3.408,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -2.101,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 0,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -0.232,
+            "request": 0,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 0,
+            "event": "read-direct",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 9.479,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 9.662,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 19906,
+            "relative_head_marker_ms": 23.531,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 23.535,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 28.775,
+            "request": 0,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 41.535,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 41.645,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 42.74,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 44.507,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 44.634,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 16370,
+            "relative_head_marker_ms": 64.538,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 64.541,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 69.127,
+            "request": 1,
+            "ticket": 4
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 125.935,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 141.818,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 323,
+            "relative_head_marker_ms": 142.148,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 549,
+            "relative_head_marker_ms": 142.7,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 148.362,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 378.055,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 393.053,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 432,
+            "relative_head_marker_ms": 393.491,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 638,
+            "relative_head_marker_ms": 394.132,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 402.864,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 437.307,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          125.935,
+          378.055,
+          437.307
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 125.935,
+            "reads": {
+              "read-direct": 2
+            },
+            "relative_head_marker_suffix_ms": 41.535,
+            "relative_head_marker_target_ms": -3.412,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 84.4,
+            "target_to_suffix_ms": 44.946999999999996
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 0.872
+            },
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 378.055,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 148.362,
+            "relative_head_marker_target_ms": 141.818,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 229.693,
+            "target_to_suffix_ms": 6.543999999999983
+          },
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {
+              "native-scatter": 1.07
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 437.307,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 402.864,
+            "relative_head_marker_target_ms": 393.053,
+            "request": 2,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 34.44300000000004,
+            "target_to_suffix_ms": 9.810999999999979
+          }
+        ],
+        "prefill_warmup_us": [
+          34579718
+        ],
+        "response_ms": [
+          143.0842,
+          369.0803,
+          428.1755
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            512
+          ],
+          "head": 0,
+          "ready": [
+            "0"
+          ],
+          "request": 1,
+          "transfer_object": "1"
+        }
+      },
+      "shallow_minus_deep_response_ms": [
+        -1.0075999999999965,
+        186.39740000000003,
+        187.0415
+      ],
+      "shallow_minus_deep_total_response_ms": 372.4313000000001,
+      "soft_ssd_hold_ms": 0
+    },
+    "repeat-private-tight": {
+      "capacity_bytes": 86245376,
+      "controller_anchor_elapsed_difference_ms": 0.30990000000000073,
+      "deep": {
+        "actions": [
+          0,
+          1024,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-private",
+          "boundary_counts": {
+            "0": 1,
+            "512": 1,
+            "1024": 1
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "chunk-marker": 5,
+            "chunk-ready": 5,
+            "chunk-submit-begin": 5,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "native-scatter": 5,
+            "native-target": 3,
+            "read-staged": 5,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 5,
+            "upload-submit": 5
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 86245376,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 15.7895,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.627,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "reserved",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.325,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.559,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.691,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.385,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.468,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 5.632,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 8.092,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 8.187,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 23196,
+            "relative_head_marker_ms": 34.935,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 34.938,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 40.252,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 275.283,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "native-target",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 295.171,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 296,
+            "relative_head_marker_ms": 295.474,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 224,
+            "relative_head_marker_ms": 295.7,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 577,
+            "relative_head_marker_ms": 296.28,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 304.99,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 305.31,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 305.62,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 306.832,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 308.409,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 308.51,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 5,
+            "interval_us": 17249,
+            "relative_head_marker_ms": 328.952,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 328.954,
+            "request": 2,
+            "ticket": 5
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 333.247,
+            "request": 2,
+            "ticket": 5
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 339.254,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 352.874,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 4,
+            "interval_us": 277,
+            "relative_head_marker_ms": 353.157,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 5,
+            "interval_us": 587,
+            "relative_head_marker_ms": 353.746,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 362.42,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 399.1,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          275.283,
+          339.254,
+          399.1
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 275.283,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -12.627,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 275.283,
+            "target_to_suffix_ms": 12.627
+          },
+          {
+            "bytes_uploaded": 86245376,
+            "device_copy_ms": {
+              "native-scatter": 1.097
+            },
+            "finished_uploads_before_head_done": 3,
+            "native_finish_ms": 339.254,
+            "reads": {
+              "read-staged": 3
+            },
+            "relative_head_marker_suffix_ms": 304.99,
+            "relative_head_marker_target_ms": 295.171,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 34.26400000000001,
+            "target_to_suffix_ms": 9.819000000000017
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 0.864
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 399.1,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 362.42,
+            "relative_head_marker_target_ms": 352.874,
+            "request": 2,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 36.68000000000001,
+            "target_to_suffix_ms": 9.545999999999992
+          }
+        ],
+        "prefill_warmup_us": [
+          33774447
+        ],
+        "response_ms": [
+          291.0608,
+          339.1507,
+          399.0167
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "input": "repeat-private",
+      "publication_anchor": "first-compute",
+      "registered_order": [
+        "shallow",
+        "deep"
+      ],
+      "schedule_sha256": "8ffde92ce0bbde92d4447da6a92568949af0d891e9fd9d004ac8c4112e66fe8e",
+      "scope": "one same-input anchored pair; positive favors deeper, reporting only observed actions",
+      "seed": 91477,
+      "shallow": {
+        "actions": [
+          0,
+          512,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-private",
+          "boundary_counts": {
+            "0": 1,
+            "512": 2
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "chunk-marker": 7,
+            "chunk-ready": 7,
+            "chunk-submit-begin": 7,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 4,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 4,
+            "upload-submit": 4
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 69468160,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 15.4796,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.122,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.503,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.717,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.858,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.419,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.511,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 22057,
+            "relative_head_marker_ms": 29.766,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 29.768,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 35.156,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 273.191,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 287.656,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 335,
+            "relative_head_marker_ms": 287.999,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 595,
+            "relative_head_marker_ms": 288.597,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 294.177,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 294.431,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 294.482,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 295.697,
+            "request": 2,
+            "ticket": 3
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 4,
+            "interval_us": 0,
+            "relative_head_marker_ms": 297.34,
+            "request": 2,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 297.449,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 5,
+            "interval_us": 16190,
+            "relative_head_marker_ms": 316.904,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 316.907,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 5,
+            "interval_us": 0,
+            "relative_head_marker_ms": 321.9,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 519.828,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 534.447,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 4,
+            "interval_us": 270,
+            "relative_head_marker_ms": 534.722,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 5,
+            "interval_us": 538,
+            "relative_head_marker_ms": 535.261,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 544.135,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 579.411,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          273.191,
+          519.828,
+          579.411
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 273.191,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -12.122,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 273.191,
+            "target_to_suffix_ms": 12.122
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 0.93
+            },
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 519.828,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 294.177,
+            "relative_head_marker_target_ms": 287.656,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 225.65099999999995,
+            "target_to_suffix_ms": 6.521000000000015
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 0.808
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 579.411,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 544.135,
+            "relative_head_marker_target_ms": 534.447,
+            "request": 2,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.275999999999954,
+            "target_to_suffix_ms": 9.687999999999988
+          }
+        ],
+        "prefill_warmup_us": [
+          33395476
+        ],
+        "response_ms": [
+          288.5243,
+          519.5613,
+          579.1857
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "shallow_minus_deep_response_ms": [
+        -2.5364999999999895,
+        180.4106,
+        180.16899999999998
+      ],
+      "shallow_minus_deep_total_response_ms": 358.0431,
+      "soft_ssd_hold_ms": 0
+    },
+    "repeat-shared-soft700": {
+      "capacity_bytes": 86245376,
+      "controller_anchor_elapsed_difference_ms": 0.14760000000000062,
+      "deep": {
+        "actions": [
+          0,
+          1024,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 1,
+            "1024": 1
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "carry-active-kv": 1,
+            "chunk-marker": 5,
+            "chunk-ready": 5,
+            "chunk-submit-begin": 5,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "disk-soft-hold": 2,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 4,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 4,
+            "upload-submit": 4
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 86245376,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 16.1594,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.684,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "reserved",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.467,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.662,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 2.163,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.718,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.828,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.853,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 7.553,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 7.692,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 21397,
+            "relative_head_marker_ms": 29.1,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 283.331,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-soft-hold",
+            "identity": 3,
+            "interval_us": 700485,
+            "relative_head_marker_ms": 733.295,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 733.298,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 738.567,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "native-target",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 755.989,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 319,
+            "relative_head_marker_ms": 756.316,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 225,
+            "relative_head_marker_ms": 756.544,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 577,
+            "relative_head_marker_ms": 757.123,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 765.88,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 766.386,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 766.803,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 16895,
+            "relative_head_marker_ms": 783.722,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 800.842,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-soft-hold",
+            "identity": 1,
+            "interval_us": 701409,
+            "relative_head_marker_ms": 1488.646,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1488.649,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1493.759,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "carry-active-kv",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1507.98,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1507.992,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 695,
+            "relative_head_marker_ms": 1508.689,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1518.409,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1551.727,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          283.331,
+          800.842,
+          1551.727
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 283.331,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -12.684,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 283.331,
+            "target_to_suffix_ms": 12.684
+          },
+          {
+            "bytes_uploaded": 86245376,
+            "device_copy_ms": {
+              "native-scatter": 1.121
+            },
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 800.842,
+            "reads": {
+              "read-staged": 3
+            },
+            "relative_head_marker_suffix_ms": 765.88,
+            "relative_head_marker_target_ms": 755.989,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 700.485,
+            "suffix_to_finish_ms": 34.96199999999999,
+            "target_to_suffix_ms": 9.890999999999963
+          },
+          {
+            "bytes_uploaded": 52690944,
+            "device_copy_ms": {
+              "native-scatter": 0.695
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 1551.727,
+            "reads": {
+              "read-staged": 1
+            },
+            "relative_head_marker_suffix_ms": 1518.409,
+            "relative_head_marker_target_ms": 1507.992,
+            "request": 2,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 701.409,
+            "suffix_to_finish_ms": 33.317999999999984,
+            "target_to_suffix_ms": 10.417000000000144
+          }
+        ],
+        "prefill_warmup_us": [
+          34470023
+        ],
+        "response_ms": [
+          299.3695,
+          800.6992,
+          1551.8306
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "input": "repeat-shared",
+      "publication_anchor": "first-compute",
+      "registered_order": [
+        "shallow",
+        "deep"
+      ],
+      "schedule_sha256": "b5a2b0e000009a4e83020a5e325fefa61683e7f2ff424175765f021b3b5da0a2",
+      "scope": "one same-input anchored pair; positive favors deeper, reporting only observed actions",
+      "seed": 91477,
+      "shallow": {
+        "actions": [
+          0,
+          512,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 2
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "chunk-marker": 7,
+            "chunk-ready": 7,
+            "chunk-submit-begin": 7,
+            "compute-done": 3,
+            "disk-complete": 1,
+            "disk-soft-hold": 1,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 2,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 2,
+            "upload-submit": 2
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 69468160,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 16.0118,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.567,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.384,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.466,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.507,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.699,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.119,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.308,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 21299,
+            "relative_head_marker_ms": 24.625,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 290.308,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-soft-hold",
+            "identity": 1,
+            "interval_us": 701107,
+            "relative_head_marker_ms": 729.322,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 729.325,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 733.675,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 747.149,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 548,
+            "relative_head_marker_ms": 747.702,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 542,
+            "relative_head_marker_ms": 748.247,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 754.38,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 979.345,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 993.428,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 260,
+            "relative_head_marker_ms": 993.693,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 594,
+            "relative_head_marker_ms": 994.29,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1003.235,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1040.188,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          290.308,
+          979.345,
+          1040.188
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 290.308,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -12.567,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 290.308,
+            "target_to_suffix_ms": 12.567
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 1.09
+            },
+            "finished_uploads_before_head_done": 1,
+            "native_finish_ms": 979.345,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 754.38,
+            "relative_head_marker_target_ms": 747.149,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 701.107,
+            "suffix_to_finish_ms": 224.96500000000003,
+            "target_to_suffix_ms": 7.2309999999999945
+          },
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {
+              "native-scatter": 0.854
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 1040.188,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 1003.235,
+            "relative_head_marker_target_ms": 993.428,
+            "request": 2,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 36.95300000000009,
+            "target_to_suffix_ms": 9.807000000000016
+          }
+        ],
+        "prefill_warmup_us": [
+          35069993
+        ],
+        "response_ms": [
+          306.1762,
+          979.2974,
+          1040.0898
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "shallow_minus_deep_response_ms": [
+        6.806699999999978,
+        178.59820000000002,
+        -511.74080000000004
+      ],
+      "shallow_minus_deep_total_response_ms": -326.33590000000004,
+      "soft_ssd_hold_ms": 700
+    },
+    "repeat-shared-tight": {
+      "capacity_bytes": 86245376,
+      "controller_anchor_elapsed_difference_ms": 0.14509999999999934,
+      "deep": {
+        "actions": [
+          0,
+          1024,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 1,
+            "1024": 1
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "carry-active-kv": 1,
+            "chunk-marker": 5,
+            "chunk-ready": 5,
+            "chunk-submit-begin": 5,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 4,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 4,
+            "upload-submit": 4
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 86245376,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 15.6219,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.294,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "reserved",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.36,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.516,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 2.712,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.216,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.318,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 5.37,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 8.213,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 8.298,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 22198,
+            "relative_head_marker_ms": 33.861,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 33.864,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 39.144,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 284.13,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "native-target",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 340.352,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 403,
+            "relative_head_marker_ms": 340.763,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 244,
+            "relative_head_marker_ms": 341.01,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 578,
+            "relative_head_marker_ms": 341.59,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 350.556,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 351.009,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 351.193,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 18738,
+            "relative_head_marker_ms": 373.408,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 373.412,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 377.796,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 385.698,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "carry-active-kv",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 399.185,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 399.194,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 596,
+            "relative_head_marker_ms": 399.793,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 408.766,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 445.567,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          284.13,
+          385.698,
+          445.567
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 284.13,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -12.294,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 284.13,
+            "target_to_suffix_ms": 12.294
+          },
+          {
+            "bytes_uploaded": 86245376,
+            "device_copy_ms": {
+              "native-scatter": 1.225
+            },
+            "finished_uploads_before_head_done": 3,
+            "native_finish_ms": 385.698,
+            "reads": {
+              "read-staged": 3
+            },
+            "relative_head_marker_suffix_ms": 350.556,
+            "relative_head_marker_target_ms": 340.352,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.141999999999996,
+            "target_to_suffix_ms": 10.204000000000008
+          },
+          {
+            "bytes_uploaded": 52690944,
+            "device_copy_ms": {
+              "native-scatter": 0.596
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 445.567,
+            "reads": {
+              "read-staged": 1
+            },
+            "relative_head_marker_suffix_ms": 408.766,
+            "relative_head_marker_target_ms": 399.194,
+            "request": 2,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 36.80099999999999,
+            "target_to_suffix_ms": 9.572000000000003
+          }
+        ],
+        "prefill_warmup_us": [
+          33552172
+        ],
+        "response_ms": [
+          299.6351,
+          385.5779,
+          445.4568
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "input": "repeat-shared",
+      "publication_anchor": "first-compute",
+      "registered_order": [
+        "deep",
+        "shallow"
+      ],
+      "schedule_sha256": "b5a2b0e000009a4e83020a5e325fefa61683e7f2ff424175765f021b3b5da0a2",
+      "scope": "one same-input anchored pair; positive favors deeper, reporting only observed actions",
+      "seed": 91477,
+      "shallow": {
+        "actions": [
+          0,
+          512,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 2
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "chunk-marker": 7,
+            "chunk-ready": 7,
+            "chunk-submit-begin": 7,
+            "compute-done": 3,
+            "disk-complete": 1,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 2,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 2,
+            "upload-submit": 2
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 69468160,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 15.4768,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.231,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.293,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.425,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.665,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.831,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.513,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.628,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 21513,
+            "relative_head_marker_ms": 28.695,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 28.698,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 33.582,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 283.137,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 297.217,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 433,
+            "relative_head_marker_ms": 297.655,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 654,
+            "relative_head_marker_ms": 298.312,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 303.776,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 536.283,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 551.497,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 333,
+            "relative_head_marker_ms": 551.835,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 558,
+            "relative_head_marker_ms": 552.395,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 561.265,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 597.336,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          283.137,
+          536.283,
+          597.336
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 283.137,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -12.231,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 283.137,
+            "target_to_suffix_ms": 12.231
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 1.087
+            },
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 536.283,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 303.776,
+            "relative_head_marker_target_ms": 297.217,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 232.507,
+            "target_to_suffix_ms": 6.559000000000026
+          },
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {
+              "native-scatter": 0.891
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 597.336,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 561.265,
+            "relative_head_marker_target_ms": 551.497,
+            "request": 2,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 36.071000000000026,
+            "target_to_suffix_ms": 9.768000000000029
+          }
+        ],
+        "prefill_warmup_us": [
+          35786573
+        ],
+        "response_ms": [
+          298.6112,
+          536.2735,
+          597.4215
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "shallow_minus_deep_response_ms": [
+        -1.023900000000026,
+        150.6956,
+        151.96470000000005
+      ],
+      "shallow_minus_deep_total_response_ms": 301.63640000000004,
+      "soft_ssd_hold_ms": 0
+    },
+    "repeat-shared-wide": {
+      "capacity_bytes": 167772160,
+      "controller_anchor_elapsed_difference_ms": 0.9603000000000002,
+      "deep": {
+        "actions": [
+          0,
+          1024,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 1,
+            "1024": 1
+          },
+          "capacity_bytes": 167772160,
+          "device_event_counts": {
+            "chunk-marker": 5,
+            "chunk-ready": 5,
+            "chunk-submit-begin": 5,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "native-scatter": 5,
+            "native-target": 3,
+            "read-staged": 4,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 4,
+            "upload-submit": 4
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 138936320,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 15.767,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -12.258,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "reserved",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.76,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 138936320,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.164,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.244,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 2.457,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.837,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.0,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 5.051,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 6.598,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 6.775,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 23531,
+            "relative_head_marker_ms": 33.657,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 33.66,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 39.066,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 39.226,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 16409,
+            "relative_head_marker_ms": 59.127,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 59.13,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 64.12,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 138936320,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 273.747,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 138936320,
+            "event": "native-target",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 290.961,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 270,
+            "relative_head_marker_ms": 291.239,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 138936320,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 245,
+            "relative_head_marker_ms": 291.488,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 138936320,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 555,
+            "relative_head_marker_ms": 292.044,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 300.822,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 336.38,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 349.664,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 228,
+            "relative_head_marker_ms": 349.897,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 609,
+            "relative_head_marker_ms": 350.508,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 359.44,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 395.725,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          273.747,
+          336.38,
+          395.725
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 273.747,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -12.258,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 273.747,
+            "target_to_suffix_ms": 12.258
+          },
+          {
+            "bytes_uploaded": 86245376,
+            "device_copy_ms": {
+              "native-scatter": 1.07
+            },
+            "finished_uploads_before_head_done": 3,
+            "native_finish_ms": 336.38,
+            "reads": {
+              "read-staged": 3
+            },
+            "relative_head_marker_suffix_ms": 300.822,
+            "relative_head_marker_target_ms": 290.961,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.55799999999999,
+            "target_to_suffix_ms": 9.86099999999999
+          },
+          {
+            "bytes_uploaded": 52690944,
+            "device_copy_ms": {
+              "native-scatter": 0.837
+            },
+            "finished_uploads_before_head_done": 1,
+            "native_finish_ms": 395.725,
+            "reads": {
+              "read-staged": 1
+            },
+            "relative_head_marker_suffix_ms": 359.44,
+            "relative_head_marker_target_ms": 349.664,
+            "request": 2,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 36.285000000000025,
+            "target_to_suffix_ms": 9.77600000000001
+          }
+        ],
+        "prefill_warmup_us": [
+          33750551
+        ],
+        "response_ms": [
+          289.0547,
+          335.9002,
+          395.3874
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "input": "repeat-shared",
+      "publication_anchor": "first-compute",
+      "registered_order": [
+        "deep",
+        "shallow"
+      ],
+      "schedule_sha256": "b5a2b0e000009a4e83020a5e325fefa61683e7f2ff424175765f021b3b5da0a2",
+      "scope": "one same-input anchored pair; positive favors deeper, reporting only observed actions",
+      "seed": 91477,
+      "shallow": {
+        "actions": [
+          0,
+          512,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 2
+          },
+          "capacity_bytes": 167772160,
+          "device_event_counts": {
+            "chunk-marker": 7,
+            "chunk-ready": 7,
+            "chunk-submit-begin": 7,
+            "compute-done": 3,
+            "disk-complete": 1,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 2,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 2,
+            "upload-submit": 2
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 69468160,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 16.7273,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -13.335,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.52,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.74,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.796,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 2.222,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.87,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.086,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 21993,
+            "relative_head_marker_ms": 29.608,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 29.611,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 34.986,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 768,
+            "interval_us": 0,
+            "relative_head_marker_ms": 275.248,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 289.617,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 312,
+            "relative_head_marker_ms": 289.936,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 556,
+            "relative_head_marker_ms": 290.495,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 296.437,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 521.799,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 535.34,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 279,
+            "relative_head_marker_ms": 535.624,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 553,
+            "relative_head_marker_ms": 536.18,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 545.053,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 580.343,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          275.248,
+          521.799,
+          580.343
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 275.248,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -13.335,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 275.248,
+            "target_to_suffix_ms": 13.335
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 0.868
+            },
+            "finished_uploads_before_head_done": 2,
+            "native_finish_ms": 521.799,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 296.437,
+            "relative_head_marker_target_ms": 289.617,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 225.36199999999997,
+            "target_to_suffix_ms": 6.819999999999993
+          },
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {
+              "native-scatter": 0.832
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 580.343,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 545.053,
+            "relative_head_marker_target_ms": 535.34,
+            "request": 2,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.289999999999964,
+            "target_to_suffix_ms": 9.712999999999965
+          }
+        ],
+        "prefill_warmup_us": [
+          32673215
+        ],
+        "response_ms": [
+          291.7504,
+          521.5236,
+          580.1035
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "shallow_minus_deep_response_ms": [
+        2.695699999999988,
+        185.6234,
+        184.71610000000004
+      ],
+      "shallow_minus_deep_total_response_ms": 373.03520000000003,
+      "soft_ssd_hold_ms": 0
+    },
+    "short-head-tight": {
+      "capacity_bytes": 86245376,
+      "controller_anchor_elapsed_difference_ms": 52.8012,
+      "deep": {
+        "actions": [
+          0,
+          1024,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 1,
+            "1024": 1
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "carry-active-kv": 1,
+            "chunk-marker": 3,
+            "chunk-ready": 3,
+            "chunk-submit-begin": 3,
+            "compute-done": 3,
+            "disk-complete": 2,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 4,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 4,
+            "upload-submit": 4
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 86245376,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 65.5591,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -61.87,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "reserved",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.496,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.578,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.821,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "compute-done",
+            "identity": 16,
+            "interval_us": 0,
+            "relative_head_marker_ms": 3.912,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 5.358,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 5.445,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 6.5,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 2,
+            "interval_us": 0,
+            "relative_head_marker_ms": 9.122,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "read-staged",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 9.254,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "disk-complete",
+            "identity": 3,
+            "interval_us": 22455,
+            "relative_head_marker_ms": 36.786,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-submit",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 36.79,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "upload-ready",
+            "identity": 3,
+            "interval_us": 0,
+            "relative_head_marker_ms": 41.953,
+            "request": 1,
+            "ticket": 3
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 86245376,
+            "event": "native-target",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 68.679,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 370,
+            "relative_head_marker_ms": 69.054,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 2,
+            "interval_us": 227,
+            "relative_head_marker_ms": 69.283,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 86245376,
+            "event": "native-scatter",
+            "identity": 3,
+            "interval_us": 570,
+            "relative_head_marker_ms": 69.854,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 1024,
+            "interval_us": 0,
+            "relative_head_marker_ms": 79.216,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 79.522,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 79.719,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 15920,
+            "relative_head_marker_ms": 99.018,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 99.021,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 103.652,
+            "request": 2,
+            "ticket": 4
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 113.072,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "carry-active-kv",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 128.121,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 128.27,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 730,
+            "relative_head_marker_ms": 129.005,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 137.89,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 173.118,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          3.912,
+          113.072,
+          173.118
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 3.912,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -61.87,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 3.912,
+            "target_to_suffix_ms": 61.87
+          },
+          {
+            "bytes_uploaded": 86245376,
+            "device_copy_ms": {
+              "native-scatter": 1.167
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 113.072,
+            "reads": {
+              "read-staged": 3
+            },
+            "relative_head_marker_suffix_ms": 79.216,
+            "relative_head_marker_target_ms": 68.679,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 33.85600000000001,
+            "target_to_suffix_ms": 10.536999999999992
+          },
+          {
+            "bytes_uploaded": 52690944,
+            "device_copy_ms": {
+              "native-scatter": 0.73
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 173.118,
+            "reads": {
+              "read-staged": 1
+            },
+            "relative_head_marker_suffix_ms": 137.89,
+            "relative_head_marker_target_ms": 128.27,
+            "request": 2,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.22800000000001,
+            "target_to_suffix_ms": 9.619999999999976
+          }
+        ],
+        "prefill_warmup_us": [
+          33842868
+        ],
+        "response_ms": [
+          69.2428,
+          113.074,
+          172.9021
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "input": "short-head",
+      "publication_anchor": "first-compute",
+      "registered_order": [
+        "shallow",
+        "deep"
+      ],
+      "schedule_sha256": "bcc94b7d4deadee53e58d20c5a084314d0941e6bd798443b8e9f268d1e20a25d",
+      "scope": "one same-input anchored pair; positive favors deeper, reporting only observed actions",
+      "seed": 81397,
+      "shallow": {
+        "actions": [
+          0,
+          512,
+          512
+        ],
+        "audit": {
+          "block": "mechanism-shared",
+          "boundary_counts": {
+            "0": 1,
+            "512": 2
+          },
+          "capacity_bytes": 86245376,
+          "device_event_counts": {
+            "chunk-marker": 5,
+            "chunk-ready": 5,
+            "chunk-submit-begin": 5,
+            "compute-done": 3,
+            "disk-complete": 1,
+            "native-scatter": 4,
+            "native-target": 3,
+            "read-staged": 2,
+            "reserved": 2,
+            "suffix-submitted": 3,
+            "upload-ready": 2,
+            "upload-submit": 2
+          },
+          "direct_plus_scatter_requests": [],
+          "peak_prefetch_bytes": 69468160,
+          "policy": "forced",
+          "requests": 3,
+          "runtime_worker_sha256": "65ce9f0a6be801ec0b3acd2bfffc845a75965041cbb0d246288aeb13b4ccf16a",
+          "scope": "native event audit and optional correctness checks; no performance estimate"
+        },
+        "controller_head_elapsed_ms": 12.7579,
+        "event_graph": [
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "native-target",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": -9.534,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.0,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.36,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "reserved",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.443,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 0.48,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 1.726,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 0,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.499,
+            "request": 1,
+            "ticket": 1
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "read-staged",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 4.588,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "disk-complete",
+            "identity": 1,
+            "interval_us": 22304,
+            "relative_head_marker_ms": 30.174,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-submit",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 30.177,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 16,
+            "interval_us": 0,
+            "relative_head_marker_ms": 30.185,
+            "request": 0,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "upload-ready",
+            "identity": 1,
+            "interval_us": 0,
+            "relative_head_marker_ms": 35.739,
+            "request": 1,
+            "ticket": 2
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 49.797,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 346,
+            "relative_head_marker_ms": 50.148,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 582,
+            "relative_head_marker_ms": 50.732,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 62.565,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "compute-done",
+            "identity": 1088,
+            "interval_us": 0,
+            "relative_head_marker_ms": 295.539,
+            "request": 1,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 69468160,
+            "event": "native-target",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 309.701,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 16777216,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 0,
+            "interval_us": 306,
+            "relative_head_marker_ms": 310.013,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 52690944,
+            "charged_bytes": 69468160,
+            "event": "native-scatter",
+            "identity": 1,
+            "interval_us": 560,
+            "relative_head_marker_ms": 310.576,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "suffix-submitted",
+            "identity": 512,
+            "interval_us": 0,
+            "relative_head_marker_ms": 320.169,
+            "request": 2,
+            "ticket": 0
+          },
+          {
+            "bytes": 0,
+            "charged_bytes": 0,
+            "event": "compute-done",
+            "identity": 576,
+            "interval_us": 0,
+            "relative_head_marker_ms": 355.618,
+            "request": 2,
+            "ticket": 0
+          }
+        ],
+        "native_finish_from_head_marker_ms": [
+          30.185,
+          295.539,
+          355.618
+        ],
+        "observed_pipeline_calls_logged_after_start": 0,
+        "phases": [
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {},
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 30.185,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 0.0,
+            "relative_head_marker_target_ms": -9.534,
+            "request": 0,
+            "reserved_before_head_done": false,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 30.185,
+            "target_to_suffix_ms": 9.534
+          },
+          {
+            "bytes_uploaded": 69468160,
+            "device_copy_ms": {
+              "native-scatter": 0.928
+            },
+            "finished_uploads_before_head_done": 1,
+            "native_finish_ms": 295.539,
+            "reads": {
+              "read-staged": 2
+            },
+            "relative_head_marker_suffix_ms": 62.565,
+            "relative_head_marker_target_ms": 49.797,
+            "request": 1,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 232.974,
+            "target_to_suffix_ms": 12.768
+          },
+          {
+            "bytes_uploaded": 0,
+            "device_copy_ms": {
+              "native-scatter": 0.866
+            },
+            "finished_uploads_before_head_done": 0,
+            "native_finish_ms": 355.618,
+            "reads": {},
+            "relative_head_marker_suffix_ms": 320.169,
+            "relative_head_marker_target_ms": 309.701,
+            "request": 2,
+            "reserved_before_head_done": true,
+            "soft_disk_hold_ms": 0.0,
+            "suffix_to_finish_ms": 35.44900000000001,
+            "target_to_suffix_ms": 10.467999999999961
+          }
+        ],
+        "prefill_warmup_us": [
+          34855330
+        ],
+        "response_ms": [
+          43.0051,
+          295.4439,
+          355.4986
+        ],
+        "snapshot_shape": {
+          "active_deps": [],
+          "admitted": [],
+          "arrived": 3,
+          "committed": [
+            0
+          ],
+          "head": 0,
+          "ready": [],
+          "request": 1,
+          "transfer_object": null
+        }
+      },
+      "shallow_minus_deep_response_ms": [
+        -26.237700000000004,
+        182.36989999999997,
+        182.59650000000002
+      ],
+      "shallow_minus_deep_total_response_ms": 338.7287,
+      "soft_ssd_hold_ms": 0
+    }
+  },
+  "scope": "forced-action native GPU replications; no production incidence or strategy A/B estimate"
+}

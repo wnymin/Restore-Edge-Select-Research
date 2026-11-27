@@ -1,0 +1,1273 @@
+{
+  "all_disagreements": 0,
+  "all_snapshots": 42,
+  "archive_sha256": "c79f071f90e856bb885818a889cb999bf86159cf421e71e49edbc8214dd1e776",
+  "arms": [
+    {
+      "pair": "repeat-shared-tight",
+      "receipt_sha256": "50883987e5c2d7e974cb0c879e520e77048d3a5e26792a2a72cc56796353f983",
+      "recorded_arm": "shallow",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 512,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "repeat-shared-tight",
+      "receipt_sha256": "c39c6212c96b809111290bbb00c456f8ca9e194016abfcc218890336084d8922",
+      "recorded_arm": "deep",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 1024,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "repeat-shared-soft700",
+      "receipt_sha256": "c5622b7696bafa2b3adab3aa79811034cfb4aaa2fa46c84f1677580ff10a9487",
+      "recorded_arm": "shallow",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 512,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "repeat-shared-soft700",
+      "receipt_sha256": "32d3f3d2dce049c757ca42a70290887238279f433f4f5fd5c7cb3a4c0ae2d553",
+      "recorded_arm": "deep",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 1024,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "repeat-shared-wide",
+      "receipt_sha256": "1cad62ec4ad85a83c66df3198d2b3bfa50990df359843b58329cf06d6da022bc",
+      "recorded_arm": "shallow",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 512,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "repeat-shared-wide",
+      "receipt_sha256": "c25926ac11cd438a8ed5891094f942a079e2503160ecfd384754991b9836a8d5",
+      "recorded_arm": "deep",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 1024,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "repeat-private-tight",
+      "receipt_sha256": "8dcd254d23ee218408492b9dc9cf089280cc5f899ef296894385232c43b956e7",
+      "recorded_arm": "shallow",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 512,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "repeat-private-tight",
+      "receipt_sha256": "e813c3f5a29ff07b7b5037580180e1dcd2e7223baa35d7e0aa19c88f21c083a3",
+      "recorded_arm": "deep",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 1024,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "short-head-tight",
+      "receipt_sha256": "e431830e1127eb95b43100c470cd3b310ecfcf2f2b7f400288601cfeb8eff4db",
+      "recorded_arm": "shallow",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 512,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "short-head-tight",
+      "receipt_sha256": "48db301a8070a4816a0be4c1d05e6cf69f31ef55a2bf2983fe0e6b8a59393eb7",
+      "recorded_arm": "deep",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 0,
+            "local-cost": 0
+          },
+          "differs": false,
+          "eligible": [
+            0
+          ],
+          "forced_boundary": 0,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 1024,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "cached-head-inflight",
+      "receipt_sha256": "132dc9b63edef1bc7601f2146a3def974a1771a9f010d69615aa99fd78f607f7",
+      "recorded_arm": "shallow",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": false,
+          "active_transfer": true,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 512,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": false,
+          "active_transfer": true,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "cached-head-inflight",
+      "receipt_sha256": "5b147525d01bc27bbfaa7f04558f5502b7780f1fdb41f84ac6b1bd60e498d47b",
+      "recorded_arm": "deep",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": false,
+          "active_transfer": true,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 1024,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": false,
+          "active_transfer": true,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "cached-head-compute",
+      "receipt_sha256": "373d007aaaec2bcff410bcb7322af64ce473183f751fc879ee5a7951d1432ac4",
+      "recorded_arm": "shallow",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 512,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    },
+    {
+      "pair": "cached-head-compute",
+      "receipt_sha256": "b68cc817184a3e54dab40057e22b71e24aa90cec7b9c5835bd85c833bdf1b7aa",
+      "recorded_arm": "deep",
+      "states": [
+        {
+          "active_compute": false,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 0,
+          "visible": 1
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 1024,
+            "local-cost": 1024
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512,
+            1024
+          ],
+          "forced_boundary": 1024,
+          "request": 1,
+          "visible": 3
+        },
+        {
+          "active_compute": true,
+          "active_transfer": false,
+          "choices": {
+            "entry-replay": 512,
+            "local-cost": 512
+          },
+          "differs": false,
+          "eligible": [
+            0,
+            512
+          ],
+          "forced_boundary": 512,
+          "request": 2,
+          "visible": 3
+        }
+      ]
+    }
+  ],
+  "cost_profile_sha256": "c1ead1eb995e134df83619909025e8c3aa1a3a3707e46f35680e1d3d2f6f61fe",
+  "cost_sensitivity": {
+    "cells": [
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "9/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "9/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "3/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "9/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "9/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "5/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "9/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "9/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "1"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "1"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "3/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "1"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "1"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "5/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "1"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "1"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "13/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "13/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "3/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "13/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "13/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "5/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "13/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "13/10"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "2"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "2"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "3/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "2"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "2"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "5/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "2"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "2"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "4"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "4"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "3/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "4"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "4"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "5/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "4"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "4"
+      },
+      {
+        "choice_pair_counts": {
+          "0/0": 6,
+          "0/1024": 8
+        },
+        "disagreements": [
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-tight"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-tight"
+          },
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-soft700"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-soft700"
+          },
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-wide"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-wide"
+          },
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-private-tight"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-private-tight"
+          }
+        ],
+        "prefill_cost_multiplier": "1/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "8"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "8"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "3/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "8"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "8"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "5/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "8"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "8"
+      },
+      {
+        "choice_pair_counts": {
+          "0/0": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "16"
+      },
+      {
+        "choice_pair_counts": {
+          "0/0": 6,
+          "0/1024": 8
+        },
+        "disagreements": [
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-tight"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-tight"
+          },
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-soft700"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-soft700"
+          },
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-wide"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-shared-wide"
+          },
+          {
+            "arm": "shallow",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-private-tight"
+          },
+          {
+            "arm": "deep",
+            "entry-replay": 1024,
+            "local-cost": 0,
+            "pair": "repeat-private-tight"
+          }
+        ],
+        "prefill_cost_multiplier": "1/2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "16"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "3/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "16"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "1",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "16"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "5/4",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "16"
+      },
+      {
+        "choice_pair_counts": {
+          "1024/1024": 14
+        },
+        "disagreements": [],
+        "prefill_cost_multiplier": "2",
+        "snapshots": 14,
+        "ssd_cost_multiplier": "16"
+      }
+    ],
+    "choice_pair_order": [
+      "local-cost",
+      "entry-replay"
+    ],
+    "scope": "fixed recorded target snapshots with hypothetical estimator costs; does not reproduce altered execution or platform performance"
+  },
+  "design_sha256": "6bb908f853089ced2474e1854dce04bace643517d7f2eadee733308c7736a82d",
+  "scope": "same-snapshot policy replay on synthetic forced-action GPU calibration states; no online policy effect",
+  "target_disagreements": 0,
+  "target_snapshots": 14
+}

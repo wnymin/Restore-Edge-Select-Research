@@ -1,0 +1,34 @@
+{
+  "arms": 72,
+  "boundaries": {
+    "entry-replay-after": [
+      1024
+    ],
+    "entry-replay-exact": [
+      1024
+    ],
+    "entry-replay-tight": [
+      1024
+    ],
+    "local-cost-after": [
+      1024
+    ],
+    "local-cost-exact": [
+      1024
+    ],
+    "local-cost-tight": [
+      1024
+    ]
+  },
+  "csv_sha256": "abb0997b8a8ac8970e37d1a1bf6ee034a00d807493f84a8d17001d18808aeaac",
+  "exact_logit_positions": 1152,
+  "mode": "observed",
+  "physical_inflight": 72,
+  "same_snapshot_disagreements": 0,
+  "scope": "one native target decision; synthetic arrival is triggered by a hardware poll",
+  "snapshot_sha256": "2d4173c11b35d4805394a56c27657c163e675c78f14bba387ab70040bf0b9656",
+  "witnessed_compute": {
+    "pending": 48,
+    "ready": 24
+  }
+}

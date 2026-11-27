@@ -1,0 +1,1628 @@
+{
+  "schema": 1,
+  "auditor": "Same-team takeover, not independent",
+  "sealed_at": "2026-11-24T16:09:04+09:00",
+  "interval_method": "Sample by ascending SHA-256(R08-takeover-2026-11-24-v1:trace:window) of eligible 352-row windows, independently per trace; first two proxy, next two measured. Historical structured windows excluded. Six paired rotations, median paired mean/P95 differences and median signed net retention over positive frozen-minus-local savings (local latency minus frozen latency). For Gate 2 use only certified optimal/near cases; per source/stratum take worst mean/P95 and lowest retention. For n>=5 supported source values use max/min as one-sided median bounds (coverage >=1-2^-n under independent continuous window sampling; descriptive here, not production inference). Otherwise insufficient unless a hard failure is observed. Any certified-good case outside the per-window budgets, zero-overhead loss against a certified-optimal baseline, or transferred repeat-tail is a hard failure. Stress labels are design intents only. For Gate 1 require certified frozen gap >1 ms and >5% plus a matched causal mechanism, not gap alone; unclassified or missing mechanism is insufficient. Compare repeat-tail to local, with no newly introduced repeated tail. Preserve known witness and negative-control checks.",
+  "frozen_sha256": {
+    "config": "8bdff8f2e167f19783281485275e1e7cc0fe2085caf5edc19d01ee243e879307",
+    "entry_refinement": "f30e3bdd42b80a6f320ff9e11df5155de64dc9f6667cc68e6adc4c111dc3fee7",
+    "simulator": "5cd7ba7fc3e13526dd7cb259ab02ff409a9966232f50bf278f6315ac21544794",
+    "evaluator": "526de689832366f8818885b19112dfa5458efc6036cd299adcb8a3c186fc0cbf"
+  },
+  "driver_sha256": "c03740110992b1c3302e9e6a0d8691b1d520af4918c31c5dd8851daf1f334012",
+  "thresholds": {
+    "mean_ms": 1,
+    "p95_ms": 1,
+    "keep_net": 0.99,
+    "gap_fraction": 0.05,
+    "recover_fraction": 0.5,
+    "extra_request_ms": 10,
+    "repeat_excess": 4,
+    "repeats": 6
+  },
+  "oracle_nodes": 1024,
+  "strata": {
+    "proxy/capacity-edge": {
+      "pressure": "capacity-edge",
+      "cost_domain": "proxy",
+      "source_windows": 6
+    },
+    "proxy/high-pressure": {
+      "pressure": "high-pressure",
+      "cost_domain": "proxy",
+      "source_windows": 6
+    },
+    "proxy/low-no-room": {
+      "pressure": "low-no-room",
+      "cost_domain": "proxy",
+      "source_windows": 6
+    },
+    "proxy/near-optimal": {
+      "pressure": "near-optimal",
+      "cost_domain": "proxy",
+      "source_windows": 6
+    },
+    "measured/capacity-edge": {
+      "pressure": "capacity-edge",
+      "cost_domain": "measured",
+      "source_windows": 6
+    },
+    "measured/high-pressure": {
+      "pressure": "high-pressure",
+      "cost_domain": "measured",
+      "source_windows": 6
+    },
+    "measured/low-no-room": {
+      "pressure": "low-no-room",
+      "cost_domain": "measured",
+      "source_windows": 6
+    },
+    "measured/near-optimal": {
+      "pressure": "near-optimal",
+      "cost_domain": "measured",
+      "source_windows": 6
+    }
+  },
+  "cases": [
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 373948416,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 376045568,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 20,
+      "raw_rows": [
+        7040,
+        7392
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 373948416,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 376045568,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 39,
+      "raw_rows": [
+        13728,
+        14080
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "27b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 67239936,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 69337088,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 35,
+      "raw_rows": [
+        12320,
+        12672
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "4b-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 67239936,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 69337088,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceA_blksz_16.jsonl",
+      "window": 57,
+      "raw_rows": [
+        20064,
+        20416
+      ],
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "model": "16l-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 373948416,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 376045568,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 12,
+      "raw_rows": [
+        4224,
+        4576
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 373948416,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 376045568,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 168,
+      "raw_rows": [
+        59136,
+        59488
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "27b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 67239936,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 69337088,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 323,
+      "raw_rows": [
+        113696,
+        114048
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "4b-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 67239936,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 69337088,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_traceB_blksz_16.jsonl",
+      "window": 367,
+      "raw_rows": [
+        129184,
+        129536
+      ],
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "model": "16l-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 373948416,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 376045568,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 7,
+      "raw_rows": [
+        2464,
+        2816
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "proxy/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 373948416,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 12,
+      "capacity_bytes": 376045568,
+      "stratum": "proxy/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 19,
+      "raw_rows": [
+        6688,
+        7040
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "27b",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "proxy/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 67239936,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 69337088,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 5,
+      "raw_rows": [
+        1760,
+        2112
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 135528448,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 12,
+      "capacity_bytes": 137625600,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "4b-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 1,
+      "capacity_bytes": 134217728,
+      "stratum": "measured/low-no-room"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/near-optimal"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 67239936,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 12,
+      "capacity_bytes": 69337088,
+      "stratum": "measured/capacity-edge"
+    },
+    {
+      "trace": "qwen_coder_blksz_16.jsonl",
+      "window": 56,
+      "raw_rows": [
+        19712,
+        20064
+      ],
+      "source_sha256": "3d74974cebb7bccb69b1ca6ea210a44d9a3033443c0271ed015327284dea1aff",
+      "model": "16l-native",
+      "rate": 16,
+      "capacity_bytes": 402653184,
+      "stratum": "measured/high-pressure"
+    }
+  ]
+}

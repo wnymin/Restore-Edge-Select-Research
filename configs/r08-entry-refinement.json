@@ -1,0 +1,14 @@
+{
+  "name": "entry-refinement",
+  "baseline_commit": "074d5634c7a6847a48ec876f0b27e0dd7a3043a0",
+  "policy": {
+    "short": true, "wide": true, "joint": true, "guard": true,
+    "follower_limit": 24, "joint_followers": 2, "replay_limit": 40,
+    "gain_per_request_ms": 1, "new_tail_ms": 10
+  },
+  "time_rounds": 6,
+  "timed_drop_ms": 10,
+  "timed_drop_repeats": 4,
+  "historical_noninferiority_ms": 1,
+  "historical_keep_net": 0.99
+}

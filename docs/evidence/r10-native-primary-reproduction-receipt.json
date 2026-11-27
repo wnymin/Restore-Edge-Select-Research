@@ -1,0 +1,15 @@
+{
+  "deliveries": {
+    "primary": {
+      "archive_sha256": "045e5d2afdfc492abc7b28599cd613206acc098e1c6d786dec67f659a684ad4e",
+      "lock_sha256": "f02fede933e294a1cf377d1ad1080821ce0118f89113dc48483c1af19cb9fd4d",
+      "members": 674,
+      "official_summary_sha256": "10aa7504099e70bca95bc3802086d6845a3af8d3f42fa95368ef2aa3ca90d3de",
+      "reproduced_actions_sha256": "d48ec0b7e3a5c784191587af141c7d805ca3672b16ba20be735091cddac51090",
+      "reproduced_summary_sha256": "77965d555b653c2ad3278a956c4790641f4e35bca1b386463c62bb6dcb71b2db"
+    }
+  },
+  "input_archive_sha256": "3b3ffe95588d15ef11b1314bf66b3246b647b4560fea62737c21d179d8ae1435",
+  "input_members": 44,
+  "scope": "archive-only analysis, no model or accelerator execution"
+}

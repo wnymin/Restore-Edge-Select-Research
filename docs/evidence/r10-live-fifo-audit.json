@@ -1,0 +1,62 @@
+{
+  "directed": {
+    "cold_head": {
+      "committed": 3,
+      "demand": 5,
+      "transfer_events": 5,
+      "zero_compute": 0
+    },
+    "shared_checkpoint": {
+      "active_kv_handoffs": 0,
+      "committed": 3,
+      "prefetch": 2,
+      "reserves": 2,
+      "shared_checkpoint_copy": 1,
+      "transfer_events": 2,
+      "zero_compute": 0
+    },
+    "three_way_tie": {
+      "active_kv_handoffs": 1,
+      "arrival_read_compute_tie": 1,
+      "committed": 3,
+      "prefetch": 4,
+      "reserves": 2,
+      "transfer_events": 4,
+      "zero_compute": 0
+    },
+    "zero_suffix": {
+      "active_kv_handoffs": 0,
+      "arrival_read_compute_tie": 1,
+      "committed": 3,
+      "demand": 3,
+      "prefetch": 2,
+      "reserves": 1,
+      "transfer_events": 5,
+      "zero_compute": 1
+    }
+  },
+  "original_cases": {
+    "entry-replay": {
+      "active_kv_handoffs": 9,
+      "blocks": 60,
+      "committed": 420,
+      "demand": 134,
+      "prefetch": 270,
+      "reserves": 170,
+      "shared_checkpoint_copy": 10,
+      "transfer_events": 404,
+      "zero_compute": 119
+    },
+    "local-cost": {
+      "active_kv_handoffs": 0,
+      "blocks": 60,
+      "committed": 420,
+      "demand": 426,
+      "prefetch": 45,
+      "reserves": 48,
+      "transfer_events": 471,
+      "zero_compute": 180
+    }
+  },
+  "scope": "CPU deterministic execution equivalence, before physical attachment"
+}

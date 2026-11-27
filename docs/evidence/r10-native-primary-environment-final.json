@@ -1,0 +1,4804 @@
+{
+  "between_arm_timestamps_s": {
+    "max": 1.0,
+    "median": 0.0,
+    "min": 0.0,
+    "observations": 60
+  },
+  "by_phase": {
+    "after": {
+      "graphics_mhz": {
+        "max": 2625.0,
+        "median": 2610.0,
+        "min": 660.0,
+        "observations": 120
+      },
+      "memory_mhz": {
+        "max": 8001.0,
+        "median": 8001.0,
+        "min": 6001.0,
+        "observations": 120
+      },
+      "memory_mib": {
+        "max": 11.0,
+        "median": 0.0,
+        "min": 0.0,
+        "observations": 120
+      },
+      "pstate_counts": {
+        "P0": 112,
+        "P3": 7,
+        "P4": 1
+      },
+      "temp_c": {
+        "max": 86.0,
+        "median": 74.5,
+        "min": 61.0,
+        "observations": 120
+      },
+      "util_pct": {
+        "max": 95.0,
+        "median": 1.0,
+        "min": 0.0,
+        "observations": 120
+      },
+      "watts": {
+        "max": 106.99,
+        "median": 54.315,
+        "min": 13.22,
+        "observations": 120
+      }
+    },
+    "setup": {
+      "graphics_mhz": {
+        "max": 2625.0,
+        "median": 2610.0,
+        "min": 435.0,
+        "observations": 120
+      },
+      "memory_mhz": {
+        "max": 8001.0,
+        "median": 8001.0,
+        "min": 6001.0,
+        "observations": 120
+      },
+      "memory_mib": {
+        "max": 11.0,
+        "median": 0.0,
+        "min": 0.0,
+        "observations": 120
+      },
+      "pstate_counts": {
+        "P0": 110,
+        "P3": 7,
+        "P4": 3
+      },
+      "temp_c": {
+        "max": 80.0,
+        "median": 73.0,
+        "min": 41.0,
+        "observations": 120
+      },
+      "util_pct": {
+        "max": 89.0,
+        "median": 0.0,
+        "min": 0.0,
+        "observations": 120
+      },
+      "watts": {
+        "max": 87.27,
+        "median": 27.275,
+        "min": 12.07,
+        "observations": 120
+      }
+    }
+  },
+  "completed_pairs": 60,
+  "counts": {
+    "ac_online_pairs_missing_observation": 0,
+    "ac_online_pairs_with_observed_change": 0,
+    "gpu_identity_pairs_missing_observation": 0,
+    "gpu_identity_pairs_with_observed_change": 0,
+    "pairs_with_battery_observation": 0,
+    "power_plan_pairs_missing_observation": 0,
+    "power_plan_pairs_with_observed_change": 0
+  },
+  "entry_minus_local_start_temp_c": {
+    "entry-replay": {
+      "max": 6.0,
+      "median": -0.5,
+      "min": -13.0,
+      "observations": 30
+    },
+    "local-cost": {
+      "max": 27.0,
+      "median": 1.0,
+      "min": -11.0,
+      "observations": 30
+    }
+  },
+  "lock_sha256": "f02fede933e294a1cf377d1ad1080821ce0118f89113dc48483c1af19cb9fd4d",
+  "pairs": [
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 68.0,
+              "util_pct": 0.0,
+              "watts": 25.77
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 70.0,
+              "util_pct": 1.0,
+              "watts": 23.64
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 70.0,
+              "util_pct": 1.0,
+              "watts": 23.64
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 61.0,
+              "util_pct": 0.0,
+              "watts": 24.55
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-04",
+      "entry_minus_local_start_temp_c": 9.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 69.0,
+              "util_pct": 0.0,
+              "watts": 73.95
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.48
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2505.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 89.0,
+              "watts": 90.1
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.95
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-02",
+      "entry_minus_local_start_temp_c": 0.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2580.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 68.0,
+              "util_pct": 36.0,
+              "watts": 59.93
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 64.0,
+              "util_pct": 0.0,
+              "watts": 47.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 64.0,
+              "util_pct": 0.0,
+              "watts": 47.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 62.0,
+              "util_pct": 0.0,
+              "watts": 23.8
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "entry_minus_local_start_temp_c": 2.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 65.0,
+              "util_pct": 0.0,
+              "watts": 23.83
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 55.81
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-06",
+      "entry_minus_local_start_temp_c": -2.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2385.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 82.0,
+              "watts": 77.21
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P4",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.25
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "entry_minus_local_start_temp_c": 0.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 16.0,
+              "watts": 84.92
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 69.0,
+              "util_pct": 0.0,
+              "watts": 25.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 25.98
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 16.0,
+              "watts": 84.92
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "entry_minus_local_start_temp_c": -7.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 69.0,
+              "util_pct": 0.0,
+              "watts": 24.62
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 3.0,
+              "watts": 29.45
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 3.0,
+              "watts": 29.45
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 24.23
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-03",
+      "entry_minus_local_start_temp_c": 6.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 10.0,
+              "watts": 62.1
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 69.0,
+              "util_pct": 0.0,
+              "watts": 28.8
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2355.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 83.0,
+              "watts": 79.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 68.0,
+              "util_pct": 0.0,
+              "watts": 28.36
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-01",
+      "entry_minus_local_start_temp_c": 1.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 14.74
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 435.0,
+              "index": "0",
+              "memory_mhz": 6001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P4",
+              "temp_c": 68.0,
+              "util_pct": 0.0,
+              "watts": 12.07
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 63.0,
+              "util_pct": 1.0,
+              "watts": 13.87
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 14.74
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "entry_minus_local_start_temp_c": 1.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 25.72
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 67.17
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 67.17
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 23.17
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "entry_minus_local_start_temp_c": 9.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 25.16
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 70.0,
+              "util_pct": 0.0,
+              "watts": 24.94
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 80.0,
+              "util_pct": 38.0,
+              "watts": 56.78
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 25.16
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-05",
+      "entry_minus_local_start_temp_c": -2.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 48.0,
+              "watts": 87.27
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 25.27
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 81.0,
+              "util_pct": 29.0,
+              "watts": 87.55
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P4",
+              "temp_c": 70.0,
+              "util_pct": 0.0,
+              "watts": 23.83
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "entry_minus_local_start_temp_c": 3.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 1
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 26.32
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 25.22
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 25.22
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 48.0,
+              "watts": 87.27
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-06",
+      "entry_minus_local_start_temp_c": -5.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 49.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 26.32
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 19.0,
+              "watts": 26.87
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 49.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-05",
+      "entry_minus_local_start_temp_c": 0.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 25.48
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 25.45
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2580.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 84.0,
+              "util_pct": 59.0,
+              "watts": 89.49
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 19.0,
+              "watts": 26.87
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "entry_minus_local_start_temp_c": 1.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2565.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 90.0,
+              "watts": 86.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 25.48
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 80.0,
+              "util_pct": 92.0,
+              "watts": 106.99
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 24.79
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-01",
+      "entry_minus_local_start_temp_c": 3.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 70.0,
+              "util_pct": 0.0,
+              "watts": 24.66
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 27.8
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2415.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 91.0,
+              "watts": 88.19
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 70.0,
+              "util_pct": 0.0,
+              "watts": 24.66
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-03",
+      "entry_minus_local_start_temp_c": 1.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 27.8
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 25.59
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 25.59
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 11.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 70.0,
+              "util_pct": 0.0,
+              "watts": 24.62
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "entry_minus_local_start_temp_c": 4.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 4.0,
+              "watts": 82.73
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 68.0,
+              "util_pct": 0.0,
+              "watts": 76.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 68.0,
+              "util_pct": 0.0,
+              "watts": 76.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 41.0,
+              "util_pct": 0.0,
+              "watts": 13.73
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "entry_minus_local_start_temp_c": 27.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 660.0,
+              "index": "0",
+              "memory_mhz": 6001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P4",
+              "temp_c": 66.0,
+              "util_pct": 95.0,
+              "watts": 13.22
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 26.44
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 65.0,
+              "util_pct": 0.0,
+              "watts": 13.52
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 66.0,
+              "util_pct": 0.0,
+              "watts": 14.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "entry_minus_local_start_temp_c": 6.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 62.7
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 65.0,
+              "util_pct": 0.0,
+              "watts": 13.52
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 1.0,
+              "watts": 82.03
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 62.7
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-04",
+      "entry_minus_local_start_temp_c": -6.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 61.68
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 1.0,
+              "watts": 82.03
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 1.0,
+              "watts": 35.37
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 46.74
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "entry_minus_local_start_temp_c": 2.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 25.29
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 1.0,
+              "watts": 35.37
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 25.16
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 25.29
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-02",
+      "entry_minus_local_start_temp_c": 0.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 78.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 27.67
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 3.0,
+              "watts": 30.23
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 25.16
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "entry_minus_local_start_temp_c": 2.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 2
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2535.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 25.0,
+              "watts": 60.73
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 50.06
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 50.06
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 78.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-06",
+      "entry_minus_local_start_temp_c": -2.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2475.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 83.0,
+              "util_pct": 90.0,
+              "watts": 89.92
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2535.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 25.0,
+              "watts": 60.73
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 1.0,
+              "watts": 27.2
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 66.83
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-02",
+      "entry_minus_local_start_temp_c": 2.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 65.0,
+              "util_pct": 31.0,
+              "watts": 13.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 66.0,
+              "util_pct": 1.0,
+              "watts": 13.57
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 66.0,
+              "util_pct": 1.0,
+              "watts": 13.57
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 1.0,
+              "watts": 27.2
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "entry_minus_local_start_temp_c": -9.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 24.7
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 65.0,
+              "util_pct": 31.0,
+              "watts": 13.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2325.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 81.0,
+              "util_pct": 92.0,
+              "watts": 87.15
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 24.7
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-04",
+      "entry_minus_local_start_temp_c": -6.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 1.0,
+              "watts": 26.38
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 25.38
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 37.0,
+              "watts": 26.36
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 1.0,
+              "watts": 26.38
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "entry_minus_local_start_temp_c": 0.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2550.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 82.0,
+              "util_pct": 88.0,
+              "watts": 86.79
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 26.87
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 0.0,
+              "watts": 73.12
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 59.22
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "entry_minus_local_start_temp_c": -3.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 1.0,
+              "watts": 81.5
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 26.52
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 26.52
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 15.06
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-01",
+      "entry_minus_local_start_temp_c": 6.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2550.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 86.0,
+              "util_pct": 88.0,
+              "watts": 90.33
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 54.51
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 35.0,
+              "watts": 86.2
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 65.92
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "entry_minus_local_start_temp_c": -3.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 77.0
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 58.77
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 74.96
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 77.0
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-03",
+      "entry_minus_local_start_temp_c": 2.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 25.97
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 46.5
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 46.5
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 73.0,
+              "util_pct": 0.0,
+              "watts": 74.96
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "oasst-hold-05",
+      "entry_minus_local_start_temp_c": 0.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 1.0,
+              "watts": 84.22
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 25.97
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 1.0,
+              "watts": 81.28
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 55.95
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "entry_minus_local_start_temp_c": -3.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 71.81
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 1.0,
+              "watts": 81.28
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 73.96
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 71.81
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "entry_minus_local_start_temp_c": 4.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 3
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2580.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 72.96
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 73.96
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 1.0,
+              "watts": 81.35
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2580.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 72.96
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-02",
+      "entry_minus_local_start_temp_c": 2.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2565.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 80.0,
+              "util_pct": 1.0,
+              "watts": 71.38
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 1.0,
+              "watts": 78.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 1.0,
+              "watts": 78.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 1.0,
+              "watts": 81.35
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "entry_minus_local_start_temp_c": 4.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 67.0,
+              "util_pct": 1.0,
+              "watts": 13.51
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 15.08
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 15.08
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 0.0,
+              "watts": 29.26
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "entry_minus_local_start_temp_c": -11.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 26.64
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 26.01
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 26.01
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 15.24
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-03",
+      "entry_minus_local_start_temp_c": 5.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 61.0,
+              "util_pct": 0.0,
+              "watts": 46.34
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 48.0,
+              "util_pct": 0.0,
+              "watts": 14.59
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2385.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 83.0,
+              "watts": 57.69
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 61.0,
+              "util_pct": 0.0,
+              "watts": 46.34
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-06",
+      "entry_minus_local_start_temp_c": -13.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2505.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 89.0,
+              "watts": 85.59
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 64.0,
+              "util_pct": 0.0,
+              "watts": 44.42
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 66.0,
+              "util_pct": 0.0,
+              "watts": 69.08
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2505.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 89.0,
+              "watts": 85.59
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-01",
+      "entry_minus_local_start_temp_c": -7.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 57.14
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 65.0,
+              "util_pct": 0.0,
+              "watts": 42.49
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 65.0,
+              "util_pct": 0.0,
+              "watts": 42.49
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2625.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 66.0,
+              "util_pct": 0.0,
+              "watts": 69.08
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "entry_minus_local_start_temp_c": -1.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 89.0,
+              "watts": 90.43
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 66.0,
+              "util_pct": 0.0,
+              "watts": 45.58
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 70.25
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 24.97
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "entry_minus_local_start_temp_c": -6.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2505.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 87.0,
+              "watts": 60.56
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 70.25
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 68.52
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 24.93
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-05",
+      "entry_minus_local_start_temp_c": 3.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 1.0,
+              "watts": 27.06
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 72.0,
+              "util_pct": 0.0,
+              "watts": 68.52
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2505.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 82.0,
+              "util_pct": 93.0,
+              "watts": 88.36
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 1.0,
+              "watts": 27.06
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-04",
+      "entry_minus_local_start_temp_c": -2.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2505.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 86.0,
+              "util_pct": 90.0,
+              "watts": 86.94
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 71.0,
+              "util_pct": 0.0,
+              "watts": 25.16
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 0.0,
+              "watts": 26.74
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 61.17
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "entry_minus_local_start_temp_c": -4.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 0.0,
+              "watts": 65.9
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 0.0,
+              "watts": 26.97
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 0.0,
+              "watts": 26.97
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 0.0,
+              "watts": 26.74
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "entry_minus_local_start_temp_c": -1.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 4
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 25.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2340.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 64.0,
+              "watts": 80.8
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2340.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 64.0,
+              "watts": 80.8
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 0.0,
+              "watts": 65.9
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-01",
+      "entry_minus_local_start_temp_c": 1.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 25.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 27.03
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 27.03
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 25.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "oasst-hold-04",
+      "entry_minus_local_start_temp_c": 0.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 52.82
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 25.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 29.94
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 52.82
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-03",
+      "entry_minus_local_start_temp_c": -1.0,
+      "family": "oasst",
+      "first_policy": "entry-replay",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 82.0,
+              "util_pct": 89.0,
+              "watts": 105.49
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 48.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 48.85
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 29.94
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "oasst-hold-05",
+      "entry_minus_local_start_temp_c": 1.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 69.0,
+              "util_pct": 1.0,
+              "watts": 15.41
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 74.0,
+              "util_pct": 0.0,
+              "watts": 25.46
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 15.07
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 69.0,
+              "util_pct": 1.0,
+              "watts": 15.41
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "entry_minus_local_start_temp_c": 5.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 80.0,
+              "util_pct": 0.0,
+              "watts": 63.3
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 1.0,
+              "watts": 73.98
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 1.0,
+              "watts": 73.98
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 1890.0,
+              "index": "0",
+              "memory_mhz": 7001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P3",
+              "temp_c": 67.0,
+              "util_pct": 0.0,
+              "watts": 15.07
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "entry_minus_local_start_temp_c": 11.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 61.51
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 0.0,
+              "watts": 29.0
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 1.0,
+              "watts": 83.61
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 61.51
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "entry_minus_local_start_temp_c": 3.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 0.0,
+              "watts": 27.35
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 0.0,
+              "watts": 29.56
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 80.0,
+              "util_pct": 1.0,
+              "watts": 28.79
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 1.0,
+              "watts": 83.61
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "entry_minus_local_start_temp_c": 2.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 1.0,
+              "watts": 59.03
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 49.4
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2325.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 86.0,
+              "util_pct": 88.0,
+              "watts": 59.33
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 0.0,
+              "watts": 27.35
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "oasst-hold-06",
+      "entry_minus_local_start_temp_c": -3.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 25.67
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 27.6
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 1.0,
+              "watts": 62.03
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 77.0,
+              "util_pct": 1.0,
+              "watts": 59.03
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 1.0,
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "entry_minus_local_start_temp_c": -2.0,
+      "family": "bailian",
+      "first_policy": "local-cost",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 0.0,
+              "watts": 27.49
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 75.0,
+              "util_pct": 0.0,
+              "watts": 25.67
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 80.0,
+              "util_pct": 0.0,
+              "watts": 28.13
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2595.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 79.0,
+              "util_pct": 0.0,
+              "watts": 27.49
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "entry_minus_local_start_temp_c": -4.0,
+      "family": "bailian",
+      "first_policy": "entry-replay",
+      "round": 5
+    },
+    {
+      "arms": {
+        "entry-replay": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 76.0,
+              "util_pct": 0.0,
+              "watts": 26.53
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 1.0,
+              "watts": 28.42
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        },
+        "local-cost": {
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 78.0,
+              "util_pct": 1.0,
+              "watts": 28.42
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          },
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "gpu_id": "GPU-5d572a50-200d-dbbe-0e08-903041248951",
+              "graphics_mhz": 2610.0,
+              "index": "0",
+              "memory_mhz": 8001.0,
+              "memory_mib": 0.0,
+              "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+              "pstate": "P0",
+              "temp_c": 80.0,
+              "util_pct": 0.0,
+              "watts": 28.13
+            },
+            "power_plan": "27fa6203-3987-4dcc-918d-748559d549ec"
+          }
+        }
+      },
+      "between_arm_timestamps_s": 0.0,
+      "block": "oasst-hold-02",
+      "entry_minus_local_start_temp_c": -2.0,
+      "family": "oasst",
+      "first_policy": "local-cost",
+      "round": 5
+    }
+  ],
+  "scope": "endpoints only; inter-arm timestamps have whole-second resolution and include controller overhead; no continuous GPU trace, latency or exclusion decision"
+}

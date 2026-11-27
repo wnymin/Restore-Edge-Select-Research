@@ -1,0 +1,58 @@
+{
+  "scope": "R10 calibration only; no primary holdout input or timing",
+  "resource": {
+    "block": "oasst-cal-03",
+    "catalogue": "oasst-cal-03-overlapped-v1",
+    "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+    "arrival_scale": "260",
+    "capacity_order": ["82.25", "64", "144"]
+  },
+  "thinking_retry": {
+    "block": "qwen_thinking_blksz_16-29-pilot",
+    "catalogue": "bailian-thinking-29-target-v1",
+    "arrival_scale": "0.62"
+  },
+  "mechanism_inputs": {
+    "repeat-shared": {
+      "directory": "mechanism-pilot-independent-v1",
+      "block": "mechanism-shared",
+      "seed": 91477,
+      "head_tokens": 768,
+      "head_cached": false,
+      "schedule_sha256": "b5a2b0e000009a4e83020a5e325fefa61683e7f2ff424175765f021b3b5da0a2"
+    },
+    "repeat-private": {
+      "directory": "mechanism-pilot-independent-v1",
+      "block": "mechanism-private",
+      "seed": 91477,
+      "head_tokens": 768,
+      "head_cached": false,
+      "schedule_sha256": "8ffde92ce0bbde92d4447da6a92568949af0d891e9fd9d004ac8c4112e66fe8e"
+    },
+    "short-head": {
+      "directory": "mechanism-pilot-short-head-v1",
+      "block": "mechanism-shared",
+      "seed": 81397,
+      "head_tokens": 16,
+      "head_cached": false,
+      "schedule_sha256": "bcc94b7d4deadee53e58d20c5a084314d0941e6bd798443b8e9f268d1e20a25d"
+    },
+    "cached-head": {
+      "directory": "mechanism-pilot-inflight-v1",
+      "block": "mechanism-shared",
+      "seed": 81397,
+      "head_tokens": 768,
+      "head_cached": true,
+      "schedule_sha256": "0a318567dd07c9774ec7847ad13860a67ec60a05c1628a748097402eb060067d"
+    }
+  },
+  "mechanism_pairs": [
+    {"tag": "repeat-shared-tight", "input": "repeat-shared", "capacity": "82.25", "anchor": "first-compute", "hold_ms": 0, "order": ["deep", "shallow"]},
+    {"tag": "repeat-shared-soft700", "input": "repeat-shared", "capacity": "82.25", "anchor": "first-compute", "hold_ms": 700, "order": ["shallow", "deep"]},
+    {"tag": "repeat-shared-wide", "input": "repeat-shared", "capacity": "160", "anchor": "first-compute", "hold_ms": 0, "order": ["deep", "shallow"]},
+    {"tag": "repeat-private-tight", "input": "repeat-private", "capacity": "82.25", "anchor": "first-compute", "hold_ms": 0, "order": ["shallow", "deep"]},
+    {"tag": "short-head-tight", "input": "short-head", "capacity": "82.25", "anchor": "first-compute", "hold_ms": 0, "order": ["shallow", "deep"]},
+    {"tag": "cached-head-inflight", "input": "cached-head", "capacity": "82.25", "anchor": "first-ssd", "hold_ms": 0, "order": ["deep", "shallow"]},
+    {"tag": "cached-head-compute", "input": "cached-head", "capacity": "82.25", "anchor": "first-compute", "hold_ms": 0, "order": ["shallow", "deep"]}
+  ]
+}

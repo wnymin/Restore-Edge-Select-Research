@@ -1,0 +1,76 @@
+{
+  "archive_sha256": "043a789e36951addbe4dedb717c5d85285996c2e074fc81bc91d7547ee6d9e47",
+  "at_least_1000ms": [],
+  "chunks": 574,
+  "native_audit": {
+    "block": "qwen_coder_blksz_16-28-pilot",
+    "boundary_counts": {
+      "0": 57,
+      "512": 4,
+      "1024": 1,
+      "1536": 34
+    },
+    "capacity_bytes": 86245376,
+    "device_event_counts": {
+      "chunk-marker": 574,
+      "chunk-ready": 574,
+      "chunk-submit-begin": 574,
+      "compute-done": 96,
+      "disk-complete": 39,
+      "native-scatter": 11,
+      "native-target": 96,
+      "read-direct": 136,
+      "read-staged": 11,
+      "reserved": 5,
+      "suffix-submitted": 96,
+      "upload-ready": 147,
+      "upload-submit": 147
+    },
+    "direct_plus_scatter_requests": [],
+    "peak_prefetch_bytes": 86245376,
+    "policy": "local-cost",
+    "requests": 96,
+    "runtime_worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6",
+    "scope": "native event audit and optional correctness checks; no performance estimate"
+  },
+  "observer_sha256": "e07ba1c7c2bb2874cee6a4f55961d80a3b746f337855215213a91b612ec7ae6e",
+  "pipeline_calls_logged_after_chunk_clock": 0,
+  "pipeline_calls_total": 52,
+  "qpc_frequency_hz": 10000000,
+  "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574",
+  "scope": "host intervals around submit and device timeline polling, not hardware compute durations",
+  "stats": {
+    "host_llama_decode_ms": {
+      "max": 21.321,
+      "median": 16.017,
+      "n": 574
+    },
+    "marker_to_ready_ms": {
+      "max": 198.663,
+      "median": 122.33850000000001,
+      "n": 574
+    },
+    "pipeline_union_wall_ms": {
+      "max": 0.0,
+      "median": 0.0,
+      "n": 574
+    },
+    "previous_ready_to_submit_ms": {
+      "max": 0.067,
+      "median": 0.004,
+      "n": 478
+    },
+    "since_last_unsuccessful_query_ms": {
+      "max": 2.195,
+      "median": 1.545,
+      "n": 574
+    },
+    "submit_to_marker_ms": {
+      "max": 21.393,
+      "median": 16.085,
+      "n": 574
+    }
+  },
+  "warmup_grid_host_ms": 57942.842,
+  "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+}

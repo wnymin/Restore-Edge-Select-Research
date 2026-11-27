@@ -1,0 +1,53 @@
+{
+  "archive_sha256": "2cacbd4cfd2f369f91dee9bcff7a05a6b2d169ac430e4d0159d96e885dd88379",
+  "complete_arm": {
+    "end_utc": "2026-11-25T15:21:34+00:00",
+    "policy": "local-cost",
+    "return_code": 0,
+    "start_utc": "2026-11-25T15:19:22+00:00"
+  },
+  "complete_pairs_before_attempt": 18,
+  "files": {
+    "1-local-cost.arm.json": {
+      "bytes": 1455,
+      "sha256": "11afccda821deb000902975f1288e55d79e48ab1c7cc862f953ab3fffb4d945c"
+    },
+    "1-local-cost.driver.log": {
+      "bytes": 68,
+      "sha256": "603d37f837a676548610bd7138b07badd4379307c287033dfa372f616659478c"
+    },
+    "1-local-cost.native.csv": {
+      "bytes": 29778,
+      "sha256": "47bf7e6201a0773702a4fef7f9d8af277046ec54cab22388fb2f4c5e9df275f2"
+    },
+    "1-local-cost.run.json": {
+      "bytes": 84379,
+      "sha256": "1eb3690d7f69b94f0816eda1a3177c7a5e38995d7c245b4d36a79a7dc5ec3fb1"
+    },
+    "1-local-cost.stderr": {
+      "bytes": 73757,
+      "sha256": "5c4e417032dbeacbe54681f8f2495b50fa1479b2e0655375e321397963303b62"
+    },
+    "2-entry-replay.driver.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "2-entry-replay.native.csv": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "2-entry-replay.stderr": {
+      "bytes": 71729,
+      "sha256": "d84a4ffb69dfe7850362db89780f31c207457a3f2515fddaf6ca75d3f203d918"
+    }
+  },
+  "other_arm": {
+    "policy": "entry-replay",
+    "status": "interrupted before terminal ledger; no worker outcome available"
+  },
+  "pair": "r02-qwen_coder_blksz_16-51-reserved",
+  "primary_lock_sha256": "f02fede933e294a1cf377d1ad1080821ce0118f89113dc48483c1af19cb9fd4d",
+  "raw_attempt_path": "outputs/r10/holdout-primary-interrupted/20261126-r02-qwen_coder_blksz_16-51-reserved",
+  "scope": "externally interrupted incomplete main campaign attempt; no policy outcome read",
+  "treatment": "retain all records; restart both arms in original order; do not include the interrupted attempt as a complete comparison or classify it as a worker failure"
+}

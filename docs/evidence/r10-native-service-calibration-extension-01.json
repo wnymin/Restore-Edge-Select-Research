@@ -1,0 +1,16 @@
+{
+  "baseline_archive_sha256": "734ee26ce54ba0bf2c494b8ab04cc2ed8ee08295fd058bd558d0f6e72cb92e36",
+  "baseline_summary_sha256": "46c18ade639a00b58aaf7ef9987ebf707a63c00402285bc1ea1bcad73d261bcd",
+  "design_sha256": "08d55d311684aad2b48854006e5c39ac73ccae4fa0e17a832a3fe7c7310decb9",
+  "points": [
+    {
+      "arrival_scale": "1170",
+      "block": "oasst-cal-03",
+      "family": "oasst",
+      "profile": "mixed",
+      "rate": "extra01",
+      "target": "low"
+    }
+  ],
+  "scope": "R10 additional service rates from baseline calibration only"
+}

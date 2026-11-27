@@ -1,0 +1,47 @@
+{
+  "online-forced-smoke": {
+    "arms": 6,
+    "boundaries": {
+      "forced-0": [
+        0
+      ],
+      "forced-1024": [
+        1024
+      ],
+      "forced-512": [
+        512
+      ]
+    },
+    "csv_sha256": "5986707a94c6d342400b9bba83b59378f879f68b27ebccd1caf80866343ea7ee",
+    "exact_logit_positions": 96,
+    "mode": "forced",
+    "physical_inflight": 6,
+    "same_snapshot_disagreements": 0,
+    "scope": "one native target decision; synthetic arrival is triggered by a hardware poll",
+    "snapshot_sha256": "ac268eb00a23546e305434994b179b1f08b7cfc03b8e29e4958971e1f69cdb6a"
+  },
+  "online-native": {
+    "arms": 48,
+    "boundaries": {
+      "entry-replay-exact": [
+        1024
+      ],
+      "entry-replay-tight": [
+        1024
+      ],
+      "local-cost-exact": [
+        1024
+      ],
+      "local-cost-tight": [
+        1024
+      ]
+    },
+    "csv_sha256": "f2ced0e00ba2b04db0b3bf6c8d0b1f6b50c09be1318280eac358219311307225",
+    "exact_logit_positions": 768,
+    "mode": "chooser",
+    "physical_inflight": 48,
+    "same_snapshot_disagreements": 0,
+    "scope": "one native target decision; synthetic arrival is triggered by a hardware poll",
+    "snapshot_sha256": "630d035ab513ac509e4a94bfba56ff2cb39e1ecaaa7f0e3646e3c1cdeabdf5a5"
+  }
+}

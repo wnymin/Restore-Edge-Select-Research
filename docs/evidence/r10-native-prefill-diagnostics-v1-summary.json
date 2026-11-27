@@ -1,0 +1,1190 @@
+{
+  "archive_sha256": "63444e94ad7c31f6b833e85bf0508d7a0aa28c51c5c6339b185887e60fc5121e",
+  "arms_failed": 0,
+  "arms_succeeded": 10,
+  "design_sha256": "1f69a5e383f110497693bc213d0e3cbd9a3dceb20542619ced5f931cb5f6663d",
+  "pairs": [
+    {
+      "arms": [
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 60, 2625, 8001, 42.17, P0, 3, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:52:54+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 0.5421853755866095,
+            "completions_per_s_in_entire_window": 0.7380948699630994,
+            "drain_after_last_arrival_ms": 139.6456,
+            "drain_elapsed_ms": 130064.581,
+            "fraction_time_any_request_outstanding": 0.32814627450343303,
+            "max_outstanding": 5,
+            "offered_arrivals_per_s": 0.7311914353278177,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 129924.9354
+          },
+          "audited_completed": 96,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.438771875,
+            "p50": 0.3775,
+            "p95": 0.864
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 4,
+            "1024": 11,
+            "1536": 25
+          },
+          "counts": {
+            "any_nonzero_candidate": 40,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 36,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 96
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 1023410176,
+            "RAM/prefetch": 520093696,
+            "SSD/demand": 1317273600,
+            "SSD/prefetch": 684982272
+          },
+          "policy": "local-cost",
+          "prefix": "1-local-cost",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 62, 210, 405, 2.51, P8, 3, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:50:03+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 52
+            },
+            "charged_peak_bytes": 103022592,
+            "choices": {
+              "0": 56,
+              "512": 4,
+              "1024": 11,
+              "1536": 25
+            },
+            "max_arrival_slip_ms": 15.3417,
+            "min_arrival_slip_ms": 0.221,
+            "p95_chooser_ms": 0.864,
+            "p95_observation_delay_ms": 13.2287,
+            "resources": {},
+            "response_mean_ms": 734.5741010416667,
+            "response_median_ms": 464.4596,
+            "response_p95_ms": 2330.7699
+          }
+        },
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 62, 2625, 8001, 52.43, P0, 3, 10"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:55:45+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 0.5435150894307155,
+            "completions_per_s_in_entire_window": 0.7380731081849057,
+            "drain_after_last_arrival_ms": 143.4764,
+            "drain_elapsed_ms": 130068.4159,
+            "fraction_time_any_request_outstanding": 0.3293603447353125,
+            "max_outstanding": 5,
+            "offered_arrivals_per_s": 0.7311914122538421,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 129924.9395
+          },
+          "audited_completed": 96,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.272628125,
+            "p50": 0.2484,
+            "p95": 0.5673
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 4,
+            "1024": 11,
+            "1536": 25
+          },
+          "counts": {
+            "any_nonzero_candidate": 40,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 36,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 96
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 1006632960,
+            "RAM/prefetch": 536870912,
+            "SSD/demand": 1317273600,
+            "SSD/prefetch": 684982272
+          },
+          "policy": "entry-replay",
+          "prefix": "2-entry-replay",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 60, 2625, 8001, 42.17, P0, 3, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:52:54+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 55
+            },
+            "charged_peak_bytes": 103022592,
+            "choices": {
+              "0": 56,
+              "512": 4,
+              "1024": 11,
+              "1536": 25
+            },
+            "max_arrival_slip_ms": 15.9652,
+            "min_arrival_slip_ms": 0.2369,
+            "p95_chooser_ms": 0.5673,
+            "p95_observation_delay_ms": 10.9529,
+            "resources": {},
+            "response_mean_ms": 736.3973614583333,
+            "response_median_ms": 466.26375,
+            "response_p95_ms": 2204.6022
+          }
+        }
+      ],
+      "case": {
+        "arm_order": [
+          "local-cost",
+          "entry-replay"
+        ],
+        "arrival_scale": "1.4",
+        "arrivals": "original",
+        "capacity_mib": "144",
+        "id": "thinking-light-wide",
+        "placement": "mixed",
+        "source": "thinking"
+      },
+      "catalogue": "qwen_thinking_blksz_16-29-pilot",
+      "execution_sha256": "c7f1a1cede5f3b1d51226ff6ca8e1c55c7a154d399172c3552ecf8dcac6588f7",
+      "file_sha256": {
+        "1-local-cost.driver.log": "e74a80b64deade162836eda735bb23882b79519fc39e957fe01c73fc45b9cc52",
+        "1-local-cost.native.csv": "3dedfaeb29b8040772b3de6f33de2bb34a423cc54acc2b4df6369611d4fa474e",
+        "1-local-cost.run.json": "574bc2595c1036e86c483ebb9b85267f2e4bcd3cf9bb796b0eb6103d8aa7ecab",
+        "1-local-cost.stderr": "de63ea7725e81edfaa4fccc398bcbe744531860bde8537a8686a9ab5f2da00d3",
+        "2-entry-replay.driver.log": "e74a80b64deade162836eda735bb23882b79519fc39e957fe01c73fc45b9cc52",
+        "2-entry-replay.native.csv": "6960a813f6eca2cc0b101e30e478d51743ef4bb0a34f6cf0827f57d3f7321ee8",
+        "2-entry-replay.run.json": "773812971ee89cba053d81abcb0dda49e2b5824f849ef06cf492318feecc033f",
+        "2-entry-replay.stderr": "c802284e794fddd1b928b9c95a47b9157a1cb7e635327490d6271bd0fe50e9d6"
+      },
+      "paired": {
+        "action_disagreements": 0,
+        "local_minus_entry_ms": {
+          "response_mean_ms": -1.8232604166665851,
+          "response_p95_ms": 126.16769999999997
+        }
+      },
+      "parent_seal_sha256": "6cc70eba6933d4a7077de10a1cd2af90edbf952d38ff6eab5b5c3ff8aa90bde3",
+      "planned_last_arrival_ms": 129922.8,
+      "planned_peak_submissions_100ms": 4,
+      "requests_per_arm": 96,
+      "schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc",
+      "wire_sha256": "4839ff692fd094dcdd888fd0d4d5238c4f937eaa54f3c651a0b499340f242144"
+    },
+    {
+      "arms": [
+        {
+          "actual_peak_submissions_100ms": 1,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 68, 2610, 8001, 24.76, P0, 3, 1"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:56:39+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 0.7536812200762146,
+            "completions_per_s_in_entire_window": 3.838718497571645,
+            "drain_after_last_arrival_ms": 286.3141,
+            "drain_elapsed_ms": 16672.2306,
+            "fraction_time_any_request_outstanding": 0.6994462576591282,
+            "max_outstanding": 2,
+            "offered_arrivals_per_s": 3.8447651066694988,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 16385.9165
+          },
+          "audited_completed": 64,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.1495078125,
+            "p50": 0.1335,
+            "p95": 0.2872
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 7,
+            "1024": 1
+          },
+          "counts": {
+            "any_nonzero_candidate": 8,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 1,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 64
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 134217728,
+            "RAM/prefetch": 16777216,
+            "SSD/demand": 368836608,
+            "SSD/prefetch": 52690944
+          },
+          "policy": "entry-replay",
+          "prefix": "1-entry-replay",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 60, 2625, 8001, 29.48, P0, 3, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:55:45+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 2
+            },
+            "charged_peak_bytes": 69468160,
+            "choices": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "max_arrival_slip_ms": 15.3776,
+            "min_arrival_slip_ms": 0.2622,
+            "p95_chooser_ms": 0.2872,
+            "p95_observation_delay_ms": 1.2623,
+            "resources": {},
+            "response_mean_ms": 196.3366734375,
+            "response_median_ms": 178.54285,
+            "response_p95_ms": 340.4631
+          }
+        },
+        {
+          "actual_peak_submissions_100ms": 1,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 66, 2625, 8001, 25.42, P0, 34, 9"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:57:33+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 0.7126586634612329,
+            "completions_per_s_in_entire_window": 3.84413724502168,
+            "drain_after_last_arrival_ms": 263.2963,
+            "drain_elapsed_ms": 16648.7292,
+            "fraction_time_any_request_outstanding": 0.6721114786346576,
+            "max_outstanding": 2,
+            "offered_arrivals_per_s": 3.8448785811450854,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 16385.4329
+          },
+          "audited_completed": 64,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.28433437500000003,
+            "p50": 0.2849,
+            "p95": 0.4518
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 7,
+            "1024": 1
+          },
+          "counts": {
+            "any_nonzero_candidate": 8,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 1,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 64
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 134217728,
+            "RAM/prefetch": 16777216,
+            "SSD/demand": 368836608,
+            "SSD/prefetch": 52690944
+          },
+          "policy": "local-cost",
+          "prefix": "2-local-cost",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 68, 2610, 8001, 24.76, P0, 3, 1"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:56:39+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 2
+            },
+            "charged_peak_bytes": 69468160,
+            "choices": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "max_arrival_slip_ms": 15.4207,
+            "min_arrival_slip_ms": 0.4016,
+            "p95_chooser_ms": 0.4518,
+            "p95_observation_delay_ms": 1.2372,
+            "resources": {},
+            "response_mean_ms": 185.3884546875,
+            "response_median_ms": 162.87385,
+            "response_p95_ms": 320.6306
+          }
+        }
+      ],
+      "case": {
+        "arm_order": [
+          "entry-replay",
+          "local-cost"
+        ],
+        "arrival_scale": "260",
+        "arrivals": "original",
+        "capacity_mib": "82.25",
+        "id": "oasst-spaced-mixed",
+        "placement": "mixed",
+        "source": "oasst"
+      },
+      "catalogue": "oasst-cal-03",
+      "execution_sha256": "c7f1a1cede5f3b1d51226ff6ca8e1c55c7a154d399172c3552ecf8dcac6588f7",
+      "file_sha256": {
+        "1-entry-replay.driver.log": "0ec3ccaabeaf3456e863affe65dda2194c36c168c167343c058925132d0d8c0e",
+        "1-entry-replay.native.csv": "3b2247b6359c14468ae139fef365c63023f81eb4705ccd6c61a14b54f5860ad3",
+        "1-entry-replay.run.json": "7c8e8002069c6a1f06d4f12517772fcc986e3a0c78d20f49aefbb3a7e1cec8c6",
+        "1-entry-replay.stderr": "cde9a60526ab5317d4b468c4a4c359ac890f29dd18422e884c785838f729c578",
+        "2-local-cost.driver.log": "0ec3ccaabeaf3456e863affe65dda2194c36c168c167343c058925132d0d8c0e",
+        "2-local-cost.native.csv": "7e377ca943783aa4500b9c54db65fc47f6996219a0118bb6d62f5d6e5077f32b",
+        "2-local-cost.run.json": "c06bf2243af985bf8e62bd1ba43e49fba224bc7426dcf27d84d5024cec869f5b",
+        "2-local-cost.stderr": "cfa177ed3a15a9f69692eb4e524eb16259be0e8e0552d859c6b3ca7c620395e5"
+      },
+      "paired": {
+        "action_disagreements": 0,
+        "local_minus_entry_ms": {
+          "response_mean_ms": -10.948218749999995,
+          "response_p95_ms": -19.832499999999982
+        }
+      },
+      "parent_seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77",
+      "planned_last_arrival_ms": 16380.0,
+      "planned_peak_submissions_100ms": 1,
+      "requests_per_arm": 64,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "wire_sha256": "a77e168bc5a6b692746d517bdcc8c4974b2dc07e461d4d2d0c5c3820f9ca8d2f"
+    },
+    {
+      "arms": [
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 64, 2625, 8001, 68.02, P0, 3, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:58:36+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 1.5344280015673706,
+            "completions_per_s_in_entire_window": 3.7361713353065844,
+            "drain_after_last_arrival_ms": 746.6533,
+            "drain_elapsed_ms": 17129.8354,
+            "fraction_time_any_request_outstanding": 0.6393868443125846,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 3.8454068089739417,
+            "outstanding_at_last_arrival": 4,
+            "submission_span_ms": 16383.1821
+          },
+          "audited_completed": 64,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.1606875,
+            "p50": 0.1221,
+            "p95": 0.3954
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 7,
+            "1024": 1
+          },
+          "counts": {
+            "any_nonzero_candidate": 8,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 1,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 64
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 138936320,
+            "RAM/prefetch": 433586176
+          },
+          "policy": "local-cost",
+          "prefix": "1-local-cost",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 62, 375, 6001, 8.01, P5, 36, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:57:37+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 13
+            },
+            "charged_peak_bytes": 86245376,
+            "choices": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "max_arrival_slip_ms": 15.735,
+            "min_arrival_slip_ms": 0.0608,
+            "p95_chooser_ms": 0.3954,
+            "p95_observation_delay_ms": 5.2193,
+            "resources": {},
+            "response_mean_ms": 410.6952984375,
+            "response_median_ms": 380.465,
+            "response_p95_ms": 766.2048
+          }
+        },
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 65, 2625, 8001, 25.24, P0, 488, 10"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:59:33+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 1.54614467624323,
+            "completions_per_s_in_entire_window": 3.7321646557335857,
+            "drain_after_last_arrival_ms": 761.3098,
+            "drain_elapsed_ms": 17148.2252,
+            "fraction_time_any_request_outstanding": 0.6435426040474439,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 3.844530740666422,
+            "outstanding_at_last_arrival": 4,
+            "submission_span_ms": 16386.9154
+          },
+          "audited_completed": 64,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.1091171875,
+            "p50": 0.0913,
+            "p95": 0.2454
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 7,
+            "1024": 1
+          },
+          "counts": {
+            "any_nonzero_candidate": 8,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 1,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 64
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 138936320,
+            "RAM/prefetch": 433586176
+          },
+          "policy": "entry-replay",
+          "prefix": "2-entry-replay",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 64, 2625, 8001, 68.02, P0, 3, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:58:36+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 13
+            },
+            "charged_peak_bytes": 86245376,
+            "choices": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "max_arrival_slip_ms": 15.6735,
+            "min_arrival_slip_ms": 0.125,
+            "p95_chooser_ms": 0.2454,
+            "p95_observation_delay_ms": 1.5076,
+            "resources": {},
+            "response_mean_ms": 414.2755796875,
+            "response_median_ms": 381.9891,
+            "response_p95_ms": 788.0939
+          }
+        }
+      ],
+      "case": {
+        "arm_order": [
+          "local-cost",
+          "entry-replay"
+        ],
+        "arrival_scale": "1",
+        "arrivals": "burst",
+        "capacity_mib": "82.25",
+        "id": "oasst-burst-ram",
+        "placement": "ram",
+        "source": "oasst"
+      },
+      "catalogue": "oasst-cal-03",
+      "execution_sha256": "c7f1a1cede5f3b1d51226ff6ca8e1c55c7a154d399172c3552ecf8dcac6588f7",
+      "file_sha256": {
+        "1-local-cost.driver.log": "45de7792af0a5d5018eaa08afb734c3de5778e4f0f8e63cd8282c9aa9759da3e",
+        "1-local-cost.native.csv": "0786f3c9392825430f67f0da6f954e3e02aab9f0b2ca83d97d76ed8eaef7b179",
+        "1-local-cost.run.json": "e7ddda83d2d176782cd8940f0bb9c6878dbd183ed88f14bd14f1ee642bb6dbe9",
+        "1-local-cost.stderr": "93fca4fc249d56a6dd3a57e66a94196a1c5bfc7026a9e381d69e4a513b2295d8",
+        "2-entry-replay.driver.log": "45de7792af0a5d5018eaa08afb734c3de5778e4f0f8e63cd8282c9aa9759da3e",
+        "2-entry-replay.native.csv": "d3b023da6b084bedaec488c5c5dca90b3ab99c7aad2eaccfe6484f923566d9b4",
+        "2-entry-replay.run.json": "6aae8f764c180205e858adf23a39c4c9893bb694c3b267ac09b36ea786238991",
+        "2-entry-replay.stderr": "c9ef925304ceb27e16b3c3187eb5721c8c102ed85ec9b8da3899441099f5ce9e",
+        "diagnostic.seal.json": "1e93c55195173ef47e9fddfc95756e774b1fe4f1a6efc9a3f1226bde4ae8d6a8"
+      },
+      "paired": {
+        "action_disagreements": 0,
+        "local_minus_entry_ms": {
+          "response_mean_ms": -3.5802812499999845,
+          "response_p95_ms": -21.889099999999985
+        }
+      },
+      "parent_seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77",
+      "planned_last_arrival_ms": 16380.0,
+      "planned_peak_submissions_100ms": 4,
+      "requests_per_arm": 64,
+      "schedule_sha256": "9a40edaa775c891112bfc9c3a276ce4cdfdca918e41042a5600d6f352df05add",
+      "wire_sha256": "a77e168bc5a6b692746d517bdcc8c4974b2dc07e461d4d2d0c5c3820f9ca8d2f"
+    },
+    {
+      "arms": [
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 67, 2625, 8001, 25.44, P0, 490, 10"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T14:01:12+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 2.1016667017473925,
+            "completions_per_s_in_entire_window": 1.6630862671431061,
+            "drain_after_last_arrival_ms": 172.2771,
+            "drain_elapsed_ms": 57724.005,
+            "fraction_time_any_request_outstanding": 0.662128523479963,
+            "max_outstanding": 8,
+            "offered_arrivals_per_s": 1.6506889274474763,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 57551.7279
+          },
+          "audited_completed": 96,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.22224583333333334,
+            "p50": 0.1507,
+            "p95": 0.5154
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 4,
+            "1024": 11,
+            "1536": 25
+          },
+          "counts": {
+            "any_nonzero_candidate": 40,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 36,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 96
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 520093696,
+            "RAM/prefetch": 973078528,
+            "SSD/demand": 632291328,
+            "SSD/prefetch": 1264582656
+          },
+          "policy": "entry-replay",
+          "prefix": "1-entry-replay",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 65, 2625, 8001, 25.24, P0, 488, 10"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T13:59:33+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 98
+            },
+            "charged_peak_bytes": 103022592,
+            "choices": {
+              "0": 56,
+              "512": 4,
+              "1024": 11,
+              "1536": 25
+            },
+            "max_arrival_slip_ms": 16.2905,
+            "min_arrival_slip_ms": 0.2472,
+            "p95_chooser_ms": 0.5154,
+            "p95_observation_delay_ms": 27.8377,
+            "resources": {},
+            "response_mean_ms": 1263.7147833333333,
+            "response_median_ms": 1060.3886,
+            "response_p95_ms": 3074.7428
+          }
+        },
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 68, 2625, 8001, 28.09, P0, 490, 11"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T14:02:49+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 2.133684887082411,
+            "completions_per_s_in_entire_window": 1.6634472435783338,
+            "drain_after_last_arrival_ms": 164.6756,
+            "drain_elapsed_ms": 57711.4786,
+            "fraction_time_any_request_outstanding": 0.6644524023683566,
+            "max_outstanding": 9,
+            "offered_arrivals_per_s": 1.650830194685185,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 57546.803
+          },
+          "audited_completed": 96,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.288953125,
+            "p50": 0.2483,
+            "p95": 0.6863
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 4,
+            "1024": 11,
+            "1536": 25
+          },
+          "counts": {
+            "any_nonzero_candidate": 40,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 36,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 96
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 520093696,
+            "RAM/prefetch": 973078528,
+            "SSD/demand": 632291328,
+            "SSD/prefetch": 1264582656
+          },
+          "policy": "local-cost",
+          "prefix": "2-local-cost",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 67, 2625, 8001, 25.44, P0, 490, 10"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T14:01:12+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 98
+            },
+            "charged_peak_bytes": 103022592,
+            "choices": {
+              "0": 56,
+              "512": 4,
+              "1024": 11,
+              "1536": 25
+            },
+            "max_arrival_slip_ms": 16.3499,
+            "min_arrival_slip_ms": 0.2409,
+            "p95_chooser_ms": 0.6863,
+            "p95_observation_delay_ms": 67.5942,
+            "resources": {},
+            "response_mean_ms": 1282.6886427083334,
+            "response_median_ms": 1044.0258,
+            "response_p95_ms": 3155.6082
+          }
+        }
+      ],
+      "case": {
+        "arm_order": [
+          "entry-replay",
+          "local-cost"
+        ],
+        "arrival_scale": "0.62",
+        "arrivals": "original",
+        "capacity_mib": "144",
+        "id": "thinking-contention-wide",
+        "placement": "mixed",
+        "source": "thinking"
+      },
+      "catalogue": "qwen_thinking_blksz_16-29-pilot",
+      "execution_sha256": "c7f1a1cede5f3b1d51226ff6ca8e1c55c7a154d399172c3552ecf8dcac6588f7",
+      "file_sha256": {
+        "1-entry-replay.driver.log": "e74a80b64deade162836eda735bb23882b79519fc39e957fe01c73fc45b9cc52",
+        "1-entry-replay.native.csv": "a635756103dfe95c74262a30bf20cc88fbde4cdc5361f5b17848c5cfd376e8ac",
+        "1-entry-replay.run.json": "f195e7f354ace639009189c6678f1b5b05782b3f957299da2d945b8301da9197",
+        "1-entry-replay.stderr": "7d2b158cce3895edb044c78dc072c87410021ea2d3df9fbae191dc99268bf501",
+        "2-local-cost.driver.log": "e74a80b64deade162836eda735bb23882b79519fc39e957fe01c73fc45b9cc52",
+        "2-local-cost.native.csv": "3d929411252a6ae94171db81cf26c714ea931eb17b4b7c527c2181b5369d2899",
+        "2-local-cost.run.json": "cc1382d62632cc0c8d29d99771ef87195b807dc2cc75c7e17b0e3b440b32ea11",
+        "2-local-cost.stderr": "fc075ebd1722f7532b4a2198db5bb952914df0f30db048d7a1bde7d304af7f50"
+      },
+      "paired": {
+        "action_disagreements": 0,
+        "local_minus_entry_ms": {
+          "response_mean_ms": 18.973859375000075,
+          "response_p95_ms": 80.86540000000014
+        }
+      },
+      "parent_seal_sha256": "6cc70eba6933d4a7077de10a1cd2af90edbf952d38ff6eab5b5c3ff8aa90bde3",
+      "planned_last_arrival_ms": 57537.24,
+      "planned_peak_submissions_100ms": 4,
+      "requests_per_arm": 96,
+      "schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc",
+      "wire_sha256": "4839ff692fd094dcdd888fd0d4d5238c4f937eaa54f3c651a0b499340f242144"
+    },
+    {
+      "arms": [
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 68, 2625, 8001, 25.74, P0, 492, 11"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T14:03:44+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 1.569837947297809,
+            "completions_per_s_in_entire_window": 3.7311673626955333,
+            "drain_after_last_arrival_ms": 762.8179,
+            "drain_elapsed_ms": 17152.8087,
+            "fraction_time_any_request_outstanding": 0.6503912796508947,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 3.8438093571108043,
+            "outstanding_at_last_arrival": 4,
+            "submission_span_ms": 16389.9908
+          },
+          "audited_completed": 64,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.1564328125,
+            "p50": 0.1301,
+            "p95": 0.3438
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 7,
+            "1024": 1
+          },
+          "counts": {
+            "any_nonzero_candidate": 8,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 1,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 64
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 33554432,
+            "RAM/prefetch": 117440512,
+            "SSD/demand": 105381888,
+            "SSD/prefetch": 316145664
+          },
+          "policy": "local-cost",
+          "prefix": "1-local-cost",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 66, 2625, 8001, 25.32, P0, 490, 10"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T14:02:50+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 13
+            },
+            "charged_peak_bytes": 86245376,
+            "choices": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "max_arrival_slip_ms": 16.2031,
+            "min_arrival_slip_ms": 0.3476,
+            "p95_chooser_ms": 0.3438,
+            "p95_observation_delay_ms": 2.5815,
+            "resources": {},
+            "response_mean_ms": 420.73640625,
+            "response_median_ms": 394.61865,
+            "response_p95_ms": 771.0861
+          }
+        },
+        {
+          "actual_peak_submissions_100ms": 4,
+          "after": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 66, 2625, 8001, 68.44, P0, 3, 0"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T14:04:40+00:00"
+          },
+          "arrivals": {
+            "average_outstanding": 1.5488441538085704,
+            "completions_per_s_in_entire_window": 3.7320452396891186,
+            "drain_after_last_arrival_ms": 768.7269,
+            "drain_elapsed_ms": 17148.7739,
+            "fraction_time_any_request_outstanding": 0.6413552458114804,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 3.8461428102129376,
+            "outstanding_at_last_arrival": 4,
+            "submission_span_ms": 16380.047
+          },
+          "audited_completed": 64,
+          "chooser_called_after_snapshot_ms": {
+            "mean": 0.1434015625,
+            "p50": 0.1056,
+            "p95": 0.3179
+          },
+          "chosen_boundary_counts": {
+            "0": 56,
+            "512": 7,
+            "1024": 1
+          },
+          "counts": {
+            "any_nonzero_candidate": 8,
+            "chose_zero_with_nonzero_candidate": 0,
+            "multiple_nonzero_candidates": 1,
+            "same_snapshot_disagreements": 0,
+            "snapshots": 64
+          },
+          "logical_uploaded_bytes_by_tier_and_trigger": {
+            "RAM/demand": 33554432,
+            "RAM/prefetch": 117440512,
+            "SSD/demand": 105381888,
+            "SSD/prefetch": 316145664
+          },
+          "policy": "entry-replay",
+          "prefix": "2-entry-replay",
+          "return_code": 0,
+          "same_snapshot_disagreements": [],
+          "setup": {
+            "ac_online": true,
+            "gpu": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "0, GPU-5d572a50-200d-dbbe-0e08-903041248951, NVIDIA GeForce RTX 4060 Laptop GPU, 68, 2625, 8001, 25.74, P0, 492, 11"
+              ]
+            },
+            "power_plan": {
+              "code": 0,
+              "errors": [],
+              "output": [
+                "��Դ���� GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)"
+              ]
+            },
+            "utc": "2026-11-26T14:03:44+00:00"
+          },
+          "stats": {
+            "actual_scatter_observations": {
+              "native-scatter": 13
+            },
+            "charged_peak_bytes": 86245376,
+            "choices": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "max_arrival_slip_ms": 16.6843,
+            "min_arrival_slip_ms": 0.2783,
+            "p95_chooser_ms": 0.3179,
+            "p95_observation_delay_ms": 5.7498,
+            "resources": {},
+            "response_mean_ms": 415.012159375,
+            "response_median_ms": 383.19185,
+            "response_p95_ms": 785.3823
+          }
+        }
+      ],
+      "case": {
+        "arm_order": [
+          "local-cost",
+          "entry-replay"
+        ],
+        "arrival_scale": "1",
+        "arrivals": "burst",
+        "capacity_mib": "82.25",
+        "id": "oasst-burst-mixed",
+        "placement": "mixed",
+        "source": "oasst"
+      },
+      "catalogue": "oasst-cal-03",
+      "execution_sha256": "c7f1a1cede5f3b1d51226ff6ca8e1c55c7a154d399172c3552ecf8dcac6588f7",
+      "file_sha256": {
+        "1-local-cost.driver.log": "45de7792af0a5d5018eaa08afb734c3de5778e4f0f8e63cd8282c9aa9759da3e",
+        "1-local-cost.native.csv": "5b91d443ed064dea00193b77fc42b5b88422f5eaa84b9533c3ec5b051eb3eab8",
+        "1-local-cost.run.json": "90931f1e7bc37d3b00b0c31e5d38fd2c3de57862e0a6a279695d61306f1d7c23",
+        "1-local-cost.stderr": "c5303a944bbf16dfdf913c46c5b10e51c9c64857be5dd6a353ebfb0b940b87f7",
+        "2-entry-replay.driver.log": "45de7792af0a5d5018eaa08afb734c3de5778e4f0f8e63cd8282c9aa9759da3e",
+        "2-entry-replay.native.csv": "7e87d66c55b614eb9d922467aad78d6642f8cf7743af2f012f98100b40074a3b",
+        "2-entry-replay.run.json": "6d4e82c1a4dea72b237fad494347a3d27858ee3ee38c3983ddf1bcd680a281a2",
+        "2-entry-replay.stderr": "44d6dd0cbff3b0f6b34648be2a6563cb11dfeea71fe347f505a93f79999831d2",
+        "diagnostic.seal.json": "0d4e7dbbe717531eaed12094d5aebb749c0916026067423ae97e2ebd5e62ed49"
+      },
+      "paired": {
+        "action_disagreements": 0,
+        "local_minus_entry_ms": {
+          "response_mean_ms": 5.724246875000006,
+          "response_p95_ms": -14.296199999999999
+        }
+      },
+      "parent_seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77",
+      "planned_last_arrival_ms": 16380.0,
+      "planned_peak_submissions_100ms": 4,
+      "requests_per_arm": 64,
+      "schedule_sha256": "a0eda76e316b9f5f1f811cb756c1a36b58eb2a3edae2dcd3234634f7557c798a",
+      "wire_sha256": "a77e168bc5a6b692746d517bdcc8c4974b2dc07e461d4d2d0c5c3820f9ca8d2f"
+    }
+  ],
+  "scope": "R10 GPU-04 native prefill diagnostics on calibration sources only"
+}

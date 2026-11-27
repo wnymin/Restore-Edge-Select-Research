@@ -1,0 +1,463 @@
+{
+  "blocks": [
+    {
+      "candidate_depths": {
+        "0": 64,
+        "1024": 1,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-service-hold-01",
+      "payload_bytes": 625213440,
+      "referenced_from_multiple_choices": 1,
+      "requests": 64,
+      "schedule_sha256": "44368b6f6fb720f1d8b248e6348020d6f4afb4a4ba52b8216fbe727b47c9ff1f",
+      "source_sha256": "7d53ae5b179d39fad04dbba2828d176e948518036fb03c1fd2277a2b6bae4bd2",
+      "split": "service-holdout",
+      "unique_checkpoints": 9,
+      "unique_kv_objects": 9,
+      "wire_sha256": "8e7ec84a9b9b0c8a417513efd8012b98494dbf9e91cdff1bc4541b028394e914"
+    },
+    {
+      "candidate_depths": {
+        "0": 64,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-service-hold-02",
+      "payload_bytes": 555745280,
+      "referenced_from_multiple_choices": 0,
+      "requests": 64,
+      "schedule_sha256": "567330d5ed7cb4597096d486a648aa4a0ac3c91e6e545778287a2d2fb49a1462",
+      "source_sha256": "7d53ae5b179d39fad04dbba2828d176e948518036fb03c1fd2277a2b6bae4bd2",
+      "split": "service-holdout",
+      "unique_checkpoints": 8,
+      "unique_kv_objects": 8,
+      "wire_sha256": "930c12cb0457ae587e22809409122367c789dfeb1863c25b84c7bc2fbac464a2"
+    },
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 29,
+        "1536": 27,
+        "512": 43
+      },
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-2-reserved",
+      "payload_bytes": 3542876160,
+      "raw_rows": [
+        704,
+        1056
+      ],
+      "raw_window_sha256": "ccd75c3391eb71460aeca70c0bd8564ce60abc89c7c8c21a4daf8927680b032e",
+      "referenced_from_multiple_choices": 64,
+      "requests": 96,
+      "schedule_sha256": "f4db368adf3de05191e554c50f3570ed8d6a132852e72663f562246ef1604ba1",
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_sha256": "8809614bc2889a70b82e68e8b0e42e3aeb5091753846ef1091a6de8ba04c2379",
+      "split": "reserved",
+      "unique_checkpoints": 51,
+      "unique_kv_objects": 51,
+      "wire_sha256": "9fcaeac0cc3bb39b8281173987ada793167efbf2c0b38bdad02835e56e0aceaa"
+    },
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 7,
+        "1536": 3,
+        "512": 46
+      },
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-90-reserved",
+      "payload_bytes": 1319895040,
+      "raw_rows": [
+        31680,
+        32032
+      ],
+      "raw_window_sha256": "20d5cbe824ab5bd6013d8e159152733ef7b48ec36e32870ba0af18d3a9ff1a53",
+      "referenced_from_multiple_choices": 18,
+      "requests": 96,
+      "schedule_sha256": "bd9c119d6ba8ba0b380b9bbdeac4b9ad3022792581709bf06177f85931c3067c",
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_sha256": "b572a041f7ac0ed2b47ec03b57f2b08573cfc45c407e55cc0cc37124812a6a57",
+      "split": "reserved",
+      "unique_checkpoints": 19,
+      "unique_kv_objects": 19,
+      "wire_sha256": "9f3a4d4af1e6d0241284bb3e2f048568fffe0615fc7fd116b7b5bae102f43639"
+    }
+  ],
+  "calibration_design_sha256": "08d55d311684aad2b48854006e5c39ac73ccae4fa0e17a832a3fe7c7310decb9",
+  "calibration_summary_sha256": "48e83be393e3ac87b220f66bab353b35bf8cd15dcd6be46d088c438085f83914",
+  "capacity_mib": "82.25",
+  "cases": [
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-02",
+      "id": "oasst-service-hold-02-mixed-shoulder",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "36",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "id": "qwen_traceB_blksz_16-90-reserved-mixed-low",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "93/5",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "id": "qwen_traceB_blksz_16-90-reserved-short-shoulder",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "93/200",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "id": "qwen_thinking_blksz_16-2-reserved-short-overload",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-02",
+      "id": "oasst-service-hold-02-short-low",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-01",
+      "id": "oasst-service-hold-01-mixed-shoulder",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "195",
+      "block": "oasst-service-hold-02",
+      "id": "oasst-service-hold-02-short-overload",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "93/50",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "id": "qwen_thinking_blksz_16-2-reserved-mixed-low",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-02",
+      "id": "oasst-service-hold-02-short-shoulder",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "195",
+      "block": "oasst-service-hold-01",
+      "id": "oasst-service-hold-01-short-overload",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "9",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "id": "qwen_traceB_blksz_16-90-reserved-short-overload",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-02",
+      "id": "oasst-service-hold-02-mixed-overload",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "961/1000",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "id": "qwen_thinking_blksz_16-2-reserved-short-shoulder",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "36",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "id": "qwen_traceB_blksz_16-90-reserved-short-low",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "93/50",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "id": "qwen_thinking_blksz_16-2-reserved-short-low",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "961/1000",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "id": "qwen_thinking_blksz_16-2-reserved-mixed-shoulder",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "1170",
+      "block": "oasst-service-hold-01",
+      "id": "oasst-service-hold-01-mixed-low",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "1170",
+      "block": "oasst-service-hold-02",
+      "id": "oasst-service-hold-02-mixed-low",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "93/5",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "id": "qwen_traceB_blksz_16-90-reserved-mixed-shoulder",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arrival_scale": "93/200",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "id": "qwen_thinking_blksz_16-2-reserved-mixed-overload",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-01",
+      "id": "oasst-service-hold-01-mixed-overload",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-01",
+      "id": "oasst-service-hold-01-short-shoulder",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-01",
+      "id": "oasst-service-hold-01-short-low",
+      "long_tokens": 0,
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arrival_scale": "9",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "id": "qwen_traceB_blksz_16-90-reserved-mixed-overload",
+      "long_tokens": 64,
+      "profile": "mixed",
+      "short_tokens": 16
+    }
+  ],
+  "cost_profile_sha256": "c1ead1eb995e134df83619909025e8c3aa1a3a3707e46f35680e1d3d2f6f61fe",
+  "environment": {
+    "analysis_sha256": {
+      "scripts/gpu/analysis/check_r10_catalog_fifo.py": "6b10409509870f9fb1b9f8cd147184d8b999f68d0681b51b343bf7f6413005c7",
+      "scripts/gpu/analysis/summarize_r10_holdout.py": "4f346f32c8d5e8fd157d470b38fa8771fbfbe3e4bb484783a28f39983474652d"
+    },
+    "catalogue_probe_sha256": "fb2160b86599eb3ad8ebeaf83266115fbd5db7ea51826242cf9255b2dc9ef5ff",
+    "controller_sha256": {
+      "scripts/gpu/experiments/r10_holdout_lock.py": "08f96a1ce4d507d8f59d9ce448405a1060aea5242236aa5d4f2ffe93a0d0e7c8",
+      "scripts/gpu/experiments/run_r10_catalog_fifo.py": "41dac1456d6161cc2dd174eebe49501946c50714ce530fd59b948a21d90c755d",
+      "scripts/gpu/experiments/run_r10_catalog_prepare.py": "56f6d556bc9755ea04e5a43d58ba251dadf31969bc5d881cc1583c6a91c56762",
+      "scripts/gpu/experiments/run_r10_fifo_link.py": "233a4a50e896943bfc108a77943aaf7dea9415a12af40d8f176b73a7cb7aa530",
+      "scripts/gpu/experiments/run_r10_holdout_batch.py": "fdf2bc02c33f7c5fd6dcb8bfe208e8ec1a24646ce73edd6de54ffd43288ef8b6",
+      "scripts/gpu/experiments/run_r10_online_diagnostic.py": "3ecd983b82a05e8c59b127f811700a2799ea5968e31fbf2c4a855761db26b661",
+      "src/restore_edge_select/adaptive.py": "9d42f7c2cd32fb5bd1ed5644156738147cb06bc6d15b102450e71fc15edd05de",
+      "src/restore_edge_select/live_fifo.py": "d46899f935639dbb6695bc00fe909925af710ab2bc59ede723fe4802a6d40cb6",
+      "src/restore_edge_select/live_snapshot.py": "e2b7dcfa70e814dfc3118b4e2e7b7cd4b701ddac6c773060f557fdd9a7bc8628",
+      "src/restore_edge_select/prefill_cost.py": "44d9b199af5ced50a882ee6428315fc6927b078bfef06be532232d1c8ed15047",
+      "src/restore_edge_select/simulator.py": "15a65514a53ee891f99e8f8bb7bd811b23176e2e7d4ea02026bd692a070e980c"
+    },
+    "device": "Vulkan0",
+    "device_index": 1,
+    "model_sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "observer_sha256": "e07ba1c7c2bb2874cee6a4f55961d80a3b746f337855215213a91b612ec7ae6e",
+    "runtime_sha256": {
+      "ggml-base.dll": "b5642e93d9ccfa2bc4241db2e0afb3263b2f667f446d1de47e3e3571d95701fa",
+      "ggml-cpu.dll": "7456d9111c6c4029cb0e4b7cf1e740a49266689dad70dfa7f6ac9fa10b2d5ffe",
+      "ggml-vulkan.dll": "bc9e7cf788d3090d65bbeb404dc3856b66bc07dfbd25fa9f84334be1c2c0d796",
+      "ggml.dll": "f022242b4a3fe2cad5f83f7ac3a3b84add498717589f8bad3dc358fe312ff9df",
+      "libllama.dll": "b64db0f20492b5f0b09117add122a8b0548e628bede4d345c11f1a73b8febec7"
+    },
+    "service_analysis_sha256": {
+      "audit_r10_service_pipe.py": "c8e832a530bc26cad17ffa183fb8a1d565a99ad0525dfa8bbf6d16fc29086a61",
+      "check_r10_catalog_fifo.py": "6b10409509870f9fb1b9f8cd147184d8b999f68d0681b51b343bf7f6413005c7",
+      "summarize_r10_pilot_aa.py": "e5188392a42d119b8ab99e141b1e8a5d9d9afcdc90dac431e4650bf79e4673d8",
+      "summarize_r10_pilot_load.py": "148f6d5548f8f7083153341c36c11cf76d26d01a74e579d87fe5f078cd1ad878",
+      "summarize_r10_service_holdout.py": "42c1692ac36baaa2e338ee65c5f59b56e40802adf142eedde2d1f89428e60dc7"
+    },
+    "service_sha256": {
+      "r10_service_events.py": "77f3ee33460646008f8ea125533fa54101f3cdc5d9a7a52211cfa13390f7e9b2",
+      "r10_service_lock.py": "da4a65af087255afc46427f8a199d9b0b43ba3ac89487cbf210c7d0a2f84321a",
+      "r10_service_sse.py": "5c1a211aa4c09653d63ecc8d11eddb22aeb6539cdd5fed51bc9b3e319282ec53"
+    },
+    "worker_sha256": "0724531e874d584c5a79c64ef37ec9b768646af3f3c1346f07a7f39e991b94d9"
+  },
+  "experimental_slo": {
+    "client_request_tpot_ms": 150,
+    "failed_and_unfinished_in_denominator": true,
+    "one_token_tpot": "not applicable; visible text and terminal success required",
+    "visible_ttft_ms": 2500,
+    "zero_visible_output": "failure"
+  },
+  "membership_sha256": "5435afb90f151741a5844cd1a2111d7e3b90d0fb872c22d68cd2be19332482bb",
+  "primary_lock_sha256": "f02fede933e294a1cf377d1ad1080821ce0118f89113dc48483c1af19cb9fd4d",
+  "primary_summary_sha256": "10aa7504099e70bca95bc3802086d6845a3af8d3f42fa95368ef2aa3ca90d3de",
+  "scope": "R10 local streaming service holdout execution v1",
+  "timeout_s": 360
+}

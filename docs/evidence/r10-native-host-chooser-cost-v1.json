@@ -1,0 +1,695 @@
+{
+  "arms": [
+    {
+      "audited_requests": 64,
+      "block": "oasst-cal-03",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -20450.0,
+            "p95_ns": -1900.0
+          },
+          "entry_replay": {
+            "median_ns": 24375.0,
+            "p95_ns": 81050.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 247600.0,
+            "p95_ns": 499100
+          },
+          "local_cost": {
+            "median_ns": 44025.0,
+            "p95_ns": 84050.0
+          },
+          "snapshots": 64
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -1925.0,
+            "p95_ns": 18800.0
+          },
+          "entry_replay": {
+            "median_ns": 80375.0,
+            "p95_ns": 92950.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 357400.0,
+            "p95_ns": 609300
+          },
+          "local_cost": {
+            "median_ns": 82625.0,
+            "p95_ns": 120900.0
+          },
+          "snapshots": 8
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -20700.0,
+            "p95_ns": -10700.0
+          },
+          "entry_replay": {
+            "median_ns": 23900.0,
+            "p95_ns": 29150.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 226200.0,
+            "p95_ns": 465700
+          },
+          "local_cost": {
+            "median_ns": 43100.0,
+            "p95_ns": 54700.0
+          },
+          "snapshots": 56
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "912613bfc9ee9b8a964ce4847e407b1dec528789c0a05e13cbf435172f2c0d30",
+      "run": "oasst03-a1",
+      "with_alternative": 8,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 64,
+      "block": "oasst-cal-03",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -20750.0,
+            "p95_ns": -1500.0
+          },
+          "entry_replay": {
+            "median_ns": 24175.0,
+            "p95_ns": 84300.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 240850.0,
+            "p95_ns": 507500
+          },
+          "local_cost": {
+            "median_ns": 44800.0,
+            "p95_ns": 86700.0
+          },
+          "snapshots": 64
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -1850.0,
+            "p95_ns": 17000.0
+          },
+          "entry_replay": {
+            "median_ns": 82375.0,
+            "p95_ns": 85700.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 414700.0,
+            "p95_ns": 507500
+          },
+          "local_cost": {
+            "median_ns": 84350.0,
+            "p95_ns": 137350.0
+          },
+          "snapshots": 8
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -20950.0,
+            "p95_ns": -10600.0
+          },
+          "entry_replay": {
+            "median_ns": 23750.0,
+            "p95_ns": 27400.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 216800.0,
+            "p95_ns": 559800
+          },
+          "local_cost": {
+            "median_ns": 44400.0,
+            "p95_ns": 53150.0
+          },
+          "snapshots": 56
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "88862d32c8f9337b8147d5c5d944ce41f4f5a0de5b06bb7a05432ef970f82782",
+      "run": "oasst03-a2",
+      "with_alternative": 8,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -21600.0,
+            "p95_ns": 83900.0
+          },
+          "entry_replay": {
+            "median_ns": 29625.0,
+            "p95_ns": 185950.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 328600.0,
+            "p95_ns": 740600
+          },
+          "local_cost": {
+            "median_ns": 64700.0,
+            "p95_ns": 150750.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -1450.0,
+            "p95_ns": 94050.0
+          },
+          "entry_replay": {
+            "median_ns": 87125.0,
+            "p95_ns": 209350.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 369100.0,
+            "p95_ns": 854900
+          },
+          "local_cost": {
+            "median_ns": 90725.0,
+            "p95_ns": 220650.0
+          },
+          "snapshots": 36
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -22025.0,
+            "p95_ns": -11000.0
+          },
+          "entry_replay": {
+            "median_ns": 26175.0,
+            "p95_ns": 31100.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 308900.0,
+            "p95_ns": 626400
+          },
+          "local_cost": {
+            "median_ns": 49125.0,
+            "p95_ns": 84800.0
+          },
+          "snapshots": 60
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "c7560380eead14fea73cf3b37efbbb9b0905a97fc54949ad7809dd401d62c06c",
+      "run": "traceA09-400",
+      "with_alternative": 36,
+      "with_two_nonzero_alternatives": 4
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -22200.0,
+            "p95_ns": 72650.0
+          },
+          "entry_replay": {
+            "median_ns": 28725.0,
+            "p95_ns": 180250.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 289200.0,
+            "p95_ns": 751800
+          },
+          "local_cost": {
+            "median_ns": 69150.0,
+            "p95_ns": 151800.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -1200.0,
+            "p95_ns": 94000.0
+          },
+          "entry_replay": {
+            "median_ns": 88800.0,
+            "p95_ns": 220950.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 408000.0,
+            "p95_ns": 787100
+          },
+          "local_cost": {
+            "median_ns": 94375.0,
+            "p95_ns": 216150.0
+          },
+          "snapshots": 36
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -22475.0,
+            "p95_ns": -10700.0
+          },
+          "entry_replay": {
+            "median_ns": 26575.0,
+            "p95_ns": 34550.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 257550.0,
+            "p95_ns": 409600
+          },
+          "local_cost": {
+            "median_ns": 50550.0,
+            "p95_ns": 90700.0
+          },
+          "snapshots": 60
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "46bb4a13a4b376d60b815eccc704cee8eba25c03ac1bc4623320e49ee44a2e78",
+      "run": "traceA09-400-second",
+      "with_alternative": 36,
+      "with_two_nonzero_alternatives": 4
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceB_blksz_16-208-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -20100.0,
+            "p95_ns": 70800.0
+          },
+          "entry_replay": {
+            "median_ns": 28750.0,
+            "p95_ns": 160300.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 411400.0,
+            "p95_ns": 704000
+          },
+          "local_cost": {
+            "median_ns": 53600.0,
+            "p95_ns": 95700.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -3225.0,
+            "p95_ns": 96950.0
+          },
+          "entry_replay": {
+            "median_ns": 84500.0,
+            "p95_ns": 187700.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 470400.0,
+            "p95_ns": 769800
+          },
+          "local_cost": {
+            "median_ns": 87125.0,
+            "p95_ns": 97200.0
+          },
+          "snapshots": 32
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -21550.0,
+            "p95_ns": -10900.0
+          },
+          "entry_replay": {
+            "median_ns": 26675.0,
+            "p95_ns": 32050.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 361400.0,
+            "p95_ns": 622900
+          },
+          "local_cost": {
+            "median_ns": 47675.0,
+            "p95_ns": 86250.0
+          },
+          "snapshots": 64
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "f9837dfa315901491148588c643b44db34651c98cd97a8d16527d02d701ebada",
+      "run": "traceB208-1200-first",
+      "with_alternative": 32,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceB_blksz_16-208-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -20700.0,
+            "p95_ns": 70900.0
+          },
+          "entry_replay": {
+            "median_ns": 29000.0,
+            "p95_ns": 157750.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 299000.0,
+            "p95_ns": 606800
+          },
+          "local_cost": {
+            "median_ns": 53675.0,
+            "p95_ns": 97600.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -1100.0,
+            "p95_ns": 98700.0
+          },
+          "entry_replay": {
+            "median_ns": 86075.0,
+            "p95_ns": 192150.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 313300.0,
+            "p95_ns": 677600
+          },
+          "local_cost": {
+            "median_ns": 86400.0,
+            "p95_ns": 100750.0
+          },
+          "snapshots": 32
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -21475.0,
+            "p95_ns": -10950.0
+          },
+          "entry_replay": {
+            "median_ns": 26050.0,
+            "p95_ns": 31800.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 280050.0,
+            "p95_ns": 531700
+          },
+          "local_cost": {
+            "median_ns": 46175.0,
+            "p95_ns": 88950.0
+          },
+          "snapshots": 64
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "3fadf71077ddbcc2cd255211beb023022859dde4ed05901959376ead5fa900d9",
+      "run": "traceB208-1200-second",
+      "with_alternative": 32,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -59075.0,
+            "p95_ns": -11250.0
+          },
+          "entry_replay": {
+            "median_ns": 29150.0,
+            "p95_ns": 163500.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 318950.0,
+            "p95_ns": 733100
+          },
+          "local_cost": {
+            "median_ns": 88375.0,
+            "p95_ns": 220250.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -63450.0,
+            "p95_ns": 89600.0
+          },
+          "entry_replay": {
+            "median_ns": 144350.0,
+            "p95_ns": 240050.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 364700,
+            "p95_ns": 1145200
+          },
+          "local_cost": {
+            "median_ns": 207650.0,
+            "p95_ns": 232450.0
+          },
+          "snapshots": 39
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -57250.0,
+            "p95_ns": -11250.0
+          },
+          "entry_replay": {
+            "median_ns": 25450.0,
+            "p95_ns": 31750.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 264300,
+            "p95_ns": 514800
+          },
+          "local_cost": {
+            "median_ns": 80600.0,
+            "p95_ns": 94250.0
+          },
+          "snapshots": 57
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "993d4448f571e67f33868a931be72f3d2a25f041daac32a3085b4be2d5f137dd",
+      "run": "coder28-525-first",
+      "with_alternative": 39,
+      "with_two_nonzero_alternatives": 35
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -58150.0,
+            "p95_ns": -11400.0
+          },
+          "entry_replay": {
+            "median_ns": 28925.0,
+            "p95_ns": 156950.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 329150.0,
+            "p95_ns": 864100
+          },
+          "local_cost": {
+            "median_ns": 86275.0,
+            "p95_ns": 219250.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -62300.0,
+            "p95_ns": 86700.0
+          },
+          "entry_replay": {
+            "median_ns": 142750.0,
+            "p95_ns": 235200.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 535700,
+            "p95_ns": 981600
+          },
+          "local_cost": {
+            "median_ns": 203800.0,
+            "p95_ns": 222600.0
+          },
+          "snapshots": 39
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -55750.0,
+            "p95_ns": -11400.0
+          },
+          "entry_replay": {
+            "median_ns": 24550.0,
+            "p95_ns": 32250.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 273300,
+            "p95_ns": 632400
+          },
+          "local_cost": {
+            "median_ns": 77500.0,
+            "p95_ns": 91100.0
+          },
+          "snapshots": 57
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "6ca96390225f33026a72e2de4f61568670a02c187aa06dc2441da793cfcfdea4",
+      "run": "coder28-525-second",
+      "with_alternative": 39,
+      "with_two_nonzero_alternatives": 35
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -25425.0,
+            "p95_ns": -2250.0
+          },
+          "entry_replay": {
+            "median_ns": 29475.0,
+            "p95_ns": 154500.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 251550.0,
+            "p95_ns": 669400
+          },
+          "local_cost": {
+            "median_ns": 83200.0,
+            "p95_ns": 210950.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -47700.0,
+            "p95_ns": 92650.0
+          },
+          "entry_replay": {
+            "median_ns": 138025.0,
+            "p95_ns": 231650.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 318350.0,
+            "p95_ns": 773800
+          },
+          "local_cost": {
+            "median_ns": 153275.0,
+            "p95_ns": 215000.0
+          },
+          "snapshots": 40
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -22475.0,
+            "p95_ns": -10600.0
+          },
+          "entry_replay": {
+            "median_ns": 24525.0,
+            "p95_ns": 31800.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 196950.0,
+            "p95_ns": 475900
+          },
+          "local_cost": {
+            "median_ns": 45250.0,
+            "p95_ns": 90600.0
+          },
+          "snapshots": 56
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "fbd2260d5b96e316407566ce887c3374dbde2a1a50b09da09e2cf8027898d74c",
+      "run": "thinking062-first",
+      "with_alternative": 40,
+      "with_two_nonzero_alternatives": 36
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "changes": [],
+      "host_chooser_benchmark": {
+        "all": {
+          "entry_minus_local_paired": {
+            "median_ns": -24650.0,
+            "p95_ns": -500.0
+          },
+          "entry_replay": {
+            "median_ns": 30525.0,
+            "p95_ns": 160050.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 283700.0,
+            "p95_ns": 840500
+          },
+          "local_cost": {
+            "median_ns": 85475.0,
+            "p95_ns": 212600.0
+          },
+          "snapshots": 96
+        },
+        "alternatives": {
+          "entry_minus_local_paired": {
+            "median_ns": -45625.0,
+            "p95_ns": 76350.0
+          },
+          "entry_replay": {
+            "median_ns": 139850.0,
+            "p95_ns": 234850.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 393950.0,
+            "p95_ns": 997200
+          },
+          "local_cost": {
+            "median_ns": 160300.0,
+            "p95_ns": 219500.0
+          },
+          "snapshots": 40
+        },
+        "one_option": {
+          "entry_minus_local_paired": {
+            "median_ns": -23000.0,
+            "p95_ns": -11200.0
+          },
+          "entry_replay": {
+            "median_ns": 24825.0,
+            "p95_ns": 31400.0
+          },
+          "live_recorded_local_cost": {
+            "median_ns": 212950.0,
+            "p95_ns": 434300
+          },
+          "local_cost": {
+            "median_ns": 45650.0,
+            "p95_ns": 89650.0
+          },
+          "snapshots": 56
+        },
+        "repeats": 16
+      },
+      "receipt_sha256": "2770931dc36ea8eefc7f9c1c819ab0dbec301c0337422f9a451308ff29b043ce",
+      "run": "thinking062-second",
+      "with_alternative": 40,
+      "with_two_nonzero_alternatives": 36
+    }
+  ],
+  "scope": "counterfactual chooser only, on recorded local-cost states; no runtime effect"
+}

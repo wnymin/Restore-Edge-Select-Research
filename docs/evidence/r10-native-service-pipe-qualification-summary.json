@@ -1,0 +1,164 @@
+{
+  "archive_sha256": "36706ffdaa65b3c82fc278746947b189c749a7e17d0c33749d818a3bf05cb533",
+  "comparison": {
+    "compared_output_tokens": 16,
+    "compared_requests": 3,
+    "fixed_actions": [
+      [
+        0,
+        512,
+        512
+      ],
+      [
+        0,
+        1024,
+        512
+      ]
+    ],
+    "scope": "same-input forced shallow/deep exact generation qualification, no timing estimate"
+  },
+  "deep": {
+    "client_pipe_inter_token_latency": {
+      "max_ms": 35.235,
+      "mean_ms": 26.4668,
+      "p95_ms": 35.235,
+      "samples": 13
+    },
+    "client_pipe_tpot": {
+      "max_ms": 27.791171428571428,
+      "mean_ms": 25.878190476190476,
+      "p95_ms": 27.791171428571428,
+      "samples": 3
+    },
+    "client_pipe_ttft": {
+      "max_ms": 1077.7057,
+      "mean_ms": 821.5548333333334,
+      "p95_ms": 1077.7057,
+      "samples": 3
+    },
+    "completion_per_s": 2.5775709229379324,
+    "dispatch": {
+      "block": "mechanism-shared",
+      "boundary_counts": {
+        "0": 1,
+        "512": 1,
+        "1024": 1
+      },
+      "capacity_bytes": 86245376,
+      "device_event_counts": {
+        "carry-active-kv": 1,
+        "compute-done": 3,
+        "disk-complete": 2,
+        "exact-final-logits": 3,
+        "exact-service-tokens": 3,
+        "exact-state": 3,
+        "native-scatter": 4,
+        "native-target": 3,
+        "read-staged": 4,
+        "reserved": 2,
+        "service-decode-marker": 13,
+        "service-prefill-done": 3,
+        "service-token": 16,
+        "suffix-submitted": 3,
+        "upload-ready": 4,
+        "upload-submit": 4
+      },
+      "direct_plus_scatter_requests": [],
+      "peak_prefetch_bytes": 86245376,
+      "policy": "forced",
+      "requests": 3,
+      "runtime_worker_sha256": "0af3b1ce2ddebc13c959a24daf3a4854fc9e9793d13bcef49347b23dc000d2d4",
+      "scope": "native event audit and optional correctness checks; no performance estimate"
+    },
+    "elapsed_seconds": 1.1638865,
+    "emitted_tokens_per_s": 13.74704492233564,
+    "end_reason": {
+      "length": 3
+    },
+    "exact_recompute_qualification": true,
+    "native_prefill_done_to_first_emission": {
+      "max_ms": 0.449,
+      "mean_ms": 0.36433333333333334,
+      "p95_ms": 0.449,
+      "samples": 3
+    },
+    "output_lengths": {
+      "4": 2,
+      "8": 1
+    },
+    "requests_with_first_token": 3,
+    "scope": "complete one-slot process-pipe run; token ID frame receipt, not HTTP or production SLO",
+    "total_requests": 3
+  },
+  "shallow": {
+    "client_pipe_inter_token_latency": {
+      "max_ms": 35.7678,
+      "mean_ms": 25.64116923076923,
+      "p95_ms": 35.7678,
+      "samples": 13
+    },
+    "client_pipe_tpot": {
+      "max_ms": 32.295366666666666,
+      "mean_ms": 27.641879365079365,
+      "p95_ms": 32.295366666666666,
+      "samples": 3
+    },
+    "client_pipe_ttft": {
+      "max_ms": 1274.0301,
+      "mean_ms": 924.6511333333333,
+      "p95_ms": 1274.0301,
+      "samples": 3
+    },
+    "completion_per_s": 2.181238369000822,
+    "dispatch": {
+      "block": "mechanism-shared",
+      "boundary_counts": {
+        "0": 1,
+        "512": 2
+      },
+      "capacity_bytes": 86245376,
+      "device_event_counts": {
+        "compute-done": 3,
+        "disk-complete": 1,
+        "exact-final-logits": 3,
+        "exact-service-tokens": 3,
+        "exact-state": 3,
+        "native-scatter": 4,
+        "native-target": 3,
+        "read-staged": 2,
+        "reserved": 2,
+        "service-decode-marker": 13,
+        "service-prefill-done": 3,
+        "service-token": 16,
+        "suffix-submitted": 3,
+        "upload-ready": 2,
+        "upload-submit": 2
+      },
+      "direct_plus_scatter_requests": [],
+      "peak_prefetch_bytes": 69468160,
+      "policy": "forced",
+      "requests": 3,
+      "runtime_worker_sha256": "0af3b1ce2ddebc13c959a24daf3a4854fc9e9793d13bcef49347b23dc000d2d4",
+      "scope": "native event audit and optional correctness checks; no performance estimate"
+    },
+    "elapsed_seconds": 1.3753655,
+    "emitted_tokens_per_s": 11.633271301337716,
+    "end_reason": {
+      "length": 3
+    },
+    "exact_recompute_qualification": true,
+    "native_prefill_done_to_first_emission": {
+      "max_ms": 0.451,
+      "mean_ms": 0.4126666666666667,
+      "p95_ms": 0.451,
+      "samples": 3
+    },
+    "output_lengths": {
+      "4": 2,
+      "8": 1
+    },
+    "requests_with_first_token": 3,
+    "scope": "complete one-slot process-pipe run; token ID frame receipt, not HTTP or production SLO",
+    "total_requests": 3
+  }
+}

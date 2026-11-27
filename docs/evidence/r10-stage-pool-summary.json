@@ -1,0 +1,66 @@
+{
+  "arms": {
+    "exact-union": {
+      "actual_device_arena_bytes": 138936320,
+      "device_copy_bytes": {
+        "0": 69468160,
+        "1": 86245376
+      },
+      "disk_bytes": 105381888,
+      "exact_logit_positions": 192,
+      "formal_blocks": 12,
+      "median_device_copy_wall_us": {
+        "0": 749.5,
+        "1": 894.5
+      },
+      "peak_charged_bytes": 138936320,
+      "pending_before_handoff_count": 12,
+      "shared_block_uploads": 1,
+      "upload_bytes": 138936320
+    },
+    "inflight-cancel": {
+      "actual_device_arena_bytes": 138936320,
+      "device_copy_bytes": {
+        "1": 86245376
+      },
+      "disk_bytes": 52690944,
+      "exact_logit_positions": 96,
+      "formal_blocks": 12,
+      "median_device_copy_wall_us": {
+        "1": 906.0
+      },
+      "peak_charged_bytes": 138936320,
+      "pending_before_handoff_count": 12,
+      "shared_block_uploads": 1,
+      "upload_bytes": 86245376
+    },
+    "union-minus-page": {
+      "actual_device_arena_bytes": 138870784,
+      "device_copy_bytes": {
+        "0": 69468160,
+        "1": 86245376
+      },
+      "disk_bytes": 105381888,
+      "exact_logit_positions": 192,
+      "formal_blocks": 12,
+      "median_device_copy_wall_us": {
+        "0": 769.5,
+        "1": 937.5
+      },
+      "peak_charged_bytes": 86245376,
+      "pending_before_handoff_count": 12,
+      "shared_block_uploads": 2,
+      "upload_bytes": 155713536
+    }
+  },
+  "formal_blocks": 36,
+  "formal_exact_logit_positions": 480,
+  "object_bytes": {
+    "0": 16777216,
+    "1": 52690944,
+    "2": 16777216,
+    "3": 52690944
+  },
+  "page_bytes": 65536,
+  "raw_sha256": "37400d0ed0382dd5b1095d847295ae7e6376964b38837e87a6b542ad1e13e590"
+}

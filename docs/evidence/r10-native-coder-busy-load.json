@@ -1,0 +1,27 @@
+{
+  "arms": [
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 2.21183125,
+      "p95_observation_delay_ms": 15.0323,
+      "receipt_sha256": "06a0ba60acc662cffac5b0111041fe3fd9ced4434de04d1f6fe499765ef0f564",
+      "response_mean_ms": 3674.2814697916665,
+      "response_p95_ms": 7170.9741,
+      "run": "coder-busy-8225",
+      "source_schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574",
+      "window": {
+        "average_outstanding": 3.546871448224215,
+        "completions_per_s_in_entire_window": 0.9653238265454182,
+        "drain_after_last_arrival_ms": 6717.229,
+        "drain_elapsed_ms": 99448.4932,
+        "fraction_time_any_request_outstanding": 0.9035756089263703,
+        "max_outstanding": 9,
+        "offered_arrivals_per_s": 1.024465705493962,
+        "outstanding_at_last_arrival": 8,
+        "submission_span_ms": 92731.2642
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

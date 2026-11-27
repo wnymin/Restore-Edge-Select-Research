@@ -1,0 +1,41 @@
+{
+  "arms": {
+    "cold-1024": 12,
+    "cold-512": 12,
+    "staged-1024": 12,
+    "staged-512": 12
+  },
+  "cases": {
+    "cold-1024": {
+      "device_arena_bytes": 86179840,
+      "device_copy_bytes": 0,
+      "disk_bytes": 52690944,
+      "h2d_bytes": 86245376,
+      "peak_charged_bytes": 0
+    },
+    "cold-512": {
+      "device_arena_bytes": 69402624,
+      "device_copy_bytes": 0,
+      "disk_bytes": 52690944,
+      "h2d_bytes": 69468160,
+      "peak_charged_bytes": 0
+    },
+    "staged-1024": {
+      "device_arena_bytes": 86245376,
+      "device_copy_bytes": 86245376,
+      "disk_bytes": 52690944,
+      "h2d_bytes": 86245376,
+      "peak_charged_bytes": 86245376
+    },
+    "staged-512": {
+      "device_arena_bytes": 69468160,
+      "device_copy_bytes": 69468160,
+      "disk_bytes": 52690944,
+      "h2d_bytes": 69468160,
+      "peak_charged_bytes": 69468160
+    }
+  },
+  "exact_logit_positions": 384,
+  "raw_sha256": "6bbff692b1e9f32f0f86a5733668d62f54f8b3d3b0f1ac3aba62aae038800fb5",
+  "scope": "idle-head exact direct demand; competing later reservations excluded"
+}

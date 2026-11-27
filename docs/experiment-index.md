@@ -18,7 +18,13 @@ R02 的 CPU 判据、反例、GPU 观测与复算命令见[阶段验收](r02-cro
 
 R07 的到达、跨模型与跨负载验证见[扩展结果及复现命令](r07-extension-results.md#复核与复现)。可先运行 `python -m scripts.validation.check_r07_extension`，无需原始轨迹。
 
-R08 的跨模型、跨容量和原生成本留出见[结果及复核命令](r08-model-capacity-results.md#复核与出处)。归档可以用 `python -m scripts.validation.check_r08_capacity` 离线复核，无需下载权重或请求轨迹。
+R08 的跨模型、跨容量和原生成本留出见[结果及复核命令](r08-model-capacity-results.md#复核与出处)。归档可以用 `python -m scripts.validation.check_r08_capacity` 离线复核，无需下载权重或请求轨迹。 后续反例的逐条复算与候选策略分别见 [R08-CPU-03](r08-counterexample-mechanisms.md) 和 [R08-CPU-04](r08-entry-refinement.md#自验复现和交接)。新源窗、尾部干预与不替换决策见 [R08 接替验证](r08-takeover-results.md)。
+
+R09 研究 CPU 选点时间与质量、预取及 GPU 关键路径余量和预设预算；见[实验与统计设计](r09-decision-time-budget-plan.md)及[实证、数据与复核命令](r09-decision-time-budget-results.md#结论与复核入口)。
+
+R10 的本机接口、机制、预填充和流式服务留出见[本地验收](r10-local-acceptance.md)。使用[归档复算入口](r10-real-execution-experiment-plan.md#6-主实验复跑与归档复算)核对正式结果，所需的冻结输入包存于本机忽略目录。
+
+R11 的代码 Agent 工具循环、Weka 父子代理原始时序回放与长前缀 GPU 配对见[结果及复算](r11-coding-agent-recovery.md#复算)。
 
 ## CPU 前瞻审计数据归档
 

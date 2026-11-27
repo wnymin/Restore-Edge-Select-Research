@@ -1,0 +1,119 @@
+{
+  "a": {
+    "actual_scatter_observations": {
+      "native-scatter": 17
+    },
+    "charged_peak_bytes": 86245376,
+    "choices": {
+      "0": 56,
+      "512": 7,
+      "1024": 1
+    },
+    "max_arrival_slip_ms": 16.3741,
+    "p95_chooser_ms": 0.4963,
+    "p95_observation_delay_ms": 6256.8051,
+    "resources": {
+      "after-context": {
+        "peak_working_set_bytes": 3148828672,
+        "private_commit_bytes": 3600945152,
+        "vulkan_free_bytes": 4390604800,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 2922909696
+      },
+      "after-drain": {
+        "peak_working_set_bytes": 3398316032,
+        "private_commit_bytes": 4044185600,
+        "vulkan_free_bytes": 4270346240,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 3228241920
+      },
+      "after-lane-warmup": {
+        "peak_working_set_bytes": 3388039168,
+        "private_commit_bytes": 4028207104,
+        "vulkan_free_bytes": 4273491968,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 3158622208
+      },
+      "after-model": {
+        "peak_working_set_bytes": 2892640256,
+        "private_commit_bytes": 2874257408,
+        "vulkan_free_bytes": 4805120000,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 2872385536
+      },
+      "before-model": {
+        "peak_working_set_bytes": 67219456,
+        "private_commit_bytes": 57683968,
+        "vulkan_free_bytes": 7535153152,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 67219456
+      }
+    },
+    "response_mean_ms": 28030.345303125,
+    "response_median_ms": 28637.0301,
+    "response_p95_ms": 29862.1963
+  },
+  "abs_mean_difference_ms": 59.228579687500314,
+  "abs_p95_difference_ms": 27.067699999999604,
+  "archive_sha256": "dd083d343d45a9e176b0d70895a1276548621c6544d84953c8cd66b017a4c024",
+  "b": {
+    "actual_scatter_observations": {
+      "native-scatter": 17
+    },
+    "charged_peak_bytes": 86245376,
+    "choices": {
+      "0": 56,
+      "512": 7,
+      "1024": 1
+    },
+    "max_arrival_slip_ms": 15.4141,
+    "p95_chooser_ms": 0.538,
+    "p95_observation_delay_ms": 5892.4747,
+    "resources": {
+      "after-context": {
+        "peak_working_set_bytes": 3120295936,
+        "private_commit_bytes": 3600834560,
+        "vulkan_free_bytes": 4390604800,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 3120295936
+      },
+      "after-drain": {
+        "peak_working_set_bytes": 3397812224,
+        "private_commit_bytes": 4044308480,
+        "vulkan_free_bytes": 4270346240,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 3227930624
+      },
+      "after-lane-warmup": {
+        "peak_working_set_bytes": 3388116992,
+        "private_commit_bytes": 4028968960,
+        "vulkan_free_bytes": 4273491968,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 3158618112
+      },
+      "after-model": {
+        "peak_working_set_bytes": 2892713984,
+        "private_commit_bytes": 2874023936,
+        "vulkan_free_bytes": 4805120000,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 2872225792
+      },
+      "before-model": {
+        "peak_working_set_bytes": 67026944,
+        "private_commit_bytes": 57626624,
+        "vulkan_free_bytes": 7535153152,
+        "vulkan_reported_budget_bytes": 8342470656,
+        "working_set_bytes": 67026944
+      }
+    },
+    "response_mean_ms": 27971.1167234375,
+    "response_median_ms": 28516.55615,
+    "response_p95_ms": 29889.264
+  },
+  "block": "oasst-cal-03",
+  "capacity_bytes": 86245376,
+  "choice_mismatches": 0,
+  "cost_profile_sha256": "036e0e27fd4c8879555eb5bfb36257274e4d19a78740a59c5f31ae28e9e028c1",
+  "policy": "local-cost",
+  "scope": "same-policy full-block A/A under provisional costs; not an A/B effect estimate"
+}

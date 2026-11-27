@@ -1,0 +1,312 @@
+{
+  "restore-split-v2.csv": {
+    "sha256": "49a7e1c0df8d2ad91e20f935233bb3019a30ee28ea6fbca63cd21dc322836981",
+    "result": {
+      "formal_arms": 48,
+      "positions_per_arm": 8,
+      "identical_state_arms": 48,
+      "max_error_from_matched_recompute": 0.0,
+      "max_error_from_512_batch_recompute": 0.2304120064,
+      "load_ms_median": [
+        {
+          "depth": 512,
+          "arm": "file-handoff",
+          "ms": 27.6157
+        },
+        {
+          "depth": 512,
+          "arm": "ram-direct",
+          "ms": 8.54775
+        },
+        {
+          "depth": 512,
+          "arm": "ram-handoff",
+          "ms": 8.18525
+        },
+        {
+          "depth": 512,
+          "arm": "split-host-handoff",
+          "ms": 39.90515
+        },
+        {
+          "depth": 1024,
+          "arm": "file-handoff",
+          "ms": 38.40285
+        },
+        {
+          "depth": 1024,
+          "arm": "ram-direct",
+          "ms": 10.4206
+        },
+        {
+          "depth": 1024,
+          "arm": "ram-handoff",
+          "ms": 10.23735
+        },
+        {
+          "depth": 1024,
+          "arm": "split-host-handoff",
+          "ms": 49.670950000000005
+        },
+        {
+          "depth": 1536,
+          "arm": "file-handoff",
+          "ms": 49.0008
+        },
+        {
+          "depth": 1536,
+          "arm": "ram-direct",
+          "ms": 12.312899999999999
+        },
+        {
+          "depth": 1536,
+          "arm": "ram-handoff",
+          "ms": 11.76065
+        },
+        {
+          "depth": 1536,
+          "arm": "split-host-handoff",
+          "ms": 47.5218
+        }
+      ],
+      "state_bytes": [
+        {
+          "depth": 512,
+          "full_bytes": 69481260,
+          "recurrent_payload_and_metadata_bytes": 52691540
+        },
+        {
+          "depth": 1024,
+          "full_bytes": 86270764,
+          "recurrent_payload_and_metadata_bytes": 52691540
+        },
+        {
+          "depth": 1536,
+          "full_bytes": 103060268,
+          "recurrent_payload_and_metadata_bytes": 52691540
+        }
+      ]
+    }
+  },
+  "isolated-paths.json": {
+    "sha256": "d21c2611a201f6fa8a7b7c4c937c800c0a876ed08d394472c910326ce0e8bb66",
+    "result": {
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU, 595.97",
+      "platform": "Windows-11-10.0.22631-SP0",
+      "model_sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+      "medians": [
+        {
+          "kind": "copy",
+          "bytes": 8388608,
+          "ms": 0.1094
+        },
+        {
+          "kind": "copy",
+          "bytes": 16777216,
+          "ms": 0.18595
+        },
+        {
+          "kind": "copy",
+          "bytes": 25755648,
+          "ms": 0.1985
+        },
+        {
+          "kind": "copy",
+          "bytes": 33554432,
+          "ms": 0.34314999999999996
+        },
+        {
+          "kind": "copy",
+          "bytes": 51511296,
+          "ms": 0.4951
+        },
+        {
+          "kind": "copy",
+          "bytes": 153944064,
+          "ms": 1.5492
+        },
+        {
+          "kind": "ram",
+          "bytes": 8388608,
+          "ms": 0.7127
+        },
+        {
+          "kind": "ram",
+          "bytes": 16777216,
+          "ms": 1.3809
+        },
+        {
+          "kind": "ram",
+          "bytes": 25755648,
+          "ms": 2.08495
+        },
+        {
+          "kind": "ram",
+          "bytes": 33554432,
+          "ms": 2.72075
+        },
+        {
+          "kind": "ram",
+          "bytes": 51511296,
+          "ms": 4.133100000000001
+        },
+        {
+          "kind": "ram",
+          "bytes": 153944064,
+          "ms": 12.3065
+        },
+        {
+          "kind": "ssd",
+          "bytes": 8388608,
+          "ms": 3.4212499999999997
+        },
+        {
+          "kind": "ssd",
+          "bytes": 16777216,
+          "ms": 6.36525
+        },
+        {
+          "kind": "ssd",
+          "bytes": 25755648,
+          "ms": 9.86435
+        },
+        {
+          "kind": "ssd",
+          "bytes": 33554432,
+          "ms": 12.31885
+        },
+        {
+          "kind": "ssd",
+          "bytes": 51511296,
+          "ms": 18.83445
+        },
+        {
+          "kind": "ssd",
+          "bytes": 153944064,
+          "ms": 55.3074
+        }
+      ]
+    }
+  },
+  "prefill-initial.json": {
+    "sha256": "49ad9a8efb7bf4ea8e7f849df18691c7e4ddaa0b2776aa81320c7c8503637d68",
+    "result": [
+      {
+        "depth": 0,
+        "suffix": 128,
+        "ms": 63.5906
+      },
+      {
+        "depth": 0,
+        "suffix": 512,
+        "ms": 181.6295
+      },
+      {
+        "depth": 0,
+        "suffix": 1024,
+        "ms": 357.6148
+      },
+      {
+        "depth": 512,
+        "suffix": 128,
+        "ms": 54.49
+      },
+      {
+        "depth": 512,
+        "suffix": 512,
+        "ms": 182.6747
+      },
+      {
+        "depth": 512,
+        "suffix": 1024,
+        "ms": 391.0049
+      },
+      {
+        "depth": 1024,
+        "suffix": 128,
+        "ms": 57.875
+      },
+      {
+        "depth": 1024,
+        "suffix": 512,
+        "ms": 194.7886
+      },
+      {
+        "depth": 1024,
+        "suffix": 1024,
+        "ms": 384.9288
+      },
+      {
+        "depth": 1536,
+        "suffix": 128,
+        "ms": 55.616
+      },
+      {
+        "depth": 1536,
+        "suffix": 512,
+        "ms": 184.9174
+      },
+      {
+        "depth": 1536,
+        "suffix": 1024,
+        "ms": 370.955
+      }
+    ]
+  },
+  "stage-native.csv": {
+    "sha256": "f2acbe2c9d74e42abb01d02c093b718ed7fec5acee057de3d772e1328843ca93",
+    "result": [
+      {
+        "topology": "shared",
+        "quota_mib": 174,
+        "pairs": 8,
+        "deep_wins": 8,
+        "deep_minus_shallow_ms": -47.25880000000001,
+        "paired_differences_ms": [
+          -83.04139999999995,
+          -28.038599999999974,
+          -61.36760000000004,
+          -26.003299999999967,
+          -60.83269999999993,
+          -17.40050000000008,
+          -33.684900000000084,
+          -76.0353
+        ]
+      },
+      {
+        "topology": "shared",
+        "quota_mib": 210,
+        "pairs": 8,
+        "deep_wins": 8,
+        "deep_minus_shallow_ms": -67.84224999999998,
+        "paired_differences_ms": [
+          -76.58389999999997,
+          -91.80470000000003,
+          -68.31560000000002,
+          -37.78129999999999,
+          -88.56200000000001,
+          -39.72379999999998,
+          -67.36889999999994,
+          -59.028299999999945
+        ]
+      },
+      {
+        "topology": "split",
+        "quota_mib": 174,
+        "pairs": 8,
+        "deep_wins": 8,
+        "deep_minus_shallow_ms": -52.05235000000005,
+        "paired_differences_ms": [
+          -38.23199999999997,
+          -11.701700000000073,
+          -48.22930000000008,
+          -55.87540000000001,
+          -91.14960000000008,
+          -74.69490000000008,
+          -44.91660000000002,
+          -62.321699999999964
+        ]
+      }
+    ]
+  }
+}

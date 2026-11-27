@@ -1,0 +1,891 @@
+{
+  "all_anchors_found": true,
+  "archive_sha256": "c9eb2ce672a3e34a7c6ca71b4820d7b85f69bae82b017c8cc1408e1b23d4f308",
+  "arms": [
+    {
+      "arrival_scale": "403",
+      "block": "oasst-cal-03",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 794.9499,
+          "mean_ms": 542.35078125,
+          "p95_ms": 739.8279,
+          "samples": 64
+        },
+        "completed": 64,
+        "completions_per_s": 2.4634085107361465,
+        "emitted_tokens_per_s": 38.41377646429178,
+        "inter_token_frame_ms": {
+          "max_ms": 24.14,
+          "mean_ms": 15.4509926124197,
+          "p95_ms": 20.6263,
+          "samples": 934
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.5043,
+          "mean_ms": 0.429953125,
+          "p95_ms": 0.8201,
+          "samples": 64
+        },
+        "slo": {
+          "goodput_per_s": 2.4634085107361465,
+          "success_count": 64,
+          "success_fraction": 1.0,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 20.6442,
+          "mean_ms": 15.545463229166666,
+          "p95_ms": 15.816126666666667,
+          "samples": 64
+        },
+        "ttft_visible_ms": {
+          "max_ms": 563.1875,
+          "mean_ms": 316.3034390625,
+          "p95_ms": 509.3241,
+          "samples": 64
+        },
+        "window_s": 25.9802626
+      },
+      "failed": false,
+      "family": "oasst",
+      "profile": "short",
+      "queue_window": {
+        "average_outstanding": 1.3356235778991248,
+        "completions_per_s_in_entire_window": 2.463420457920148,
+        "drain_after_last_arrival_ms": 577.687,
+        "drain_elapsed_ms": 25980.1366,
+        "fraction_time_any_request_outstanding": 0.9798651751507726,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 2.480075779778341,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 25402.4496
+      },
+      "rate": "middle",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+    },
+    {
+      "arrival_scale": "780",
+      "block": "oasst-cal-03",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 735.2853,
+          "mean_ms": 403.6362421875,
+          "p95_ms": 558.9636,
+          "samples": 64
+        },
+        "completed": 64,
+        "completions_per_s": 1.2907223662845408,
+        "emitted_tokens_per_s": 20.12720189924956,
+        "inter_token_frame_ms": {
+          "max_ms": 23.3151,
+          "mean_ms": 15.479739079229121,
+          "p95_ms": 20.7875,
+          "samples": 934
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.152,
+          "mean_ms": 0.585471875,
+          "p95_ms": 1.0574,
+          "samples": 64
+        },
+        "slo": {
+          "goodput_per_s": 1.2907223662845408,
+          "success_count": 64,
+          "success_fraction": 1.0,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 21.1606,
+          "mean_ms": 15.583344895833333,
+          "p95_ms": 15.782573333333334,
+          "samples": 64
+        },
+        "ttft_visible_ms": {
+          "max_ms": 500.976,
+          "mean_ms": 177.1754640625,
+          "p95_ms": 324.1965,
+          "samples": 64
+        },
+        "window_s": 49.584637
+      },
+      "failed": false,
+      "family": "oasst",
+      "profile": "short",
+      "queue_window": {
+        "average_outstanding": 0.5207326491837867,
+        "completions_per_s_in_entire_window": 1.2907944180531217,
+        "drain_after_last_arrival_ms": 425.2476,
+        "drain_elapsed_ms": 49581.8692,
+        "fraction_time_any_request_outstanding": 0.5207326491837867,
+        "max_outstanding": 1,
+        "offered_arrivals_per_s": 1.2816177749693034,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 49156.6216
+      },
+      "rate": "low",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+    },
+    {
+      "arrival_scale": "195",
+      "block": "oasst-cal-03",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 13281.831,
+          "mean_ms": 6813.69189375,
+          "p95_ms": 12584.6987,
+          "samples": 64
+        },
+        "completed": 64,
+        "completions_per_s": 2.501852670767013,
+        "emitted_tokens_per_s": 39.01326508477311,
+        "inter_token_frame_ms": {
+          "max_ms": 24.5671,
+          "mean_ms": 15.512190471092078,
+          "p95_ms": 20.8227,
+          "samples": 934
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.2536,
+          "mean_ms": 0.38168125,
+          "p95_ms": 0.7285,
+          "samples": 64
+        },
+        "slo": {
+          "goodput_per_s": 0.4690973757688149,
+          "success_count": 12,
+          "success_fraction": 0.1875,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 21.107,
+          "mean_ms": 15.6221765625,
+          "p95_ms": 15.77236,
+          "samples": 64
+        },
+        "ttft_visible_ms": {
+          "max_ms": 13045.9506,
+          "mean_ms": 6586.7326078125,
+          "p95_ms": 12352.5283,
+          "samples": 64
+        },
+        "window_s": 25.5810427
+      },
+      "failed": false,
+      "family": "oasst",
+      "profile": "short",
+      "queue_window": {
+        "average_outstanding": 17.0479647554378,
+        "completions_per_s_in_entire_window": 2.5020964734040967,
+        "drain_after_last_arrival_ms": 13279.3384,
+        "drain_elapsed_ms": 25578.5501,
+        "fraction_time_any_request_outstanding": 1.0,
+        "max_outstanding": 33,
+        "offered_arrivals_per_s": 5.122279503490455,
+        "outstanding_at_last_arrival": 33,
+        "submission_span_ms": 12299.2117
+      },
+      "rate": "high",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+    },
+    {
+      "arrival_scale": "403",
+      "block": "oasst-cal-03",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 10940.1639,
+          "mean_ms": 5849.275171875,
+          "p95_ms": 10735.5318,
+          "samples": 64
+        },
+        "completed": 64,
+        "completions_per_s": 1.7621227610079295,
+        "emitted_tokens_per_s": 45.42972743223568,
+        "inter_token_frame_ms": {
+          "max_ms": 24.1039,
+          "mean_ms": 15.52748474148802,
+          "p95_ms": 16.3592,
+          "samples": 1586
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 0.7699,
+          "mean_ms": 0.3864359375,
+          "p95_ms": 0.6354,
+          "samples": 64
+        },
+        "slo": {
+          "goodput_per_s": 0.2477985132667401,
+          "success_count": 9,
+          "success_fraction": 0.140625,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 21.4159,
+          "mean_ms": 15.737327855406745,
+          "p95_ms": 15.980813333333334,
+          "samples": 64
+        },
+        "ttft_visible_ms": {
+          "max_ms": 10696.4886,
+          "mean_ms": 5463.3526046875,
+          "p95_ms": 9940.2823,
+          "samples": 64
+        },
+        "window_s": 36.319830499999995
+      },
+      "failed": false,
+      "family": "oasst",
+      "profile": "mixed",
+      "queue_window": {
+        "average_outstanding": 10.308489186526446,
+        "completions_per_s_in_entire_window": 1.7624457578747117,
+        "drain_after_last_arrival_ms": 10933.5077,
+        "drain_elapsed_ms": 36313.1743,
+        "fraction_time_any_request_outstanding": 1.0,
+        "max_outstanding": 20,
+        "offered_arrivals_per_s": 2.482302111880382,
+        "outstanding_at_last_arrival": 20,
+        "submission_span_ms": 25379.6666
+      },
+      "rate": "middle",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+    },
+    {
+      "arrival_scale": "780",
+      "block": "oasst-cal-03",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 1300.1372,
+          "mean_ms": 646.300509375,
+          "p95_ms": 1195.1144,
+          "samples": 64
+        },
+        "completed": 64,
+        "completions_per_s": 1.29050212175285,
+        "emitted_tokens_per_s": 33.270757826440665,
+        "inter_token_frame_ms": {
+          "max_ms": 23.0531,
+          "mean_ms": 15.412645649432534,
+          "p95_ms": 16.3574,
+          "samples": 1586
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.0993,
+          "mean_ms": 0.474640625,
+          "p95_ms": 0.862,
+          "samples": 64
+        },
+        "slo": {
+          "goodput_per_s": 1.29050212175285,
+          "success_count": 64,
+          "success_fraction": 1.0,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 21.0332,
+          "mean_ms": 15.605576110119047,
+          "p95_ms": 15.90024,
+          "samples": 64
+        },
+        "ttft_visible_ms": {
+          "max_ms": 669.7661,
+          "mean_ms": 263.2399875,
+          "p95_ms": 569.9689,
+          "samples": 64
+        },
+        "window_s": 49.5930994
+      },
+      "failed": false,
+      "family": "oasst",
+      "profile": "mixed",
+      "queue_window": {
+        "average_outstanding": 0.8338002876510741,
+        "completions_per_s_in_entire_window": 1.2906802057514457,
+        "drain_after_last_arrival_ms": 426.109,
+        "drain_elapsed_ms": 49586.2567,
+        "fraction_time_any_request_outstanding": 0.7252204399611395,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 1.2815258486296208,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 49160.1477
+      },
+      "rate": "low",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+    },
+    {
+      "arrival_scale": "195",
+      "block": "oasst-cal-03",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 24463.8778,
+          "mean_ms": 12606.014184375,
+          "p95_ms": 23627.2707,
+          "samples": 64
+        },
+        "completed": 64,
+        "completions_per_s": 1.740697341469124,
+        "emitted_tokens_per_s": 44.87735333475086,
+        "inter_token_frame_ms": {
+          "max_ms": 26.1776,
+          "mean_ms": 15.614986569987389,
+          "p95_ms": 17.2989,
+          "samples": 1586
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.0581,
+          "mean_ms": 0.41845,
+          "p95_ms": 0.7357,
+          "samples": 64
+        },
+        "slo": {
+          "goodput_per_s": 0.13599197980227531,
+          "success_count": 5,
+          "success_fraction": 0.078125,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 20.769,
+          "mean_ms": 15.843207370659723,
+          "p95_ms": 17.037366666666667,
+          "samples": 64
+        },
+        "ttft_visible_ms": {
+          "max_ms": 24222.0833,
+          "mean_ms": 12217.8918296875,
+          "p95_ms": 22658.4947,
+          "samples": 64
+        },
+        "window_s": 36.7668741
+      },
+      "failed": false,
+      "family": "oasst",
+      "profile": "mixed",
+      "queue_window": {
+        "average_outstanding": 21.94637427439217,
+        "completions_per_s_in_entire_window": 1.740982466383322,
+        "drain_after_last_arrival_ms": 24457.8564,
+        "drain_elapsed_ms": 36760.8527,
+        "fraction_time_any_request_outstanding": 1.0,
+        "max_outstanding": 44,
+        "offered_arrivals_per_s": 5.120703807738282,
+        "outstanding_at_last_arrival": 44,
+        "submission_span_ms": 12302.9963
+      },
+      "rate": "high",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+    },
+    {
+      "arrival_scale": "651/80",
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 3462.5354,
+          "mean_ms": 1656.4853510416667,
+          "p95_ms": 3266.4021,
+          "samples": 96
+        },
+        "completed": 96,
+        "completions_per_s": 0.7540156019840174,
+        "emitted_tokens_per_s": 11.891454389622941,
+        "inter_token_frame_ms": {
+          "max_ms": 24.8988,
+          "mean_ms": 15.992579266572637,
+          "p95_ms": 21.4354,
+          "samples": 1418
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.326,
+          "mean_ms": 0.477078125,
+          "p95_ms": 0.9025,
+          "samples": 96
+        },
+        "slo": {
+          "goodput_per_s": 0.6833266392980158,
+          "success_count": 87,
+          "success_fraction": 0.90625,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 17.418213333333334,
+          "mean_ms": 15.993913689223058,
+          "p95_ms": 16.94696666666667,
+          "samples": 95
+        },
+        "ttft_visible_ms": {
+          "max_ms": 3224.8463,
+          "mean_ms": 1419.4254927083334,
+          "p95_ms": 3027.6278,
+          "samples": 96
+        },
+        "window_s": 127.31832039999999
+      },
+      "failed": false,
+      "family": "bailian",
+      "profile": "short",
+      "queue_window": {
+        "average_outstanding": 1.248877370367369,
+        "completions_per_s_in_entire_window": 0.7540394434953898,
+        "drain_after_last_arrival_ms": 1564.5792,
+        "drain_elapsed_ms": 127314.2948,
+        "fraction_time_any_request_outstanding": 0.6784211877832276,
+        "max_outstanding": 5,
+        "offered_arrivals_per_s": 0.7554689054103912,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 125749.7156
+      },
+      "rate": "middle",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574"
+    },
+    {
+      "arrival_scale": "63/4",
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 2908.8025,
+          "mean_ms": 1308.2302875,
+          "p95_ms": 2460.3383,
+          "samples": 96
+        },
+        "completed": 96,
+        "completions_per_s": 0.3919554175144465,
+        "emitted_tokens_per_s": 6.181463563717417,
+        "inter_token_frame_ms": {
+          "max_ms": 37.9355,
+          "mean_ms": 16.0146658674189,
+          "p95_ms": 21.1911,
+          "samples": 1418
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.2472,
+          "mean_ms": 0.5139041666666667,
+          "p95_ms": 1.0888,
+          "samples": 96
+        },
+        "slo": {
+          "goodput_per_s": 0.3878725485820044,
+          "success_count": 95,
+          "success_fraction": 0.9895833333333334,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 19.262413333333335,
+          "mean_ms": 16.014083348370928,
+          "p95_ms": 17.491266666666668,
+          "samples": 95
+        },
+        "ttft_visible_ms": {
+          "max_ms": 2669.5955,
+          "mean_ms": 1070.8385645833334,
+          "p95_ms": 2216.8959,
+          "samples": 96
+        },
+        "window_s": 244.92581479999998
+      },
+      "failed": false,
+      "family": "bailian",
+      "profile": "short",
+      "queue_window": {
+        "average_outstanding": 0.5126768530346513,
+        "completions_per_s_in_entire_window": 0.3919622482050594,
+        "drain_after_last_arrival_ms": 1507.91,
+        "drain_elapsed_ms": 244921.5465,
+        "fraction_time_any_request_outstanding": 0.36876297284036624,
+        "max_outstanding": 4,
+        "offered_arrivals_per_s": 0.3902821607120602,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 243413.6365
+      },
+      "rate": "low",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574"
+    },
+    {
+      "arrival_scale": "63/16",
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 25860.8511,
+          "mean_ms": 11872.748869791667,
+          "p95_ms": 25070.5379,
+          "samples": 96
+        },
+        "completed": 96,
+        "completions_per_s": 1.1134404297789129,
+        "emitted_tokens_per_s": 17.55988344463827,
+        "inter_token_frame_ms": {
+          "max_ms": 25.2134,
+          "mean_ms": 16.015367630465445,
+          "p95_ms": 21.5965,
+          "samples": 1418
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.4683,
+          "mean_ms": 0.52920625,
+          "p95_ms": 1.1908,
+          "samples": 96
+        },
+        "slo": {
+          "goodput_per_s": 0.10438504029177308,
+          "success_count": 9,
+          "success_fraction": 0.09375,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 16.637413333333335,
+          "mean_ms": 16.01643561904762,
+          "p95_ms": 16.432066666666667,
+          "samples": 95
+        },
+        "ttft_visible_ms": {
+          "max_ms": 25619.4713,
+          "mean_ms": 11635.388636458334,
+          "p95_ms": 24827.0866,
+          "samples": 96
+        },
+        "window_s": 86.2192511
+      },
+      "failed": false,
+      "family": "bailian",
+      "profile": "short",
+      "queue_window": {
+        "average_outstanding": 13.219299110049333,
+        "completions_per_s_in_entire_window": 1.1134443479179692,
+        "drain_after_last_arrival_ms": 25351.9509,
+        "drain_elapsed_ms": 86218.9477,
+        "fraction_time_any_request_outstanding": 0.9951398606550147,
+        "max_outstanding": 29,
+        "offered_arrivals_per_s": 1.5607801435013466,
+        "outstanding_at_last_arrival": 29,
+        "submission_span_ms": 60866.9968
+      },
+      "rate": "high",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574"
+    },
+    {
+      "arrival_scale": "651/80",
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 6359.2607,
+          "mean_ms": 2491.4011,
+          "p95_ms": 5128.0386,
+          "samples": 96
+        },
+        "completed": 96,
+        "completions_per_s": 0.7547678923625509,
+        "emitted_tokens_per_s": 20.960533344151674,
+        "inter_token_frame_ms": {
+          "max_ms": 31.3929,
+          "mean_ms": 15.857379182879377,
+          "p95_ms": 16.8982,
+          "samples": 2570
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.1517,
+          "mean_ms": 0.47049895833333333,
+          "p95_ms": 0.9105,
+          "samples": 96
+        },
+        "slo": {
+          "goodput_per_s": 0.5031785949083672,
+          "success_count": 64,
+          "success_fraction": 0.6666666666666666,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 17.59528,
+          "mean_ms": 16.018979463659146,
+          "p95_ms": 16.539993333333335,
+          "samples": 95
+        },
+        "ttft_visible_ms": {
+          "max_ms": 6112.1107,
+          "mean_ms": 2066.0643083333334,
+          "p95_ms": 4575.2039,
+          "samples": 96
+        },
+        "window_s": 127.19142
+      },
+      "failed": false,
+      "family": "bailian",
+      "profile": "mixed",
+      "queue_window": {
+        "average_outstanding": 1.8802992233297904,
+        "completions_per_s_in_entire_window": 0.7548065307380087,
+        "drain_after_last_arrival_ms": 1425.2519,
+        "drain_elapsed_ms": 127184.9091,
+        "fraction_time_any_request_outstanding": 0.8358144425485146,
+        "max_outstanding": 6,
+        "offered_arrivals_per_s": 0.7554091837966619,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 125759.6572
+      },
+      "rate": "middle",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574"
+    },
+    {
+      "arrival_scale": "63/4",
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 3764.7672,
+          "mean_ms": 1624.1911322916667,
+          "p95_ms": 3135.7386,
+          "samples": 96
+        },
+        "completed": 96,
+        "completions_per_s": 0.39191178020104633,
+        "emitted_tokens_per_s": 10.883716729333223,
+        "inter_token_frame_ms": {
+          "max_ms": 29.7065,
+          "mean_ms": 15.80872673151751,
+          "p95_ms": 17.8065,
+          "samples": 2570
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 2.1423,
+          "mean_ms": 0.5549822916666667,
+          "p95_ms": 1.0782,
+          "samples": 96
+        },
+        "slo": {
+          "goodput_per_s": 0.36741729393848094,
+          "success_count": 90,
+          "success_fraction": 0.9375,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 20.349246666666666,
+          "mean_ms": 15.940928913951545,
+          "p95_ms": 17.294666666666668,
+          "samples": 95
+        },
+        "ttft_visible_ms": {
+          "max_ms": 3517.8477,
+          "mean_ms": 1200.132053125,
+          "p95_ms": 2516.2305,
+          "samples": 96
+        },
+        "window_s": 244.953086
+      },
+      "failed": false,
+      "family": "bailian",
+      "profile": "mixed",
+      "queue_window": {
+        "average_outstanding": 0.6364506163955767,
+        "completions_per_s_in_entire_window": 0.39192080986594535,
+        "drain_after_last_arrival_ms": 1519.0662,
+        "drain_elapsed_ms": 244947.4424,
+        "fraction_time_any_request_outstanding": 0.4415680516613551,
+        "max_outstanding": 4,
+        "offered_arrivals_per_s": 0.3902585289479493,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 243428.3762
+      },
+      "rate": "low",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574"
+    },
+    {
+      "arrival_scale": "63/16",
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 44598.7664,
+          "mean_ms": 21285.673465625,
+          "p95_ms": 43304.4417,
+          "samples": 96
+        },
+        "completed": 96,
+        "completions_per_s": 0.9145343962207049,
+        "emitted_tokens_per_s": 25.397382295045826,
+        "inter_token_frame_ms": {
+          "max_ms": 25.4158,
+          "mean_ms": 15.799424980544748,
+          "p95_ms": 16.5531,
+          "samples": 2570
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 0.9397,
+          "mean_ms": 0.409525,
+          "p95_ms": 0.7744,
+          "samples": 96
+        },
+        "slo": {
+          "goodput_per_s": 0.0666847997244264,
+          "success_count": 7,
+          "success_fraction": 0.07291666666666667,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 16.810886666666665,
+          "mean_ms": 15.920666135338346,
+          "p95_ms": 16.347113333333333,
+          "samples": 95
+        },
+        "ttft_visible_ms": {
+          "max_ms": 44212.7785,
+          "mean_ms": 20861.8561625,
+          "p95_ms": 43060.8675,
+          "samples": 96
+        },
+        "window_s": 104.9714482
+      },
+      "failed": false,
+      "family": "bailian",
+      "profile": "mixed",
+      "queue_window": {
+        "average_outstanding": 19.466256845061736,
+        "completions_per_s_in_entire_window": 0.9145366788281564,
+        "drain_after_last_arrival_ms": 44113.9385,
+        "drain_elapsed_ms": 104971.1862,
+        "fraction_time_any_request_outstanding": 1.0,
+        "max_outstanding": 41,
+        "offered_arrivals_per_s": 1.5610301745538848,
+        "outstanding_at_last_arrival": 41,
+        "submission_span_ms": 60857.2477
+      },
+      "rate": "high",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574"
+    },
+    {
+      "arrival_scale": "1170",
+      "block": "oasst-cal-03",
+      "client": {
+        "client_end_to_end_ms": {
+          "max_ms": 1300.8612,
+          "mean_ms": 559.7906734375,
+          "p95_ms": 1180.3103,
+          "samples": 64
+        },
+        "completed": 64,
+        "completions_per_s": 0.8630872724788163,
+        "emitted_tokens_per_s": 22.251468743594483,
+        "inter_token_frame_ms": {
+          "max_ms": 25.0255,
+          "mean_ms": 15.343832534678436,
+          "p95_ms": 16.2401,
+          "samples": 1586
+        },
+        "requests_without_visible_output": 0,
+        "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+        "server_accept_delay_ms": {
+          "max_ms": 1.5727,
+          "mean_ms": 0.68629375,
+          "p95_ms": 1.3216,
+          "samples": 64
+        },
+        "slo": {
+          "goodput_per_s": 0.8630872724788163,
+          "success_count": 64,
+          "success_fraction": 1.0,
+          "tpot_ms": 150,
+          "ttft_ms": 2500
+        },
+        "token_frame_tpot_ms": {
+          "max_ms": 21.1721,
+          "mean_ms": 15.546648046626984,
+          "p95_ms": 15.765086666666667,
+          "samples": 64
+        },
+        "ttft_visible_ms": {
+          "max_ms": 480.362,
+          "mean_ms": 178.505625,
+          "p95_ms": 323.0514,
+          "samples": 64
+        },
+        "window_s": 74.1524085
+      },
+      "failed": false,
+      "family": "oasst",
+      "profile": "mixed",
+      "queue_window": {
+        "average_outstanding": 0.4830113479889616,
+        "completions_per_s_in_entire_window": 0.8630893373078831,
+        "drain_after_last_arrival_ms": 427.7226,
+        "drain_elapsed_ms": 74152.2311,
+        "fraction_time_any_request_outstanding": 0.4802922996608257,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 0.854532655175314,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 73724.5085
+      },
+      "rate": "extra01",
+      "registered_timeout_s": 360,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+    }
+  ],
+  "chosen": {
+    "bailian/mixed": {
+      "low": "low",
+      "overload": "high",
+      "shoulder": "middle"
+    },
+    "bailian/short": {
+      "low": "low",
+      "overload": "high",
+      "shoulder": "middle"
+    },
+    "oasst/mixed": {
+      "low": "extra01",
+      "overload": "middle",
+      "shoulder": "low"
+    },
+    "oasst/short": {
+      "low": "low",
+      "overload": "high",
+      "shoulder": "middle"
+    }
+  },
+  "design_sha256": "08d55d311684aad2b48854006e5c39ac73ccae4fa0e17a832a3fe7c7310decb9",
+  "extensions_sha256": [
+    "1269bad1d300716fcb862a5ba2c9f4ce6aefcedd2751a1fa4c3088b6c8841045"
+  ],
+  "scope": "baseline-only single-slot HTTP/SSE service calibration, no retained service performance estimate"
+}

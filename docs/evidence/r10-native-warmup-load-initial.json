@@ -1,0 +1,49 @@
+{
+  "arms": [
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 1.8747859375,
+      "p95_observation_delay_ms": 14.5942,
+      "receipt_sha256": "60063b768cf64e8e9aea93a2d5440e44c8e526af0226a3aaea78440bf9139eb6",
+      "response_mean_ms": 2335.0683890625,
+      "response_p95_ms": 3703.9258,
+      "run": "oasst-03-grid",
+      "source_schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "window": {
+        "average_outstanding": 9.029955631853545,
+        "completions_per_s_in_entire_window": 3.867105423614148,
+        "drain_after_last_arrival_ms": 3939.298,
+        "drain_elapsed_ms": 16549.8462,
+        "fraction_time_any_request_outstanding": 0.9950050774489977,
+        "max_outstanding": 17,
+        "offered_arrivals_per_s": 4.995817707591808,
+        "outstanding_at_last_arrival": 17,
+        "submission_span_ms": 12610.5482
+      }
+    },
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 1.9191895833333332,
+      "p95_observation_delay_ms": 14.1189,
+      "receipt_sha256": "943f7d2f6ee51425acdf3e5b109791ca9f870db97df1fba7fe2607c84bd3780d",
+      "response_mean_ms": 35603.39831979167,
+      "response_p95_ms": 67587.1094,
+      "run": "bailian-coder-28-grid",
+      "source_schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574",
+      "window": {
+        "average_outstanding": 39.949136833636764,
+        "completions_per_s_in_entire_window": 1.1220596549467396,
+        "drain_after_last_arrival_ms": 70087.7086,
+        "drain_elapsed_ms": 85556.9484,
+        "fraction_time_any_request_outstanding": 1.0,
+        "max_outstanding": 79,
+        "offered_arrivals_per_s": 6.141219686826498,
+        "outstanding_at_last_arrival": 79,
+        "submission_span_ms": 15469.2398
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

@@ -1,0 +1,102 @@
+{
+  "archive_sha256": "c23d2611222413b099ecd184a64e75b89a7617b8c14d8c9d644187e1ec49a24f",
+  "final_logits_matches": 8,
+  "fixtures": {
+    "direct-handoff": {
+      "block": "direct-handoff",
+      "boundary_counts": {
+        "512": 2
+      },
+      "capacity_bytes": 69468160,
+      "catalogue_seal_sha256": "f60b8e3492298cea53618605ad1bf54f3478c58e54e1d3f3ff065270932e1b6c",
+      "device_event_counts": {
+        "carry-active-kv": 1,
+        "compute-done": 2,
+        "disk-complete": 1,
+        "exact-final-logits": 2,
+        "exact-state": 2,
+        "native-scatter": 1,
+        "native-target": 2,
+        "preserve-recurrent": 1,
+        "read-direct": 2,
+        "reserved": 1,
+        "suffix-submitted": 2,
+        "upload-ready": 2,
+        "upload-submit": 2
+      },
+      "direct_plus_scatter_requests": [],
+      "peak_prefetch_bytes": 69468160,
+      "policy": "deepest",
+      "publish_rest_on": "first-ssd",
+      "requests": 2,
+      "runtime_worker_sha256": "b7f5cf770b139e2ed5111d4caa2c90dc40de61b75f416ffdcc67d48e256cdab2",
+      "scope": "native event audit and optional correctness checks; no performance estimate"
+    },
+    "mixed-private-staged": {
+      "block": "mixed-private-staged",
+      "boundary_counts": {
+        "0": 1,
+        "512": 1,
+        "1024": 1
+      },
+      "capacity_bytes": 69468160,
+      "catalogue_seal_sha256": "fe08d0cbe50029197035c1baabce74336f38be2941bfc208ea471db0af86326b",
+      "device_event_counts": {
+        "compute-done": 3,
+        "disk-complete": 2,
+        "exact-final-logits": 3,
+        "exact-state": 3,
+        "native-scatter": 3,
+        "native-target": 3,
+        "read-direct": 2,
+        "read-staged": 2,
+        "reserved": 1,
+        "suffix-submitted": 3,
+        "upload-ready": 4,
+        "upload-submit": 4
+      },
+      "direct_plus_scatter_requests": [
+        1
+      ],
+      "peak_prefetch_bytes": 69468160,
+      "policy": "deepest",
+      "publish_rest_on": "first-compute",
+      "requests": 3,
+      "runtime_worker_sha256": "b7f5cf770b139e2ed5111d4caa2c90dc40de61b75f416ffdcc67d48e256cdab2",
+      "scope": "native event audit and optional correctness checks; no performance estimate"
+    },
+    "nonadjacent-loan": {
+      "block": "nonadjacent-loan",
+      "boundary_counts": {
+        "0": 1,
+        "512": 2
+      },
+      "capacity_bytes": 69468160,
+      "catalogue_seal_sha256": "1c2b508b572f3e47071980684e8fa43655aae8a74caea9691e9812fdfe2cb8f7",
+      "device_event_counts": {
+        "compute-done": 3,
+        "disk-complete": 1,
+        "exact-final-logits": 3,
+        "exact-state": 3,
+        "native-scatter": 2,
+        "native-target": 3,
+        "preserve-old-active": 1,
+        "preserve-recurrent": 1,
+        "read-direct": 2,
+        "reserved": 1,
+        "suffix-submitted": 3,
+        "upload-ready": 2,
+        "upload-submit": 2
+      },
+      "direct_plus_scatter_requests": [],
+      "peak_prefetch_bytes": 69468160,
+      "policy": "deepest",
+      "publish_rest_on": "first-ssd",
+      "requests": 3,
+      "runtime_worker_sha256": "b7f5cf770b139e2ed5111d4caa2c90dc40de61b75f416ffdcc67d48e256cdab2",
+      "scope": "native event audit and optional correctness checks; no performance estimate"
+    }
+  },
+  "full_state_matches": 8,
+  "scope": "event-anchored native path correctness, excluding timings"
+}

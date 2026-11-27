@@ -1,0 +1,71 @@
+{
+  "arms": [
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 67108864,
+      "mean_observation_delay_ms": 0.294015625,
+      "p95_observation_delay_ms": 1.0349,
+      "receipt_sha256": "87c6a01cc516ec49e6b9d3b643726cd3c5185356348d2fc1e5ac0bca8adbb0c6",
+      "response_mean_ms": 181.501475,
+      "response_p95_ms": 321.8179,
+      "run": "resource-64",
+      "source_schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "window": {
+        "average_outstanding": 0.6983442234308214,
+        "completions_per_s_in_entire_window": 3.847595307039909,
+        "drain_after_last_arrival_ms": 251.3364,
+        "drain_elapsed_ms": 16633.766,
+        "fraction_time_any_request_outstanding": 0.6612841493622069,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 3.845583441420679,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16382.4296
+      }
+    },
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 0.4888734375,
+      "p95_observation_delay_ms": 1.243,
+      "receipt_sha256": "9706022020224a6566b8bd6e092335a8a7c8c45bae3d7ae974a2302ad4ded05a",
+      "response_mean_ms": 195.279425,
+      "response_p95_ms": 352.9096,
+      "run": "resource-8225",
+      "source_schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "window": {
+        "average_outstanding": 0.7497733591169471,
+        "completions_per_s_in_entire_window": 3.8394897932383154,
+        "drain_after_last_arrival_ms": 273.5253,
+        "drain_elapsed_ms": 16668.8814,
+        "fraction_time_any_request_outstanding": 0.6976880884160589,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 3.842551489320808,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16395.3561
+      }
+    },
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 150994944,
+      "mean_observation_delay_ms": 0.4589734375,
+      "p95_observation_delay_ms": 1.3704,
+      "receipt_sha256": "d135e1c30cfb6167b3de8b3d6b619d61660665b4bdc9ef6acfdb6d018a446b3a",
+      "response_mean_ms": 183.90016875,
+      "response_p95_ms": 330.0026,
+      "run": "resource-144",
+      "source_schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "window": {
+        "average_outstanding": 0.707640702833469,
+        "completions_per_s_in_entire_window": 3.8479611391518587,
+        "drain_after_last_arrival_ms": 243.3977,
+        "drain_elapsed_ms": 16632.1846,
+        "fraction_time_any_request_outstanding": 0.667773769177622,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 3.8440917185883965,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16388.7869
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

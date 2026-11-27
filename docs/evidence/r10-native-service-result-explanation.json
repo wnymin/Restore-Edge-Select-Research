@@ -1,0 +1,3094 @@
+{
+  "archive_sha256": "4873f979ea9fb88254b17a15d3b6fef719e52588649a352e2c9c5b9678b482ac",
+  "by_family_profile": {
+    "bailian/mixed": {
+      "comparable_pairs": 5,
+      "entry-replay/anchor_matched_arms": 4,
+      "entry-replay/any_nonzero_candidate": 267,
+      "entry-replay/chose_zero_with_nonzero_candidate": 0,
+      "entry-replay/expected": 576,
+      "entry-replay/failed_arms": 0,
+      "entry-replay/multiple_nonzero_candidates": 108,
+      "entry-replay/same_snapshot_disagreements": 0,
+      "entry-replay/slo_success_count": 169,
+      "entry-replay/snapshots": 576,
+      "entry-replay/terminal": 576,
+      "local-cost/anchor_matched_arms": 3,
+      "local-cost/any_nonzero_candidate": 221,
+      "local-cost/chose_zero_with_nonzero_candidate": 0,
+      "local-cost/expected": 576,
+      "local-cost/failed_arms": 1,
+      "local-cost/multiple_nonzero_candidates": 101,
+      "local-cost/same_snapshot_disagreements": 0,
+      "local-cost/slo_success_count": 109,
+      "local-cost/snapshots": 480,
+      "local-cost/terminal": 480,
+      "paired_action_disagreements": 0,
+      "paired_action_requests": 480,
+      "registered_pairs": 6
+    },
+    "bailian/short": {
+      "comparable_pairs": 6,
+      "entry-replay/anchor_matched_arms": 4,
+      "entry-replay/any_nonzero_candidate": 267,
+      "entry-replay/chose_zero_with_nonzero_candidate": 0,
+      "entry-replay/expected": 576,
+      "entry-replay/failed_arms": 0,
+      "entry-replay/multiple_nonzero_candidates": 108,
+      "entry-replay/same_snapshot_disagreements": 0,
+      "entry-replay/slo_success_count": 219,
+      "entry-replay/snapshots": 576,
+      "entry-replay/terminal": 576,
+      "local-cost/anchor_matched_arms": 4,
+      "local-cost/any_nonzero_candidate": 267,
+      "local-cost/chose_zero_with_nonzero_candidate": 0,
+      "local-cost/expected": 576,
+      "local-cost/failed_arms": 0,
+      "local-cost/multiple_nonzero_candidates": 108,
+      "local-cost/same_snapshot_disagreements": 0,
+      "local-cost/slo_success_count": 219,
+      "local-cost/snapshots": 576,
+      "local-cost/terminal": 576,
+      "paired_action_disagreements": 0,
+      "paired_action_requests": 576,
+      "registered_pairs": 6
+    },
+    "oasst/mixed": {
+      "comparable_pairs": 6,
+      "entry-replay/anchor_matched_arms": 5,
+      "entry-replay/any_nonzero_candidate": 48,
+      "entry-replay/chose_zero_with_nonzero_candidate": 0,
+      "entry-replay/expected": 384,
+      "entry-replay/failed_arms": 0,
+      "entry-replay/multiple_nonzero_candidates": 3,
+      "entry-replay/same_snapshot_disagreements": 0,
+      "entry-replay/slo_success_count": 264,
+      "entry-replay/snapshots": 384,
+      "entry-replay/terminal": 384,
+      "local-cost/anchor_matched_arms": 5,
+      "local-cost/any_nonzero_candidate": 48,
+      "local-cost/chose_zero_with_nonzero_candidate": 0,
+      "local-cost/expected": 384,
+      "local-cost/failed_arms": 0,
+      "local-cost/multiple_nonzero_candidates": 3,
+      "local-cost/same_snapshot_disagreements": 0,
+      "local-cost/slo_success_count": 265,
+      "local-cost/snapshots": 384,
+      "local-cost/terminal": 384,
+      "paired_action_disagreements": 0,
+      "paired_action_requests": 384,
+      "registered_pairs": 6
+    },
+    "oasst/short": {
+      "comparable_pairs": 6,
+      "entry-replay/anchor_matched_arms": 3,
+      "entry-replay/any_nonzero_candidate": 48,
+      "entry-replay/chose_zero_with_nonzero_candidate": 0,
+      "entry-replay/expected": 384,
+      "entry-replay/failed_arms": 0,
+      "entry-replay/multiple_nonzero_candidates": 3,
+      "entry-replay/same_snapshot_disagreements": 0,
+      "entry-replay/slo_success_count": 215,
+      "entry-replay/snapshots": 384,
+      "entry-replay/terminal": 384,
+      "local-cost/anchor_matched_arms": 3,
+      "local-cost/any_nonzero_candidate": 48,
+      "local-cost/chose_zero_with_nonzero_candidate": 0,
+      "local-cost/expected": 384,
+      "local-cost/failed_arms": 0,
+      "local-cost/multiple_nonzero_candidates": 3,
+      "local-cost/same_snapshot_disagreements": 0,
+      "local-cost/slo_success_count": 215,
+      "local-cost/snapshots": 384,
+      "local-cost/terminal": 384,
+      "paired_action_disagreements": 0,
+      "paired_action_requests": 384,
+      "registered_pairs": 6
+    }
+  },
+  "cases": [
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.16415625,
+              "p50": 0.1278,
+              "p95": 0.3528
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 50331648,
+              "RAM/prefetch": 83886080,
+              "SSD/demand": 158072832,
+              "SSD/prefetch": 263454720
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 58,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 1.6291105515007425,
+            "completions_per_s_in_entire_window": 1.2909926943489953,
+            "drain_after_last_arrival_ms": 406.4267,
+            "drain_elapsed_ms": 49574.2542,
+            "fraction_time_any_request_outstanding": 0.8291755541932087,
+            "max_outstanding": 6,
+            "offered_arrivals_per_s": 1.281325679886914,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 49167.8275
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.204178125,
+              "p50": 0.1576,
+              "p95": 0.3864
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 50331648,
+              "RAM/prefetch": 83886080,
+              "SSD/demand": 158072832,
+              "SSD/prefetch": 263454720
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 58,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 1.618031909174273,
+            "completions_per_s_in_entire_window": 1.2908729948363002,
+            "drain_after_last_arrival_ms": 417.3284,
+            "drain_elapsed_ms": 49578.8511,
+            "fraction_time_any_request_outstanding": 0.8272142171523615,
+            "max_outstanding": 6,
+            "offered_arrivals_per_s": 1.281490005597406,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 49161.5227
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-02",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-02-mixed-shoulder",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2404,
+              "p50": 0.2049,
+              "p95": 0.4382
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 520093696,
+              "RAM/prefetch": 318767104,
+              "SSD/demand": 1211891712,
+              "SSD/prefetch": 1159200768
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 96,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "low"
+          ],
+          "queue_window": {
+            "average_outstanding": 0.7846438561388882,
+            "completions_per_s_in_entire_window": 0.7161172112275193,
+            "drain_after_last_arrival_ms": 1151.5372,
+            "drain_elapsed_ms": 134056.2669,
+            "fraction_time_any_request_outstanding": 0.5273548565449423,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 0.7147977368031921,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 132904.7297
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.30507083333333335,
+              "p50": 0.2432,
+              "p95": 0.5104
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 520093696,
+              "RAM/prefetch": 318767104,
+              "SSD/demand": 1211891712,
+              "SSD/prefetch": 1159200768
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 96,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "low"
+          ],
+          "queue_window": {
+            "average_outstanding": 0.7892267845150518,
+            "completions_per_s_in_entire_window": 0.7160185852797241,
+            "drain_after_last_arrival_ms": 1214.0588,
+            "drain_elapsed_ms": 134074.7321,
+            "fraction_time_any_request_outstanding": 0.5290934689102392,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 0.7150347626606526,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 132860.6733
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "36",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-90-reserved-mixed-low",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.23969270833333334,
+              "p50": 0.209,
+              "p95": 0.3821
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 402653184,
+              "RAM/prefetch": 352321536,
+              "SSD/demand": 895746048,
+              "SSD/prefetch": 1369964544
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 94,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 1.4028092500170106,
+            "completions_per_s_in_entire_window": 1.3742537150988012,
+            "drain_after_last_arrival_ms": 1184.8686,
+            "drain_elapsed_ms": 69856.0964,
+            "fraction_time_any_request_outstanding": 0.7300694202546365,
+            "max_outstanding": 5,
+            "offered_arrivals_per_s": 1.3834032540772483,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 68671.2278
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.27275520833333333,
+              "p50": 0.2185,
+              "p95": 0.4527
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 419430400,
+              "RAM/prefetch": 335544320,
+              "SSD/demand": 895746048,
+              "SSD/prefetch": 1369964544
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 94,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 1.3881758413961893,
+            "completions_per_s_in_entire_window": 1.3738247691143652,
+            "drain_after_last_arrival_ms": 1216.0796,
+            "drain_elapsed_ms": 69877.9074,
+            "fraction_time_any_request_outstanding": 0.7282409776340841,
+            "max_outstanding": 5,
+            "offered_arrivals_per_s": 1.3835926459272032,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 68661.8278
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "93/5",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-90-reserved-short-shoulder",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.27125,
+              "p50": 0.1803,
+              "p95": 0.624
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 4,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 38.67775660040951,
+            "completions_per_s_in_entire_window": 1.4917007527151522,
+            "drain_after_last_arrival_ms": 51638.3336,
+            "drain_elapsed_ms": 64356.0713,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 76,
+            "offered_arrivals_per_s": 7.469882005822466,
+            "outstanding_at_last_arrival": 76,
+            "submission_span_ms": 12717.7377
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.28024479166666666,
+              "p50": 0.2009,
+              "p95": 0.4162
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 4,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 38.609451399724094,
+            "completions_per_s_in_entire_window": 1.4924482700522959,
+            "drain_after_last_arrival_ms": 51597.1814,
+            "drain_elapsed_ms": 64323.8375,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 76,
+            "offered_arrivals_per_s": 7.464647371118954,
+            "outstanding_at_last_arrival": 76,
+            "submission_span_ms": 12726.6561
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "93/200",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-2-reserved-short-overload",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.127609375,
+              "p50": 0.1156,
+              "p95": 0.214
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 100663296,
+              "RAM/prefetch": 33554432,
+              "SSD/demand": 316145664,
+              "SSD/prefetch": 105381888
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 61,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [],
+          "queue_window": {
+            "average_outstanding": 0.9264469421941661,
+            "completions_per_s_in_entire_window": 1.292045789408302,
+            "drain_after_last_arrival_ms": 409.7659,
+            "drain_elapsed_ms": 49533.8482,
+            "fraction_time_any_request_outstanding": 0.614284514644271,
+            "max_outstanding": 5,
+            "offered_arrivals_per_s": 1.282466705744445,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 49124.0823
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.167725,
+              "p50": 0.1524,
+              "p95": 0.2847
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 100663296,
+              "RAM/prefetch": 33554432,
+              "SSD/demand": 316145664,
+              "SSD/prefetch": 105381888
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 62,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [],
+          "queue_window": {
+            "average_outstanding": 0.840871705279061,
+            "completions_per_s_in_entire_window": 1.2914685611068317,
+            "drain_after_last_arrival_ms": 410.7387,
+            "drain_elapsed_ms": 49555.9876,
+            "fraction_time_any_request_outstanding": 0.6065742073920448,
+            "max_outstanding": 5,
+            "offered_arrivals_per_s": 1.2819143540852023,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 49145.2489
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-02",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-02-short-low",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.161684375,
+              "p50": 0.1129,
+              "p95": 0.2932
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 50331648,
+              "RAM/prefetch": 100663296,
+              "SSD/demand": 158072832,
+              "SSD/prefetch": 263454720
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 57,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 1.4707641956732516,
+            "completions_per_s_in_entire_window": 1.256817770005058,
+            "drain_after_last_arrival_ms": 1796.5666,
+            "drain_elapsed_ms": 50922.259,
+            "fraction_time_any_request_outstanding": 0.8292221128681664,
+            "max_outstanding": 6,
+            "offered_arrivals_per_s": 1.2824246727563682,
+            "outstanding_at_last_arrival": 4,
+            "submission_span_ms": 49125.6924
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.19035,
+              "p50": 0.1435,
+              "p95": 0.3414
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 50331648,
+              "RAM/prefetch": 100663296,
+              "SSD/demand": 158072832,
+              "SSD/prefetch": 263454720
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 58,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 1.4720043335562425,
+            "completions_per_s_in_entire_window": 1.2558666461298458,
+            "drain_after_last_arrival_ms": 1819.226,
+            "drain_elapsed_ms": 50960.8247,
+            "fraction_time_any_request_outstanding": 0.8308049732170053,
+            "max_outstanding": 6,
+            "offered_arrivals_per_s": 1.2820095736934176,
+            "outstanding_at_last_arrival": 4,
+            "submission_span_ms": 49141.5987
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-01",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-01-mixed-shoulder",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.231209375,
+              "p50": 0.1794,
+              "p95": 0.5152
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 134217728,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 12,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 22.41479482083309,
+            "completions_per_s_in_entire_window": 1.950337258108736,
+            "drain_after_last_arrival_ms": 20513.9125,
+            "drain_elapsed_ms": 32814.8374,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 44,
+            "offered_arrivals_per_s": 5.121566102724519,
+            "outstanding_at_last_arrival": 44,
+            "submission_span_ms": 12300.9249
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2608625,
+              "p50": 0.2165,
+              "p95": 0.4622
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 134217728,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 11,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 22.366065136259692,
+            "completions_per_s_in_entire_window": 1.9591301632274702,
+            "drain_after_last_arrival_ms": 20386.9736,
+            "drain_elapsed_ms": 32667.5589,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 44,
+            "offered_arrivals_per_s": 5.130048646785589,
+            "outstanding_at_last_arrival": 44,
+            "submission_span_ms": 12280.5853
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "195",
+      "block": "oasst-service-hold-02",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-02-short-overload",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.3167125,
+              "p50": 0.2143,
+              "p95": 0.9445
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 3,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 22.110140354294565,
+            "completions_per_s_in_entire_window": 1.0800052195302254,
+            "drain_after_last_arrival_ms": 38037.6547,
+            "drain_elapsed_ms": 88888.4593,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 43,
+            "offered_arrivals_per_s": 1.8682103606281975,
+            "outstanding_at_last_arrival": 41,
+            "submission_span_ms": 50850.8046
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.34517708333333336,
+              "p50": 0.2879,
+              "p95": 0.7208
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 2,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 22.156188662819186,
+            "completions_per_s_in_entire_window": 1.0831768465298481,
+            "drain_after_last_arrival_ms": 37781.3176,
+            "drain_elapsed_ms": 88628.1869,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 43,
+            "offered_arrivals_per_s": 1.868354951009737,
+            "outstanding_at_last_arrival": 41,
+            "submission_span_ms": 50846.8693
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "93/50",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-2-reserved-mixed-low",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.22853125,
+              "p50": 0.1763,
+              "p95": 0.4946
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 134217728,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 16,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 10.113376708095489,
+            "completions_per_s_in_entire_window": 1.918571387617638,
+            "drain_after_last_arrival_ms": 7968.4097,
+            "drain_elapsed_ms": 33358.1541,
+            "fraction_time_any_request_outstanding": 0.9969892788522132,
+            "max_outstanding": 19,
+            "offered_arrivals_per_s": 2.4813168264899903,
+            "outstanding_at_last_arrival": 19,
+            "submission_span_ms": 25389.7444
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.24904375,
+              "p50": 0.2245,
+              "p95": 0.4447
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 134217728,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 16,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 10.030916400104148,
+            "completions_per_s_in_entire_window": 1.9307835516368226,
+            "drain_after_last_arrival_ms": 7751.6571,
+            "drain_elapsed_ms": 33147.1645,
+            "fraction_time_any_request_outstanding": 0.9970581978437402,
+            "max_outstanding": 19,
+            "offered_arrivals_per_s": 2.4807537415062635,
+            "outstanding_at_last_arrival": 19,
+            "submission_span_ms": 25395.5074
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-02",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-02-short-shoulder",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.257865625,
+              "p50": 0.188,
+              "p95": 0.5192
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 150994944,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 10,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 17.43192420829694,
+            "completions_per_s_in_entire_window": 2.1146272420674004,
+            "drain_after_last_arrival_ms": 17974.684,
+            "drain_elapsed_ms": 30265.3814,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 36,
+            "offered_arrivals_per_s": 5.125827929015648,
+            "outstanding_at_last_arrival": 36,
+            "submission_span_ms": 12290.6974
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2803359375,
+              "p50": 0.2613,
+              "p95": 0.5206
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 150994944,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 10,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 17.442971005633048,
+            "completions_per_s_in_entire_window": 2.113065603981322,
+            "drain_after_last_arrival_ms": 17985.3974,
+            "drain_elapsed_ms": 30287.7487,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 36,
+            "offered_arrivals_per_s": 5.12097228112808,
+            "outstanding_at_last_arrival": 36,
+            "submission_span_ms": 12302.3513
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "195",
+      "block": "oasst-service-hold-01",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-01-short-overload",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.5479666666666667,
+              "p50": 0.3389,
+              "p95": 1.5454
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 201326592,
+              "RAM/prefetch": 318767104,
+              "SSD/demand": 263454720,
+              "SSD/prefetch": 1264582656
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 12,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 18.275046728175738,
+            "completions_per_s_in_entire_window": 1.771455260405501,
+            "drain_after_last_arrival_ms": 20971.226,
+            "drain_elapsed_ms": 54192.7319,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 36,
+            "offered_arrivals_per_s": 2.8595934298089722,
+            "outstanding_at_last_arrival": 36,
+            "submission_span_ms": 33221.5059
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.3775177083333333,
+              "p50": 0.3136,
+              "p95": 0.691
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 201326592,
+              "RAM/prefetch": 318767104,
+              "SSD/demand": 263454720,
+              "SSD/prefetch": 1264582656
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 12,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 18.25980546871647,
+            "completions_per_s_in_entire_window": 1.7737481537291044,
+            "drain_after_last_arrival_ms": 20901.1933,
+            "drain_elapsed_ms": 54122.6779,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 36,
+            "offered_arrivals_per_s": 2.859595263241186,
+            "outstanding_at_last_arrival": 36,
+            "submission_span_ms": 33221.4846
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "9",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-90-reserved-short-overload",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2454171875,
+              "p50": 0.1828,
+              "p95": 0.5564
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 134217728,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 10,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 16.273042491665816,
+            "completions_per_s_in_entire_window": 1.4170734841080035,
+            "drain_after_last_arrival_ms": 19752.352,
+            "drain_elapsed_ms": 45163.5012,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 32,
+            "offered_arrivals_per_s": 2.4792267167515587,
+            "outstanding_at_last_arrival": 32,
+            "submission_span_ms": 25411.1492
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.278190625,
+              "p50": 0.2371,
+              "p95": 0.4753
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 134217728,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 10,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 16.456222382148404,
+            "completions_per_s_in_entire_window": 1.4074051236319638,
+            "drain_after_last_arrival_ms": 20080.4343,
+            "drain_elapsed_ms": 45473.758,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 32,
+            "offered_arrivals_per_s": 2.480967074034503,
+            "outstanding_at_last_arrival": 32,
+            "submission_span_ms": 25393.3237
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-02",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-02-mixed-overload",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.417215625,
+              "p50": 0.2646,
+              "p95": 0.9866
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 4,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 30.776522591173737,
+            "completions_per_s_in_entire_window": 1.3481543278545727,
+            "drain_after_last_arrival_ms": 44911.5327,
+            "drain_elapsed_ms": 71208.4648,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 60,
+            "offered_arrivals_per_s": 3.6125887095399998,
+            "outstanding_at_last_arrival": 60,
+            "submission_span_ms": 26296.9321
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.45144687499999997,
+              "p50": 0.3326,
+              "p95": 1.0711
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 4,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 30.757543387574003,
+            "completions_per_s_in_entire_window": 1.3476405101444862,
+            "drain_after_last_arrival_ms": 44954.9507,
+            "drain_elapsed_ms": 71235.6146,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 60,
+            "offered_arrivals_per_s": 3.614824966427123,
+            "outstanding_at_last_arrival": 60,
+            "submission_span_ms": 26280.6639
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "961/1000",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-2-reserved-short-shoulder",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.171696875,
+              "p50": 0.1299,
+              "p95": 0.3968
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 687865856,
+              "RAM/prefetch": 201326592,
+              "SSD/demand": 1738801152,
+              "SSD/prefetch": 684982272
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 96,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "low"
+          ],
+          "queue_window": {
+            "average_outstanding": 0.5806752229623175,
+            "completions_per_s_in_entire_window": 0.7155972261668484,
+            "drain_after_last_arrival_ms": 1267.4804,
+            "drain_elapsed_ms": 134153.6782,
+            "fraction_time_any_request_outstanding": 0.4319778181080092,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 0.7148974202947659,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 132886.1978
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2560104166666667,
+              "p50": 0.2131,
+              "p95": 0.4866
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 687865856,
+              "RAM/prefetch": 201326592,
+              "SSD/demand": 1738801152,
+              "SSD/prefetch": 684982272
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 96,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "low"
+          ],
+          "queue_window": {
+            "average_outstanding": 0.5783184126294802,
+            "completions_per_s_in_entire_window": 0.7156816550814593,
+            "drain_after_last_arrival_ms": 1248.9209,
+            "drain_elapsed_ms": 134137.8521,
+            "fraction_time_any_request_outstanding": 0.43141318273725365,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 0.7148827155289815,
+            "outstanding_at_last_arrival": 2,
+            "submission_span_ms": 132888.9312
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "36",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-90-reserved-short-low",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2757604166666667,
+              "p50": 0.1479,
+              "p95": 0.7196
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 9,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 11.975292673059936,
+            "completions_per_s_in_entire_window": 1.4901367314229228,
+            "drain_after_last_arrival_ms": 13560.2898,
+            "drain_elapsed_ms": 64423.6183,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 20,
+            "offered_arrivals_per_s": 1.8677503577061418,
+            "outstanding_at_last_arrival": 19,
+            "submission_span_ms": 50863.3285
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.261884375,
+              "p50": 0.2257,
+              "p95": 0.6219
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 9,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 12.114610774894361,
+            "completions_per_s_in_entire_window": 1.4855503373725825,
+            "drain_after_last_arrival_ms": 13792.0012,
+            "drain_elapsed_ms": 64622.5157,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 21,
+            "offered_arrivals_per_s": 1.8689560972277783,
+            "outstanding_at_last_arrival": 20,
+            "submission_span_ms": 50830.5145
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "93/50",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-2-reserved-short-low",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.238840625,
+              "p50": 0.1501,
+              "p95": 0.6556
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 3,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 33.48767335851783,
+            "completions_per_s_in_entire_window": 1.1803278577264178,
+            "drain_after_last_arrival_ms": 55060.2263,
+            "drain_elapsed_ms": 81333.3341,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 64,
+            "offered_arrivals_per_s": 3.6158645837855543,
+            "outstanding_at_last_arrival": 64,
+            "submission_span_ms": 26273.1078
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.257665625,
+              "p50": 0.2324,
+              "p95": 0.4594
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 3,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 33.52030770303129,
+            "completions_per_s_in_entire_window": 1.1752302004496746,
+            "drain_after_last_arrival_ms": 55407.1382,
+            "drain_elapsed_ms": 81686.1241,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 64,
+            "offered_arrivals_per_s": 3.6150557849342277,
+            "outstanding_at_last_arrival": 64,
+            "submission_span_ms": 26278.9859
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "961/1000",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-2-reserved-mixed-shoulder",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.177134375,
+              "p50": 0.1759,
+              "p95": 0.2937
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 150994944,
+              "SSD/demand": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 64,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "low"
+          ],
+          "queue_window": {
+            "average_outstanding": 0.5925915025089249,
+            "completions_per_s_in_entire_window": 0.864105957968725,
+            "drain_after_last_arrival_ms": 328.8752,
+            "drain_elapsed_ms": 74064.991,
+            "fraction_time_any_request_outstanding": 0.5318521972142007,
+            "max_outstanding": 3,
+            "offered_arrivals_per_s": 0.8543981374185702,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 73736.1158
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2626203125,
+              "p50": 0.249,
+              "p95": 0.4587
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 150994944,
+              "SSD/demand": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 64,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "low"
+          ],
+          "queue_window": {
+            "average_outstanding": 0.5885426542186247,
+            "completions_per_s_in_entire_window": 0.8643867013268626,
+            "drain_after_last_arrival_ms": 329.5423,
+            "drain_elapsed_ms": 74040.9355,
+            "fraction_time_any_request_outstanding": 0.5298997133822005,
+            "max_outstanding": 3,
+            "offered_arrivals_per_s": 0.8546847002208066,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 73711.3932
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "1170",
+      "block": "oasst-service-hold-01",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-01-mixed-low",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.19430624999999999,
+              "p50": 0.1824,
+              "p95": 0.3344
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 100663296,
+              "RAM/prefetch": 33554432,
+              "SSD/demand": 316145664,
+              "SSD/prefetch": 105381888
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 62,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [],
+          "queue_window": {
+            "average_outstanding": 0.6637565076450329,
+            "completions_per_s_in_entire_window": 0.8633329179353041,
+            "drain_after_last_arrival_ms": 417.8024,
+            "drain_elapsed_ms": 74131.3098,
+            "fraction_time_any_request_outstanding": 0.5603070202329002,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 0.8546601867434679,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 73713.5074
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2546953125,
+              "p50": 0.2451,
+              "p95": 0.3991
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 8
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 0,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 100663296,
+              "RAM/prefetch": 33554432,
+              "SSD/demand": 316145664,
+              "SSD/prefetch": 105381888
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 62,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [],
+          "queue_window": {
+            "average_outstanding": 0.6650414999266647,
+            "completions_per_s_in_entire_window": 0.8633076398771101,
+            "drain_after_last_arrival_ms": 417.5715,
+            "drain_elapsed_ms": 74133.4804,
+            "fraction_time_any_request_outstanding": 0.5622144134487446,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 0.8546323438196121,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 73715.9089
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "1170",
+      "block": "oasst-service-hold-02",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-02-mixed-low",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2858125,
+              "p50": 0.1916,
+              "p95": 0.8428
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 268435456,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 421527552,
+              "SSD/prefetch": 1317273600
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 59,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 3.6907445436124506,
+            "completions_per_s_in_entire_window": 1.3444059786086775,
+            "drain_after_last_arrival_ms": 2765.6808,
+            "drain_elapsed_ms": 71407.0017,
+            "fraction_time_any_request_outstanding": 0.9489626897469916,
+            "max_outstanding": 8,
+            "offered_arrivals_per_s": 1.3840060003856949,
+            "outstanding_at_last_arrival": 5,
+            "submission_span_ms": 68641.3209
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "client": {
+            "expected": 96,
+            "slo_success_count": 0,
+            "statuses": {
+              "unobserved": 96
+            },
+            "terminal": 0,
+            "without_visible_output": null
+          },
+          "return_code": 1
+        }
+      },
+      "arrival_scale": "93/5",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "comparable_performance": false,
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-90-reserved-mixed-shoulder",
+      "long_tokens": 64,
+      "paired_actions": null,
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.24732083333333332,
+              "p50": 0.1758,
+              "p95": 0.6803
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 3,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 41.15710877010878,
+            "completions_per_s_in_entire_window": 1.1718395587195962,
+            "drain_after_last_arrival_ms": 69203.3886,
+            "drain_elapsed_ms": 81922.4776,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 81,
+            "offered_arrivals_per_s": 7.469088391472062,
+            "outstanding_at_last_arrival": 81,
+            "submission_span_ms": 12719.089
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.27712708333333336,
+              "p50": 0.2451,
+              "p95": 0.5027
+            },
+            "chosen_boundary_counts": {
+              "0": 53,
+              "512": 14,
+              "1024": 2,
+              "1536": 27
+            },
+            "counts": {
+              "any_nonzero_candidate": 43,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 29,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 1358954496,
+              "RAM/prefetch": 301989888,
+              "SSD/demand": 1422655488,
+              "SSD/prefetch": 843055104
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 3,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 41.194809024787524,
+            "completions_per_s_in_entire_window": 1.1707127503367085,
+            "drain_after_last_arrival_ms": 69267.0498,
+            "drain_elapsed_ms": 82001.3278,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 81,
+            "offered_arrivals_per_s": 7.460179524901215,
+            "outstanding_at_last_arrival": 81,
+            "submission_span_ms": 12734.278
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "93/200",
+      "block": "qwen_thinking_blksz_16-2-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-2-reserved-mixed-overload",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.14365624999999999,
+              "p50": 0.1153,
+              "p95": 0.3774
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 150994944,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 13,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 11.16900123035514,
+            "completions_per_s_in_entire_window": 1.617631217783263,
+            "drain_after_last_arrival_ms": 14171.3047,
+            "drain_elapsed_ms": 39564.0238,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 21,
+            "offered_arrivals_per_s": 2.4810261457978324,
+            "outstanding_at_last_arrival": 20,
+            "submission_span_ms": 25392.7191
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.166109375,
+              "p50": 0.1445,
+              "p95": 0.3338
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/prefetch": 150994944,
+              "SSD/prefetch": 421527552
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 13,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 11.063488187653453,
+            "completions_per_s_in_entire_window": 1.6366663466387257,
+            "drain_after_last_arrival_ms": 13712.268,
+            "drain_elapsed_ms": 39103.8773,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 21,
+            "offered_arrivals_per_s": 2.4811345848803685,
+            "outstanding_at_last_arrival": 20,
+            "submission_span_ms": 25391.6093
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-01",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-01-mixed-overload",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "shoulder",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.16148125,
+              "p50": 0.1168,
+              "p95": 0.422
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 33554432,
+              "RAM/prefetch": 117440512,
+              "SSD/demand": 105381888,
+              "SSD/prefetch": 316145664
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 52,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 2.160789903672901,
+            "completions_per_s_in_entire_window": 2.2730893768336484,
+            "drain_after_last_arrival_ms": 2778.6427,
+            "drain_elapsed_ms": 28155.5141,
+            "fraction_time_any_request_outstanding": 0.9814910358891298,
+            "max_outstanding": 8,
+            "offered_arrivals_per_s": 2.4825755313556894,
+            "outstanding_at_last_arrival": 7,
+            "submission_span_ms": 25376.8714
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.2048,
+              "p50": 0.1722,
+              "p95": 0.3295
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 50331648,
+              "RAM/prefetch": 100663296,
+              "SSD/demand": 158072832,
+              "SSD/prefetch": 263454720
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 52,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "shoulder"
+          ],
+          "queue_window": {
+            "average_outstanding": 2.119572166429367,
+            "completions_per_s_in_entire_window": 2.2680422673774476,
+            "drain_after_last_arrival_ms": 2824.8291,
+            "drain_elapsed_ms": 28218.169,
+            "fraction_time_any_request_outstanding": 0.975754206447626,
+            "max_outstanding": 8,
+            "offered_arrivals_per_s": 2.48096549127041,
+            "outstanding_at_last_arrival": 8,
+            "submission_span_ms": 25393.3399
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "403",
+      "block": "oasst-service-hold-01",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-01-short-shoulder",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "low",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.195734375,
+              "p50": 0.1845,
+              "p95": 0.2786
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 134217728,
+              "RAM/prefetch": 16777216,
+              "SSD/demand": 368836608,
+              "SSD/prefetch": 52690944
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 64,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [],
+          "queue_window": {
+            "average_outstanding": 0.6695151915522409,
+            "completions_per_s_in_entire_window": 1.2939538743615429,
+            "drain_after_last_arrival_ms": 326.7363,
+            "drain_elapsed_ms": 49460.8048,
+            "fraction_time_any_request_outstanding": 0.5620154284266721,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 1.2822060522018444,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 49134.0685
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.26751875,
+              "p50": 0.2601,
+              "p95": 0.4398
+            },
+            "chosen_boundary_counts": {
+              "0": 56,
+              "512": 7,
+              "1024": 1
+            },
+            "counts": {
+              "any_nonzero_candidate": 8,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 1,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 64
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 134217728,
+              "RAM/prefetch": 16777216,
+              "SSD/demand": 368836608,
+              "SSD/prefetch": 52690944
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 64,
+            "slo_success_count": 64,
+            "statuses": {
+              "terminal": 64
+            },
+            "terminal": 64,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [],
+          "queue_window": {
+            "average_outstanding": 0.6733866184433683,
+            "completions_per_s_in_entire_window": 1.2934335412616,
+            "drain_after_last_arrival_ms": 329.8517,
+            "drain_elapsed_ms": 49480.7023,
+            "fraction_time_any_request_outstanding": 0.5650856616883548,
+            "max_outstanding": 4,
+            "offered_arrivals_per_s": 1.2817682548916052,
+            "outstanding_at_last_arrival": 1,
+            "submission_span_ms": 49150.8506
+          },
+          "registered_anchor_observed": false,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "780",
+      "block": "oasst-service-hold-01",
+      "comparable_performance": true,
+      "family": "oasst",
+      "id": "oasst-service-hold-01-short-low",
+      "long_tokens": 0,
+      "paired_actions": {
+        "differences": [],
+        "requests": 64
+      },
+      "profile": "short",
+      "short_tokens": 16
+    },
+    {
+      "anchor": "overload",
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "arms": {
+        "entry-replay": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.30751875,
+              "p50": 0.1882,
+              "p95": 0.686
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 201326592,
+              "RAM/prefetch": 318767104,
+              "SSD/demand": 263454720,
+              "SSD/prefetch": 1264582656
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 5,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 24.595112664072495,
+            "completions_per_s_in_entire_window": 1.4253188043975706,
+            "drain_after_last_arrival_ms": 34127.369,
+            "drain_elapsed_ms": 67353.3526,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 48,
+            "offered_arrivals_per_s": 2.8592080566728506,
+            "outstanding_at_last_arrival": 48,
+            "submission_span_ms": 33225.9836
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        },
+        "local-cost": {
+          "action": {
+            "chooser_called_after_snapshot_ms": {
+              "mean": 0.21727395833333332,
+              "p50": 0.1984,
+              "p95": 0.4179
+            },
+            "chosen_boundary_counts": {
+              "0": 50,
+              "512": 39,
+              "1024": 4,
+              "1536": 3
+            },
+            "counts": {
+              "any_nonzero_candidate": 46,
+              "chose_zero_with_nonzero_candidate": 0,
+              "multiple_nonzero_candidates": 7,
+              "same_snapshot_disagreements": 0,
+              "snapshots": 96
+            },
+            "logical_uploaded_bytes_by_tier_and_trigger": {
+              "RAM/demand": 201326592,
+              "RAM/prefetch": 318767104,
+              "SSD/demand": 263454720,
+              "SSD/prefetch": 1264582656
+            },
+            "same_snapshot_disagreements": []
+          },
+          "client": {
+            "expected": 96,
+            "slo_success_count": 5,
+            "statuses": {
+              "terminal": 96
+            },
+            "terminal": 96,
+            "without_visible_output": 0
+          },
+          "observed_load_matches": [
+            "overload"
+          ],
+          "queue_window": {
+            "average_outstanding": 24.48972059571464,
+            "completions_per_s_in_entire_window": 1.432382091420286,
+            "drain_after_last_arrival_ms": 33797.061,
+            "drain_elapsed_ms": 67021.2233,
+            "fraction_time_any_request_outstanding": 1.0,
+            "max_outstanding": 48,
+            "offered_arrivals_per_s": 2.8593647942780485,
+            "outstanding_at_last_arrival": 48,
+            "submission_span_ms": 33224.1623
+          },
+          "registered_anchor_observed": true,
+          "return_code": 0
+        }
+      },
+      "arrival_scale": "9",
+      "block": "qwen_traceB_blksz_16-90-reserved",
+      "comparable_performance": true,
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-90-reserved-mixed-overload",
+      "long_tokens": 64,
+      "paired_actions": {
+        "differences": [],
+        "requests": 96
+      },
+      "profile": "mixed",
+      "short_tokens": 16
+    }
+  ],
+  "delivery_sha256": "2a00ecf535aa23d36c5d1201ded051f38a3b6491f67aea48483fe94992c09397",
+  "lock_sha256": "9765edd49f1f4d3c658509c358df1417589cf8e4807a6bdab12cd4c132e2eca8",
+  "scope": "descriptive load-label check and same-snapshot chooser replay, not a performance gate",
+  "summary_sha256": "d1b6e4f0ec7eabb0f304fcbcc2a1f24de2b430632183293f44954880a7e0ac05"
+}

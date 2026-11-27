@@ -6,3 +6,29 @@
 
 .gitattributes text eol=lf
 .gitignore text eol=lf
+
+# Preserve the recorded bytes of SHA-256-pinned R10 artifacts.
+docs/evidence/r10-bailian-inputs.json -text whitespace=cr-at-eol
+docs/evidence/r10-device-witness-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-head-demand-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-live-fifo-audit.json -text whitespace=cr-at-eol
+docs/evidence/r10-live-fifo-control-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-live-fifo-native-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-native-kv-borrow-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-native-service-batch-contract-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-native-service-calibration-extended-01-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-native-service-calibration-v1-summary.json -text whitespace=cr-at-eol
+docs/evidence/r10-native-service-first-pair-audit.json -text whitespace=cr-at-eol
+docs/evidence/r10-native-service-holdout-curves.svg -text whitespace=cr-at-eol
+docs/evidence/r10-native-service-holdout-summary.json -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_catalog.h -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_catalog_ledger.h -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_catalog_source.h -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_catalog_target.h -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_catalog_transfer.h -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_catalog_witness.h -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_catalog_worker.cpp -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_stage_pool.h -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_stage_pool_probe.cpp -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_two_sequence_staged_probe.cpp -text whitespace=cr-at-eol
+scripts/gpu/experiments/r10_vk_trace_abi.h -text whitespace=cr-at-eol

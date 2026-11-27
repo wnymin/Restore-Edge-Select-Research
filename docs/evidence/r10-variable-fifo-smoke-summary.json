@@ -1,0 +1,29 @@
+{
+  "archive_sha256": "c6bb25afe222e633341e6ea327ffb3d153cac8e377c87e61f8b9ad7211c2b83a",
+  "block": "qwen_traceB_blksz_16-208-pilot",
+  "boundary_counts": {
+    "0": 64,
+    "512": 31,
+    "1024": 1
+  },
+  "capacity_bytes": 83886080,
+  "device_event_counts": {
+    "compute-done": 96,
+    "disk-complete": 19,
+    "native-scatter": 62,
+    "native-target": 96,
+    "preserve-old-active": 4,
+    "read-direct": 3,
+    "read-staged": 32,
+    "reserved": 31,
+    "suffix-submitted": 96,
+    "upload-ready": 35,
+    "upload-submit": 35
+  },
+  "direct_plus_scatter_requests": [],
+  "peak_prefetch_bytes": 69468160,
+  "policy": "deepest",
+  "requests": 96,
+  "runtime_worker_sha256": "12bd205d2c5ac371c08558de5ddc538a3b3ddff2d98bd73a68e2f7fa7d3c25f0",
+  "scope": "native event diagnostic with forced deepest/local chooser; no performance or final-state comparison"
+}

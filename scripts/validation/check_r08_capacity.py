@@ -14,6 +14,7 @@ from scripts.cpu.replay.study_r08_native import CFG as NATIVE, make_costs, model
 from scripts.cpu.replay.study_r08_replacement import AMENDMENT, corrected_config
 
 from scripts.gpu.bench.measure_r08_paths import SIZES
+from scripts.validation.archive_source import source_matches
 
 E=ROOT/'docs/evidence'
 MAIN='entry-replay'
@@ -32,15 +33,6 @@ def opt(row):
 
 
 def ident(k): return tuple(sorted(k.items()))
-
-
-def source_matches(path, expected):
-    # The Windows shell wrote a CRLF terminator on some initial source files;
-    # .gitattributes normalizes checked-out sources to LF. Keep measured hashes.
-    actual=path.read_bytes(); lf=actual.replace(b'\r\n',b'\n')
-    variants={actual,lf,lf.replace(b'\n',b'\r\n')}
-    if lf.endswith(b'\n'): variants.add(lf[:-1]+b'\r\n')
-    return any(sha256(v).hexdigest()==expected for v in variants)
 
 
 def check_row(r,cfg):
@@ -216,7 +208,7 @@ def read_and_check():
         data[k]=json.loads(content) if k in WAVE else arrange(content)
         if m:=x['manifest']:
             assert m['output_sha256']==x['content_sha256']
-            for n,h in m.get('files',m.get('sources',{})).items():assert source_matches(ROOT/n,h),n
+            for n,h in m.get('files',m.get('sources',{})).items():assert source_matches(ROOT/n,h,historical=True),n
     assert met['timed']['manifest']['input_sha256']==met['holdout']['content_sha256']
     assert met['replacement-timed']['manifest']['input_sha256']==met['replacement']['content_sha256']
     assert met['native-timed']['manifest']['timed_from_sha256']==met['native']['content_sha256']

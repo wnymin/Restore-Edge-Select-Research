@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 976 649">
+<title id="title">R10：额外一次 SSD 路径等待如何改变排序</title>
+<desc id="desc">同一输入、同一执行器的无延迟和有延迟配对。每臂有前驱、目标、后继三行；图中展示 SSD 读取、人工等待、上传就绪和实际续算。</desc>
+<rect width="976" height="649" fill="white"/>
+<g fill="#16253a" font-family="Segoe UI, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="24" y="34" font-size="22" font-weight="700">共享前缀，暂存 82.25 MiB：原生路径与受控 SSD 等待</text>
+<rect x="18" y="64" width="940" height="119" rx="5" fill="#f4f7fa"/>
+<text x="34" y="88" font-size="15" font-weight="600">原生搬运  ·  目标边界 512 token</text>
+<path d="M160.0 96 v76" stroke="#d2dce7"/>
+<path d="M246.89 96 v76" stroke="#d2dce7"/>
+<path d="M333.78 96 v76" stroke="#d2dce7"/>
+<path d="M420.67 96 v76" stroke="#d2dce7"/>
+<path d="M507.56 96 v76" stroke="#d2dce7"/>
+<path d="M594.44 96 v76" stroke="#d2dce7"/>
+<path d="M681.33 96 v76" stroke="#d2dce7"/>
+<path d="M768.22 96 v76" stroke="#d2dce7"/>
+<path d="M855.11 96 v76" stroke="#d2dce7"/>
+<path d="M942.0 96 v76" stroke="#d2dce7"/>
+<text x="37" y="115" font-size="14" >前驱</text>
+<path d="M160.0 110 H334.21" stroke="#185e9f" stroke-width="8"/>
+<text x="37" y="141" font-size="14" >目标</text>
+<path d="M346.89 136 H513.71" stroke="#185e9f" stroke-width="8"/>
+<path d="M161.94 127 v18" stroke="#087b62" stroke-width="2.5"/>
+<path d="M165.13 132 H176.5" stroke="#4c5261" stroke-width="4"/>
+<path d="M178.75 127 v18" stroke="#087b62" stroke-width="2.5"/>
+<text x="37" y="167" font-size="14" >后继</text>
+<path d="M529.39 162 H551.55" stroke="#185e9f" stroke-width="8"/>
+<rect x="18" y="194" width="940" height="119" rx="5" fill="#f4f7fa"/>
+<text x="34" y="218" font-size="15" font-weight="600">原生搬运  ·  目标边界 1,024 token</text>
+<path d="M160.0 226 v76" stroke="#d2dce7"/>
+<path d="M246.89 226 v76" stroke="#d2dce7"/>
+<path d="M333.78 226 v76" stroke="#d2dce7"/>
+<path d="M420.67 226 v76" stroke="#d2dce7"/>
+<path d="M507.56 226 v76" stroke="#d2dce7"/>
+<path d="M594.44 226 v76" stroke="#d2dce7"/>
+<path d="M681.33 226 v76" stroke="#d2dce7"/>
+<path d="M768.22 226 v76" stroke="#d2dce7"/>
+<path d="M855.11 226 v76" stroke="#d2dce7"/>
+<path d="M942.0 226 v76" stroke="#d2dce7"/>
+<text x="37" y="245" font-size="14" >前驱</text>
+<path d="M160.0 240 H332.1" stroke="#185e9f" stroke-width="8"/>
+<text x="37" y="271" font-size="14" >目标</text>
+<path d="M349.25 266 H380.62" stroke="#185e9f" stroke-width="8"/>
+<path d="M162.8 257 v18" stroke="#087b62" stroke-width="2.5"/>
+<path d="M164.56 257 v18" stroke="#087b62" stroke-width="2.5"/>
+<path d="M167.45 262 H178.7" stroke="#4c5261" stroke-width="4"/>
+<path d="M181.14 257 v18" stroke="#087b62" stroke-width="2.5"/>
+<text x="37" y="297" font-size="14" >后继</text>
+<path d="M395.11 292 H421.11" stroke="#185e9f" stroke-width="8"/>
+<path d="M352.54 288 H361.16" stroke="#4c5261" stroke-width="4"/>
+<path d="M363.67 283 v18" stroke="#087b62" stroke-width="2.5"/>
+<rect x="18" y="324" width="940" height="119" rx="5" fill="#f4f7fa"/>
+<text x="34" y="348" font-size="15" font-weight="600">读盘后人为等待 700 ms  ·  目标边界 512 token</text>
+<path d="M160.0 356 v76" stroke="#d2dce7"/>
+<path d="M246.89 356 v76" stroke="#d2dce7"/>
+<path d="M333.78 356 v76" stroke="#d2dce7"/>
+<path d="M420.67 356 v76" stroke="#d2dce7"/>
+<path d="M507.56 356 v76" stroke="#d2dce7"/>
+<path d="M594.44 356 v76" stroke="#d2dce7"/>
+<path d="M681.33 356 v76" stroke="#d2dce7"/>
+<path d="M768.22 356 v76" stroke="#d2dce7"/>
+<path d="M855.11 356 v76" stroke="#d2dce7"/>
+<path d="M942.0 356 v76" stroke="#d2dce7"/>
+<text x="37" y="375" font-size="14" >前驱</text>
+<path d="M160.0 370 H320.64" stroke="#185e9f" stroke-width="8"/>
+<text x="37" y="401" font-size="14" >目标</text>
+<path d="M505.74 396 H649.06" stroke="#185e9f" stroke-width="8"/>
+<path d="M163.13 387 v18" stroke="#087b62" stroke-width="2.5"/>
+<path d="M163.24 392 H182.77" stroke="#4c5261" stroke-width="4"/>
+<path d="M186.33 392 H490.89" stroke="#bd580a" stroke-width="4"/>
+<path d="M493.49 387 v18" stroke="#087b62" stroke-width="2.5"/>
+<text x="37" y="427" font-size="14" >后继</text>
+<path d="M663.74 422 H685.74" stroke="#185e9f" stroke-width="8"/>
+<rect x="18" y="454" width="940" height="119" rx="5" fill="#f4f7fa"/>
+<text x="34" y="478" font-size="15" font-weight="600">读盘后人为等待 700 ms  ·  目标边界 1,024 token</text>
+<path d="M160.0 486 v76" stroke="#d2dce7"/>
+<path d="M246.89 486 v76" stroke="#d2dce7"/>
+<path d="M333.78 486 v76" stroke="#d2dce7"/>
+<path d="M420.67 486 v76" stroke="#d2dce7"/>
+<path d="M507.56 486 v76" stroke="#d2dce7"/>
+<path d="M594.44 486 v76" stroke="#d2dce7"/>
+<path d="M681.33 486 v76" stroke="#d2dce7"/>
+<path d="M768.22 486 v76" stroke="#d2dce7"/>
+<path d="M855.11 486 v76" stroke="#d2dce7"/>
+<path d="M942.0 486 v76" stroke="#d2dce7"/>
+<text x="37" y="505" font-size="14" >前驱</text>
+<path d="M160.0 500 H368.45" stroke="#185e9f" stroke-width="8"/>
+<text x="37" y="531" font-size="14" >目标</text>
+<path d="M501.99 526 H522.5" stroke="#185e9f" stroke-width="8"/>
+<path d="M162.45 517 v18" stroke="#087b62" stroke-width="2.5"/>
+<path d="M164.18 517 v18" stroke="#087b62" stroke-width="2.5"/>
+<path d="M164.34 522 H176.98" stroke="#4c5261" stroke-width="4"/>
+<path d="M179.77 522 H483.95" stroke="#bd580a" stroke-width="4"/>
+<path d="M486.47 517 v18" stroke="#087b62" stroke-width="2.5"/>
+<text x="37" y="557" font-size="14" >后继</text>
+<path d="M834.37 552 H861.19" stroke="#185e9f" stroke-width="8"/>
+<path d="M502.51 548 H510.81" stroke="#4c5261" stroke-width="4"/>
+<path d="M513.55 548 H817.84" stroke="#bd580a" stroke-width="4"/>
+<path d="M819.75 543 v18" stroke="#087b62" stroke-width="2.5"/>
+<text x="160.0" y="594" font-size="12" text-anchor="middle">0</text>
+<text x="246.89" y="594" font-size="12" text-anchor="middle">200</text>
+<text x="333.78" y="594" font-size="12" text-anchor="middle">400</text>
+<text x="420.67" y="594" font-size="12" text-anchor="middle">600</text>
+<text x="507.56" y="594" font-size="12" text-anchor="middle">800</text>
+<text x="594.44" y="594" font-size="12" text-anchor="middle">1000</text>
+<text x="681.33" y="594" font-size="12" text-anchor="middle">1200</text>
+<text x="768.22" y="594" font-size="12" text-anchor="middle">1400</text>
+<text x="855.11" y="594" font-size="12" text-anchor="middle">1600</text>
+<text x="942.0" y="594" font-size="12" text-anchor="middle">1800</text>
+<text x="160" y="617" font-size="13" >相对前驱首个计算信号提交的设备事件时间（ms）</text>
+<text x="24" y="639" font-size="13" fill="#185e9f">━ 续算</text>
+<text x="143" y="639" font-size="13" fill="#4c5261">━ SSD 读盘</text>
+<text x="275" y="639" font-size="13" fill="#bd580a">━ 人为等待</text>
+<text x="407" y="639" font-size="13" fill="#087b62">│ 上传就绪</text>
+</g></svg>

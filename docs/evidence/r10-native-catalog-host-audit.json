@@ -1,0 +1,213 @@
+{
+  "checked_blocks": {
+    "oasst-cal-01": {
+      "candidates": 72,
+      "checkpoints": 8,
+      "objects": 16,
+      "requests": 64,
+      "shared_object_ids": 0,
+      "tokens": 24572
+    },
+    "oasst-cal-02": {
+      "candidates": 72,
+      "checkpoints": 8,
+      "objects": 16,
+      "requests": 64,
+      "shared_object_ids": 0,
+      "tokens": 25291
+    },
+    "oasst-cal-03": {
+      "candidates": 73,
+      "checkpoints": 9,
+      "objects": 18,
+      "requests": 64,
+      "shared_object_ids": 1,
+      "tokens": 29297
+    },
+    "oasst-cal-04": {
+      "candidates": 73,
+      "checkpoints": 9,
+      "objects": 18,
+      "requests": 64,
+      "shared_object_ids": 1,
+      "tokens": 30336
+    },
+    "oasst-hold-01": {
+      "candidates": 73,
+      "checkpoints": 9,
+      "objects": 18,
+      "requests": 64,
+      "shared_object_ids": 1,
+      "tokens": 29498
+    },
+    "oasst-hold-02": {
+      "candidates": 73,
+      "checkpoints": 9,
+      "objects": 18,
+      "requests": 64,
+      "shared_object_ids": 1,
+      "tokens": 30494
+    },
+    "oasst-hold-03": {
+      "candidates": 72,
+      "checkpoints": 8,
+      "objects": 16,
+      "requests": 64,
+      "shared_object_ids": 0,
+      "tokens": 26540
+    },
+    "oasst-hold-04": {
+      "candidates": 72,
+      "checkpoints": 8,
+      "objects": 16,
+      "requests": 64,
+      "shared_object_ids": 0,
+      "tokens": 31984
+    },
+    "oasst-hold-05": {
+      "candidates": 72,
+      "checkpoints": 8,
+      "objects": 16,
+      "requests": 64,
+      "shared_object_ids": 0,
+      "tokens": 26767
+    },
+    "oasst-hold-06": {
+      "candidates": 73,
+      "checkpoints": 9,
+      "objects": 18,
+      "requests": 64,
+      "shared_object_ids": 1,
+      "tokens": 30001
+    },
+    "qwen_coder_blksz_16-28-pilot": {
+      "candidates": 204,
+      "checkpoints": 28,
+      "objects": 56,
+      "requests": 96,
+      "shared_object_ids": 35,
+      "tokens": 198649
+    },
+    "qwen_coder_blksz_16-46-reserved": {
+      "candidates": 172,
+      "checkpoints": 24,
+      "objects": 48,
+      "requests": 96,
+      "shared_object_ids": 28,
+      "tokens": 190708
+    },
+    "qwen_coder_blksz_16-51-reserved": {
+      "candidates": 186,
+      "checkpoints": 25,
+      "objects": 50,
+      "requests": 96,
+      "shared_object_ids": 37,
+      "tokens": 214574
+    },
+    "qwen_thinking_blksz_16-11-reserved": {
+      "candidates": 282,
+      "checkpoints": 23,
+      "objects": 46,
+      "requests": 96,
+      "shared_object_ids": 26,
+      "tokens": 201004
+    },
+    "qwen_thinking_blksz_16-2-reserved": {
+      "candidates": 195,
+      "checkpoints": 51,
+      "objects": 102,
+      "requests": 96,
+      "shared_object_ids": 64,
+      "tokens": 149377
+    },
+    "qwen_thinking_blksz_16-29-pilot": {
+      "candidates": 197,
+      "checkpoints": 25,
+      "objects": 50,
+      "requests": 96,
+      "shared_object_ids": 31,
+      "tokens": 133237
+    },
+    "qwen_traceA_blksz_16-0-reserved": {
+      "candidates": 156,
+      "checkpoints": 28,
+      "objects": 56,
+      "requests": 96,
+      "shared_object_ids": 17,
+      "tokens": 110216
+    },
+    "qwen_traceA_blksz_16-89-reserved": {
+      "candidates": 140,
+      "checkpoints": 9,
+      "objects": 18,
+      "requests": 96,
+      "shared_object_ids": 14,
+      "tokens": 115607
+    },
+    "qwen_traceA_blksz_16-9-pilot": {
+      "candidates": 139,
+      "checkpoints": 14,
+      "objects": 28,
+      "requests": 96,
+      "shared_object_ids": 9,
+      "tokens": 105266
+    },
+    "qwen_traceB_blksz_16-208-pilot": {
+      "candidates": 129,
+      "checkpoints": 5,
+      "objects": 10,
+      "requests": 96,
+      "shared_object_ids": 5,
+      "tokens": 77435
+    },
+    "qwen_traceB_blksz_16-346-reserved": {
+      "candidates": 142,
+      "checkpoints": 15,
+      "objects": 30,
+      "requests": 96,
+      "shared_object_ids": 16,
+      "tokens": 82782
+    },
+    "qwen_traceB_blksz_16-90-reserved": {
+      "candidates": 152,
+      "checkpoints": 19,
+      "objects": 38,
+      "requests": 96,
+      "shared_object_ids": 18,
+      "tokens": 91870
+    }
+  },
+  "depths": {
+    "0": 1792,
+    "512": 559,
+    "1024": 256,
+    "1536": 212
+  },
+  "families": {
+    "bailian": 12,
+    "oasst": 10
+  },
+  "host_fixture": {
+    "1024": {
+      "compact_fixture_bytes": 194,
+      "expected_payload_bytes": 86245376
+    },
+    "1536": {
+      "compact_fixture_bytes": 214,
+      "expected_payload_bytes": 103022592
+    },
+    "512": {
+      "compact_fixture_bytes": 174,
+      "expected_payload_bytes": 69468160
+    },
+    "conflicting-token-prefix": "rejected",
+    "duplicate-object-identity": "rejected",
+    "overlapping-holes": "rejected",
+    "swapped-kv-blocks": "rejected",
+    "truncated-skeleton": "rejected",
+    "unexpected-plan-tail": "rejected",
+    "wrong-contiguous-offset": "rejected"
+  },
+  "native_plan_manifest_sha256": "3d3e30113fba90244f537d6c9d45f75cbd6277281f51fa778c4d0d0403fa5ac5",
+  "scope": "CPU parser parity and fabricated metadata rejection; no GPU or storage performance measurements"
+}

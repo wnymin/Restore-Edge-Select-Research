@@ -1,0 +1,38 @@
+{
+  "capacity_mib": 82.25,
+  "cost_sha256": "036e0e27fd4c8879555eb5bfb36257274e4d19a78740a59c5f31ae28e9e028c1",
+  "results": [
+    {
+      "hardware_arms_planned": true,
+      "shallow_minus_deep_completion_ms": [
+        0.0,
+        266.6245,
+        266.6245
+      ],
+      "shallow_minus_deep_total_ms": 533.249,
+      "soft_hold_ms": 0
+    },
+    {
+      "hardware_arms_planned": false,
+      "shallow_minus_deep_completion_ms": [
+        0.0,
+        266.6245,
+        -48.01
+      ],
+      "shallow_minus_deep_total_ms": 218.61450000000002,
+      "soft_hold_ms": 350
+    },
+    {
+      "hardware_arms_planned": true,
+      "shallow_minus_deep_completion_ms": [
+        0.0,
+        262.5903333333333,
+        -402.0441666666667
+      ],
+      "shallow_minus_deep_total_ms": -139.45383333333336,
+      "soft_hold_ms": 700
+    }
+  ],
+  "schedule_sha256": "e4d99bfff87af3527685c2a7b61c82991661b81743d6e1738e35e13e84a6d80a",
+  "scope": "CPU stationary forecast, no hardware outcome used; diagnostic intervention only"
+}

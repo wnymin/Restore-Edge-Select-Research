@@ -1,0 +1,49 @@
+{
+  "a": {
+    "actual_scatter_observations": {
+      "native-scatter": 12
+    },
+    "charged_peak_bytes": 69468160,
+    "choices": {
+      "0": 56,
+      "512": 7,
+      "1024": 1
+    },
+    "max_arrival_slip_ms": 16.1702,
+    "min_arrival_slip_ms": 0.4213,
+    "p95_chooser_ms": 0.4991,
+    "p95_observation_delay_ms": 4.7128,
+    "resources": {},
+    "response_mean_ms": 401.08725625,
+    "response_median_ms": 396.95105,
+    "response_p95_ms": 667.2905
+  },
+  "abs_mean_difference_ms": 40.93773437499999,
+  "abs_p95_difference_ms": 75.26299999999992,
+  "archive_sha256": "2723b07aa3675ff2748993235bdb6377184c7e237669a72656e4439861e6725f",
+  "b": {
+    "actual_scatter_observations": {
+      "native-scatter": 12
+    },
+    "charged_peak_bytes": 69468160,
+    "choices": {
+      "0": 56,
+      "512": 7,
+      "1024": 1
+    },
+    "max_arrival_slip_ms": 16.1111,
+    "min_arrival_slip_ms": 0.625,
+    "p95_chooser_ms": 0.5075,
+    "p95_observation_delay_ms": 1.765,
+    "resources": {},
+    "response_mean_ms": 360.149521875,
+    "response_median_ms": 354.34205,
+    "response_p95_ms": 592.0275
+  },
+  "block": "oasst-cal-03",
+  "capacity_bytes": 86245376,
+  "choice_mismatches": 0,
+  "cost_profile_sha256": "036e0e27fd4c8879555eb5bfb36257274e4d19a78740a59c5f31ae28e9e028c1",
+  "policy": "local-cost",
+  "scope": "same-policy full-block A/A under provisional costs; not an A/B effect estimate"
+}

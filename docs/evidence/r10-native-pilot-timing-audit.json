@@ -1,0 +1,111 @@
+{
+  "archive_sha256": "dd083d343d45a9e176b0d70895a1276548621c6544d84953c8cd66b017a4c024",
+  "arms": [
+    {
+      "arrival_to_controller_p95_ms": 6256.8051,
+      "copies": {
+        "native-scatter:16777216": {
+          "max_ms": 0.852,
+          "median_ms": 0.553,
+          "min_ms": 0.318,
+          "n": 9
+        },
+        "native-scatter:52690944": {
+          "max_ms": 0.965,
+          "median_ms": 0.6285000000000001,
+          "min_ms": 0.575,
+          "n": 8
+        }
+      },
+      "native_controller_finish_difference_span_ms": 0.24880000000000002,
+      "native_post_first_marker": {
+        "max_ms": 13496.331,
+        "median_ms": 217.24349999999998,
+        "min_ms": 62.576,
+        "n": 64
+      },
+      "reported_post_marker_at_least_1000ms": [
+        {
+          "arrival_to_controller_ms": 0.1093,
+          "boundary": 0,
+          "input_tokens": 520,
+          "native_first_marker_to_finish_ms": 13496.331,
+          "request": 1,
+          "response_ms": 13515.4206
+        },
+        {
+          "arrival_to_controller_ms": 6280.6854,
+          "boundary": 0,
+          "input_tokens": 608,
+          "native_first_marker_to_finish_ms": 12602.126,
+          "request": 2,
+          "response_ms": 25942.5725
+        },
+        {
+          "arrival_to_controller_ms": 6081.4001,
+          "boundary": 0,
+          "input_tokens": 304,
+          "native_first_marker_to_finish_ms": 1591.815,
+          "request": 3,
+          "response_ms": 27355.7272
+        }
+      ],
+      "requests": 64,
+      "run": "oasst-03-a1.run.json"
+    },
+    {
+      "arrival_to_controller_p95_ms": 5892.4747,
+      "copies": {
+        "native-scatter:16777216": {
+          "max_ms": 1.572,
+          "median_ms": 0.501,
+          "min_ms": 0.219,
+          "n": 9
+        },
+        "native-scatter:52690944": {
+          "max_ms": 1.851,
+          "median_ms": 0.679,
+          "min_ms": 0.595,
+          "n": 8
+        }
+      },
+      "native_controller_finish_difference_span_ms": 0.2909,
+      "native_post_first_marker": {
+        "max_ms": 12971.281,
+        "median_ms": 198.7155,
+        "min_ms": 71.888,
+        "n": 64
+      },
+      "reported_post_marker_at_least_1000ms": [
+        {
+          "arrival_to_controller_ms": 0.4734,
+          "boundary": 0,
+          "input_tokens": 520,
+          "native_first_marker_to_finish_ms": 12782.714,
+          "request": 1,
+          "response_ms": 12802.0203
+        },
+        {
+          "arrival_to_controller_ms": 6079.3919,
+          "boundary": 0,
+          "input_tokens": 608,
+          "native_first_marker_to_finish_ms": 12971.281,
+          "request": 2,
+          "response_ms": 25599.3394
+        },
+        {
+          "arrival_to_controller_ms": 5892.4747,
+          "boundary": 0,
+          "input_tokens": 304,
+          "native_first_marker_to_finish_ms": 1593.832,
+          "request": 3,
+          "response_ms": 27027.4823
+        }
+      ],
+      "requests": 64,
+      "run": "oasst-03-a2.run.json"
+    }
+  ],
+  "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+  "scope": "latency localization, not device busy time or a strategy effect"
+}

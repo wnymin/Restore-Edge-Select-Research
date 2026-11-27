@@ -1,0 +1,240 @@
+{
+  "archive_sha256": "86e80fa16907fa5b1430996f351ce4b2436ab1674c8ae052c574b6040aaa2ebb",
+  "comparison": {
+    "compared_output_tokens": 16,
+    "compared_requests": 3,
+    "fixed_actions": [
+      [
+        0,
+        512,
+        512
+      ],
+      [
+        0,
+        1024,
+        512
+      ]
+    ],
+    "scope": "same-input forced shallow/deep exact generation qualification, no timing estimate"
+  },
+  "deep": {
+    "client_pipe_inter_token_latency": {
+      "max_ms": 20.5119,
+      "mean_ms": 16.18196153846154,
+      "p95_ms": 20.5119,
+      "samples": 13
+    },
+    "client_pipe_tpot": {
+      "max_ms": 17.003833333333333,
+      "mean_ms": 16.48534761904762,
+      "p95_ms": 17.003833333333333,
+      "samples": 3
+    },
+    "client_pipe_ttft": {
+      "max_ms": 716.9611,
+      "mean_ms": 559.8257333333333,
+      "p95_ms": 716.9611,
+      "samples": 3
+    },
+    "completion_per_s": 3.819046450298166,
+    "dispatch": {
+      "block": "mechanism-shared",
+      "boundary_counts": {
+        "0": 1,
+        "512": 1,
+        "1024": 1
+      },
+      "capacity_bytes": 86245376,
+      "device_event_counts": {
+        "carry-active-kv": 1,
+        "compute-done": 3,
+        "disk-complete": 2,
+        "exact-final-logits": 3,
+        "exact-service-tokens": 3,
+        "exact-state": 3,
+        "native-scatter": 4,
+        "native-target": 3,
+        "read-staged": 4,
+        "reserved": 2,
+        "service-decode-marker": 13,
+        "service-prefill-done": 3,
+        "service-token": 16,
+        "suffix-submitted": 3,
+        "upload-ready": 4,
+        "upload-submit": 4
+      },
+      "direct_plus_scatter_requests": [],
+      "peak_prefetch_bytes": 86245376,
+      "policy": "forced",
+      "requests": 3,
+      "runtime_worker_sha256": "0724531e874d584c5a79c64ef37ec9b768646af3f3c1346f07a7f39e991b94d9",
+      "scope": "native event audit and optional correctness checks; no performance estimate"
+    },
+    "elapsed_seconds": 0.7855363999999999,
+    "emitted_tokens_per_s": 20.368247734923553,
+    "end_reason": {
+      "length": 3
+    },
+    "exact_recompute_qualification": true,
+    "http_sse": {
+      "client_end_to_end_ms": {
+        "max_ms": 768.1282,
+        "mean_ms": 630.2701333333333,
+        "p95_ms": 768.1282,
+        "samples": 3
+      },
+      "completed": 3,
+      "completions_per_s": 3.818038884689753,
+      "emitted_tokens_per_s": 20.36287405167868,
+      "inter_token_frame_ms": {
+        "max_ms": 20.4878,
+        "mean_ms": 16.168846153846154,
+        "p95_ms": 20.4878,
+        "samples": 13
+      },
+      "requests_without_visible_output": 0,
+      "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+      "server_accept_delay_ms": {
+        "max_ms": 0.4591,
+        "mean_ms": 0.3415,
+        "p95_ms": 0.4591,
+        "samples": 3
+      },
+      "token_frame_tpot_ms": {
+        "max_ms": 17.0114,
+        "mean_ms": 16.47906984126984,
+        "p95_ms": 17.0114,
+        "samples": 3
+      },
+      "ttft_visible_ms": {
+        "max_ms": 717.1907,
+        "mean_ms": 560.0996,
+        "p95_ms": 717.1907,
+        "samples": 3
+      },
+      "window_s": 0.7857437
+    },
+    "native_prefill_done_to_first_emission": {
+      "max_ms": 0.226,
+      "mean_ms": 0.19066666666666668,
+      "p95_ms": 0.226,
+      "samples": 3
+    },
+    "output_lengths": {
+      "4": 2,
+      "8": 1
+    },
+    "requests_with_first_token": 3,
+    "scope": "complete one-slot process-pipe run; token ID frame receipt, not HTTP or production SLO",
+    "total_requests": 3
+  },
+  "shallow": {
+    "client_pipe_inter_token_latency": {
+      "max_ms": 21.6693,
+      "mean_ms": 16.30760769230769,
+      "p95_ms": 21.6693,
+      "samples": 13
+    },
+    "client_pipe_tpot": {
+      "max_ms": 17.21773333333333,
+      "mean_ms": 16.612112698412698,
+      "p95_ms": 17.21773333333333,
+      "samples": 3
+    },
+    "client_pipe_ttft": {
+      "max_ms": 870.8122,
+      "mean_ms": 643.6184666666667,
+      "p95_ms": 870.8122,
+      "samples": 3
+    },
+    "completion_per_s": 3.1957914409461416,
+    "dispatch": {
+      "block": "mechanism-shared",
+      "boundary_counts": {
+        "0": 1,
+        "512": 2
+      },
+      "capacity_bytes": 86245376,
+      "device_event_counts": {
+        "compute-done": 3,
+        "disk-complete": 1,
+        "exact-final-logits": 3,
+        "exact-service-tokens": 3,
+        "exact-state": 3,
+        "native-scatter": 4,
+        "native-target": 3,
+        "read-staged": 2,
+        "reserved": 2,
+        "service-decode-marker": 13,
+        "service-prefill-done": 3,
+        "service-token": 16,
+        "suffix-submitted": 3,
+        "upload-ready": 2,
+        "upload-submit": 2
+      },
+      "direct_plus_scatter_requests": [],
+      "peak_prefetch_bytes": 69468160,
+      "policy": "forced",
+      "requests": 3,
+      "runtime_worker_sha256": "0724531e874d584c5a79c64ef37ec9b768646af3f3c1346f07a7f39e991b94d9",
+      "scope": "native event audit and optional correctness checks; no performance estimate"
+    },
+    "elapsed_seconds": 0.9387346,
+    "emitted_tokens_per_s": 17.044221018379424,
+    "end_reason": {
+      "length": 3
+    },
+    "exact_recompute_qualification": true,
+    "http_sse": {
+      "client_end_to_end_ms": {
+        "max_ms": 922.81,
+        "mean_ms": 714.6109666666666,
+        "p95_ms": 922.81,
+        "samples": 3
+      },
+      "completed": 3,
+      "completions_per_s": 3.1947656958838637,
+      "emitted_tokens_per_s": 17.038750378047276,
+      "inter_token_frame_ms": {
+        "max_ms": 21.524,
+        "mean_ms": 16.29936923076923,
+        "p95_ms": 21.524,
+        "samples": 13
+      },
+      "requests_without_visible_output": 0,
+      "scope": "actual HTTP/SSE client timings on loopback; one frame per token; first visible decoded text for TTFT",
+      "server_accept_delay_ms": {
+        "max_ms": 0.3284,
+        "mean_ms": 0.2564,
+        "p95_ms": 0.3284,
+        "samples": 3
+      },
+      "token_frame_tpot_ms": {
+        "max_ms": 17.22136666666667,
+        "mean_ms": 16.603825396825396,
+        "p95_ms": 17.22136666666667,
+        "samples": 3
+      },
+      "ttft_visible_ms": {
+        "max_ms": 871.0536,
+        "mean_ms": 643.8672666666666,
+        "p95_ms": 871.0536,
+        "samples": 3
+      },
+      "window_s": 0.939036
+    },
+    "native_prefill_done_to_first_emission": {
+      "max_ms": 0.194,
+      "mean_ms": 0.18333333333333335,
+      "p95_ms": 0.194,
+      "samples": 3
+    },
+    "output_lengths": {
+      "4": 2,
+      "8": 1
+    },
+    "requests_with_first_token": 3,
+    "scope": "complete one-slot process-pipe run; token ID frame receipt, not HTTP or production SLO",
+    "total_requests": 3
+  }
+}

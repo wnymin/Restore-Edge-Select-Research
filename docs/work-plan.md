@@ -11,7 +11,10 @@
 | `R05` | Static/dynamic strategy regimes and online portfolio switching | Completed (2026-11-20); CPU scope accepted with positive net holdout result; single-owner execution by user side; acceptance requires net improvement over strongest fixed baseline on frozen holdout, otherwise report failure without claiming success. | [R05 plan](r05-strategy-portfolio-plan.md) / [CPU report](r05-strategy-portfolio-report.md) |
 | `R06` | 模型与成本适用域验证 | 2026-11-20 CPU 交付验收，重校准只在合成高成本组达到性能判据 | [R06 计划](archive/r06-process/r06-model-cost-transfer-plan.md) · [R06 结项](r06-completion.md) |
 | `R07` | `entry-replay` 泛化性研究 | 2026-11-23 预登记的 CPU 扩展验证完成；原 4B 选点接近离线最优，模型资源配比改变后发现跨窗缺口；2026-11-24 补充本机真实调度机制和接口资格验证，非完整策略闭环 | [扩展结果](r07-extension-results.md) · [设计](r07-entry-replay-generalization.md) · [到达分线结果](r07-arrival-results.md) · [反常点](archive/r07-process/r07-anomaly-register.md) · [扩展预登记](archive/r07-process/r07-extension-preregistration.md) · [本机真实调度](r07-live-scheduling-results.md) |
-| `R08` | 模型 × 暂存容量：验证近最优结论的适用域 | 2026-11-24 已复核 R08 实验交付；近最优仅在部分模型／容量组合成立，原生 27B 未覆盖 | [结果与验收](r08-model-capacity-results.md) · [预登记与勘误](archive/r08-process/r08-preregistration.md) · [后续设计与双人分工](r08-counterexample-optimization-plan.md)（待确认，未启动） |
+| `R08` | 模型 × 暂存容量：验证近最优结论的适用域 | 2026-11-24 已复核 R08 实验交付；近最优仅在部分模型／容量组合成立，原生 27B 未覆盖 | [结果与验收](r08-model-capacity-results.md) · [预登记与勘误](archive/r08-process/r08-preregistration.md) · [后续计划与负责人变更](r08-counterexample-optimization-plan.md) · [后续接替结项：候选不替换](r08-takeover-results.md)（2026-11-24；未做独立盲验或真实策略 A/B） |
+| `R09` | 恢复边界的选点时间、质量与预算 | 2026-11-25 已结项；单次并行余量存在，但正预算未过留出，预设 0 ms 额外搜索；不改默认策略 | [计划与分工](r09-decision-time-budget-plan.md) · [结果与验收](r09-decision-time-budget-results.md) |
+| `R10` | `entry-replay` 的真实执行与服务收益验证 | 2026-11-26（JST）本机范围验收。60 对预填充主实验的正收益未达门槛，主实验及可比较的 23 对单槽服务均无选点差异。连续合批策略性能未覆盖，A100／V100 未执行 | [实验方案与分工](r10-real-execution-experiment-plan.md) · [验收、证据及未覆盖项](r10-local-acceptance.md) · [R10-ANA-01 自然负载分析](r10-natural-workload.md) |
+| `R11` | 代码 Agent 的工具循环与混合缓存恢复边界 | 2026-11-27 完成当前范围审查。真实到达回放零前瞻改选，完成长上下文续算配对，论文主线判据未通过 | [计划、分工与结果](r11-coding-agent-recovery.md) |
 
 <a id="r01"></a>
 

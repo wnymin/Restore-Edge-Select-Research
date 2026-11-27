@@ -1,0 +1,1197 @@
+{
+  "scope": "resident continuation, synthetic token IDs; Weka context lengths only",
+  "model_sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+  "llama_dll_sha256": "b64db0f20492b5f0b09117add122a8b0548e628bede4d345c11f1a73b8febec7",
+  "state_bytes": 51511296,
+  "R10_reference_SSD_state_ms": 24.168033582089553,
+  "groups": {
+    "short": [
+      {
+        "receipt": {
+          "boundary": 19264,
+          "tail": 256,
+          "reps": 8,
+          "seed": 11100,
+          "context": 20480,
+          "exit_code": 0,
+          "elapsed_s": 79.356,
+          "gpu_env": {
+            "GGML_VK_VISIBLE_DEVICES": "1",
+            "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1",
+            "GGML_VK_R10_CONCURRENT_BUFFERS": "1"
+          },
+          "probe_sha256": "65d435845d85e20bb522872b46ce4148fd37bd22f53d6268a7e6db0ee0fa7958",
+          "stdout_sha256": "36c1ccb66d3c7e22dfc153213372a266ba14da5faa5aac91e608fca1cc80804f"
+        },
+        "prefill_median_ms_by_depth": {
+          "19136": 222.0295,
+          "19200": 194.2325,
+          "19264": 136.4165
+        },
+        "paired_extra_prefill_ms_by_gap": {
+          "128": {
+            "min": 84.719,
+            "median": 85.6815,
+            "max": 98.936
+          },
+          "64": {
+            "min": 56.501,
+            "median": 58.3485,
+            "max": 70.709
+          }
+        },
+        "greedy_pairs_matched": 8,
+        "samples": [
+          {
+            "rep": 0,
+            "order": 0,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 9421,
+            "prefill_us": 222408,
+            "greedy": 82
+          },
+          {
+            "rep": 0,
+            "order": 1,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9484,
+            "prefill_us": 137689,
+            "greedy": 82
+          },
+          {
+            "rep": 0,
+            "order": 2,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 9329,
+            "prefill_us": 194190,
+            "greedy": 82
+          },
+          {
+            "rep": 1,
+            "order": 0,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9597,
+            "prefill_us": 137150,
+            "greedy": 82
+          },
+          {
+            "rep": 1,
+            "order": 1,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 10752,
+            "prefill_us": 221937,
+            "greedy": 82
+          },
+          {
+            "rep": 1,
+            "order": 2,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 9200,
+            "prefill_us": 194017,
+            "greedy": 82
+          },
+          {
+            "rep": 2,
+            "order": 0,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 9445,
+            "prefill_us": 197034,
+            "greedy": 82
+          },
+          {
+            "rep": 2,
+            "order": 1,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 9638,
+            "prefill_us": 221956,
+            "greedy": 82
+          },
+          {
+            "rep": 2,
+            "order": 2,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9214,
+            "prefill_us": 136497,
+            "greedy": 82
+          },
+          {
+            "rep": 3,
+            "order": 0,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 10049,
+            "prefill_us": 194275,
+            "greedy": 82
+          },
+          {
+            "rep": 3,
+            "order": 1,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 9099,
+            "prefill_us": 225597,
+            "greedy": 82
+          },
+          {
+            "rep": 3,
+            "order": 2,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9248,
+            "prefill_us": 135751,
+            "greedy": 82
+          },
+          {
+            "rep": 4,
+            "order": 0,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9506,
+            "prefill_us": 123167,
+            "greedy": 82
+          },
+          {
+            "rep": 4,
+            "order": 1,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 9128,
+            "prefill_us": 222103,
+            "greedy": 82
+          },
+          {
+            "rep": 4,
+            "order": 2,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 9519,
+            "prefill_us": 193876,
+            "greedy": 82
+          },
+          {
+            "rep": 5,
+            "order": 0,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 9410,
+            "prefill_us": 196094,
+            "greedy": 82
+          },
+          {
+            "rep": 5,
+            "order": 1,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 9554,
+            "prefill_us": 221744,
+            "greedy": 82
+          },
+          {
+            "rep": 5,
+            "order": 2,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9571,
+            "prefill_us": 136336,
+            "greedy": 82
+          },
+          {
+            "rep": 6,
+            "order": 0,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 9036,
+            "prefill_us": 221841,
+            "greedy": 82
+          },
+          {
+            "rep": 6,
+            "order": 1,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9498,
+            "prefill_us": 135937,
+            "greedy": 82
+          },
+          {
+            "rep": 6,
+            "order": 2,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 9697,
+            "prefill_us": 194110,
+            "greedy": 82
+          },
+          {
+            "rep": 7,
+            "order": 0,
+            "boundary": 19136,
+            "total": 19520,
+            "clone_us": 9278,
+            "prefill_us": 227192,
+            "greedy": 82
+          },
+          {
+            "rep": 7,
+            "order": 1,
+            "boundary": 19264,
+            "total": 19520,
+            "clone_us": 9495,
+            "prefill_us": 137137,
+            "greedy": 82
+          },
+          {
+            "rep": 7,
+            "order": 2,
+            "boundary": 19200,
+            "total": 19520,
+            "clone_us": 9329,
+            "prefill_us": 194489,
+            "greedy": 82
+          }
+        ]
+      },
+      {
+        "receipt": {
+          "boundary": 40896,
+          "tail": 512,
+          "reps": 8,
+          "seed": 11101,
+          "context": 43008,
+          "exit_code": 0,
+          "elapsed_s": 98.717,
+          "gpu_env": {
+            "GGML_VK_VISIBLE_DEVICES": "1",
+            "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1",
+            "GGML_VK_R10_CONCURRENT_BUFFERS": "1"
+          },
+          "probe_sha256": "65d435845d85e20bb522872b46ce4148fd37bd22f53d6268a7e6db0ee0fa7958",
+          "stdout_sha256": "612ed3f11c1531500d745885454eb47d1291a139304ccf3d90ae11d8aedc0c73"
+        },
+        "prefill_median_ms_by_depth": {
+          "40768": 445.986,
+          "40832": 405.143,
+          "40896": 340.3025
+        },
+        "paired_extra_prefill_ms_by_gap": {
+          "128": {
+            "min": 103.334,
+            "median": 105.781,
+            "max": 107.734
+          },
+          "64": {
+            "min": 62.292,
+            "median": 64.6905,
+            "max": 73.45
+          }
+        },
+        "greedy_pairs_matched": 8,
+        "samples": [
+          {
+            "rep": 0,
+            "order": 0,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 21446,
+            "prefill_us": 445147,
+            "greedy": 198
+          },
+          {
+            "rep": 0,
+            "order": 1,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 20785,
+            "prefill_us": 404163,
+            "greedy": 198
+          },
+          {
+            "rep": 0,
+            "order": 2,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 20882,
+            "prefill_us": 340354,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 0,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 20612,
+            "prefill_us": 444951,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 1,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 20902,
+            "prefill_us": 403909,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 2,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 20979,
+            "prefill_us": 341617,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 0,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 21491,
+            "prefill_us": 341069,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 1,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 20806,
+            "prefill_us": 405133,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 2,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 20946,
+            "prefill_us": 446763,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 0,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 21532,
+            "prefill_us": 340251,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 1,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 21081,
+            "prefill_us": 445840,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 2,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 21082,
+            "prefill_us": 405323,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 0,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 21187,
+            "prefill_us": 447007,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 1,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 20424,
+            "prefill_us": 339273,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 2,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 21143,
+            "prefill_us": 405817,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 0,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 20559,
+            "prefill_us": 412893,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 1,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 20660,
+            "prefill_us": 339443,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 2,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 20248,
+            "prefill_us": 446132,
+            "greedy": 198
+          },
+          {
+            "rep": 6,
+            "order": 0,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 20699,
+            "prefill_us": 445158,
+            "greedy": 198
+          },
+          {
+            "rep": 6,
+            "order": 1,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 20645,
+            "prefill_us": 338938,
+            "greedy": 198
+          },
+          {
+            "rep": 6,
+            "order": 2,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 20263,
+            "prefill_us": 404829,
+            "greedy": 198
+          },
+          {
+            "rep": 7,
+            "order": 0,
+            "boundary": 40768,
+            "total": 41408,
+            "clone_us": 21544,
+            "prefill_us": 446712,
+            "greedy": 198
+          },
+          {
+            "rep": 7,
+            "order": 1,
+            "boundary": 40896,
+            "total": 41408,
+            "clone_us": 21476,
+            "prefill_us": 340844,
+            "greedy": 198
+          },
+          {
+            "rep": 7,
+            "order": 2,
+            "boundary": 40832,
+            "total": 41408,
+            "clone_us": 21124,
+            "prefill_us": 405153,
+            "greedy": 198
+          }
+        ]
+      },
+      {
+        "receipt": {
+          "boundary": 55808,
+          "tail": 256,
+          "reps": 8,
+          "seed": 11102,
+          "context": 57344,
+          "exit_code": 0,
+          "elapsed_s": 105.267,
+          "gpu_env": {
+            "GGML_VK_VISIBLE_DEVICES": "1",
+            "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1",
+            "GGML_VK_R10_CONCURRENT_BUFFERS": "1"
+          },
+          "probe_sha256": "65d435845d85e20bb522872b46ce4148fd37bd22f53d6268a7e6db0ee0fa7958",
+          "stdout_sha256": "5b2c5b56b00394c34fc1688a2f810b2a77273d8480fc732e8928bfd895dd00ed"
+        },
+        "prefill_median_ms_by_depth": {
+          "55680": 312.1995,
+          "55744": 263.72,
+          "55808": 193.8415
+        },
+        "paired_extra_prefill_ms_by_gap": {
+          "128": {
+            "min": 116.127,
+            "median": 118.755,
+            "max": 132.945
+          },
+          "64": {
+            "min": 68.037,
+            "median": 70.57849999999999,
+            "max": 86.356
+          }
+        },
+        "greedy_pairs_matched": 8,
+        "samples": [
+          {
+            "rep": 0,
+            "order": 0,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 29057,
+            "prefill_us": 311617,
+            "greedy": 6501
+          },
+          {
+            "rep": 0,
+            "order": 1,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 28935,
+            "prefill_us": 263230,
+            "greedy": 6501
+          },
+          {
+            "rep": 0,
+            "order": 2,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 28387,
+            "prefill_us": 193249,
+            "greedy": 6501
+          },
+          {
+            "rep": 1,
+            "order": 0,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 28395,
+            "prefill_us": 312269,
+            "greedy": 6501
+          },
+          {
+            "rep": 1,
+            "order": 1,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 27821,
+            "prefill_us": 263092,
+            "greedy": 6501
+          },
+          {
+            "rep": 1,
+            "order": 2,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 28181,
+            "prefill_us": 193491,
+            "greedy": 6501
+          },
+          {
+            "rep": 2,
+            "order": 0,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 28800,
+            "prefill_us": 310319,
+            "greedy": 6501
+          },
+          {
+            "rep": 2,
+            "order": 1,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 28367,
+            "prefill_us": 262432,
+            "greedy": 6501
+          },
+          {
+            "rep": 2,
+            "order": 2,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 29348,
+            "prefill_us": 194192,
+            "greedy": 6501
+          },
+          {
+            "rep": 3,
+            "order": 0,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 28408,
+            "prefill_us": 180412,
+            "greedy": 6501
+          },
+          {
+            "rep": 3,
+            "order": 1,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 29889,
+            "prefill_us": 264210,
+            "greedy": 6501
+          },
+          {
+            "rep": 3,
+            "order": 2,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 29321,
+            "prefill_us": 313357,
+            "greedy": 6501
+          },
+          {
+            "rep": 4,
+            "order": 0,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 28589,
+            "prefill_us": 265471,
+            "greedy": 6501
+          },
+          {
+            "rep": 4,
+            "order": 1,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 29269,
+            "prefill_us": 194219,
+            "greedy": 6501
+          },
+          {
+            "rep": 4,
+            "order": 2,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 28477,
+            "prefill_us": 313265,
+            "greedy": 6501
+          },
+          {
+            "rep": 5,
+            "order": 0,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 29222,
+            "prefill_us": 194389,
+            "greedy": 6501
+          },
+          {
+            "rep": 5,
+            "order": 1,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 28783,
+            "prefill_us": 265565,
+            "greedy": 6501
+          },
+          {
+            "rep": 5,
+            "order": 2,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 28672,
+            "prefill_us": 313121,
+            "greedy": 6501
+          },
+          {
+            "rep": 6,
+            "order": 0,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 28569,
+            "prefill_us": 311093,
+            "greedy": 6501
+          },
+          {
+            "rep": 6,
+            "order": 1,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 28833,
+            "prefill_us": 262515,
+            "greedy": 6501
+          },
+          {
+            "rep": 6,
+            "order": 2,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 28372,
+            "prefill_us": 194478,
+            "greedy": 6501
+          },
+          {
+            "rep": 7,
+            "order": 0,
+            "boundary": 55808,
+            "total": 56064,
+            "clone_us": 27906,
+            "prefill_us": 180627,
+            "greedy": 6501
+          },
+          {
+            "rep": 7,
+            "order": 1,
+            "boundary": 55680,
+            "total": 56064,
+            "clone_us": 29558,
+            "prefill_us": 312130,
+            "greedy": 6501
+          },
+          {
+            "rep": 7,
+            "order": 2,
+            "boundary": 55744,
+            "total": 56064,
+            "clone_us": 29002,
+            "prefill_us": 266983,
+            "greedy": 6501
+          }
+        ]
+      }
+    ],
+    "trajectory": [
+      {
+        "receipt": {
+          "boundary": 19264,
+          "tail": 4800,
+          "seed": 11103,
+          "context": 24576,
+          "reps": 6,
+          "exit_code": 0,
+          "elapsed_s": 120.14171110000461,
+          "gpu_env": {
+            "GGML_VK_VISIBLE_DEVICES": "1",
+            "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1",
+            "GGML_VK_R10_CONCURRENT_BUFFERS": "1"
+          },
+          "gpu_before": {
+            "return_code": 0,
+            "data": "name, driver_version, temperature.gpu, clocks.current.sm [MHz], clocks.current.memory [MHz], memory.used [MiB], memory.total [MiB], power.draw [W], pstate\nNVIDIA GeForce RTX 4060 Laptop GPU, 595.97, 52, 1890 MHz, 8001 MHz, 0 MiB, 8188 MiB, 16.76 W, P0\n",
+            "error": ""
+          },
+          "gpu_after": {
+            "return_code": 0,
+            "data": "name, driver_version, temperature.gpu, clocks.current.sm [MHz], clocks.current.memory [MHz], memory.used [MiB], memory.total [MiB], power.draw [W], pstate\nNVIDIA GeForce RTX 4060 Laptop GPU, 595.97, 66, 2610 MHz, 8001 MHz, 0 MiB, 8188 MiB, 51.53 W, P0\n",
+            "error": ""
+          },
+          "probe_sha256": "65d435845d85e20bb522872b46ce4148fd37bd22f53d6268a7e6db0ee0fa7958",
+          "stdout_sha256": "b923a29ba7484a3f0479c6d747586e744daf7d0967e7b110a2594942caededd9",
+          "stderr_sha256": "75bde108abbddf14df929d846a3ebdff3f1e5eda8faa8f8bcc8df96b4dfcae06"
+        },
+        "prefill_median_ms_by_depth": {
+          "19136": 2709.3635,
+          "19200": 2649.0785,
+          "19264": 2625.504
+        },
+        "paired_extra_prefill_ms_by_gap": {
+          "128": {
+            "min": 78.148,
+            "median": 82.092,
+            "max": 86.316
+          },
+          "64": {
+            "min": 20.771,
+            "median": 23.9015,
+            "max": 25.316
+          }
+        },
+        "greedy_pairs_matched": 6,
+        "samples": [
+          {
+            "rep": 0,
+            "order": 0,
+            "boundary": 19264,
+            "total": 24064,
+            "clone_us": 9350,
+            "prefill_us": 2618509,
+            "greedy": 198
+          },
+          {
+            "rep": 0,
+            "order": 1,
+            "boundary": 19136,
+            "total": 24064,
+            "clone_us": 9467,
+            "prefill_us": 2704825,
+            "greedy": 198
+          },
+          {
+            "rep": 0,
+            "order": 2,
+            "boundary": 19200,
+            "total": 24064,
+            "clone_us": 9317,
+            "prefill_us": 2643825,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 0,
+            "boundary": 19264,
+            "total": 24064,
+            "clone_us": 9225,
+            "prefill_us": 2626436,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 1,
+            "boundary": 19136,
+            "total": 24064,
+            "clone_us": 9066,
+            "prefill_us": 2712579,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 2,
+            "boundary": 19200,
+            "total": 24064,
+            "clone_us": 9410,
+            "prefill_us": 2650571,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 0,
+            "boundary": 19264,
+            "total": 24064,
+            "clone_us": 9941,
+            "prefill_us": 2623805,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 1,
+            "boundary": 19136,
+            "total": 24064,
+            "clone_us": 9113,
+            "prefill_us": 2706402,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 2,
+            "boundary": 19200,
+            "total": 24064,
+            "clone_us": 9525,
+            "prefill_us": 2647586,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 0,
+            "boundary": 19200,
+            "total": 24064,
+            "clone_us": 9428,
+            "prefill_us": 2645343,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 1,
+            "boundary": 19264,
+            "total": 24064,
+            "clone_us": 9335,
+            "prefill_us": 2624572,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 2,
+            "boundary": 19136,
+            "total": 24064,
+            "clone_us": 9445,
+            "prefill_us": 2706159,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 0,
+            "boundary": 19136,
+            "total": 24064,
+            "clone_us": 9365,
+            "prefill_us": 2712325,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 1,
+            "boundary": 19264,
+            "total": 24064,
+            "clone_us": 9538,
+            "prefill_us": 2634177,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 2,
+            "boundary": 19200,
+            "total": 24064,
+            "clone_us": 9533,
+            "prefill_us": 2657857,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 0,
+            "boundary": 19136,
+            "total": 24064,
+            "clone_us": 9595,
+            "prefill_us": 2719054,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 1,
+            "boundary": 19200,
+            "total": 24064,
+            "clone_us": 9317,
+            "prefill_us": 2662128,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 2,
+            "boundary": 19264,
+            "total": 24064,
+            "clone_us": 9605,
+            "prefill_us": 2638106,
+            "greedy": 198
+          }
+        ]
+      },
+      {
+        "receipt": {
+          "boundary": 56768,
+          "tail": 6656,
+          "seed": 11104,
+          "context": 65536,
+          "reps": 6,
+          "exit_code": 0,
+          "elapsed_s": 222.760326299991,
+          "gpu_env": {
+            "GGML_VK_VISIBLE_DEVICES": "1",
+            "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1",
+            "GGML_VK_R10_CONCURRENT_BUFFERS": "1"
+          },
+          "gpu_before": {
+            "return_code": 0,
+            "data": "name, driver_version, temperature.gpu, clocks.current.sm [MHz], clocks.current.memory [MHz], memory.used [MiB], memory.total [MiB], power.draw [W], pstate\nNVIDIA GeForce RTX 4060 Laptop GPU, 595.97, 66, 2610 MHz, 8001 MHz, 0 MiB, 8188 MiB, 51.53 W, P0\n",
+            "error": ""
+          },
+          "gpu_after": {
+            "return_code": 0,
+            "data": "name, driver_version, temperature.gpu, clocks.current.sm [MHz], clocks.current.memory [MHz], memory.used [MiB], memory.total [MiB], power.draw [W], pstate\nNVIDIA GeForce RTX 4060 Laptop GPU, 595.97, 64, 2625 MHz, 8001 MHz, 0 MiB, 8188 MiB, 47.37 W, P0\n",
+            "error": ""
+          },
+          "probe_sha256": "65d435845d85e20bb522872b46ce4148fd37bd22f53d6268a7e6db0ee0fa7958",
+          "stdout_sha256": "9d49ea31e4fd282afcf110d248e624311bca39e2780129933b520d9f040cc5ea",
+          "stderr_sha256": "5eeb085d1f24e414ffc13ed0debc319562154fbcde994fe16ae594c2c520bf63"
+        },
+        "prefill_median_ms_by_depth": {
+          "56640": 5325.3985,
+          "56704": 5274.4745,
+          "56768": 5206.903
+        },
+        "paired_extra_prefill_ms_by_gap": {
+          "128": {
+            "min": 105.693,
+            "median": 119.2955,
+            "max": 137.187
+          },
+          "64": {
+            "min": 50.297,
+            "median": 62.3575,
+            "max": 78.225
+          }
+        },
+        "greedy_pairs_matched": 6,
+        "samples": [
+          {
+            "rep": 0,
+            "order": 0,
+            "boundary": 56704,
+            "total": 63424,
+            "clone_us": 29506,
+            "prefill_us": 5254768,
+            "greedy": 198
+          },
+          {
+            "rep": 0,
+            "order": 1,
+            "boundary": 56640,
+            "total": 63424,
+            "clone_us": 31257,
+            "prefill_us": 5310164,
+            "greedy": 198
+          },
+          {
+            "rep": 0,
+            "order": 2,
+            "boundary": 56768,
+            "total": 63424,
+            "clone_us": 29303,
+            "prefill_us": 5204471,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 0,
+            "boundary": 56704,
+            "total": 63424,
+            "clone_us": 29503,
+            "prefill_us": 5275347,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 1,
+            "boundary": 56768,
+            "total": 63424,
+            "clone_us": 29443,
+            "prefill_us": 5201935,
+            "greedy": 198
+          },
+          {
+            "rep": 1,
+            "order": 2,
+            "boundary": 56640,
+            "total": 63424,
+            "clone_us": 29987,
+            "prefill_us": 5326225,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 0,
+            "boundary": 56768,
+            "total": 63424,
+            "clone_us": 30226,
+            "prefill_us": 5212700,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 1,
+            "boundary": 56704,
+            "total": 63424,
+            "clone_us": 29037,
+            "prefill_us": 5273148,
+            "greedy": 198
+          },
+          {
+            "rep": 2,
+            "order": 2,
+            "boundary": 56640,
+            "total": 63424,
+            "clone_us": 29599,
+            "prefill_us": 5349887,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 0,
+            "boundary": 56768,
+            "total": 63424,
+            "clone_us": 36542,
+            "prefill_us": 5226866,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 1,
+            "boundary": 56704,
+            "total": 63424,
+            "clone_us": 29149,
+            "prefill_us": 5280447,
+            "greedy": 198
+          },
+          {
+            "rep": 3,
+            "order": 2,
+            "boundary": 56640,
+            "total": 63424,
+            "clone_us": 29972,
+            "prefill_us": 5333113,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 0,
+            "boundary": 56640,
+            "total": 63424,
+            "clone_us": 29862,
+            "prefill_us": 5323828,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 1,
+            "boundary": 56704,
+            "total": 63424,
+            "clone_us": 29409,
+            "prefill_us": 5273602,
+            "greedy": 198
+          },
+          {
+            "rep": 4,
+            "order": 2,
+            "boundary": 56768,
+            "total": 63424,
+            "clone_us": 29784,
+            "prefill_us": 5209335,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 0,
+            "boundary": 56768,
+            "total": 63424,
+            "clone_us": 29458,
+            "prefill_us": 5200474,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 1,
+            "boundary": 56640,
+            "total": 63424,
+            "clone_us": 29153,
+            "prefill_us": 5324572,
+            "greedy": 198
+          },
+          {
+            "rep": 5,
+            "order": 2,
+            "boundary": 56704,
+            "total": 63424,
+            "clone_us": 29261,
+            "prefill_us": 5278699,
+            "greedy": 198
+          }
+        ]
+      }
+    ]
+  }
+}

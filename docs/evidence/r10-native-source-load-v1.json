@@ -1,0 +1,94 @@
+{
+  "archive_sha256": "093f6aeb3f4e9e4aaf0f97c533f32735940b75de41e2ba113a3d63951ec7a3e3",
+  "arms": [
+    {
+      "block": "qwen_traceB_blksz_16-208-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 111.15448125,
+      "p95_observation_delay_ms": 1506.6318,
+      "receipt_sha256": "f9837dfa315901491148588c643b44db34651c98cd97a8d16527d02d701ebada",
+      "response_mean_ms": 1376.7274322916667,
+      "response_p95_ms": 4493.9575,
+      "run": "traceB208-1200-first",
+      "source_schedule_sha256": "10b678ba64c540b874efb879f7f873dbf137668c55259396e6e157c26a902e98",
+      "window": {
+        "average_outstanding": 2.669133964359086,
+        "completions_per_s_in_entire_window": 1.9387526548491236,
+        "drain_after_last_arrival_ms": 4705.5691,
+        "drain_elapsed_ms": 49516.3732,
+        "fraction_time_any_request_outstanding": 0.7758074878553505,
+        "max_outstanding": 10,
+        "offered_arrivals_per_s": 2.1200244429445534,
+        "outstanding_at_last_arrival": 10,
+        "submission_span_ms": 44810.8041
+      }
+    },
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 1.38016875,
+      "p95_observation_delay_ms": 8.7802,
+      "receipt_sha256": "d32a684fa958dcc9a014b9db7552106b95ed1cc93e7c6e847065f8a2d6db6b3e",
+      "response_mean_ms": 2483.1315833333333,
+      "response_p95_ms": 4878.1004,
+      "run": "coder28-600-first",
+      "source_schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574",
+      "window": {
+        "average_outstanding": 2.5012309437907114,
+        "completions_per_s_in_entire_window": 1.0072889252341117,
+        "drain_after_last_arrival_ms": 2578.9172,
+        "drain_elapsed_ms": 95305.3266,
+        "fraction_time_any_request_outstanding": 0.8837477379779526,
+        "max_outstanding": 8,
+        "offered_arrivals_per_s": 1.0245193425984205,
+        "outstanding_at_last_arrival": 3,
+        "submission_span_ms": 92726.4094
+      }
+    },
+    {
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 9.458783333333333,
+      "p95_observation_delay_ms": 13.8346,
+      "receipt_sha256": "c7560380eead14fea73cf3b37efbbb9b0905a97fc54949ad7809dd401d62c06c",
+      "response_mean_ms": 1562.34618125,
+      "response_p95_ms": 3763.3141,
+      "run": "traceA09-400",
+      "source_schedule_sha256": "203565ad05d8f9a9b5da04a188d0606dc0b5e9c4eaf8d35a9877ffd188a9be60",
+      "window": {
+        "average_outstanding": 2.0644927338509813,
+        "completions_per_s_in_entire_window": 1.3214054341011827,
+        "drain_after_last_arrival_ms": 557.2348,
+        "drain_elapsed_ms": 72649.9207,
+        "fraction_time_any_request_outstanding": 0.758490292474607,
+        "max_outstanding": 8,
+        "offered_arrivals_per_s": 1.3177481018223514,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 72092.6859
+      }
+    },
+    {
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 8.169563541666667,
+      "p95_observation_delay_ms": 11.9576,
+      "receipt_sha256": "46bb4a13a4b376d60b815eccc704cee8eba25c03ac1bc4623320e49ee44a2e78",
+      "response_mean_ms": 1417.6967291666667,
+      "response_p95_ms": 3461.7011,
+      "run": "traceA09-400-second",
+      "source_schedule_sha256": "203565ad05d8f9a9b5da04a188d0606dc0b5e9c4eaf8d35a9877ffd188a9be60",
+      "window": {
+        "average_outstanding": 1.8739207974599803,
+        "completions_per_s_in_entire_window": 1.321806532319141,
+        "drain_after_last_arrival_ms": 528.0861,
+        "drain_elapsed_ms": 72627.8753,
+        "fraction_time_any_request_outstanding": 0.7245807216943327,
+        "max_outstanding": 7,
+        "offered_arrivals_per_s": 1.3176182767535747,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 72099.7892
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

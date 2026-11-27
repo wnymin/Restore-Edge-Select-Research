@@ -1,0 +1,489 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1296 1110" role="img" aria-labelledby="title desc">
+<title id="title">R10 本机单槽服务留出曲线</title>
+<desc id="desc">按真实提交率绘制各源块的可见文本 TTFT、解码帧 TPOT、完成吞吐和有效吞吐。断线表示缺少可比观测。</desc>
+<rect width="1296" height="1110" fill="white"/>
+<g font-family="Segoe UI, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#1c2834">
+<text x="25" y="33" font-size="23" font-weight="700">R10 本机单槽服务留出曲线</text>
+<text x="25" y="62" font-size="14" >横轴：客户端实测提交率（请求/s）。同线为同一个输入块；缺测与不可比点不连线。</text>
+<line x1="790" y1="27" x2="818" y2="27" stroke="#1b62a5" stroke-width="2" stroke-dasharray=""/>
+<text x="825" y="33" font-size="14" >local-cost</text>
+<line x1="1020" y1="27" x2="1048" y2="27" stroke="#b84c15" stroke-width="2" stroke-dasharray="7 4"/>
+<text x="1055" y="33" font-size="14" >entry-replay</text>
+<text x="28" y="95" font-size="17" >OASST／短输出</text>
+<text x="28" y="121" font-size="14" >可见文本 TTFT P95（ms）</text>
+<path d="M66 285 h239 M66 131 v154" stroke="#dfe6ee"/>
+<text x="60" y="289" font-size="10" text-anchor="end">0</text>
+<text x="66" y="301" font-size="10" text-anchor="middle">0</text>
+<path d="M66 208.0 h239 M185.5 131 v154" stroke="#dfe6ee"/>
+<text x="60" y="212.0" font-size="10" text-anchor="end">1.1e+04</text>
+<text x="185.5" y="301" font-size="10" text-anchor="middle">2.69</text>
+<path d="M66 131 h239 M305 131 v154" stroke="#dfe6ee"/>
+<text x="60" y="135" font-size="10" text-anchor="end">2.2e+04</text>
+<text x="305" y="301" font-size="10" text-anchor="middle">5.39</text>
+<path d="M122.89 276.28 L176.15 266.63" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.15 266.63 L293.43 165.86" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.89" cy="276.28" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 1.282, 1245</title></circle>
+<circle cx="176.15" cy="266.63" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 2.483, 2624</title></circle>
+<circle cx="293.43" cy="165.86" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 5.126, 1.701e+04</title></circle>
+<path d="M122.87 276.15 L176.08 266.33" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.08 266.33 L293.22 165.70" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.87" cy="276.15" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 1.282, 1264</title></circle>
+<circle cx="176.08" cy="266.33" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 2.481, 2667</title></circle>
+<circle cx="293.22" cy="165.70" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 5.121, 1.704e+04</title></circle>
+<path d="M122.90 268.15 L176.10 230.82" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.10 230.82 L293.24 147.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.90" cy="268.15" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 1.282, 2406</title></circle>
+<circle cx="176.10" cy="230.82" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 2.481, 7738</title></circle>
+<circle cx="293.24" cy="147.50" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 5.122, 1.964e+04</title></circle>
+<path d="M122.88 270.70 L176.07 232.14" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.07 232.14 L293.62 148.44" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.88" cy="270.70" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 1.282, 2043</title></circle>
+<circle cx="176.07" cy="232.14" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 2.481, 7550</title></circle>
+<circle cx="293.62" cy="148.44" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 5.13, 1.95e+04</title></circle>
+<text x="28" y="322" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="28" y="361" font-size="14" >解码帧 TPOT P95（ms）</text>
+<path d="M66 525 h239 M66 371 v154" stroke="#dfe6ee"/>
+<text x="60" y="529" font-size="10" text-anchor="end">0</text>
+<text x="66" y="541" font-size="10" text-anchor="middle">0</text>
+<path d="M66 448.0 h239 M185.5 371 v154" stroke="#dfe6ee"/>
+<text x="60" y="452.0" font-size="10" text-anchor="end">9.56</text>
+<text x="185.5" y="541" font-size="10" text-anchor="middle">2.69</text>
+<path d="M66 371 h239 M305 371 v154" stroke="#dfe6ee"/>
+<text x="60" y="375" font-size="10" text-anchor="end">19.1</text>
+<text x="305" y="541" font-size="10" text-anchor="middle">5.39</text>
+<path d="M122.89 395.55 L176.15 395.74" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.15 395.74 L293.43 389.70" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.89" cy="395.55" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 1.282, 16.07</title></circle>
+<circle cx="176.15" cy="395.74" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 2.483, 16.05</title></circle>
+<circle cx="293.43" cy="389.70" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 5.126, 16.8</title></circle>
+<path d="M122.87 395.12 L176.08 397.07" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.08 397.07 L293.22 388.90" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.87" cy="395.12" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 1.282, 16.12</title></circle>
+<circle cx="176.08" cy="397.07" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 2.481, 15.88</title></circle>
+<circle cx="293.22" cy="388.90" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 5.121, 16.9</title></circle>
+<path d="M122.90 395.24 L176.10 387.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.10 387.50 L293.24 390.70" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.90" cy="395.24" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 1.282, 16.11</title></circle>
+<circle cx="176.10" cy="387.50" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 2.481, 17.07</title></circle>
+<circle cx="293.24" cy="390.70" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 5.122, 16.67</title></circle>
+<path d="M122.88 394.04 L176.07 389.07" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.07 389.07 L293.62 390.15" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.88" cy="394.04" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 1.282, 16.26</title></circle>
+<circle cx="176.07" cy="389.07" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 2.481, 16.88</title></circle>
+<circle cx="293.62" cy="390.15" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 5.13, 16.74</title></circle>
+<text x="28" y="562" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="28" y="601" font-size="14" >完成吞吐（请求/s）</text>
+<path d="M66 765 h239 M66 611 v154" stroke="#dfe6ee"/>
+<text x="60" y="769" font-size="10" text-anchor="end">0</text>
+<text x="66" y="781" font-size="10" text-anchor="middle">0</text>
+<path d="M66 688.0 h239 M185.5 611 v154" stroke="#dfe6ee"/>
+<text x="60" y="692.0" font-size="10" text-anchor="end">1.27</text>
+<text x="185.5" y="781" font-size="10" text-anchor="middle">2.69</text>
+<path d="M66 611 h239 M305 611 v154" stroke="#dfe6ee"/>
+<text x="60" y="615" font-size="10" text-anchor="end">2.55</text>
+<text x="305" y="781" font-size="10" text-anchor="middle">5.39</text>
+<path d="M122.89 686.72 L176.15 627.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.15 627.50 L293.43 637.10" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.89" cy="686.72" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 1.282, 1.294</title></circle>
+<circle cx="176.15" cy="627.50" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 2.483, 2.273</title></circle>
+<circle cx="293.43" cy="637.10" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 5.126, 2.114</title></circle>
+<path d="M122.87 686.76 L176.08 627.79" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.08 627.79 L293.22 637.18" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.87" cy="686.76" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 1.282, 1.293</title></circle>
+<circle cx="176.08" cy="627.79" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 2.481, 2.268</title></circle>
+<circle cx="293.22" cy="637.18" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 5.121, 2.113</title></circle>
+<path d="M122.90 686.84 L176.10 648.95" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.10 648.95 L293.24 647.02" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.90" cy="686.84" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 1.282, 1.292</title></circle>
+<circle cx="176.10" cy="648.95" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 2.481, 1.918</title></circle>
+<circle cx="293.24" cy="647.02" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 5.122, 1.95</title></circle>
+<path d="M122.88 686.87 L176.07 648.21" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.07 648.21 L293.62 646.48" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.88" cy="686.87" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 1.282, 1.291</title></circle>
+<circle cx="176.07" cy="648.21" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 2.481, 1.931</title></circle>
+<circle cx="293.62" cy="646.48" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 5.13, 1.959</title></circle>
+<text x="28" y="802" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="28" y="841" font-size="14" >SLO 有效吞吐（请求/s）</text>
+<path d="M66 1005 h239 M66 851 v154" stroke="#dfe6ee"/>
+<text x="60" y="1009" font-size="10" text-anchor="end">0</text>
+<text x="66" y="1021" font-size="10" text-anchor="middle">0</text>
+<path d="M66 928.0 h239 M185.5 851 v154" stroke="#dfe6ee"/>
+<text x="60" y="932.0" font-size="10" text-anchor="end">1.03</text>
+<text x="185.5" y="1021" font-size="10" text-anchor="middle">2.69</text>
+<path d="M66 851 h239 M305 851 v154" stroke="#dfe6ee"/>
+<text x="60" y="855" font-size="10" text-anchor="end">2.07</text>
+<text x="305" y="1021" font-size="10" text-anchor="middle">5.39</text>
+<path d="M122.89 908.66 L176.15 867.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.15 867.50 L293.43 980.40" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.89" cy="908.66" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 1.282, 1.294</title></circle>
+<circle cx="176.15" cy="867.50" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 2.483, 1.847</title></circle>
+<circle cx="293.43" cy="980.40" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 5.126, 0.3303</title></circle>
+<path d="M122.87 908.70 L176.08 867.79" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.08 867.79 L293.22 980.42" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.87" cy="908.70" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 1.282, 1.293</title></circle>
+<circle cx="176.08" cy="867.79" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 2.481, 1.843</title></circle>
+<circle cx="293.22" cy="980.42" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 5.121, 0.3301</title></circle>
+<path d="M122.90 913.31 L176.10 969.29" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M176.10 969.29 L293.24 977.77" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="122.90" cy="913.31" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 1.282, 1.231</title></circle>
+<circle cx="176.10" cy="969.29" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 2.481, 0.4796</title></circle>
+<circle cx="293.24" cy="977.77" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 5.122, 0.3657</title></circle>
+<path d="M122.88 911.85 L176.07 969.06" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M176.07 969.06 L293.62 979.93" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="122.88" cy="911.85" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 1.282, 1.251</title></circle>
+<circle cx="176.07" cy="969.06" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 2.481, 0.4826</title></circle>
+<circle cx="293.62" cy="979.93" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 5.13, 0.3367</title></circle>
+<text x="28" y="1042" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="348" y="95" font-size="17" >OASST／混合输出</text>
+<text x="348" y="121" font-size="14" >可见文本 TTFT P95（ms）</text>
+<path d="M386 285 h239 M386 131 v154" stroke="#dfe6ee"/>
+<text x="380" y="289" font-size="10" text-anchor="end">0</text>
+<text x="386" y="301" font-size="10" text-anchor="middle">0</text>
+<path d="M386 208.0 h239 M505.5 131 v154" stroke="#dfe6ee"/>
+<text x="380" y="212.0" font-size="10" text-anchor="end">1.07e+04</text>
+<text x="505.5" y="301" font-size="10" text-anchor="middle">1.3</text>
+<path d="M386 131 h239 M625 131 v154" stroke="#dfe6ee"/>
+<text x="380" y="135" font-size="10" text-anchor="end">2.14e+04</text>
+<text x="625" y="301" font-size="10" text-anchor="middle">2.61</text>
+<path d="M464.38 279.47 L503.65 264.00" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.65 264.00 L613.61 189.47" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.38" cy="279.47" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 0.8544, 769.5</title></circle>
+<circle cx="503.65" cy="264.00" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 1.282, 2924</title></circle>
+<circle cx="613.61" cy="189.47" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 2.481, 1.33e+04</title></circle>
+<path d="M464.41 279.67 L503.61 264.03" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.61 264.03 L613.62 192.54" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.41" cy="279.67" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 0.8547, 741.9</title></circle>
+<circle cx="503.61" cy="264.03" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 1.282, 2920</title></circle>
+<circle cx="613.62" cy="192.54" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 2.481, 1.287e+04</title></circle>
+<path d="M464.41 274.28 L503.55 265.19" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.55 265.19 L613.44 149.80" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.41" cy="274.28" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 0.8547, 1492</title></circle>
+<circle cx="503.55" cy="265.19" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 1.281, 2758</title></circle>
+<circle cx="613.44" cy="149.80" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 2.479, 1.882e+04</title></circle>
+<path d="M464.40 274.36 L503.56 265.07" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.56 265.07 L613.60 147.50" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.40" cy="274.36" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 0.8546, 1481</title></circle>
+<circle cx="503.56" cy="265.07" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 1.281, 2775</title></circle>
+<circle cx="613.60" cy="147.50" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 2.481, 1.914e+04</title></circle>
+<text x="348" y="322" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="348" y="361" font-size="14" >解码帧 TPOT P95（ms）</text>
+<path d="M386 525 h239 M386 371 v154" stroke="#dfe6ee"/>
+<text x="380" y="529" font-size="10" text-anchor="end">0</text>
+<text x="386" y="541" font-size="10" text-anchor="middle">0</text>
+<path d="M386 448.0 h239 M505.5 371 v154" stroke="#dfe6ee"/>
+<text x="380" y="452.0" font-size="10" text-anchor="end">9.45</text>
+<text x="505.5" y="541" font-size="10" text-anchor="middle">1.3</text>
+<path d="M386 371 h239 M625 371 v154" stroke="#dfe6ee"/>
+<text x="380" y="375" font-size="10" text-anchor="end">18.9</text>
+<text x="625" y="541" font-size="10" text-anchor="middle">2.61</text>
+<path d="M464.38 394.06 L503.65 389.19" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.65 389.19 L613.61 393.77" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.38" cy="394.06" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 0.8544, 16.07</title></circle>
+<circle cx="503.65" cy="389.19" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 1.282, 16.66</title></circle>
+<circle cx="613.61" cy="393.77" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 2.481, 16.1</title></circle>
+<path d="M464.41 394.81 L503.61 389.56" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.61 389.56 L613.62 394.91" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.41" cy="394.81" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 0.8547, 15.98</title></circle>
+<circle cx="503.61" cy="389.56" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 1.282, 16.62</title></circle>
+<circle cx="613.62" cy="394.91" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 2.481, 15.96</title></circle>
+<path d="M464.41 394.89 L503.55 396.00" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.55 396.00 L613.44 389.53" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.41" cy="394.89" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 0.8547, 15.97</title></circle>
+<circle cx="503.55" cy="396.00" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 1.281, 15.83</title></circle>
+<circle cx="613.44" cy="389.53" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 2.479, 16.62</title></circle>
+<path d="M464.40 394.06 L503.56 398.05" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.56 398.05 L613.60 387.50" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.40" cy="394.06" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 0.8546, 16.07</title></circle>
+<circle cx="503.56" cy="398.05" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 1.281, 15.58</title></circle>
+<circle cx="613.60" cy="387.50" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 2.481, 16.87</title></circle>
+<text x="348" y="562" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="348" y="601" font-size="14" >完成吞吐（请求/s）</text>
+<path d="M386 765 h239 M386 611 v154" stroke="#dfe6ee"/>
+<text x="380" y="769" font-size="10" text-anchor="end">0</text>
+<text x="386" y="781" font-size="10" text-anchor="middle">0</text>
+<path d="M386 688.0 h239 M505.5 611 v154" stroke="#dfe6ee"/>
+<text x="380" y="692.0" font-size="10" text-anchor="end">0.916</text>
+<text x="505.5" y="781" font-size="10" text-anchor="middle">1.3</text>
+<path d="M386 611 h239 M625 611 v154" stroke="#dfe6ee"/>
+<text x="380" y="615" font-size="10" text-anchor="end">1.83</text>
+<text x="625" y="781" font-size="10" text-anchor="middle">2.61</text>
+<path d="M464.38 692.39 L503.65 659.42" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.65 659.42 L613.61 629.10" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.38" cy="692.39" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 0.8544, 0.8641</title></circle>
+<circle cx="503.65" cy="659.42" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 1.282, 1.257</title></circle>
+<circle cx="613.61" cy="629.10" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 2.481, 1.617</title></circle>
+<path d="M464.41 692.38 L503.61 659.48" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.61 659.48 L613.62 627.50" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.41" cy="692.38" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 0.8547, 0.8643</title></circle>
+<circle cx="503.61" cy="659.48" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 1.282, 1.256</title></circle>
+<circle cx="613.62" cy="627.50" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 2.481, 1.636</title></circle>
+<path d="M464.41 692.46 L503.55 656.54" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.55 656.54 L613.44 645.96" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.41" cy="692.46" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 0.8547, 0.8633</title></circle>
+<circle cx="503.55" cy="656.54" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 1.281, 1.291</title></circle>
+<circle cx="613.44" cy="645.96" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 2.479, 1.417</title></circle>
+<path d="M464.40 692.47 L503.56 656.55" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.56 656.55 L613.60 646.74" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.40" cy="692.47" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 0.8546, 0.8632</title></circle>
+<circle cx="503.56" cy="656.55" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 1.281, 1.291</title></circle>
+<circle cx="613.60" cy="646.74" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 2.481, 1.407</title></circle>
+<text x="348" y="802" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="348" y="841" font-size="14" >SLO 有效吞吐（请求/s）</text>
+<path d="M386 1005 h239 M386 851 v154" stroke="#dfe6ee"/>
+<text x="380" y="1009" font-size="10" text-anchor="end">0</text>
+<text x="386" y="1021" font-size="10" text-anchor="middle">0</text>
+<path d="M386 928.0 h239 M505.5 851 v154" stroke="#dfe6ee"/>
+<text x="380" y="932.0" font-size="10" text-anchor="end">0.655</text>
+<text x="505.5" y="1021" font-size="10" text-anchor="middle">1.3</text>
+<path d="M386 851 h239 M625 851 v154" stroke="#dfe6ee"/>
+<text x="380" y="855" font-size="10" text-anchor="end">1.31</text>
+<text x="625" y="1021" font-size="10" text-anchor="middle">2.61</text>
+<path d="M464.38 903.43 L503.65 873.45" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.65 873.45 L613.61 966.39" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.38" cy="903.43" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / low: 0.8544, 0.8641</title></circle>
+<circle cx="503.65" cy="873.45" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / shoulder: 1.282, 1.119</title></circle>
+<circle cx="613.61" cy="966.39" r="4" fill="#b84c15"><title>oasst-service-hold-01 / entry-replay / overload: 2.481, 0.3285</title></circle>
+<path d="M464.41 903.41 L503.61 871.22" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.61 871.22 L613.62 965.93" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.41" cy="903.41" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / low: 0.8547, 0.8643</title></circle>
+<circle cx="503.61" cy="871.22" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / shoulder: 1.282, 1.138</title></circle>
+<circle cx="613.62" cy="965.93" r="4" fill="#1b62a5"><title>oasst-service-hold-01 / local-cost / overload: 2.481, 0.3324</title></circle>
+<path d="M464.41 906.69 L503.55 867.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M503.55 867.50 L613.44 978.98" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="464.41" cy="906.69" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / low: 0.8547, 0.8364</title></circle>
+<circle cx="503.55" cy="867.50" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / shoulder: 1.281, 1.17</title></circle>
+<circle cx="613.44" cy="978.98" r="4" fill="#b84c15"><title>oasst-service-hold-02 / entry-replay / overload: 2.479, 0.2214</title></circle>
+<path d="M464.40 906.71 L503.56 867.51" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M503.56 867.51 L613.60 979.15" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="464.40" cy="906.71" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / low: 0.8546, 0.8363</title></circle>
+<circle cx="503.56" cy="867.51" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / shoulder: 1.281, 1.17</title></circle>
+<circle cx="613.60" cy="979.15" r="4" fill="#1b62a5"><title>oasst-service-hold-02 / local-cost / overload: 2.481, 0.2199</title></circle>
+<text x="348" y="1042" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="668" y="95" font-size="17" >百炼／短输出</text>
+<text x="668" y="121" font-size="14" >可见文本 TTFT P95（ms）</text>
+<path d="M706 285 h239 M706 131 v154" stroke="#dfe6ee"/>
+<text x="700" y="289" font-size="10" text-anchor="end">0</text>
+<text x="706" y="301" font-size="10" text-anchor="middle">0</text>
+<path d="M706 208.0 h239 M825.5 131 v154" stroke="#dfe6ee"/>
+<text x="700" y="212.0" font-size="10" text-anchor="end">2.77e+04</text>
+<text x="825.5" y="301" font-size="10" text-anchor="middle">3.92</text>
+<path d="M706 131 h239 M945 131 v154" stroke="#dfe6ee"/>
+<text x="700" y="135" font-size="10" text-anchor="end">5.53e+04</text>
+<text x="945" y="301" font-size="10" text-anchor="middle">7.84</text>
+<path d="M762.91 246.09 L816.08 164.41" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M816.08 164.41 L933.62 147.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="762.91" cy="246.09" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 1.398e+04</title></circle>
+<circle cx="816.08" cy="164.41" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.613, 4.333e+04</title></circle>
+<circle cx="933.62" cy="147.50" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.47, 4.941e+04</title></circle>
+<path d="M762.95 245.65 L816.15 164.45" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M816.15 164.45 L933.46 147.54" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="762.95" cy="245.65" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.869, 1.414e+04</title></circle>
+<circle cx="816.15" cy="164.45" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 4.332e+04</title></circle>
+<circle cx="933.46" cy="147.54" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.465, 4.939e+04</title></circle>
+<path d="M727.78 281.46 L748.15 279.80" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M748.15 279.80 L793.14 228.99" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="727.78" cy="281.46" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7149, 1271</title></circle>
+<circle cx="748.15" cy="279.80" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / shoulder: 1.383, 1869</title></circle>
+<circle cx="793.14" cy="228.99" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.86, 2.013e+04</title></circle>
+<path d="M727.78 281.49 L748.16 279.74" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M748.16 279.74 L793.14 229.19" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="727.78" cy="281.49" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.7149, 1262</title></circle>
+<circle cx="748.16" cy="279.74" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / shoulder: 1.384, 1890</title></circle>
+<circle cx="793.14" cy="229.19" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.86, 2.006e+04</title></circle>
+<text x="668" y="322" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="668" y="361" font-size="14" >解码帧 TPOT P95（ms）</text>
+<path d="M706 525 h239 M706 371 v154" stroke="#dfe6ee"/>
+<text x="700" y="529" font-size="10" text-anchor="end">0</text>
+<text x="706" y="541" font-size="10" text-anchor="middle">0</text>
+<path d="M706 448.0 h239 M825.5 371 v154" stroke="#dfe6ee"/>
+<text x="700" y="452.0" font-size="10" text-anchor="end">10</text>
+<text x="825.5" y="541" font-size="10" text-anchor="middle">3.92</text>
+<path d="M706 371 h239 M945 371 v154" stroke="#dfe6ee"/>
+<text x="700" y="375" font-size="10" text-anchor="end">20.1</text>
+<text x="945" y="541" font-size="10" text-anchor="middle">7.84</text>
+<path d="M762.91 399.96 L816.08 394.86" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M816.08 394.86 L933.62 400.59" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="762.91" cy="399.96" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 16.3</title></circle>
+<circle cx="816.08" cy="394.86" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.613, 16.97</title></circle>
+<circle cx="933.62" cy="400.59" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.47, 16.22</title></circle>
+<path d="M762.95 399.94 L816.15 394.38" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M816.15 394.38 L933.46 400.34" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="762.95" cy="399.94" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.869, 16.31</title></circle>
+<circle cx="816.15" cy="394.38" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 17.03</title></circle>
+<circle cx="933.46" cy="400.34" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.465, 16.26</title></circle>
+<path d="M727.78 387.50 L748.15 400.34" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M748.15 400.34 L793.14 395.49" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="727.78" cy="387.50" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7149, 17.93</title></circle>
+<circle cx="748.15" cy="400.34" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / shoulder: 1.383, 16.26</title></circle>
+<circle cx="793.14" cy="395.49" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.86, 16.89</title></circle>
+<path d="M727.78 388.07 L748.16 401.35" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M748.16 401.35 L793.14 395.41" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="727.78" cy="388.07" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.7149, 17.85</title></circle>
+<circle cx="748.16" cy="401.35" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / shoulder: 1.384, 16.12</title></circle>
+<circle cx="793.14" cy="395.41" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.86, 16.9</title></circle>
+<text x="668" y="562" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="668" y="601" font-size="14" >完成吞吐（请求/s）</text>
+<path d="M706 765 h239 M706 611 v154" stroke="#dfe6ee"/>
+<text x="700" y="769" font-size="10" text-anchor="end">0</text>
+<text x="706" y="781" font-size="10" text-anchor="middle">0</text>
+<path d="M706 688.0 h239 M825.5 611 v154" stroke="#dfe6ee"/>
+<text x="700" y="692.0" font-size="10" text-anchor="end">0.993</text>
+<text x="825.5" y="781" font-size="10" text-anchor="middle">3.92</text>
+<path d="M706 611 h239 M945 611 v154" stroke="#dfe6ee"/>
+<text x="700" y="615" font-size="10" text-anchor="end">1.99</text>
+<text x="945" y="781" font-size="10" text-anchor="middle">7.84</text>
+<path d="M762.91 649.48 L816.08 660.49" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M816.08 660.49 L933.62 649.35" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="762.91" cy="649.48" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 1.49</title></circle>
+<circle cx="816.08" cy="660.49" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.613, 1.348</title></circle>
+<circle cx="933.62" cy="649.35" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.47, 1.492</title></circle>
+<path d="M762.95 649.84 L816.15 660.52" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M816.15 660.52 L933.46 649.30" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="762.95" cy="649.84" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.869, 1.485</title></circle>
+<circle cx="816.15" cy="660.52" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 1.348</title></circle>
+<circle cx="933.46" cy="649.30" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.465, 1.492</title></circle>
+<path d="M727.78 709.53 L748.15 658.46" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M748.15 658.46 L793.14 627.69" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="727.78" cy="709.53" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7149, 0.7155</title></circle>
+<circle cx="748.15" cy="658.46" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / shoulder: 1.383, 1.374</title></circle>
+<circle cx="793.14" cy="627.69" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.86, 1.771</title></circle>
+<path d="M727.78 709.52 L748.16 658.50" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M748.16 658.50 L793.14 627.50" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="727.78" cy="709.52" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.7149, 0.7157</title></circle>
+<circle cx="748.16" cy="658.50" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / shoulder: 1.384, 1.374</title></circle>
+<circle cx="793.14" cy="627.50" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.86, 1.774</title></circle>
+<text x="668" y="802" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="668" y="841" font-size="14" >SLO 有效吞吐（请求/s）</text>
+<path d="M706 1005 h239 M706 851 v154" stroke="#dfe6ee"/>
+<text x="700" y="1009" font-size="10" text-anchor="end">0</text>
+<text x="706" y="1021" font-size="10" text-anchor="middle">0</text>
+<path d="M706 928.0 h239 M825.5 851 v154" stroke="#dfe6ee"/>
+<text x="700" y="932.0" font-size="10" text-anchor="end">0.754</text>
+<text x="825.5" y="1021" font-size="10" text-anchor="middle">3.92</text>
+<path d="M706 851 h239 M945 851 v154" stroke="#dfe6ee"/>
+<text x="700" y="855" font-size="10" text-anchor="end">1.51</text>
+<text x="945" y="1021" font-size="10" text-anchor="middle">7.84</text>
+<path d="M762.91 990.73 L816.08 999.26" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M816.08 999.26 L933.62 998.65" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="762.91" cy="990.73" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 0.1397</title></circle>
+<circle cx="816.08" cy="999.26" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.613, 0.05617</title></circle>
+<circle cx="933.62" cy="998.65" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.47, 0.06215</title></circle>
+<path d="M762.95 990.77 L816.15 999.26" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M816.15 999.26 L933.46 998.65" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="762.95" cy="990.77" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.869, 0.1393</title></circle>
+<circle cx="816.15" cy="999.26" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 0.05615</title></circle>
+<circle cx="933.46" cy="998.65" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.465, 0.06219</title></circle>
+<path d="M727.78 931.88 L748.15 867.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M748.15 867.50 L793.14 982.38" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="727.78" cy="931.88" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7149, 0.7155</title></circle>
+<circle cx="748.15" cy="867.50" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / shoulder: 1.383, 1.346</title></circle>
+<circle cx="793.14" cy="982.38" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.86, 0.2214</title></circle>
+<path d="M727.78 931.87 L748.16 867.55" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M748.16 867.55 L793.14 982.35" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="727.78" cy="931.87" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.7149, 0.7157</title></circle>
+<circle cx="748.16" cy="867.55" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / shoulder: 1.384, 1.345</title></circle>
+<circle cx="793.14" cy="982.35" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.86, 0.2217</title></circle>
+<text x="668" y="1042" font-size="11" >可比 6/6 对；失败 0，输出不一致 0</text>
+<text x="988" y="95" font-size="17" >百炼／混合输出</text>
+<text x="988" y="121" font-size="14" >可见文本 TTFT P95（ms）</text>
+<path d="M1026 285 h239 M1026 131 v154" stroke="#dfe6ee"/>
+<text x="1020" y="289" font-size="10" text-anchor="end">0</text>
+<text x="1026" y="301" font-size="10" text-anchor="middle">0</text>
+<path d="M1026 208.0 h239 M1145.5 131 v154" stroke="#dfe6ee"/>
+<text x="1020" y="212.0" font-size="10" text-anchor="end">3.72e+04</text>
+<text x="1145.5" y="301" font-size="10" text-anchor="middle">3.92</text>
+<path d="M1026 131 h239 M1265 131 v154" stroke="#dfe6ee"/>
+<text x="1020" y="135" font-size="10" text-anchor="end">7.43e+04</text>
+<text x="1265" y="301" font-size="10" text-anchor="middle">7.84</text>
+<path d="M1082.93 207.30 L1136.19 175.25" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M1136.19 175.25 L1253.62 147.67" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="1082.93" cy="207.30" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 3.749e+04</title></circle>
+<circle cx="1136.19" cy="175.25" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.616, 5.296e+04</title></circle>
+<circle cx="1253.62" cy="147.67" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.469, 6.626e+04</title></circle>
+<path d="M1082.94 207.83 L1136.17 174.54" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M1136.17 174.54 L1253.35 147.50" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="1082.94" cy="207.83" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.868, 3.724e+04</title></circle>
+<circle cx="1136.17" cy="174.54" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 5.33e+04</title></circle>
+<circle cx="1253.35" cy="147.50" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.46, 6.635e+04</title></circle>
+<circle cx="1047.78" cy="281.61" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7148, 1635</title></circle>
+<circle cx="1113.13" cy="217.40" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.859, 3.262e+04</title></circle>
+<circle cx="1047.79" cy="281.41" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.715, 1732</title></circle>
+<circle cx="1113.14" cy="218.00" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.859, 3.233e+04</title></circle>
+<text x="988" y="322" font-size="11" >可比 5/6 对；失败 1，输出不一致 0</text>
+<text x="988" y="361" font-size="14" >解码帧 TPOT P95（ms）</text>
+<path d="M1026 525 h239 M1026 371 v154" stroke="#dfe6ee"/>
+<text x="1020" y="529" font-size="10" text-anchor="end">0</text>
+<text x="1026" y="541" font-size="10" text-anchor="middle">0</text>
+<path d="M1026 448.0 h239 M1145.5 371 v154" stroke="#dfe6ee"/>
+<text x="1020" y="452.0" font-size="10" text-anchor="end">9.66</text>
+<text x="1145.5" y="541" font-size="10" text-anchor="middle">3.92</text>
+<path d="M1026 371 h239 M1265 371 v154" stroke="#dfe6ee"/>
+<text x="1020" y="375" font-size="10" text-anchor="end">19.3</text>
+<text x="1265" y="541" font-size="10" text-anchor="middle">7.84</text>
+<path d="M1082.93 390.16 L1136.19 395.25" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M1136.19 395.25 L1253.62 394.75" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="1082.93" cy="390.16" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 16.91</title></circle>
+<circle cx="1136.19" cy="395.25" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.616, 16.27</title></circle>
+<circle cx="1253.62" cy="394.75" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.469, 16.34</title></circle>
+<path d="M1082.94 390.74 L1136.17 394.75" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M1136.17 394.75 L1253.35 393.58" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="1082.94" cy="390.74" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.868, 16.84</title></circle>
+<circle cx="1136.17" cy="394.75" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 16.34</title></circle>
+<circle cx="1253.35" cy="393.58" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.46, 16.48</title></circle>
+<circle cx="1047.78" cy="387.50" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7148, 17.25</title></circle>
+<circle cx="1113.13" cy="395.75" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.859, 16.21</title></circle>
+<circle cx="1047.79" cy="397.72" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.715, 15.96</title></circle>
+<circle cx="1113.14" cy="397.57" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.859, 15.98</title></circle>
+<text x="988" y="562" font-size="11" >可比 5/6 对；失败 1，输出不一致 0</text>
+<text x="988" y="601" font-size="14" >完成吞吐（请求/s）</text>
+<path d="M1026 765 h239 M1026 611 v154" stroke="#dfe6ee"/>
+<text x="1020" y="769" font-size="10" text-anchor="end">0</text>
+<text x="1026" y="781" font-size="10" text-anchor="middle">0</text>
+<path d="M1026 688.0 h239 M1145.5 611 v154" stroke="#dfe6ee"/>
+<text x="1020" y="692.0" font-size="10" text-anchor="end">0.802</text>
+<text x="1145.5" y="781" font-size="10" text-anchor="middle">3.92</text>
+<path d="M1026 611 h239 M1265 611 v154" stroke="#dfe6ee"/>
+<text x="1020" y="615" font-size="10" text-anchor="end">1.6</text>
+<text x="1265" y="781" font-size="10" text-anchor="middle">7.84</text>
+<path d="M1082.93 661.31 L1136.19 651.68" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M1136.19 651.68 L1253.62 652.50" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="1082.93" cy="661.31" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 1.08</title></circle>
+<circle cx="1136.19" cy="651.68" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.616, 1.18</title></circle>
+<circle cx="1253.62" cy="652.50" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.469, 1.172</title></circle>
+<path d="M1082.94 661.03 L1136.17 652.18" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M1136.17 652.18 L1253.35 652.61" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="1082.94" cy="661.03" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.868, 1.083</title></circle>
+<circle cx="1136.17" cy="652.18" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 1.175</title></circle>
+<circle cx="1253.35" cy="652.61" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.46, 1.171</title></circle>
+<circle cx="1047.78" cy="696.25" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7148, 0.7161</title></circle>
+<circle cx="1113.13" cy="628.17" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.859, 1.425</title></circle>
+<circle cx="1047.79" cy="696.26" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.715, 0.716</title></circle>
+<circle cx="1113.14" cy="627.50" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.859, 1.432</title></circle>
+<text x="988" y="802" font-size="11" >可比 5/6 对；失败 1，输出不一致 0</text>
+<text x="988" y="841" font-size="14" >SLO 有效吞吐（请求/s）</text>
+<path d="M1026 1005 h239 M1026 851 v154" stroke="#dfe6ee"/>
+<text x="1020" y="1009" font-size="10" text-anchor="end">0</text>
+<text x="1026" y="1021" font-size="10" text-anchor="middle">0</text>
+<path d="M1026 928.0 h239 M1145.5 851 v154" stroke="#dfe6ee"/>
+<text x="1020" y="932.0" font-size="10" text-anchor="end">0.5</text>
+<text x="1145.5" y="1021" font-size="10" text-anchor="middle">3.92</text>
+<path d="M1026 851 h239 M1265 851 v154" stroke="#dfe6ee"/>
+<text x="1020" y="855" font-size="10" text-anchor="end">1</text>
+<text x="1265" y="1021" font-size="10" text-anchor="middle">7.84</text>
+<path d="M1082.93 999.80 L1136.19 999.32" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<path d="M1136.19 999.32 L1253.62 999.36" stroke="#b84c15" stroke-width="1.5" stroke-dasharray="7 4"/>
+<circle cx="1082.93" cy="999.80" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / low: 1.868, 0.03375</title></circle>
+<circle cx="1136.19" cy="999.32" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / shoulder: 3.616, 0.03689</title></circle>
+<circle cx="1253.62" cy="999.36" r="4" fill="#b84c15"><title>qwen_thinking_blksz_16-2-reserved / entry-replay / overload: 7.469, 0.03662</title></circle>
+<path d="M1082.94 1001.53 L1136.17 999.34" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<path d="M1136.17 999.34 L1253.35 999.37" stroke="#1b62a5" stroke-width="1.5" stroke-dasharray=""/>
+<circle cx="1082.94" cy="1001.53" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / low: 1.868, 0.02256</title></circle>
+<circle cx="1136.17" cy="999.34" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / shoulder: 3.615, 0.03672</title></circle>
+<circle cx="1253.35" cy="999.37" r="4" fill="#1b62a5"><title>qwen_thinking_blksz_16-2-reserved / local-cost / overload: 7.46, 0.03658</title></circle>
+<circle cx="1047.78" cy="894.72" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / low: 0.7148, 0.7161</title></circle>
+<circle cx="1113.13" cy="993.57" r="4" fill="#b84c15"><title>qwen_traceB_blksz_16-90-reserved / entry-replay / overload: 2.859, 0.07423</title></circle>
+<circle cx="1047.79" cy="894.73" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / low: 0.715, 0.716</title></circle>
+<circle cx="1113.14" cy="993.51" r="4" fill="#1b62a5"><title>qwen_traceB_blksz_16-90-reserved / local-cost / overload: 2.859, 0.07459</title></circle>
+<text x="988" y="1042" font-size="11" >可比 5/6 对；失败 1，输出不一致 0</text>
+<text x="25" y="1097" font-size="12" >有限开环回放；各面板刻度按该组数据设置。完整失败记录和单请求尾部见试验汇总。</text>
+</g></svg>

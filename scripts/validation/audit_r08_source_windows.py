@@ -3,6 +3,7 @@ import csv
 import gzip
 from io import StringIO
 import json
+import re
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -12,7 +13,8 @@ INPUT=ROOT/'docs/evidence'
 
 def streams():
     for p in sorted(INPUT.iterdir()):
-        if p.name.startswith('r08-') or p.suffix not in ('.csv','.json','.jsonl','.zip','.gz'):
+        stage = re.match(r'^r(\d+)-', p.name)
+        if (stage and int(stage[1]) >= 8) or p.suffix not in ('.csv','.json','.jsonl','.zip','.gz'):
             continue
         if p.suffix=='.zip':
             with ZipFile(p) as z:

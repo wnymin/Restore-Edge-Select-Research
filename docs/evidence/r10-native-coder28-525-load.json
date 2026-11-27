@@ -1,0 +1,49 @@
+{
+  "arms": [
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 1.23905625,
+      "p95_observation_delay_ms": 8.8056,
+      "receipt_sha256": "993d4448f571e67f33868a931be72f3d2a25f041daac32a3085b4be2d5f137dd",
+      "response_mean_ms": 1191.128965625,
+      "response_p95_ms": 2516.9735,
+      "run": "coder28-525-first",
+      "source_schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574",
+      "window": {
+        "average_outstanding": 1.3924415187499095,
+        "completions_per_s_in_entire_window": 1.1690098712520842,
+        "drain_after_last_arrival_ms": 986.6296,
+        "drain_elapsed_ms": 82120.7779,
+        "fraction_time_any_request_outstanding": 0.7152357710435181,
+        "max_outstanding": 5,
+        "offered_arrivals_per_s": 1.170900317443771,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 81134.1483
+      }
+    },
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 1.2173833333333333,
+      "p95_observation_delay_ms": 9.7671,
+      "receipt_sha256": "6ca96390225f33026a72e2de4f61568670a02c187aa06dc2441da793cfcfdea4",
+      "response_mean_ms": 1170.411084375,
+      "response_p95_ms": 2447.1514,
+      "run": "coder28-525-second",
+      "source_schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574",
+      "window": {
+        "average_outstanding": 1.3681027747084238,
+        "completions_per_s_in_entire_window": 1.1689079101972033,
+        "drain_after_last_arrival_ms": 985.2772,
+        "drain_elapsed_ms": 82127.9411,
+        "fraction_time_any_request_outstanding": 0.7105211724344567,
+        "max_outstanding": 5,
+        "offered_arrivals_per_s": 1.1707774361102778,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 81142.6639
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

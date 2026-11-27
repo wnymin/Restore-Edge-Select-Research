@@ -1,0 +1,760 @@
+{
+  "arm_order_seed": 8139702,
+  "blocks": [
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 25,
+        "1536": 25,
+        "512": 26
+      },
+      "family": "bailian",
+      "id": "qwen_coder_blksz_16-46-reserved",
+      "payload_bytes": 1667235840,
+      "raw_rows": [
+        16192,
+        16544
+      ],
+      "raw_window_sha256": "5f2e6cd2eaa8a8d535e909f6dab814d91420dfb8473b7380bada1b9f4086d65d",
+      "referenced_from_multiple_choices": 28,
+      "requests": 96,
+      "schedule_sha256": "5e96d40b0ac472714075dbca70b30882b6e2c2942149ccabeca470f623330d7a",
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_sha256": "df3c506c0852375cff038ebd321414c10268fbcd92730fcf363c23cfae8fa96c",
+      "split": "reserved",
+      "unique_checkpoints": 24,
+      "unique_kv_objects": 24,
+      "wire_sha256": "79a1db2fcffdf3cad8d3b6f1e68c099cb9a44b2b7b91d61058ad4c03bd039a83"
+    },
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 28,
+        "1536": 28,
+        "512": 34
+      },
+      "family": "bailian",
+      "id": "qwen_coder_blksz_16-51-reserved",
+      "payload_bytes": 1736704000,
+      "raw_rows": [
+        17952,
+        18304
+      ],
+      "raw_window_sha256": "1531964f203280d6db92f440680c4d794e77d3bbfba6beadbbc913f743259cfa",
+      "referenced_from_multiple_choices": 37,
+      "requests": 96,
+      "schedule_sha256": "8b78714fe416bd854f549bfed3266937fc9dcde38d306c310d4cf0c28be6d7f4",
+      "source": "qwen_coder_blksz_16.jsonl",
+      "source_sha256": "7956aef0bf0e2fb9cc47d9148fd3985cdf06769cebc83626652c7575f58827cb",
+      "split": "reserved",
+      "unique_checkpoints": 25,
+      "unique_kv_objects": 25,
+      "wire_sha256": "a32297e0bbe062e040bcd080f93c5598090671824a9a0054a45cf8588ce9b6fc"
+    },
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 64,
+        "1536": 55,
+        "512": 67
+      },
+      "family": "bailian",
+      "id": "qwen_thinking_blksz_16-11-reserved",
+      "payload_bytes": 1597767680,
+      "raw_rows": [
+        3872,
+        4224
+      ],
+      "raw_window_sha256": "7ad550d6b4ed189dc0ead02b78f218ad16f66fe648d7d9ce314f7e6dff500867",
+      "referenced_from_multiple_choices": 26,
+      "requests": 96,
+      "schedule_sha256": "dbbbe7ee6aad1276f04974a4628ed1a2aabf5da7c7b9dc5e958c740e3c4f6ddb",
+      "source": "qwen_thinking_blksz_16.jsonl",
+      "source_sha256": "303a8397e787cd523eac7d2f2c46549a733325da675cb63011414766fdfcec0a",
+      "split": "reserved",
+      "unique_checkpoints": 23,
+      "unique_kv_objects": 23,
+      "wire_sha256": "9d5d379950078c1a206c3e9aa7a354b52818d698fa156b9b04d7c7c94d330828"
+    },
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 12,
+        "1536": 6,
+        "512": 42
+      },
+      "family": "bailian",
+      "id": "qwen_traceA_blksz_16-0-reserved",
+      "payload_bytes": 1945108480,
+      "raw_rows": [
+        0,
+        352
+      ],
+      "raw_window_sha256": "6f997493615b42492847b61db5f3b892df32645c893515be26f395fdf4c44f2c",
+      "referenced_from_multiple_choices": 17,
+      "requests": 96,
+      "schedule_sha256": "d9429d45fbe5ecaef296900d02f0a9bdfa0aa7bb7650a3c7e787be4e05dc1df7",
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_sha256": "aeae3431f3821cc92c51e77c967106f035eeeedd4d8c7a84dfa33224faa3b988",
+      "split": "reserved",
+      "unique_checkpoints": 28,
+      "unique_kv_objects": 28,
+      "wire_sha256": "72ce6e9326ab125f3ec54fb39d7b8831ca43d3c886ed77645c86d6320f5f1f24"
+    },
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 5,
+        "1536": 3,
+        "512": 36
+      },
+      "family": "bailian",
+      "id": "qwen_traceA_blksz_16-89-reserved",
+      "payload_bytes": 625213440,
+      "raw_rows": [
+        31328,
+        31680
+      ],
+      "raw_window_sha256": "f7f56053c63aed739ee96f0930a0cbc8cb5efe4e61bb0e635949321ca82483f0",
+      "referenced_from_multiple_choices": 14,
+      "requests": 96,
+      "schedule_sha256": "b58bf6b3c924ec9ab5ac0b961e2fbaa6fa4fcfe9713f56f5cc9121eab7c8c50d",
+      "source": "qwen_traceA_blksz_16.jsonl",
+      "source_sha256": "86ad0619d67b58ce9acf81fc947bd92ef24f32de2ea85026b4433f3b82c43bb9",
+      "split": "reserved",
+      "unique_checkpoints": 9,
+      "unique_kv_objects": 9,
+      "wire_sha256": "ed8e1ea58f27b30be4e19c904fe2b83c4af5109ec54c9c3f1e0b3ed51a4f9389"
+    },
+    {
+      "candidate_depths": {
+        "0": 96,
+        "1024": 5,
+        "1536": 3,
+        "512": 38
+      },
+      "family": "bailian",
+      "id": "qwen_traceB_blksz_16-346-reserved",
+      "payload_bytes": 1042022400,
+      "raw_rows": [
+        121792,
+        122144
+      ],
+      "raw_window_sha256": "016ac114bcd10d4ddcff2e4222ccb095e27eea637a69a4338d7d14b98540ab88",
+      "referenced_from_multiple_choices": 16,
+      "requests": 96,
+      "schedule_sha256": "4dc73e849169940d774915a7e825b40d889ad9e214569392dca737dcd466b246",
+      "source": "qwen_traceB_blksz_16.jsonl",
+      "source_sha256": "66cc276379ab2035191644b248728d41fb1ec9fb294d9297760ef94e2a50b5c2",
+      "split": "reserved",
+      "unique_checkpoints": 15,
+      "unique_kv_objects": 15,
+      "wire_sha256": "010d6f0529d9a0c50f8752e25436ea1551945e05f07ea612df93f771fd46d6b8"
+    },
+    {
+      "candidate_depths": {
+        "0": 64,
+        "1024": 1,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-hold-01",
+      "payload_bytes": 625213440,
+      "referenced_from_multiple_choices": 1,
+      "requests": 64,
+      "schedule_sha256": "8fa50b9a7db69d15ed6b8b140b7b5e52ab3c9277ca96cda25b710ec3c0e6cd46",
+      "source": "oasst1",
+      "source_sha256": "2dc3f566398bd414d68b2ac646bb860d0e7ef482f20cb051cb533b98316d2386",
+      "split": "holdout",
+      "unique_checkpoints": 9,
+      "unique_kv_objects": 9,
+      "wire_sha256": "9827627a6c200e824307e0d855e18e2492203afde305e3ace358a3ce54c2eae5"
+    },
+    {
+      "candidate_depths": {
+        "0": 64,
+        "1024": 1,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-hold-02",
+      "payload_bytes": 625213440,
+      "referenced_from_multiple_choices": 1,
+      "requests": 64,
+      "schedule_sha256": "dc41fa26712240ca2ace9eb22bd5840ca5145e761f5efed0547ecf378dbffb91",
+      "source": "oasst1",
+      "source_sha256": "2dc3f566398bd414d68b2ac646bb860d0e7ef482f20cb051cb533b98316d2386",
+      "split": "holdout",
+      "unique_checkpoints": 9,
+      "unique_kv_objects": 9,
+      "wire_sha256": "e99e0f91a027c11e638437bd856cfda2aa4e9e6bebf9c202435706a4715e1f1c"
+    },
+    {
+      "candidate_depths": {
+        "0": 64,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-hold-03",
+      "payload_bytes": 555745280,
+      "referenced_from_multiple_choices": 0,
+      "requests": 64,
+      "schedule_sha256": "e7ad3ae9ceea76847d400cd6d7f68ac4269ed638d2822e7ca118039474d0be12",
+      "source": "oasst1",
+      "source_sha256": "2dc3f566398bd414d68b2ac646bb860d0e7ef482f20cb051cb533b98316d2386",
+      "split": "holdout",
+      "unique_checkpoints": 8,
+      "unique_kv_objects": 8,
+      "wire_sha256": "98bf850b936b324af0e17ef03c5110abb38b691d059deda3f36a48fc78cdb884"
+    },
+    {
+      "candidate_depths": {
+        "0": 64,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-hold-04",
+      "payload_bytes": 555745280,
+      "referenced_from_multiple_choices": 0,
+      "requests": 64,
+      "schedule_sha256": "0aeaa8c6c4b602873a94638771396f6b876f780835ab036f8ef2ca86c5a40099",
+      "source": "oasst1",
+      "source_sha256": "2dc3f566398bd414d68b2ac646bb860d0e7ef482f20cb051cb533b98316d2386",
+      "split": "holdout",
+      "unique_checkpoints": 8,
+      "unique_kv_objects": 8,
+      "wire_sha256": "461f94f5d51c5757f16d55912dd027db75963cfc2b14d122b1110277f9602ae0"
+    },
+    {
+      "candidate_depths": {
+        "0": 64,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-hold-05",
+      "payload_bytes": 555745280,
+      "referenced_from_multiple_choices": 0,
+      "requests": 64,
+      "schedule_sha256": "e7dca0d2d4d0d255c7e5697ff7ecec4f1cce165f051af939d98b5b5ba6cd04f8",
+      "source": "oasst1",
+      "source_sha256": "2dc3f566398bd414d68b2ac646bb860d0e7ef482f20cb051cb533b98316d2386",
+      "split": "holdout",
+      "unique_checkpoints": 8,
+      "unique_kv_objects": 8,
+      "wire_sha256": "9478ce94de74aea74d55557fa64323fe593f96ec5ba9b18a57bc29dd039d9ef0"
+    },
+    {
+      "candidate_depths": {
+        "0": 64,
+        "1024": 1,
+        "512": 8
+      },
+      "family": "oasst",
+      "id": "oasst-hold-06",
+      "payload_bytes": 625213440,
+      "referenced_from_multiple_choices": 1,
+      "requests": 64,
+      "schedule_sha256": "d523f5035cdfa09dde921859b018d72c64879112dd4826069bf2805a15ae6cfd",
+      "source": "oasst1",
+      "source_sha256": "2dc3f566398bd414d68b2ac646bb860d0e7ef482f20cb051cb533b98316d2386",
+      "split": "holdout",
+      "unique_checkpoints": 9,
+      "unique_kv_objects": 9,
+      "wire_sha256": "95210226ffa48021f2cda9bef1f96656bb0894b1d5ed09edfdfcf2a81f1ead63"
+    }
+  ],
+  "membership_rule": "one hash-ordered window per Bailian source, then two hash-ordered leftovers; all six OASST holdouts",
+  "membership_salt": "r10-local-holdout-membership-v1",
+  "pairs_per_block": 5,
+  "reserved_not_primary": [
+    "qwen_thinking_blksz_16-2-reserved",
+    "qwen_traceB_blksz_16-90-reserved"
+  ],
+  "run_pairs": [
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-04",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-02",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-06",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-03",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-01",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-05",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "round": 1
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-06",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-05",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-01",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-03",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-04",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-02",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "round": 2
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-06",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-02",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-04",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-01",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-03",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-05",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "round": 3
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-02",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-03",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-06",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-01",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-05",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-04",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "round": 4
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-01",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-04",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "oasst-hold-03",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-05",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceA_blksz_16-0-reserved",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_thinking_blksz_16-11-reserved",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_coder_blksz_16-46-reserved",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_coder_blksz_16-51-reserved",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-06",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "qwen_traceB_blksz_16-346-reserved",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "entry-replay",
+        "local-cost"
+      ],
+      "block": "qwen_traceA_blksz_16-89-reserved",
+      "round": 5
+    },
+    {
+      "arm_order": [
+        "local-cost",
+        "entry-replay"
+      ],
+      "block": "oasst-hold-02",
+      "round": 5
+    }
+  ],
+  "scope": "membership and pair ordering exclusively; not a holdout execution authorization",
+  "source_manifests": {
+    "bailian_sha256": "bf1e20921f26b242d04f163b1cf1a209333107695e7c31f24f708b1b5ea5abb2",
+    "native_sha256": "3d3e30113fba90244f537d6c9d45f75cbd6277281f51fa778c4d0d0403fa5ac5"
+  }
+}

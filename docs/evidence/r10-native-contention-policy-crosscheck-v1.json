@@ -1,0 +1,77 @@
+{
+  "arms": [
+    {
+      "audited_requests": 64,
+      "block": "oasst-cal-03",
+      "changes": [],
+      "receipt_sha256": "912613bfc9ee9b8a964ce4847e407b1dec528789c0a05e13cbf435172f2c0d30",
+      "run": "oasst03-a1",
+      "with_alternative": 8,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 64,
+      "block": "oasst-cal-03",
+      "changes": [],
+      "receipt_sha256": "88862d32c8f9337b8147d5c5d944ce41f4f5a0de5b06bb7a05432ef970f82782",
+      "run": "oasst03-a2",
+      "with_alternative": 8,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "changes": [],
+      "receipt_sha256": "c7560380eead14fea73cf3b37efbbb9b0905a97fc54949ad7809dd401d62c06c",
+      "run": "traceA09-400",
+      "with_alternative": 36,
+      "with_two_nonzero_alternatives": 4
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "changes": [],
+      "receipt_sha256": "46bb4a13a4b376d60b815eccc704cee8eba25c03ac1bc4623320e49ee44a2e78",
+      "run": "traceA09-400-second",
+      "with_alternative": 36,
+      "with_two_nonzero_alternatives": 4
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceB_blksz_16-208-pilot",
+      "changes": [],
+      "receipt_sha256": "f9837dfa315901491148588c643b44db34651c98cd97a8d16527d02d701ebada",
+      "run": "traceB208-1200-first",
+      "with_alternative": 32,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_traceB_blksz_16-208-pilot",
+      "changes": [],
+      "receipt_sha256": "3fadf71077ddbcc2cd255211beb023022859dde4ed05901959376ead5fa900d9",
+      "run": "traceB208-1200-second",
+      "with_alternative": 32,
+      "with_two_nonzero_alternatives": 1
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "changes": [],
+      "receipt_sha256": "993d4448f571e67f33868a931be72f3d2a25f041daac32a3085b4be2d5f137dd",
+      "run": "coder28-525-first",
+      "with_alternative": 39,
+      "with_two_nonzero_alternatives": 35
+    },
+    {
+      "audited_requests": 96,
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "changes": [],
+      "receipt_sha256": "6ca96390225f33026a72e2de4f61568670a02c187aa06dc2441da793cfcfdea4",
+      "run": "coder28-525-second",
+      "with_alternative": 39,
+      "with_two_nonzero_alternatives": 35
+    }
+  ],
+  "scope": "counterfactual chooser only, on recorded local-cost states; no runtime effect"
+}

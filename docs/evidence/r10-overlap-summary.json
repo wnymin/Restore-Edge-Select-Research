@@ -1,0 +1,307 @@
+{
+  "allocated_device_bytes": 52691552,
+  "disk_to_pinned_direct": true,
+  "serialized_bytes": 52691548,
+  "sha256": "8ac30c8284da290efbc32afbcb15c49c2dcbf6010b4a46b74652d531a774d587",
+  "suffixes": {
+    "128": {
+      "aa_abs_delta_ms": {
+        "max": 4.8476,
+        "median": 2.925499999999996,
+        "min": 0.23119999999999408,
+        "p90_nearest_rank": 4.564600000000006
+      },
+      "compute_alone_ms": {
+        "max": 59.92875,
+        "median": 57.911500000000004,
+        "min": 55.7902,
+        "p90_nearest_rank": 59.6221
+      },
+      "paths": {
+        "ram": {
+          "joint_makespan_saving_vs_sum_of_paired_solos_ms": {
+            "max": 5.96275,
+            "median": 0.6248000000000005,
+            "min": -3.707499999999996,
+            "p90_nearest_rank": 3.906649999999992
+          },
+          "joint_upload_enqueue_call_ms": {
+            "max": 0.041400000000000006,
+            "median": 0.025099999999999997,
+            "min": 0.013,
+            "p90_nearest_rank": 0.03839999999999999
+          },
+          "joint_upload_finished_before_compute_submit_count": 12,
+          "joint_upload_synchronize_call_ms": {
+            "max": 8.0557,
+            "median": 4.4205000000000005,
+            "min": 4.2899,
+            "p90_nearest_rank": 5.5866999999999996
+          },
+          "slowdown_compute_ms": {
+            "max": 8.159999999999997,
+            "median": 4.866,
+            "min": -1.4612499999999997,
+            "p90_nearest_rank": 6.186650000000014
+          },
+          "transfer_alone_ms": {
+            "max": 5.5683,
+            "median": 4.45295,
+            "min": 4.3065999999999995,
+            "p90_nearest_rank": 5.4133
+          },
+          "transfer_done_before_compute_count": 12,
+          "transfer_joint_ms": {
+            "max": 8.094299999999999,
+            "median": 4.4567499999999995,
+            "min": 4.3029,
+            "p90_nearest_rank": 5.6114999999999995
+          }
+        },
+        "ram-after-submit": {
+          "joint_makespan_saving_vs_sum_of_paired_solos_ms": {
+            "max": 7.985149999999997,
+            "median": 4.401375000000005,
+            "min": -2.5818999999999974,
+            "p90_nearest_rank": 7.174300000000002
+          },
+          "joint_upload_enqueue_call_ms": {
+            "max": 0.051000000000000156,
+            "median": 0.022199999999999998,
+            "min": 0.01330000000000009,
+            "p90_nearest_rank": 0.029900000000000038
+          },
+          "joint_upload_finished_before_compute_submit_count": 0,
+          "joint_upload_synchronize_call_ms": {
+            "max": 57.760799999999996,
+            "median": 53.64035,
+            "min": 50.124399999999994,
+            "p90_nearest_rank": 57.4672
+          },
+          "slowdown_compute_ms": {
+            "max": 8.047600000000003,
+            "median": 0.031024999999996083,
+            "min": -2.7906499999999994,
+            "p90_nearest_rank": 1.0260999999999996
+          },
+          "transfer_alone_ms": {
+            "max": 5.5683,
+            "median": 4.45295,
+            "min": 4.3065999999999995,
+            "p90_nearest_rank": 5.4133
+          },
+          "transfer_done_before_compute_count": 0,
+          "transfer_joint_ms": {
+            "max": 57.812,
+            "median": 53.6561,
+            "min": 50.1474,
+            "p90_nearest_rank": 57.4819
+          }
+        },
+        "ssd": {
+          "joint_makespan_saving_vs_sum_of_paired_solos_ms": {
+            "max": 22.611549999999994,
+            "median": 16.793199999999995,
+            "min": 14.495349999999988,
+            "p90_nearest_rank": 19.853700000000003
+          },
+          "joint_upload_enqueue_call_ms": {
+            "max": 0.04770000000000074,
+            "median": 0.027099999999999902,
+            "min": 0.014900000000000801,
+            "p90_nearest_rank": 0.047399999999999665
+          },
+          "joint_upload_finished_before_compute_submit_count": 0,
+          "joint_upload_synchronize_call_ms": {
+            "max": 49.0156,
+            "median": 44.609049999999996,
+            "min": 42.1678,
+            "p90_nearest_rank": 47.0723
+          },
+          "slowdown_compute_ms": {
+            "max": 3.286200000000001,
+            "median": 0.08629999999999782,
+            "min": -4.822849999999995,
+            "p90_nearest_rank": 2.222450000000002
+          },
+          "transfer_alone_ms": {
+            "max": 18.1757,
+            "median": 17.45445,
+            "min": 16.211,
+            "p90_nearest_rank": 18.0242
+          },
+          "transfer_done_before_compute_count": 0,
+          "transfer_joint_ms": {
+            "max": 62.1436,
+            "median": 57.53115,
+            "min": 54.233200000000004,
+            "p90_nearest_rank": 59.484300000000005
+          },
+          "unbuffered_read_alone_ms": {
+            "max": 13.656400000000001,
+            "median": 13.10655,
+            "min": 11.8455,
+            "p90_nearest_rank": 13.6165
+          },
+          "unbuffered_read_joint_ms": {
+            "max": 14.136800000000001,
+            "median": 13.15935,
+            "min": 11.6338,
+            "p90_nearest_rank": 13.7849
+          }
+        }
+      },
+      "repeats": 12
+    },
+    "512": {
+      "aa_abs_delta_ms": {
+        "max": 7.545600000000007,
+        "median": 4.137000000000015,
+        "min": 1.290200000000027,
+        "p90_nearest_rank": 6.08420000000001
+      },
+      "compute_alone_ms": {
+        "max": 204.16935,
+        "median": 199.63594999999998,
+        "min": 196.37215,
+        "p90_nearest_rank": 204.11995000000002
+      },
+      "paths": {
+        "ram": {
+          "joint_makespan_saving_vs_sum_of_paired_solos_ms": {
+            "max": 8.962900000000019,
+            "median": 1.155399999999986,
+            "min": -5.797499999999985,
+            "p90_nearest_rank": 6.433750000000032
+          },
+          "joint_upload_enqueue_call_ms": {
+            "max": 0.0723,
+            "median": 0.02555,
+            "min": 0.018300000000000004,
+            "p90_nearest_rank": 0.04379999999999999
+          },
+          "joint_upload_finished_before_compute_submit_count": 12,
+          "joint_upload_synchronize_call_ms": {
+            "max": 4.7828,
+            "median": 4.488249999999999,
+            "min": 4.363,
+            "p90_nearest_rank": 4.688400000000001
+          },
+          "slowdown_compute_ms": {
+            "max": 10.379399999999976,
+            "median": 3.625450000000015,
+            "min": -4.5330000000000155,
+            "p90_nearest_rank": 9.428599999999989
+          },
+          "transfer_alone_ms": {
+            "max": 5.9772,
+            "median": 4.4491,
+            "min": 4.2871999999999995,
+            "p90_nearest_rank": 5.2444999999999995
+          },
+          "transfer_done_before_compute_count": 12,
+          "transfer_joint_ms": {
+            "max": 4.8081000000000005,
+            "median": 4.508649999999999,
+            "min": 4.407100000000001,
+            "p90_nearest_rank": 4.760800000000001
+          }
+        },
+        "ram-after-submit": {
+          "joint_makespan_saving_vs_sum_of_paired_solos_ms": {
+            "max": 7.414049999999975,
+            "median": 2.28755000000001,
+            "min": -3.2822000000000173,
+            "p90_nearest_rank": 6.9556499999999915
+          },
+          "joint_upload_enqueue_call_ms": {
+            "max": 0.04290000000000127,
+            "median": 0.020599999999999508,
+            "min": 0.010500000000000398,
+            "p90_nearest_rank": 0.0411999999999999
+          },
+          "joint_upload_finished_before_compute_submit_count": 0,
+          "joint_upload_synchronize_call_ms": {
+            "max": 205.2573,
+            "median": 195.0152,
+            "min": 189.5036,
+            "p90_nearest_rank": 203.9442
+          },
+          "slowdown_compute_ms": {
+            "max": 7.864100000000008,
+            "median": 2.592624999999998,
+            "min": -2.3871499999999912,
+            "p90_nearest_rank": 7.222399999999993
+          },
+          "transfer_alone_ms": {
+            "max": 5.9772,
+            "median": 4.4491,
+            "min": 4.2871999999999995,
+            "p90_nearest_rank": 5.2444999999999995
+          },
+          "transfer_done_before_compute_count": 0,
+          "transfer_joint_ms": {
+            "max": 205.2988,
+            "median": 195.0342,
+            "min": 189.5161,
+            "p90_nearest_rank": 203.9687
+          }
+        },
+        "ssd": {
+          "joint_makespan_saving_vs_sum_of_paired_solos_ms": {
+            "max": 24.210150000000027,
+            "median": 16.779049999999998,
+            "min": 9.034750000000003,
+            "p90_nearest_rank": 19.622349999999983
+          },
+          "joint_upload_enqueue_call_ms": {
+            "max": 0.054999999999999716,
+            "median": 0.031950000000000145,
+            "min": 0.016199999999999548,
+            "p90_nearest_rank": 0.04540000000000077
+          },
+          "joint_upload_finished_before_compute_submit_count": 0,
+          "joint_upload_synchronize_call_ms": {
+            "max": 195.0544,
+            "median": 187.40935000000002,
+            "min": 182.25660000000002,
+            "p90_nearest_rank": 192.1501
+          },
+          "slowdown_compute_ms": {
+            "max": 7.305849999999992,
+            "median": 0.7730499999999978,
+            "min": -4.472250000000031,
+            "p90_nearest_rank": 5.486499999999978
+          },
+          "transfer_alone_ms": {
+            "max": 19.7379,
+            "median": 18.0873,
+            "min": 16.340600000000002,
+            "p90_nearest_rank": 18.395599999999998
+          },
+          "transfer_done_before_compute_count": 0,
+          "transfer_joint_ms": {
+            "max": 207.166,
+            "median": 200.663,
+            "min": 196.27720000000002,
+            "p90_nearest_rank": 205.4716
+          },
+          "unbuffered_read_alone_ms": {
+            "max": 13.9442,
+            "median": 13.349250000000001,
+            "min": 11.988100000000001,
+            "p90_nearest_rank": 13.8298
+          },
+          "unbuffered_read_joint_ms": {
+            "max": 13.975,
+            "median": 13.2397,
+            "min": 12.0724,
+            "p90_nearest_rank": 13.5403
+          }
+        }
+      },
+      "repeats": 12
+    }
+  },
+  "unbuffered_read_bytes": 52695040
+}

@@ -1,0 +1,86 @@
+{
+  "archive_sha256": "01d42198978e797946c3826b5977913ca1030790850489b75e2c19cf800a47e2",
+  "findings": null,
+  "passed": false,
+  "run": {
+    "build_command": [
+      "g++.exe",
+      "-std=c++17",
+      "-O0",
+      "-fno-forward-propagate",
+      "-fno-reorder-blocks",
+      "-Wall",
+      "-Wextra",
+      "-Ioutputs\\r10\\upstream\\llama.cpp-8a56aedd6\\include",
+      "-Ioutputs\\r10\\upstream\\llama.cpp-8a56aedd6\\ggml\\include",
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\scripts\\gpu\\experiments\\r10_two_sequence_staged_probe.cpp",
+      "-Loutputs\\r10\\llama-native-vulkan-build\\src",
+      "-Loutputs\\r10\\llama-native-vulkan-build\\ggml\\src",
+      "-lllama",
+      "-lggml",
+      "-lggml-base",
+      "-o",
+      "outputs\\r10\\two-sequence-staged-v2\\r10_two_sequence_staged_probe.exe"
+    ],
+    "build_return_code": 1,
+    "command": [
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\outputs\\r10\\two-sequence-staged-v2\\r10_two_sequence_staged_probe.exe",
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\data\\raw\\prefill\\qwen35-4b-q4km.gguf",
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\outputs\\r10\\llama-native-vulkan-build\\bin",
+      "Vulkan0",
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\outputs\\r10\\native-plans\\oasst-cal-03.plan",
+      "D:\\Learning document\\Computer and program\\Workspace\\nvidia\\Restore-Edge-Select-Research\\outputs\\r10\\native-catalogs\\oasst-cal-03-overlapped-v1"
+    ],
+    "environment": {
+      "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1",
+      "GGML_VK_R10_CONCURRENT_BUFFERS": "1",
+      "GGML_VK_VISIBLE_DEVICES": "1",
+      "LLAMA_BATCH_DEBUG": "1"
+    },
+    "files": {
+      "build.stderr": "45284d57eeaf3a7957a98037edd48aecd1b1f5ae94083ec5f89000d462d3766d",
+      "build.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "finish_utc": "2026-11-26T14:11:09+00:00",
+    "input": {
+      "bytes": [
+        16777216,
+        52690944
+      ],
+      "checkpoint_meta_sha256": "fae08627fb616826a7ec48b61381a06687b878076bce57b9e0fb1b3036737582",
+      "object_ids": [
+        0,
+        1
+      ],
+      "object_sha256": {
+        "0": "302bc67aa541fe3030939a851aad1d2c06d366034c69edaec573993a35977467",
+        "1": "a08bfb816cb7e7860473a00fd2978ea80794cd1dc514bc9c5bf1fbeb5a5fe4b7"
+      },
+      "preparation_probe_sha256": "e4bd0e06c98dc225a9ff12ac176aab961a3297a5ac9b10967ee28d15e7170b5f",
+      "preparation_receipt_sha256": "d7ca900b7052c719461762a05820a7b6d0e631df5b566f5b8e8e049a9c14ff67",
+      "request": 9,
+      "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+      "seal_sha256": "f709b807605ec12accb11f386ed4bc359fe51c30678aa3356c91e496e86a9d77",
+      "wire_sha256": "a77e168bc5a6b692746d517bdcc8c4974b2dc07e461d4d2d0c5c3820f9ca8d2f"
+    },
+    "model_sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "runtime_sha256": {
+      "ggml-base.dll": "b5642e93d9ccfa2bc4241db2e0afb3263b2f667f446d1de47e3e3571d95701fa",
+      "ggml-cpu.dll": "7456d9111c6c4029cb0e4b7cf1e740a49266689dad70dfa7f6ac9fa10b2d5ffe",
+      "ggml-vulkan.dll": "bc9e7cf788d3090d65bbeb404dc3856b66bc07dfbd25fa9f84334be1c2c0d796",
+      "ggml.dll": "f022242b4a3fe2cad5f83f7ac3a3b84add498717589f8bad3dc358fe312ff9df",
+      "libllama.dll": "b64db0f20492b5f0b09117add122a8b0548e628bede4d345c11f1a73b8febec7"
+    },
+    "sources": {
+      "r10_catalog.h": "174c6aae23cbcb8c6717989f02b3759d0e51b640588b5ece79d6aa706cf6928a",
+      "r10_catalog_source.h": "8d2a75cb0bf87d3393dcb6c3993c610cf1dec26a5f6db7b93b9ff37cd9407dea",
+      "r10_catalog_target.h": "95f45aae697e7ac5ccdf3f199fc2f612844ca1722f47fc99107d2a0184192ee3",
+      "r10_catalog_transfer.h": "5b53bb53298a22af0f2de14570d1d68ddf3801a677c07ad1326fabba66d15094",
+      "r10_stage_pool.h": "a183f15e6599d8d37ce0842b7d1ce73280365072a7c994094f35fc189badb356",
+      "r10_two_sequence_staged_probe.cpp": "2fb6e180f21e48673b6acd4a4ee7d3a5ddc6965a8c16c10fd5b5009e01188a5e",
+      "run_r10_two_sequence_staged_probe.py": "ebfa6c6b663b16a3499f106d436213eeed987c648dd1fae6770df45ece68ec72"
+    },
+    "start_utc": "2026-11-26T14:11:07+00:00"
+  },
+  "scope": "two-sequence shared device staging qualification; fixed token history and batch order; not a service A/B"
+}

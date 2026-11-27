@@ -1,0 +1,15 @@
+{
+  "deliveries": {
+    "service": {
+      "archive_sha256": "4873f979ea9fb88254b17a15d3b6fef719e52588649a352e2c9c5b9678b482ac",
+      "lock_sha256": "9765edd49f1f4d3c658509c358df1417589cf8e4807a6bdab12cd4c132e2eca8",
+      "members": 270,
+      "official_summary_sha256": "d1b6e4f0ec7eabb0f304fcbcc2a1f24de2b430632183293f44954880a7e0ac05",
+      "reproduced_actions_sha256": "5f976abe5c36b1f5ee56c5b2a0ebabfb536a1bb792b271a8904dabf6c0d7e826",
+      "reproduced_summary_sha256": "d1b6e4f0ec7eabb0f304fcbcc2a1f24de2b430632183293f44954880a7e0ac05"
+    }
+  },
+  "input_archive_sha256": "3b3ffe95588d15ef11b1314bf66b3246b647b4560fea62737c21d179d8ae1435",
+  "input_members": 44,
+  "scope": "archive-only analysis, no model or accelerator execution"
+}

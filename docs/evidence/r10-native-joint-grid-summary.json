@@ -1,0 +1,190 @@
+{
+  "archive_sha256": "7fdc20762cf39bdf62c0f74cace71a86d0cf8a49d56aa4032053aa27cd7ff554",
+  "cases": [
+    {
+      "aa_compute_p90_ms": 13.75528,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": 0.328625,
+      "paired_makespan_residual_ms": 0.328625,
+      "paired_transfer_change_ms": -0.03425,
+      "position": 512,
+      "samples": 12,
+      "solo_compute_ms": 58.99925,
+      "solo_transfer_ms": 3.78535,
+      "split": "fit",
+      "suffix": 64,
+      "tier": "RAM"
+    },
+    {
+      "aa_compute_p90_ms": 14.15471,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": 1.183125,
+      "paired_makespan_residual_ms": 1.183125,
+      "paired_transfer_change_ms": -0.39415,
+      "position": 512,
+      "samples": 12,
+      "solo_compute_ms": 57.244,
+      "solo_transfer_ms": 25.07825,
+      "split": "fit",
+      "suffix": 64,
+      "tier": "SSD"
+    },
+    {
+      "aa_compute_p90_ms": 74.58151,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": -13.3145,
+      "paired_makespan_residual_ms": -13.3145,
+      "paired_transfer_change_ms": 0.1545,
+      "position": 512,
+      "samples": 12,
+      "solo_compute_ms": 287.62695,
+      "solo_transfer_ms": 3.6669,
+      "split": "fit",
+      "suffix": 512,
+      "tier": "RAM"
+    },
+    {
+      "aa_compute_p90_ms": 66.10318,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": -1.912975,
+      "paired_makespan_residual_ms": -1.912975,
+      "paired_transfer_change_ms": -0.4973,
+      "position": 512,
+      "samples": 12,
+      "solo_compute_ms": 285.0126,
+      "solo_transfer_ms": 24.2697,
+      "split": "fit",
+      "suffix": 512,
+      "tier": "SSD"
+    },
+    {
+      "aa_compute_p90_ms": 17.40586,
+      "corrected_max_abs_error_ms": 21.0012,
+      "corrected_median_abs_error_ms": 5.82995,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": -6.5769,
+      "paired_makespan_residual_ms": -6.5769,
+      "paired_transfer_change_ms": 0.07175,
+      "position": 768,
+      "samples": 12,
+      "solo_compute_ms": 84.50255,
+      "solo_transfer_ms": 3.5808,
+      "split": "validation",
+      "suffix": 128,
+      "tier": "RAM",
+      "uncorrected_max_abs_error_ms": 21.74815,
+      "uncorrected_median_abs_error_ms": 6.5769
+    },
+    {
+      "aa_compute_p90_ms": 22.61878,
+      "corrected_max_abs_error_ms": 22.157425,
+      "corrected_median_abs_error_ms": 7.154975,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": 2.5832,
+      "paired_makespan_residual_ms": 2.5832,
+      "paired_transfer_change_ms": -1.02525,
+      "position": 768,
+      "samples": 12,
+      "solo_compute_ms": 77.802425,
+      "solo_transfer_ms": 24.3546,
+      "split": "validation",
+      "suffix": 128,
+      "tier": "SSD",
+      "uncorrected_max_abs_error_ms": 22.3976,
+      "uncorrected_median_abs_error_ms": 6.9148
+    },
+    {
+      "aa_compute_p90_ms": 45.2768,
+      "corrected_max_abs_error_ms": 63.185,
+      "corrected_median_abs_error_ms": 9.037825,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": -6.43745,
+      "paired_makespan_residual_ms": -6.43745,
+      "paired_transfer_change_ms": 0.0138,
+      "position": 768,
+      "samples": 12,
+      "solo_compute_ms": 224.3654,
+      "solo_transfer_ms": 3.74595,
+      "split": "validation",
+      "suffix": 384,
+      "tier": "RAM",
+      "uncorrected_max_abs_error_ms": 63.93195,
+      "uncorrected_median_abs_error_ms": 9.784775
+    },
+    {
+      "aa_compute_p90_ms": 70.71714,
+      "corrected_max_abs_error_ms": 49.926575,
+      "corrected_median_abs_error_ms": 8.529925,
+      "overlap_ready": 12,
+      "overlap_submit": 12,
+      "paired_compute_change_ms": -0.4103,
+      "paired_makespan_residual_ms": -0.4103,
+      "paired_transfer_change_ms": 0.3474,
+      "position": 768,
+      "samples": 12,
+      "solo_compute_ms": 226.17325,
+      "solo_transfer_ms": 24.43005,
+      "split": "validation",
+      "suffix": 384,
+      "tier": "SSD",
+      "uncorrected_max_abs_error_ms": 49.6864,
+      "uncorrected_median_abs_error_ms": 8.7701
+    }
+  ],
+  "model_correction_ms": {
+    "RAM": -0.74695,
+    "SSD": -0.240175
+  },
+  "observations": 384,
+  "receipt_sha256": "95755fb79317dba7a6b342de578c8b793cf4b0591ee66555d6b8d3d5dc3d873e",
+  "resource_snapshots": {
+    "after-context": {
+      "device_budget": 8342470656,
+      "device_free": 4390604800,
+      "peak_working_set": 3149590528,
+      "process_private_commit": 3601199104,
+      "process_working_set": 3044323328
+    },
+    "after-grid-preparation": {
+      "device_budget": 8342470656,
+      "device_free": 4292628480,
+      "peak_working_set": 3305324544,
+      "process_private_commit": 4064677888,
+      "process_working_set": 3217670144
+    },
+    "after-model": {
+      "device_budget": 8342470656,
+      "device_free": 4805120000,
+      "peak_working_set": 2892300288,
+      "process_private_commit": 2874458112,
+      "process_working_set": 2873102336
+    },
+    "after-timed-grid": {
+      "device_budget": 8342470656,
+      "device_free": 4289417216,
+      "peak_working_set": 3380531200,
+      "process_private_commit": 4085813248,
+      "process_working_set": 3288662016
+    },
+    "before-model": {
+      "device_budget": 8342470656,
+      "device_free": 7537164288,
+      "peak_working_set": 41201664,
+      "process_private_commit": 34070528,
+      "process_working_set": 41201664
+    }
+  },
+  "scope": "actual native-device fence ordering and paired service-path phase timings; not a strategy experiment",
+  "validation_comparable_pairs": 6,
+  "validation_rank_errors": {
+    "corrected": 1,
+    "ideal": 1
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "archive_sha256": "60a5c11a6f1071dbd6b9602a5ab4430c4644619c61e8b2aef61e9b991f2a8c33",
+  "at_least_1000ms": [
+    {
+      "boundary": 0,
+      "chunk": 2,
+      "end_tokens": 512,
+      "input_tokens": 520,
+      "marker_to_ready_ms": 124.947,
+      "previous_ready_to_submit_ms": 0.003,
+      "request": 1,
+      "since_last_unsuccessful_query_ms": 2.013,
+      "submit_to_marker_ms": 6483.66
+    },
+    {
+      "boundary": 0,
+      "chunk": 3,
+      "end_tokens": 520,
+      "input_tokens": 520,
+      "marker_to_ready_ms": 48.041,
+      "previous_ready_to_submit_ms": 0.003,
+      "request": 1,
+      "since_last_unsuccessful_query_ms": 1.198,
+      "submit_to_marker_ms": 6391.675
+    },
+    {
+      "boundary": 0,
+      "chunk": 3,
+      "end_tokens": 608,
+      "input_tokens": 608,
+      "marker_to_ready_ms": 182.207,
+      "previous_ready_to_submit_ms": 0.002,
+      "request": 2,
+      "since_last_unsuccessful_query_ms": 1.532,
+      "submit_to_marker_ms": 11839.733
+    },
+    {
+      "boundary": 0,
+      "chunk": 2,
+      "end_tokens": 304,
+      "input_tokens": 304,
+      "marker_to_ready_ms": 39.269,
+      "previous_ready_to_submit_ms": 0.004,
+      "request": 3,
+      "since_last_unsuccessful_query_ms": 1.59,
+      "submit_to_marker_ms": 1363.985
+    }
+  ],
+  "chunks": 127,
+  "native_audit": {
+    "block": "oasst-cal-03",
+    "boundary_counts": {
+      "0": 56,
+      "512": 7,
+      "1024": 1
+    },
+    "capacity_bytes": 86245376,
+    "device_event_counts": {
+      "chunk-marker": 127,
+      "chunk-ready": 127,
+      "chunk-submit-begin": 127,
+      "compute-done": 64,
+      "disk-complete": 8,
+      "native-scatter": 17,
+      "native-target": 64,
+      "read-staged": 17,
+      "reserved": 8,
+      "suffix-submitted": 64,
+      "upload-ready": 17,
+      "upload-submit": 17
+    },
+    "direct_plus_scatter_requests": [],
+    "peak_prefetch_bytes": 86245376,
+    "policy": "local-cost",
+    "requests": 64,
+    "runtime_worker_sha256": "d7c8309d1f8181076af0ae57646ce197f7ce2e070bab22f9c74504390a71c646",
+    "scope": "native event audit and optional correctness checks; no performance estimate"
+  },
+  "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+  "scope": "host intervals around submit and device timeline polling, not hardware compute durations",
+  "stats": {
+    "marker_to_ready_ms": {
+      "max": 182.207,
+      "median": 124.312,
+      "n": 127
+    },
+    "previous_ready_to_submit_ms": {
+      "max": 0.009,
+      "median": 0.004,
+      "n": 63
+    },
+    "since_last_unsuccessful_query_ms": {
+      "max": 2.112,
+      "median": 1.501,
+      "n": 127
+    },
+    "submit_to_marker_ms": {
+      "max": 11839.733,
+      "median": 15.323,
+      "n": 127
+    }
+  },
+  "worker_sha256": "d7c8309d1f8181076af0ae57646ce197f7ce2e070bab22f9c74504390a71c646"
+}

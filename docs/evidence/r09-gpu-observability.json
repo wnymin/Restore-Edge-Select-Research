@@ -1,0 +1,43 @@
+{
+  "archive_sha256": "60b9ccf6c5672b59e2514bf3df16c286da2308e06cbb2bd70ddbe369c8dcdde8",
+  "summary_sha256": "615fe642531f77ad4084c78aa5c77bc104c002212012967111e4a22963353959",
+  "archived_fields": [
+    "block",
+    "depth",
+    "mode",
+    "observe",
+    "peer",
+    "prompt_hash",
+    "restore",
+    "restore_end",
+    "restore_start",
+    "target",
+    "trigger"
+  ],
+  "paired_poll": {
+    "512": {
+      "blocks": 8,
+      "poll_total_ms_median": 189.84300000000002,
+      "probe_minus_clean_http_target_ms_median": 197.50735000000003,
+      "target_shift_range_ms": [
+        111.0689000000001,
+        257.6349
+      ]
+    },
+    "1024": {
+      "blocks": 8,
+      "poll_total_ms_median": 178.78645,
+      "probe_minus_clean_http_target_ms_median": 187.05379999999997,
+      "target_shift_range_ms": [
+        146.01389999999992,
+        304.1463
+      ]
+    }
+  },
+  "request_queue_identity_visible": false,
+  "gpu_busy_boundary_visible": false,
+  "exact_candidate_and_object_transfer_issue_visible": false,
+  "decision_ready_and_publish_on_common_execution_clock_visible": false,
+  "budget_calibration_qualified": false,
+  "scope": "Recompute paired HTTP observer evidence; no new GPU policy or trace. CPU clocks are not GPU kernel/transfer event markers."
+}

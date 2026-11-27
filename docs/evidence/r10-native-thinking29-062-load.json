@@ -1,0 +1,49 @@
+{
+  "arms": [
+    {
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 72.99556145833333,
+      "p95_observation_delay_ms": 241.2069,
+      "receipt_sha256": "fbd2260d5b96e316407566ce887c3374dbde2a1a50b09da09e2cf8027898d74c",
+      "response_mean_ms": 1388.9556229166667,
+      "response_p95_ms": 3482.0571,
+      "run": "thinking062-first",
+      "source_schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc",
+      "window": {
+        "average_outstanding": 2.307894336913861,
+        "completions_per_s_in_entire_window": 1.661604084994102,
+        "drain_after_last_arrival_ms": 230.2687,
+        "drain_elapsed_ms": 57775.4959,
+        "fraction_time_any_request_outstanding": 0.6743216461081037,
+        "max_outstanding": 9,
+        "offered_arrivals_per_s": 1.65087540048847,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 57545.2272
+      }
+    },
+    {
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "capacity_bytes": 86245376,
+      "mean_observation_delay_ms": 71.85410833333333,
+      "p95_observation_delay_ms": 158.8255,
+      "receipt_sha256": "2770931dc36ea8eefc7f9c1c819ab0dbec301c0337422f9a451308ff29b043ce",
+      "response_mean_ms": 1398.750103125,
+      "response_p95_ms": 3373.9241,
+      "run": "thinking062-second",
+      "source_schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc",
+      "window": {
+        "average_outstanding": 2.3248793968901778,
+        "completions_per_s_in_entire_window": 1.66211204681671,
+        "drain_after_last_arrival_ms": 218.3865,
+        "drain_elapsed_ms": 57757.839,
+        "fraction_time_any_request_outstanding": 0.6786211357388215,
+        "max_outstanding": 9,
+        "offered_arrivals_per_s": 1.6510410835070077,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 57539.4525
+      }
+    }
+  ],
+  "scope": "one finite open-loop block per row, not a steady-state throughput estimate"
+}

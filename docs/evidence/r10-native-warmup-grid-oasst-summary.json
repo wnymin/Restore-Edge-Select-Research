@@ -1,0 +1,74 @@
+{
+  "archive_sha256": "e72e4d17293a2f341d702bc4710d2c1f6cafff2dfcbe6bdb059bb7c6a88aeef0",
+  "at_least_1000ms": [],
+  "chunks": 127,
+  "native_audit": {
+    "block": "oasst-cal-03",
+    "boundary_counts": {
+      "0": 56,
+      "512": 7,
+      "1024": 1
+    },
+    "capacity_bytes": 86245376,
+    "device_event_counts": {
+      "chunk-marker": 127,
+      "chunk-ready": 127,
+      "chunk-submit-begin": 127,
+      "compute-done": 64,
+      "disk-complete": 8,
+      "native-scatter": 17,
+      "native-target": 64,
+      "read-staged": 17,
+      "reserved": 8,
+      "suffix-submitted": 64,
+      "upload-ready": 17,
+      "upload-submit": 17
+    },
+    "direct_plus_scatter_requests": [],
+    "peak_prefetch_bytes": 86245376,
+    "policy": "local-cost",
+    "requests": 64,
+    "runtime_worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6",
+    "scope": "native event audit and optional correctness checks; no performance estimate"
+  },
+  "observer_sha256": "e07ba1c7c2bb2874cee6a4f55961d80a3b746f337855215213a91b612ec7ae6e",
+  "pipeline_calls_logged_after_chunk_clock": 0,
+  "pipeline_calls_total": 52,
+  "qpc_frequency_hz": 10000000,
+  "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19",
+  "scope": "host intervals around submit and device timeline polling, not hardware compute durations",
+  "stats": {
+    "host_llama_decode_ms": {
+      "max": 18.921,
+      "median": 15.233,
+      "n": 127
+    },
+    "marker_to_ready_ms": {
+      "max": 170.608,
+      "median": 115.009,
+      "n": 127
+    },
+    "pipeline_union_wall_ms": {
+      "max": 0.0,
+      "median": 0.0,
+      "n": 127
+    },
+    "previous_ready_to_submit_ms": {
+      "max": 0.011,
+      "median": 0.004,
+      "n": 63
+    },
+    "since_last_unsuccessful_query_ms": {
+      "max": 8.534,
+      "median": 1.517,
+      "n": 127
+    },
+    "submit_to_marker_ms": {
+      "max": 18.95,
+      "median": 15.268,
+      "n": 127
+    }
+  },
+  "warmup_grid_host_ms": 61452.729,
+  "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+}

@@ -1,0 +1,207 @@
+{
+  "archive_sha256": "b60ec3a586c73f09aaf7fd67867e436b3997bada4dc6b8c654860310aba1acf8",
+  "arms": [
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 67108864,
+      "gpu_samples": 17,
+      "host_samples": 17,
+      "native_resources": {
+        "after-context": {
+          "peak_working_set_bytes": 3150258176,
+          "private_commit_bytes": 3601674240,
+          "vulkan_free_bytes": 4390604800,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3063685120
+        },
+        "after-lane-warmup": {
+          "peak_working_set_bytes": 3707277312,
+          "private_commit_bytes": 4331302912,
+          "vulkan_free_bytes": 4292628480,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3478257664
+        },
+        "after-model": {
+          "peak_working_set_bytes": 2893709312,
+          "private_commit_bytes": 2874728448,
+          "vulkan_free_bytes": 4805120000,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 2873450496
+        },
+        "allocation-idle": {
+          "peak_working_set_bytes": 3707277312,
+          "private_commit_bytes": 4330733568,
+          "vulkan_free_bytes": 4292628480,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3478298624
+        },
+        "before-model": {
+          "peak_working_set_bytes": 68018176,
+          "private_commit_bytes": 58675200,
+          "vulkan_free_bytes": 7535153152,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 68018176
+        }
+      },
+      "pinned_bytes": 52690976,
+      "resident_ram_bytes": 469762048,
+      "run": "arena-verified-64.run.json",
+      "seal_sha256": "fd25d6333b91e6819f1fb592fc064dd3238d635dab5200bd493d2525a1f3894c",
+      "system_sampled_range_bytes": {
+        "available_bytes": [
+          16578990080,
+          19905433600
+        ],
+        "cache_bytes": [
+          590708736,
+          593715200
+        ],
+        "committed_bytes": [
+          23757721600,
+          28042428416
+        ]
+      },
+      "wddm_sampled_max_bytes": {
+        "dedicated_usage": 3254059008,
+        "shared_usage": 80003072,
+        "total_committed": 3334127616
+      },
+      "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+    },
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 86245376,
+      "gpu_samples": 17,
+      "host_samples": 17,
+      "native_resources": {
+        "after-context": {
+          "peak_working_set_bytes": 3150221312,
+          "private_commit_bytes": 3601829888,
+          "vulkan_free_bytes": 4390604800,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3078918144
+        },
+        "after-lane-warmup": {
+          "peak_working_set_bytes": 3708018688,
+          "private_commit_bytes": 4343271424,
+          "vulkan_free_bytes": 4273491968,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3476484096
+        },
+        "after-model": {
+          "peak_working_set_bytes": 2893758464,
+          "private_commit_bytes": 2874802176,
+          "vulkan_free_bytes": 4805120000,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 2873438208
+        },
+        "allocation-idle": {
+          "peak_working_set_bytes": 3708018688,
+          "private_commit_bytes": 4342730752,
+          "vulkan_free_bytes": 4273491968,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3476570112
+        },
+        "before-model": {
+          "peak_working_set_bytes": 68005888,
+          "private_commit_bytes": 58695680,
+          "vulkan_free_bytes": 7535153152,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 68005888
+        }
+      },
+      "pinned_bytes": 52690976,
+      "resident_ram_bytes": 469762048,
+      "run": "arena-verified-82p25.run.json",
+      "seal_sha256": "fd25d6333b91e6819f1fb592fc064dd3238d635dab5200bd493d2525a1f3894c",
+      "system_sampled_range_bytes": {
+        "available_bytes": [
+          16503914496,
+          18672230400
+        ],
+        "cache_bytes": [
+          587595776,
+          613294080
+        ],
+        "committed_bytes": [
+          27530055680,
+          28160925696
+        ]
+      },
+      "wddm_sampled_max_bytes": {
+        "dedicated_usage": 3273232384,
+        "shared_usage": 80003072,
+        "total_committed": 3353300992
+      },
+      "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+    },
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 150994944,
+      "gpu_samples": 17,
+      "host_samples": 17,
+      "native_resources": {
+        "after-context": {
+          "peak_working_set_bytes": 3150213120,
+          "private_commit_bytes": 3601661952,
+          "vulkan_free_bytes": 4390604800,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3075633152
+        },
+        "after-lane-warmup": {
+          "peak_working_set_bytes": 3707797504,
+          "private_commit_bytes": 4415356928,
+          "vulkan_free_bytes": 4208742400,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3478564864
+        },
+        "after-model": {
+          "peak_working_set_bytes": 2893660160,
+          "private_commit_bytes": 2874724352,
+          "vulkan_free_bytes": 4805120000,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 2873405440
+        },
+        "allocation-idle": {
+          "peak_working_set_bytes": 3707797504,
+          "private_commit_bytes": 4414754816,
+          "vulkan_free_bytes": 4208742400,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 3478589440
+        },
+        "before-model": {
+          "peak_working_set_bytes": 67977216,
+          "private_commit_bytes": 58667008,
+          "vulkan_free_bytes": 7535153152,
+          "vulkan_reported_budget_bytes": 8342470656,
+          "working_set_bytes": 67977216
+        }
+      },
+      "pinned_bytes": 52690976,
+      "resident_ram_bytes": 469762048,
+      "run": "arena-verified-144.run.json",
+      "seal_sha256": "fd25d6333b91e6819f1fb592fc064dd3238d635dab5200bd493d2525a1f3894c",
+      "system_sampled_range_bytes": {
+        "available_bytes": [
+          16480727040,
+          19289378816
+        ],
+        "cache_bytes": [
+          587272192,
+          588845056
+        ],
+        "committed_bytes": [
+          27493027840,
+          28202266624
+        ]
+      },
+      "wddm_sampled_max_bytes": {
+        "dedicated_usage": 3338108928,
+        "shared_usage": 80003072,
+        "total_committed": 3418177536
+      },
+      "worker_sha256": "e73e4b6616d033c4abedb7ced34558242b1968d7cabc9119233c256de08d82b6"
+    }
+  ],
+  "scope": "allocation idle only; discrete WDDM/host samples, not absolute activity peaks"
+}

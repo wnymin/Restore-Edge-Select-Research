@@ -1,0 +1,24 @@
+{
+  "arms": {
+    "entry-replay": {
+      "completed": 64,
+      "emitted_tokens": 1792,
+      "return_code": 0,
+      "visible": 64
+    },
+    "local-cost": {
+      "completed": 64,
+      "emitted_tokens": 1792,
+      "return_code": 0,
+      "visible": 64
+    }
+  },
+  "case": "oasst-service-hold-02-mixed-shoulder",
+  "equal_greedy_outputs_and_finish_reasons": true,
+  "pair_sha256": "64bd5ec4747ff45696b99b5343347f03c6ed8d6fae7dbb5ad05fe5b669caafb4",
+  "passed": true,
+  "requests_per_arm": 64,
+  "scope": "first registered service pair transport and output gate; excludes performance metrics",
+  "seal_sha256": "76b61343672c32b7187cfe079b2cf25a8cdbb8c75e0d3847bb852d20eb84ac6e",
+  "service_lock_sha256": "9765edd49f1f4d3c658509c358df1417589cf8e4807a6bdab12cd4c132e2eca8"
+}

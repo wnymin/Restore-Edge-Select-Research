@@ -1,0 +1,409 @@
+{
+  "arms": [
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 67108864,
+      "capture": {
+        "chunk_events": false,
+        "peak_prefetch_bytes": 0,
+        "pipeline_events": false
+      },
+      "chosen_boundary_counts": {
+        "0": 56,
+        "512": 7,
+        "1024": 1
+      },
+      "condition": "capacity_64_mib",
+      "counts": {
+        "any_nonzero_candidate": 8,
+        "chose_zero_with_nonzero_candidate": 0,
+        "multiple_nonzero_candidates": 1,
+        "same_snapshot_disagreements": 0,
+        "snapshots": 64
+      },
+      "device_event_counts": {
+        "compute-done": 64,
+        "disk-complete": 8,
+        "native-target": 64,
+        "read-direct": 17,
+        "suffix-submitted": 64,
+        "upload-ready": 17,
+        "upload-submit": 17
+      },
+      "inputs": {
+        "archive": "r10-native-active-capacity-sweep.zip",
+        "archive_hash_report": "r10-native-active-capacity-sweep-summary.json",
+        "archive_hash_report_sha256": "cfe2f7e62b87562128947ced72d464b1ebbf627f06a4809c228b7d99bd80c4b4",
+        "archive_sha256": "fd264523b73681026bc3e411de2cfabfcda6025603a975d219cecd8a58739451",
+        "load_report": "r10-native-active-capacity-sweep-load.json",
+        "load_report_sha256": "2c92a7e570be78968878f9f9c4f97ab7a3584f0a9d3e527a16c115c9e0637ab1",
+        "native_csv_sha256": "0f2e1b92b6b729a64dd615066085d04eed3e55e3af23aad1a4e906a5086c1f0c",
+        "receipt_sha256": "87c6a01cc516ec49e6b9d3b643726cd3c5185356348d2fc1e5ac0bca8adbb0c6",
+        "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+      },
+      "load": {
+        "average_outstanding": 0.6983442234308214,
+        "completions_per_s_in_entire_window": 3.847595307039909,
+        "drain_after_last_arrival_ms": 251.3364,
+        "drain_elapsed_ms": 16633.766,
+        "fraction_time_any_request_outstanding": 0.6612841493622069,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 3.845583441420679,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16382.4296
+      },
+      "logical_uploaded_bytes_by_tier_and_trigger": {
+        "RAM/demand": 150994944,
+        "SSD/demand": 421527552
+      },
+      "peak_client_submissions_in_100_ms": 1,
+      "run": "resource-64",
+      "same_snapshot_disagreements": [],
+      "snapshots_with_active_compute": 11,
+      "snapshots_with_transfer_in_flight": 0
+    },
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 86245376,
+      "capture": {
+        "chunk_events": false,
+        "peak_prefetch_bytes": 0,
+        "pipeline_events": false
+      },
+      "chosen_boundary_counts": {
+        "0": 56,
+        "512": 7,
+        "1024": 1
+      },
+      "condition": "capacity_82_25_mib",
+      "counts": {
+        "any_nonzero_candidate": 8,
+        "chose_zero_with_nonzero_candidate": 0,
+        "multiple_nonzero_candidates": 1,
+        "same_snapshot_disagreements": 0,
+        "snapshots": 64
+      },
+      "device_event_counts": {
+        "compute-done": 64,
+        "disk-complete": 8,
+        "native-target": 64,
+        "read-direct": 17,
+        "suffix-submitted": 64,
+        "upload-ready": 17,
+        "upload-submit": 17
+      },
+      "inputs": {
+        "archive": "r10-native-active-capacity-sweep.zip",
+        "archive_hash_report": "r10-native-active-capacity-sweep-summary.json",
+        "archive_hash_report_sha256": "cfe2f7e62b87562128947ced72d464b1ebbf627f06a4809c228b7d99bd80c4b4",
+        "archive_sha256": "fd264523b73681026bc3e411de2cfabfcda6025603a975d219cecd8a58739451",
+        "load_report": "r10-native-active-capacity-sweep-load.json",
+        "load_report_sha256": "2c92a7e570be78968878f9f9c4f97ab7a3584f0a9d3e527a16c115c9e0637ab1",
+        "native_csv_sha256": "b87539e06d5616b3b63a13bd1a64e7b03f3548601669ff2a415bbd0832af04bc",
+        "receipt_sha256": "9706022020224a6566b8bd6e092335a8a7c8c45bae3d7ae974a2302ad4ded05a",
+        "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+      },
+      "load": {
+        "average_outstanding": 0.7497733591169471,
+        "completions_per_s_in_entire_window": 3.8394897932383154,
+        "drain_after_last_arrival_ms": 273.5253,
+        "drain_elapsed_ms": 16668.8814,
+        "fraction_time_any_request_outstanding": 0.6976880884160589,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 3.842551489320808,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16395.3561
+      },
+      "logical_uploaded_bytes_by_tier_and_trigger": {
+        "RAM/demand": 150994944,
+        "SSD/demand": 421527552
+      },
+      "peak_client_submissions_in_100_ms": 1,
+      "run": "resource-8225",
+      "same_snapshot_disagreements": [],
+      "snapshots_with_active_compute": 11,
+      "snapshots_with_transfer_in_flight": 0
+    },
+    {
+      "block": "oasst-cal-03",
+      "capacity_bytes": 150994944,
+      "capture": {
+        "chunk_events": false,
+        "peak_prefetch_bytes": 0,
+        "pipeline_events": false
+      },
+      "chosen_boundary_counts": {
+        "0": 56,
+        "512": 7,
+        "1024": 1
+      },
+      "condition": "capacity_144_mib",
+      "counts": {
+        "any_nonzero_candidate": 8,
+        "chose_zero_with_nonzero_candidate": 0,
+        "multiple_nonzero_candidates": 1,
+        "same_snapshot_disagreements": 0,
+        "snapshots": 64
+      },
+      "device_event_counts": {
+        "compute-done": 64,
+        "disk-complete": 8,
+        "native-target": 64,
+        "read-direct": 17,
+        "suffix-submitted": 64,
+        "upload-ready": 17,
+        "upload-submit": 17
+      },
+      "inputs": {
+        "archive": "r10-native-active-capacity-sweep.zip",
+        "archive_hash_report": "r10-native-active-capacity-sweep-summary.json",
+        "archive_hash_report_sha256": "cfe2f7e62b87562128947ced72d464b1ebbf627f06a4809c228b7d99bd80c4b4",
+        "archive_sha256": "fd264523b73681026bc3e411de2cfabfcda6025603a975d219cecd8a58739451",
+        "load_report": "r10-native-active-capacity-sweep-load.json",
+        "load_report_sha256": "2c92a7e570be78968878f9f9c4f97ab7a3584f0a9d3e527a16c115c9e0637ab1",
+        "native_csv_sha256": "aef56dbfc3dce85ab8e993b013a54f0d1c2d6b4b354d19c55e289828e1d2d366",
+        "receipt_sha256": "d135e1c30cfb6167b3de8b3d6b619d61660665b4bdc9ef6acfdb6d018a446b3a",
+        "schedule_sha256": "7e8398ca672bf9a901a2475df02a1f3a6c53c93da8b72cf972bb034578382b19"
+      },
+      "load": {
+        "average_outstanding": 0.707640702833469,
+        "completions_per_s_in_entire_window": 3.8479611391518587,
+        "drain_after_last_arrival_ms": 243.3977,
+        "drain_elapsed_ms": 16632.1846,
+        "fraction_time_any_request_outstanding": 0.667773769177622,
+        "max_outstanding": 2,
+        "offered_arrivals_per_s": 3.8440917185883965,
+        "outstanding_at_last_arrival": 2,
+        "submission_span_ms": 16388.7869
+      },
+      "logical_uploaded_bytes_by_tier_and_trigger": {
+        "RAM/demand": 150994944,
+        "SSD/demand": 421527552
+      },
+      "peak_client_submissions_in_100_ms": 1,
+      "run": "resource-144",
+      "same_snapshot_disagreements": [],
+      "snapshots_with_active_compute": 10,
+      "snapshots_with_transfer_in_flight": 0
+    },
+    {
+      "block": "qwen_thinking_blksz_16-29-pilot",
+      "capacity_bytes": 86245376,
+      "capture": {
+        "chunk_events": false,
+        "peak_prefetch_bytes": 86245376,
+        "pipeline_events": false
+      },
+      "chosen_boundary_counts": {
+        "0": 56,
+        "512": 4,
+        "1024": 11,
+        "1536": 25
+      },
+      "condition": "lighter_thinking",
+      "counts": {
+        "any_nonzero_candidate": 40,
+        "chose_zero_with_nonzero_candidate": 0,
+        "multiple_nonzero_candidates": 36,
+        "same_snapshot_disagreements": 0,
+        "snapshots": 96
+      },
+      "device_event_counts": {
+        "compute-done": 96,
+        "disk-complete": 40,
+        "native-scatter": 22,
+        "native-target": 96,
+        "read-direct": 119,
+        "read-staged": 22,
+        "reserved": 8,
+        "suffix-submitted": 96,
+        "upload-ready": 141,
+        "upload-submit": 141
+      },
+      "inputs": {
+        "archive": "r10-native-thinking-load-initial.zip",
+        "archive_hash_report": "r10-native-thinking-load-initial.json",
+        "archive_hash_report_sha256": "c8900b4b18913cfff81d280294073a024fcccd49db59c560ef42310acf5054a8",
+        "archive_sha256": "7c363bb290480cb34a115e89f18ae684543104ba98442e8def83e94c8083ef34",
+        "load_report": "r10-native-thinking-load-initial.json",
+        "load_report_sha256": "c8900b4b18913cfff81d280294073a024fcccd49db59c560ef42310acf5054a8",
+        "native_csv_sha256": "ed7f8ff938608f23d30b34de6ba1baace7f002842fc8936e7874be3f49084a52",
+        "receipt_sha256": "9a03603a70e045ce976e921465967c2dc498480b598b1758e7b28d8bb64650f3",
+        "schedule_sha256": "daf54a2c53c7db04df01bd9a8441061d835313a1bb0a6c20cc3838c9c9bf3bfc"
+      },
+      "load": {
+        "average_outstanding": 0.9028731067858379,
+        "completions_per_s_in_entire_window": 0.7378036894228558,
+        "drain_after_last_arrival_ms": 184.1161,
+        "drain_elapsed_ms": 130115.9121,
+        "fraction_time_any_request_outstanding": 0.4366874003567777,
+        "max_outstanding": 5,
+        "offered_arrivals_per_s": 0.7311528272879412,
+        "outstanding_at_last_arrival": 1,
+        "submission_span_ms": 129931.796
+      },
+      "logical_uploaded_bytes_by_tier_and_trigger": {
+        "RAM/demand": 1459617792,
+        "RAM/prefetch": 234881024,
+        "SSD/demand": 1738801152,
+        "SSD/prefetch": 368836608
+      },
+      "peak_client_submissions_in_100_ms": 4,
+      "run": "thinking29-140-first",
+      "same_snapshot_disagreements": [],
+      "snapshots_with_active_compute": 37,
+      "snapshots_with_transfer_in_flight": 1
+    },
+    {
+      "block": "qwen_traceA_blksz_16-9-pilot",
+      "capacity_bytes": 86245376,
+      "capture": {
+        "chunk_events": false,
+        "peak_prefetch_bytes": 86245376,
+        "pipeline_events": false
+      },
+      "chosen_boundary_counts": {
+        "0": 60,
+        "512": 32,
+        "1024": 1,
+        "1536": 3
+      },
+      "condition": "trace_a_dense_arrivals",
+      "counts": {
+        "any_nonzero_candidate": 36,
+        "chose_zero_with_nonzero_candidate": 0,
+        "multiple_nonzero_candidates": 4,
+        "same_snapshot_disagreements": 0,
+        "snapshots": 96
+      },
+      "device_event_counts": {
+        "compute-done": 96,
+        "disk-complete": 22,
+        "native-scatter": 64,
+        "native-target": 96,
+        "preserve-old-active": 3,
+        "read-direct": 15,
+        "read-staged": 32,
+        "reserved": 31,
+        "suffix-submitted": 96,
+        "upload-ready": 47,
+        "upload-submit": 47
+      },
+      "inputs": {
+        "archive": "r10-native-warmed-aa-traceA09.zip",
+        "archive_hash_report": "r10-native-warmed-aa-traceA09-summary.json",
+        "archive_hash_report_sha256": "67c72581c2b7362a072129d5b91b3cf1ccb846dd766409a31159263b5af0f10f",
+        "archive_sha256": "779cdd982475360821f3107491d32c4eff0c68e19430029fdf5744c180ac397c",
+        "load_report": "r10-native-warmed-load-v1.json",
+        "load_report_sha256": "052f154512f25fe35d2b31f4a7484151d8387003d99a39dfe74d5212bde83518",
+        "native_csv_sha256": "499741d75f4d5a9a1d4a42e85de41b747e1e8827ce35d3eabd5bc0ea5aef6531",
+        "receipt_sha256": "a971358d00937f6d65f5a7a3df6c70173fb2bb2c81d643bab8fdc539dc0adc5b",
+        "schedule_sha256": "203565ad05d8f9a9b5da04a188d0606dc0b5e9c4eaf8d35a9877ffd188a9be60"
+      },
+      "load": {
+        "average_outstanding": 10.731180562758887,
+        "completions_per_s_in_entire_window": 1.7944398730984832,
+        "drain_after_last_arrival_ms": 8430.5093,
+        "drain_elapsed_ms": 53498.5883,
+        "fraction_time_any_request_outstanding": 0.9787164776458223,
+        "max_outstanding": 25,
+        "offered_arrivals_per_s": 2.107922106020982,
+        "outstanding_at_last_arrival": 14,
+        "submission_span_ms": 45068.079
+      },
+      "logical_uploaded_bytes_by_tier_and_trigger": {
+        "RAM/demand": 167772160,
+        "RAM/prefetch": 251658240,
+        "SSD/demand": 263454720,
+        "SSD/prefetch": 895746048
+      },
+      "peak_client_submissions_in_100_ms": 4,
+      "run": "traceA09-a1",
+      "same_snapshot_disagreements": [],
+      "snapshots_with_active_compute": 90,
+      "snapshots_with_transfer_in_flight": 0
+    },
+    {
+      "block": "qwen_coder_blksz_16-28-pilot",
+      "capacity_bytes": 86245376,
+      "capture": {
+        "chunk_events": true,
+        "peak_prefetch_bytes": 86245376,
+        "pipeline_events": true
+      },
+      "chosen_boundary_counts": {
+        "0": 57,
+        "512": 4,
+        "1024": 1,
+        "1536": 34
+      },
+      "condition": "early_coding_backlog",
+      "counts": {
+        "any_nonzero_candidate": 39,
+        "chose_zero_with_nonzero_candidate": 0,
+        "multiple_nonzero_candidates": 35,
+        "same_snapshot_disagreements": 0,
+        "snapshots": 96
+      },
+      "device_event_counts": {
+        "chunk-marker": 574,
+        "chunk-ready": 574,
+        "chunk-submit-begin": 574,
+        "compute-done": 96,
+        "disk-complete": 39,
+        "native-scatter": 11,
+        "native-target": 96,
+        "read-direct": 136,
+        "read-staged": 11,
+        "reserved": 5,
+        "suffix-submitted": 96,
+        "upload-ready": 147,
+        "upload-submit": 147
+      },
+      "inputs": {
+        "archive": "r10-native-warmup-grid-bailian.zip",
+        "archive_hash_report": "r10-native-warmup-grid-bailian-summary.json",
+        "archive_hash_report_sha256": "e17ed28aff80075e249162c7fa83062aa90f9b7b947012452c42509c697fc351",
+        "archive_sha256": "043a789e36951addbe4dedb717c5d85285996c2e074fc81bc91d7547ee6d9e47",
+        "load_report": "r10-native-warmup-load-initial.json",
+        "load_report_sha256": "2b7ea86035db16bd512c33f5c588e7353622e9a6cb312fe950a335cb23fe3b6b",
+        "native_csv_sha256": "bda4e815e82503dce5889e40b9684fad367cfb81d89228318f88b51e2812ba62",
+        "receipt_sha256": "943f7d2f6ee51425acdf3e5b109791ca9f870db97df1fba7fe2607c84bd3780d",
+        "schedule_sha256": "9f5b3ec70cfc698ec770f96efdb5fbc09404d703c21dc60f691df8624318a574"
+      },
+      "load": {
+        "average_outstanding": 39.949136833636764,
+        "completions_per_s_in_entire_window": 1.1220596549467396,
+        "drain_after_last_arrival_ms": 70087.7086,
+        "drain_elapsed_ms": 85556.9484,
+        "fraction_time_any_request_outstanding": 1.0,
+        "max_outstanding": 79,
+        "offered_arrivals_per_s": 6.141219686826498,
+        "outstanding_at_last_arrival": 79,
+        "submission_span_ms": 15469.2398
+      },
+      "logical_uploaded_bytes_by_tier_and_trigger": {
+        "RAM/demand": 1711276032,
+        "RAM/prefetch": 100663296,
+        "SSD/demand": 1791492096,
+        "SSD/prefetch": 263454720
+      },
+      "peak_client_submissions_in_100_ms": 4,
+      "run": "bailian-coder-28-grid",
+      "same_snapshot_disagreements": [],
+      "snapshots_with_active_compute": 63,
+      "snapshots_with_transfer_in_flight": 1
+    }
+  ],
+  "cost_profile_sha256": "036e0e27fd4c8879555eb5bfb36257274e4d19a78740a59c5f31ae28e9e028c1",
+  "counts": {
+    "any_nonzero_candidate": 139,
+    "chose_zero_with_nonzero_candidate": 0,
+    "multiple_nonzero_candidates": 78,
+    "same_snapshot_disagreements": 0,
+    "snapshots": 480
+  },
+  "independent_source_blocks": 4,
+  "peak_client_window": "maximum submissions in any half-open 100 ms interval; no injected burst",
+  "scope": "archived baseline prefill snapshots, same-state choice only; no closed-loop or timing comparison"
+}
